@@ -7,6 +7,8 @@
 - **Sensor Branches from Host**: 10
 - **Sensor Branch Length**: To be specified (20? 100?) **Needs To Be Resolved**
 
+![image](images/controller_scheme.jpg)
+
 # Physical Layer
 - **Cable**: Ethernet or FFC
 ## 8P8C
