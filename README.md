@@ -77,9 +77,11 @@ FFC (Flexible Flat Cable) cables offer **good signal integrity** and can facilit
 ## **Lattice FPGA (iCE40) - (Chosen Platform)**
 - **Cost**: 2.22$ to 3$
 - **Speed**: 185 MHz
-- **Flash Memory**: Needed
+- **Flash Memory**: Not needed
 
-After careful consideration the **Lattice FPGA** was chosen as the final platform for the sensor board over traditional MCUs. To achive the target speed in the ballpark of 50 MHz, the microcontrollers would have to be programmed in assebler. In this regard, **Verilog**, in which the FPGA chips will be programmed, is much **easier to read**, understand, and modify.
+After careful consideration the **Lattice FPGA** was chosen as the final platform for the sensor board over traditional MCUs. To achive the target speed in the ballpark of 50 MHz, the microcontrollers would have to be programmed in assebler. In this regard, **Verilog**, in which the FPGA chips will be programmed, is much **easier to read**, understand, and modify. A nice feature is the **integrated NVCM** (Non-Volatile Configuration Memory) inside of the FPGA, thus no external SPI Flash NVCM is needed!
+
+Part number: **ICE40UL1K-CM36AI**
 
 ##  Rasperry Pi Pico (RP2350)
 - **Cost**: 0.90$
@@ -89,3 +91,55 @@ After careful consideration the **Lattice FPGA** was chosen as the final platfor
 - **Cost**: 2.84$
 - **Speed**: 250 MHz
 - **Flash Memory**: Not needed
+
+# Hardware Design
+
+## High Level Overview
+![image](images/VoxLink_Block_Diagram_Simplified.jpg)
+
+### Connector selection
+**Rule of thumb: $l_{\text{crit}}$** is $\frac{1}{12}^{\text{th}}$ of a signal wavelength in the dielectric material $\varepsilon$. The effective dielectric constant $\varepsilon$ for an outer-layer trace is approximately 3.3
+
+$$
+l_{\text{crit}} \text{ [m]} = \frac{c\text{ [m/s]}}{f_{\text{max}}\text{ [Hz]}} \cdot \frac{1}{\sqrt{\varepsilon}} \cdot \frac{1}{12}
+$$
+
+**Rise & fall times rule of thumb:**
+
+$$
+f_{\text{max}} \text{ [GHz]} \approx \frac{0.5}{t_{r/f} \text{ [ns]}}
+$$
+
+**Clock-to-rise-time rule of thumb:**
+
+$$
+t_{r/f} \text{ [ns]}\approx \frac{1}{10\cdot f_{\text{clk}}\text{ [GHz]}}
+$$
+
+**Calculation for maximum protocol clock:**
+
+$$
+1 \text{ [ns]}\approx \frac{1}{10\cdot 0.1\text{ [GHz]}}
+$$
+
+$$
+500 \text{ [MHz]} \approx \frac{0.5}{1 \text{ [ns]}}
+$$
+
+$$
+27.5 \text{ [mm]} \doteq \frac{3\cdot 10^{8}}{1\cdot 10^{6} \text{ Hz}} \cdot \frac{1}{\sqrt{3.3}} \cdot \frac{1}{12}
+$$
+
+This means the transmission line will appear as **lumped element** (no impedance matching needed as the reflections are negligible) only for **traces shorter than 27.5mm**. Anything **above** this length needs to be treated as a **distributed element** and requires **impedance matching**.
+
+> ⚠️ **Impedance control is required for both the cable and the connector assembly!**
+
+| Ethernet | USB |
+|:--------:|:--------:|
+| 100 Ω ± 15 Ω | 90 Ω ± 5 Ω |
+
+Differential Impedance $Z_{\text{diff}}$ Comparison
+
+$$
+Z_{\text{diff}} = 2\cdot (Z_{0}-Z_{\text{coupling}})
+$$
