@@ -95,7 +95,7 @@ Part number: **ICE40UL1K-CM36AI**
 # Hardware Design
 
 ## High Level Overview
-![image](images/VoxLink_Block_Diagram_Simplified.jpg)
+![image](images/VoxLink_Block_Diagram_Simplified_Full.jpg)
 
 ### Connector selection
 **Rule of thumb: $l_{\text{crit}}$** is $\frac{1}{12}^{\text{th}}$ of a signal wavelength in the dielectric material $\varepsilon$. The effective dielectric constant $\varepsilon$ for an outer-layer trace is approximately 3.3
