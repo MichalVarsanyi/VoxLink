@@ -1,6 +1,7 @@
+## <span style="color:red">Points for the meeting are marked with❗</span>
 # Protocol Parameters
 ### **⚠️ Warning: Parameters are still subject to change! ⚠️**
-### **Speed**: 50-100 MHz
+### ❗**Speed**: 50-100 MHz
 $$
 f_{\text{bandwidth}} = 2 \cdot f_{\text{sensor}} \cdot N_{\text{devices}} \cdot (L_{\text{header}} + L_{\text{data}}) 
 $$
@@ -14,7 +15,7 @@ $$
 34.56 \text{ MHz} = 2 \cdot 9000 \text{ Hz} \cdot 40 \cdot (12 + 32) 
 $$
 
-### **Communication**: Full-Duplex 
+### ❗**Communication**: Full-Duplex 
    - Support for discovery
    - Configuration
 ### **Host**: 1
@@ -39,12 +40,12 @@ The main reason why this protocol **has not been chosen** is the inefficiency wh
 
 ![image](images/circular_master.jpg)
 
-### Direct Master-Slave
+### ❗Direct Master-Slave
 The Direct Master-Slave is very **versatile to sampling frequency and packet size variance** between individual nodes. Furthermore it is easier to negotiate a custom packet size with the slave device. Having the freedom to implement changes like these is invaluable in the prototyping stage. This is why **we will implement this protocol!** Moreover we are **not wasting bandwidth**, as we are directly talking to the host device with no middle man.
 
 ![image](images/direct_master.jpg)
 
-# Protocol Sections
+# ❗Protocol Sections
  - Instance ID - Number assigned after self discovery
  - Board ID - Unique board identifier (can be requested but is not in the header)
  - Timestamp - Identification number of the packet
@@ -74,7 +75,7 @@ FFC (Flexible Flat Cable) cables offer **good signal integrity** and can facilit
 
 
 # Microcontroller options
-## **Lattice FPGA (iCE40) - (Chosen Platform)**
+## ❗**Lattice FPGA (iCE40) - (Chosen Platform)**
 - **Cost**: 2.22$ to 3$
 - **Speed**: 185 MHz
 - **Flash Memory**: Not needed
@@ -94,7 +95,7 @@ Part number: **ICE40UL1K-CM36AI**
 
 # Hardware Design
 
-## High Level Overview
+## ❗High Level Overview
 ![image](images/VoxLink_Block_Diagram_Simplified_Full.jpg)
 
 ### Connector selection
