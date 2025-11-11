@@ -57,7 +57,7 @@ The Direct Master-Slave is very **versatile to sampling frequency and packet siz
 
 
 # Physical Layer
-### Ethernet
+### ❗Ethernet
 Ethernet cables offer great **plug-and-play** connectivity while retaining **excellent signal integrity**. They come in a variety of sizes, however, the older cables do not feature a twisted pair configuration. Furthermore the modern CAT-5 cable is **bulky and difficult to route** inside the Voxel.
 
 ### FFC
