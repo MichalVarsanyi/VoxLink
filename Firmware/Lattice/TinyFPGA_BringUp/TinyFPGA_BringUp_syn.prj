@@ -4,6 +4,7 @@
 
 add_file -verilog -lib work "sources/Top_TFPGA.v" 
 add_file -verilog -lib work "sources/TFPGA_LED_Blink.v" 
+add_file -verilog -lib work "sources/TFPGA_PLL.v" 
 #implementation: "TinyFPGA_BringUp_Implmnt"
 impl -add TinyFPGA_BringUp_Implmnt -type fpga
 

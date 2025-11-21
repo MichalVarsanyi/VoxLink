@@ -1,0 +1,27 @@
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\Users\\varsa\\Desktop\\School\\5_semester\\BachelorProject\\VoxLink\\Firmware\\Lattice\\TinyFPGA_BringUp\\TinyFPGA_BringUp_Implmnt\\synwork\\TinyFPGA_BringUp_comp.srs|-prodtype|synplify_pro|-primux|-fixsmult|-infer_seqShift|-ice|-sdff_counter|-nram|-divnmod|-nostructver|-I|C:\\Users\\varsa\\Desktop\\School\\5_semester\\BachelorProject\\VoxLink\\Firmware\\Lattice\\TinyFPGA_BringUp\\|-I|C:\\lscc\\iCEcube2.2020.12\\synpbase\\lib|-v2001|-devicelib|C:\\lscc\\iCEcube2.2020.12\\synpbase\\lib\\generic\\sb_ice40.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\lscc\\iCEcube2.2020.12\\synpbase\\bin64\\c_ver.exe":1762448117
+#CUR:"C:\\lscc\\iCEcube2.2020.12\\synpbase\\lib\\generic\\sb_ice40.v":1762448119
+#CUR:"C:\\lscc\\iCEcube2.2020.12\\synpbase\\lib\\vlog\\hypermods.v":1762448120
+#CUR:"C:\\lscc\\iCEcube2.2020.12\\synpbase\\lib\\vlog\\umr_capim.v":1762448120
+#CUR:"C:\\lscc\\iCEcube2.2020.12\\synpbase\\lib\\vlog\\scemi_objects.v":1762448120
+#CUR:"C:\\lscc\\iCEcube2.2020.12\\synpbase\\lib\\vlog\\scemi_pipes.svh":1762448120
+#CUR:"C:\\Users\\varsa\\Desktop\\School\\5_semester\\BachelorProject\\VoxLink\\Firmware\\Lattice\\TinyFPGA_BringUp\\sources\\Top_TFPGA.v":1763511950
+#CUR:"C:\\Users\\varsa\\Desktop\\School\\5_semester\\BachelorProject\\VoxLink\\Firmware\\Lattice\\TinyFPGA_BringUp\\sources\\TFPGA_LED_Blink.v":1763222968
+#CUR:"C:\\Users\\varsa\\Desktop\\School\\5_semester\\BachelorProject\\VoxLink\\Firmware\\Lattice\\TinyFPGA_BringUp\\sources\\TFPGA_PLL.v":1763508231
+#numinternalfiles:5
+#defaultlanguage:verilog
+0			"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\TinyFPGA_BringUp\sources\Top_TFPGA.v" verilog
+1			"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\TinyFPGA_BringUp\sources\TFPGA_LED_Blink.v" verilog
+2			"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\TinyFPGA_BringUp\sources\TFPGA_PLL.v" verilog
+#Dependency Lists(Uses List)
+0 2
+1 -1
+2 -1
+#Dependency Lists(Users Of)
+0 -1
+1 -1
+2 0
+#Design Unit to File Association
+module work TFPGA_PLL 2
+module work Top 0
+module work MV_ADC_UART 1
