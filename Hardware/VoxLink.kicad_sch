@@ -13,7 +13,7 @@
 	(lib_symbols)
 	(text "Root [1]"
 		(exclude_from_sim no)
-		(at 59.182 30.48 0)
+		(at 51.308 27.94 0)
 		(effects
 			(font
 				(face "Arial")
@@ -25,8 +25,62 @@
 		)
 		(uuid "4054362f-cd47-4006-ba49-454fc56e5255")
 	)
+	(text "Technical Sheet Only!\nPlease refer to the subsequent sheets for schematic"
+		(exclude_from_sim no)
+		(at 141.732 58.674 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "51709e72-eea9-4971-a26e-4eeb0586d34b")
+	)
 	(sheet
-		(at 42.926 55.88)
+		(at 144.78 110.49)
+		(size 50.8 34.29)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "52ebae9c-e8b2-4352-947d-ab5ab95db8e1")
+		(property "Sheetname" "eFuse"
+			(at 144.78 109.7784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "efuse.kicad_sch"
+			(at 144.78 145.3646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "VoxLink"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb"
+					(page "1")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 88.011 69.215)
 		(size 51.054 34.29)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -42,7 +96,7 @@
 		)
 		(uuid "834e4732-f30d-482c-8608-d3ea3dbb4e9c")
 		(property "Sheetname" "Power"
-			(at 42.926 55.1684 0)
+			(at 88.011 68.5034 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51,7 +105,7 @@
 			)
 		)
 		(property "Sheetfile" "power.kicad_sch"
-			(at 42.926 90.7546 0)
+			(at 88.011 104.0896 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -68,8 +122,8 @@
 		)
 	)
 	(sheet
-		(at 128.778 59.182)
-		(size 54.864 37.338)
+		(at 144.78 69.85)
+		(size 50.8 34.29)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -84,7 +138,7 @@
 		)
 		(uuid "9719f155-9a63-4412-a45f-eaa04d0e19ac")
 		(property "Sheetname" "Sensor"
-			(at 128.778 58.4704 0)
+			(at 144.78 69.1384 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -93,7 +147,7 @@
 			)
 		)
 		(property "Sheetfile" "Sensor.kicad_sch"
-			(at 128.778 97.1046 0)
+			(at 144.78 104.7246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -110,7 +164,7 @@
 		)
 	)
 	(sheet
-		(at 43.18 99.06)
+		(at 88.265 111.125)
 		(size 51.054 35.052)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -126,7 +180,7 @@
 		)
 		(uuid "c4c61dc7-e886-4936-92b8-e54fa8120fa3")
 		(property "Sheetname" "System"
-			(at 43.18 98.3484 0)
+			(at 88.265 110.4134 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -135,7 +189,7 @@
 			)
 		)
 		(property "Sheetfile" "System.kicad_sch"
-			(at 43.18 134.6966 0)
+			(at 88.265 146.7616 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -153,7 +207,7 @@
 	)
 	(sheet_instances
 		(path "/"
-			(page "1")
+			(page "0")
 		)
 	)
 	(embedded_fonts no)

@@ -4,7 +4,7 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2020.12.27943 - Bui
 ProjectName=TinyFPGA_BringUp
 Vendor=SiliconBlue
 Synthesis=synplify
-ProjectVFiles=sources/Top_TFPGA.v=work,sources/TFPGA_LED_Blink.v=work,sources/TFPGA_PLL.v
+ProjectVFiles=sources/Top_TFPGA.v=work,sources/TFPGA_LED_Blink.v=work,sources/TFPGA_PLL.v=work
 ProjectCFiles=
 CurImplementation=TinyFPGA_BringUp_Implmnt
 Implementations=TinyFPGA_BringUp_Implmnt
@@ -25,7 +25,7 @@ DesignCell=MV_ADC_UART
 SynthesisSDCFile=TinyFPGA_BringUp_Implmnt/TinyFPGA_BringUp.scf
 UserPinConstraintFile=
 UserSDCFile=
-PhysicalConstraintFile=
+PhysicalConstraintFile=sources/TFPGA.pcf
 BackendImplPathName=
 Devicevoltage=1.14
 DevicevoltagePerformance=+/-5%(datasheet default)

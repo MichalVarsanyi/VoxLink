@@ -7,7 +7,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at 28.702 16.51 0)
+			(at 28.702 17.526 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15,7 +15,7 @@
 			)
 		)
 		(property "Value" "BNO086"
-			(at 25.654 14.224 0)
+			(at 25.654 15.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51,8 +51,8 @@
 		)
 		(symbol "BNO086_1_1"
 			(rectangle
-				(start 0 12.7)
-				(end 29.21 -35.56)
+				(start 0 13.97)
+				(end 29.21 -39.37)
 				(stroke
 					(width 0)
 					(type solid)
@@ -62,7 +62,7 @@
 				)
 			)
 			(pin input line
-				(at -2.54 1.27 0)
+				(at -2.54 2.54 0)
 				(length 2.54)
 				(name "SA0/H_MOSI"
 					(effects
@@ -80,7 +80,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -2.54 -1.27 0)
+				(at -2.54 0 0)
 				(length 2.54)
 				(name "H_SDA/H_MISO/TX"
 					(effects
@@ -98,7 +98,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -2.54 -3.81 0)
+				(at -2.54 -2.54 0)
 				(length 2.54)
 				(name "H_SCL/SCK/RX"
 					(effects
@@ -116,7 +116,7 @@
 				)
 			)
 			(pin output line
-				(at -2.54 -6.35 0)
+				(at -2.54 -8.89 0)
 				(length 2.54)
 				(name "~{H_INT}"
 					(effects
@@ -134,7 +134,7 @@
 				)
 			)
 			(pin input line
-				(at -2.54 -8.89 0)
+				(at -2.54 -11.43 0)
 				(length 2.54)
 				(name "~{H_CS}"
 					(effects
@@ -152,7 +152,7 @@
 				)
 			)
 			(pin input line
-				(at -2.54 -11.43 0)
+				(at -2.54 -17.78 0)
 				(length 2.54)
 				(name "~{BOOT}"
 					(effects
@@ -170,25 +170,7 @@
 				)
 			)
 			(pin input line
-				(at -2.54 -15.24 0)
-				(length 2.54)
-				(name "PS0/WAKE"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -2.54 -17.78 0)
+				(at -2.54 -24.13 0)
 				(length 2.54)
 				(name "PS1"
 					(effects
@@ -208,6 +190,24 @@
 			(pin input line
 				(at -2.54 -26.67 0)
 				(length 2.54)
+				(name "PS0/WAKE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -2.54 -30.48 0)
+				(length 2.54)
 				(name "CLKSEL0"
 					(effects
 						(font
@@ -224,7 +224,7 @@
 				)
 			)
 			(pin power_in line
-				(at 13.97 15.24 270)
+				(at 13.97 16.51 270)
 				(length 2.54)
 				(name "VDDIO"
 					(effects
@@ -242,7 +242,7 @@
 				)
 			)
 			(pin power_out line
-				(at 13.97 -38.1 90)
+				(at 13.97 -41.91 90)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -260,7 +260,7 @@
 				)
 			)
 			(pin power_in line
-				(at 16.51 15.24 270)
+				(at 16.51 16.51 270)
 				(length 2.54)
 				(name "VDD"
 					(effects
@@ -278,7 +278,7 @@
 				)
 			)
 			(pin power_out line
-				(at 16.51 -38.1 90)
+				(at 16.51 -41.91 90)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -314,7 +314,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 31.75 0 180)
+				(at 31.75 -6.35 180)
 				(length 2.54)
 				(name "ENV_SDA"
 					(effects
@@ -332,7 +332,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 31.75 -2.54 180)
+				(at 31.75 -8.89 180)
 				(length 2.54)
 				(name "ENV_SCL"
 					(effects
@@ -350,7 +350,7 @@
 				)
 			)
 			(pin input line
-				(at 31.75 -17.78 180)
+				(at 31.75 -21.59 180)
 				(length 2.54)
 				(name "XIN32"
 					(effects
@@ -368,7 +368,7 @@
 				)
 			)
 			(pin output line
-				(at 31.75 -20.32 180)
+				(at 31.75 -24.13 180)
 				(length 2.54)
 				(name "XOUT32"
 					(effects
@@ -386,7 +386,7 @@
 				)
 			)
 			(pin input line
-				(at 31.75 -26.67 180)
+				(at 31.75 -30.48 180)
 				(length 2.54)
 				(name "CAP"
 					(effects
@@ -1439,6 +1439,418 @@
 					)
 				)
 				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "TLV840"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 7.112 10.668 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLV840"
+			(at 4.572 8.636 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/Texas-Instruments/TLV840MADL22DBVRQ1?qs=TuK3vfAjtkWsBU%252BpeSRNtg%3D%3D"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "TLV840_1_1"
+			(rectangle
+				(start -7.62 7.62)
+				(end 7.62 -7.62)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin input line
+				(at -10.16 2.54 0)
+				(length 2.54)
+				(name "~{MR}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 -2.54 0)
+				(length 2.54)
+				(name "CT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 10.16 270)
+				(length 2.54)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 0 -10.16 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 10.16 0 180)
+				(length 2.54)
+				(name "~{RESET}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "TPD4E02B04DQA"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 0 12.192 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TPD4E02B04"
+			(at 0 10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SON:USON-10_2.5x1.0mm_P0.5mm"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "TPD4E02B04DQA_1_1"
+			(rectangle
+				(start -5.08 8.89)
+				(end 5.08 -8.89)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin input line
+				(at -7.62 6.35 0)
+				(length 2.54)
+				(name "IN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -7.62 3.81 0)
+				(length 2.54)
+				(name "IN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at -7.62 0 0)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -7.62 -3.81 0)
+				(length 2.54)
+				(name "IN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -7.62 -6.35 0)
+				(length 2.54)
+				(name "IN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 7.62 6.35 180)
+				(length 2.54)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 7.62 3.81 180)
+				(length 2.54)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 7.62 0 180)
+				(length 2.54)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 7.62 -3.81 180)
+				(length 2.54)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 7.62 -6.35 180)
+				(length 2.54)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)
