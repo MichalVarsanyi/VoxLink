@@ -11,128 +11,6 @@
 		(company "Czech Technical University in Prague")
 	)
 	(lib_symbols
-		(symbol "+3.3VA_6"
-			(power)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+3.3VA"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+3.3VA\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+3.3VA_6_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3.3VA_6_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(hide yes)
-					(name "+3.3VA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Custom_VoxLink_Symbols:BNO086"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -172,6 +50,15 @@
 				)
 			)
 			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor Link" "https://eu.mouser.com/ProductDetail/CEVA/BNO086?qs=ulEaXIWI0c%2FqTo1scjodAw%3D%3D&srsltid=AfmBOop7Lm0NKSepOPNTaVnevCWe4BdpG9i9W3OMpkCwkAHHi0MmvZo2"
 				(at 0 0 0)
 				(effects
 					(font
@@ -372,7 +259,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at 13.97 -41.91 90)
 					(length 2.54)
 					(name "GND"
@@ -408,7 +295,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at 16.51 -41.91 90)
 					(length 2.54)
 					(name "GND"
@@ -731,7 +618,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at -8.89 -8.89 0)
 					(length 2.54)
 					(name "GND"
@@ -749,7 +636,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at -8.89 -11.43 0)
 					(length 2.54)
 					(name "GND"
@@ -767,7 +654,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at -8.89 -13.97 0)
 					(length 2.54)
 					(name "GND_LED"
@@ -1800,6 +1687,131 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:+3.3VA"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3.3VA"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3.3VA\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+3.3VA_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3.3VA_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3445,7 +3457,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3VA_6")
 		(lib_id "power:+3.3VA")
 		(at 213.36 88.9 0)
 		(mirror y)
@@ -3754,6 +3765,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 147.32 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/CEVA/BNO086?qs=ulEaXIWI0c%2FqTo1scjodAw%3D%3D&srsltid=AfmBOop7Lm0NKSepOPNTaVnevCWe4BdpG9i9W3OMpkCwkAHHi0MmvZo2"
 			(at 147.32 91.44 0)
 			(effects
 				(font
@@ -4095,7 +4115,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3VA_6")
 		(lib_id "power:+3.3VA")
 		(at 204.47 88.9 0)
 		(mirror y)
@@ -4161,7 +4180,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3VA_6")
 		(lib_id "power:+3.3VA")
 		(at 116.84 100.33 0)
 		(unit 1)
@@ -4287,6 +4305,187 @@
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/9719f155-9a63-4412-a45f-eaa04d0e19ac"
 					(reference "R408")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom_VoxLink_Symbols:ICE40UL1K-CM36AI")
+		(at 45.72 95.25 0)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8e118d49-a7d1-4084-8238-9e5319967435")
+		(property "Reference" "U301"
+			(at 45.72 91.694 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "ICE40UL1K-CM36AI"
+			(at 45.72 93.472 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Package_BGA:UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm"
+			(at 45.72 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Lattice/ICE40UL1K-CM36AI?qs=XJu%252BLGjWfSAZhGGFZ7EiQg%3D%3D"
+			(at 45.72 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "E4"
+			(uuid "6758e25f-61f3-4045-b6e5-0ba4786355d4")
+		)
+		(pin "A2"
+			(uuid "2699e4db-9332-4d77-8987-f263067e0de9")
+		)
+		(pin "D1"
+			(uuid "eae6770c-d764-4cd1-8f30-5549b137aac4")
+		)
+		(pin "F1"
+			(uuid "cc331bd6-9a9e-459b-aa04-c57e2035ddeb")
+		)
+		(pin "D3"
+			(uuid "23255177-2735-4cc6-b8f6-a08ed61cea5f")
+		)
+		(pin "A4"
+			(uuid "61e60724-ddc0-40b7-b1dd-e92b301f4ca6")
+		)
+		(pin "C4"
+			(uuid "3b9beae1-0e18-4e14-8ed3-07a922e9d9cd")
+		)
+		(pin "D2"
+			(uuid "fc9ff235-9f10-42f0-8d16-363486e76a47")
+		)
+		(pin "B5"
+			(uuid "8f89e0e2-fb3d-4d2a-b499-ea21db09f85c")
+		)
+		(pin "B4"
+			(uuid "e9c621a0-43cd-40c3-ae81-ef129497b578")
+		)
+		(pin "E3"
+			(uuid "0af98183-f614-4383-bf07-87fc6661a3f2")
+		)
+		(pin "B2"
+			(uuid "619886b5-4dcc-4f83-950b-e5f02616525a")
+		)
+		(pin "E1"
+			(uuid "a75b5c26-f504-45b2-9e23-a541378d5047")
+		)
+		(pin "D4"
+			(uuid "787cf588-ac06-479f-9499-780a5d2bf06a")
+		)
+		(pin "B3"
+			(uuid "982884b2-4eb5-4ee1-96a7-540067702c72")
+		)
+		(pin "F2"
+			(uuid "bad4b940-5918-49e1-8f16-51120ee754a3")
+		)
+		(pin "C6"
+			(uuid "92043b04-fbcd-44eb-a2d8-c9d32f13092e")
+		)
+		(pin "E2"
+			(uuid "4b10d86b-bcc1-4184-a8fe-55283042f4e7")
+		)
+		(pin "C3"
+			(uuid "9095dd0b-d9fa-49d8-a9c0-ab500abb79f7")
+		)
+		(pin "C5"
+			(uuid "0ecc61b7-1a47-4291-8a3a-d17120f7c444")
+		)
+		(pin "C1"
+			(uuid "511da478-6ffc-443b-9d1d-65ffcc9aa6a6")
+		)
+		(pin "F3"
+			(uuid "69ae46f0-d5c8-43bd-9aa7-d5a48d6437e5")
+		)
+		(pin "D6"
+			(uuid "75b62c72-008e-4a7e-afd1-194f8321dfac")
+		)
+		(pin "A3"
+			(uuid "2a2947e2-7677-4fcb-9c98-51b5de107f78")
+		)
+		(pin "C2"
+			(uuid "64899eab-6cdb-458b-8502-882e96fa636f")
+		)
+		(pin "B6"
+			(uuid "d0816b35-19cc-487e-983b-7472b12662dc")
+		)
+		(pin "D5"
+			(uuid "7bd405d8-7be6-457b-9dd8-fe6095c2cb26")
+		)
+		(pin "F5"
+			(uuid "984833a2-9065-4f50-a34e-044e961a2edf")
+		)
+		(pin "E5"
+			(uuid "e84ce226-cc6a-4ec3-abb8-99d385ce0bc6")
+		)
+		(pin "A5"
+			(uuid "567f839f-9774-44ab-9600-e749d32cbf80")
+		)
+		(pin "F6"
+			(uuid "33e49cbe-2521-4b58-a6f7-a168c9df9ef9")
+		)
+		(pin "E6"
+			(uuid "91b223cb-961e-464a-a1b6-504cff9b38d1")
+		)
+		(pin "A1"
+			(uuid "19fee5f4-7725-45b2-9775-688584716ad7")
+		)
+		(pin "A6"
+			(uuid "4b93aef5-6407-4273-850b-1c2a007a2dc2")
+		)
+		(pin "B1"
+			(uuid "fac8ce12-f459-4bef-a78d-3bdb3af16817")
+		)
+		(pin "F4"
+			(uuid "b52247a6-d975-4d44-8f24-1b92b26710bb")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/9719f155-9a63-4412-a45f-eaa04d0e19ac"
+					(reference "U301")
+					(unit 3)
 				)
 			)
 		)
@@ -4436,7 +4635,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3VA_6")
 		(lib_id "power:+3.3VA")
 		(at 140.97 80.01 0)
 		(unit 1)
@@ -4501,7 +4699,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3VA_6")
 		(lib_id "power:+3.3VA")
 		(at 97.79 80.01 0)
 		(mirror y)
@@ -4567,7 +4764,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3VA_6")
 		(lib_id "power:+3.3VA")
 		(at 106.68 80.01 0)
 		(mirror y)
@@ -4694,187 +4890,6 @@
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/9719f155-9a63-4412-a45f-eaa04d0e19ac"
 					(reference "R402")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Custom_VoxLink_Symbols:ICE40UL1K-CM36AI")
-		(at 45.72 95.25 0)
-		(unit 3)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "aeb43a47-5c9c-4c99-ac12-e2454103800e")
-		(property "Reference" "U402"
-			(at 45.72 91.694 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "ICE40UL1K-CM36AI"
-			(at 45.72 93.472 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Package_BGA:UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm"
-			(at 45.72 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 45.72 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Lattice/ICE40UL1K-CM36AI?qs=XJu%252BLGjWfSAZhGGFZ7EiQg%3D%3D"
-			(at 45.72 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "D4"
-			(uuid "5bc0dac6-74e8-4f47-9aba-be27d1f4a03e")
-		)
-		(pin "D3"
-			(uuid "4db449b3-de8f-40c5-a7b7-178846e5208e")
-		)
-		(pin "D1"
-			(uuid "3fcb7068-7699-44cc-bf5a-74e5beccb990")
-		)
-		(pin "B4"
-			(uuid "ef942b2c-6357-4214-a077-7c23e46df7cb")
-		)
-		(pin "B3"
-			(uuid "cb27ce53-0019-4fa1-af7e-92da658f5d4c")
-		)
-		(pin "E4"
-			(uuid "0c1095be-2fcc-4d2b-86ee-8cd866e3cef6")
-		)
-		(pin "C3"
-			(uuid "1f342547-4f84-44b4-9c9e-74b6e70aea77")
-		)
-		(pin "C5"
-			(uuid "25f140c0-7383-438f-8192-050fdd1ce352")
-		)
-		(pin "A6"
-			(uuid "d8337d64-48f6-427b-b3c1-04bdd12af919")
-		)
-		(pin "F5"
-			(uuid "d3602fba-14ac-4eab-af73-d9bebfc7a1fb")
-		)
-		(pin "C2"
-			(uuid "eb12db47-b438-48ad-b18c-63026ff32047")
-		)
-		(pin "E1"
-			(uuid "af883360-7796-48f4-974a-9b13d00bf10e")
-		)
-		(pin "E3"
-			(uuid "1dc323e9-35bc-449a-ba51-73331617259f")
-		)
-		(pin "F2"
-			(uuid "9e90dbc2-4ce5-45ae-bf81-762d4a41ca1a")
-		)
-		(pin "F1"
-			(uuid "1264d4d7-01cb-412f-834e-221d20a5753a")
-		)
-		(pin "C4"
-			(uuid "2c46954a-2491-40df-8dee-c000fc04b5c2")
-		)
-		(pin "D6"
-			(uuid "d89f5a63-5139-4133-bb05-79decdd946ed")
-		)
-		(pin "F3"
-			(uuid "68ac3669-79b7-4223-9e28-370d78dfe8bd")
-		)
-		(pin "D2"
-			(uuid "a4402be5-d6f1-4aa5-af36-7cc608aa1e8f")
-		)
-		(pin "A3"
-			(uuid "dbb5ffff-1459-413a-abe9-e5ea7be32a80")
-		)
-		(pin "B6"
-			(uuid "5e6b0b9a-4217-4205-859d-a20bf5648ee3")
-		)
-		(pin "C6"
-			(uuid "81111b71-51c1-4b22-a893-c40a40401717")
-		)
-		(pin "A2"
-			(uuid "5a96c5f8-2fcd-4d4e-b356-527e1a7b7e67")
-		)
-		(pin "B1"
-			(uuid "727a55e3-efec-4432-8fa9-47b20c3059ad")
-		)
-		(pin "A1"
-			(uuid "9f346000-ae07-49b2-83a7-f8bf0ff966f6")
-		)
-		(pin "B2"
-			(uuid "5ab7dffe-17bc-4ad3-b416-e10337775b6e")
-		)
-		(pin "A5"
-			(uuid "dfbb4bee-fb5b-4691-a7c8-46614f79dc3b")
-		)
-		(pin "F6"
-			(uuid "7cecd33c-fb34-484a-aba8-042dcefd024e")
-		)
-		(pin "C1"
-			(uuid "318eb45d-91cb-41fa-b32b-e4f0656c7d34")
-		)
-		(pin "B5"
-			(uuid "46bd9ada-f340-4059-963c-41f2c93950c6")
-		)
-		(pin "E2"
-			(uuid "9adcf55b-efe9-41a7-be21-b6779979d89e")
-		)
-		(pin "A4"
-			(uuid "02ae3ed7-e640-4d50-a55f-607cd434ee78")
-		)
-		(pin "E5"
-			(uuid "0de6fe31-c999-48a5-967b-1fa2a885caff")
-		)
-		(pin "E6"
-			(uuid "8f01a766-7789-4c8c-810b-49fa8e80fd25")
-		)
-		(pin "F4"
-			(uuid "566ee415-494c-4ca1-934b-4e291ccec3d8")
-		)
-		(pin "D5"
-			(uuid "5ef6e53d-d780-4e61-aa33-e5dfd15702e2")
-		)
-		(instances
-			(project "VoxLink"
-				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/9719f155-9a63-4412-a45f-eaa04d0e19ac"
-					(reference "U402")
-					(unit 3)
 				)
 			)
 		)
@@ -5082,7 +5097,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3VA_6")
 		(lib_id "power:+3.3VA")
 		(at 182.88 80.01 0)
 		(mirror y)
@@ -5216,7 +5230,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3VA_6")
 		(lib_id "power:+3.3VA")
 		(at 162.56 58.42 0)
 		(mirror y)

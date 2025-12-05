@@ -49,6 +49,15 @@
 				(hide yes)
 			)
 		)
+		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/CEVA/BNO086?qs=ulEaXIWI0c%2FqTo1scjodAw%3D%3D&srsltid=AfmBOop7Lm0NKSepOPNTaVnevCWe4BdpG9i9W3OMpkCwkAHHi0MmvZo2"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(symbol "BNO086_1_1"
 			(rectangle
 				(start 0 13.97)
@@ -241,7 +250,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at 13.97 -41.91 90)
 				(length 2.54)
 				(name "GND"
@@ -277,7 +286,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at 16.51 -41.91 90)
 				(length 2.54)
 				(name "GND"
@@ -600,7 +609,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at -8.89 -8.89 0)
 				(length 2.54)
 				(name "GND"
@@ -618,7 +627,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at -8.89 -11.43 0)
 				(length 2.54)
 				(name "GND"
@@ -636,7 +645,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at -8.89 -13.97 0)
 				(length 2.54)
 				(name "GND_LED"
@@ -1392,7 +1401,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin power_in line
 				(at 0 -12.7 90)
 				(length 2.54)
 				(name "GND"
@@ -1571,7 +1580,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at 0 -10.16 90)
 				(length 2.54)
 				(name "GND"
@@ -1669,7 +1678,7 @@
 		(symbol "TPD4E02B04DQA_1_1"
 			(rectangle
 				(start -5.08 8.89)
-				(end 5.08 -8.89)
+				(end 5.08 -10.16)
 				(stroke
 					(width 0)
 					(type solid)
@@ -1678,7 +1687,7 @@
 					(type background)
 				)
 			)
-			(pin input line
+			(pin passive line
 				(at -7.62 6.35 0)
 				(length 2.54)
 				(name "IN"
@@ -1696,7 +1705,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin passive line
 				(at -7.62 3.81 0)
 				(length 2.54)
 				(name "IN"
@@ -1714,7 +1723,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at -7.62 0 0)
 				(length 2.54)
 				(name "GND"
@@ -1732,8 +1741,8 @@
 					)
 				)
 			)
-			(pin input line
-				(at -7.62 -3.81 0)
+			(pin passive line
+				(at -7.62 -5.08 0)
 				(length 2.54)
 				(name "IN"
 					(effects
@@ -1750,8 +1759,8 @@
 					)
 				)
 			)
-			(pin input line
-				(at -7.62 -6.35 0)
+			(pin passive line
+				(at -7.62 -7.62 0)
 				(length 2.54)
 				(name "IN"
 					(effects
@@ -1768,7 +1777,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin passive line
 				(at 7.62 6.35 180)
 				(length 2.54)
 				(name "NC"
@@ -1786,7 +1795,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin passive line
 				(at 7.62 3.81 180)
 				(length 2.54)
 				(name "NC"
@@ -1804,7 +1813,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin passive line
 				(at 7.62 0 180)
 				(length 2.54)
 				(name "NC"
@@ -1822,8 +1831,8 @@
 					)
 				)
 			)
-			(pin output line
-				(at 7.62 -3.81 180)
+			(pin passive line
+				(at 7.62 -5.08 180)
 				(length 2.54)
 				(name "NC"
 					(effects
@@ -1840,8 +1849,8 @@
 					)
 				)
 			)
-			(pin output line
-				(at 7.62 -6.35 180)
+			(pin passive line
+				(at 7.62 -7.62 180)
 				(length 2.54)
 				(name "NC"
 					(effects
@@ -1851,6 +1860,455 @@
 					)
 				)
 				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "TPS25942ARVCR"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 0.508 20.828 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TPS25942ARVCR"
+			(at 0.762 19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor Link" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPS25942ARVCR?qs=1MXlzafEN39IodrvCe5%252B2w%3D%3D"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "TPS25942ARVCR_1_1"
+			(rectangle
+				(start -7.62 17.78)
+				(end 8.89 -19.05)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin power_in line
+				(at -12.7 13.97 0)
+				(length 5.08)
+				(name "IN_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 11.43 0)
+				(length 5.08)
+				(name "IN_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 8.89 0)
+				(length 5.08)
+				(name "IN_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 6.35 0)
+				(length 5.08)
+				(name "IN_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 3.81 0)
+				(length 5.08)
+				(name "IN_5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 -1.27 0)
+				(length 5.08)
+				(name "EN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 -3.81 0)
+				(length 5.08)
+				(name "OVP"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 -6.35 0)
+				(length 5.08)
+				(name "DMODE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 -8.89 0)
+				(length 5.08)
+				(name "DVDT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 -13.97 0)
+				(length 5.08)
+				(name "EP"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "21"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -12.7 -16.51 0)
+				(length 5.08)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 13.97 13.97 180)
+				(length 5.08)
+				(name "OUT_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 13.97 11.43 180)
+				(length 5.08)
+				(name "OUT_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 13.97 8.89 180)
+				(length 5.08)
+				(name "OUT_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 13.97 6.35 180)
+				(length 5.08)
+				(name "OUT_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 13.97 3.81 180)
+				(length 5.08)
+				(name "OUT_5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 13.97 -6.35 180)
+				(length 5.08)
+				(name "PGTH"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 13.97 -8.89 180)
+				(length 5.08)
+				(name "~{FLT}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "20"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 13.97 -11.43 180)
+				(length 5.08)
+				(name "PGOOD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 13.97 -13.97 180)
+				(length 5.08)
+				(name "IMON"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "19"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 13.97 -16.51 180)
+				(length 5.08)
+				(name "ILIM"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "17"
 					(effects
 						(font
 							(size 1.27 1.27)

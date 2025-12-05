@@ -155,7 +155,7 @@ FPGA's require a **specific voltages** to enable their operation. In this design
 |:--------:|:--------:|:--------:|:--------:|
 | Supply voltage from the power cables | The I/O voltages (used by GPIO pins) | The Non-Volatile Configuratio Memory (NVCM) voltage | The FPGA core voltage | 
 
-This version of the board features a 2.5V voltage regulator, which is usually omitted in many designs. The absolte maximum rating of the $V_{\text{PP\_2V5}}$ supplying the NVCM voltage is 2.3V to 3.46V. This enables the pin to be directly connected to the 3.3V voltage regulator. To get the voltage closer to 2.5V a diode is placed from the 3.3V to the NVCM supply, which facilitates a drop of rougly 0.7V.
+This version of the board features a 2.5V voltage regulator, which is usually omitted in many designs. The absolte maximum rating of the $V_{\text{PP-2V5}}$ supplying the NVCM voltage is 2.3V to 3.46V. This enables the pin to be directly connected to the 3.3V voltage regulator. To get the voltage closer to 2.5V a diode is placed from the 3.3V to the NVCM supply, which facilitates a drop of rougly 0.7V.
 
 There are three I/O banks on the FPGA. The Bank 0, Bank 1, and Bank 2; they all can have a different voltage levels connected to them. In this board, all of the I/O banks are running at 3.3V, however, the power is sectioned into VCCIO0, VCCIO1, and VCCIO2. This is to indicate the exact I/O bank that the voltage is tied to, shall any future changes be made.
 

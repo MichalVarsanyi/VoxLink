@@ -25,7 +25,24 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "pin_to_pin|2463800|1016000|ed865204-60c5-4733-9a84-4884486953ae|1cb8a635-6256-4897-b48b-df537ea75187|/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c|/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c|/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/9719f155-9a63-4412-a45f-eaa04d0e19ac",
+        ""
+      ],
+      [
+        "pin_to_pin|2463800|965200|eadec135-31ce-461b-8265-f31e88aab7d0|9ed62c0f-7de9-4d54-aebd-2544c975d4d3|/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c|/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c|/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c",
+        ""
+      ],
+      [
+        "pin_to_pin|2463800|990600|9ed62c0f-7de9-4d54-aebd-2544c975d4d3|ed865204-60c5-4733-9a84-4884486953ae|/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c|/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c|/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c",
+        ""
+      ],
+      [
+        "power_pin_not_driven|2463800|787400|5eb53a2a-3d6a-4420-be15-f82e40976494|00000000-0000-0000-0000-000000000000|/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c|/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c|",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -210,9 +227,9 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
-      "footprint_filter": "ignore",
+      "footprint_filter": "error",
       "footprint_link_issues": "warning",
-      "four_way_junction": "ignore",
+      "four_way_junction": "error",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
       "label_dangling": "error",
@@ -235,8 +252,8 @@
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
-      "simulation_model_issue": "ignore",
-      "single_global_label": "ignore",
+      "simulation_model_issue": "error",
+      "single_global_label": "error",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
       "undefined_netclass": "error",
@@ -250,7 +267,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "VoxLink.kicad_pro",
+    "filename": "VoxSense.kicad_pro",
     "version": 3
   },
   "net_settings": {

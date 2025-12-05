@@ -398,7 +398,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at -8.89 -8.89 0)
 					(length 2.54)
 					(name "GND"
@@ -416,7 +416,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at -8.89 -11.43 0)
 					(length 2.54)
 					(name "GND"
@@ -434,7 +434,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at -8.89 -13.97 0)
 					(length 2.54)
 					(name "GND_LED"
@@ -1190,7 +1190,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin power_in line
 					(at 0 -12.7 90)
 					(length 2.54)
 					(name "GND"
@@ -1315,7 +1315,7 @@
 						(type background)
 					)
 				)
-				(pin input line
+				(pin passive line
 					(at -7.62 6.35 0)
 					(length 2.54)
 					(name "IN"
@@ -1333,7 +1333,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin passive line
 					(at -7.62 3.81 0)
 					(length 2.54)
 					(name "IN"
@@ -1351,7 +1351,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at -7.62 0 0)
 					(length 2.54)
 					(name "GND"
@@ -1369,7 +1369,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin passive line
 					(at -7.62 -5.08 0)
 					(length 2.54)
 					(name "IN"
@@ -1387,7 +1387,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin passive line
 					(at -7.62 -7.62 0)
 					(length 2.54)
 					(name "IN"
@@ -1405,7 +1405,7 @@
 						)
 					)
 				)
-				(pin output line
+				(pin passive line
 					(at 7.62 6.35 180)
 					(length 2.54)
 					(name "NC"
@@ -1423,7 +1423,7 @@
 						)
 					)
 				)
-				(pin output line
+				(pin passive line
 					(at 7.62 3.81 180)
 					(length 2.54)
 					(name "NC"
@@ -1441,7 +1441,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin passive line
 					(at 7.62 0 180)
 					(length 2.54)
 					(name "NC"
@@ -1459,7 +1459,7 @@
 						)
 					)
 				)
-				(pin output line
+				(pin passive line
 					(at 7.62 -5.08 180)
 					(length 2.54)
 					(name "NC"
@@ -1477,7 +1477,7 @@
 						)
 					)
 				)
-				(pin output line
+				(pin passive line
 					(at 7.62 -7.62 180)
 					(length 2.54)
 					(name "NC"
@@ -1989,7 +1989,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "1500W unidirectional TRANSZORB® Transient Voltage Suppressor, DO-201AE"
+			(property "Description" "1500W unidirectional TVS diode, DO-201AE"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1998,7 +1998,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "diode TVS voltage suppressor"
+			(property "ki_keywords" "transient voltage suppressor TRANSZORB®"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2403,8 +2403,12 @@
 		)
 		(symbol "power:+3.3VA"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2504,8 +2508,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "+3.3VA"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2525,8 +2528,12 @@
 		)
 		(symbol "power:+3V3"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2626,8 +2633,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "+3V3"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3155,7 +3161,7 @@
 						)
 					)
 				)
-				(pin power_in line
+				(pin power_out line
 					(at 2.54 21.59 270)
 					(length 2.54)
 					(name "VCC"
@@ -5873,6 +5879,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 240.03 123.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2cada861-ddad-4d19-8425-e64404e3469d")
+		(property "Reference" "#PWR01"
+			(at 240.03 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 240.03 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 240.03 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240.03 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 240.03 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fbb6b42a-349a-418a-95c1-a82f5e113280")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 196.85 48.26 90)
 		(unit 1)
@@ -6496,6 +6567,187 @@
 		)
 	)
 	(symbol
+		(lib_id "Custom_VoxLink_Symbols:ICE40UL1K-CM36AI")
+		(at 30.48 148.59 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4c69158d-5d63-433a-be79-32985c308a68")
+		(property "Reference" "U301"
+			(at 30.48 145.034 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "ICE40UL1K-CM36AI"
+			(at 30.48 146.812 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Package_BGA:UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm"
+			(at 30.48 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Lattice/ICE40UL1K-CM36AI?qs=XJu%252BLGjWfSAZhGGFZ7EiQg%3D%3D"
+			(at 30.48 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "E4"
+			(uuid "6758e25f-61f3-4045-b6e5-0ba4786355d3")
+		)
+		(pin "A2"
+			(uuid "2699e4db-9332-4d77-8987-f263067e0de8")
+		)
+		(pin "D1"
+			(uuid "eae6770c-d764-4cd1-8f30-5549b137aac3")
+		)
+		(pin "F1"
+			(uuid "cc331bd6-9a9e-459b-aa04-c57e2035ddea")
+		)
+		(pin "D3"
+			(uuid "23255177-2735-4cc6-b8f6-a08ed61cea5e")
+		)
+		(pin "A4"
+			(uuid "61e60724-ddc0-40b7-b1dd-e92b301f4ca5")
+		)
+		(pin "C4"
+			(uuid "3b9beae1-0e18-4e14-8ed3-07a922e9d9cc")
+		)
+		(pin "D2"
+			(uuid "fc9ff235-9f10-42f0-8d16-363486e76a46")
+		)
+		(pin "B5"
+			(uuid "8f89e0e2-fb3d-4d2a-b499-ea21db09f85b")
+		)
+		(pin "B4"
+			(uuid "e9c621a0-43cd-40c3-ae81-ef129497b577")
+		)
+		(pin "E3"
+			(uuid "0af98183-f614-4383-bf07-87fc6661a3f1")
+		)
+		(pin "B2"
+			(uuid "619886b5-4dcc-4f83-950b-e5f026165259")
+		)
+		(pin "E1"
+			(uuid "a75b5c26-f504-45b2-9e23-a541378d5046")
+		)
+		(pin "D4"
+			(uuid "787cf588-ac06-479f-9499-780a5d2bf069")
+		)
+		(pin "B3"
+			(uuid "982884b2-4eb5-4ee1-96a7-540067702c71")
+		)
+		(pin "F2"
+			(uuid "bad4b940-5918-49e1-8f16-51120ee754a2")
+		)
+		(pin "C6"
+			(uuid "92043b04-fbcd-44eb-a2d8-c9d32f13092d")
+		)
+		(pin "E2"
+			(uuid "4b10d86b-bcc1-4184-a8fe-55283042f4e6")
+		)
+		(pin "C3"
+			(uuid "9095dd0b-d9fa-49d8-a9c0-ab500abb79f6")
+		)
+		(pin "C5"
+			(uuid "0ecc61b7-1a47-4291-8a3a-d17120f7c443")
+		)
+		(pin "C1"
+			(uuid "511da478-6ffc-443b-9d1d-65ffcc9aa6a5")
+		)
+		(pin "F3"
+			(uuid "69ae46f0-d5c8-43bd-9aa7-d5a48d6437e4")
+		)
+		(pin "D6"
+			(uuid "75b62c72-008e-4a7e-afd1-194f8321dfab")
+		)
+		(pin "A3"
+			(uuid "2a2947e2-7677-4fcb-9c98-51b5de107f77")
+		)
+		(pin "C2"
+			(uuid "64899eab-6cdb-458b-8502-882e96fa636e")
+		)
+		(pin "B6"
+			(uuid "d0816b35-19cc-487e-983b-7472b12662db")
+		)
+		(pin "D5"
+			(uuid "7bd405d8-7be6-457b-9dd8-fe6095c2cb25")
+		)
+		(pin "F5"
+			(uuid "984833a2-9065-4f50-a34e-044e961a2ede")
+		)
+		(pin "E5"
+			(uuid "e84ce226-cc6a-4ec3-abb8-99d385ce0bc5")
+		)
+		(pin "A5"
+			(uuid "567f839f-9774-44ab-9600-e749d32cbf7f")
+		)
+		(pin "F6"
+			(uuid "33e49cbe-2521-4b58-a6f7-a168c9df9ef8")
+		)
+		(pin "E6"
+			(uuid "91b223cb-961e-464a-a1b6-504cff9b38d0")
+		)
+		(pin "A1"
+			(uuid "19fee5f4-7725-45b2-9775-688584716ad6")
+		)
+		(pin "A6"
+			(uuid "4b93aef5-6407-4273-850b-1c2a007a2dc1")
+		)
+		(pin "B1"
+			(uuid "fac8ce12-f459-4bef-a78d-3bdb3af16816")
+		)
+		(pin "F4"
+			(uuid "b52247a6-d975-4d44-8f24-1b92b26710ba")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "U301")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "rj45_molex_unshielded:RJ45_Molex_Unshielded")
 		(at 137.16 156.21 0)
 		(unit 1)
@@ -6861,187 +7113,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Custom_VoxLink_Symbols:ICE40UL1K-CM36AI")
-		(at 157.48 57.15 0)
-		(unit 4)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5d456092-8c1b-4bb5-9737-c094cff35977")
-		(property "Reference" "U307"
-			(at 157.48 53.594 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "ICE40UL1K-CM36AI"
-			(at 157.48 55.372 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Package_BGA:UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm"
-			(at 157.48 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 157.48 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Lattice/ICE40UL1K-CM36AI?qs=XJu%252BLGjWfSAZhGGFZ7EiQg%3D%3D"
-			(at 157.48 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "D4"
-			(uuid "5bc0dac6-74e8-4f47-9aba-be27d1f4a03b")
-		)
-		(pin "D3"
-			(uuid "4db449b3-de8f-40c5-a7b7-178846e5208b")
-		)
-		(pin "D1"
-			(uuid "3fcb7068-7699-44cc-bf5a-74e5beccb98d")
-		)
-		(pin "B4"
-			(uuid "ef942b2c-6357-4214-a077-7c23e46df7c8")
-		)
-		(pin "B3"
-			(uuid "cb27ce53-0019-4fa1-af7e-92da658f5d49")
-		)
-		(pin "E4"
-			(uuid "0c1095be-2fcc-4d2b-86ee-8cd866e3cef3")
-		)
-		(pin "C3"
-			(uuid "1f342547-4f84-44b4-9c9e-74b6e70aea74")
-		)
-		(pin "C5"
-			(uuid "25f140c0-7383-438f-8192-050fdd1ce34f")
-		)
-		(pin "A6"
-			(uuid "d8337d64-48f6-427b-b3c1-04bdd12af916")
-		)
-		(pin "F5"
-			(uuid "d3602fba-14ac-4eab-af73-d9bebfc7a1f8")
-		)
-		(pin "C2"
-			(uuid "c702531b-c51b-4e39-ab5f-f656092a6fce")
-		)
-		(pin "E1"
-			(uuid "af883360-7796-48f4-974a-9b13d00bf10b")
-		)
-		(pin "E3"
-			(uuid "1dc323e9-35bc-449a-ba51-73331617259c")
-		)
-		(pin "F2"
-			(uuid "9e90dbc2-4ce5-45ae-bf81-762d4a41ca17")
-		)
-		(pin "F1"
-			(uuid "1264d4d7-01cb-412f-834e-221d20a57537")
-		)
-		(pin "C4"
-			(uuid "2c46954a-2491-40df-8dee-c000fc04b5bf")
-		)
-		(pin "D6"
-			(uuid "d89f5a63-5139-4133-bb05-79decdd946ea")
-		)
-		(pin "F3"
-			(uuid "68ac3669-79b7-4223-9e28-370d78dfe8ba")
-		)
-		(pin "D2"
-			(uuid "a4402be5-d6f1-4aa5-af36-7cc608aa1e8c")
-		)
-		(pin "A3"
-			(uuid "bb8b3e84-ccae-4fe6-a2e7-7937e8a1ef70")
-		)
-		(pin "B6"
-			(uuid "b05d65cf-98ab-4073-9b39-daaf90f896fa")
-		)
-		(pin "C6"
-			(uuid "1011d740-db28-4af1-b04b-d44d97768f6b")
-		)
-		(pin "A2"
-			(uuid "5a96c5f8-2fcd-4d4e-b356-527e1a7b7e64")
-		)
-		(pin "B1"
-			(uuid "727a55e3-efec-4432-8fa9-47b20c3059aa")
-		)
-		(pin "A1"
-			(uuid "9f346000-ae07-49b2-83a7-f8bf0ff966f3")
-		)
-		(pin "B2"
-			(uuid "d5ba248e-0024-457a-8ded-3df75527c631")
-		)
-		(pin "A5"
-			(uuid "dfbb4bee-fb5b-4691-a7c8-46614f79dc38")
-		)
-		(pin "F6"
-			(uuid "7cecd33c-fb34-484a-aba8-042dcefd024b")
-		)
-		(pin "C1"
-			(uuid "318eb45d-91cb-41fa-b32b-e4f0656c7d31")
-		)
-		(pin "B5"
-			(uuid "d05cc751-ca9c-4653-8674-790df63adb79")
-		)
-		(pin "E2"
-			(uuid "9adcf55b-efe9-41a7-be21-b6779979d89b")
-		)
-		(pin "A4"
-			(uuid "26ef87fb-5baa-495e-b5e2-2eedf34c8233")
-		)
-		(pin "E5"
-			(uuid "0de6fe31-c999-48a5-967b-1fa2a885cafc")
-		)
-		(pin "E6"
-			(uuid "8f01a766-7789-4c8c-810b-49fa8e80fd22")
-		)
-		(pin "F4"
-			(uuid "566ee415-494c-4ca1-934b-4e291ccec3d5")
-		)
-		(pin "D5"
-			(uuid "5ef6e53d-d780-4e61-aa33-e5dfd15702df")
-		)
-		(instances
-			(project ""
-				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "U307")
-					(unit 4)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 173.99 40.64 0)
 		(unit 1)
@@ -7261,6 +7332,187 @@
 		)
 	)
 	(symbol
+		(lib_id "Custom_VoxLink_Symbols:ICE40UL1K-CM36AI")
+		(at 157.48 57.15 0)
+		(unit 4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7a554823-a3b6-4310-8329-e8868502e5ed")
+		(property "Reference" "U301"
+			(at 157.48 53.594 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "ICE40UL1K-CM36AI"
+			(at 157.48 55.372 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Package_BGA:UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm"
+			(at 157.48 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 157.48 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Lattice/ICE40UL1K-CM36AI?qs=XJu%252BLGjWfSAZhGGFZ7EiQg%3D%3D"
+			(at 157.48 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "E4"
+			(uuid "6758e25f-61f3-4045-b6e5-0ba4786355d5")
+		)
+		(pin "A2"
+			(uuid "2699e4db-9332-4d77-8987-f263067e0dea")
+		)
+		(pin "D1"
+			(uuid "eae6770c-d764-4cd1-8f30-5549b137aac5")
+		)
+		(pin "F1"
+			(uuid "cc331bd6-9a9e-459b-aa04-c57e2035ddec")
+		)
+		(pin "D3"
+			(uuid "23255177-2735-4cc6-b8f6-a08ed61cea60")
+		)
+		(pin "A4"
+			(uuid "61e60724-ddc0-40b7-b1dd-e92b301f4ca7")
+		)
+		(pin "C4"
+			(uuid "3b9beae1-0e18-4e14-8ed3-07a922e9d9ce")
+		)
+		(pin "D2"
+			(uuid "fc9ff235-9f10-42f0-8d16-363486e76a48")
+		)
+		(pin "B5"
+			(uuid "8f89e0e2-fb3d-4d2a-b499-ea21db09f85d")
+		)
+		(pin "B4"
+			(uuid "e9c621a0-43cd-40c3-ae81-ef129497b579")
+		)
+		(pin "E3"
+			(uuid "0af98183-f614-4383-bf07-87fc6661a3f3")
+		)
+		(pin "B2"
+			(uuid "619886b5-4dcc-4f83-950b-e5f02616525b")
+		)
+		(pin "E1"
+			(uuid "a75b5c26-f504-45b2-9e23-a541378d5048")
+		)
+		(pin "D4"
+			(uuid "787cf588-ac06-479f-9499-780a5d2bf06b")
+		)
+		(pin "B3"
+			(uuid "982884b2-4eb5-4ee1-96a7-540067702c73")
+		)
+		(pin "F2"
+			(uuid "bad4b940-5918-49e1-8f16-51120ee754a4")
+		)
+		(pin "C6"
+			(uuid "92043b04-fbcd-44eb-a2d8-c9d32f13092f")
+		)
+		(pin "E2"
+			(uuid "4b10d86b-bcc1-4184-a8fe-55283042f4e8")
+		)
+		(pin "C3"
+			(uuid "9095dd0b-d9fa-49d8-a9c0-ab500abb79f8")
+		)
+		(pin "C5"
+			(uuid "0ecc61b7-1a47-4291-8a3a-d17120f7c445")
+		)
+		(pin "C1"
+			(uuid "511da478-6ffc-443b-9d1d-65ffcc9aa6a7")
+		)
+		(pin "F3"
+			(uuid "69ae46f0-d5c8-43bd-9aa7-d5a48d6437e6")
+		)
+		(pin "D6"
+			(uuid "75b62c72-008e-4a7e-afd1-194f8321dfad")
+		)
+		(pin "A3"
+			(uuid "2a2947e2-7677-4fcb-9c98-51b5de107f79")
+		)
+		(pin "C2"
+			(uuid "64899eab-6cdb-458b-8502-882e96fa6370")
+		)
+		(pin "B6"
+			(uuid "d0816b35-19cc-487e-983b-7472b12662dd")
+		)
+		(pin "D5"
+			(uuid "7bd405d8-7be6-457b-9dd8-fe6095c2cb27")
+		)
+		(pin "F5"
+			(uuid "984833a2-9065-4f50-a34e-044e961a2ee0")
+		)
+		(pin "E5"
+			(uuid "e84ce226-cc6a-4ec3-abb8-99d385ce0bc7")
+		)
+		(pin "A5"
+			(uuid "567f839f-9774-44ab-9600-e749d32cbf81")
+		)
+		(pin "F6"
+			(uuid "33e49cbe-2521-4b58-a6f7-a168c9df9efa")
+		)
+		(pin "E6"
+			(uuid "91b223cb-961e-464a-a1b6-504cff9b38d2")
+		)
+		(pin "A1"
+			(uuid "19fee5f4-7725-45b2-9775-688584716ad8")
+		)
+		(pin "A6"
+			(uuid "4b93aef5-6407-4273-850b-1c2a007a2dc3")
+		)
+		(pin "B1"
+			(uuid "fac8ce12-f459-4bef-a78d-3bdb3af16818")
+		)
+		(pin "F4"
+			(uuid "b52247a6-d975-4d44-8f24-1b92b26710bc")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "U301")
+					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 196.85 40.64 0)
 		(unit 1)
@@ -7400,187 +7652,6 @@
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
 					(reference "Y301")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Custom_VoxLink_Symbols:ICE40UL1K-CM36AI")
-		(at 193.04 113.03 0)
-		(unit 5)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7f6cc94d-3c60-4d5a-88e2-31a7eab7e3f4")
-		(property "Reference" "U306"
-			(at 193.04 109.474 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "ICE40UL1K-CM36AI"
-			(at 193.04 111.252 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Package_BGA:UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm"
-			(at 193.04 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 193.04 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 193.04 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Lattice/ICE40UL1K-CM36AI?qs=XJu%252BLGjWfSAZhGGFZ7EiQg%3D%3D"
-			(at 193.04 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "D4"
-			(uuid "5bc0dac6-74e8-4f47-9aba-be27d1f4a03c")
-		)
-		(pin "D3"
-			(uuid "4db449b3-de8f-40c5-a7b7-178846e5208c")
-		)
-		(pin "D1"
-			(uuid "3fcb7068-7699-44cc-bf5a-74e5beccb98e")
-		)
-		(pin "B4"
-			(uuid "ef942b2c-6357-4214-a077-7c23e46df7c9")
-		)
-		(pin "B3"
-			(uuid "cb27ce53-0019-4fa1-af7e-92da658f5d4a")
-		)
-		(pin "E4"
-			(uuid "0c1095be-2fcc-4d2b-86ee-8cd866e3cef4")
-		)
-		(pin "C3"
-			(uuid "1f342547-4f84-44b4-9c9e-74b6e70aea75")
-		)
-		(pin "C5"
-			(uuid "25f140c0-7383-438f-8192-050fdd1ce350")
-		)
-		(pin "A6"
-			(uuid "d8337d64-48f6-427b-b3c1-04bdd12af917")
-		)
-		(pin "F5"
-			(uuid "d3602fba-14ac-4eab-af73-d9bebfc7a1f9")
-		)
-		(pin "C2"
-			(uuid "c702531b-c51b-4e39-ab5f-f656092a6fcf")
-		)
-		(pin "E1"
-			(uuid "af883360-7796-48f4-974a-9b13d00bf10c")
-		)
-		(pin "E3"
-			(uuid "1dc323e9-35bc-449a-ba51-73331617259d")
-		)
-		(pin "F2"
-			(uuid "9e90dbc2-4ce5-45ae-bf81-762d4a41ca18")
-		)
-		(pin "F1"
-			(uuid "1264d4d7-01cb-412f-834e-221d20a57538")
-		)
-		(pin "C4"
-			(uuid "2c46954a-2491-40df-8dee-c000fc04b5c0")
-		)
-		(pin "D6"
-			(uuid "d89f5a63-5139-4133-bb05-79decdd946eb")
-		)
-		(pin "F3"
-			(uuid "68ac3669-79b7-4223-9e28-370d78dfe8bb")
-		)
-		(pin "D2"
-			(uuid "a4402be5-d6f1-4aa5-af36-7cc608aa1e8d")
-		)
-		(pin "A3"
-			(uuid "bb8b3e84-ccae-4fe6-a2e7-7937e8a1ef71")
-		)
-		(pin "B6"
-			(uuid "b05d65cf-98ab-4073-9b39-daaf90f896fb")
-		)
-		(pin "C6"
-			(uuid "1011d740-db28-4af1-b04b-d44d97768f6c")
-		)
-		(pin "A2"
-			(uuid "5a96c5f8-2fcd-4d4e-b356-527e1a7b7e65")
-		)
-		(pin "B1"
-			(uuid "727a55e3-efec-4432-8fa9-47b20c3059ab")
-		)
-		(pin "A1"
-			(uuid "9f346000-ae07-49b2-83a7-f8bf0ff966f4")
-		)
-		(pin "B2"
-			(uuid "d5ba248e-0024-457a-8ded-3df75527c632")
-		)
-		(pin "A5"
-			(uuid "dfbb4bee-fb5b-4691-a7c8-46614f79dc39")
-		)
-		(pin "F6"
-			(uuid "7cecd33c-fb34-484a-aba8-042dcefd024c")
-		)
-		(pin "C1"
-			(uuid "318eb45d-91cb-41fa-b32b-e4f0656c7d32")
-		)
-		(pin "B5"
-			(uuid "d05cc751-ca9c-4653-8674-790df63adb7a")
-		)
-		(pin "E2"
-			(uuid "9adcf55b-efe9-41a7-be21-b6779979d89c")
-		)
-		(pin "A4"
-			(uuid "26ef87fb-5baa-495e-b5e2-2eedf34c8234")
-		)
-		(pin "E5"
-			(uuid "0de6fe31-c999-48a5-967b-1fa2a885cafd")
-		)
-		(pin "E6"
-			(uuid "8f01a766-7789-4c8c-810b-49fa8e80fd23")
-		)
-		(pin "F4"
-			(uuid "566ee415-494c-4ca1-934b-4e291ccec3d6")
-		)
-		(pin "D5"
-			(uuid "5ef6e53d-d780-4e61-aa33-e5dfd15702e0")
-		)
-		(instances
-			(project ""
-				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "U306")
-					(unit 5)
 				)
 			)
 		)
@@ -8004,7 +8075,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9177aaa2-0c6b-4db5-b2db-605bd45671c6")
-		(property "Reference" "U304"
+		(property "Reference" "U305"
 			(at 242.57 97.79 0)
 			(effects
 				(font
@@ -8076,7 +8147,7 @@
 		(instances
 			(project ""
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "U304")
+					(reference "U305")
 					(unit 1)
 				)
 			)
@@ -8160,7 +8231,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9e7dc4af-ff99-41c0-81ab-c925eb6e9e3e")
-		(property "Reference" "U303"
+		(property "Reference" "U304"
 			(at 77.47 177.038 0)
 			(effects
 				(font
@@ -8245,7 +8316,7 @@
 		(instances
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "U303")
+					(reference "U304")
 					(unit 1)
 				)
 			)
@@ -8382,187 +8453,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Custom_VoxLink_Symbols:ICE40UL1K-CM36AI")
-		(at 30.48 148.59 0)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a228714c-bf2f-4bf7-835f-78308d90ffa5")
-		(property "Reference" "U305"
-			(at 30.48 145.034 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "ICE40UL1K-CM36AI"
-			(at 30.48 146.812 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Package_BGA:UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm"
-			(at 30.48 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.48 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 30.48 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Lattice/ICE40UL1K-CM36AI?qs=XJu%252BLGjWfSAZhGGFZ7EiQg%3D%3D"
-			(at 30.48 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "D4"
-			(uuid "5bc0dac6-74e8-4f47-9aba-be27d1f4a03d")
-		)
-		(pin "D3"
-			(uuid "4db449b3-de8f-40c5-a7b7-178846e5208d")
-		)
-		(pin "D1"
-			(uuid "3fcb7068-7699-44cc-bf5a-74e5beccb98f")
-		)
-		(pin "B4"
-			(uuid "ef942b2c-6357-4214-a077-7c23e46df7ca")
-		)
-		(pin "B3"
-			(uuid "cb27ce53-0019-4fa1-af7e-92da658f5d4b")
-		)
-		(pin "E4"
-			(uuid "0c1095be-2fcc-4d2b-86ee-8cd866e3cef5")
-		)
-		(pin "C3"
-			(uuid "1f342547-4f84-44b4-9c9e-74b6e70aea76")
-		)
-		(pin "C5"
-			(uuid "25f140c0-7383-438f-8192-050fdd1ce351")
-		)
-		(pin "A6"
-			(uuid "d8337d64-48f6-427b-b3c1-04bdd12af918")
-		)
-		(pin "F5"
-			(uuid "d3602fba-14ac-4eab-af73-d9bebfc7a1fa")
-		)
-		(pin "C2"
-			(uuid "c702531b-c51b-4e39-ab5f-f656092a6fd0")
-		)
-		(pin "E1"
-			(uuid "af883360-7796-48f4-974a-9b13d00bf10d")
-		)
-		(pin "E3"
-			(uuid "1dc323e9-35bc-449a-ba51-73331617259e")
-		)
-		(pin "F2"
-			(uuid "9e90dbc2-4ce5-45ae-bf81-762d4a41ca19")
-		)
-		(pin "F1"
-			(uuid "1264d4d7-01cb-412f-834e-221d20a57539")
-		)
-		(pin "C4"
-			(uuid "2c46954a-2491-40df-8dee-c000fc04b5c1")
-		)
-		(pin "D6"
-			(uuid "d89f5a63-5139-4133-bb05-79decdd946ec")
-		)
-		(pin "F3"
-			(uuid "68ac3669-79b7-4223-9e28-370d78dfe8bc")
-		)
-		(pin "D2"
-			(uuid "a4402be5-d6f1-4aa5-af36-7cc608aa1e8e")
-		)
-		(pin "A3"
-			(uuid "bb8b3e84-ccae-4fe6-a2e7-7937e8a1ef72")
-		)
-		(pin "B6"
-			(uuid "b05d65cf-98ab-4073-9b39-daaf90f896fc")
-		)
-		(pin "C6"
-			(uuid "1011d740-db28-4af1-b04b-d44d97768f6d")
-		)
-		(pin "A2"
-			(uuid "5a96c5f8-2fcd-4d4e-b356-527e1a7b7e66")
-		)
-		(pin "B1"
-			(uuid "727a55e3-efec-4432-8fa9-47b20c3059ac")
-		)
-		(pin "A1"
-			(uuid "9f346000-ae07-49b2-83a7-f8bf0ff966f5")
-		)
-		(pin "B2"
-			(uuid "d5ba248e-0024-457a-8ded-3df75527c633")
-		)
-		(pin "A5"
-			(uuid "dfbb4bee-fb5b-4691-a7c8-46614f79dc3a")
-		)
-		(pin "F6"
-			(uuid "7cecd33c-fb34-484a-aba8-042dcefd024d")
-		)
-		(pin "C1"
-			(uuid "318eb45d-91cb-41fa-b32b-e4f0656c7d33")
-		)
-		(pin "B5"
-			(uuid "d05cc751-ca9c-4653-8674-790df63adb7b")
-		)
-		(pin "E2"
-			(uuid "9adcf55b-efe9-41a7-be21-b6779979d89d")
-		)
-		(pin "A4"
-			(uuid "26ef87fb-5baa-495e-b5e2-2eedf34c8235")
-		)
-		(pin "E5"
-			(uuid "0de6fe31-c999-48a5-967b-1fa2a885cafe")
-		)
-		(pin "E6"
-			(uuid "8f01a766-7789-4c8c-810b-49fa8e80fd24")
-		)
-		(pin "F4"
-			(uuid "566ee415-494c-4ca1-934b-4e291ccec3d7")
-		)
-		(pin "D5"
-			(uuid "5ef6e53d-d780-4e61-aa33-e5dfd15702e1")
-		)
-		(instances
-			(project ""
-				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "U305")
-					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 44.45 106.68 0)
 		(mirror y)
@@ -8638,7 +8528,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ad9c86af-af99-459c-97f0-fdb5b96f7d08")
-		(property "Reference" "U302"
+		(property "Reference" "U303"
 			(at 77.47 132.08 0)
 			(effects
 				(font
@@ -8723,7 +8613,7 @@
 		(instances
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "U302")
+					(reference "U303")
 					(unit 1)
 				)
 			)
@@ -8739,7 +8629,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b2c11627-2385-4cd0-8900-79970e291641")
-		(property "Reference" "U301"
+		(property "Reference" "U302"
 			(at 88.9 85.09 0)
 			(effects
 				(font
@@ -8824,72 +8714,7 @@
 		(instances
 			(project ""
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "U301")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 240.03 123.19 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b354e576-32e5-46e8-9564-f3c3adfc6c65")
-		(property "Reference" "#PWR01"
-			(at 240.03 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 240.03 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 240.03 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 240.03 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 240.03 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "adff9e05-b96a-4a3a-ae3c-0b6adc3f0ec8")
-		)
-		(instances
-			(project "VoxLink"
-				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "#PWR01")
+					(reference "U302")
 					(unit 1)
 				)
 			)
@@ -9310,10 +9135,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c912927f-8c3e-4c11-9fab-fbf0a26f146c")
 		(property "Reference" "D301"
-			(at 34.29 95.885 90)
+			(at 35.306 95.758 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9322,7 +9146,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 34.29 98.425 90)
+			(at 35.306 98.298 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9432,6 +9256,187 @@
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
 					(reference "#PWR077")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom_VoxLink_Symbols:ICE40UL1K-CM36AI")
+		(at 193.04 113.03 0)
+		(unit 5)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cedbd6c5-9176-4b56-bd86-0356a2840708")
+		(property "Reference" "U301"
+			(at 193.04 109.474 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "ICE40UL1K-CM36AI"
+			(at 193.04 111.252 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Package_BGA:UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm"
+			(at 193.04 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 193.04 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 193.04 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Lattice/ICE40UL1K-CM36AI?qs=XJu%252BLGjWfSAZhGGFZ7EiQg%3D%3D"
+			(at 193.04 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "E4"
+			(uuid "6758e25f-61f3-4045-b6e5-0ba4786355d6")
+		)
+		(pin "A2"
+			(uuid "2699e4db-9332-4d77-8987-f263067e0deb")
+		)
+		(pin "D1"
+			(uuid "eae6770c-d764-4cd1-8f30-5549b137aac6")
+		)
+		(pin "F1"
+			(uuid "cc331bd6-9a9e-459b-aa04-c57e2035dded")
+		)
+		(pin "D3"
+			(uuid "23255177-2735-4cc6-b8f6-a08ed61cea61")
+		)
+		(pin "A4"
+			(uuid "61e60724-ddc0-40b7-b1dd-e92b301f4ca8")
+		)
+		(pin "C4"
+			(uuid "3b9beae1-0e18-4e14-8ed3-07a922e9d9cf")
+		)
+		(pin "D2"
+			(uuid "fc9ff235-9f10-42f0-8d16-363486e76a49")
+		)
+		(pin "B5"
+			(uuid "8f89e0e2-fb3d-4d2a-b499-ea21db09f85e")
+		)
+		(pin "B4"
+			(uuid "e9c621a0-43cd-40c3-ae81-ef129497b57a")
+		)
+		(pin "E3"
+			(uuid "0af98183-f614-4383-bf07-87fc6661a3f4")
+		)
+		(pin "B2"
+			(uuid "619886b5-4dcc-4f83-950b-e5f02616525c")
+		)
+		(pin "E1"
+			(uuid "a75b5c26-f504-45b2-9e23-a541378d5049")
+		)
+		(pin "D4"
+			(uuid "787cf588-ac06-479f-9499-780a5d2bf06c")
+		)
+		(pin "B3"
+			(uuid "982884b2-4eb5-4ee1-96a7-540067702c74")
+		)
+		(pin "F2"
+			(uuid "bad4b940-5918-49e1-8f16-51120ee754a5")
+		)
+		(pin "C6"
+			(uuid "92043b04-fbcd-44eb-a2d8-c9d32f130930")
+		)
+		(pin "E2"
+			(uuid "4b10d86b-bcc1-4184-a8fe-55283042f4e9")
+		)
+		(pin "C3"
+			(uuid "9095dd0b-d9fa-49d8-a9c0-ab500abb79f9")
+		)
+		(pin "C5"
+			(uuid "0ecc61b7-1a47-4291-8a3a-d17120f7c446")
+		)
+		(pin "C1"
+			(uuid "511da478-6ffc-443b-9d1d-65ffcc9aa6a8")
+		)
+		(pin "F3"
+			(uuid "69ae46f0-d5c8-43bd-9aa7-d5a48d6437e7")
+		)
+		(pin "D6"
+			(uuid "75b62c72-008e-4a7e-afd1-194f8321dfae")
+		)
+		(pin "A3"
+			(uuid "2a2947e2-7677-4fcb-9c98-51b5de107f7a")
+		)
+		(pin "C2"
+			(uuid "64899eab-6cdb-458b-8502-882e96fa6371")
+		)
+		(pin "B6"
+			(uuid "d0816b35-19cc-487e-983b-7472b12662de")
+		)
+		(pin "D5"
+			(uuid "7bd405d8-7be6-457b-9dd8-fe6095c2cb28")
+		)
+		(pin "F5"
+			(uuid "984833a2-9065-4f50-a34e-044e961a2ee1")
+		)
+		(pin "E5"
+			(uuid "e84ce226-cc6a-4ec3-abb8-99d385ce0bc8")
+		)
+		(pin "A5"
+			(uuid "567f839f-9774-44ab-9600-e749d32cbf82")
+		)
+		(pin "F6"
+			(uuid "33e49cbe-2521-4b58-a6f7-a168c9df9efb")
+		)
+		(pin "E6"
+			(uuid "91b223cb-961e-464a-a1b6-504cff9b38d3")
+		)
+		(pin "A1"
+			(uuid "19fee5f4-7725-45b2-9775-688584716ad9")
+		)
+		(pin "A6"
+			(uuid "4b93aef5-6407-4273-850b-1c2a007a2dc4")
+		)
+		(pin "B1"
+			(uuid "fac8ce12-f459-4bef-a78d-3bdb3af16819")
+		)
+		(pin "F4"
+			(uuid "b52247a6-d975-4d44-8f24-1b92b26710bd")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "U301")
+					(unit 5)
 				)
 			)
 		)
