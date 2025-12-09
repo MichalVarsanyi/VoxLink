@@ -147,6 +147,12 @@ $$
 
 ## Schematic Diagram
 
+### eFuse
+
+The eFuse circuit protects the onboard LDO's from exvessive overvoltages. The overvoltage protection (OVP) threshold has been set to 5.4V. This gives enough headroom for the absolute maximum voltage of the LDO at 6.5V. The undervoltage lockout (UVLO) threshold has been set to 4V.
+
+**It is crucial for C101 and R101 to be rated at 100V!** Long enough cables can cause surges at the capacitor of over double the input voltage. The limiting resistor will aid this issue. For further details, refer to the AN88F application note from Analog Devices.
+
 ### Power Section
 
 FPGA's require a **specific voltages** to enable their operation. In this design, we are working with 4 different voltage levels:
@@ -159,3 +165,37 @@ This version of the board features a 2.5V voltage regulator, which is usually om
 
 There are three I/O banks on the FPGA. The Bank 0, Bank 1, and Bank 2; they all can have a different voltage levels connected to them. In this board, all of the I/O banks are running at 3.3V, however, the power is sectioned into VCCIO0, VCCIO1, and VCCIO2. This is to indicate the exact I/O bank that the voltage is tied to, shall any future changes be made.
 
+Furthermore, the poweruspplies are brought up in the order specified in the datasheet. However, I have seen FPGA boards such as the TinyFPGA-BX not follow the correct followup sequence. I have also heard the incorrect powerup sequence will trigger a protection diode on the inside of the FPGA, which will become a problem during prolonged powerup, which is a pretty unusual case of it's own. Nonetheless, the correct power sequence was programmed using the enable chips. The $\text{V}_{\text{EN(LOW)}} = 0.3 \text{V}$ and $\text{V}_{\text{EN(HIGH)}} = 0.9 \text{V}$, so the 1.2V FPGA core voltage can be used as an enable signal of the next regulator. Below is the datasheet recommendation:
+
+> It is recommended to bring up the power supplies in the following order. Note that there is no specified timing delay
+between the power supplies, however, there is a requirement for each supply to reach a level of 0.5 V, or higher,
+before any subsequent power supplies in the sequence are applied.
+
+- $\text{V}_{\text{CC}}$ $\text{V}_{\text{CCPLL}}$
+- $\text{SPI\_V}_{\text{CCIO1}}$
+- $\text{V}_{\text{PP-2V5}}$
+- Other Supplies
+
+
+A delay block is introduced to delay the startup of the FPGA chip. This is necessary as the FPGA suggests the memory needs to be ready to accept commands after 10us of the FPGA powerup. Since the NOR flash chip is powered from 3V3, which is the same voltage powering the $\text{SPI\_V}_{\text{CCIO1}}$, we need to consider the $t_{VTR} = 150 \mu \text{S}$ which is the time from($V_{CC(MIN)}$ to Read). The delay value was chosen as 20ms as the capacitor selection for such time is 32pF. Having a shorter time means selecting a smaller capacitor, which may become unreliable due to parasitic board capacitances.
+
+### System
+
+In this section the majority of the FPGA chip is routed. One of the most important parts is the SPI Flash memory. As the Lattice iCE40 UltraLite is a low-cost device the flash memory peripheral is not programmed by the chip directly. In order to program the FPGA, the $\overline{\text{CRESET}}$ needs to be pulled LOW. This puts the FPGA in reset and the FLASH_... signals can be used to program the memory. When done, the FPGA reset is de-asserted and the FPGA loads the configuration from the memory upon powerup.
+
+External oscillator is used to provide a more stable clock than the integrated FPGA reference clocks. An oscillator needs to be used as the FPGA does not have a support for crystal oscillators. The G (GBUF) marking on the pins indicates an internal G-Buf FPGA fabric connection for high speed routing. This is a special routing layer inside the FPGA which can carry signals up to 185 MHz. The internal system clock, as well as the external clock for the PLL need to be connected via this layer.
+
+The VoxLink Ethernet Connection is the physical interface of the sensor board. Currently, the board is configured to utilize the internal differential comparators of the FPGA (A and B pins). Note that the IOB_6A and IOB_7B_G5 form a one differential comparator pair. Ideally, a differential pair will be used to carry the signal to minimize interference. A no-placement (NOP) resistors are used to give the option of a single ended signals, where the inverted rail can be connected to ground to improve the return path.
+
+### System
+
+The sensor page is the connection of the BNO086 IMU to the FPGA. A reference design from Adafruit breakout board was chosen.
+
+> CEVA recommends using a crystal with tolerance
+50ppm with 12.5pF capacitor loading.
+
+A crystal with specified load capacitance of 12.5pF and a PPM of 20 was chosen to satisfy the datasheet value. The crystal load capacitors are then calculated based on this following equtaion:
+
+$$
+(12.5p \text{F Load Capacitance} - 5p \text{F Stray Capacitance}) * 2 = 15p \text{F Load Capacitors}
+$$
