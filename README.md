@@ -171,13 +171,13 @@ Furthermore, the poweruspplies are brought up in the order specified in the data
 between the power supplies, however, there is a requirement for each supply to reach a level of 0.5 V, or higher,
 before any subsequent power supplies in the sequence are applied.
 
-- $\text{V}_{\text{CC}}$ and $\text{V}_{\text{CCPLL}}$
-- $\text{SPI-V}_{\text{CCIO1}}$
-- $\text{V}_{\text{PP-2V5}}$
+- $\text{V} _{\text{CC}}$ and $\text{V} _{\text{CCPLL}}$
+- $\text{SPI-V} _{\text{CCIO1}}$
+- $\text{V} _{\text{PP-2V5}}$
 - Other Supplies
 
 
-A delay block is introduced to delay the startup of the FPGA chip. This is necessary as the FPGA suggests the memory needs to be ready to accept commands after 10us of the FPGA powerup. Since the NOR flash chip is powered from 3V3, which is the same voltage powering the $\text{SPI-V}_{\text{CCIO1}}$, we need to consider the $t_{VTR} = 150 \mu \text{S}$ which is the time from($V_{CC(MIN)}$ to Read). The delay value was chosen as 20ms as the capacitor selection for such time is 32pF. Having a shorter time means selecting a smaller capacitor, which may become unreliable due to parasitic board capacitances.
+A delay block is introduced to delay the startup of the FPGA chip. This is necessary as the FPGA suggests the memory needs to be ready to accept commands after 10us of the FPGA powerup. Since the NOR flash chip is powered from 3V3, which is the same voltage powering the $\text{SPI-V} _{\text{CCIO1}}$, we need to consider the $t_{VTR} = 150 \mu \text{S}$ which is the time from($V_{CC(MIN)}$ to Read). The delay value was chosen as 20ms as the capacitor selection for such time is 32pF. Having a shorter time means selecting a smaller capacitor, which may become unreliable due to parasitic board capacitances.
 
 ### System
 

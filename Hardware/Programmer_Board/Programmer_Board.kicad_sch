@@ -1,0 +1,130 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "bf4c7add-afdd-49ae-8526-dc9319b37898")
+	(paper "A4")
+	(title_block
+		(title "VoxSense Sensor Board Programmer - Root")
+		(date "2025-12-09")
+		(rev "1.0")
+		(company "Czech Technical University in Prague")
+	)
+	(lib_symbols)
+	(text "Technical Sheet Only!\nPlease refer to the subsequent sheets for schematic"
+		(exclude_from_sim no)
+		(at 143.002 75.946 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "2e79260d-4ed4-4a25-b7ff-0c22d7ebc8ce")
+	)
+	(text "Root [0]"
+		(exclude_from_sim no)
+		(at 52.578 29.972 0)
+		(effects
+			(font
+				(face "Arial")
+				(size 12.7 12.7)
+				(thickness 0.762)
+				(bold yes)
+				(color 132 0 0 1)
+			)
+		)
+		(uuid "b899e26e-5afa-4578-9e15-368ffd4373e9")
+	)
+	(sheet
+		(at 84.455 86.36)
+		(size 57.15 36.83)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0b64b7e4-c74c-4e99-b0a4-1d7968ef430c")
+		(property "Sheetname" "FTDI"
+			(at 84.455 85.6484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ftdi.kicad_sch"
+			(at 84.455 123.7746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Programmer_Board"
+				(path "/bf4c7add-afdd-49ae-8526-dc9319b37898"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 144.78 86.36)
+		(size 57.15 36.83)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4d97b358-2a37-4f83-8009-a820559e7abf")
+		(property "Sheetname" "Programming"
+			(at 144.78 85.6484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "programming.kicad_sch"
+			(at 144.78 123.7746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Programmer_Board"
+				(path "/bf4c7add-afdd-49ae-8526-dc9319b37898"
+					(page "1")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "0")
+		)
+	)
+	(embedded_fonts no)
+)

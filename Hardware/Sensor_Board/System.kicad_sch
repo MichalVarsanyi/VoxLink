@@ -204,6 +204,322 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector_Generic:Conn_01x08"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x08"
+				(at 0 -12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x08_1_1"
+				(rectangle
+					(start -1.27 8.89)
+					(end 1.27 -11.43)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 7.747)
+					(end 0 7.493)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -7.493)
+					(end 0 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -10.033)
+					(end 0 -10.287)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 7.62 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 5.08 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -7.62 0)
+					(length 3.81)
+					(name "Pin_7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -10.16 0)
+					(length 3.81)
+					(name "Pin_8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Custom_VoxLink_Symbols:ICE40UL1K-CM36AI"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2526,131 +2842,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+3V3"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+3V3"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+3V3\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+3V3_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3V3_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers
@@ -3376,6 +3567,18 @@
 		)
 		(uuid "c90476d3-a96e-456e-90ae-8dbfd1362253")
 	)
+	(text "WARNING:\nConnector is\nFLIPPED to\nmatch polarity!"
+		(exclude_from_sim no)
+		(at 171.196 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+			)
+			(justify right)
+		)
+		(uuid "d37e3808-319c-4e33-8ca4-27a12dffdc5a")
+	)
 	(text "ESD Protection\nIC"
 		(exclude_from_sim no)
 		(at 88.9 110.744 0)
@@ -3528,6 +3731,28 @@
 		)
 		(uuid "d451a38d-74d7-4483-a232-102752a73bf0")
 	)
+	(text_box "PicoBlade Programming Connector"
+		(exclude_from_sim no)
+		(at 127 74.295 0)
+		(size 45.085 40.64)
+		(margins 1.5 1.5 1.5 1.5)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "d73f1ffd-602a-4fdc-9c2c-6b234719539e")
+	)
 	(junction
 		(at 234.95 36.83)
 		(diameter 0)
@@ -3541,6 +3766,12 @@
 		(uuid "3cd2dc1a-a9ea-4817-8802-4d998f54b5f3")
 	)
 	(junction
+		(at 142.24 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5f436ead-94ac-4019-a1e0-045677baf2f5")
+	)
+	(junction
 		(at 240.03 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3551,6 +3782,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c4a8416b-fa90-4e65-8c7a-681c7f6c8cfd")
+	)
+	(junction
+		(at 151.13 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d961e5a3-39c5-46dc-8ecb-3d2c4afa8ed3")
 	)
 	(no_connect
 		(at 39.37 151.13)
@@ -3687,6 +3924,16 @@
 	)
 	(wire
 		(pts
+			(xy 134.62 91.44) (xy 156.21 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "257868c9-686a-49df-b408-3e0261bfcb9e")
+	)
+	(wire
+		(pts
 			(xy 118.11 153.67) (xy 118.11 156.21)
 		)
 		(stroke
@@ -3797,6 +4044,16 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 101.6) (xy 151.13 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b2f463d-e8de-46c4-8c36-78f4cf402e13")
+	)
+	(wire
+		(pts
 			(xy 173.99 52.07) (xy 173.99 54.61)
 		)
 		(stroke
@@ -3834,6 +4091,26 @@
 			(type default)
 		)
 		(uuid "4bbca88a-5b13-4e4e-8ca8-f78ac3140670")
+	)
+	(wire
+		(pts
+			(xy 154.94 86.36) (xy 156.21 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cd3eff1-487f-4a98-95a6-0d7324d754ca")
+	)
+	(wire
+		(pts
+			(xy 156.21 104.14) (xy 154.94 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50ec13f5-a9b6-4fb4-a7d8-ceb8f536824a")
 	)
 	(wire
 		(pts
@@ -3904,6 +4181,26 @@
 			(type default)
 		)
 		(uuid "65625469-c252-486d-8882-0c65a65ad6b8")
+	)
+	(wire
+		(pts
+			(xy 134.62 99.06) (xy 142.24 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66ceac14-af70-473c-ad03-36cdd0f7375e")
+	)
+	(wire
+		(pts
+			(xy 134.62 93.98) (xy 156.21 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6accb826-6f9f-4df4-b381-3e0d233e7814")
 	)
 	(wire
 		(pts
@@ -4007,6 +4304,16 @@
 	)
 	(wire
 		(pts
+			(xy 134.62 96.52) (xy 156.21 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cdf78f7-ade2-45e8-aca6-8b81e0b495dc")
+	)
+	(wire
+		(pts
 			(xy 39.37 146.05) (xy 63.5 146.05)
 		)
 		(stroke
@@ -4055,6 +4362,16 @@
 			(type default)
 		)
 		(uuid "96903c4f-c4e6-4f4b-b250-2183282c7644")
+	)
+	(wire
+		(pts
+			(xy 142.24 99.06) (xy 156.21 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a2ca912-1c5e-4901-890b-7b3feeec6ec6")
 	)
 	(wire
 		(pts
@@ -4118,6 +4435,16 @@
 	)
 	(wire
 		(pts
+			(xy 138.43 101.6) (xy 151.13 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0aa297e-fe65-4fc4-a271-b9fbb9079694")
+	)
+	(wire
+		(pts
 			(xy 58.42 99.06) (xy 58.42 102.87)
 		)
 		(stroke
@@ -4145,6 +4472,16 @@
 			(type default)
 		)
 		(uuid "bb1dc548-d026-46b7-9399-55fc2fad9c65")
+	)
+	(wire
+		(pts
+			(xy 154.94 104.14) (xy 154.94 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bec62e8f-2701-4676-a2f8-02bc7d9c547f")
 	)
 	(wire
 		(pts
@@ -4185,6 +4522,16 @@
 			(type default)
 		)
 		(uuid "c68a86ac-7638-4aa8-abe5-dcc70b44cfb9")
+	)
+	(wire
+		(pts
+			(xy 134.62 88.9) (xy 156.21 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6f5f348-8218-43b2-96bd-3ca14e5eb79c")
 	)
 	(wire
 		(pts
@@ -4269,6 +4616,26 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 101.6) (xy 156.21 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d598466f-8be9-4531-bf4c-6c292e1782b1")
+	)
+	(wire
+		(pts
+			(xy 154.94 85.09) (xy 154.94 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da6e00be-df1e-49b6-9a9c-bd2535fd88bf")
+	)
+	(wire
+		(pts
 			(xy 229.87 38.1) (xy 229.87 36.83)
 		)
 		(stroke
@@ -4326,6 +4693,16 @@
 			(type default)
 		)
 		(uuid "e22ea9ab-3cf2-47cf-a64d-7e06a3d03b6f")
+	)
+	(wire
+		(pts
+			(xy 142.24 99.06) (xy 142.24 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9e9cc95-bd18-4917-b9bf-421b0163a9b9")
 	)
 	(wire
 		(pts
@@ -5370,6 +5747,16 @@
 		)
 		(uuid "6f15f422-3b6c-407a-a6ed-8f7909805764")
 	)
+	(label "FLASH_~{CS}_NOESD"
+		(at 134.62 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "70bc13c8-90a2-4f0a-b646-a5894d08103d")
+	)
 	(label "FLASH_MISO_NOESD"
 		(at 78.74 102.87 180)
 		(effects
@@ -5440,6 +5827,16 @@
 		)
 		(uuid "a4c753a1-f4d2-4a26-950a-a30899d79fd9")
 	)
+	(label "CDONE"
+		(at 134.62 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a7af31e1-627f-4af5-81b3-a0fe56b4309c")
+	)
 	(label "VOX_CLK"
 		(at 93.98 158.75 180)
 		(effects
@@ -5480,6 +5877,16 @@
 		)
 		(uuid "b0764718-e649-46e4-b7a2-7bdabe8dd1ac")
 	)
+	(label "FLASH_SCK_NOESD"
+		(at 134.62 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b7560023-0189-423f-994b-e1289bdfb067")
+	)
 	(label "VOX_TX_NOESD"
 		(at 55.88 138.43 180)
 		(effects
@@ -5510,6 +5917,16 @@
 		)
 		(uuid "c4d212a7-24b5-4f10-9525-57f34d09a85e")
 	)
+	(label "FLASH_MOSI_NOESD"
+		(at 134.62 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e0b529e2-e86c-42fa-9ef0-0c3570e908f5")
+	)
 	(label "FLASH_SCK_NOESD"
 		(at 78.74 105.41 180)
 		(effects
@@ -5529,6 +5946,16 @@
 			(justify right bottom)
 		)
 		(uuid "e12e64f9-9da8-4f02-932b-f7477deea546")
+	)
+	(label "FLASH_MISO_NOESD"
+		(at 134.62 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e46c1c77-84a0-4159-b3c6-17330d0ce3fe")
 	)
 	(label "FLASH_MISO"
 		(at 116.84 102.87 180)
@@ -5588,6 +6015,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "~{CRESET}"
+		(shape input)
+		(at 138.43 101.6 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b3a4e0ec-66c9-4869-8b6d-32eb1ab9a445")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 128.4297 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -5680,72 +6129,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 36.83 92.71 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "03767aae-cfc2-4c97-989b-0372584b4a02")
-		(property "Reference" "#PWR082"
-			(at 36.83 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 36.83 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 36.83 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 36.83 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 36.83 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e3092df6-8d8f-4237-9839-8a997855b602")
-		)
-		(instances
-			(project "VoxLink"
-				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "#PWR082")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 81.28 97.79 0)
 		(mirror y)
@@ -5812,16 +6195,35 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3VA")
-		(at 44.45 86.36 0)
+		(lib_id "Diode:1.5KExxA")
+		(at 151.13 106.68 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0689aa37-4d83-4241-a4f0-db52782ddf1d")
-		(property "Reference" "#PWR091"
-			(at 44.45 90.17 0)
+		(uuid "04e0a04b-ed44-4918-ad5d-28c2e6939e3d")
+		(property "Reference" "D303"
+			(at 149.606 105.918 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TVS"
+			(at 149.606 108.458 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 156.21 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5829,25 +6231,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCCIO1"
-			(at 44.45 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 44.45 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 44.45 86.36 0)
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Littelfuse/SESD0402X1UN-0020-090?qs=R4Nx89tKnBiKqBxpGxncNA%3D%3D"
+			(at 151.13 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5856,7 +6241,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 44.45 86.36 0)
+			(at 151.13 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5864,12 +6249,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "8c551e7e-8d0d-4a03-a04d-c03de754a8f9")
+			(uuid "6444fceb-99c0-4d6c-b79b-3f014b9ee269")
+		)
+		(pin "2"
+			(uuid "432339ea-00ae-486d-a60b-07a5c4d35ac9")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "#PWR091")
+					(reference "D303")
 					(unit 1)
 				)
 			)
@@ -6140,6 +6528,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:VCC")
+		(at 27.94 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "116cf96b-8cdd-46fb-88e9-10601e493af3")
+		(property "Reference" "#PWR082"
+			(at 27.94 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 27.94 89.154 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 27.94 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 27.94 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 27.94 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4798b012-51ed-4476-a080-2faf23d52a70")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "#PWR082")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 31.75 55.88 0)
 		(mirror y)
@@ -6203,72 +6656,6 @@
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
 					(reference "SW301")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 27.94 92.71 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "143e880c-39b1-4b5d-8baa-e5ac07a7c0b4")
-		(property "Reference" "#PWR083"
-			(at 27.94 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 27.94 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 27.94 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 27.94 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4ba38e2f-d3ae-4c7e-832a-140931eeced9")
-		)
-		(instances
-			(project "VoxLink"
-				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "#PWR083")
 					(unit 1)
 				)
 			)
@@ -6350,7 +6737,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2318bd7b-2d3f-496a-b28a-5649bbd16b26")
-		(property "Reference" "D303"
+		(property "Reference" "D305"
 			(at 177.8 48.5774 90)
 			(effects
 				(font
@@ -6413,7 +6800,7 @@
 		(instances
 			(project ""
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "D303")
+					(reference "D305")
 					(unit 1)
 				)
 			)
@@ -6494,7 +6881,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2f81c7a4-c634-40c5-a1c5-0c0bf8b6c30a")
-		(property "Reference" "D305"
+		(property "Reference" "D307"
 			(at 200.66 48.5774 90)
 			(effects
 				(font
@@ -6557,7 +6944,7 @@
 		(instances
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "D305")
+					(reference "D307")
 					(unit 1)
 				)
 			)
@@ -7515,6 +7902,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 142.24 110.49 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "57dc9129-83ea-4b22-a608-d5498613b792")
+		(property "Reference" "#PWR0102"
+			(at 142.24 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "470f4192-0284-4897-880a-87e1405966e9")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "#PWR0102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 229.87 41.91 0)
 		(mirror y)
@@ -7654,6 +8107,137 @@
 		)
 	)
 	(symbol
+		(lib_id "power:VCC")
+		(at 44.45 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "59cc94cf-fefd-42e4-826b-ad5529331311")
+		(property "Reference" "#PWR091"
+			(at 44.45 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 44.45 82.804 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 44.45 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 44.45 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fb91f570-bafc-44c0-a9b0-b0007d176ec3")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "#PWR091")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 151.13 110.49 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5c743666-0b31-493b-ac53-368d38b8372c")
+		(property "Reference" "#PWR0101"
+			(at 151.13 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 151.13 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 151.13 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 151.13 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "438335df-2e49-4e73-bffc-28c1189c1912")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "#PWR0101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 173.99 40.64 0)
 		(unit 1)
@@ -7733,7 +8317,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b88c4f5-4aa1-497e-a17d-86ec475baef7")
-		(property "Reference" "D302"
+		(property "Reference" "D304"
 			(at 273.05 140.0174 90)
 			(effects
 				(font
@@ -7796,7 +8380,7 @@
 		(instances
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "D302")
+					(reference "D304")
 					(unit 1)
 				)
 			)
@@ -8268,6 +8852,103 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x08")
+		(at 161.29 96.52 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "803c2552-b321-4933-abfa-f251bf8ac0a6")
+		(property "Reference" "J303"
+			(at 163.322 86.106 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PicoBlade"
+			(at 159.766 83.566 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_PicoBlade_53048-0810_1x08_P1.25mm_Horizontal"
+			(at 161.29 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 161.29 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/Molex/53048-0860?qs=iLbezkQI%252BshWd7WZ3fG%252B8w%3D%3D"
+			(at 161.29 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "ede3a63f-b204-4968-8c0f-f43a5a1cc276")
+		)
+		(pin "2"
+			(uuid "9c18d190-c24b-42a4-a451-a15fee5862b8")
+		)
+		(pin "3"
+			(uuid "b8394bd0-9e2c-4680-935c-1bfa4853c143")
+		)
+		(pin "1"
+			(uuid "97a6d095-c1cc-427b-9ec4-fabcb63b26de")
+		)
+		(pin "4"
+			(uuid "d782ad7d-5768-4c58-ab3d-2910b0ee01a5")
+		)
+		(pin "6"
+			(uuid "9376b706-c866-49a5-98ac-c1eb91de3fe7")
+		)
+		(pin "7"
+			(uuid "ca9ea406-b810-433f-adbd-1806a2a34205")
+		)
+		(pin "8"
+			(uuid "d431503d-5f2d-4dc0-87a5-6df2c5f28dae")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "J303")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3VA")
 		(at 240.03 86.36 0)
 		(mirror y)
@@ -8342,7 +9023,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "86f2c0d0-4f96-443c-b010-a1abb0529a86")
-		(property "Reference" "D304"
+		(property "Reference" "D306"
 			(at 189.23 48.5774 90)
 			(effects
 				(font
@@ -8405,7 +9086,7 @@
 		(instances
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "D304")
+					(reference "D306")
 					(unit 1)
 				)
 			)
@@ -8537,6 +9218,72 @@
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
 					(reference "#PWR085")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 154.94 105.41 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9006bff4-8395-4a9f-919b-2dee1dbb6b84")
+		(property "Reference" "#PWR0100"
+			(at 154.94 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 154.94 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "79f18069-21df-4b30-92b8-cef9701684eb")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "#PWR0100")
 					(unit 1)
 				)
 			)
@@ -9063,6 +9810,75 @@
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
 					(reference "#PWR086")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1.5KExxA")
+		(at 142.24 106.68 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ac911a44-6549-467f-a0f8-ad55b7435e98")
+		(property "Reference" "D302"
+			(at 140.716 105.918 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TVS"
+			(at 140.716 108.458 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 147.32 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Littelfuse/SESD0402X1UN-0020-090?qs=R4Nx89tKnBiKqBxpGxncNA%3D%3D"
+			(at 142.24 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "94f507f7-6791-4b11-aaf3-e2fac99025fe")
+		)
+		(pin "2"
+			(uuid "b2472755-f18e-4086-b6a7-7b9e6a4d0ee3")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "D302")
 					(unit 1)
 				)
 			)
@@ -10125,6 +10941,136 @@
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
 					(reference "C304")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 36.83 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d9ca63b6-8ccf-490d-8d3c-0eb047856a60")
+		(property "Reference" "#PWR083"
+			(at 36.83 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 36.83 89.154 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 36.83 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 36.83 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 36.83 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "731d8e08-173e-4967-9d6b-a41aab5eb521")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "#PWR083")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 154.94 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e5c82e43-2ff3-4cb9-aa0a-e63c2da57822")
+		(property "Reference" "#PWR0103"
+			(at 154.94 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 154.94 81.534 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 154.94 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "57629412-67a5-45ec-be9e-052ad3790ed4")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "#PWR0103")
 					(unit 1)
 				)
 			)
