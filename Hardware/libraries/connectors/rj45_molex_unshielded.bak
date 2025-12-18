@@ -2,20 +2,20 @@
 	(version 20241209)
 	(generator "kicad_symbol_editor")
 	(generator_version "9.0")
-	(symbol "RJ45_Molex_Unshielded"
+	(symbol "RJ45_Molex_Unshielded_Input"
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "J"
-			(at 12.446 -0.762 0)
+			(at 14.986 -0.762 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "RJ45"
-			(at 12.446 -2.794 0)
+		(property "Value" "RJ45_Input"
+			(at 14.986 -2.794 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -58,7 +58,7 @@
 				(hide yes)
 			)
 		)
-		(symbol "RJ45_Molex_Unshielded_1_1"
+		(symbol "RJ45_Molex_Unshielded_Input_1_1"
 			(rectangle
 				(start -3.81 19.05)
 				(end 8.89 -3.81)
@@ -286,7 +286,7 @@
 					)
 				)
 			)
-			(pin power_in line
+			(pin power_out line
 				(at 2.54 21.59 270)
 				(length 2.54)
 				(name "VCC"
@@ -342,6 +342,365 @@
 			)
 			(pin input line
 				(at 11.43 10.16 180)
+				(length 2.54)
+				(name "~{TX}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "RJ45_Molex_Unshielded_Output"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 16.764 -21.336 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RJ45_Output"
+			(at 22.098 -23.368 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "rj45_molex_unshielded:CONN_855035-101_MOL"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/Molex/85503-5001?qs=AfGmtpoX2ghiFB9TTo9G6w%3D%3D"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "RJ45_Molex_Unshielded_Output_1_1"
+			(rectangle
+				(start 2.54 -1.27)
+				(end 15.24 -24.13)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(bezier
+				(pts
+					(xy 3.81 -5.715) (xy 4.318 -6.477) (xy 4.826 -5.715) (xy 4.826 -5.715)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(bezier
+				(pts
+					(xy 3.81 -5.969) (xy 4.318 -5.207) (xy 4.826 -5.969) (xy 4.826 -5.969)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(bezier
+				(pts
+					(xy 3.81 -13.462) (xy 4.318 -14.224) (xy 4.826 -13.462) (xy 4.826 -13.462)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(bezier
+				(pts
+					(xy 3.81 -13.716) (xy 4.318 -12.954) (xy 4.826 -13.716) (xy 4.826 -13.716)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(bezier
+				(pts
+					(xy 4.572 -5.715) (xy 5.08 -6.477) (xy 5.588 -5.715) (xy 5.588 -5.715)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(bezier
+				(pts
+					(xy 4.572 -5.969) (xy 5.08 -5.207) (xy 5.588 -5.969) (xy 5.588 -5.969)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(bezier
+				(pts
+					(xy 4.572 -13.462) (xy 5.08 -14.224) (xy 5.588 -13.462) (xy 5.588 -13.462)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(bezier
+				(pts
+					(xy 4.572 -13.716) (xy 5.08 -12.954) (xy 5.588 -13.716) (xy 5.588 -13.716)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(bezier
+				(pts
+					(xy 12.446 -5.715) (xy 12.954 -6.477) (xy 13.462 -5.715) (xy 13.462 -5.715)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(bezier
+				(pts
+					(xy 12.446 -5.969) (xy 12.954 -5.207) (xy 13.462 -5.969) (xy 13.462 -5.969)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(bezier
+				(pts
+					(xy 13.208 -5.715) (xy 13.716 -6.477) (xy 14.224 -5.715) (xy 14.224 -5.715)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(bezier
+				(pts
+					(xy 13.208 -5.969) (xy 13.716 -5.207) (xy 14.224 -5.969) (xy 14.224 -5.969)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin input line
+				(at 0 -7.62 0)
+				(length 2.54)
+				(name "RX"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 0 -10.16 0)
+				(length 2.54)
+				(name "~{RX}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 0 -15.24 0)
+				(length 2.54)
+				(name "CLK"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 0 -17.78 0)
+				(length 2.54)
+				(name "~{CLK}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 8.89 1.27 270)
+				(length 2.54)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 8.89 -26.67 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 17.78 -7.62 180)
+				(length 2.54)
+				(name "TX"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 17.78 -10.16 180)
 				(length 2.54)
 				(name "~{TX}"
 					(effects

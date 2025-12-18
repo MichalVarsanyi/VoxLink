@@ -3,16 +3,16 @@
 ### **⚠️ Warning: Parameters are still subject to change! ⚠️**
 ### **Speed**: 50-100 MHz
 $$
-f_{\text{bandwidth}} = 2 \cdot f_{\text{sensor}} \cdot N_{\text{devices}} \cdot (L_{\text{header}} + L_{\text{data}}) 
+f_{\mathrm{bandwidth}} = 2 \cdot f_{\mathrm{sensor}} \cdot N_{\mathrm{devices}} \cdot (L_{\mathrm{header}} + L_{\mathrm{data}}) 
 $$
 $$
-9.6 \text{ MHz} = 2 \cdot 1000 \text{ Hz} \cdot 100 \cdot (16 + 32) 
+9.6 \mathrm{ MHz} = 2 \cdot 1000 \mathrm{ Hz} \cdot 100 \cdot (16 + 32) 
 $$
 
 It may seem that 50-100 MHz is unreasonably fast, however, just 40 sensors at 9 kHz get very close to this ballpark. It is difficult to determine what may increase the bandwidth in the future, so it's important to rather have an excess than to have too little bandwidth. (Resulting bandwidth is the double of the calculated value to keep a reasonable margin of safety)
 
 $$
-34.56 \text{ MHz} = 2 \cdot 9000 \text{ Hz} \cdot 40 \cdot (12 + 32) 
+34.56 \mathrm{ MHz} = 2 \cdot 9000 \mathrm{ Hz} \cdot 40 \cdot (12 + 32) 
 $$
 
 ### **Communication**: Full-Duplex 
@@ -99,36 +99,36 @@ Part number: **ICE40UL1K-CM36AI**
 ![image](images/VoxLink_Block_Diagram_Simplified_Full.jpg)
 
 ### Connector selection
-**Rule of thumb: $l_{\text{crit}}$** is $\frac{1}{12}^{\text{th}}$ of a signal wavelength in the dielectric material $\varepsilon$. The effective dielectric constant $\varepsilon$ for an outer-layer trace is approximately 3.3
+**Rule of thumb: $l_{\mathrm{crit}}$** is $\frac{1}{12}^{\mathrm{th}}$ of a signal wavelength in the dielectric material $\varepsilon$. The effective dielectric constant $\varepsilon$ for an outer-layer trace is approximately 3.3
 
 $$
-l_{\text{crit}} \text{ [m]} = \frac{c\text{ [m/s]}}{f_{\text{max}}\text{ [Hz]}} \cdot \frac{1}{\sqrt{\varepsilon}} \cdot \frac{1}{12}
+l_{\mathrm{crit}} \mathrm{ [m]} = \frac{c\mathrm{ [m/s]}}{f_{\mathrm{max}}\mathrm{ [Hz]}} \cdot \frac{1}{\sqrt{\varepsilon}} \cdot \frac{1}{12}
 $$
 
 **Rise & fall times rule of thumb:**
 
 $$
-f_{\text{max}} \text{ [GHz]} \approx \frac{0.5}{t_{r/f} \text{ [ns]}}
+f_{\mathrm{max}} \mathrm{ [GHz]} \approx \frac{0.5}{t_{r/f} \mathrm{ [ns]}}
 $$
 
 **Clock-to-rise-time rule of thumb:**
 
 $$
-t_{r/f} \text{ [ns]}\approx \frac{1}{10\cdot f_{\text{clk}}\text{ [GHz]}}
+t_{r/f} \mathrm{ [ns]}\approx \frac{1}{10\cdot f_{\mathrm{clk}}\mathrm{ [GHz]}}
 $$
 
 **Calculation for maximum protocol clock:**
 
 $$
-1 \text{ [ns]}\approx \frac{1}{10\cdot 0.1\text{ [GHz]}}
+1 \mathrm{ [ns]}\approx \frac{1}{10\cdot 0.1\mathrm{ [GHz]}}
 $$
 
 $$
-500 \text{ [MHz]} \approx \frac{0.5}{1 \text{ [ns]}}
+500 \mathrm{ [MHz]} \approx \frac{0.5}{1 \mathrm{ [ns]}}
 $$
 
 $$
-27.5 \text{ [mm]} \doteq \frac{3\cdot 10^{8}}{1\cdot 10^{6} \text{ Hz}} \cdot \frac{1}{\sqrt{3.3}} \cdot \frac{1}{12}
+27.5 \mathrm{ [mm]} \doteq \frac{3\cdot 10^{8}}{1\cdot 10^{6} \mathrm{ Hz}} \cdot \frac{1}{\sqrt{3.3}} \cdot \frac{1}{12}
 $$
 
 This means the transmission line will appear as **lumped element** (no impedance matching needed as the reflections are negligible) only for **traces shorter than 27.5mm**. Anything **above** this length needs to be treated as a **distributed element** and requires **impedance matching**.
@@ -139,13 +139,13 @@ This means the transmission line will appear as **lumped element** (no impedance
 |:--------:|:--------:|
 | 100 Ω ± 15 Ω | 90 Ω ± 5 Ω |
 
-Differential Impedance $Z_{\text{diff}}$ Comparison
+Differential Impedance $Z_{\mathrm{diff}}$ Comparison
 
 $$
-Z_{\text{diff}} = 2\cdot (Z_{0}-Z_{\text{coupling}})
+Z_{\mathrm{diff}} = 2\cdot (Z_{0}-Z_{\mathrm{coupling}})
 $$
 
-## Schematic Diagram
+## Schematic Diagram - Sensor Board
 
 ### eFuse
 
@@ -161,27 +161,27 @@ FPGA's require a **specific voltages** to enable their operation. In this design
 |:--------:|:--------:|:--------:|:--------:|
 | Supply voltage from the power cables | The I/O voltages (used by GPIO pins) | The Non-Volatile Configuratio Memory (NVCM) voltage | The FPGA core voltage | 
 
-This version of the board features a 2.5V voltage regulator, which is usually omitted in many designs. The absolte maximum rating of the $V_{\text{PP-2V5}}$ supplying the NVCM voltage is 2.3V to 3.46V. This enables the pin to be directly connected to the 3.3V voltage regulator. To get the voltage closer to 2.5V a diode is placed from the 3.3V to the NVCM supply, which facilitates a drop of rougly 0.7V.
+This version of the board features a 2.5V voltage regulator, which is usually omitted in many designs. The absolte maximum rating of the $V_{\mathrm{PP\_2V5}}$ supplying the NVCM voltage is 2.3V to 3.46V. This enables the pin to be directly connected to the 3.3V voltage regulator. To get the voltage closer to 2.5V a diode is placed from the 3.3V to the NVCM supply, which facilitates a drop of rougly 0.7V.
 
 There are three I/O banks on the FPGA. The Bank 0, Bank 1, and Bank 2; they all can have a different voltage levels connected to them. In this board, all of the I/O banks are running at 3.3V, however, the power is sectioned into VCCIO0, VCCIO1, and VCCIO2. This is to indicate the exact I/O bank that the voltage is tied to, shall any future changes be made.
 
-Furthermore, the poweruspplies are brought up in the order specified in the datasheet. However, I have seen FPGA boards such as the TinyFPGA-BX not follow the correct followup sequence. I have also heard the incorrect powerup sequence will trigger a protection diode on the inside of the FPGA, which will become a problem during prolonged powerup, which is a pretty unusual case of it's own. Nonetheless, the correct power sequence was programmed using the enable chips. The $\text{V}_{\text{EN(LOW)}} = 0.3 \text{V}$ and $\text{V}_{\text{EN(HIGH)}} = 0.9 \text{V}$, so the 1.2V FPGA core voltage can be used as an enable signal of the next regulator. Below is the datasheet recommendation:
+Furthermore, the poweruspplies are brought up in the order specified in the datasheet. However, I have seen FPGA boards such as the TinyFPGA-BX not follow the correct followup sequence. I have also heard the incorrect powerup sequence will trigger a protection diode on the inside of the FPGA, which will become a problem during prolonged powerup, which is a pretty unusual case of it's own. Nonetheless, the correct power sequence was programmed using the enable chips. The $\mathrm{V}_{\mathrm{EN(LOW)}} = 0.3 \mathrm{V}$ and $\mathrm{V}_{\mathrm{EN(HIGH)}} = 0.9 \mathrm{V}$, so the 1.2V FPGA core voltage can be used as an enable signal of the next regulator. Below is the datasheet recommendation:
 
 > It is recommended to bring up the power supplies in the following order. Note that there is no specified timing delay
 between the power supplies, however, there is a requirement for each supply to reach a level of 0.5 V, or higher,
 before any subsequent power supplies in the sequence are applied.
 
-- $\text{V} _{\text{CC}}$ and $\text{V} _{\text{CCPLL}}$
-- $\text{SPI-V} _{\text{CCIO1}}$
-- $\text{V} _{\text{PP-2V5}}$
+- $\mathrm{V} _{\mathrm{CC}}$ and $\mathrm{V} _{\mathrm{CC\_PLL}}$
+- $\mathrm{V_{CCIO1\_SPI}}$
+- $\mathrm{V} _{\mathrm{PP\_2V5}}$
 - Other Supplies
 
 
-A delay block is introduced to delay the startup of the FPGA chip. This is necessary as the FPGA suggests the memory needs to be ready to accept commands after 10us of the FPGA powerup. Since the NOR flash chip is powered from 3V3, which is the same voltage powering the $\text{SPI-V} _{\text{CCIO1}}$, we need to consider the $t_{VTR} = 150 \mu \text{S}$ which is the time from($V_{CC(MIN)}$ to Read). The delay value was chosen as 20ms as the capacitor selection for such time is 32pF. Having a shorter time means selecting a smaller capacitor, which may become unreliable due to parasitic board capacitances.
+A delay block is introduced to delay the startup of the FPGA chip. This is necessary as the FPGA suggests the memory needs to be ready to accept commands after 10us of the FPGA powerup. Since the NOR flash chip is powered from 3V3, which is the same voltage powering the $\mathrm{SPI-V} _{\mathrm{CCIO1}}$, we need to consider the $t_{VTR} = 150 \mu \mathrm{S}$ which is the time from($\mathrm{V_{CC(MIN)}}$ to Read). The delay value was chosen as 20ms as the capacitor selection for such time is 32pF. Having a shorter time means selecting a smaller capacitor, which may become unreliable due to parasitic board capacitances.
 
 ### System
 
-In this section the majority of the FPGA chip is routed. One of the most important parts is the SPI Flash memory. As the Lattice iCE40 UltraLite is a low-cost device the flash memory peripheral is not programmed by the chip directly. In order to program the FPGA, the $\overline{\text{CRESET}}$ needs to be pulled LOW. This puts the FPGA in reset and the FLASH_... signals can be used to program the memory. When done, the FPGA reset is de-asserted and the FPGA loads the configuration from the memory upon powerup.
+In this section the majority of the FPGA chip is routed. One of the most important parts is the SPI Flash memory. As the Lattice iCE40 UltraLite is a low-cost device the flash memory peripheral is not programmed by the chip directly. In order to program the FPGA, the $\overline{\mathrm{CRESET}}$ needs to be pulled LOW. This puts the FPGA in reset and the FLASH_... signals can be used to program the memory. When done, the FPGA reset is de-asserted and the FPGA loads the configuration from the memory upon powerup.
 
 External oscillator is used to provide a more stable clock than the integrated FPGA reference clocks. An oscillator needs to be used as the FPGA does not have a support for crystal oscillators. The G (GBUF) marking on the pins indicates an internal G-Buf FPGA fabric connection for high speed routing. This is a special routing layer inside the FPGA which can carry signals up to 185 MHz. The internal system clock, as well as the external clock for the PLL need to be connected via this layer.
 
@@ -197,5 +197,12 @@ The sensor page is the connection of the BNO086 IMU to the FPGA. A reference des
 A crystal with specified load capacitance of 12.5pF and a PPM of 20 was chosen to satisfy the datasheet value. The crystal load capacitors are then calculated based on this following equtaion:
 
 $$
-(12.5p \text{F Load Capacitance} - 5p \text{F Stray Capacitance}) * 2 = 15p \text{F Load Capacitors}
+(12.5p \mathrm{F Load Capacitance} - 5p \mathrm{F Stray Capacitance}) * 2 = 15p \mathrm{F Load Capacitors}
 $$
+
+## Schematic Diagram - Programmer Board
+An FTDI223HL IC was used as the serial to UART converter. Although it is programming a regular SPI Flash memory chip the FPGA is connected to, there's a possibility of the FTDI programmer having a custom bootloader burned in by the manufacturer. To facilitate future debugging, an evaluation board from the manufacturer will be ordered to have the possibility to swap the FTDI ICs.
+
+Furthermore, the 93LC56B EEPROM chip connected to the FTDI programmer can be swaped out based on the FTDI datasheet requirements, however, the first iteration of the board will have the IC Lattice used in their evaluation board to minimize the potential of a flawed design.
+
+A Tag Connect TC2030-IDC programming cable will be used to program the SPI Flash memory. The pinout of the IDC connector was taken from the datasheet and the correct pin assignment has to be tested on the hardware implementation as its corectness is not yet confirmed. An additional 8-pin PicoBlade connector was used to have access to the $\mathrm{CDONE}$ and $\overline{\mathrm{CRESET}}$ signals (the Tag Connect only offers 6 pins), as well as try out different programming interfaces. The manufacturer evaluation board uses all 8 signals, however, it may be possible to use only 6.
