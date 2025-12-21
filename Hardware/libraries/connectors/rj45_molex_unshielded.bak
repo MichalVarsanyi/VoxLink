@@ -7,7 +7,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "J"
-			(at 14.986 -0.762 0)
+			(at -12.7 14.478 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15,7 +15,7 @@
 			)
 		)
 		(property "Value" "RJ45_Input"
-			(at 14.986 -2.794 0)
+			(at -12.7 12.446 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -58,21 +58,95 @@
 				(hide yes)
 			)
 		)
+		(symbol "RJ45_Molex_Unshielded_Input_0_1"
+			(polyline
+				(pts
+					(xy -5.715 13.335) (xy -3.81 13.335) (xy -3.81 12.065) (xy 0.635 12.065) (xy 0.635 13.335) (xy 2.54 13.335)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -3.556 17.145) (xy -3.556 16.51)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.286 17.145) (xy -2.286 16.51)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.016 17.145) (xy -1.016 16.51)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.254 17.145) (xy 0.254 16.51)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
 		(symbol "RJ45_Molex_Unshielded_Input_1_1"
 			(rectangle
-				(start -3.81 19.05)
+				(start -6.985 52.07)
 				(end 8.89 -3.81)
 				(stroke
 					(width 0)
 					(type solid)
 				)
 				(fill
-					(type background)
+					(type color)
+					(color 0 194 0 1)
+				)
+			)
+			(rectangle
+				(start -5.715 17.145)
+				(end 2.54 11.43)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
 				)
 			)
 			(bezier
 				(pts
-					(xy -2.54 14.605) (xy -2.032 13.843) (xy -1.524 14.605) (xy -1.524 14.605)
+					(xy 6.096 34.925) (xy 6.604 34.163) (xy 7.112 34.925) (xy 7.112 34.925)
 				)
 				(stroke
 					(width 0)
@@ -84,7 +158,7 @@
 			)
 			(bezier
 				(pts
-					(xy -2.54 14.351) (xy -2.032 15.113) (xy -1.524 14.351) (xy -1.524 14.351)
+					(xy 6.096 34.671) (xy 6.604 35.433) (xy 7.112 34.671) (xy 7.112 34.671)
 				)
 				(stroke
 					(width 0)
@@ -96,7 +170,7 @@
 			)
 			(bezier
 				(pts
-					(xy -2.54 6.858) (xy -2.032 6.096) (xy -1.524 6.858) (xy -1.524 6.858)
+					(xy 6.858 46.228) (xy 6.35 45.466) (xy 5.842 46.228) (xy 5.842 46.228)
 				)
 				(stroke
 					(width 0)
@@ -108,7 +182,7 @@
 			)
 			(bezier
 				(pts
-					(xy -2.54 6.604) (xy -2.032 7.366) (xy -1.524 6.604) (xy -1.524 6.604)
+					(xy 6.858 45.974) (xy 6.35 46.736) (xy 5.842 45.974) (xy 5.842 45.974)
 				)
 				(stroke
 					(width 0)
@@ -120,7 +194,7 @@
 			)
 			(bezier
 				(pts
-					(xy -1.778 14.605) (xy -1.27 13.843) (xy -0.762 14.605) (xy -0.762 14.605)
+					(xy 6.858 34.925) (xy 7.366 34.163) (xy 7.874 34.925) (xy 7.874 34.925)
 				)
 				(stroke
 					(width 0)
@@ -132,7 +206,7 @@
 			)
 			(bezier
 				(pts
-					(xy -1.778 14.351) (xy -1.27 15.113) (xy -0.762 14.351) (xy -0.762 14.351)
+					(xy 6.858 34.671) (xy 7.366 35.433) (xy 7.874 34.671) (xy 7.874 34.671)
 				)
 				(stroke
 					(width 0)
@@ -144,7 +218,7 @@
 			)
 			(bezier
 				(pts
-					(xy -1.778 6.858) (xy -1.27 6.096) (xy -0.762 6.858) (xy -0.762 6.858)
+					(xy 6.858 9.525) (xy 6.35 8.763) (xy 5.842 9.525) (xy 5.842 9.525)
 				)
 				(stroke
 					(width 0)
@@ -156,7 +230,7 @@
 			)
 			(bezier
 				(pts
-					(xy -1.778 6.604) (xy -1.27 7.366) (xy -0.762 6.604) (xy -0.762 6.604)
+					(xy 6.858 9.271) (xy 6.35 10.033) (xy 5.842 9.271) (xy 5.842 9.271)
 				)
 				(stroke
 					(width 0)
@@ -168,7 +242,7 @@
 			)
 			(bezier
 				(pts
-					(xy 6.096 14.605) (xy 6.604 13.843) (xy 7.112 14.605) (xy 7.112 14.605)
+					(xy 7.62 46.228) (xy 7.112 45.466) (xy 6.604 46.228) (xy 6.604 46.228)
 				)
 				(stroke
 					(width 0)
@@ -180,7 +254,7 @@
 			)
 			(bezier
 				(pts
-					(xy 6.096 14.351) (xy 6.604 15.113) (xy 7.112 14.351) (xy 7.112 14.351)
+					(xy 7.62 45.974) (xy 7.112 46.736) (xy 6.604 45.974) (xy 6.604 45.974)
 				)
 				(stroke
 					(width 0)
@@ -192,7 +266,7 @@
 			)
 			(bezier
 				(pts
-					(xy 6.858 14.605) (xy 7.366 13.843) (xy 7.874 14.605) (xy 7.874 14.605)
+					(xy 7.62 9.525) (xy 7.112 8.763) (xy 6.604 9.525) (xy 6.604 9.525)
 				)
 				(stroke
 					(width 0)
@@ -204,7 +278,7 @@
 			)
 			(bezier
 				(pts
-					(xy 6.858 14.351) (xy 7.366 15.113) (xy 7.874 14.351) (xy 7.874 14.351)
+					(xy 7.62 9.271) (xy 7.112 10.033) (xy 6.604 9.271) (xy 6.604 9.271)
 				)
 				(stroke
 					(width 0)
@@ -214,17 +288,17 @@
 					(type none)
 				)
 			)
-			(pin output line
-				(at -6.35 12.7 0)
+			(pin power_out line
+				(at -5.08 -6.35 90)
 				(length 2.54)
-				(name "RX"
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "1"
+				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -232,17 +306,53 @@
 					)
 				)
 			)
-			(pin output line
-				(at -6.35 10.16 0)
+			(pin power_out line
+				(at -1.27 54.61 270)
 				(length 2.54)
-				(name "~{RX}"
+				(name "VCC"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "2"
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -1.27 -6.35 90)
+				(length 2.54)
+				(name "SHD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 2.54 -6.35 90)
+				(length 2.54)
+				(name "SHD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -251,7 +361,7 @@
 				)
 			)
 			(pin output line
-				(at -6.35 5.08 0)
+				(at 11.43 44.45 180)
 				(length 2.54)
 				(name "CLK"
 					(effects
@@ -269,7 +379,7 @@
 				)
 			)
 			(pin output line
-				(at -6.35 2.54 0)
+				(at 11.43 41.91 180)
 				(length 2.54)
 				(name "~{CLK}"
 					(effects
@@ -286,44 +396,8 @@
 					)
 				)
 			)
-			(pin power_out line
-				(at 2.54 21.59 270)
-				(length 2.54)
-				(name "VCC"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_out line
-				(at 2.54 -6.35 90)
-				(length 2.54)
-				(name "GND"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin input line
-				(at 11.43 12.7 180)
+				(at 11.43 33.02 180)
 				(length 2.54)
 				(name "TX"
 					(effects
@@ -341,7 +415,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 10.16 180)
+				(at 11.43 30.48 180)
 				(length 2.54)
 				(name "~{TX}"
 					(effects
@@ -351,6 +425,42 @@
 					)
 				)
 				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 11.43 7.62 180)
+				(length 2.54)
+				(name "RX"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 11.43 5.08 180)
+				(length 2.54)
+				(name "~{RX}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -365,8 +475,8 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
-			(at 16.764 -21.336 0)
+		(property "Reference" "J"
+			(at 9.144 2.286 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -374,7 +484,7 @@
 			)
 		)
 		(property "Value" "RJ45_Output"
-			(at 22.098 -23.368 0)
+			(at 14.478 0.254 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -417,21 +527,84 @@
 				(hide yes)
 			)
 		)
+		(symbol "RJ45_Molex_Unshielded_Output_0_1"
+			(polyline
+				(pts
+					(xy -0.254 3.175) (xy -0.254 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.016 3.175) (xy 1.016 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.286 3.175) (xy 2.286 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.556 3.175) (xy 3.556 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 5.715 -0.635) (xy 3.81 -0.635) (xy 3.81 -1.905) (xy -0.635 -1.905) (xy -0.635 -0.635) (xy -2.54 -0.635)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
 		(symbol "RJ45_Molex_Unshielded_Output_1_1"
 			(rectangle
-				(start 2.54 -1.27)
-				(end 15.24 -24.13)
+				(start -8.89 36.83)
+				(end 6.985 -17.78)
 				(stroke
 					(width 0)
 					(type solid)
 				)
 				(fill
-					(type background)
+					(type color)
+					(color 0 194 0 1)
 				)
 			)
 			(bezier
 				(pts
-					(xy 3.81 -5.715) (xy 4.318 -6.477) (xy 4.826 -5.715) (xy 4.826 -5.715)
+					(xy -7.62 32.258) (xy -7.112 31.496) (xy -6.604 32.258) (xy -6.604 32.258)
 				)
 				(stroke
 					(width 0)
@@ -443,7 +616,7 @@
 			)
 			(bezier
 				(pts
-					(xy 3.81 -5.969) (xy 4.318 -5.207) (xy 4.826 -5.969) (xy 4.826 -5.969)
+					(xy -7.62 32.004) (xy -7.112 32.766) (xy -6.604 32.004) (xy -6.604 32.004)
 				)
 				(stroke
 					(width 0)
@@ -455,7 +628,7 @@
 			)
 			(bezier
 				(pts
-					(xy 3.81 -13.462) (xy 4.318 -14.224) (xy 4.826 -13.462) (xy 4.826 -13.462)
+					(xy -7.62 1.905) (xy -7.112 1.143) (xy -6.604 1.905) (xy -6.604 1.905)
 				)
 				(stroke
 					(width 0)
@@ -467,7 +640,7 @@
 			)
 			(bezier
 				(pts
-					(xy 3.81 -13.716) (xy 4.318 -12.954) (xy 4.826 -13.716) (xy 4.826 -13.716)
+					(xy -7.62 1.651) (xy -7.112 2.413) (xy -6.604 1.651) (xy -6.604 1.651)
 				)
 				(stroke
 					(width 0)
@@ -479,7 +652,7 @@
 			)
 			(bezier
 				(pts
-					(xy 4.572 -5.715) (xy 5.08 -6.477) (xy 5.588 -5.715) (xy 5.588 -5.715)
+					(xy -6.858 32.258) (xy -6.35 31.496) (xy -5.842 32.258) (xy -5.842 32.258)
 				)
 				(stroke
 					(width 0)
@@ -491,7 +664,7 @@
 			)
 			(bezier
 				(pts
-					(xy 4.572 -5.969) (xy 5.08 -5.207) (xy 5.588 -5.969) (xy 5.588 -5.969)
+					(xy -6.858 32.004) (xy -6.35 32.766) (xy -5.842 32.004) (xy -5.842 32.004)
 				)
 				(stroke
 					(width 0)
@@ -503,7 +676,7 @@
 			)
 			(bezier
 				(pts
-					(xy 4.572 -13.462) (xy 5.08 -14.224) (xy 5.588 -13.462) (xy 5.588 -13.462)
+					(xy -6.858 20.955) (xy -7.366 20.193) (xy -7.874 20.955) (xy -7.874 20.955)
 				)
 				(stroke
 					(width 0)
@@ -515,7 +688,7 @@
 			)
 			(bezier
 				(pts
-					(xy 4.572 -13.716) (xy 5.08 -12.954) (xy 5.588 -13.716) (xy 5.588 -13.716)
+					(xy -6.858 20.701) (xy -7.366 21.463) (xy -7.874 20.701) (xy -7.874 20.701)
 				)
 				(stroke
 					(width 0)
@@ -527,7 +700,7 @@
 			)
 			(bezier
 				(pts
-					(xy 12.446 -5.715) (xy 12.954 -6.477) (xy 13.462 -5.715) (xy 13.462 -5.715)
+					(xy -6.858 1.905) (xy -6.35 1.143) (xy -5.842 1.905) (xy -5.842 1.905)
 				)
 				(stroke
 					(width 0)
@@ -539,7 +712,7 @@
 			)
 			(bezier
 				(pts
-					(xy 12.446 -5.969) (xy 12.954 -5.207) (xy 13.462 -5.969) (xy 13.462 -5.969)
+					(xy -6.858 1.651) (xy -6.35 2.413) (xy -5.842 1.651) (xy -5.842 1.651)
 				)
 				(stroke
 					(width 0)
@@ -551,7 +724,7 @@
 			)
 			(bezier
 				(pts
-					(xy 13.208 -5.715) (xy 13.716 -6.477) (xy 14.224 -5.715) (xy 14.224 -5.715)
+					(xy -6.096 20.955) (xy -6.604 20.193) (xy -7.112 20.955) (xy -7.112 20.955)
 				)
 				(stroke
 					(width 0)
@@ -563,54 +736,29 @@
 			)
 			(bezier
 				(pts
-					(xy 13.208 -5.969) (xy 13.716 -5.207) (xy 14.224 -5.969) (xy 14.224 -5.969)
+					(xy -6.096 20.701) (xy -6.604 21.463) (xy -7.112 20.701) (xy -7.112 20.701)
 				)
 				(stroke
 					(width 0)
 					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 5.715 3.175)
+				(end -2.54 -2.54)
+				(stroke
+					(width 0)
+					(type solid)
 				)
 				(fill
 					(type none)
 				)
 			)
 			(pin input line
-				(at 0 -7.62 0)
-				(length 2.54)
-				(name "RX"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at 0 -10.16 0)
-				(length 2.54)
-				(name "~{RX}"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at 0 -15.24 0)
+				(at -11.43 30.48 0)
 				(length 2.54)
 				(name "CLK"
 					(effects
@@ -628,7 +776,7 @@
 				)
 			)
 			(pin input line
-				(at 0 -17.78 0)
+				(at -11.43 27.94 0)
 				(length 2.54)
 				(name "~{CLK}"
 					(effects
@@ -645,44 +793,8 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at 8.89 1.27 270)
-				(length 2.54)
-				(name "VCC"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 8.89 -26.67 90)
-				(length 2.54)
-				(name "GND"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin output line
-				(at 17.78 -7.62 180)
+				(at -11.43 19.05 0)
 				(length 2.54)
 				(name "TX"
 					(effects
@@ -700,7 +812,7 @@
 				)
 			)
 			(pin output line
-				(at 17.78 -10.16 180)
+				(at -11.43 16.51 0)
 				(length 2.54)
 				(name "~{TX}"
 					(effects
@@ -710,6 +822,114 @@
 					)
 				)
 				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -11.43 0 0)
+				(length 2.54)
+				(name "RX"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -11.43 -2.54 0)
+				(length 2.54)
+				(name "~{RX}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -2.54 -20.32 90)
+				(length 2.54)
+				(name "SHD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 1.27 39.37 270)
+				(length 2.54)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 1.27 -20.32 90)
+				(length 2.54)
+				(name "SHD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 5.08 -20.32 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)

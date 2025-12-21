@@ -33,7 +33,7 @@
 					(hide yes)
 				)
 			)
-			(property "Footprint" "Package_BGA:UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm"
+			(property "Footprint" "Custom_VoxLink_Footprints:ICE40UL1K_UCBGA-36"
 				(at 0 0 0)
 				(effects
 					(font
@@ -263,7 +263,7 @@
 			(symbol "ICE40UL1K-CM36AI_2_1"
 				(rectangle
 					(start -6.35 15.24)
-					(end 6.35 -15.24)
+					(end 6.35 -20.32)
 					(stroke
 						(width 0)
 						(type solid)
@@ -281,97 +281,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 8.89 10.16 180)
-					(length 2.54)
-					(name "IOB_0A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "F1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 8.89 7.62 180)
-					(length 2.54)
-					(name "IOB_1B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 8.89 5.08 180)
-					(length 2.54)
-					(name "IOB_4A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "D1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 8.89 2.54 180)
-					(length 2.54)
-					(name "IOB_5B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "C1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 8.89 0 180)
-					(length 2.54)
-					(name "IOB_6A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 8.89 -2.54 180)
+					(at -2.54 -22.86 90)
 					(length 2.54)
 					(name "IOB_10A"
 						(effects
@@ -389,7 +299,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 8.89 -7.62 180)
+					(at 0 -22.86 90)
 					(length 2.54)
 					(name "IOB_3B_G6"
 						(effects
@@ -407,7 +317,25 @@
 					)
 				)
 				(pin bidirectional line
-					(at 8.89 -10.16 180)
+					(at 2.54 -22.86 90)
+					(length 2.54)
+					(name "IOB_8A_G4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "D2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 8.89 10.16 180)
 					(length 2.54)
 					(name "IOB_7B_G5"
 						(effects
@@ -425,16 +353,88 @@
 					)
 				)
 				(pin bidirectional line
-					(at 8.89 -12.7 180)
+					(at 8.89 7.62 180)
 					(length 2.54)
-					(name "IOB_8A_G4"
+					(name "IOB_6A"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "D2"
+					(number "E2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 8.89 3.81 180)
+					(length 2.54)
+					(name "IOB_0A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "F1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 8.89 1.27 180)
+					(length 2.54)
+					(name "IOB_1B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "E1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 8.89 -2.54 180)
+					(length 2.54)
+					(name "IOB_4A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "D1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 8.89 -5.08 180)
+					(length 2.54)
+					(name "IOB_5B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "C1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1795,107 +1795,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:PWR_FLAG"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "PWR_FLAG"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Special symbol for telling ERC where power comes from"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "flag power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "PWR_FLAG_0_0"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(text "Power [2]"
 		(exclude_from_sim no)
@@ -2011,6 +1910,19 @@
 			(justify right)
 		)
 		(uuid "b55ca44e-80ad-427e-ba58-c3b39c218ebb")
+	)
+	(text "Due to tight BGA fanout, \nthe 1V2_CORE and 1V2_PLL\nhave to be connected together."
+		(exclude_from_sim no)
+		(at 196.85 86.868 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "c1ad9e7c-86f2-4422-b4aa-f0f5d0482c25")
 	)
 	(text "EN_HIGH = 0.9V\nEN_LOW  = 0.3V\nEN_MAX  = 6.5V"
 		(exclude_from_sim no)
@@ -2175,16 +2087,22 @@
 		(uuid "55b41c32-7cf3-4c08-a1c9-155fac9d73b5")
 	)
 	(junction
-		(at 187.96 71.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5d4ecdf9-c721-4900-bee6-c38d871293a3")
-	)
-	(junction
 		(at 77.47 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6511309d-ae22-416b-b703-edd79d89dbce")
+	)
+	(junction
+		(at 185.42 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "94cb5383-1af8-4433-bee2-f66e6325827a")
+	)
+	(junction
+		(at 177.8 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a3ebb8f9-1fb1-44d8-b125-6eefaa818b54")
 	)
 	(junction
 		(at 36.83 156.21)
@@ -2215,12 +2133,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ba2774fc-10cf-461f-9491-15345d3c402a")
-	)
-	(junction
-		(at 185.42 116.84)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bcac2b86-2635-48f9-9210-a47408c166d7")
 	)
 	(junction
 		(at 162.56 93.98)
@@ -2283,6 +2195,16 @@
 			(type default)
 		)
 		(uuid "01f14a11-d764-4767-82dc-138aaae5ad4a")
+	)
+	(wire
+		(pts
+			(xy 177.8 71.12) (xy 185.42 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01fb33db-894e-405f-ab1b-865bff97b3c8")
 	)
 	(wire
 		(pts
@@ -2403,16 +2325,6 @@
 			(type default)
 		)
 		(uuid "28ef4985-c560-490c-82f9-40a2ec99eae0")
-	)
-	(wire
-		(pts
-			(xy 187.96 69.85) (xy 187.96 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2e62ca0d-db6e-498b-bde5-c941fda6ac92")
 	)
 	(wire
 		(pts
@@ -2716,16 +2628,6 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 116.84) (xy 185.42 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7e10d51a-775b-468f-b2ae-7bfadb5ff20f")
-	)
-	(wire
-		(pts
 			(xy 36.83 153.67) (xy 36.83 156.21)
 		)
 		(stroke
@@ -2746,7 +2648,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 71.12) (xy 187.96 71.12)
+			(xy 185.42 71.12) (xy 191.77 71.12)
 		)
 		(stroke
 			(width 0)
@@ -2836,16 +2738,6 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 71.12) (xy 191.77 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9b4d49fa-a746-4e75-a77e-eb6e05869c37")
-	)
-	(wire
-		(pts
 			(xy 162.56 116.84) (xy 162.56 118.11)
 		)
 		(stroke
@@ -2893,16 +2785,6 @@
 			(type default)
 		)
 		(uuid "b0a22966-eda0-4c29-a82e-41ba5237a370")
-	)
-	(wire
-		(pts
-			(xy 196.85 118.11) (xy 196.85 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b2388b5f-de6d-48b5-a49f-2d9ebf58f62d")
 	)
 	(wire
 		(pts
@@ -5147,6 +5029,16 @@
 			"AAAAgEcQQgAAAAAAAAAAAI8ghAAAAAAAAAAAAB7xf//nx9vYFG6aAAAAAElFTkSuQmCC"
 		)
 	)
+	(label "CT"
+		(at 97.79 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1a4aead6-27a9-496b-b94d-59f42968c7d4")
+	)
 	(global_label "~{CRESET}"
 		(shape input)
 		(at 135.89 104.14 0)
@@ -5206,7 +5098,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
 			(at 173.99 99.06 0)
 			(effects
 				(font
@@ -5698,9 +5590,9 @@
 		(at 203.2 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "18598d51-7040-43f9-a596-e23acb73a72d")
 		(property "Reference" "C212"
@@ -5730,7 +5622,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
 			(at 203.2 76.2 0)
 			(effects
 				(font
@@ -6023,71 +5915,6 @@
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR030")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 196.85 125.73 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2b772b7a-26ca-44ff-857c-7a4b3305ce24")
-		(property "Reference" "#PWR045"
-			(at 196.85 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 196.85 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 196.85 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 196.85 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 196.85 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "13c3e6f2-6a5e-440c-9f83-6cfacd3da156")
-		)
-		(instances
-			(project "VoxLink"
-				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
-					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -6387,7 +6214,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 131.318 97.79 90)
 			(effects
 				(font
@@ -6396,7 +6223,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW040210K0JNED?qs=sGAEpiMZZMtlubZbdhIBIFsfWmIKznfcMCgOmcXe42g%3D"
 			(at 129.54 97.79 0)
 			(effects
 				(font
@@ -6654,7 +6481,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 163.5252 125.73 0)
 			(effects
 				(font
@@ -6663,7 +6490,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GRM21BZ71H475KE15L?qs=Ey7%2FXF42M3fI%252Bx6DckdKtg%3D%3D"
 			(at 162.56 121.92 0)
 			(effects
 				(font
@@ -6756,75 +6583,6 @@
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR024")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 196.85 121.92 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5b6b16ed-973d-4c28-b28e-df148905e8a1")
-		(property "Reference" "C218"
-			(at 200.66 121.285 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 200.66 123.825 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 197.8152 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 196.85 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 196.85 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ee6e9542-ff22-4635-8925-ae8dd3ee0d2d")
-		)
-		(pin "2"
-			(uuid "7cd797e4-a6e3-426e-8576-0154698e472e")
-		)
-		(instances
-			(project "VoxLink"
-				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
-					(reference "C218")
 					(unit 1)
 				)
 			)
@@ -7138,7 +6896,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 163.5252 80.01 0)
 			(effects
 				(font
@@ -7147,7 +6905,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GRM21BZ71H475KE15L?qs=Ey7%2FXF42M3fI%252Bx6DckdKtg%3D%3D"
 			(at 162.56 76.2 0)
 			(effects
 				(font
@@ -7626,7 +7384,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
 			(at 105.41 87.63 0)
 			(effects
 				(font
@@ -7653,73 +7411,6 @@
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C207")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 187.96 69.85 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8630b2a5-cee0-434a-8cc4-9650ffecc78d")
-		(property "Reference" "#FLG01"
-			(at 187.96 67.945 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 187.96 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 187.96 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 187.96 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 187.96 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "76362c40-0492-4da0-b8eb-e53aa634124f")
-		)
-		(instances
-			(project ""
-				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
-					(reference "#FLG01")
 					(unit 1)
 				)
 			)
@@ -7895,7 +7586,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
 			(at 185.42 121.92 0)
 			(effects
 				(font
@@ -7946,7 +7637,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "32n"
+		(property "Value" "33n"
 			(at 93.98 113.665 0)
 			(effects
 				(font
@@ -7964,7 +7655,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GRM155R71C333KA01D?qs=tOieHv2smhlspVEfNTUeXw%3D%3D"
 			(at 97.79 111.76 0)
 			(effects
 				(font
@@ -8164,7 +7855,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
 			(at 173.99 121.92 0)
 			(effects
 				(font
@@ -9358,7 +9049,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
 			(at 173.99 76.2 0)
 			(effects
 				(font
@@ -9655,9 +9346,9 @@
 		(at 181.61 71.12 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
 		(uuid "eb21f49c-d982-442c-bded-ce09c754a08c")
 		(property "Reference" "R202"
 			(at 181.61 66.04 90)
@@ -9675,7 +9366,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 181.61 72.898 90)
 			(effects
 				(font
@@ -9684,7 +9375,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW0402100RFKEDC?qs=sGAEpiMZZMtlubZbdhIBIIZe04wfiaJW7kRS7%252Bi%252ByYs%3D"
 			(at 181.61 71.12 0)
 			(effects
 				(font
@@ -9862,9 +9553,9 @@
 		(at 191.77 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "f2a0cf0d-9ef4-49ea-83c2-08a94aa855c8")
 		(property "Reference" "C211"
@@ -9885,7 +9576,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 192.7352 80.01 0)
 			(effects
 				(font
@@ -10084,7 +9775,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Package_BGA:UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm"
+		(property "Footprint" "Custom_VoxLink_Footprints:ICE40UL1K_UCBGA-36"
 			(at 255.27 82.55 0)
 			(effects
 				(font
@@ -10265,7 +9956,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 163.5252 102.87 0)
 			(effects
 				(font
@@ -10274,7 +9965,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GRM21BZ71H475KE15L?qs=Ey7%2FXF42M3fI%252Bx6DckdKtg%3D%3D"
 			(at 162.56 99.06 0)
 			(effects
 				(font

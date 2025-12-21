@@ -446,7 +446,7 @@
 					(hide yes)
 				)
 			)
-			(property "Footprint" "Package_BGA:UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm"
+			(property "Footprint" "Custom_VoxLink_Footprints:ICE40UL1K_UCBGA-36"
 				(at 0 0 0)
 				(effects
 					(font
@@ -676,7 +676,7 @@
 			(symbol "ICE40UL1K-CM36AI_2_1"
 				(rectangle
 					(start -6.35 15.24)
-					(end 6.35 -15.24)
+					(end 6.35 -20.32)
 					(stroke
 						(width 0)
 						(type solid)
@@ -694,97 +694,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 8.89 10.16 180)
-					(length 2.54)
-					(name "IOB_0A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "F1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 8.89 7.62 180)
-					(length 2.54)
-					(name "IOB_1B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 8.89 5.08 180)
-					(length 2.54)
-					(name "IOB_4A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "D1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 8.89 2.54 180)
-					(length 2.54)
-					(name "IOB_5B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "C1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 8.89 0 180)
-					(length 2.54)
-					(name "IOB_6A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 8.89 -2.54 180)
+					(at -2.54 -22.86 90)
 					(length 2.54)
 					(name "IOB_10A"
 						(effects
@@ -802,7 +712,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 8.89 -7.62 180)
+					(at 0 -22.86 90)
 					(length 2.54)
 					(name "IOB_3B_G6"
 						(effects
@@ -820,7 +730,25 @@
 					)
 				)
 				(pin bidirectional line
-					(at 8.89 -10.16 180)
+					(at 2.54 -22.86 90)
+					(length 2.54)
+					(name "IOB_8A_G4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "D2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 8.89 10.16 180)
 					(length 2.54)
 					(name "IOB_7B_G5"
 						(effects
@@ -838,16 +766,88 @@
 					)
 				)
 				(pin bidirectional line
-					(at 8.89 -12.7 180)
+					(at 8.89 7.62 180)
 					(length 2.54)
-					(name "IOB_8A_G4"
+					(name "IOB_6A"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "D2"
+					(number "E2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 8.89 3.81 180)
+					(length 2.54)
+					(name "IOB_0A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "F1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 8.89 1.27 180)
+					(length 2.54)
+					(name "IOB_1B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "E1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 8.89 -2.54 180)
+					(length 2.54)
+					(name "IOB_4A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "D1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 8.89 -5.08 180)
+					(length 2.54)
+					(name "IOB_5B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "C1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2141,28 +2141,32 @@
 		(uuid "d67aa1b0-d41b-472b-b18b-52157006b7c4")
 	)
 	(no_connect
-		(at 54.61 96.52)
-		(uuid "16726ce5-7676-496c-9616-ae94c6a9a3c1")
-	)
-	(no_connect
-		(at 54.61 106.68)
-		(uuid "4a2690ec-1385-453f-bb38-91d7eb896959")
-	)
-	(no_connect
 		(at 144.78 102.87)
 		(uuid "6b311fc0-7ce4-48b8-afad-daa742c4b2aa")
+	)
+	(no_connect
+		(at 54.61 96.52)
+		(uuid "77abcef0-40d4-4a28-8291-ca15d033c522")
 	)
 	(no_connect
 		(at 54.61 99.06)
 		(uuid "79d05fe2-b048-46d6-8c9c-25ec087b4471")
 	)
 	(no_connect
-		(at 54.61 104.14)
-		(uuid "9cddf241-7476-4af4-8f48-40d585a07ac8")
-	)
-	(no_connect
 		(at 144.78 100.33)
 		(uuid "baa17274-0181-4699-8415-2e288b2acccc")
+	)
+	(no_connect
+		(at 54.61 93.98)
+		(uuid "bc1aea90-4174-4745-a410-2b7dcbf2216e")
+	)
+	(no_connect
+		(at 54.61 88.9)
+		(uuid "c08f702e-2a64-4516-a0c9-28f7086debb9")
+	)
+	(no_connect
+		(at 54.61 91.44)
+		(uuid "e6b609f1-b579-4238-a07b-e5a22349d898")
 	)
 	(wire
 		(pts
@@ -2366,7 +2370,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 88.9) (xy 58.42 88.9)
+			(xy 54.61 106.68) (xy 58.42 106.68)
 		)
 		(stroke
 			(width 0)
@@ -2616,23 +2620,13 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 93.98) (xy 58.42 93.98)
+			(xy 54.61 104.14) (xy 58.42 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "eebf6346-1cd7-4444-bdb6-862c0ea60dd0")
-	)
-	(wire
-		(pts
-			(xy 54.61 91.44) (xy 58.42 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f157d77a-c07b-43c8-954a-70e9ce68ec74")
 	)
 	(wire
 		(pts
@@ -3092,6 +3086,16 @@
 		)
 		(uuid "04807db1-57ee-4d74-94e6-7221082f86e6")
 	)
+	(label "XOUT32_INT"
+		(at 130.81 160.02 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "18f82cc2-1638-44da-93c0-9869aea0fea4")
+	)
 	(label "XIN32"
 		(at 189.23 113.03 180)
 		(effects
@@ -3146,7 +3150,7 @@
 	)
 	(global_label "BNO_SCL"
 		(shape input)
-		(at 58.42 93.98 0)
+		(at 58.42 106.68 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3156,7 +3160,7 @@
 		)
 		(uuid "18ae6ded-4cc5-4d1f-9c77-34b13fd356bd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 69.8114 93.98 0)
+			(at 69.8114 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3210,31 +3214,9 @@
 			)
 		)
 	)
-	(global_label "BNO_SDA"
-		(shape input)
-		(at 58.42 91.44 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "adc6b6b2-c607-4c42-97a5-0701523e8cac")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 69.8719 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "BNO_~{RST}"
 		(shape input)
-		(at 58.42 88.9 0)
+		(at 58.42 104.14 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3244,7 +3226,7 @@
 		)
 		(uuid "c5f6bf06-5f23-4860-8907-6a43968382bf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 69.7509 88.9 0)
+			(at 69.7509 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3358,7 +3340,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://eu.mouser.com/ProductDetail/81-GCM1555G1H100JA6D"
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GRM1555C1H150FA01D?qs=ouTquLLW2S7neucAALMxaw%3D%3D"
 			(at 99.06 168.91 0)
 			(effects
 				(font
@@ -3746,7 +3728,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_LGA:LGA-28_5.2x3.8mm_P0.5mm"
 			(at 147.32 91.44 0)
 			(effects
 				(font
@@ -3874,7 +3856,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 142.748 83.82 90)
 			(effects
 				(font
@@ -3883,7 +3865,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW040210K0JNED?qs=sGAEpiMZZMtlubZbdhIBIFsfWmIKznfcMCgOmcXe42g%3D"
 			(at 140.97 83.82 0)
 			(effects
 				(font
@@ -3941,7 +3923,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 118.618 104.14 90)
 			(effects
 				(font
@@ -3950,7 +3932,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW040210K0JNED?qs=sGAEpiMZZMtlubZbdhIBIFsfWmIKznfcMCgOmcXe42g%3D"
 			(at 116.84 104.14 0)
 			(effects
 				(font
@@ -4007,7 +3989,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 96.012 83.82 90)
 			(effects
 				(font
@@ -4016,7 +3998,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW04024K70JNED?qs=sGAEpiMZZMtlubZbdhIBIPcJW8E8ShybHI4602K%2FbXw%3D"
 			(at 97.79 83.82 0)
 			(effects
 				(font
@@ -4337,7 +4319,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Package_BGA:UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm"
+		(property "Footprint" "Custom_VoxLink_Footprints:ICE40UL1K_UCBGA-36"
 			(at 45.72 95.25 0)
 			(effects
 				(font
@@ -4583,7 +4565,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Crystal:Crystal_SMD_MicroCrystal_CC8V-T1A-2Pin_2.0x1.2mm"
 			(at 107.95 160.02 0)
 			(effects
 				(font
@@ -4853,7 +4835,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 104.902 83.82 90)
 			(effects
 				(font
@@ -4862,7 +4844,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW04024K70JNED?qs=sGAEpiMZZMtlubZbdhIBIPcJW8E8ShybHI4602K%2FbXw%3D"
 			(at 106.68 83.82 0)
 			(effects
 				(font
@@ -4919,7 +4901,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 202.692 92.71 90)
 			(effects
 				(font
@@ -4928,7 +4910,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW04024K70JNED?qs=sGAEpiMZZMtlubZbdhIBIPcJW8E8ShybHI4602K%2FbXw%3D"
 			(at 204.47 92.71 0)
 			(effects
 				(font
@@ -4985,7 +4967,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 211.582 92.71 90)
 			(effects
 				(font
@@ -4994,7 +4976,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW04024K70JNED?qs=sGAEpiMZZMtlubZbdhIBIPcJW8E8ShybHI4602K%2FbXw%3D"
 			(at 213.36 92.71 0)
 			(effects
 				(font
@@ -5064,7 +5046,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
 			(at 152.4 64.77 0)
 			(effects
 				(font
@@ -5197,7 +5179,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://eu.mouser.com/ProductDetail/81-GCM1555G1H100JA6D"
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
 			(at 181.61 128.27 0)
 			(effects
 				(font
@@ -5330,7 +5312,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://eu.mouser.com/ProductDetail/81-GCM1555G1H100JA6D"
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GRM1555C1H150FA01D?qs=ouTquLLW2S7neucAALMxaw%3D%3D"
 			(at 116.84 168.91 0)
 			(effects
 				(font
@@ -5453,7 +5435,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 181.102 83.82 90)
 			(effects
 				(font
@@ -5462,7 +5444,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW040210K0JNED?qs=sGAEpiMZZMtlubZbdhIBIFsfWmIKznfcMCgOmcXe42g%3D"
 			(at 182.88 83.82 0)
 			(effects
 				(font
@@ -5532,7 +5514,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
 			(at 140.97 64.77 0)
 			(effects
 				(font
