@@ -11,12 +11,12 @@
 		(company "Czech Technical University in Prague")
 	)
 	(lib_symbols
-		(symbol "Connector:Conn_ARM_SWD_TagConnect_TC2030"
+		(symbol "Connector:Conn_ARM_SWD_TagConnect_TC2030-NL"
 			(exclude_from_sim no)
 			(in_bom no)
 			(on_board yes)
-			(property "Reference" "J302"
-				(at -6.35 -9.525 0)
+			(property "Reference" "J1"
+				(at -5.588 1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -24,8 +24,8 @@
 					(justify right)
 				)
 			)
-			(property "Value" "TC2030"
-				(at -6.35 -12.065 0)
+			(property "Value" "TC2030-NL"
+				(at -5.588 -1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -33,7 +33,7 @@
 					(justify right)
 				)
 			)
-			(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical"
+			(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical"
 				(at 0 -17.78 0)
 				(effects
 					(font
@@ -51,12 +51,13 @@
 					(hide yes)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Tag-Connect ARM Cortex SWD JTAG connector, 6 pin, no legs"
 				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(hide yes)
 				)
 			)
 			(property "ki_keywords" "Cortex Debug Connector ARM SWD JTAG"
@@ -77,7 +78,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_ARM_SWD_TagConnect_TC2030_0_0"
+			(symbol "Conn_ARM_SWD_TagConnect_TC2030-NL_0_0"
 				(pin power_in line
 					(at -2.54 10.16 270)
 					(length 2.54)
@@ -190,7 +191,7 @@
 					(alternate "TDO" input line)
 				)
 			)
-			(symbol "Conn_ARM_SWD_TagConnect_TC2030_1_1"
+			(symbol "Conn_ARM_SWD_TagConnect_TC2030-NL_1_1"
 				(rectangle
 					(start -5.08 7.62)
 					(end 5.08 -7.62)
@@ -1581,8 +1582,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at 0 12.192 0)
+			(property "Reference" "U302"
+				(at 0 -11.43 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1590,7 +1591,7 @@
 				)
 			)
 			(property "Value" "TPD4E02B04"
-				(at 0 10.16 0)
+				(at 0 -13.97 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1682,7 +1683,7 @@
 					)
 				)
 				(pin power_in line
-					(at -7.62 0 0)
+					(at -7.62 -1.27 0)
 					(length 2.54)
 					(name "GND"
 						(effects
@@ -1772,7 +1773,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 0 180)
+					(at 7.62 -1.27 180)
 					(length 2.54)
 					(name "NC"
 						(effects
@@ -1950,6 +1951,156 @@
 					(at 0 -3.81 90)
 					(length 2.794)
 					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:D_Schottky"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Schottky"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Schottky diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_Schottky_0_1"
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Schottky_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3303,8 +3454,8 @@
 	)
 	(text_box "Tag Connect Programming Interface"
 		(exclude_from_sim no)
-		(at 18.415 59.055 0)
-		(size 106.045 41.275)
+		(at 18.415 56.515 0)
+		(size 106.045 43.815)
 		(margins 1.5 1.5 1.5 1.5)
 		(stroke
 			(width 0)
@@ -3325,8 +3476,8 @@
 	)
 	(text_box "PicoBlade Programming Connector"
 		(exclude_from_sim no)
-		(at 128.27 59.055 0)
-		(size 45.085 40.64)
+		(at 128.27 56.515 0)
+		(size 45.085 43.18)
 		(margins 1.5 1.5 1.5 1.5)
 		(stroke
 			(width 0)
@@ -3350,6 +3501,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "183b155c-5d56-4df8-8c5f-f029fdc00131")
+	)
+	(junction
+		(at 45.72 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "23f9b8bf-523a-4cf1-bda4-a75158caef4e")
 	)
 	(junction
 		(at 269.24 142.24)
@@ -3452,6 +3609,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 69.85) (xy 60.96 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2195992b-116e-4db5-a1f8-2e619b10b09c")
+	)
+	(wire
+		(pts
 			(xy 135.89 76.2) (xy 157.48 76.2)
 		)
 		(stroke
@@ -3512,7 +3679,7 @@
 	)
 	(wire
 		(pts
-			(xy 260.35 115.57) (xy 260.35 114.3)
+			(xy 262.89 115.57) (xy 262.89 114.3)
 		)
 		(stroke
 			(width 0)
@@ -3682,6 +3849,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 69.85) (xy 60.96 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7fc64983-f4c4-46bd-9bca-a30f4b86d7fc")
+	)
+	(wire
+		(pts
 			(xy 111.76 115.57) (xy 116.84 115.57)
 		)
 		(stroke
@@ -3713,6 +3890,16 @@
 	)
 	(wire
 		(pts
+			(xy 49.53 69.85) (xy 45.72 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9550e173-48a7-4ac3-ab31-566281c74305")
+	)
+	(wire
+		(pts
 			(xy 59.69 87.63) (xy 82.55 87.63)
 		)
 		(stroke
@@ -3730,6 +3917,16 @@
 			(type default)
 		)
 		(uuid "96903c4f-c4e6-4f4b-b250-2183282c7644")
+	)
+	(wire
+		(pts
+			(xy 45.72 68.58) (xy 45.72 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9775bded-1227-47a1-97fb-cb77f4c9eb6d")
 	)
 	(wire
 		(pts
@@ -3833,7 +4030,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 115.57) (xy 260.35 115.57)
+			(xy 250.19 115.57) (xy 262.89 115.57)
 		)
 		(stroke
 			(width 0)
@@ -4014,6 +4211,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 69.85) (xy 45.72 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f40d1c1c-5449-4797-87fb-961f66af867a")
+	)
+	(wire
+		(pts
 			(xy 118.11 87.63) (xy 105.41 87.63)
 		)
 		(stroke
@@ -4072,6 +4279,16 @@
 		)
 		(uuid "17999b2b-dfc8-44b3-8e61-3c05c380d96a")
 	)
+	(label "FLASH_~{HOLD}"
+		(at 251.46 118.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1a19f507-0863-4493-a117-69b4670570b9")
+	)
 	(label "FLASH_MOSI"
 		(at 217.17 115.57 0)
 		(effects
@@ -4081,6 +4298,16 @@
 			(justify left bottom)
 		)
 		(uuid "207cab23-5597-43cc-934c-be0de6e7c688")
+	)
+	(label "FLASH_~{WP}"
+		(at 251.46 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "29f608e8-abc1-43de-af60-d995c3476870")
 	)
 	(label "FLASH_MISO"
 		(at 217.17 118.11 0)
@@ -4700,71 +4927,6 @@
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
 					(reference "#PWR088")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 29.21 77.47 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "116cf96b-8cdd-46fb-88e9-10601e493af3")
-		(property "Reference" "#PWR082"
-			(at 29.21 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 29.21 73.914 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 29.21 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 29.21 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 29.21 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4798b012-51ed-4476-a080-2faf23d52a70")
-		)
-		(instances
-			(project "VoxSense"
-				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "#PWR082")
 					(unit 1)
 				)
 			)
@@ -5458,16 +5620,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_ARM_SWD_TagConnect_TC2030")
+		(lib_id "Connector:Conn_ARM_SWD_TagConnect_TC2030-NL")
 		(at 48.26 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "47b08b0e-6d0a-4d62-b581-262377ccc633")
+		(uuid "47d77578-4cb9-4854-8e9a-1a5c9b98e6e5")
 		(property "Reference" "J302"
-			(at 41.91 90.805 0)
+			(at 42.926 89.662 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5475,8 +5637,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "TC2030"
-			(at 41.91 93.345 0)
+		(property "Value" "TC2030-NL"
+			(at 42.926 92.202 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5484,7 +5646,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical"
+		(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical"
 			(at 48.26 99.06 0)
 			(effects
 				(font
@@ -5502,34 +5664,35 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Tag-Connect ARM Cortex SWD JTAG connector, 6 pin, no legs"
 			(at 48.26 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "afd93e6c-7c15-4636-b79b-848f6bd505ef")
-		)
-		(pin "2"
-			(uuid "e8c0c511-28dc-4ce8-afcf-b6c4c4abbbe8")
-		)
-		(pin "3"
-			(uuid "4f2c57ef-069b-4b35-94f0-142a38d5a0d9")
-		)
 		(pin "4"
-			(uuid "b71ce800-9df8-421b-b3f1-dd281bb8a007")
+			(uuid "879b6fb0-6fb5-48b4-9164-d39865d7c6d8")
+		)
+		(pin "1"
+			(uuid "cd5fbc31-a5a3-4afc-80c4-0819d1d0a139")
 		)
 		(pin "5"
-			(uuid "defb311b-8f04-405b-b6af-d913377c4485")
+			(uuid "fcc8a863-2733-4eb6-8afd-362c2fcbc471")
+		)
+		(pin "3"
+			(uuid "3b95ce25-c34c-44c8-a490-7a542db2cbdd")
 		)
 		(pin "6"
-			(uuid "f0abf95d-53b9-4dfd-b46c-6f25b835db2d")
+			(uuid "821f9a87-b7ff-4d3c-8867-d09fb828d8e0")
+		)
+		(pin "2"
+			(uuid "338d43a2-a634-43cf-a720-9b919387ea42")
 		)
 		(instances
-			(project "VoxLink"
+			(project ""
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
 					(reference "J302")
 					(unit 1)
@@ -5802,71 +5965,6 @@
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
 					(reference "R309")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 45.72 71.12 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "59cc94cf-fefd-42e4-826b-ad5529331311")
-		(property "Reference" "#PWR091"
-			(at 45.72 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 45.72 67.564 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 45.72 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 45.72 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fb91f570-bafc-44c0-a9b0-b0007d176ec3")
-		)
-		(instances
-			(project "VoxSense"
-				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "#PWR091")
 					(unit 1)
 				)
 			)
@@ -6434,7 +6532,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm"
+		(property "Footprint" "Oscillator:Oscillator_SMD_Abracon_ASCO-4Pin_1.6x1.2mm"
 			(at 119.38 144.78 0)
 			(effects
 				(font
@@ -6443,7 +6541,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/ECS/ECS-3225MV-120-CN-TR3?qs=Wj%2FVkw3K%252BMBeCSffxIHNCA%3D%3D"
+		(property "Datasheet" "https://eu.mouser.com/ProductDetail/ECS/ECS-1612MV-120-CN-TR?qs=MLItCLRbWsx7QgJvjn3Wzg%3D%3D"
 			(at 111.125 132.715 0)
 			(effects
 				(font
@@ -6783,6 +6881,71 @@
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
 					(reference "#PWR078")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 29.21 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "895ab58c-431f-47fe-a2d0-82dcaab83f3d")
+		(property "Reference" "#PWR082"
+			(at 29.21 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCCD"
+			(at 29.21 73.914 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 29.21 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 29.21 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "03694532-0521-4bde-848c-92a545d0d219")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "#PWR082")
 					(unit 1)
 				)
 			)
@@ -7216,6 +7379,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:VCC")
+		(at 45.72 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a43618c0-4cb1-4dc1-8149-48bd0d474be3")
+		(property "Reference" "#PWR091"
+			(at 45.72 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCCD"
+			(at 45.72 65.024 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 45.72 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2dec4cb8-f3e4-4495-baa7-f4062168c191")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "#PWR091")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 45.72 91.44 0)
 		(mirror y)
@@ -7352,23 +7580,15 @@
 	)
 	(symbol
 		(lib_id "Custom_VoxLink_Symbols:TPD4E02B04DQA")
-		(at 90.17 82.55 0)
+		(at 90.17 83.82 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b2c11627-2385-4cd0-8900-79970e291641")
 		(property "Reference" "U302"
-			(at 90.17 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TPD4E02B04"
 			(at 90.17 72.39 0)
 			(effects
 				(font
@@ -7376,8 +7596,16 @@
 				)
 			)
 		)
+		(property "Value" "TPD4E02B04"
+			(at 90.17 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Footprint" "Package_SON:USON-10_2.5x1.0mm_P0.5mm"
-			(at 90.17 82.55 0)
+			(at 90.17 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7386,7 +7614,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 90.17 82.55 0)
+			(at 90.17 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7395,7 +7623,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 90.17 82.55 0)
+			(at 90.17 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7404,7 +7632,7 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
-			(at 90.17 82.55 0)
+			(at 90.17 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7452,17 +7680,82 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 260.35 110.49 0)
+		(lib_id "power:VCC")
+		(at 38.1 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
+		(uuid "b5b9691e-59a0-459d-8bd2-af3a31fe9324")
+		(property "Reference" "#PWR083"
+			(at 38.1 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCCD"
+			(at 38.1 73.914 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 38.1 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 38.1 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9ff89aa0-ea85-4c04-9c1b-f64efb020c1e")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "#PWR083")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 262.89 110.49 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(uuid "bd59d112-05a3-4b77-a0e4-16e0b4bf9868")
 		(property "Reference" "R308"
-			(at 262.89 109.2199 0)
+			(at 260.35 109.2199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7471,7 +7764,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 262.89 111.7599 0)
+			(at 260.35 111.7599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7480,7 +7773,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 258.572 110.49 90)
+			(at 264.668 110.49 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7489,7 +7782,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW040210K0JNED?qs=sGAEpiMZZMtlubZbdhIBIFsfWmIKznfcMCgOmcXe42g%3D"
-			(at 260.35 110.49 0)
+			(at 262.89 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7498,7 +7791,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 260.35 110.49 0)
+			(at 262.89 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8038,6 +8331,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 53.34 69.85 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d1584acc-97ce-4918-af7a-265becdae65a")
+		(property "Reference" "D1"
+			(at 53.594 65.532 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_Schottky"
+			(at 53.594 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 53.34 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://eu.mouser.com/ProductDetail/Comchip-Technology/CDBQR00340?qs=QrYNfmA0esZyoNf7y%252BRxsg%3D%3D"
+			(at 53.34 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 53.34 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "02192a48-d5d4-4f9f-8139-9b6195d900db")
+		)
+		(pin "2"
+			(uuid "db4ff8c8-7dc1-4a87-82ac-b2201ae7117b")
+		)
+		(instances
+			(project ""
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 269.24 137.16 0)
 		(mirror y)
@@ -8177,136 +8537,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 38.1 77.47 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d9ca63b6-8ccf-490d-8d3c-0eb047856a60")
-		(property "Reference" "#PWR083"
-			(at 38.1 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 38.1 73.914 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 38.1 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 38.1 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 38.1 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "731d8e08-173e-4967-9d6b-a41aab5eb521")
-		)
-		(instances
-			(project "VoxSense"
-				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "#PWR083")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 156.21 69.85 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e5c82e43-2ff3-4cb9-aa0a-e63c2da57822")
-		(property "Reference" "#PWR0103"
-			(at 156.21 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 156.21 66.294 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 156.21 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 156.21 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 156.21 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "57629412-67a5-45ec-be9e-052ad3790ed4")
-		)
-		(instances
-			(project "VoxSense"
-				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
-					(reference "#PWR0103")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 29.21 81.28 0)
 		(mirror y)
@@ -8371,6 +8601,136 @@
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
 					(reference "C301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 156.21 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "efde7eea-d8d0-4fef-ab99-79dbace52534")
+		(property "Reference" "#PWR0103"
+			(at 156.21 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCCD"
+			(at 156.21 66.294 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 156.21 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 156.21 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8cc9ca69-860e-418a-a21f-0f36feff9076")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "#PWR0103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 60.96 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f304168e-bc52-4477-8e64-994624fd95d8")
+		(property "Reference" "#PWR0135"
+			(at 60.96 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 60.96 65.024 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 60.96 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 60.96 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b9ad1b1c-ac40-4ae8-bda9-ad7b524c8dbb")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/c4c61dc7-e886-4936-92b8-e54fa8120fa3"
+					(reference "#PWR0135")
 					(unit 1)
 				)
 			)
@@ -8509,7 +8869,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3VA")
-		(at 260.35 106.68 0)
+		(at 262.89 106.68 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8518,7 +8878,7 @@
 		(dnp no)
 		(uuid "fc974e23-fc43-44b5-b9d9-fd3890c73b8d")
 		(property "Reference" "#PWR04"
-			(at 260.35 110.49 0)
+			(at 262.89 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8527,7 +8887,7 @@
 			)
 		)
 		(property "Value" "VCCIO1"
-			(at 260.35 102.87 0)
+			(at 262.89 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8535,7 +8895,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 260.35 106.68 0)
+			(at 262.89 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8544,7 +8904,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 260.35 106.68 0)
+			(at 262.89 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8553,7 +8913,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 260.35 106.68 0)
+			(at 262.89 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
