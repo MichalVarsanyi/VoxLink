@@ -1966,6 +1966,17 @@
 		)
 		(uuid "b159203d-6492-4d7f-a4f7-fa59503558c6")
 	)
+	(text "GND connected\nto C2 to allow \nBGA fanout"
+		(exclude_from_sim no)
+		(at 64.262 98.552 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "b3191449-5d26-4523-97a4-8db6e0fc87a0")
+	)
 	(text "CEVA recommends using a crystal with tolerance\n50ppm with 12.5pF capacitor loading."
 		(exclude_from_sim no)
 		(at 164.338 149.86 0)
@@ -2147,10 +2158,6 @@
 	(no_connect
 		(at 54.61 96.52)
 		(uuid "77abcef0-40d4-4a28-8291-ca15d033c522")
-	)
-	(no_connect
-		(at 54.61 99.06)
-		(uuid "79d05fe2-b048-46d6-8c9c-25ec087b4471")
 	)
 	(no_connect
 		(at 144.78 100.33)
@@ -5541,6 +5548,72 @@
 			(project "VoxLink"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/9719f155-9a63-4412-a45f-eaa04d0e19ac"
 					(reference "C401")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 54.61 99.06 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f97687c5-4da1-498e-83c4-088bab185d90")
+		(property "Reference" "#PWR0136"
+			(at 54.61 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 54.61 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 54.61 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 54.61 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c47b9d4d-4422-420c-9a26-41887b057330")
+		)
+		(instances
+			(project "VoxSense"
+				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/9719f155-9a63-4412-a45f-eaa04d0e19ac"
+					(reference "#PWR0136")
 					(unit 1)
 				)
 			)
