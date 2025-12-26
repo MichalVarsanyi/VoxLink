@@ -370,7 +370,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+		(property "Footprint" "Package_DFN_QFN:TDFN-8-1EP_3x2mm_P0.5mm_EP1.3x1.4mm"
 			(at 0 0 0)
 			(effects
 				(font
@@ -397,7 +397,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/Microchip-Technology/93LC56B-I-SN?qs=JhC4kYev1ubTO3jC60ECfA%3D%3D"
+		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/Microchip-Technology/93LC56BT-I-MC?qs=ZL7isbUZFInANak%2FIljUoQ%3D%3D"
 			(at 0 0 0)
 			(effects
 				(font
@@ -409,7 +409,7 @@
 		(symbol "93LC56B_1_1"
 			(rectangle
 				(start -6.35 6.35)
-				(end 6.35 -6.35)
+				(end 6.35 -8.255)
 				(stroke
 					(width 0)
 					(type solid)
@@ -483,6 +483,24 @@
 					)
 				)
 				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -8.89 -6.35 0)
+				(length 2.54)
+				(name "EP"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
 					(effects
 						(font
 							(size 1.27 1.27)
