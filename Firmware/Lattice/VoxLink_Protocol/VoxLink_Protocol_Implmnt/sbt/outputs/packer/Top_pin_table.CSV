@@ -1,0 +1,58 @@
+* ******************************************************************************
+
+* iCEcube Pin Table
+
+* Version:            2020.12.27943
+
+* Build Date:         Dec  9 2020 17:31:51
+
+* File Generated:     Dec 26 2025 19:43:39
+
+* Purpose:            Detailed IO and package pin info
+
+* Copyright (C) 2006-2010 by Lattice Semiconductor Corp. All rights reserved.
+
+* ******************************************************************************
+
+Device, iCE40UL1K
+Package, CM36A
+
+Pin Number, Pin Type Name, Signal Name, Direction, Global Buffer, IO Standard, Pull Up, Pullup resistor, IO Function, IO Bank, 
+---------------, ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, 
+A1, PIO_RGB, led_io, Output, ,SB_LVCMOS, No Pull Up, , RGB2 Output, topBank
+A2, PIO_RGB, led_tx, Output, ,SB_LVCMOS, No Pull Up, , RGB0 Output, topBank
+A3, PIO, not used, , , , , , , topBank
+A4, PIO, not used, , , , , , , topBank
+A5, PIO_BARCODE, not used, , , , , , , topBank
+A6, PIO_LED, not used, , , , , , , topBank
+B1, PIO_RGB, led_rx, Output, ,SB_LVCMOS, No Pull Up, , RGB1 Output, topBank
+B2, PIO, not used, , , , , , , topBank
+B3, VCCIO_0, not used, , , , , , , topBank
+B4, VPP, not used, , , , , , , topBank
+B5, PIO, not used, , , , , , , topBank
+B6, PIO_GBIN, bno_rst_n, Output, , SB_LVCMOS, No Pull Up, , Simple Output, topBank
+C1, PIO, vox_tx_n, Output, , SB_LVCMOS, No Pull Up, , Simple Output, bottomBank
+C2, PIO, clk, Input, , SB_LVCMOS, No Pull Up, , Simple Input, topBank
+C3, GND, not used, , , , , , , UnknownBank
+C4, GND, not used, , , , , , , UnknownBank
+C5, VSSIO_LED, not used, , , , , , , topBank
+C6, PIO_GBIN, bno_scl, Output, , SB_LVCMOS, No Pull Up, , Simple Output, topBank
+D1, PIO, vox_tx_p, Output, , SB_LVCMOS, No Pull Up, , Simple Output, bottomBank
+D2, PIO_GBIN, not used, , , , , , , bottomBank
+D3, VCC, not used, , , , , , , UnknownBank
+D4, AVDD, not used, , , , , , , UnknownBank
+D5, PIO, not used, , , , , , , bottomBank
+D6, PIO, bno_sda, Output, , SB_LVCMOS, No Pull Up, , Output Tristatable by Enable, bottomBank
+E1, PIO, not used, , , , , , , bottomBank
+E2, PIO, not used, , , , , , , bottomBank
+E3, VCCIO_2, not used, , , , , , , bottomBank
+E4, VDDIO_SPI, not used, , , , , , , bottomBank
+E5, SPI_SI, not used, , , , , , , bottomBank
+E6, SPI_SCK, flash_sck, Output, , SB_LVCMOS, No Pull Up, , Simple Output, bottomBank
+F1, PIO, not used, , , , , , , bottomBank
+F2, PIO_GBIN, not used, , , , , , , bottomBank
+F3, PIO_GBIN, not used, , , , , , , bottomBank
+F4, CRESET_B, not used, , , , , , , bottomBank
+F5, SPI_SS_B, flash_cs_n, Output, , SB_LVCMOS, No Pull Up, , Simple Output, bottomBank
+F6, SPI_SO, flash_mosi, Output, , SB_LVCMOS, No Pull Up, , Simple Output, bottomBank
+Total Number of Used Pins, 12

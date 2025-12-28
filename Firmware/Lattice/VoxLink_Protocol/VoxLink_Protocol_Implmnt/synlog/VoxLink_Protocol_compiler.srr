@@ -1,0 +1,81 @@
+Synopsys HDL Compiler, version comp2016q3p1, Build 141R, built Dec  5 2016
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+Synopsys Verilog Compiler, version comp2016q3p1, Build 141R, built Dec  5 2016
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+@I::"C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v" (library work)
+@I::"C:\lscc\iCEcube2.2020.12\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\iCEcube2.2020.12\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\iCEcube2.2020.12\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\iCEcube2.2020.12\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v" (library work)
+Verilog syntax check successful!
+File C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v changed - recompiling
+Selecting top level module Top
+@N: CG364 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v":501:7:501:11|Synthesizing module SB_IO in library work.
+
+@N: CG364 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v":578:7:578:11|Synthesizing module SB_GB in library work.
+
+@N: CG364 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v":4120:7:4120:17|Synthesizing module SB_RGBA_DRV in library work.
+
+@N: CG364 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":11:7:11:9|Synthesizing module Top in library work.
+
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":44:30:44:34|Input LATCH_INPUT_VALUE on instance i_clk is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":44:30:44:34|Input CLOCK_ENABLE on instance i_clk is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":44:30:44:34|Input INPUT_CLK on instance i_clk is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":44:30:44:34|Input OUTPUT_CLK on instance i_clk is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":44:30:44:34|Input OUTPUT_ENABLE on instance i_clk is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":44:30:44:34|Input D_OUT_1 on instance i_clk is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":44:30:44:34|Input D_OUT_0 on instance i_clk is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG1273 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":44:50:44:52|An input port (port clk) is the target of an assignment - please check if this is intentional
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":75:30:75:35|Input LATCH_INPUT_VALUE on instance io_sda is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":75:30:75:35|Input CLOCK_ENABLE on instance io_sda is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":75:30:75:35|Input INPUT_CLK on instance io_sda is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":75:30:75:35|Input OUTPUT_CLK on instance io_sda is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":75:30:75:35|Input D_OUT_1 on instance io_sda is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":82:30:82:35|Input LATCH_INPUT_VALUE on instance io_scl is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":82:30:82:35|Input CLOCK_ENABLE on instance io_scl is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":82:30:82:35|Input INPUT_CLK on instance io_scl is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":82:30:82:35|Input OUTPUT_CLK on instance io_scl is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":82:30:82:35|Input D_OUT_1 on instance io_scl is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CL169 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":94:0:94:5|Pruning unused register pin_keeper[5:0]. Make sure that there are no unused intermediate registers.
+@N: CL159 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":17:12:17:21|Input flash_miso is unused.
+@N: CL159 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":32:12:32:20|Input vox_clk_p is unused.
+@N: CL159 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":33:12:33:20|Input vox_clk_n is unused.
+@N: CL159 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":34:12:34:19|Input vox_rx_p is unused.
+@N: CL159 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":35:12:35:19|Input vox_rx_n is unused.
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 70MB peak: 71MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Fri Dec 26 19:43:31 2025
+
+###########################################################]
+Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
+@N|Running in 64-bit mode
+@N: NF107 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":11:7:11:9|Selected library: work cell: Top view verilog as top level
+@N: NF107 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\sources\Top_VoxLink_Protocol.v":11:7:11:9|Selected library: work cell: Top view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Fri Dec 26 19:43:31 2025
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Fri Dec 26 19:43:31 2025
+
+###########################################################]

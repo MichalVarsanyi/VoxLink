@@ -1,0 +1,43 @@
+ble_pack count_0_LC_2_8_0 { count_RNO[0], count[0], count_cry_c[0] }
+ble_pack count_1_LC_2_8_1 { count_RNO[1], count[1], count_cry_c[1] }
+ble_pack count_2_LC_2_8_2 { count_RNO[2], count[2], count_cry_c[2] }
+ble_pack count_3_LC_2_8_3 { count_RNO[3], count[3], count_cry_c[3] }
+ble_pack count_4_LC_2_8_4 { count_RNO[4], count[4], count_cry_c[4] }
+ble_pack count_5_LC_2_8_5 { count_RNO[5], count[5], count_cry_c[5] }
+ble_pack count_6_LC_2_8_6 { count_RNO[6], count[6], count_cry_c[6] }
+ble_pack count_7_LC_2_8_7 { count_RNO[7], count[7], count_cry_c[7] }
+clb_pack LT_2_8 { count_0_LC_2_8_0, count_1_LC_2_8_1, count_2_LC_2_8_2, count_3_LC_2_8_3, count_4_LC_2_8_4, count_5_LC_2_8_5, count_6_LC_2_8_6, count_7_LC_2_8_7 }
+set_location LT_2_8 2 8
+ble_pack count_8_LC_2_9_0 { count_RNO[8], count[8], count_cry_c[8] }
+ble_pack count_9_LC_2_9_1 { count_RNO[9], count[9], count_cry_c[9] }
+ble_pack count_10_LC_2_9_2 { count_RNO[10], count[10], count_cry_c[10] }
+ble_pack count_11_LC_2_9_3 { count_RNO[11], count[11], count_cry_c[11] }
+ble_pack count_12_LC_2_9_4 { count_RNO[12], count[12], count_cry_c[12] }
+ble_pack count_13_LC_2_9_5 { count_RNO[13], count[13], count_cry_c[13] }
+ble_pack count_14_LC_2_9_6 { count_RNO[14], count[14], count_cry_c[14] }
+ble_pack count_15_LC_2_9_7 { count_RNO[15], count[15], count_cry_c[15] }
+clb_pack LT_2_9 { count_8_LC_2_9_0, count_9_LC_2_9_1, count_10_LC_2_9_2, count_11_LC_2_9_3, count_12_LC_2_9_4, count_13_LC_2_9_5, count_14_LC_2_9_6, count_15_LC_2_9_7 }
+set_location LT_2_9 2 9
+ble_pack count_16_LC_2_10_0 { count_RNO[16], count[16], count_cry_c[16] }
+ble_pack count_17_LC_2_10_1 { count_RNO[17], count[17], count_cry_c[17] }
+ble_pack count_18_LC_2_10_2 { count_RNO[18], count[18], count_cry_c[18] }
+ble_pack count_19_LC_2_10_3 { count_RNO[19], count[19], count_cry_c[19] }
+ble_pack count_20_LC_2_10_4 { count_RNO[20], count[20], count_cry_c[20] }
+ble_pack count_21_LC_2_10_5 { count_RNO[21], count[21], count_cry_c[21] }
+ble_pack count_22_LC_2_10_6 { count_RNO[22], count[22], count_cry_c[22] }
+ble_pack count_23_LC_2_10_7 { count_RNO[23], count[23] }
+clb_pack LT_2_10 { count_16_LC_2_10_0, count_17_LC_2_10_1, count_18_LC_2_10_2, count_19_LC_2_10_3, count_20_LC_2_10_4, count_21_LC_2_10_5, count_22_LC_2_10_6, count_23_LC_2_10_7 }
+set_location LT_2_10 2 10
+ble_pack CONSTANT_ONE_LUT4_LC_6_10_0 { CONSTANT_ONE_LUT4 }
+clb_pack LT_6_10 { CONSTANT_ONE_LUT4_LC_6_10_0 }
+set_location LT_6_10 6 10
+set_location clk_buf 6 0
+set_io vox_tx_n C1
+set_io flash_sck E6
+set_io clk C2
+set_io bno_scl C6
+set_io bno_rst_n B6
+set_io vox_tx_p D1
+set_io bno_sda D6
+set_io flash_cs_n F5
+set_io flash_mosi F6

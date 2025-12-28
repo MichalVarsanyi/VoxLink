@@ -1,0 +1,104 @@
+* ******************************************************************************
+
+* iCEcube Report
+
+* Version:            2020.12.27943
+
+* Build Date:         Dec  9 2020 17:31:51
+
+* File Generated:     Dec 26 2025 19:43:39
+
+* Purpose:            General info of design implementation
+
+* Copyright (C) 2006-2010 by Lattice Semiconductor Corp. All rights reserved.
+
+* ******************************************************************************
+
+Synthesis/Placement Summary:
+----------------------------
+    Status:  Successful
+    Runtime: 0 seconds
+
+Device Info:
+------------
+    Device Family: iCE40
+    Device:        iCE40UL1K
+    Package:       CM36A
+
+Design statistics:
+------------------
+    FFs:                  24
+    LUTs:                 25
+    RAMs:                 0
+    IOBs:                 9
+    GBs:                  1
+    PLLs:                 0
+    Warm Boots:           0
+    I2C_FIFOs:            0
+    HFOSCs:               0
+    LFOSCs:               0
+    RGBA_DRVs:            1
+    IR400_DRVs:           0
+    IR500_DRVs:           0
+    BARCODE_DRVs:         0
+    LEDDA_IPs:            0
+    IR_IPs:               0
+
+Logic Resource Utilization:
+---------------------------
+    Total Logic Cells: 25/1248
+        Combinational Logic Cells: 1        out of   1248      0.0801282%
+        Sequential Logic Cells:    24       out of   1248      1.92308%
+        Logic Tiles:               4        out of   156       2.5641%
+    Registers: 
+        Logic Registers:           24       out of   1248      1.92308%
+        IO Registers:              0        out of   240       0
+    Block RAMs:                    0        out of   14        0%
+    Warm Boots:                    0        out of   1         0%
+    I2C_FIFOs:                     0        out of   2         0%
+    HFOSCs:                        0        out of   1         0%
+    LFOSCs:                        0        out of   1         0%
+    RGBA_DRVs:                     1        out of   1         100%
+    IR400_DRVs:                    0        out of   1         0%
+    IR500_DRVs:                    0        out of   1         0%
+    BARCODE_DRVs:                  0        out of   1         0%
+    LEDDA_IPs:                     0        out of   1         0%
+    IR_IPs:                        0        out of   1         0%
+    Pins:
+        Input Pins:                1        out of   26        3.84615%
+        Output Pins:               8        out of   26        30.7692%
+        InOut Pins:                0        out of   26        0%
+    Global Buffers:                1        out of   8         12.5%
+    PLLs:                          0        out of   1         0%
+
+IO Bank Utilization:
+--------------------
+    Bank 3: 0        out of   0         0%
+    Bank 1: 0        out of   0         0%
+    Bank 0: 3        out of   12        25%
+    Bank 2: 6        out of   14        42.8571%
+
+Detailed I/O Info:
+------------------
+    Input Pins: 
+    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function                   Signal Name 
+    ----------  ---------  -----------  -------  -------  -----------                   ----------- 
+    C2          Input      SB_LVCMOS    No       0        Simple Input                  clk         
+
+    Output Pins: 
+    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function                   Signal Name 
+    ----------  ---------  -----------  -------  -------  -----------                   ----------- 
+    B6          Output     SB_LVCMOS    No       0        Simple Output                 bno_rst_n   
+    C1          Output     SB_LVCMOS    No       2        Simple Output                 vox_tx_n    
+    C6          Output     SB_LVCMOS    No       0        Simple Output                 bno_scl     
+    D1          Output     SB_LVCMOS    No       2        Simple Output                 vox_tx_p    
+    D6          Output     SB_LVCMOS    No       2        Output Tristatable by Enable  bno_sda     
+    E6          Output     SB_LVCMOS    No       2        Simple Output                 flash_sck   
+    F5          Output     SB_LVCMOS    No       2        Simple Output                 flash_cs_n  
+    F6          Output     SB_LVCMOS    No       2        Simple Output                 flash_mosi  
+
+Detailed Global Buffer Info:
+----------------------------
+    Buffer Number  IO Bank  Driven By  Fanout  Signal Name
+    -------------  -------  ---------  ------  -----------
+    5              2                   24      clk_g  

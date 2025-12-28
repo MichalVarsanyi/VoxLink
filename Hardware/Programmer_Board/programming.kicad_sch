@@ -18,7 +18,7 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "J6"
+			(property "Reference" "J103"
 				(at 0 21.59 0)
 				(effects
 					(font
@@ -191,17 +191,6 @@
 				)
 			)
 			(symbol "USB_C_Receptacle_USB2.0_0_1"
-				(rectangle
-					(start -10.16 17.78)
-					(end 10.16 -17.78)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
 				(polyline
 					(pts
 						(xy -8.89 -3.81) (xy -8.89 3.81)
@@ -392,6 +381,18 @@
 				)
 			)
 			(symbol "USB_C_Receptacle_USB2.0_1_1"
+				(rectangle
+					(start -10.16 17.78)
+					(end 10.16 -17.78)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type color)
+						(color 0 194 0 1)
+					)
+				)
 				(pin passive line
 					(at -7.62 -22.86 90)
 					(length 5.08)
@@ -715,23 +716,25 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "J"
-				(at 0 10.16 0)
+			(property "Reference" "J102"
+				(at 2.54 0.0001 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "Conn_01x08"
-				(at 0 -12.7 0)
+			(property "Value" "PicoBlade"
+				(at 2.54 -2.5399 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Connector_Molex:Molex_PicoBlade_53048-0810_1x08_P1.25mm_Horizontal"
 				(at 0 0 0)
 				(effects
 					(font
@@ -750,6 +753,15 @@
 				)
 			)
 			(property "Description" "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor Link" "https://www.mouser.sk/ProductDetail/Molex/53048-0860?qs=iLbezkQI%252BshWd7WZ3fG%252B8w%3D%3D"
 				(at 0 0 0)
 				(effects
 					(font
@@ -782,10 +794,11 @@
 					(end 1.27 -11.43)
 					(stroke
 						(width 0.254)
-						(type default)
+						(type solid)
 					)
 					(fill
-						(type background)
+						(type color)
+						(color 0 194 0 1)
 					)
 				)
 				(rectangle
@@ -1031,23 +1044,23 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "J"
-				(at 1.27 5.08 0)
+			(property "Reference" "J101"
+				(at 1.27 8.89 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "Conn_02x03_Odd_Even"
-				(at 1.27 -5.08 0)
+			(property "Value" "IDC Connector"
+				(at 1.27 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Connector_IDC:IDC-Header_2x03_P2.54mm_Horizontal"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1066,6 +1079,24 @@
 				)
 			)
 			(property "Description" "Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor Link" "https://www.mouser.sk/ProductDetail/Molex/90130-3206?qs=kEwmkoUtv7TZVFbRqv7FjA%3D%3D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor Link 2" "https://www.mouser.sk/ProductDetail/Samtec/TST-103-05-L-D-RA?qs=%252BZP6%2F%252BtExtDmBbrlk7HHpg%3D%3D"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1098,10 +1129,11 @@
 					(end 3.81 -3.81)
 					(stroke
 						(width 0.254)
-						(type default)
+						(type solid)
 					)
 					(fill
-						(type background)
+						(type color)
+						(color 0 194 0 1)
 					)
 				)
 				(rectangle
@@ -5948,7 +5980,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SON:USON-10_2.5x1.0mm_P0.5mm"
+		(property "Footprint" "Custom_VoxLink_Footprints:USON-10_2.5x1.0mm_P0.5mm__Reduced_Paste"
 			(at 53.34 96.52 0)
 			(effects
 				(font
@@ -6782,7 +6814,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://eu.mouser.com/ProductDetail/71-CRCW0402-5.1K-E3"
+		(property "Datasheet" "https://eu.mouser.com/ProductDetail/71-CRCW040222R0JNEDC"
 			(at 74.93 137.16 0)
 			(effects
 				(font
@@ -6850,7 +6882,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://eu.mouser.com/ProductDetail/71-CRCW0402-5.1K-E3"
+		(property "Datasheet" "https://eu.mouser.com/ProductDetail/71-CRCW040222R0JNEDC"
 			(at 74.93 139.7 0)
 			(effects
 				(font
@@ -7823,7 +7855,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay-Dale/RCC06031R00FKEA?qs=GedFDFLaBXHoNHSIHYHq8Q%3D%3D"
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay-Draloric/RCS04021R00JNED?qs=NKmfXavxMayJEsE2Q0i2Jg%3D%3D"
 			(at 142.24 125.73 0)
 			(effects
 				(font
@@ -8565,7 +8597,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://eu.mouser.com/ProductDetail/Panasonic/EXB-38V220JV?qs=uA7cY%2Fh6FfWz7RTZfU3o3w%3D%3D&srsltid=AfmBOopzjZsMxnOYcXJV453D_R8g91dh9OwbKtkf1b7QjBlPLoZ2zN1B"
+		(property "Datasheet" "https://eu.mouser.com/ProductDetail/Panasonic/EXB-N8V220JX?qs=bx0%2FPCyAc7556mtSQRzOoA%3D%3D"
 			(at 88.9 96.52 0)
 			(effects
 				(font

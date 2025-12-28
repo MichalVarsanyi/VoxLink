@@ -1,0 +1,85 @@
+set_location IN_MUX_bfv_2_8_0_ 2 8 0 #ICE_CARRY_IN_MUX
+set_location IN_MUX_bfv_2_9_0_ 2 9 0 #ICE_CARRY_IN_MUX
+set_location IN_MUX_bfv_2_10_0_ 2 10 0 #ICE_CARRY_IN_MUX
+set_location CONSTANT_ONE_LUT4 6 10 0 #SB_LUT4
+set_location count_RNO[13] 2 9 5 #SB_LUT4
+set_location count_RNO[8] 2 9 0 #SB_LUT4
+set_location count[5] 2 8 5 #SB_DFF
+set_location count[12] 2 9 4 #SB_DFF
+set_location count_cry_c[5] 2 8 5 #SB_CARRY
+set_location count_cry_c[15] 2 9 7 #SB_CARRY
+set_location count_RNO[3] 2 8 3 #SB_LUT4
+set_location count_RNO[21] 2 10 5 #SB_LUT4
+set_location count_RNO[16] 2 10 0 #SB_LUT4
+set_location count[21] 2 10 5 #SB_DFF
+set_location count_cry_c[7] 2 8 7 #SB_CARRY
+set_location count[2] 2 8 2 #SB_DFF
+set_location count[19] 2 10 3 #SB_DFF
+set_location count_cry_c[12] 2 9 4 #SB_CARRY
+set_location count_cry_c[0] 2 8 0 #SB_CARRY
+set_location count_RNO[4] 2 8 4 #SB_LUT4
+set_location count_RNO[23] 2 10 7 #SB_LUT4
+set_location count_RNO[10] 2 9 2 #SB_LUT4
+set_location count[9] 2 9 1 #SB_DFF
+set_location count_cry_c[9] 2 9 1 #SB_CARRY
+set_location count_cry_c[19] 2 10 3 #SB_CARRY
+set_location count_RNO[19] 2 10 3 #SB_LUT4
+set_location count[17] 2 10 1 #SB_DFF
+set_location count[0] 2 8 0 #SB_DFF
+set_location count_cry_c[21] 2 10 5 #SB_CARRY
+set_location count_cry_c[2] 2 8 2 #SB_CARRY
+set_location count_cry_c[10] 2 9 2 #SB_CARRY
+set_location count_RNO[6] 2 8 6 #SB_LUT4
+set_location count_RNO[12] 2 9 4 #SB_LUT4
+set_location count_RNO[9] 2 9 1 #SB_LUT4
+set_location count[6] 2 8 6 #SB_DFF
+set_location count[15] 2 9 7 #SB_DFF
+set_location count_cry_c[4] 2 8 4 #SB_CARRY
+set_location count_cry_c[16] 2 10 0 #SB_CARRY
+set_location count_RNO[0] 2 8 0 #SB_LUT4
+set_location count_RNO[15] 2 9 7 #SB_LUT4
+set_location count[4] 2 8 4 #SB_DFF
+set_location count[22] 2 10 6 #SB_DFF
+set_location count[13] 2 9 5 #SB_DFF
+set_location count_cry_c[6] 2 8 6 #SB_CARRY
+set_location count_cry_c[14] 2 9 6 #SB_CARRY
+set_location count_RNO[2] 2 8 2 #SB_LUT4
+set_location count[3] 2 8 3 #SB_DFF
+set_location count[18] 2 10 2 #SB_DFF
+set_location count_cry_c[22] 2 10 6 #SB_CARRY
+set_location count_cry_c[13] 2 9 5 #SB_CARRY
+set_location count_RNO[5] 2 8 5 #SB_LUT4
+set_location count_RNO[20] 2 10 4 #SB_LUT4
+set_location count_RNO[17] 2 10 1 #SB_LUT4
+set_location count[20] 2 10 4 #SB_DFF
+set_location count[11] 2 9 3 #SB_DFF
+set_location count_cry_c[8] 2 9 0 #SB_CARRY
+set_location count_RNO[18] 2 10 2 #SB_LUT4
+set_location count[16] 2 10 0 #SB_DFF
+set_location count[1] 2 8 1 #SB_DFF
+set_location GND -1 -1 -1 #GND
+set_location count_cry_c[20] 2 10 4 #SB_CARRY
+set_location count_cry_c[11] 2 9 3 #SB_CARRY
+set_location count_cry_c[1] 2 8 1 #SB_CARRY
+set_location count_RNO[7] 2 8 7 #SB_LUT4
+set_location count_RNO[22] 2 10 6 #SB_LUT4
+set_location count_RNO[11] 2 9 3 #SB_LUT4
+set_location count[8] 2 9 0 #SB_DFF
+set_location count_cry_c[18] 2 10 2 #SB_CARRY
+set_location count[7] 2 8 7 #SB_DFF
+set_location count[14] 2 9 6 #SB_DFF
+set_location count_cry_c[3] 2 8 3 #SB_CARRY
+set_location count_cry_c[17] 2 10 1 #SB_CARRY
+set_location count_RNO[1] 2 8 1 #SB_LUT4
+set_location count_RNO[14] 2 9 6 #SB_LUT4
+set_location count[23] 2 10 7 #SB_DFF
+set_location count[10] 2 9 2 #SB_DFF
+set_io vox_tx_n C1
+set_io flash_sck E6
+set_io clk C2
+set_io bno_scl C6
+set_io bno_rst_n B6
+set_io vox_tx_p D1
+set_io bno_sda D6
+set_io flash_cs_n F5
+set_io flash_mosi F6
