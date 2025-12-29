@@ -923,6 +923,24 @@
 				(pin bidirectional line
 					(at -2.54 -22.86 90)
 					(length 2.54)
+					(name "IOB_8A_G4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "D2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 1.27 -22.86 90)
+					(length 2.54)
 					(name "IOB_10A"
 						(effects
 							(font
@@ -939,7 +957,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 0 -22.86 90)
+					(at 3.81 -22.86 90)
 					(length 2.54)
 					(name "IOB_3B_G6"
 						(effects
@@ -949,24 +967,6 @@
 						)
 					)
 					(number "F2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 2.54 -22.86 90)
-					(length 2.54)
-					(name "IOB_8A_G4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "D2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4391,17 +4391,6 @@
 		)
 		(uuid "d0339f64-0a4d-4ec0-94c5-6150f6ecceb0")
 	)
-	(text "1V2_CORE connected to\nD2 to allow BGA fanout"
-		(exclude_from_sim no)
-		(at 130.81 119.38 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 0 1)
-			)
-		)
-		(uuid "d51d0657-8db5-4a36-b4f6-59d8b8dd164a")
-	)
 	(text "BUS"
 		(exclude_from_sim no)
 		(at 166.624 90.678 0)
@@ -4603,6 +4592,10 @@
 		(uuid "61f9f709-1c6a-43c8-a83f-d38e73dcbdaf")
 	)
 	(no_connect
+		(at 124.46 133.35)
+		(uuid "76d2dab5-1fa0-4b4b-af21-55b59a2c2445")
+	)
+	(no_connect
 		(at 233.68 105.41)
 		(uuid "c79f410d-8688-4c91-9cc9-64d546bda464")
 	)
@@ -4766,16 +4759,6 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 128.27) (xy 130.81 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b3144bc-24fd-4ae8-ab83-9e4b9d0a58be")
-	)
-	(wire
-		(pts
 			(xy 175.26 104.14) (xy 189.23 104.14)
 		)
 		(stroke
@@ -4833,16 +4816,6 @@
 			(type default)
 		)
 		(uuid "49c55560-2398-42fb-95ae-1b882fcd380c")
-	)
-	(wire
-		(pts
-			(xy 124.46 128.27) (xy 130.81 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4cfdb2a8-db59-41a6-a079-dc306fda0cfb")
 	)
 	(wire
 		(pts
@@ -6661,7 +6634,7 @@
 	)
 	(global_label "12MHZ_CLK"
 		(shape input)
-		(at 124.46 130.81 0)
+		(at 124.46 127 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6672,7 +6645,7 @@
 		)
 		(uuid "5a0f0059-fd3e-4990-a981-273fa364430b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 138.3913 130.81 0)
+			(at 138.3913 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6684,7 +6657,7 @@
 	)
 	(global_label "BNO_SDA"
 		(shape input)
-		(at 124.46 133.35 0)
+		(at 124.46 129.54 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6694,7 +6667,7 @@
 		)
 		(uuid "de920fe5-efeb-4cb8-b7bf-c6aa04c217e2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 135.9119 133.35 0)
+			(at 135.9119 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8605,71 +8578,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3VA")
-		(at 130.81 127 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9600ff56-6a8a-4f15-967d-20de43fe54f9")
-		(property "Reference" "#PWR0132"
-			(at 130.81 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+1V2_CORE"
-			(at 125.222 122.936 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 130.81 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 130.81 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 130.81 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7091b9e9-5546-48fa-a94c-464efcadd0c7")
-		)
-		(instances
-			(project "VoxSense"
-				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/68ca1e05-bb71-451f-9769-47c16f9dd6da"
-					(reference "#PWR0132")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 74.93 67.31 0)
 		(unit 1)
@@ -8827,7 +8735,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Custom_VoxLink_Footprints:ICE40UL1K_UCBGA-36"
+		(property "Footprint" "Package_BGA:UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm"
 			(at 101.6 130.81 0)
 			(effects
 				(font
