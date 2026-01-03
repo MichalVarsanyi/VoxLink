@@ -227,12 +227,14 @@ Since Ethernet connectors were used in the design, the differential pairs were r
 
 ### Constraints
 
-The constraints were taken from the manufacturer's capabilities page and copied into KiCad. The exact values can be seen below.
+The constraints were taken from the manufacturer's capabilities page and copied into KiCad. The exact values can be seen below. In the further section of **PCB Rework** I had to use plugged vias. Even though the annular ring was 0.05mm, the design was still manufacturable, I believe due to the via-in-pad (VIP) being 0.25mm.
 
 ![image](images/PCB_Constraints.png)
 
 ### PCB Rework
 
 After talking to the manufacturer, I was informed that the custom BGA footprint I have designed was **not manufacturable**. The pad size I used for the fanout was 0.1mm, and the minimum was 0.25mm, which meant I had to rework my PCB design. Unfortunately, **I had to use capped in-pad vias with 0.15mm drill size** to get around this issue. This is right at the manufacturer's limits, which increases the cost by a few euros; however, I do not see this as a problem with the evaluation design I am ordering. Below is an image provided by JLCPCB engineers of my flawed footprint design.
+
+After submitting the new design, I received another email from the manufacturer asking about the plugged vias. My requirements were tented epoxy-filled and capped vias (applied to all via sizes). I also decided to keep the solder mask opening for all pads and vias. Removing the solder mask from underneath the BGA would create a more uniform solder layer, as the minimum guaranteed solder bridge is 0.1mm, and I had areas with 0.06mm under the pad. However, I believe the residual solder mask would prevent accidental solder bridges. Nonetheless, for an experimental board, this does not pose a critical problem.
 
 ![image](images/PCB_Footprint_Issue.png)
