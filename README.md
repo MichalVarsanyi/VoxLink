@@ -309,6 +309,4 @@ To program the device, download the Diamond Programmer from Lattice and set the 
 
 Here is a video fo a blink sketch I programmed in Verilog to verify the functionality :))
 
-<video width="640" controls>
-  <source src="images/fpga_blink.mp4" type="video/mp4">
-</video>
+![image](images/fpga_blink.gif)
