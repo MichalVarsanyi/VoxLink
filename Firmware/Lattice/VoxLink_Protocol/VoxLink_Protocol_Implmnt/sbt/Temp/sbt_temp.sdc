@@ -1,3 +1,3 @@
 ####---- CreateClock list ----1
-create_clock  -period 7.58 -waveform {0.00 3.79} -name {Top|clk} [get_ports {clk}] 
+create_clock  -period 8.09 -waveform {0.00 4.05} -name {Top|clk_12mhz} [get_ports {clk_12mhz}] 
 

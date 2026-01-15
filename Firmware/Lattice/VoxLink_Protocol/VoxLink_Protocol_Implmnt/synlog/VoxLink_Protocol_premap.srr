@@ -1,4 +1,4 @@
-# Fri Dec 26 19:43:33 2025
+# Thu Jan 15 13:18:35 2026
 
 Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -21,7 +21,7 @@ Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0
 Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 102MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 104MB)
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 104MB)
 
 ICG Latch Removal Summary:
 Number of ICG latches removed:	0
@@ -35,13 +35,14 @@ Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0
 Clock Summary
 *****************
 
-Start      Requested     Requested     Clock      Clock               Clock
-Clock      Frequency     Period        Type       Group               Load 
----------------------------------------------------------------------------
-System     265.7 MHz     3.763         system     system_clkgroup     24   
-===========================================================================
+Start                            Requested     Requested     Clock                            Clock                     Clock
+Clock                            Frequency     Period        Type                             Group                     Load 
+-----------------------------------------------------------------------------------------------------------------------------
+System                           1.0 MHz       1000.000      system                           system_clkgroup           0    
+Top|clk_12mhz                    17.2 MHz      58.245        inferred                         Autoconstr_clkgroup_0     0    
+Top|sys_clkout_derived_clock     214.6 MHz     4.660         derived (from Top|clk_12mhz)     Autoconstr_clkgroup_0     28   
+=============================================================================================================================
 
-@W: MT531 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\voxlink_protocol\sources\top_voxlink_protocol.v":48:0:48:5|Found signal identified as System clock which controls 24 sequential elements including count[23:0].  Using this clock, which has no specified timing constraint, can prevent conversion of gated or generated clocks and can adversely impact design performance. 
 
 Finished Pre Mapping Phase.
 @N: BN225 |Writing default property annotation file C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\VoxLink_Protocol\VoxLink_Protocol_Implmnt\VoxLink_Protocol.sap.
@@ -58,6 +59,6 @@ Pre-mapping successful!
 At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 48MB peak: 134MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Fri Dec 26 19:43:33 2025
+# Thu Jan 15 13:18:36 2026
 
 ###########################################################]

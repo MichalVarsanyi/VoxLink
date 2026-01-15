@@ -1,0 +1,42 @@
+# ##############################################################################
+
+# iCEcube PCF
+
+# Version:            2020.12.27943
+
+# File Generated:     Dec 26 2025 18:03:53
+
+# Family & Device:    iCE40UL1K
+
+# Package:            CM36A
+
+# ##############################################################################
+
+# General
+set_io clk          C2
+
+# SPI Flash
+set_io flash_mosi   F6
+set_io flash_miso   E5
+set_io flash_sck    E6
+set_io flash_cs_n   F5
+
+# LED
+set_io led_io       A2
+set_io led_rx       B1
+set_io led_tx       A1
+
+# Sensor
+set_io bno_sda      D6
+set_io bno_scl      C6
+set_io bno_rst_n    B6
+
+# VoxLink
+set_io vox_clk_p    E2
+set_io vox_clk_n    F3
+
+set_io vox_rx_p     F1
+set_io vox_rx_n     E1
+
+set_io vox_tx_p     D1
+set_io vox_tx_n     C1

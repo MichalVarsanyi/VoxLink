@@ -2619,6 +2619,20 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "NEXT REVISION: \nRef through 12k to GND!\n~{RESET} through 1k to 3V3!"
+		(exclude_from_sim no)
+		(at 166.624 87.122 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+				(color 194 0 0 1)
+			)
+			(justify right)
+		)
+		(uuid "11b85c47-bb24-4b86-8540-95d48ae80d1c")
+	)
 	(text "(10pF Load Capacitance - 5pF Stray Capacitance) * 2 = 10pF Load Capacitors"
 		(exclude_from_sim no)
 		(at 22.098 159.258 0)
@@ -9233,7 +9247,7 @@
 				)
 			)
 		)
-		(property "Value" "16MHz"
+		(property "Value" "12MHz"
 			(at 46.99 154.94 0)
 			(effects
 				(font

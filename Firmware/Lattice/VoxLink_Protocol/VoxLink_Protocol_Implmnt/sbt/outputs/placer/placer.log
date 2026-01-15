@@ -6,7 +6,7 @@
 
 * Build Date:         Dec  9 2020 17:55:50
 
-* File Generated:     Dec 26 2025 19:43:38
+* File Generated:     Jan 15 2026 13:18:42
 
 * Purpose:            
 
@@ -33,27 +33,20 @@ I2051: Reading of inputs for placer completed successfully
 
 I2053: Starting placement of the design
 =============================================================
-W2715: Warning for set_io Constraint: Ignoring pin assignment for led_rx, as it is not connected to any PAD
-W2715: Warning for set_io Constraint: Ignoring pin assignment for vox_clk_n, as it is not connected to any PAD
-W2715: Warning for set_io Constraint: Ignoring pin assignment for vox_rx_n, as it is not connected to any PAD
 W2715: Warning for set_io Constraint: Ignoring pin assignment for led_io, as it is not connected to any PAD
-W2715: Warning for set_io Constraint: Ignoring pin assignment for led_tx, as it is not connected to any PAD
-W2715: Warning for set_io Constraint: Ignoring pin assignment for vox_clk_p, as it is not connected to any PAD
-W2715: Warning for set_io Constraint: Ignoring pin assignment for vox_rx_p, as it is not connected to any PAD
-W2715: Warning for set_io Constraint: Ignoring pin assignment for flash_miso, as it is not connected to any PAD
 
 Input Design Statistics
-    Number of LUTs      	:	24
-    Number of DFFs      	:	24
+    Number of LUTs      	:	37
+    Number of DFFs      	:	28
     Number of DFFs packed to IO	:	0
-    Number of Carrys    	:	23
+    Number of Carrys    	:	26
     Number of RAMs      	:	0
     Number of ROMs      	:	0
-    Number of IOs       	:	9
+    Number of IOs       	:	1
     Number of GBIOs     	:	0
-    Number of GBs       	:	1
+    Number of GBs       	:	3
     Number of WarmBoot  	:	0
-    Number of PLLs      	:	0
+    Number of PLLs      	:	1
     Number of I2CFIFOs      	:	0
     Number of SBIOODs     	:	0
     Number of LEDDAIPs     	:	0
@@ -74,12 +67,12 @@ Design Legalization Statistics
     Number of feedthru LUTs inserted for LUTs driving multiple DFFs	:	0
     Number of LUTs replicated for LUTs driving multiple DFFs       	:	0
     Number of feedthru LUTs inserted to legalize output of CARRYs  	:	0
-    Number of feedthru LUTs inserted to legalize global signals    	:	0
+    Number of feedthru LUTs inserted to legalize global signals    	:	1
     Number of feedthru CARRYs inserted to legalize input of CARRYs 	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 01xxxx  	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 10xxxx  	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 11xxxx  	:	0
-    Total LUTs inserted                                            	:	0
+    Total LUTs inserted                                            	:	1
     Total CARRYs inserted                                          	:	0
 
 
@@ -91,26 +84,29 @@ Phase 2
 I2088: Phase 2, elapsed time : 0.0 (sec)
 
 Phase 3
+Info-1404: Inferred PLL generated clock at u_pll/PLLOUTCORE
+Info-1404: Inferred PLL generated clock at u_pll/PLLOUTGLOBAL
+Warning-1034: Found non-unate timing arc, from pin "in3" to pin "lcout" of instance "GB_BUFFER_clk_12mhz_bufg_THRU_LUT4_0_LC_37", in the clock network. Converting the timing arc to positive-unate
 
 Design Statistics after Packing
-    Number of LUTs      	:	25
-    Number of DFFs      	:	24
+    Number of LUTs      	:	39
+    Number of DFFs      	:	28
     Number of DFFs packed to IO	:	0
-    Number of Carrys    	:	23
+    Number of Carrys    	:	26
 
 Device Utilization Summary after Packing
     Sequential LogicCells
-        LUT and DFF      	:	1
-        LUT, DFF and CARRY	:	23
+        LUT and DFF      	:	2
+        LUT, DFF and CARRY	:	26
     Combinational LogicCells
-        Only LUT         	:	1
+        Only LUT         	:	11
         CARRY Only       	:	0
         LUT with CARRY   	:	0
-    LogicCells                  :	25/1248
-    PLBs                        :	4/156
+    LogicCells                  :	39/1248
+    PLBs                        :	7/156
     BRAMs                       :	0/14
-    IOs and GBIOs               :	9/21
-    PLLs                        :	0/1
+    IOs and GBIOs               :	1/21
+    PLLs                        :	1/1
     I2CFIFOs                    :	0/2
     SBIOODs                     :	0/5
     RGBADRVs                    :	1/1
@@ -126,26 +122,28 @@ Device Utilization Summary after Packing
 I2088: Phase 3, elapsed time : 0.2 (sec)
 
 Phase 4
-I2088: Phase 4, elapsed time : 0.1 (sec)
+W2805: Property RGB0_CURRENT for SB_RGB_DRV instance led_driver has value zero. So location (2,15,0) can be used to place SB_IO_OD
+W2805: Property RGB1_CURRENT for SB_RGB_DRV instance led_driver has value zero. So location (2,15,1) can be used to place SB_IO_OD
+I2088: Phase 4, elapsed time : 0.0 (sec)
 
 Phase 5
 I2088: Phase 5, elapsed time : 0.0 (sec)
 
 Phase 6
-I2088: Phase 6, elapsed time : 0.0 (sec)
+I2088: Phase 6, elapsed time : 1.6 (sec)
 
 Final Design Statistics
-    Number of LUTs      	:	25
-    Number of DFFs      	:	24
+    Number of LUTs      	:	39
+    Number of DFFs      	:	28
     Number of DFFs packed to IO	:	0
-    Number of Carrys    	:	23
+    Number of Carrys    	:	26
     Number of RAMs      	:	0
     Number of ROMs      	:	0
-    Number of IOs       	:	9
+    Number of IOs       	:	1
     Number of GBIOs     	:	0
-    Number of GBs       	:	1
+    Number of GBs       	:	3
     Number of WarmBoot  	:	0
-    Number of PLLs      	:	0
+    Number of PLLs      	:	1
     Number of I2CFIFOs      	:	0
     Number of SBIOODs     	:	0
     Number of LEDDAIPs     	:	0
@@ -158,11 +156,11 @@ Final Design Statistics
     Number of HFOSCs     	:	0
 
 Device Utilization Summary
-    LogicCells                  :	25/1248
-    PLBs                        :	4/156
+    LogicCells                  :	39/1248
+    PLBs                        :	10/156
     BRAMs                       :	0/14
-    IOs and GBIOs               :	9/21
-    PLLs                        :	0/1
+    IOs and GBIOs               :	1/21
+    PLLs                        :	1/1
     I2CFIFOs                    :	0/2
     SBIOODs                     :	0/5
     RGBADRVs                    :	1/1
@@ -187,8 +185,10 @@ analysis after routing.
 #####################################################################
                      Clock Summary 
 =====================================================================
-Number of clocks: 1
-Clock: Top|clk | Frequency: 95.35 MHz | Target: 131.93 MHz
+Number of clocks: 3
+Clock: Top|clk_12mhz | Frequency: N/A | Target: 123.61 MHz
+Clock: u_pll/PLLOUTCORE | Frequency: 85.35 MHz | Target: 1545.12 MHz
+Clock: u_pll/PLLOUTGLOBAL | Frequency: N/A | Target: 1545.12 MHz
 
 =====================================================================
                      End of Clock Summary
@@ -196,5 +196,5 @@ Clock: Top|clk | Frequency: 95.35 MHz | Target: 131.93 MHz
 
 I2054: Placement of design completed successfully
 
-I2076: Placer run-time: 0.5 sec.
+I2076: Placer run-time: 2.1 sec.
 

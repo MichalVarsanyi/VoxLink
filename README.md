@@ -235,6 +235,80 @@ The constraints were taken from the manufacturer's capabilities page and copied 
 
 After talking to the manufacturer, I was informed that the custom BGA footprint I have designed was **not manufacturable**. The pad size I used for the fanout was 0.1mm, and the minimum was 0.25mm, which meant I had to rework my PCB design. Unfortunately, **I had to use capped in-pad vias with 0.15mm drill size** to get around this issue. This is right at the manufacturer's limits, which increases the cost by a few euros; however, I do not see this as a problem with the evaluation design I am ordering. Below is an image provided by JLCPCB engineers of my flawed footprint design.
 
-After submitting the new design, I received another email from the manufacturer asking about the plugged vias. My requirements were tented epoxy-filled and capped vias (applied to all via sizes). I also decided to keep the solder mask opening for all pads and vias. Removing the solder mask from underneath the BGA would create a more uniform solder layer, as the minimum guaranteed solder bridge is 0.1mm, and I had areas with 0.06mm under the pad. However, I believe the residual solder mask would prevent accidental solder bridges. Nonetheless, for an experimental board, this does not pose a critical problem.
+After submitting the new design, I received another email from the manufacturer asking about the plugged vias. My requirements were **tented epoxy-filled and capped vias** (applied to all via sizes). I also decided to **keep the solder mask opening for all pads and vias**. Removing the solder mask from underneath the BGA would create a more uniform solder layer, as the minimum guaranteed solder bridge is 0.1mm, and I had areas with 0.06mm under the pad. However, I believe the residual solder mask would prevent accidental solder bridges. Nonetheless, for an experimental board, this does not pose a critical problem.
 
 ![image](images/PCB_Footprint_Issue.png)
+
+## PCB Review
+### Programmer Board
+During the PCB assembly, I have found minor issues with the boards. Due to the complexity of the design, this is expected, and the issues will be discussed below. In the programmer board, there is an error in the FT2232H chip connection, where the **REF (Pin 6) pin needs to be connected to GND via a 12k resistor**. Consequently, the **$\overline{\mathrm{RESET}}$ (Pin 14) needs to be connected via a 1k resistor to 3V3**. A minor touch-up would be to add more vias to the exposed pad of the FT2232H chip. Lastly, the IDC connector is a bit difficult to assemble straight, as the pins of the PicoBlade are sticking from the bottom. The final schematic can be seen [here](https://github.com/MichalVarsanyi/VoxLink/blob/main/Hardware/Programmer_Board/schematic.pdf).
+
+### Sensor Board
+The sensor board also required minor modifications. First, the D302 Schottky diode was removed, as powering the board via the USB programmer did not cause it to turn on fully. I suspect this stems from the reverse polarity protection on the board, where two Schottky diodes were used. As the ground of the TPS25942 IC is connected through the diodes to the real ground, the added voltage drop (I measured around 0.4V) may have tripped the UVLO protection. **Removing the D302 diode fixed this issue**.
+
+Second, after powering up the board, the FPGA seemed to be in a constant state of reset. This was also indicated by the D308 (CD) LED being turned off. **After removing the U204 time delay block, the FPGA could boot properly**. Currently, the schematic uses a TLV840MADL, which is an open-drain, active-low variant of the TLV840 chip. One possible fix could be to use the TLV840MADH open-drain, active-high variant.
+
+Furthermore, during procurement, the wrong footprint for the following components was ordered:
+- C102 - wrong footprint ordered
+- C103 - wrong footprint ordered
+- R101 - wrong footprint ordered
+
+To see the final schematic, click [here](https://github.com/MichalVarsanyi/VoxLink/blob/main/Hardware/Sensor_Board/schematic.pdf) (Please note that not all the pages are loaded right away. To see the complete schematic, please click the **'More Pages'** button at the bottom of the page)
+
+
+
+## Bringup
+### Programmer Board
+The [FT_Prog](https://ftdichip.com/utilities/#ft_prog) software from FTDI was used to program the name of the programmer shown in the operating system. **It is very important to not to change the Vendor ID (VID) and the Product ID (PID) in the software!** Doing so will make the FTDI drivers not see the programmer, meaning even the FT_Prog software will not be able to detect the device and thus change the values back. **Only change the values in the field shown in the image!**
+
+![image](images/ft_prog.png)
+
+### Rolling Back Changes
+If this were to happen, there are three possible fixes:
+1. Remove the EEPROM, which stores the configuration, and solder in a new one.
+2. If you are using Windows, it is possible to download the D2XX drivers from FTDI and add the modified VID and PID in the ftdiport.inf and ftdibus.inf files. Navigate to the device manager and click Update Driver on the programmer device. Choose 'Browse my computer for drivers' and then 'Let me pick from a list of available drivers on my computer', last click on 'Have Disk' and navigate to the folder with the modified drivers. Modifying the files, however, will change the hash, and Windows will refuse to program the device with new drivers. To bypass this, change 'disable driver signature enforcement' during PC restart.
+3. This is the option I went with. A colleague of mine using Linux could erase the EEPROM with a simple terminal command.
+>sudo apt ftdi-eeprom
+
+>lsusb
+
+The lusb will list the connected devices with their VID and PID numbers. Then erase the EEPROM with the following command. Replace XXXX correcponds with the VID and YYYY with the PID.
+
+>sudo ftdi_eeprom --device i:0xXXXX:0xYYYY --erase-eeprom vars_dev.conf
+
+In the vars_dev.conf, you will set the variables of the EEPROM:
+
+```
+vendor_id=0x0403
+product_id=0x6010
+manufacturer="CVUT"
+product="VoxLink Programmer"
+serial="0001"
+use_serial=true
+max_power=250
+self_powered=false
+remote_wakeup=false
+```
+
+### Sensor Board
+After creating the project in the iCEcube2 software, create a new project and set the Device Options to the following values.
+
+![image](images/ice_cube_setup.png)
+
+Then right-click on the 'Design Files' and then the 'Add Files' button, and add all the Verilog code. Similarly, repeat the same step for the 'Constraint Files' and add the .pfc file.
+
+To run the synthesis, double-click the 'Run Synplify Pro Synthesis' and after it is completed, double-click on the 'Run P&R', which will run the place and router. The generated bitmap file is in the following destination:
+
+>\VoxLink_Protocol_Implmnt\sbt\outputs\bitmap
+
+![image](images/ice_cube_add_files.png)
+
+To program the device, download the Diamond Programmer from Lattice and set the Device Family, Device, Operation, and File Name according to the image below. If using the PicoBlade programming port, set the I/O settings on the right as follows. When using the Tag Connect programming cable, the reset button on the sensor board must be held during the programming operation.
+
+![image](images/diamond_programmer.png)
+
+Here is a video fo a blink sketch I programmed in Verilog to verify the functionality :))
+
+<video width="640" controls>
+  <source src="images/fpga_blink.mp4" type="video/mp4">
+</video>
