@@ -192,7 +192,8 @@ module Top(
     wire       rx_valid;
 
     wire       finish_transaction;
-    wire       driver_idle;
+    wire       driver_waiting;
+    wire       driver_finished_tranaction;
 
     VoxLink_I2C_Driver #(
         .CLK_FREQ(150_000_000),  // System Clock Frequency
@@ -207,17 +208,18 @@ module Top(
         .i2c_sda        (i2c_sda),
 
         // Control Signals
-        .tx_data(tx_data),              // Data to send (replaces write_data)
-        .trigger_tx(trigger_tx),        // Pulse HIGH to write the tx_data byte
-        .tx_done(tx_done),              // Pulses HIGH when writing 1 byte is complete
-        .target_nack(target_nack),      // 1 = The sensor ignored us! (Did not ACK our write) Blasphemy!
+        .tx_data(tx_data),                          // Data to send
+        .trigger_tx(trigger_tx),                    // Pulse HIGH to write the tx_data byte
+        .tx_done(tx_done),                          // Pulses HIGH when writing the byte is complete
+        .target_nack(target_nack),                  // HIGH = The sensor ignored us! (Did not ACK our write) Blasphemy!
 
-        .rx_data(rx_data),              // Data received (replaces read_data)
-        .trigger_rx(trigger_rx),        // Pulse HIGH to read a byte from the bus
-        .rx_valid(rx_valid),            // Pulses HIGH when rx_data is ready
+        .rx_data(rx_data),                          // Data received
+        .trigger_rx(trigger_rx),                    // Pulse HIGH to trigger a read operation
+        .rx_valid(rx_valid),                        // Pulses HIGH when rx_data is valid
 
-        .finish_transaction(finish_transaction),    // 1 = Send NACK (if reading) and send STOP
-        .driver_idle(driver_idle)
+        .finish_transaction(finish_transaction),    // Set HIGH before the ACK of the last byte we want to receive + signal triggers the STOP sequence
+        .driver_waiting(driver_waiting),            // Driver is waiting for command
+        .driver_finished_tranaction(driver_finished_tranaction)     // Driver has finished a sequence of transaction commands and is now in the idle state
     );
 
 // -----------------------------------------------------
@@ -225,27 +227,28 @@ module Top(
 // -----------------------------------------------------
 
     VoxLink_BNO_Driver #(
-        .BNO_ADDRESS(7'h4B)
+        .BNO_ADDRESS(7'h4B)                         // Check the SA0 pin of the BNO086 in the schematic diagram
     ) VoxLink_BNO_Driver_Inst (
         // General
         .sys_clk(sys_clk),
         .sys_rst(sys_rst),
         
         // Control Signals
-        .tx_data(tx_data),              // Data to send (replaces write_data)
-        .trigger_tx(trigger_tx),        // Pulse HIGH to write the tx_data byte
-        .tx_done(tx_done),              // Pulses HIGH when writing the byte is complete
-        .target_nack(target_nack),      // 1 = The sensor ignored us! (Did not ACK our write) Blasphemy!
+        .tx_data(tx_data),                          // Data to send
+        .trigger_tx(trigger_tx),                    // Pulse HIGH to write the tx_data byte
+        .tx_done(tx_done),                          // Pulses HIGH when writing the byte is complete
+        .target_nack(target_nack),                  // HIGH = The sensor ignored us! (Did not ACK our write) Blasphemy!
 
-        .rx_data(rx_data),              // Data received (replaces read_data)
-        .trigger_rx(trigger_rx),        // Pulse HIGH to read a byte from the bus
-        .rx_valid(rx_valid),            // Pulses HIGH when rx_data is ready
+        .rx_data(rx_data),                          // Data received
+        .trigger_rx(trigger_rx),                    // Pulse HIGH to trigger a read operation
+        .rx_valid(rx_valid),                        // Pulses HIGH when rx_data is valid
 
-        .finish_transaction(finish_transaction),    // 1 = Send NACK (if reading) and send STOP
-        .driver_idle(driver_idle),
+        .finish_transaction(finish_transaction),    // Set HIGH before the ACK of the last byte we want to receive + signal triggers the STOP sequence
+        .driver_waiting(driver_waiting),            // Driver is waiting for command
+        .driver_finished_tranaction(driver_finished_tranaction),    // Driver has finished a sequence of transaction commands and is now in the idle state
 
         // Sensor
-        .bno_interrupt(bno_interrupt)
+        .bno_interrupt(bno_interrupt)               // Interrupt from the BNO sensor
 );
 
     always @(posedge sys_clk or posedge sys_rst)

@@ -19,7 +19,7 @@ module TestBench;
     wire       rx_valid;
 
     wire       finish_transaction;
-    wire       driver_idle;
+    wire       driver_waiting;
 
     wire i2c_scl;
     wire i2c_sda;
@@ -50,7 +50,8 @@ module TestBench;
         .rx_valid(rx_valid),            // Pulses HIGH when rx_data is ready
 
         .finish_transaction(finish_transaction),    // 1 = Send NACK (if reading) and send STOP
-        .driver_idle(driver_idle)
+        .driver_waiting(driver_waiting),
+        .driver_finished_tranaction(driver_finished_tranaction)
     );
 
 // -----------------------------------------------------
@@ -75,7 +76,8 @@ module TestBench;
         .rx_valid(rx_valid),            // Pulses HIGH when rx_data is ready
 
         .finish_transaction(finish_transaction),    // 1 = Send NACK (if reading) and send STOP
-        .driver_idle(driver_idle),
+        .driver_waiting(driver_waiting),
+        .driver_finished_tranaction(driver_finished_tranaction),
 
         // Sensor
         .bno_interrupt(bno_interrupt)

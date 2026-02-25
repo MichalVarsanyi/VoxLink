@@ -1,4 +1,4 @@
-# Wed Feb 25 10:22:38 2026
+# Wed Feb 25 13:49:09 2026
 
 Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -23,11 +23,8 @@ Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00
 
 Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 104MB)
 
-@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":39:4:39:9|Removing sequential instance VoxLink_BNO_Driver_Inst.tx_data_1[7] because it is equivalent to instance VoxLink_BNO_Driver_Inst.tx_data_1[4]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":39:4:39:9|Removing sequential instance VoxLink_BNO_Driver_Inst.tx_data_1[4] because it is equivalent to instance VoxLink_BNO_Driver_Inst.tx_data_1[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @N: MO111 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":28:16:28:23|Tristate driver bno_rstn (in view: work.Top(verilog)) on net bno_rstn (in view: work.Top(verilog)) has its enable tied to GND.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":485:4:485:9|Removing sequential instance tx_done (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":160:4:160:9|Removing sequential instance rx_data[7:0] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data[7:0] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 
 ICG Latch Removal Summary:
 Number of ICG latches removed:	0
@@ -46,7 +43,7 @@ Clock                            Frequency     Period        Type               
 --------------------------------------------------------------------------------------------------------------------
 Top|sys_clkout_derived_clock     100.5 MHz     9.950         derived (from clk_12mhz)     default_clkgroup     0    
 clk_12mhz                        12.0 MHz      83.333        declared                     default_clkgroup     0    
-sys_clk                          100.5 MHz     9.950         declared                     default_clkgroup     65   
+sys_clk                          100.5 MHz     9.950         declared                     default_clkgroup     259  
 ====================================================================================================================
 
 Finished Pre Mapping Phase.
@@ -65,23 +62,22 @@ original code -> new code
    0101 -> 00100000
    0110 -> 01000000
    0111 -> 10000000
-Encoding state machine bno_state[3:0] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3(verilog))
+Encoding state machine bno_state[5:0] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog))
 original code -> new code
-   0000 -> 00
-   0001 -> 01
-   0010 -> 10
-   0011 -> 11
-@N: MO225 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":39:4:39:9|There are no possible illegal states for state machine bno_state[3:0] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3(verilog)); safe FSM implementation is not required.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":485:4:485:9|Removing sequential instance tx_shift[1] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":160:4:160:9|Removing sequential instance rx_data_r[7] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":485:4:485:9|Removing sequential instance tx_shift[0] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":160:4:160:9|Removing sequential instance rx_data_r[6] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":160:4:160:9|Removing sequential instance rx_data_r[5] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":160:4:160:9|Removing sequential instance rx_data_r[4] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":160:4:160:9|Removing sequential instance rx_data_r[3] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":160:4:160:9|Removing sequential instance rx_data_r[2] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":160:4:160:9|Removing sequential instance rx_data_r[1] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":160:4:160:9|Removing sequential instance rx_data_r[0] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+   0000 -> 000001
+   0001 -> 000010
+   0010 -> 000100
+   0011 -> 001000
+   0100 -> 010000
+   0101 -> 100000
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[7] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[6] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[5] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[4] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[3] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[2] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[1] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[0] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 None
 None
 
@@ -89,9 +85,9 @@ Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:0
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 49MB peak: 134MB)
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 48MB peak: 134MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed Feb 25 10:22:38 2026
+# Wed Feb 25 13:49:09 2026
 
 ###########################################################]

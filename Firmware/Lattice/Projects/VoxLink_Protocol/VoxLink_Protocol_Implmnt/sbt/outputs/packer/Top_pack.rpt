@@ -6,7 +6,7 @@
 
 * Build Date:         Dec  9 2020 17:31:51
 
-* File Generated:     Feb 25 2026 10:23:15
+* File Generated:     Feb 25 2026 13:49:26
 
 * Purpose:            General info of design implementation
 
@@ -27,11 +27,11 @@ Device Info:
 
 Design statistics:
 ------------------
-    FFs:                  51
-    LUTs:                 103
+    FFs:                  106
+    LUTs:                 171
     RAMs:                 0
     IOBs:                 6
-    GBs:                  3
+    GBs:                  4
     PLLs:                 1
     Warm Boots:           0
     I2C_FIFOs:            0
@@ -46,12 +46,12 @@ Design statistics:
 
 Logic Resource Utilization:
 ---------------------------
-    Total Logic Cells: 104/1248
-        Combinational Logic Cells: 53       out of   1248      4.24679%
-        Sequential Logic Cells:    51       out of   1248      4.08654%
-        Logic Tiles:               24       out of   156       15.3846%
+    Total Logic Cells: 173/1248
+        Combinational Logic Cells: 67       out of   1248      5.36859%
+        Sequential Logic Cells:    106      out of   1248      8.49359%
+        Logic Tiles:               38       out of   156       24.359%
     Registers: 
-        Logic Registers:           51       out of   1248      4.08654%
+        Logic Registers:           106      out of   1248      8.49359%
         IO Registers:              0        out of   240       0
     Block RAMs:                    0        out of   14        0%
     Warm Boots:                    0        out of   1         0%
@@ -68,7 +68,7 @@ Logic Resource Utilization:
         Input Pins:                2        out of   26        7.69231%
         Output Pins:               3        out of   26        11.5385%
         InOut Pins:                1        out of   26        3.84615%
-    Global Buffers:                3        out of   8         37.5%
+    Global Buffers:                4        out of   8         50%
     PLLs:                          1        out of   1         100%
 
 IO Bank Utilization:
@@ -100,8 +100,9 @@ Detailed I/O Info:
 
 Detailed Global Buffer Info:
 ----------------------------
-    Buffer Number  IO Bank  Driven By  Fanout  Signal Name     
-    -------------  -------  ---------  ------  -----------     
-    4              0                   51      locked_i_g      
-    5              2                   1       clk_12mhz_bufg  
-    3              0                   51      sys_clk         
+    Buffer Number  IO Bank  Driven By  Fanout  Signal Name                                                
+    -------------  -------  ---------  ------  -----------                                                
+    6              2                   106     sys_clk                                                    
+    5              2                   38      VoxLink_BNO_Driver_Inst.subscription_shift_reg_0_sqmuxa_g  
+    3              0                   1       clk_12mhz_bufg                                             
+    4              0                   106     locked_i_g                                                 

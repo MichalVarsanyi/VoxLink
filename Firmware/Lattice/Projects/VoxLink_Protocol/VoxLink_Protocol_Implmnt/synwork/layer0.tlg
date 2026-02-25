@@ -23,8 +23,8 @@ Selecting top level module Top
 	I2C_STOP_STATE=4'b0111
    Generated name = VoxLink_I2C_Driver_Z1
 
-@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_I2C_Driver.v":50:27:50:27|Input D_OUT_1 on instance SB_GB_IO_inst_sda is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_I2C_Driver.v":69:27:69:27|Input D_OUT_1 on instance SB_GB_IO_inst_scl is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_I2C_Driver.v":51:27:51:27|Input D_OUT_1 on instance SB_GB_IO_inst_sda is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_I2C_Driver.v":70:27:70:27|Input D_OUT_1 on instance SB_GB_IO_inst_scl is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
 @N: CG364 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_BNO_Driver.v":1:7:1:24|Synthesizing module VoxLink_BNO_Driver in library work.
 
 	BNO_ADDRESS=7'b1001011
@@ -32,13 +32,12 @@ Selecting top level module Top
 	BNO_ADVERTISEMENT_ADDR_STATE=4'b0001
 	BNO_ADVERTISEMENT_WAITING_STATE=4'b0010
 	BNO_ADVERTISEMENT_READ_STATE=4'b0011
-   Generated name = VoxLink_BNO_Driver_75_0_1_2_3
+	BNO_SUBSCRIBE_WRITE_STATE=4'b0100
+	BNO_SUBSCRIBE_STOP_STATE=4'b0101
+	BNO_RUNNING_STATE=4'b0110
+	BNO_SUBSCRIPTION_PAYLOAD=176'b10010110000101010000000000000010000000001111110100000101000000000000000000000000110001000000100100000000000000000000000000000000000000000000000000000000000000000000000000000000
+   Generated name = VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2
 
-@W: CL190 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_BNO_Driver.v":39:4:39:9|Optimizing register bit tx_data[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_BNO_Driver.v":39:4:39:9|Optimizing register bit tx_data[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_BNO_Driver.v":39:4:39:9|Optimizing register bit tx_data[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL279 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_BNO_Driver.v":39:4:39:9|Pruning register bits 6 to 5 of tx_data[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@W: CL260 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_BNO_Driver.v":39:4:39:9|Pruning register bit 3 of tx_data[7:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 @N: CG364 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":21:7:21:9|Synthesizing module Top in library work.
 
 @W: CG781 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":75:20:75:20|Input EXTFEEDBACK on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
@@ -54,18 +53,18 @@ Selecting top level module Top
 @W: CL156 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":50:20:50:27|*Input led_rx_r to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
 @W: CL156 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":51:20:51:27|*Input led_tx_r to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
 @W: CL157 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":28:16:28:23|*Output bno_rstn has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
-@N: CL201 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_BNO_Driver.v":39:4:39:9|Trying to extract state machine for register bno_state.
+@N: CL201 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_BNO_Driver.v":76:4:76:9|Trying to extract state machine for register bno_state.
 Extracted state machine for register bno_state
-State machine has 4 reachable states with original encodings of:
+State machine has 6 reachable states with original encodings of:
    0000
    0001
    0010
    0011
-@W: CL279 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_BNO_Driver.v":39:4:39:9|Pruning register bits 2 to 1 of tx_data[2:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@N: CL159 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_BNO_Driver.v":11:24:11:30|Input tx_done is unused.
+   0100
+   0101
 @N: CL159 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_BNO_Driver.v":12:24:12:34|Input target_nack is unused.
 @N: CL159 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_BNO_Driver.v":14:24:14:30|Input rx_data is unused.
-@N: CL201 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_I2C_Driver.v":160:4:160:9|Trying to extract state machine for register i2c_state.
+@N: CL201 :"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_I2C_Driver.v":161:4:161:9|Trying to extract state machine for register i2c_state.
 Extracted state machine for register i2c_state
 State machine has 8 reachable states with original encodings of:
    0000

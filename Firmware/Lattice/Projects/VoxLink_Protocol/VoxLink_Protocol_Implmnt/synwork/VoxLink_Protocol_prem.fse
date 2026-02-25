@@ -1,32 +1,36 @@
 
-fsm_encoding {616041602} onehot
+fsm_encoding {616141612} onehot
 
-fsm_state_encoding {616041602} I2C_IDLE_STATE {00000001}
+fsm_state_encoding {616141612} I2C_IDLE_STATE {00000001}
 
-fsm_state_encoding {616041602} I2C_START_STATE {00000010}
+fsm_state_encoding {616141612} I2C_START_STATE {00000010}
 
-fsm_state_encoding {616041602} I2C_WRITE_STATE {00000100}
+fsm_state_encoding {616141612} I2C_WRITE_STATE {00000100}
 
-fsm_state_encoding {616041602} I2C_READ_STATE {00001000}
+fsm_state_encoding {616141612} I2C_READ_STATE {00001000}
 
-fsm_state_encoding {616041602} I2C_ACK_RECEIVE_STATE {00010000}
+fsm_state_encoding {616141612} I2C_ACK_RECEIVE_STATE {00010000}
 
-fsm_state_encoding {616041602} I2C_ACK_GENERATE_STATE {00100000}
+fsm_state_encoding {616141612} I2C_ACK_GENERATE_STATE {00100000}
 
-fsm_state_encoding {616041602} I2C_WAIT_STATE {01000000}
+fsm_state_encoding {616141612} I2C_WAIT_STATE {01000000}
 
-fsm_state_encoding {616041602} I2C_STOP_STATE {10000000}
+fsm_state_encoding {616141612} I2C_STOP_STATE {10000000}
 
-fsm_registers {616041602} {i2c_state[7]}  {i2c_state[6]}  {i2c_state[5]}  {i2c_state[4]}  {i2c_state[3]}  {i2c_state[2]}  {i2c_state[1]}  {i2c_state[0]} 
+fsm_registers {616141612} {i2c_state[7]}  {i2c_state[6]}  {i2c_state[5]}  {i2c_state[4]}  {i2c_state[3]}  {i2c_state[2]}  {i2c_state[1]}  {i2c_state[0]} 
 
-fsm_encoding {7394391} sequential
+fsm_encoding {7764761} onehot
 
-fsm_state_encoding {7394391} BNO_INITIAL_IDLE_STATE {00}
+fsm_state_encoding {7764761} BNO_INITIAL_IDLE_STATE {000001}
 
-fsm_state_encoding {7394391} BNO_ADVERTISEMENT_ADDR_STATE {01}
+fsm_state_encoding {7764761} BNO_ADVERTISEMENT_ADDR_STATE {000010}
 
-fsm_state_encoding {7394391} BNO_ADVERTISEMENT_WAITING_STATE {10}
+fsm_state_encoding {7764761} BNO_ADVERTISEMENT_WAITING_STATE {000100}
 
-fsm_state_encoding {7394391} BNO_ADVERTISEMENT_READ_STATE {11}
+fsm_state_encoding {7764761} BNO_ADVERTISEMENT_READ_STATE {001000}
 
-fsm_registers {7394391} {bno_state[1]}  {bno_state[0]} 
+fsm_state_encoding {7764761} BNO_SUBSCRIBE_WRITE_STATE {010000}
+
+fsm_state_encoding {7764761} 0101 {100000}
+
+fsm_registers {7764761} {bno_state[5]}  {bno_state[4]}  {bno_state[3]}  {bno_state[2]}  {bno_state[1]}  {bno_state[0]} 

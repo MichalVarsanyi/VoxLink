@@ -1,25 +1,26 @@
 module VoxLink_BNO_Driver #(
-    parameter BNO_ADDRESS = 7'h4B
+    parameter BNO_ADDRESS = 7'h4B                   // Check the SA0 pin of the BNO086 in the schematic diagram
 )(
     // General
     input sys_clk,
     input sys_rst,
     
     // Control Signals
-    output reg [7:0]    tx_data,            // Data to send (replaces write_data)
-    output reg          trigger_tx,         // Pulse HIGH to write the tx_data byte
-    input               tx_done,            // Pulses HIGH when writing the byte is complete
-    input               target_nack,        // 1 = The sensor ignored us! (Did not ACK our write) Blasphemy!
+    output reg [7:0]    tx_data,                    // Data to send
+    output reg          trigger_tx,                 // Pulse HIGH to write the tx_data byte
+    input               tx_done,                    // Pulses HIGH when writing the byte is complete
+    input               target_nack,                // HIGH = The sensor ignored us! (Did not ACK our write) Blasphemy!
 
-    input [7:0]         rx_data,            // Data received (replaces read_data)
-    output reg          trigger_rx,         // Pulse HIGH to read a byte from the bus
-    input               rx_valid,           // Pulses HIGH when rx_data is ready
+    input [7:0]         rx_data,                    // Data received
+    output reg          trigger_rx,                 // Pulse HIGH to trigger a read operation
+    input               rx_valid,                   // Pulses HIGH when rx_data is valid
 
-    output reg          finish_transaction, // 1 = Send NACK (if reading) and send STOP
-    input               driver_idle,
+    output reg          finish_transaction,         // Set HIGH before the ACK of the last byte we want to receive + signal triggers the STOP sequence
+    input               driver_waiting,             // Driver is waiting for command
+    input               driver_finished_tranaction, // Driver has finished a sequence of transaction commands and is now in the idle state
 
     // Sensor
-    input               bno_interrupt
+    input               bno_interrupt               // Interrupt from the BNO sensor
 );
 
     // ---------------------------------------------------------
@@ -27,13 +28,48 @@ module VoxLink_BNO_Driver #(
     // ---------------------------------------------------------
 
     reg [3:0]   bno_state;
+    // Advertisement
     localparam  BNO_INITIAL_IDLE_STATE                  = 4'd0;
     localparam  BNO_ADVERTISEMENT_ADDR_STATE            = 4'd1;
     localparam  BNO_ADVERTISEMENT_WAITING_STATE         = 4'd2;
     localparam  BNO_ADVERTISEMENT_READ_STATE            = 4'd3;
+    // Subscription
+    localparam  BNO_SUBSCRIBE_WRITE_STATE               = 4'd4;
+    localparam  BNO_SUBSCRIBE_STOP_STATE                = 4'd5;
+    localparam  BNO_RUNNING_STATE                       = 4'd6;
 
+    reg [4:0] byte_counter;
 
-    reg [2:0] byte_counter;
+    // ---------------------------------------------------------
+    // Subscribing to Measurements Byte Sequence
+    // ---------------------------------------------------------
+
+    reg [175:0] subscription_shift_reg;
+
+    localparam [175:0] BNO_SUBSCRIPTION_PAYLOAD = {
+        {BNO_ADDRESS, 1'b0},  //  0: I2C Address + Write bit (MSB)
+        8'h15,                //  1: LSB Length (21 bytes total)
+        8'h00,                //  2: MSB Length
+        8'h02,                //  3: Channel 2 (SHTP Control)
+        8'h00,                //  4: Sequence
+        8'hFD,                //  5: Report ID: Set Feature Command
+        8'h05,                //  6: Feature ID: Rotation Vector (0x05)
+        8'h00,                //  7: Feature Flags
+        8'h00,                //  8: Change Sensitivity LSB
+        8'h00,                //  9: Change Sensitivity MSB
+        8'hC4,                // 10: Report Interval LSB (0x09C4 = 2500us = 400Hz)
+        8'h09,                // 11: Report Interval 
+        8'h00,                // 12: Report Interval 
+        8'h00,                // 13: Report Interval MSB
+        8'h00,                // 14: Batch Interval LSB
+        8'h00,                // 15: Batch Interval
+        8'h00,                // 16: Batch Interval
+        8'h00,                // 17: Batch Interval MSB
+        8'h00,                // 18: Sensor Specific
+        8'h00,                // 19: Reserved
+        8'h00,                // 20: Reserved
+        8'h00                 // 21: Reserved (LSB)
+    };
 
 
     always @(posedge sys_clk or posedge sys_rst)
@@ -47,7 +83,9 @@ module VoxLink_BNO_Driver #(
             finish_transaction      <= 1'b0;
 
             // Internal Counters
-            byte_counter            <= {3{1'b0}};
+            byte_counter            <= {5{1'b0}};
+
+            subscription_shift_reg  <= BNO_SUBSCRIPTION_PAYLOAD;
 
             // Default FSM State
             bno_state               <= BNO_INITIAL_IDLE_STATE;
@@ -55,10 +93,15 @@ module VoxLink_BNO_Driver #(
         else
         begin
             case(bno_state)
+
+            // ---------------------------------------------------------
+            // Reading the Advertisement
+            // ---------------------------------------------------------
+
                 // We wait for the I2C driver and the BNO sensor to wake up
                 BNO_INITIAL_IDLE_STATE:
                 begin
-                    if (driver_idle == 1 && bno_interrupt == 0)
+                    if (driver_waiting == 1 && bno_interrupt == 0)
                         bno_state <= BNO_ADVERTISEMENT_ADDR_STATE;
                 end
 
@@ -70,17 +113,17 @@ module VoxLink_BNO_Driver #(
                     trigger_tx          <= 1'b1;
                     finish_transaction  <= 1'b0;
 
-                    if (driver_idle == 0)
+                    if (driver_waiting == 0)
                     begin
                         trigger_tx      <= 1'b0;
-                        byte_counter    <= {3{1'b0}};
+                        byte_counter    <= {5{1'b0}};
                         bno_state       <= BNO_ADVERTISEMENT_WAITING_STATE;
                     end
                 end
 
                 BNO_ADVERTISEMENT_WAITING_STATE:
                 begin
-                    if (driver_idle == 1)
+                    if (driver_waiting == 1)
                         bno_state <= BNO_ADVERTISEMENT_READ_STATE;
                 end
 
@@ -95,13 +138,88 @@ module VoxLink_BNO_Driver #(
                     if (byte_counter == 4)
                     begin
                         trigger_rx  <= 1'b0;
-                        bno_state <= BNO_ADVERTISEMENT_READ_STATE;
+                        if (driver_finished_tranaction == 1)
+                        begin
+                            byte_counter    <= {5{1'b0}};
+                            bno_state <= BNO_SUBSCRIBE_WRITE_STATE;
+                        end
                     end
 
                     if (byte_counter == 3)
                         finish_transaction  <= 1'b1;      
                 end
+
+                // ---------------------------------------------------------
+                // Subscribing to Measurements
+                // ---------------------------------------------------------
+
+                BNO_SUBSCRIBE_WRITE_STATE:
+                begin
+                    if (tx_done == 1)
+                    begin
+                        subscription_shift_reg <= {subscription_shift_reg[167:0], 8'd0};
+                        byte_counter           <= byte_counter + 1;
+                    end
+
+                    if (byte_counter == 21)
+                    begin
+                        finish_transaction <= 1'b1;
+                        trigger_tx <= 1'b0;
+                        if (driver_finished_tranaction == 1)
+                            bno_state <= BNO_SUBSCRIBE_STOP_STATE;
+                    end
+                    else
+                    begin
+                        trigger_tx <= 1'b1;
+                        tx_data    <= subscription_shift_reg[175:168];
+                    end
+                end
+
             endcase
         end
     end
+
+    // ---------------------------------------------------------
+    // Excursion in the Museum of Yucky Verilog Code
+    // ---------------------------------------------------------
+
+    // reg [7:0] sub_byte;
+    // always @(posedge sys_clk or posedge sys_rst)
+    // if (sys_rst)
+    // begin
+    //     sub_byte <= {8{1'b0}};
+    // end
+    // else
+    // begin
+    //     case(byte_counter)
+    //         0:  sub_byte <= {BNO_ADDRESS, 1'b0}; // Start with the Address + Write bit
+    //         1:  sub_byte <= 8'd21; // LSB Length (21 bytes total)
+    //         2:  sub_byte <= 8'd00; // MSB Length
+    //         3:  sub_byte <= 8'd02; // Channel 2 (SHTP Control)
+    //         4:  sub_byte <= 8'd00; // Sequence
+    //         5:  sub_byte <= 8'hFD; // Report ID: Set Feature Command
+    //         6:  sub_byte <= 8'd05; // Feature ID: Rotation Vector (0x05)
+    //         7:  sub_byte <= 8'h00; // Feature Flags
+    //         8:  sub_byte <= 8'h00; // Change Sensitivity LSB
+    //         9:  sub_byte <= 8'h00; // Change Sensitivity MSB
+    //         10: sub_byte <= 8'hC4; // Report Interval LSB (0x09C4 = 2,500us)
+    //         11: sub_byte <= 8'h09; // Report Interval 
+    //         12: sub_byte <= 8'h00; // Report Interval 
+    //         13: sub_byte <= 8'h00; // Report Interval MSB
+    //         14: sub_byte <= 8'h00; // Batch Interval LSB
+    //         15: sub_byte <= 8'h00;
+    //         16: sub_byte <= 8'h00;
+    //         17: sub_byte <= 8'h00; // Batch Interval MSB
+    //         18: sub_byte <= 8'h00; // Sensor Specific
+    //         19: sub_byte <= 8'h00;
+    //         20: sub_byte <= 8'h00;
+    //         21: sub_byte <= 8'h00; 
+    //         default: sub_byte <= 8'h00;
+    //     endcase
+    // end
+
+    // Heyy kids! Do you know why is this code STINKY and YUCKY?
+    // That's right! It uses a scary M U L T I P L E X E R
+    // We don't want monstrous MUXes in our design!
+    // We will implement soft and silky smooth shift register <3
 endmodule

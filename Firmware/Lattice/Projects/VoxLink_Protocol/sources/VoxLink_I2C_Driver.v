@@ -11,17 +11,18 @@ module VoxLink_I2C_Driver #(
     inout i2c_sda,
     
     // Control Signals
-    input  [7:0]        tx_data,            // Data to send (replaces write_data)
-    input               trigger_tx,         // Pulse HIGH to write the tx_data byte
-    output reg          tx_done,            // Pulses HIGH when writing the byte is complete
-    output reg          target_nack,        // 1 = The sensor ignored us! (Did not ACK our write) Blasphemy!
+    input  [7:0]        tx_data,                    // Data to send
+    input               trigger_tx,                 // Pulse HIGH to write the tx_data byte
+    output reg          tx_done,                    // Pulses HIGH when writing the byte is complete
+    output reg          target_nack,                // HIGH = The sensor ignored us! (Did not ACK our write) Blasphemy!
 
-    output reg [7:0]    rx_data,            // Data received (replaces read_data)
-    input               trigger_rx,         // Pulse HIGH to read a byte from the bus
-    output reg          rx_valid,           // Pulses HIGH when rx_data is ready
+    output reg [7:0]    rx_data,                    // Data received
+    input               trigger_rx,                 // Pulse HIGH to trigger a read operation
+    output reg          rx_valid,                   // Pulses HIGH when rx_data is valid
 
-    input               finish_transaction, // 1 = Send NACK (if reading) and send STOP
-    output reg          driver_idle
+    input               finish_transaction,         // Set HIGH before the ACK of the last byte we want to receive + signal triggers the STOP sequence
+    output reg          driver_waiting,             // Driver is waiting for command
+    output reg          driver_finished_tranaction  // Driver has finished a sequence of transaction commands and is now in the idle state
 
 
 );
@@ -170,13 +171,14 @@ module VoxLink_I2C_Driver #(
             bit_counter  <= {3{1'b0}};
 
             // Control Signals
-            rx_data_r   <= {8{1'b0}};
-            rx_data     <= {8{1'b0}};
-            int_tx_done     <= 1'b0;
-            target_nack     <= 1'b0;
-            int_rx_valid    <= 1'b0;
-            driver_idle <= 1'b0;
-            tx_data_r   <= {8{1'b0}};
+            rx_data_r                   <= {8{1'b0}};
+            rx_data                     <= {8{1'b0}};
+            int_tx_done                 <= 1'b0;
+            target_nack                 <= 1'b0;
+            int_rx_valid                <= 1'b0;
+            driver_waiting              <= 1'b0;
+            tx_data_r                   <= {8{1'b0}};
+            driver_finished_tranaction  <= 1'b0;
 
             // Default FSM State
             i2c_state <= I2C_IDLE_STATE;
@@ -196,6 +198,7 @@ module VoxLink_I2C_Driver #(
                         // Set Flags
                         int_tx_done      <= 1'b0;
                         int_rx_valid     <= 1'b0;
+                        driver_finished_tranaction <= 1'b1;
 
                         // Drive Output
                         int_scl <= 1'b1;
@@ -204,11 +207,12 @@ module VoxLink_I2C_Driver #(
                         // If instructed to TX, claim the bus with a START condition
                         if (trigger_tx == 1'b1)
                         begin
-                            driver_idle  <= 1'b0;
-                            i2c_state <= I2C_START_STATE;
+                            driver_waiting              <= 1'b0;
+                            driver_finished_tranaction  <= 1'b0;
+                            i2c_state                   <= I2C_START_STATE;
                         end
                         else
-                            driver_idle  <= 1'b1;
+                            driver_waiting  <= 1'b1;
                     end
 
                     // Sending the starting sequence
@@ -336,7 +340,7 @@ module VoxLink_I2C_Driver #(
 
                             // Set the Output Flag
                             int_tx_done         <= 1'b1;
-                            driver_idle     <= 1'b1;
+                            driver_waiting     <= 1'b1;
 
                             // Enter WAIT State
                             i2c_state       <= I2C_WAIT_STATE;
@@ -385,7 +389,7 @@ module VoxLink_I2C_Driver #(
                             // We have a byte!
                             int_rx_valid    <= 1'b1;
                             rx_data         <= rx_data_r;
-                            driver_idle     <= 1'b1;
+                            driver_waiting     <= 1'b1;
 
                             i2c_state       <= I2C_WAIT_STATE;
                         end
@@ -412,18 +416,18 @@ module VoxLink_I2C_Driver #(
                         // Wait for Protocol Controller's next command
                         if (trigger_tx == 1'b1)
                         begin
-                            driver_idle   <= 1'b0;
+                            driver_waiting   <= 1'b0;
                             tx_data_r <= tx_data;
                             i2c_state <= I2C_WRITE_STATE;
                         end
                         else if (trigger_rx == 1'b1)
                         begin
-                            driver_idle   <= 1'b0;
+                            driver_waiting   <= 1'b0;
                             i2c_state <= I2C_READ_STATE;
                         end
                         else if (finish_transaction == 1'b1)
                         begin
-                            driver_idle   <= 1'b0;
+                            driver_waiting   <= 1'b0;
                             i2c_state <= I2C_STOP_STATE;
                         end
                     end
@@ -463,7 +467,7 @@ module VoxLink_I2C_Driver #(
                             bit_counter  <= {3{1'b0}};
 
                             // Set Flags
-                            driver_idle   <= 1'b1;
+                            driver_waiting   <= 1'b1;
 
                             i2c_state    <= I2C_IDLE_STATE;
                         end
