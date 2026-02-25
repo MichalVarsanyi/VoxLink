@@ -310,3 +310,22 @@ To program the device, download the Diamond Programmer from Lattice and set the 
 Here is a video fo a blink sketch I programmed in Verilog to verify the functionality :))
 
 ![image](images/fpga_blink.gif)
+
+### HDL Development
+Here is a comprehensive HDL development log of the completed Verilog blocks:
+
+- **Top Entity**
+   - **PLL and GBuf**
+- **I2C Driver**
+   - **Inout primitive instantiation**
+   - **TX**
+   - **RX**
+- **BNO Driver**
+   - **Advertisement**
+   - **Subscribe**
+   - *Read*
+- *VoxLink Packet*
+
+![image](images/I2C_Advertisement.png)
+
+Image of the BNO086 sensor advertisement packet. SDA line is in green, SCL in yelow, and blue indicates the last byte of interest.
