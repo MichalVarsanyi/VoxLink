@@ -1,0 +1,9 @@
+OUTPUT led_io 	 location (2, 15, 0) 	 A2 	 
+OUTPUT vox_clk_p 	 location (6, 0, 0) 	 E2 	 
+OUTPUT led_tx 	 location (3, 15, 0) 	 A1 	 
+OUTPUT led_rx 	 location (2, 15, 1) 	 B1 	 
+INOUT i2c_scl 	 location (6, 15, 1) 	 C6 	 SB_LVCMOS
+INPUT  clk_12mhz 	 location (3, 0, 1) 	 F2 	 
+OUTPUT bno_rstn 	 location (7, 15, 0) 	 B6 	 
+INPUT  bno_interrupt 	 location (5, 15, 0) 	 A3 	 
+INOUT i2c_sda 	 location (9, 0, 0) 	 D6 	 SB_LVCMOS

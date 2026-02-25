@@ -1,0 +1,19 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MO111 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":28:16:28:23|Tristate driver bno_rstn (in view: work.Top(verilog)) on net bno_rstn (in view: work.Top(verilog)) has its enable tied to GND.
+@N: MT204 |Auto Constrain mode is disabled because clocks are defined in the SDC file
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":160:4:160:9|Removing sequential instance int_tx_done (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":160:4:160:9|Removing sequential instance target_nack (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":160:4:160:9|Removing sequential instance rx_data_r[7:0] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":485:4:485:9|Removing sequential instance tx_shift[1:0] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: MO225 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":39:4:39:9|There are no possible illegal states for state machine bno_state[3:0] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3(verilog)); safe FSM implementation is not required.
+@N: FX1017 :|SB_GB inserted on the net locked_i.
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+@N: FX1056 |Writing EDF file: C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLink_Protocol_Implmnt\VoxLink_Protocol.edf
+@N: MT615 |Found clock clk_12mhz with period 83.33ns 
+@N: MT615 |Found clock Top|sys_clkout_derived_clock with period 9.95ns 
+@N: MT615 |Found clock sys_clk with period 9.95ns 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+@N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack

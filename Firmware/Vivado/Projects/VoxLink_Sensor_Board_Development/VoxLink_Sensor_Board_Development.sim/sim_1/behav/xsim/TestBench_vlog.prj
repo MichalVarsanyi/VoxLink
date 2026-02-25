@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../../Lattice/Projects/VoxLink_Protocol/sources/VoxLink_BNO_Driver.v" \
+"../../../../../../../Lattice/Projects/VoxLink_Protocol/sources/VoxLink_I2C_Driver.v" \
+"../../../../../../Source/Simulation/VoxLink_Sensor_Board_Development_TB.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

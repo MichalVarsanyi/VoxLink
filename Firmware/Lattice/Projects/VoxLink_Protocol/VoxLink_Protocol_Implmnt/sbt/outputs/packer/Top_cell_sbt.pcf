@@ -1,0 +1,161 @@
+ble_pack u_pll_RNISDD6_LC_1_1_0 { u_pll_RNISDD6 }
+clb_pack LT_1_1 { u_pll_RNISDD6_LC_1_1_0 }
+set_location LT_1_1 1 1
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNO_3_2_LC_2_7_0 { VoxLink_I2C_Driver_inst.i2c_state_RNO_3[2] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNO_1_2_LC_2_7_1 { VoxLink_I2C_Driver_inst.i2c_state_RNO_1[2] }
+ble_pack CONSTANT_ONE_LUT4_LC_2_7_4 { CONSTANT_ONE_LUT4 }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNO_2_2_LC_2_7_5 { VoxLink_I2C_Driver_inst.i2c_state_RNO_2[2] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNO_0_2_LC_2_7_6 { VoxLink_I2C_Driver_inst.i2c_state_RNO_0[2] }
+clb_pack LT_2_7 { VoxLink_I2C_Driver_inst.i2c_state_RNO_3_2_LC_2_7_0, VoxLink_I2C_Driver_inst.i2c_state_RNO_1_2_LC_2_7_1, CONSTANT_ONE_LUT4_LC_2_7_4, VoxLink_I2C_Driver_inst.i2c_state_RNO_2_2_LC_2_7_5, VoxLink_I2C_Driver_inst.i2c_state_RNO_0_2_LC_2_7_6 }
+set_location LT_2_7 2 7
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNO_0_1_LC_2_9_4 { VoxLink_I2C_Driver_inst.i2c_state_RNO_0[1] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_1_LC_2_9_5 { VoxLink_I2C_Driver_inst.i2c_state_RNO[1], VoxLink_I2C_Driver_inst.i2c_state[1] }
+ble_pack VoxLink_I2C_Driver_inst.SB_GB_IO_inst_scl_RNI4RMM_LC_2_9_6 { VoxLink_I2C_Driver_inst.SB_GB_IO_inst_scl_RNI4RMM }
+clb_pack LT_2_9 { VoxLink_I2C_Driver_inst.i2c_state_RNO_0_1_LC_2_9_4, VoxLink_I2C_Driver_inst.i2c_state_1_LC_2_9_5, VoxLink_I2C_Driver_inst.SB_GB_IO_inst_scl_RNI4RMM_LC_2_9_6 }
+set_location LT_2_9 2 9
+ble_pack VoxLink_I2C_Driver_inst.rx_shift_0_LC_4_5_0 { VoxLink_I2C_Driver_inst.rx_shift_0_THRU_LUT4_0, VoxLink_I2C_Driver_inst.rx_shift[0] }
+ble_pack VoxLink_I2C_Driver_inst.rx_shift_1_LC_4_5_1 { VoxLink_I2C_Driver_inst.rx_shift_1_THRU_LUT4_0, VoxLink_I2C_Driver_inst.rx_shift[1] }
+ble_pack VoxLink_I2C_Driver_inst.rx_valid_LC_4_5_5 { VoxLink_I2C_Driver_inst.rx_valid_RNO, VoxLink_I2C_Driver_inst.rx_valid }
+clb_pack LT_4_5 { VoxLink_I2C_Driver_inst.rx_shift_0_LC_4_5_0, VoxLink_I2C_Driver_inst.rx_shift_1_LC_4_5_1, VoxLink_I2C_Driver_inst.rx_valid_LC_4_5_5 }
+set_location LT_4_5 4 5
+ble_pack VoxLink_BNO_Driver_Inst.byte_counter_RNIUCJ41_0_LC_4_6_1 { VoxLink_BNO_Driver_Inst.byte_counter_RNIUCJ41[0] }
+ble_pack VoxLink_BNO_Driver_Inst.byte_counter_RNO_0_0_LC_4_6_4 { VoxLink_BNO_Driver_Inst.byte_counter_RNO_0[0] }
+clb_pack LT_4_6 { VoxLink_BNO_Driver_Inst.byte_counter_RNIUCJ41_0_LC_4_6_1, VoxLink_BNO_Driver_Inst.byte_counter_RNO_0_0_LC_4_6_4 }
+set_location LT_4_6 4 6
+ble_pack VoxLink_BNO_Driver_Inst.byte_counter_1_LC_4_7_1 { VoxLink_BNO_Driver_Inst.byte_counter_RNO[1], VoxLink_BNO_Driver_Inst.byte_counter[1] }
+ble_pack VoxLink_BNO_Driver_Inst.byte_counter_2_LC_4_7_2 { VoxLink_BNO_Driver_Inst.byte_counter_RNO[2], VoxLink_BNO_Driver_Inst.byte_counter[2] }
+ble_pack VoxLink_I2C_Driver_inst.driver_idle_RNO_2_LC_4_7_3 { VoxLink_I2C_Driver_inst.driver_idle_RNO_2 }
+ble_pack VoxLink_BNO_Driver_Inst.trigger_rx_RNO_0_LC_4_7_4 { VoxLink_BNO_Driver_Inst.trigger_rx_RNO_0 }
+ble_pack VoxLink_BNO_Driver_Inst.trigger_rx_LC_4_7_5 { VoxLink_BNO_Driver_Inst.trigger_rx_RNO, VoxLink_BNO_Driver_Inst.trigger_rx }
+ble_pack VoxLink_BNO_Driver_Inst.finish_transaction_RNO_0_LC_4_7_6 { VoxLink_BNO_Driver_Inst.finish_transaction_RNO_0 }
+ble_pack VoxLink_BNO_Driver_Inst.finish_transaction_LC_4_7_7 { VoxLink_BNO_Driver_Inst.finish_transaction_RNO, VoxLink_BNO_Driver_Inst.finish_transaction }
+clb_pack LT_4_7 { VoxLink_BNO_Driver_Inst.byte_counter_1_LC_4_7_1, VoxLink_BNO_Driver_Inst.byte_counter_2_LC_4_7_2, VoxLink_I2C_Driver_inst.driver_idle_RNO_2_LC_4_7_3, VoxLink_BNO_Driver_Inst.trigger_rx_RNO_0_LC_4_7_4, VoxLink_BNO_Driver_Inst.trigger_rx_LC_4_7_5, VoxLink_BNO_Driver_Inst.finish_transaction_RNO_0_LC_4_7_6, VoxLink_BNO_Driver_Inst.finish_transaction_LC_4_7_7 }
+set_location LT_4_7 4 7
+ble_pack VoxLink_BNO_Driver_Inst.byte_counter_0_LC_4_8_0 { VoxLink_BNO_Driver_Inst.byte_counter_RNO[0], VoxLink_BNO_Driver_Inst.byte_counter[0] }
+ble_pack VoxLink_BNO_Driver_Inst.bno_state_0_LC_4_8_2 { VoxLink_BNO_Driver_Inst.bno_state_ns_1_0_.N_5_i, VoxLink_BNO_Driver_Inst.bno_state[0] }
+ble_pack VoxLink_BNO_Driver_Inst.bno_state_1_LC_4_8_3 { VoxLink_BNO_Driver_Inst.bno_state_ns_1_0_.N_6_i, VoxLink_BNO_Driver_Inst.bno_state[1] }
+ble_pack VoxLink_BNO_Driver_Inst.bno_state_RNIKR3N_1_LC_4_8_4 { VoxLink_BNO_Driver_Inst.bno_state_RNIKR3N[1] }
+ble_pack VoxLink_BNO_Driver_Inst.trigger_tx_LC_4_8_6 { VoxLink_BNO_Driver_Inst.trigger_tx_RNO, VoxLink_BNO_Driver_Inst.trigger_tx }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNI8F6H_6_LC_4_8_7 { VoxLink_I2C_Driver_inst.i2c_state_RNI8F6H[6] }
+clb_pack LT_4_8 { VoxLink_BNO_Driver_Inst.byte_counter_0_LC_4_8_0, VoxLink_BNO_Driver_Inst.bno_state_0_LC_4_8_2, VoxLink_BNO_Driver_Inst.bno_state_1_LC_4_8_3, VoxLink_BNO_Driver_Inst.bno_state_RNIKR3N_1_LC_4_8_4, VoxLink_BNO_Driver_Inst.trigger_tx_LC_4_8_6, VoxLink_I2C_Driver_inst.i2c_state_RNI8F6H_6_LC_4_8_7 }
+set_location LT_4_8 4 8
+ble_pack VoxLink_I2C_Driver_inst.tick_counter_RNO_0_1_LC_4_9_0 { VoxLink_I2C_Driver_inst.tick_counter_RNO_0[1] }
+ble_pack VoxLink_I2C_Driver_inst.tick_counter_1_LC_4_9_1 { VoxLink_I2C_Driver_inst.tick_counter_RNO[1], VoxLink_I2C_Driver_inst.tick_counter[1] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNIFIIQ1_2_LC_4_9_2 { VoxLink_I2C_Driver_inst.i2c_state_RNIFIIQ1[2] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNILKU33_1_LC_4_9_3 { VoxLink_I2C_Driver_inst.i2c_state_RNILKU33[1] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_en_RNI1AAU3_LC_4_9_4 { VoxLink_I2C_Driver_inst.i2c_sck_en_RNI1AAU3 }
+ble_pack VoxLink_I2C_Driver_inst.driver_idle_RNO_1_LC_4_9_5 { VoxLink_I2C_Driver_inst.driver_idle_RNO_1 }
+ble_pack VoxLink_I2C_Driver_inst.tick_counter_RNITN9U1_1_LC_4_9_6 { VoxLink_I2C_Driver_inst.tick_counter_RNITN9U1[1] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_en_RNISQUM4_LC_4_9_7 { VoxLink_I2C_Driver_inst.i2c_sck_en_RNISQUM4 }
+clb_pack LT_4_9 { VoxLink_I2C_Driver_inst.tick_counter_RNO_0_1_LC_4_9_0, VoxLink_I2C_Driver_inst.tick_counter_1_LC_4_9_1, VoxLink_I2C_Driver_inst.i2c_state_RNIFIIQ1_2_LC_4_9_2, VoxLink_I2C_Driver_inst.i2c_state_RNILKU33_1_LC_4_9_3, VoxLink_I2C_Driver_inst.i2c_sck_en_RNI1AAU3_LC_4_9_4, VoxLink_I2C_Driver_inst.driver_idle_RNO_1_LC_4_9_5, VoxLink_I2C_Driver_inst.tick_counter_RNITN9U1_1_LC_4_9_6, VoxLink_I2C_Driver_inst.i2c_sck_en_RNISQUM4_LC_4_9_7 }
+set_location LT_4_9 4 9
+ble_pack VoxLink_I2C_Driver_inst.driver_idle_RNO_0_LC_4_10_0 { VoxLink_I2C_Driver_inst.driver_idle_RNO_0 }
+ble_pack VoxLink_I2C_Driver_inst.driver_idle_LC_4_10_1 { VoxLink_I2C_Driver_inst.driver_idle_RNO, VoxLink_I2C_Driver_inst.driver_idle }
+ble_pack VoxLink_I2C_Driver_inst.int_sda_RNO_3_LC_4_10_3 { VoxLink_I2C_Driver_inst.int_sda_RNO_3 }
+ble_pack VoxLink_I2C_Driver_inst.int_sda_RNO_1_LC_4_10_4 { VoxLink_I2C_Driver_inst.int_sda_RNO_1 }
+ble_pack VoxLink_I2C_Driver_inst.int_sda_RNO_0_LC_4_10_5 { VoxLink_I2C_Driver_inst.int_sda_RNO_0 }
+ble_pack VoxLink_I2C_Driver_inst.int_sda_LC_4_10_6 { VoxLink_I2C_Driver_inst.int_sda_RNO, VoxLink_I2C_Driver_inst.int_sda }
+clb_pack LT_4_10 { VoxLink_I2C_Driver_inst.driver_idle_RNO_0_LC_4_10_0, VoxLink_I2C_Driver_inst.driver_idle_LC_4_10_1, VoxLink_I2C_Driver_inst.int_sda_RNO_3_LC_4_10_3, VoxLink_I2C_Driver_inst.int_sda_RNO_1_LC_4_10_4, VoxLink_I2C_Driver_inst.int_sda_RNO_0_LC_4_10_5, VoxLink_I2C_Driver_inst.int_sda_LC_4_10_6 }
+set_location LT_4_10 4 10
+ble_pack VoxLink_I2C_Driver_inst.int_sda_RNO_2_LC_4_11_4 { VoxLink_I2C_Driver_inst.int_sda_RNO_2 }
+clb_pack LT_4_11 { VoxLink_I2C_Driver_inst.int_sda_RNO_2_LC_4_11_4 }
+set_location LT_4_11 4 11
+ble_pack VoxLink_I2C_Driver_inst.SB_GB_IO_inst_sda_RNO_LC_5_5_0 { VoxLink_I2C_Driver_inst.SB_GB_IO_inst_sda_RNO }
+clb_pack LT_5_5 { VoxLink_I2C_Driver_inst.SB_GB_IO_inst_sda_RNO_LC_5_5_0 }
+set_location LT_5_5 5 5
+ble_pack VoxLink_I2C_Driver_inst.int_rx_valid_LC_5_6_7 { VoxLink_I2C_Driver_inst.int_rx_valid_RNO, VoxLink_I2C_Driver_inst.int_rx_valid }
+clb_pack LT_5_6 { VoxLink_I2C_Driver_inst.int_rx_valid_LC_5_6_7 }
+set_location LT_5_6 5 6
+ble_pack VoxLink_I2C_Driver_inst.SB_GB_IO_inst_scl_RNIRF5B1_LC_5_7_0 { VoxLink_I2C_Driver_inst.SB_GB_IO_inst_scl_RNIRF5B1 }
+ble_pack VoxLink_I2C_Driver_inst.bit_counter_RNIAQ6I2_2_LC_5_7_1 { VoxLink_I2C_Driver_inst.bit_counter_RNIAQ6I2[2] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_4_LC_5_7_2 { VoxLink_I2C_Driver_inst.i2c_state_RNO[4], VoxLink_I2C_Driver_inst.i2c_state[4] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_5_LC_5_7_3 { VoxLink_I2C_Driver_inst.i2c_state_RNO[5], VoxLink_I2C_Driver_inst.i2c_state[5] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_2_LC_5_7_4 { VoxLink_I2C_Driver_inst.i2c_state_RNO[2], VoxLink_I2C_Driver_inst.i2c_state[2] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_3_LC_5_7_5 { VoxLink_I2C_Driver_inst.i2c_state_RNO[3], VoxLink_I2C_Driver_inst.i2c_state[3] }
+ble_pack VoxLink_I2C_Driver_inst.int_scl_LC_5_7_6 { VoxLink_I2C_Driver_inst.int_scl_RNO, VoxLink_I2C_Driver_inst.int_scl }
+ble_pack VoxLink_I2C_Driver_inst.SB_GB_IO_inst_scl_RNIUKMM_LC_5_7_7 { VoxLink_I2C_Driver_inst.SB_GB_IO_inst_scl_RNIUKMM }
+clb_pack LT_5_7 { VoxLink_I2C_Driver_inst.SB_GB_IO_inst_scl_RNIRF5B1_LC_5_7_0, VoxLink_I2C_Driver_inst.bit_counter_RNIAQ6I2_2_LC_5_7_1, VoxLink_I2C_Driver_inst.i2c_state_4_LC_5_7_2, VoxLink_I2C_Driver_inst.i2c_state_5_LC_5_7_3, VoxLink_I2C_Driver_inst.i2c_state_2_LC_5_7_4, VoxLink_I2C_Driver_inst.i2c_state_3_LC_5_7_5, VoxLink_I2C_Driver_inst.int_scl_LC_5_7_6, VoxLink_I2C_Driver_inst.SB_GB_IO_inst_scl_RNIUKMM_LC_5_7_7 }
+set_location LT_5_7 5 7
+ble_pack VoxLink_I2C_Driver_inst.int_scl_RNO_3_LC_5_8_0 { VoxLink_I2C_Driver_inst.int_scl_RNO_3 }
+ble_pack VoxLink_I2C_Driver_inst.int_scl_RNO_1_LC_5_8_1 { VoxLink_I2C_Driver_inst.int_scl_RNO_1 }
+ble_pack VoxLink_I2C_Driver_inst.int_scl_RNO_0_LC_5_8_2 { VoxLink_I2C_Driver_inst.int_scl_RNO_0 }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNIDBTK_3_LC_5_8_3 { VoxLink_I2C_Driver_inst.i2c_state_RNIDBTK[3] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNIJD9U1_1_LC_5_8_4 { VoxLink_I2C_Driver_inst.i2c_state_RNIJD9U1[1] }
+ble_pack VoxLink_I2C_Driver_inst.int_scl_RNO_2_LC_5_8_5 { VoxLink_I2C_Driver_inst.int_scl_RNO_2 }
+ble_pack VoxLink_I2C_Driver_inst.int_rx_valid_RNO_1_LC_5_8_6 { VoxLink_I2C_Driver_inst.int_rx_valid_RNO_1 }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNI296H_0_LC_5_8_7 { VoxLink_I2C_Driver_inst.i2c_state_RNI296H[0] }
+clb_pack LT_5_8 { VoxLink_I2C_Driver_inst.int_scl_RNO_3_LC_5_8_0, VoxLink_I2C_Driver_inst.int_scl_RNO_1_LC_5_8_1, VoxLink_I2C_Driver_inst.int_scl_RNO_0_LC_5_8_2, VoxLink_I2C_Driver_inst.i2c_state_RNIDBTK_3_LC_5_8_3, VoxLink_I2C_Driver_inst.i2c_state_RNIJD9U1_1_LC_5_8_4, VoxLink_I2C_Driver_inst.int_scl_RNO_2_LC_5_8_5, VoxLink_I2C_Driver_inst.int_rx_valid_RNO_1_LC_5_8_6, VoxLink_I2C_Driver_inst.i2c_state_RNI296H_0_LC_5_8_7 }
+set_location LT_5_8 5 8
+ble_pack VoxLink_I2C_Driver_inst.bit_counter_1_LC_5_9_0 { VoxLink_I2C_Driver_inst.bit_counter_RNO[1], VoxLink_I2C_Driver_inst.bit_counter[1] }
+ble_pack VoxLink_I2C_Driver_inst.bit_counter_RNISLUR1_2_LC_5_9_1 { VoxLink_I2C_Driver_inst.bit_counter_RNISLUR1[2] }
+ble_pack VoxLink_I2C_Driver_inst.tick_counter_RNIPD8Q3_1_LC_5_9_2 { VoxLink_I2C_Driver_inst.tick_counter_RNIPD8Q3[1] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_en_RNIOGTI6_LC_5_9_3 { VoxLink_I2C_Driver_inst.i2c_sck_en_RNIOGTI6 }
+ble_pack VoxLink_I2C_Driver_inst.bit_counter_0_LC_5_9_4 { VoxLink_I2C_Driver_inst.bit_counter_RNO[0], VoxLink_I2C_Driver_inst.bit_counter[0] }
+ble_pack VoxLink_I2C_Driver_inst.tick_counter_0_LC_5_9_5 { VoxLink_I2C_Driver_inst.tick_counter_RNO[0], VoxLink_I2C_Driver_inst.tick_counter[0] }
+ble_pack VoxLink_I2C_Driver_inst.bit_counter_RNO_0_2_LC_5_9_6 { VoxLink_I2C_Driver_inst.bit_counter_RNO_0[2] }
+ble_pack VoxLink_I2C_Driver_inst.bit_counter_2_LC_5_9_7 { VoxLink_I2C_Driver_inst.bit_counter_RNO[2], VoxLink_I2C_Driver_inst.bit_counter[2] }
+clb_pack LT_5_9 { VoxLink_I2C_Driver_inst.bit_counter_1_LC_5_9_0, VoxLink_I2C_Driver_inst.bit_counter_RNISLUR1_2_LC_5_9_1, VoxLink_I2C_Driver_inst.tick_counter_RNIPD8Q3_1_LC_5_9_2, VoxLink_I2C_Driver_inst.i2c_sck_en_RNIOGTI6_LC_5_9_3, VoxLink_I2C_Driver_inst.bit_counter_0_LC_5_9_4, VoxLink_I2C_Driver_inst.tick_counter_0_LC_5_9_5, VoxLink_I2C_Driver_inst.bit_counter_RNO_0_2_LC_5_9_6, VoxLink_I2C_Driver_inst.bit_counter_2_LC_5_9_7 }
+set_location LT_5_9 5 9
+ble_pack VoxLink_I2C_Driver_inst.tx_data_r_1_LC_5_10_0 { VoxLink_I2C_Driver_inst.tx_data_r_RNO[1], VoxLink_I2C_Driver_inst.tx_data_r[1] }
+ble_pack VoxLink_I2C_Driver_inst.tx_data_r_2_LC_5_10_1 { VoxLink_I2C_Driver_inst.tx_data_r_RNO[2], VoxLink_I2C_Driver_inst.tx_data_r[2] }
+ble_pack VoxLink_I2C_Driver_inst.tx_data_r_0_LC_5_10_2 { VoxLink_I2C_Driver_inst.tx_data_r_RNO[0], VoxLink_I2C_Driver_inst.tx_data_r[0] }
+ble_pack VoxLink_I2C_Driver_inst.tx_data_r_3_LC_5_10_3 { VoxLink_I2C_Driver_inst.tx_data_r_RNO[3], VoxLink_I2C_Driver_inst.tx_data_r[3] }
+ble_pack VoxLink_I2C_Driver_inst.tx_data_r_4_LC_5_10_4 { VoxLink_I2C_Driver_inst.tx_data_r_RNO[4], VoxLink_I2C_Driver_inst.tx_data_r[4] }
+ble_pack VoxLink_I2C_Driver_inst.tx_data_r_5_LC_5_10_5 { VoxLink_I2C_Driver_inst.tx_data_r_RNO[5], VoxLink_I2C_Driver_inst.tx_data_r[5] }
+ble_pack VoxLink_I2C_Driver_inst.tx_data_r_6_LC_5_10_6 { VoxLink_I2C_Driver_inst.tx_data_r_RNO[6], VoxLink_I2C_Driver_inst.tx_data_r[6] }
+ble_pack VoxLink_I2C_Driver_inst.tx_data_r_7_LC_5_10_7 { VoxLink_I2C_Driver_inst.tx_data_r_RNO[7], VoxLink_I2C_Driver_inst.tx_data_r[7] }
+clb_pack LT_5_10 { VoxLink_I2C_Driver_inst.tx_data_r_1_LC_5_10_0, VoxLink_I2C_Driver_inst.tx_data_r_2_LC_5_10_1, VoxLink_I2C_Driver_inst.tx_data_r_0_LC_5_10_2, VoxLink_I2C_Driver_inst.tx_data_r_3_LC_5_10_3, VoxLink_I2C_Driver_inst.tx_data_r_4_LC_5_10_4, VoxLink_I2C_Driver_inst.tx_data_r_5_LC_5_10_5, VoxLink_I2C_Driver_inst.tx_data_r_6_LC_5_10_6, VoxLink_I2C_Driver_inst.tx_data_r_7_LC_5_10_7 }
+set_location LT_5_10 5 10
+ble_pack GB_BUFFER_clk_12mhz_bufg_THRU_LUT4_0_LC_6_1_4 { GB_BUFFER_clk_12mhz_bufg_THRU_LUT4_0 }
+clb_pack LT_6_1 { GB_BUFFER_clk_12mhz_bufg_THRU_LUT4_0_LC_6_1_4 }
+set_location LT_6_1 6 1
+ble_pack vox_clk_pZ0_LC_6_5_0 { vox_clk_p_RNO, vox_clk_p }
+clb_pack LT_6_5 { vox_clk_pZ0_LC_6_5_0 }
+set_location LT_6_5 6 5
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNI8F6H_0_6_LC_6_6_1 { VoxLink_I2C_Driver_inst.i2c_state_RNI8F6H_0[6] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNO_0_3_LC_6_6_2 { VoxLink_I2C_Driver_inst.i2c_state_RNO_0[3] }
+ble_pack VoxLink_I2C_Driver_inst.int_rx_valid_RNO_0_LC_6_6_6 { VoxLink_I2C_Driver_inst.int_rx_valid_RNO_0 }
+clb_pack LT_6_6 { VoxLink_I2C_Driver_inst.i2c_state_RNI8F6H_0_6_LC_6_6_1, VoxLink_I2C_Driver_inst.i2c_state_RNO_0_3_LC_6_6_2, VoxLink_I2C_Driver_inst.int_rx_valid_RNO_0_LC_6_6_6 }
+set_location LT_6_6 6 6
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNO_0_6_LC_6_7_0 { VoxLink_I2C_Driver_inst.i2c_state_RNO_0[6] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_6_LC_6_7_1 { VoxLink_I2C_Driver_inst.i2c_state_RNO[6], VoxLink_I2C_Driver_inst.i2c_state[6] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNO_0_7_LC_6_7_3 { VoxLink_I2C_Driver_inst.i2c_state_RNO_0[7] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_7_LC_6_7_4 { VoxLink_I2C_Driver_inst.i2c_state_RNO[7], VoxLink_I2C_Driver_inst.i2c_state[7] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_RNIS9CV_4_LC_6_7_6 { VoxLink_I2C_Driver_inst.i2c_state_RNIS9CV[4] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_state_0_LC_6_7_7 { VoxLink_I2C_Driver_inst.i2c_state_RNO[0], VoxLink_I2C_Driver_inst.i2c_state[0] }
+clb_pack LT_6_7 { VoxLink_I2C_Driver_inst.i2c_state_RNO_0_6_LC_6_7_0, VoxLink_I2C_Driver_inst.i2c_state_6_LC_6_7_1, VoxLink_I2C_Driver_inst.i2c_state_RNO_0_7_LC_6_7_3, VoxLink_I2C_Driver_inst.i2c_state_7_LC_6_7_4, VoxLink_I2C_Driver_inst.i2c_state_RNIS9CV_4_LC_6_7_6, VoxLink_I2C_Driver_inst.i2c_state_0_LC_6_7_7 }
+set_location LT_6_7 6 7
+ble_pack VoxLink_I2C_Driver_inst.int_sda_RNO_4_LC_6_8_0 { VoxLink_I2C_Driver_inst.int_sda_RNO_4 }
+ble_pack VoxLink_BNO_Driver_Inst.tx_data_1_0_LC_6_8_2 { VoxLink_BNO_Driver_Inst.tx_data_1_RNO[0], VoxLink_BNO_Driver_Inst.tx_data_1[0] }
+clb_pack LT_6_8 { VoxLink_I2C_Driver_inst.int_sda_RNO_4_LC_6_8_0, VoxLink_BNO_Driver_Inst.tx_data_1_0_LC_6_8_2 }
+set_location LT_6_8 6 8
+ble_pack VoxLink_I2C_Driver_inst.un2_i2c_sck_counter_1_cry_1_c_LC_6_9_0 { VoxLink_I2C_Driver_inst.un2_i2c_sck_counter_1_cry_1_c }
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_counter_0_1_LC_6_9_1 { VoxLink_I2C_Driver_inst.i2c_sck_counter_0_RNO[1], VoxLink_I2C_Driver_inst.i2c_sck_counter_0[1], VoxLink_I2C_Driver_inst.un2_i2c_sck_counter_1_cry_2_c }
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_counter_1_LC_6_9_2 { VoxLink_I2C_Driver_inst.i2c_sck_counter_RNO[1], VoxLink_I2C_Driver_inst.i2c_sck_counter[1], VoxLink_I2C_Driver_inst.un2_i2c_sck_counter_1_cry_3_c }
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_counter_2_LC_6_9_3 { VoxLink_I2C_Driver_inst.i2c_sck_counter_RNO[2], VoxLink_I2C_Driver_inst.i2c_sck_counter[2], VoxLink_I2C_Driver_inst.un2_i2c_sck_counter_1_cry_4_c }
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_counter_0_2_LC_6_9_4 { VoxLink_I2C_Driver_inst.i2c_sck_counter_0_RNO[2], VoxLink_I2C_Driver_inst.i2c_sck_counter_0[2], VoxLink_I2C_Driver_inst.un2_i2c_sck_counter_1_cry_5_c }
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_counter_3_LC_6_9_5 { VoxLink_I2C_Driver_inst.i2c_sck_counter_RNO[3], VoxLink_I2C_Driver_inst.i2c_sck_counter[3], VoxLink_I2C_Driver_inst.un2_i2c_sck_counter_1_cry_6_c }
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_counter_4_LC_6_9_6 { VoxLink_I2C_Driver_inst.i2c_sck_counter_RNO[4], VoxLink_I2C_Driver_inst.i2c_sck_counter[4], VoxLink_I2C_Driver_inst.un2_i2c_sck_counter_1_cry_7_c }
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_counter_5_LC_6_9_7 { VoxLink_I2C_Driver_inst.i2c_sck_counter_RNO[5], VoxLink_I2C_Driver_inst.i2c_sck_counter[5], VoxLink_I2C_Driver_inst.un2_i2c_sck_counter_1_cry_8_c }
+clb_pack LT_6_9 { VoxLink_I2C_Driver_inst.un2_i2c_sck_counter_1_cry_1_c_LC_6_9_0, VoxLink_I2C_Driver_inst.i2c_sck_counter_0_1_LC_6_9_1, VoxLink_I2C_Driver_inst.i2c_sck_counter_1_LC_6_9_2, VoxLink_I2C_Driver_inst.i2c_sck_counter_2_LC_6_9_3, VoxLink_I2C_Driver_inst.i2c_sck_counter_0_2_LC_6_9_4, VoxLink_I2C_Driver_inst.i2c_sck_counter_3_LC_6_9_5, VoxLink_I2C_Driver_inst.i2c_sck_counter_4_LC_6_9_6, VoxLink_I2C_Driver_inst.i2c_sck_counter_5_LC_6_9_7 }
+set_location LT_6_9 6 9
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_counter_0_3_LC_6_10_0 { VoxLink_I2C_Driver_inst.i2c_sck_counter_0_RNO[3], VoxLink_I2C_Driver_inst.i2c_sck_counter_0[3], VoxLink_I2C_Driver_inst.un2_i2c_sck_counter_1_cry_9_c }
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_counter_6_LC_6_10_1 { VoxLink_I2C_Driver_inst.i2c_sck_counter_RNO[6], VoxLink_I2C_Driver_inst.i2c_sck_counter[6], VoxLink_I2C_Driver_inst.un2_i2c_sck_counter_1_cry_10_c }
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_counter_0_4_LC_6_10_2 { VoxLink_I2C_Driver_inst.i2c_sck_counter_0_RNO[4], VoxLink_I2C_Driver_inst.i2c_sck_counter_0[4] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_counter_0_0_LC_6_10_3 { VoxLink_I2C_Driver_inst.i2c_sck_counter_0_RNO[0], VoxLink_I2C_Driver_inst.i2c_sck_counter_0[0] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_counter_0_LC_6_10_5 { VoxLink_I2C_Driver_inst.i2c_sck_counter_RNO[0], VoxLink_I2C_Driver_inst.i2c_sck_counter[0] }
+ble_pack VoxLink_I2C_Driver_inst.i2c_sck_en_LC_6_10_7 { VoxLink_I2C_Driver_inst.i2c_sck_en_THRU_LUT4_0, VoxLink_I2C_Driver_inst.i2c_sck_en }
+clb_pack LT_6_10 { VoxLink_I2C_Driver_inst.i2c_sck_counter_0_3_LC_6_10_0, VoxLink_I2C_Driver_inst.i2c_sck_counter_6_LC_6_10_1, VoxLink_I2C_Driver_inst.i2c_sck_counter_0_4_LC_6_10_2, VoxLink_I2C_Driver_inst.i2c_sck_counter_0_0_LC_6_10_3, VoxLink_I2C_Driver_inst.i2c_sck_counter_0_LC_6_10_5, VoxLink_I2C_Driver_inst.i2c_sck_en_LC_6_10_7 }
+set_location LT_6_10 6 10
+ble_pack VoxLink_I2C_Driver_inst.SB_GB_IO_inst_scl_RNO_LC_6_13_7 { VoxLink_I2C_Driver_inst.SB_GB_IO_inst_scl_RNO }
+clb_pack LT_6_13 { VoxLink_I2C_Driver_inst.SB_GB_IO_inst_scl_RNO_LC_6_13_7 }
+set_location LT_6_13 6 13
+set_location u_pll_RNISDD6_0 6 15
+set_location clk_in 6 0
+set_location clk_pll 3 15
+set_io vox_clk_p E2
+set_io i2c_scl C6
+set_io clk_12mhz F2
+set_io bno_rstn B6
+set_io bno_interrupt A3
+set_io i2c_sda D6
