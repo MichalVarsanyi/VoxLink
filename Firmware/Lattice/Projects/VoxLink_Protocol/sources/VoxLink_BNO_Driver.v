@@ -21,6 +21,10 @@ module VoxLink_BNO_Driver #(
 
     // Sensor
     input               bno_interrupt               // Interrupt from the BNO sensor
+
+    // Data Output
+
+
 );
 
     // ---------------------------------------------------------
@@ -38,7 +42,20 @@ module VoxLink_BNO_Driver #(
     localparam  BNO_SUBSCRIBE_STOP_STATE                = 4'd5;
     localparam  BNO_RUNNING_STATE                       = 4'd6;
 
-    reg [4:0] byte_counter;
+    reg [15:0] byte_counter;
+
+    reg [15:0] packet_length;
+    reg [15:0] target_length; // This is the received packet_length - 1
+
+    reg [1:0] boot_packet_counter;
+
+    // Pipelining registers to make the timing work
+    reg match_packet_length;
+    reg match_target_length;
+
+    // Isolated counter control
+    reg clr_byte_counter;
+    reg inc_byte_counter;
 
     // ---------------------------------------------------------
     // Subscribing to Measurements Byte Sequence
@@ -71,6 +88,25 @@ module VoxLink_BNO_Driver #(
         8'h00                 // 21: Reserved (LSB)
     };
 
+    // ---------------------------------------------------------
+    // ISOLATED COUNTER DATAPATH
+    // ---------------------------------------------------------
+
+    always @(posedge sys_clk or posedge sys_rst) 
+    begin
+        if (sys_rst)
+            byte_counter <= 16'd0;
+        else if (clr_byte_counter)
+            byte_counter <= 16'd0;
+        else if (inc_byte_counter)
+            byte_counter <= byte_counter + 16'd1;
+    end
+
+
+    // ---------------------------------------------------------
+    // MAIN CONTROL FSM
+    // ---------------------------------------------------------
+
 
     always @(posedge sys_clk or posedge sys_rst)
     begin
@@ -83,8 +119,20 @@ module VoxLink_BNO_Driver #(
             finish_transaction      <= 1'b0;
 
             // Internal Counters
-            byte_counter            <= {5{1'b0}};
+            // byte_counter            <= {16{1'b0}};
+            boot_packet_counter     <= {2{1'b0}};
+            packet_length           <= 16'd4;
+            target_length           <= 16'd3;
 
+            // Pipelining registers
+            match_packet_length     <= 1'b0;
+            match_target_length     <= 1'b0;
+
+            // Isolated counter control
+            clr_byte_counter        <= 1'b0;
+            inc_byte_counter        <= 1'b0;
+
+            // Copy the subscription message into a shiftable register
             subscription_shift_reg  <= BNO_SUBSCRIPTION_PAYLOAD;
 
             // Default FSM State
@@ -92,6 +140,15 @@ module VoxLink_BNO_Driver #(
         end
         else
         begin
+
+            // Constantly evaluate the condition giving it one more clock cycle of breathing room
+            match_packet_length <= (byte_counter == packet_length);
+            match_target_length <= (byte_counter == target_length);
+
+            // In clocked always block the last assignment to a register in the code block wins for that clock cycle
+            clr_byte_counter <= 1'b0;
+            inc_byte_counter <= 1'b0;
+
             case(bno_state)
 
             // ---------------------------------------------------------
@@ -115,9 +172,9 @@ module VoxLink_BNO_Driver #(
 
                     if (driver_waiting == 0)
                     begin
-                        trigger_tx      <= 1'b0;
-                        byte_counter    <= {5{1'b0}};
-                        bno_state       <= BNO_ADVERTISEMENT_WAITING_STATE;
+                        trigger_tx          <= 1'b0;
+                        clr_byte_counter    <= 1'b1;
+                        bno_state           <= BNO_ADVERTISEMENT_WAITING_STATE;
                     end
                 end
 
@@ -133,19 +190,40 @@ module VoxLink_BNO_Driver #(
                     trigger_rx  <= 1'b1;
 
                     if (rx_valid == 1'b1)
-                        byte_counter <= byte_counter + 1;
+                    begin
+                        inc_byte_counter <= 1'b1;
 
-                    if (byte_counter == 4)
+                        // Capture the packet length
+                        if (byte_counter == 16'd0) 
+                            packet_length[7:0]  <= rx_data;
+
+                        if (byte_counter == 16'd1) 
+                        begin
+                            packet_length[15:8]   <= {1'b0, rx_data[6:0]};
+                            
+                            // In addition to the packet length we mask out the continuation bit
+                            target_length <= {1'b0, rx_data[6:0], packet_length[7:0]} - 16'd1;
+                        end
+                    end
+
+                    if (match_packet_length == 1)
                     begin
                         trigger_rx  <= 1'b0;
                         if (driver_finished_tranaction == 1)
                         begin
-                            byte_counter    <= {5{1'b0}};
-                            bno_state <= BNO_SUBSCRIBE_WRITE_STATE;
+                            clr_byte_counter    <= 1'b1;
+
+                            if (boot_packet_counter == 2)
+                                bno_state <= BNO_SUBSCRIBE_WRITE_STATE;
+                            else
+                            begin
+                                boot_packet_counter <= boot_packet_counter + 2'd1;
+                                bno_state <= BNO_INITIAL_IDLE_STATE;
+                            end
                         end
                     end
 
-                    if (byte_counter == 3)
+                    if (match_target_length == 1)
                         finish_transaction  <= 1'b1;      
                 end
 
@@ -157,11 +235,11 @@ module VoxLink_BNO_Driver #(
                 begin
                     if (tx_done == 1)
                     begin
-                        subscription_shift_reg <= {subscription_shift_reg[167:0], 8'd0};
-                        byte_counter           <= byte_counter + 1;
+                        subscription_shift_reg  <= {subscription_shift_reg[167:0], 8'd0};
+                        inc_byte_counter        <= 1'b1;
                     end
 
-                    if (byte_counter == 21)
+                    if (byte_counter == 22)
                     begin
                         finish_transaction <= 1'b1;
                         trigger_tx <= 1'b0;
@@ -222,4 +300,5 @@ module VoxLink_BNO_Driver #(
     // That's right! It uses a scary M U L T I P L E X E R
     // We don't want monstrous MUXes in our design!
     // We will implement soft and silky smooth shift register <3
+    // Okay, okay, maybe I was too harsh on the code but let's use the shift register regardless
 endmodule
