@@ -1,4 +1,4 @@
-# Wed Feb 25 13:49:10 2026
+# Sat Feb 28 22:38:13 2026
 
 Synopsys Lattice Technology Mapper, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -35,7 +35,6 @@ Available hyper_sources - for debug and ip models
             sys_clk
 
 @N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance target_nack (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[7:0] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 
 Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
 
@@ -49,77 +48,80 @@ original code -> new code
    0101 -> 00100000
    0110 -> 01000000
    0111 -> 10000000
-Encoding state machine bno_state[5:0] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog))
+Encoding state machine bno_state[4:0] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog))
 original code -> new code
-   0000 -> 000001
-   0001 -> 000010
-   0010 -> 000100
-   0011 -> 001000
-   0100 -> 010000
-   0101 -> 100000
-@N: MO231 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Found counter in view:work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog) instance byte_counter[4:0] 
-@N: MO231 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Found counter in view:work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog) instance byte_counter2[4:0] 
-@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[7] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[6]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[6] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[5]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[5] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[4]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[4] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[3]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[3] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[2] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[1] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[12] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[14] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[15] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance bno_state[5] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[0] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[10] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[16] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[24] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[32] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[40] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[48] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[56] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[64] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[72] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[81] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[89] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[100] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[105] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[113] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[121] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[129] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":76:4:76:9|Removing sequential instance subscription_shift_reg[137] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog)) because it does not drive other instances.
+   0000 -> 00001
+   0001 -> 00010
+   0010 -> 00100
+   0011 -> 01000
+   0100 -> 10000
+@N: MO231 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":93:4:93:9|Found counter in view:work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog) instance byte_counter[15:0] 
+@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[7] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[6]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[6] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[5]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[5] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[4]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[4] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[3]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[3] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[2] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[1] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[12] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[14] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[15] because it is equivalent to instance VoxLink_BNO_Driver_Inst.subscription_shift_reg[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: MF179 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":143:36:143:65|Found 16 by 16 bit equality operator ('==') match_packet_length_2 (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog))
+@N: MF179 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":144:36:144:65|Found 16 by 16 bit equality operator ('==') match_target_length_2 (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog))
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[0] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[10] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[16] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[24] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[32] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[40] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[48] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[56] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[64] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[72] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[81] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[89] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[100] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[105] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[113] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[121] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[129] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance subscription_shift_reg[137] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog)) because it does not drive other instances.
 
-Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
-
-
-Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 135MB)
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
 
 
-Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 137MB peak: 138MB)
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 138MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 135MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 137MB peak: 138MB)
+
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance VoxLink_BNO_Driver_Inst.packet_length[15] (in view: work.Top(verilog)) because it does not drive other instances.
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 137MB peak: 138MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 135MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 137MB peak: 138MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 137MB peak: 138MB)
+
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance VoxLink_BNO_Driver_Inst.match_target_length (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":109:4:109:9|Removing sequential instance VoxLink_BNO_Driver_Inst.match_packet_length (in view: work.Top(verilog)) because it does not drive other instances.
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 137MB peak: 138MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 135MB)
-
-
-Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 140MB)
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:00s		     4.08ns		 135 /       106
+   1		0h:00m:00s		     3.43ns		 203 /       165
 @N: FX1017 :|SB_GB inserted on the net locked_i.
 @N: FX1017 :|SB_GB inserted on the net VoxLink_BNO_Driver_Inst.subscription_shift_reg_0_sqmuxa.
+@N: FX1017 :|SB_GB inserted on the net VoxLink_BNO_Driver_Inst.target_length_0_sqmuxa.
 
 Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 140MB)
 
@@ -133,25 +135,25 @@ Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:
 
 #### START OF CLOCK OPTIMIZATION REPORT #####[
 
-1 non-gated/non-generated clock tree(s) driving 106 clock pin(s) of sequential element(s)
+1 non-gated/non-generated clock tree(s) driving 165 clock pin(s) of sequential element(s)
 0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
 0 instances converted, 0 sequential instances remain driven by gated/generated clocks
 
 ================================ Non-Gated/Non-Generated Clocks ================================
 Clock Tree ID     Driving Element     Drive Element Type              Fanout     Sample Instance
 ------------------------------------------------------------------------------------------------
-@K:CKID0001       sys_clk_keep        clock definition on keepbuf     106        vox_clk_p      
+@K:CKID0001       sys_clk_keep        clock definition on keepbuf     165        vox_clk_p      
 ================================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 140MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 140MB)
 
 Writing Analyst data base C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLink_Protocol_Implmnt\synwork\VoxLink_Protocol_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 137MB peak: 140MB)
 
 Writing EDIF Netlist and constraint files
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
@@ -159,10 +161,10 @@ Writing EDIF Netlist and constraint files
 @N: FX1056 |Writing EDF file: C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLink_Protocol_Implmnt\VoxLink_Protocol.edf
 L-2016.09L+ice40
 
-Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+Start final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 141MB)
 
 @W: MT246 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":95:6:95:15|Blackbox SB_RGBA_DRV is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
 @N: MT615 |Found clock clk_12mhz with period 83.33ns 
@@ -171,7 +173,7 @@ Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:0
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Wed Feb 25 13:49:11 2026
+# Timing Report written on Sat Feb 28 22:38:14 2026
 #
 
 
@@ -191,14 +193,14 @@ Performance Summary
 *******************
 
 
-Worst slack in design: -0.773
+Worst slack in design: -0.690
 
                                  Requested     Estimated     Requested     Estimated                 Clock                        Clock           
 Starting Clock                   Frequency     Frequency     Period        Period        Slack       Type                         Group           
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Top|sys_clkout_derived_clock     100.5 MHz     NA            9.950         NA            NA          derived (from clk_12mhz)     default_clkgroup
 clk_12mhz                        12.0 MHz      NA            83.333        NA            DCM/PLL     declared                     default_clkgroup
-sys_clk                          100.5 MHz     93.3 MHz      9.950         10.723        -0.773      declared                     default_clkgroup
+sys_clk                          100.5 MHz     94.0 MHz      9.950         10.640        -0.690      declared                     default_clkgroup
 System                           1.0 MHz       NA            1000.000      NA            NA          system                       system_clkgroup 
 ==================================================================================================================================================
 @N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack
@@ -214,7 +216,7 @@ Clocks             |    rise  to  rise    |    fall  to  fall   |    rise  to  f
 ----------------------------------------------------------------------------------------------------------
 Starting  Ending   |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
 ----------------------------------------------------------------------------------------------------------
-sys_clk   sys_clk  |  9.950       -0.773  |  No paths    -      |  No paths    -      |  No paths    -    
+sys_clk   sys_clk  |  9.950       -0.690  |  No paths    -      |  No paths    -      |  No paths    -    
 ==========================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
@@ -237,21 +239,21 @@ Detailed Report for Clock: sys_clk
 Starting Points with Worst Slack
 ********************************
 
-                                               Starting                                                  Arrival           
-Instance                                       Reference     Type         Pin     Net                    Time        Slack 
-                                               Clock                                                                       
----------------------------------------------------------------------------------------------------------------------------
-VoxLink_BNO_Driver_Inst.byte_counter[3]        sys_clk       SB_DFFR      Q       byte_counter[3]        0.796       -0.773
-VoxLink_I2C_Driver_inst.tick_counter[0]        sys_clk       SB_DFFR      Q       tick_counter[0]        0.796       -0.762
-VoxLink_BNO_Driver_Inst.byte_counter[4]        sys_clk       SB_DFFR      Q       byte_counter[4]        0.796       -0.701
-VoxLink_I2C_Driver_inst.int_scl                sys_clk       SB_DFFES     Q       int_scl                0.796       -0.701
-VoxLink_I2C_Driver_inst.tick_counter[1]        sys_clk       SB_DFFR      Q       tick_counter[1]        0.796       -0.690
-VoxLink_BNO_Driver_Inst.byte_counter2[2]       sys_clk       SB_DFFER     Q       byte_counter2[2]       0.796       -0.597
-VoxLink_BNO_Driver_Inst.byte_counter2[4]       sys_clk       SB_DFFER     Q       byte_counter2[4]       0.796       -0.525
-VoxLink_BNO_Driver_Inst.byte_counter2[0]       sys_clk       SB_DFFER     Q       byte_counter2[0]       0.796       1.239 
-VoxLink_I2C_Driver_inst.bit_counter[0]         sys_clk       SB_DFFR      Q       bit_counter[0]         0.796       1.260 
-VoxLink_BNO_Driver_Inst.finish_transaction     sys_clk       SB_DFFR      Q       finish_transaction     0.796       1.260 
-===========================================================================================================================
+                                             Starting                                                Arrival           
+Instance                                     Reference     Type         Pin     Net                  Time        Slack 
+                                             Clock                                                                     
+-----------------------------------------------------------------------------------------------------------------------
+VoxLink_BNO_Driver_Inst.byte_counter[1]      sys_clk       SB_DFFER     Q       byte_counter[1]      0.796       -0.690
+VoxLink_BNO_Driver_Inst.byte_counter[2]      sys_clk       SB_DFFER     Q       byte_counter[2]      0.796       -0.618
+VoxLink_BNO_Driver_Inst.byte_counter[5]      sys_clk       SB_DFFER     Q       byte_counter[5]      0.796       -0.618
+VoxLink_BNO_Driver_Inst.byte_counter[0]      sys_clk       SB_DFFER     Q       byte_counter[0]      0.796       -0.587
+VoxLink_BNO_Driver_Inst.byte_counter[3]      sys_clk       SB_DFFER     Q       byte_counter[3]      0.796       -0.587
+VoxLink_BNO_Driver_Inst.byte_counter[13]     sys_clk       SB_DFFER     Q       byte_counter[13]     0.796       -0.546
+VoxLink_BNO_Driver_Inst.byte_counter[10]     sys_clk       SB_DFFER     Q       byte_counter[10]     0.796       -0.514
+VoxLink_BNO_Driver_Inst.byte_counter[14]     sys_clk       SB_DFFER     Q       byte_counter[14]     0.796       -0.514
+VoxLink_BNO_Driver_Inst.byte_counter[4]      sys_clk       SB_DFFER     Q       byte_counter[4]      0.796       -0.494
+VoxLink_BNO_Driver_Inst.byte_counter[6]      sys_clk       SB_DFFER     Q       byte_counter[6]      0.796       -0.494
+=======================================================================================================================
 
 
 Ending Points with Worst Slack
@@ -261,16 +263,16 @@ Ending Points with Worst Slack
 Instance                                       Reference     Type         Pin     Net                      Time         Slack 
                                                Clock                                                                          
 ------------------------------------------------------------------------------------------------------------------------------
-VoxLink_BNO_Driver_Inst.bno_state[3]           sys_clk       SB_DFFR      D       N_41_i                   9.795        -0.773
-VoxLink_BNO_Driver_Inst.byte_counter[0]        sys_clk       SB_DFFR      D       byte_counter_0           9.795        -0.762
-VoxLink_BNO_Driver_Inst.byte_counter[1]        sys_clk       SB_DFFR      D       byte_counter_1           9.795        -0.762
-VoxLink_BNO_Driver_Inst.byte_counter[2]        sys_clk       SB_DFFR      D       byte_counter_2           9.795        -0.762
-VoxLink_BNO_Driver_Inst.byte_counter[3]        sys_clk       SB_DFFR      D       byte_counter_3           9.795        -0.762
-VoxLink_BNO_Driver_Inst.byte_counter[4]        sys_clk       SB_DFFR      D       byte_counter_4           9.795        -0.762
-VoxLink_I2C_Driver_inst.int_sda                sys_clk       SB_DFFES     D       N_55_i                   9.795        -0.762
-VoxLink_I2C_Driver_inst.i2c_state[6]           sys_clk       SB_DFFER     D       N_52                     9.795        -0.701
-VoxLink_BNO_Driver_Inst.finish_transaction     sys_clk       SB_DFFR      D       finish_transaction_0     9.795        -0.597
-VoxLink_I2C_Driver_inst.i2c_state[2]           sys_clk       SB_DFFER     D       N_50_i                   9.795        -0.597
+VoxLink_BNO_Driver_Inst.bno_state[0]           sys_clk       SB_DFFS      D       N_25_i                   9.795        -0.690
+VoxLink_BNO_Driver_Inst.finish_transaction     sys_clk       SB_DFFR      D       finish_transaction_0     9.795        -0.690
+VoxLink_BNO_Driver_Inst.trigger_tx             sys_clk       SB_DFFR      D       trigger_tx_0             9.795        -0.618
+VoxLink_I2C_Driver_inst.int_sda                sys_clk       SB_DFFES     D       int_sda_9                9.795        -0.483
+VoxLink_I2C_Driver_inst.i2c_state[4]           sys_clk       SB_DFFER     D       i2c_state_ns_0_i[4]      9.795        1.311 
+VoxLink_I2C_Driver_inst.i2c_state[5]           sys_clk       SB_DFFER     D       i2c_state_ns_0_i[5]      9.795        1.311 
+VoxLink_BNO_Driver_Inst.bno_state[4]           sys_clk       SB_DFFR      D       N_56_i                   9.795        1.311 
+VoxLink_I2C_Driver_inst.i2c_state[2]           sys_clk       SB_DFFER     D       N_283_0                  9.795        1.332 
+VoxLink_I2C_Driver_inst.bit_counter[0]         sys_clk       SB_DFFR      D       bit_counter_10[0]        9.795        1.342 
+VoxLink_I2C_Driver_inst.driver_waiting         sys_clk       SB_DFFER     D       driver_waiting_6         9.795        1.342 
 ==============================================================================================================================
 
 
@@ -285,36 +287,36 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.795
 
-    - Propagation time:                      10.568
+    - Propagation time:                      10.485
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -0.773
+    = Slack (critical) :                     -0.690
 
     Number of logic level(s):                4
-    Starting point:                          VoxLink_BNO_Driver_Inst.byte_counter[3] / Q
-    Ending point:                            VoxLink_BNO_Driver_Inst.bno_state[3] / D
+    Starting point:                          VoxLink_BNO_Driver_Inst.byte_counter[1] / Q
+    Ending point:                            VoxLink_BNO_Driver_Inst.bno_state[0] / D
     The start point is clocked by            sys_clk [rising] on pin C
     The end   point is clocked by            sys_clk [rising] on pin C
 
-Instance / Net                                                   Pin      Pin               Arrival     No. of    
-Name                                                 Type        Name     Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------------------------------
-VoxLink_BNO_Driver_Inst.byte_counter[3]              SB_DFFR     Q        Out     0.796     0.796       -         
-byte_counter[3]                                      Net         -        -       1.599     -           3         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIR4IQ[4]      SB_LUT4     I0       In      -         2.395       -         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIR4IQ[4]      SB_LUT4     O        Out     0.661     3.056       -         
-N_121                                                Net         -        -       1.371     -           2         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIC4D22[0]     SB_LUT4     I0       In      -         4.427       -         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIC4D22[0]     SB_LUT4     O        Out     0.661     5.089       -         
-N_145                                                Net         -        -       1.371     -           5         
-VoxLink_BNO_Driver_Inst.bno_state_RNO_0[3]           SB_LUT4     I0       In      -         6.460       -         
-VoxLink_BNO_Driver_Inst.bno_state_RNO_0[3]           SB_LUT4     O        Out     0.661     7.121       -         
-N_95                                                 Net         -        -       1.371     -           1         
-VoxLink_BNO_Driver_Inst.bno_state_RNO[3]             SB_LUT4     I0       In      -         8.492       -         
-VoxLink_BNO_Driver_Inst.bno_state_RNO[3]             SB_LUT4     O        Out     0.569     9.061       -         
-N_41_i                                               Net         -        -       1.507     -           1         
-VoxLink_BNO_Driver_Inst.bno_state[3]                 SB_DFFR     D        In      -         10.568      -         
-==================================================================================================================
-Total path delay (propagation time + setup) of 10.723 is 3.504(32.7%) logic and 7.219(67.3%) route.
+Instance / Net                                                     Pin      Pin               Arrival     No. of    
+Name                                                  Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------
+VoxLink_BNO_Driver_Inst.byte_counter[1]               SB_DFFER     Q        Out     0.796     0.796       -         
+byte_counter[1]                                       Net          -        -       1.599     -           7         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e_3     SB_LUT4      I0       In      -         2.395       -         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e_3     SB_LUT4      O        Out     0.661     3.056       -         
+m53_e_3                                               Net          -        -       1.371     -           1         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e       SB_LUT4      I0       In      -         4.427       -         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e       SB_LUT4      O        Out     0.661     5.089       -         
+finish_transaction9                                   Net          -        -       1.371     -           4         
+VoxLink_BNO_Driver_Inst.bno_state_RNIC5JL5[4]         SB_LUT4      I1       In      -         6.460       -         
+VoxLink_BNO_Driver_Inst.bno_state_RNIC5JL5[4]         SB_LUT4      O        Out     0.589     7.049       -         
+trigger_tx_0_sqmuxa                                   Net          -        -       1.371     -           2         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.N_25_i      SB_LUT4      I2       In      -         8.420       -         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.N_25_i      SB_LUT4      O        Out     0.558     8.978       -         
+N_25_i                                                Net          -        -       1.507     -           1         
+VoxLink_BNO_Driver_Inst.bno_state[0]                  SB_DFFS      D        In      -         10.485      -         
+====================================================================================================================
+Total path delay (propagation time + setup) of 10.640 is 3.421(32.2%) logic and 7.219(67.8%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -324,36 +326,36 @@ Path information for path number 2:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.795
 
-    - Propagation time:                      10.557
+    - Propagation time:                      10.485
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -0.762
+    = Slack (critical) :                     -0.690
 
     Number of logic level(s):                4
-    Starting point:                          VoxLink_I2C_Driver_inst.tick_counter[0] / Q
-    Ending point:                            VoxLink_I2C_Driver_inst.int_sda / D
+    Starting point:                          VoxLink_BNO_Driver_Inst.byte_counter[1] / Q
+    Ending point:                            VoxLink_BNO_Driver_Inst.finish_transaction / D
     The start point is clocked by            sys_clk [rising] on pin C
     The end   point is clocked by            sys_clk [rising] on pin C
 
-Instance / Net                                                   Pin      Pin               Arrival     No. of    
-Name                                                Type         Name     Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------------------------------
-VoxLink_I2C_Driver_inst.tick_counter[0]             SB_DFFR      Q        Out     0.796     0.796       -         
-tick_counter[0]                                     Net          -        -       1.599     -           19        
-VoxLink_I2C_Driver_inst.tick_counter_RNI1ETU[1]     SB_LUT4      I0       In      -         2.395       -         
-VoxLink_I2C_Driver_inst.tick_counter_RNI1ETU[1]     SB_LUT4      O        Out     0.661     3.056       -         
-int_scl16_i_0                                       Net          -        -       1.371     -           8         
-VoxLink_I2C_Driver_inst.int_sda_RNO_3               SB_LUT4      I0       In      -         4.427       -         
-VoxLink_I2C_Driver_inst.int_sda_RNO_3               SB_LUT4      O        Out     0.661     5.089       -         
-N_110                                               Net          -        -       1.371     -           1         
-VoxLink_I2C_Driver_inst.int_sda_RNO_1               SB_LUT4      I0       In      -         6.460       -         
-VoxLink_I2C_Driver_inst.int_sda_RNO_1               SB_LUT4      O        Out     0.661     7.121       -         
-int_sda_9_u_i_1                                     Net          -        -       1.371     -           1         
-VoxLink_I2C_Driver_inst.int_sda_RNO                 SB_LUT4      I1       In      -         8.492       -         
-VoxLink_I2C_Driver_inst.int_sda_RNO                 SB_LUT4      O        Out     0.558     9.050       -         
-N_55_i                                              Net          -        -       1.507     -           1         
-VoxLink_I2C_Driver_inst.int_sda                     SB_DFFES     D        In      -         10.557      -         
-==================================================================================================================
-Total path delay (propagation time + setup) of 10.712 is 3.493(32.6%) logic and 7.219(67.4%) route.
+Instance / Net                                                     Pin      Pin               Arrival     No. of    
+Name                                                  Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------
+VoxLink_BNO_Driver_Inst.byte_counter[1]               SB_DFFER     Q        Out     0.796     0.796       -         
+byte_counter[1]                                       Net          -        -       1.599     -           7         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e_3     SB_LUT4      I0       In      -         2.395       -         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e_3     SB_LUT4      O        Out     0.661     3.056       -         
+m53_e_3                                               Net          -        -       1.371     -           1         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e       SB_LUT4      I0       In      -         4.427       -         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e       SB_LUT4      O        Out     0.661     5.089       -         
+finish_transaction9                                   Net          -        -       1.371     -           4         
+VoxLink_BNO_Driver_Inst.bno_state_RNIC5JL5[4]         SB_LUT4      I1       In      -         6.460       -         
+VoxLink_BNO_Driver_Inst.bno_state_RNIC5JL5[4]         SB_LUT4      O        Out     0.589     7.049       -         
+trigger_tx_0_sqmuxa                                   Net          -        -       1.371     -           2         
+VoxLink_BNO_Driver_Inst.finish_transaction_RNO        SB_LUT4      I2       In      -         8.420       -         
+VoxLink_BNO_Driver_Inst.finish_transaction_RNO        SB_LUT4      O        Out     0.558     8.978       -         
+finish_transaction_0                                  Net          -        -       1.507     -           1         
+VoxLink_BNO_Driver_Inst.finish_transaction            SB_DFFR      D        In      -         10.485      -         
+====================================================================================================================
+Total path delay (propagation time + setup) of 10.640 is 3.421(32.2%) logic and 7.219(67.8%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -363,36 +365,36 @@ Path information for path number 3:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.795
 
-    - Propagation time:                      10.557
+    - Propagation time:                      10.413
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -0.762
+    = Slack (non-critical) :                 -0.618
 
     Number of logic level(s):                4
-    Starting point:                          VoxLink_BNO_Driver_Inst.byte_counter[3] / Q
-    Ending point:                            VoxLink_BNO_Driver_Inst.byte_counter[0] / D
+    Starting point:                          VoxLink_BNO_Driver_Inst.byte_counter[2] / Q
+    Ending point:                            VoxLink_BNO_Driver_Inst.bno_state[0] / D
     The start point is clocked by            sys_clk [rising] on pin C
     The end   point is clocked by            sys_clk [rising] on pin C
 
-Instance / Net                                                   Pin      Pin               Arrival     No. of    
-Name                                                 Type        Name     Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------------------------------
-VoxLink_BNO_Driver_Inst.byte_counter[3]              SB_DFFR     Q        Out     0.796     0.796       -         
-byte_counter[3]                                      Net         -        -       1.599     -           3         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIR4IQ[4]      SB_LUT4     I0       In      -         2.395       -         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIR4IQ[4]      SB_LUT4     O        Out     0.661     3.056       -         
-N_121                                                Net         -        -       1.371     -           2         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIC4D22[0]     SB_LUT4     I0       In      -         4.427       -         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIC4D22[0]     SB_LUT4     O        Out     0.661     5.089       -         
-N_145                                                Net         -        -       1.371     -           5         
-VoxLink_BNO_Driver_Inst.bno_state_RNITCFE3[3]        SB_LUT4     I0       In      -         6.460       -         
-VoxLink_BNO_Driver_Inst.bno_state_RNITCFE3[3]        SB_LUT4     O        Out     0.661     7.121       -         
-N_27                                                 Net         -        -       1.371     -           5         
-VoxLink_BNO_Driver_Inst.byte_counter_RNO[0]          SB_LUT4     I2       In      -         8.492       -         
-VoxLink_BNO_Driver_Inst.byte_counter_RNO[0]          SB_LUT4     O        Out     0.558     9.050       -         
-byte_counter_0                                       Net         -        -       1.507     -           1         
-VoxLink_BNO_Driver_Inst.byte_counter[0]              SB_DFFR     D        In      -         10.557      -         
-==================================================================================================================
-Total path delay (propagation time + setup) of 10.712 is 3.493(32.6%) logic and 7.219(67.4%) route.
+Instance / Net                                                     Pin      Pin               Arrival     No. of    
+Name                                                  Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------
+VoxLink_BNO_Driver_Inst.byte_counter[2]               SB_DFFER     Q        Out     0.796     0.796       -         
+byte_counter[2]                                       Net          -        -       1.599     -           6         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e_3     SB_LUT4      I1       In      -         2.395       -         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e_3     SB_LUT4      O        Out     0.589     2.984       -         
+m53_e_3                                               Net          -        -       1.371     -           1         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e       SB_LUT4      I0       In      -         4.355       -         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e       SB_LUT4      O        Out     0.661     5.017       -         
+finish_transaction9                                   Net          -        -       1.371     -           4         
+VoxLink_BNO_Driver_Inst.bno_state_RNIC5JL5[4]         SB_LUT4      I1       In      -         6.388       -         
+VoxLink_BNO_Driver_Inst.bno_state_RNIC5JL5[4]         SB_LUT4      O        Out     0.589     6.977       -         
+trigger_tx_0_sqmuxa                                   Net          -        -       1.371     -           2         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.N_25_i      SB_LUT4      I2       In      -         8.348       -         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.N_25_i      SB_LUT4      O        Out     0.558     8.906       -         
+N_25_i                                                Net          -        -       1.507     -           1         
+VoxLink_BNO_Driver_Inst.bno_state[0]                  SB_DFFS      D        In      -         10.413      -         
+====================================================================================================================
+Total path delay (propagation time + setup) of 10.568 is 3.349(31.7%) logic and 7.219(68.3%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -402,36 +404,36 @@ Path information for path number 4:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.795
 
-    - Propagation time:                      10.557
+    - Propagation time:                      10.413
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -0.762
+    = Slack (non-critical) :                 -0.618
 
     Number of logic level(s):                4
-    Starting point:                          VoxLink_BNO_Driver_Inst.byte_counter[3] / Q
-    Ending point:                            VoxLink_BNO_Driver_Inst.byte_counter[3] / D
+    Starting point:                          VoxLink_BNO_Driver_Inst.byte_counter[5] / Q
+    Ending point:                            VoxLink_BNO_Driver_Inst.bno_state[0] / D
     The start point is clocked by            sys_clk [rising] on pin C
     The end   point is clocked by            sys_clk [rising] on pin C
 
-Instance / Net                                                   Pin      Pin               Arrival     No. of    
-Name                                                 Type        Name     Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------------------------------
-VoxLink_BNO_Driver_Inst.byte_counter[3]              SB_DFFR     Q        Out     0.796     0.796       -         
-byte_counter[3]                                      Net         -        -       1.599     -           3         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIR4IQ[4]      SB_LUT4     I0       In      -         2.395       -         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIR4IQ[4]      SB_LUT4     O        Out     0.661     3.056       -         
-N_121                                                Net         -        -       1.371     -           2         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIC4D22[0]     SB_LUT4     I0       In      -         4.427       -         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIC4D22[0]     SB_LUT4     O        Out     0.661     5.089       -         
-N_145                                                Net         -        -       1.371     -           5         
-VoxLink_BNO_Driver_Inst.bno_state_RNITCFE3[3]        SB_LUT4     I0       In      -         6.460       -         
-VoxLink_BNO_Driver_Inst.bno_state_RNITCFE3[3]        SB_LUT4     O        Out     0.661     7.121       -         
-N_27                                                 Net         -        -       1.371     -           5         
-VoxLink_BNO_Driver_Inst.byte_counter_RNO[3]          SB_LUT4     I2       In      -         8.492       -         
-VoxLink_BNO_Driver_Inst.byte_counter_RNO[3]          SB_LUT4     O        Out     0.558     9.050       -         
-byte_counter_3                                       Net         -        -       1.507     -           1         
-VoxLink_BNO_Driver_Inst.byte_counter[3]              SB_DFFR     D        In      -         10.557      -         
-==================================================================================================================
-Total path delay (propagation time + setup) of 10.712 is 3.493(32.6%) logic and 7.219(67.4%) route.
+Instance / Net                                                     Pin      Pin               Arrival     No. of    
+Name                                                  Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------
+VoxLink_BNO_Driver_Inst.byte_counter[5]               SB_DFFER     Q        Out     0.796     0.796       -         
+byte_counter[5]                                       Net          -        -       1.599     -           7         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e_4     SB_LUT4      I0       In      -         2.395       -         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e_4     SB_LUT4      O        Out     0.661     3.056       -         
+m53_e_4                                               Net          -        -       1.371     -           1         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e       SB_LUT4      I1       In      -         4.427       -         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e       SB_LUT4      O        Out     0.589     5.017       -         
+finish_transaction9                                   Net          -        -       1.371     -           4         
+VoxLink_BNO_Driver_Inst.bno_state_RNIC5JL5[4]         SB_LUT4      I1       In      -         6.388       -         
+VoxLink_BNO_Driver_Inst.bno_state_RNIC5JL5[4]         SB_LUT4      O        Out     0.589     6.977       -         
+trigger_tx_0_sqmuxa                                   Net          -        -       1.371     -           2         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.N_25_i      SB_LUT4      I2       In      -         8.348       -         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.N_25_i      SB_LUT4      O        Out     0.558     8.906       -         
+N_25_i                                                Net          -        -       1.507     -           1         
+VoxLink_BNO_Driver_Inst.bno_state[0]                  SB_DFFS      D        In      -         10.413      -         
+====================================================================================================================
+Total path delay (propagation time + setup) of 10.568 is 3.349(31.7%) logic and 7.219(68.3%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -441,36 +443,36 @@ Path information for path number 5:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.795
 
-    - Propagation time:                      10.557
+    - Propagation time:                      10.413
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -0.762
+    = Slack (non-critical) :                 -0.618
 
     Number of logic level(s):                4
-    Starting point:                          VoxLink_BNO_Driver_Inst.byte_counter[3] / Q
-    Ending point:                            VoxLink_BNO_Driver_Inst.byte_counter[2] / D
+    Starting point:                          VoxLink_BNO_Driver_Inst.byte_counter[2] / Q
+    Ending point:                            VoxLink_BNO_Driver_Inst.finish_transaction / D
     The start point is clocked by            sys_clk [rising] on pin C
     The end   point is clocked by            sys_clk [rising] on pin C
 
-Instance / Net                                                   Pin      Pin               Arrival     No. of    
-Name                                                 Type        Name     Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------------------------------
-VoxLink_BNO_Driver_Inst.byte_counter[3]              SB_DFFR     Q        Out     0.796     0.796       -         
-byte_counter[3]                                      Net         -        -       1.599     -           3         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIR4IQ[4]      SB_LUT4     I0       In      -         2.395       -         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIR4IQ[4]      SB_LUT4     O        Out     0.661     3.056       -         
-N_121                                                Net         -        -       1.371     -           2         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIC4D22[0]     SB_LUT4     I0       In      -         4.427       -         
-VoxLink_BNO_Driver_Inst.byte_counter_RNIC4D22[0]     SB_LUT4     O        Out     0.661     5.089       -         
-N_145                                                Net         -        -       1.371     -           5         
-VoxLink_BNO_Driver_Inst.bno_state_RNITCFE3[3]        SB_LUT4     I0       In      -         6.460       -         
-VoxLink_BNO_Driver_Inst.bno_state_RNITCFE3[3]        SB_LUT4     O        Out     0.661     7.121       -         
-N_27                                                 Net         -        -       1.371     -           5         
-VoxLink_BNO_Driver_Inst.byte_counter_RNO[2]          SB_LUT4     I2       In      -         8.492       -         
-VoxLink_BNO_Driver_Inst.byte_counter_RNO[2]          SB_LUT4     O        Out     0.558     9.050       -         
-byte_counter_2                                       Net         -        -       1.507     -           1         
-VoxLink_BNO_Driver_Inst.byte_counter[2]              SB_DFFR     D        In      -         10.557      -         
-==================================================================================================================
-Total path delay (propagation time + setup) of 10.712 is 3.493(32.6%) logic and 7.219(67.4%) route.
+Instance / Net                                                     Pin      Pin               Arrival     No. of    
+Name                                                  Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------
+VoxLink_BNO_Driver_Inst.byte_counter[2]               SB_DFFER     Q        Out     0.796     0.796       -         
+byte_counter[2]                                       Net          -        -       1.599     -           6         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e_3     SB_LUT4      I1       In      -         2.395       -         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e_3     SB_LUT4      O        Out     0.589     2.984       -         
+m53_e_3                                               Net          -        -       1.371     -           1         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e       SB_LUT4      I0       In      -         4.355       -         
+VoxLink_BNO_Driver_Inst.bno_state_ns_4_0_.m53_e       SB_LUT4      O        Out     0.661     5.017       -         
+finish_transaction9                                   Net          -        -       1.371     -           4         
+VoxLink_BNO_Driver_Inst.bno_state_RNIC5JL5[4]         SB_LUT4      I1       In      -         6.388       -         
+VoxLink_BNO_Driver_Inst.bno_state_RNIC5JL5[4]         SB_LUT4      O        Out     0.589     6.977       -         
+trigger_tx_0_sqmuxa                                   Net          -        -       1.371     -           2         
+VoxLink_BNO_Driver_Inst.finish_transaction_RNO        SB_LUT4      I2       In      -         8.348       -         
+VoxLink_BNO_Driver_Inst.finish_transaction_RNO        SB_LUT4      O        Out     0.558     8.906       -         
+finish_transaction_0                                  Net          -        -       1.507     -           1         
+VoxLink_BNO_Driver_Inst.finish_transaction            SB_DFFR      D        In      -         10.413      -         
+====================================================================================================================
+Total path delay (propagation time + setup) of 10.568 is 3.349(31.7%) logic and 7.219(68.3%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -480,10 +482,10 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 Timing exceptions that could not be applied
 None
 
-Finished final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 141MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+Finished timing report (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 141MB)
 
 ---------------------------------------
 Resource Usage Report for Top 
@@ -491,16 +493,16 @@ Resource Usage Report for Top
 Mapping to part: ice40ul1kcm36a
 Cell usage:
 GND             2 uses
-SB_CARRY        18 uses
-SB_DFFER        53 uses
-SB_DFFES        14 uses
-SB_DFFR         35 uses
-SB_DFFS         4 uses
-SB_GB           4 uses
+SB_CARRY        56 uses
+SB_DFFER        109 uses
+SB_DFFES        17 uses
+SB_DFFR         30 uses
+SB_DFFS         9 uses
+SB_GB           5 uses
 SB_PLL40_CORE   1 use
 SB_RGBA_DRV     1 use
 VCC             2 uses
-SB_LUT4         128 uses
+SB_LUT4         179 uses
 
 I/O ports: 9
 I/O primitives: 6
@@ -508,23 +510,23 @@ SB_GB_IO       2 uses
 SB_IO          4 uses
 
 I/O Register bits:                  0
-Register bits not including I/Os:   106 (9%)
+Register bits not including I/Os:   165 (14%)
 Total load per clock:
    clk_12mhz: 1
-   sys_clk: 106
+   sys_clk: 165
    Top|sys_clkout_derived_clock: 1
 
 @S |Mapping Summary:
-Total  LUTs: 128 (11%)
+Total  LUTs: 179 (15%)
 
 Distribution of All Consumed LUTs = LUT4 
-Distribution of All Consumed Luts 128 = 128 
+Distribution of All Consumed Luts 179 = 179 
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 28MB peak: 141MB)
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 28MB peak: 141MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed Feb 25 13:49:11 2026
+# Sat Feb 28 22:38:15 2026
 
 ###########################################################]

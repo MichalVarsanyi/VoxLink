@@ -196,8 +196,8 @@ module Top(
     wire       driver_finished_tranaction;
 
     VoxLink_I2C_Driver #(
-        .CLK_FREQ(150_000_000),  // System Clock Frequency
-        .I2C_FREQ(50_000)        // Target I2C Speed
+        .CLK_FREQ(100_500_000),  // System Clock Frequency
+        .I2C_FREQ(400_000)        // Target I2C Speed
     ) VoxLink_I2C_Driver_inst (
         // General
         .sys_clk        (sys_clk),
@@ -259,10 +259,7 @@ module Top(
         end
         else
         begin
-            if(finish_transaction == 1'b1)
-            begin
-                vox_clk_p        <= 1'b1;
-            end
+            vox_clk_p        <= bno_interrupt;
         end
     end
 

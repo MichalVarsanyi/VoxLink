@@ -6,7 +6,7 @@
 
 * Build Date:         Dec  9 2020 17:31:51
 
-* File Generated:     Feb 25 2026 13:49:26
+* File Generated:     Feb 28 2026 22:38:27
 
 * Purpose:            General info of design implementation
 
@@ -27,11 +27,11 @@ Device Info:
 
 Design statistics:
 ------------------
-    FFs:                  106
-    LUTs:                 171
+    FFs:                  165
+    LUTs:                 254
     RAMs:                 0
     IOBs:                 6
-    GBs:                  4
+    GBs:                  5
     PLLs:                 1
     Warm Boots:           0
     I2C_FIFOs:            0
@@ -46,12 +46,12 @@ Design statistics:
 
 Logic Resource Utilization:
 ---------------------------
-    Total Logic Cells: 173/1248
-        Combinational Logic Cells: 67       out of   1248      5.36859%
-        Sequential Logic Cells:    106      out of   1248      8.49359%
-        Logic Tiles:               38       out of   156       24.359%
+    Total Logic Cells: 272/1248
+        Combinational Logic Cells: 107      out of   1248      8.57372%
+        Sequential Logic Cells:    165      out of   1248      13.2212%
+        Logic Tiles:               61       out of   156       39.1026%
     Registers: 
-        Logic Registers:           106      out of   1248      8.49359%
+        Logic Registers:           165      out of   1248      13.2212%
         IO Registers:              0        out of   240       0
     Block RAMs:                    0        out of   14        0%
     Warm Boots:                    0        out of   1         0%
@@ -66,9 +66,9 @@ Logic Resource Utilization:
     IR_IPs:                        0        out of   1         0%
     Pins:
         Input Pins:                2        out of   26        7.69231%
-        Output Pins:               3        out of   26        11.5385%
-        InOut Pins:                1        out of   26        3.84615%
-    Global Buffers:                4        out of   8         50%
+        Output Pins:               2        out of   26        7.69231%
+        InOut Pins:                2        out of   26        7.69231%
+    Global Buffers:                5        out of   8         62.5%
     PLLs:                          1        out of   1         100%
 
 IO Bank Utilization:
@@ -90,19 +90,20 @@ Detailed I/O Info:
     Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function                                Signal Name    
     ----------  ---------  -----------  -------  -------  -----------                                -----------    
     B6          Output     SB_LVCMOS    No       0        Output Tristatable by Enable               bno_rstn       
-    D6          Output     SB_LVCMOS    No       2        Output Tristatable by Enable               i2c_sda        
     E2          Output     SB_LVCMOS    No       2        Simple Output                              vox_clk_p      
 
     Inoutput Pins: 
     Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function                                Signal Name    
     ----------  ---------  -----------  -------  -------  -----------                                -----------    
     C6          InOut      SB_LVCMOS    No       0        Simple Input Output Tristatable by Enable  i2c_scl        
+    D6          InOut      SB_LVCMOS    No       2        Simple Input Output Tristatable by Enable  i2c_sda        
 
 Detailed Global Buffer Info:
 ----------------------------
     Buffer Number  IO Bank  Driven By  Fanout  Signal Name                                                
     -------------  -------  ---------  ------  -----------                                                
-    6              2                   106     sys_clk                                                    
-    5              2                   38      VoxLink_BNO_Driver_Inst.subscription_shift_reg_0_sqmuxa_g  
-    3              0                   1       clk_12mhz_bufg                                             
-    4              0                   106     locked_i_g                                                 
+    4              0                   165     locked_i_g                                                 
+    1              0                   165     sys_clk                                                    
+    3              0                   34      VoxLink_BNO_Driver_Inst.subscription_shift_reg_0_sqmuxa_g  
+    6              2                   1       clk_12mhz_bufg                                             
+    5              2                   23      VoxLink_BNO_Driver_Inst.target_length_0_sqmuxa_g           

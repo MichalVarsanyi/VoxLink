@@ -19,18 +19,16 @@ fsm_state_encoding {616141612} I2C_STOP_STATE {10000000}
 
 fsm_registers {616141612} {i2c_state[7]}  {i2c_state[6]}  {i2c_state[5]}  {i2c_state[4]}  {i2c_state[3]}  {i2c_state[2]}  {i2c_state[1]}  {i2c_state[0]} 
 
-fsm_encoding {7764761} onehot
+fsm_encoding {710941091} onehot
 
-fsm_state_encoding {7764761} BNO_INITIAL_IDLE_STATE {000001}
+fsm_state_encoding {710941091} BNO_INITIAL_IDLE_STATE {00001}
 
-fsm_state_encoding {7764761} BNO_ADVERTISEMENT_ADDR_STATE {000010}
+fsm_state_encoding {710941091} BNO_ADVERTISEMENT_ADDR_STATE {00010}
 
-fsm_state_encoding {7764761} BNO_ADVERTISEMENT_WAITING_STATE {000100}
+fsm_state_encoding {710941091} BNO_ADVERTISEMENT_WAITING_STATE {00100}
 
-fsm_state_encoding {7764761} BNO_ADVERTISEMENT_READ_STATE {001000}
+fsm_state_encoding {710941091} BNO_ADVERTISEMENT_READ_STATE {01000}
 
-fsm_state_encoding {7764761} BNO_SUBSCRIBE_WRITE_STATE {010000}
+fsm_state_encoding {710941091} BNO_SUBSCRIBE_WRITE_STATE {10000}
 
-fsm_state_encoding {7764761} 0101 {100000}
-
-fsm_registers {7764761} {bno_state[5]}  {bno_state[4]}  {bno_state[3]}  {bno_state[2]}  {bno_state[1]}  {bno_state[0]} 
+fsm_registers {710941091} {bno_state[4]}  {bno_state[3]}  {bno_state[2]}  {bno_state[1]}  {bno_state[0]} 

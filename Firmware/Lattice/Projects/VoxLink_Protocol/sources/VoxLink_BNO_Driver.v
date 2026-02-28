@@ -39,8 +39,6 @@ module VoxLink_BNO_Driver #(
     localparam  BNO_ADVERTISEMENT_READ_STATE            = 4'd3;
     // Subscription
     localparam  BNO_SUBSCRIBE_WRITE_STATE               = 4'd4;
-    localparam  BNO_SUBSCRIBE_STOP_STATE                = 4'd5;
-    localparam  BNO_RUNNING_STATE                       = 4'd6;
 
     reg [15:0] byte_counter;
 
@@ -214,11 +212,18 @@ module VoxLink_BNO_Driver #(
                             clr_byte_counter    <= 1'b1;
 
                             if (boot_packet_counter == 2)
-                                bno_state <= BNO_SUBSCRIBE_WRITE_STATE;
+                            begin
+                                boot_packet_counter <= 2'd3;
+                                bno_state   <= BNO_SUBSCRIBE_WRITE_STATE;
+                            end
+                            else if (boot_packet_counter == 2'd3)
+                            begin
+                                bno_state   <= BNO_INITIAL_IDLE_STATE;
+                            end
                             else
                             begin
                                 boot_packet_counter <= boot_packet_counter + 2'd1;
-                                bno_state <= BNO_INITIAL_IDLE_STATE;
+                                bno_state   <= BNO_INITIAL_IDLE_STATE;
                             end
                         end
                     end
@@ -244,7 +249,7 @@ module VoxLink_BNO_Driver #(
                         finish_transaction <= 1'b1;
                         trigger_tx <= 1'b0;
                         if (driver_finished_tranaction == 1)
-                            bno_state <= BNO_SUBSCRIBE_STOP_STATE;
+                            bno_state <= BNO_INITIAL_IDLE_STATE;
                     end
                     else
                     begin
@@ -252,6 +257,9 @@ module VoxLink_BNO_Driver #(
                         tx_data    <= subscription_shift_reg[175:168];
                     end
                 end
+
+                // WTF, I'll just reuse the first states as I alreay have all the logic implemented
+                // Maybe just set a flag that the initial boot is happening
 
             endcase
         end
