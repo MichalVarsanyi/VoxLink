@@ -20,10 +20,11 @@ module VoxLink_BNO_Driver #(
     input               driver_finished_tranaction, // Driver has finished a sequence of transaction commands and is now in the idle state
 
     // Sensor
-    input               bno_interrupt               // Interrupt from the BNO sensor
+    input               bno_interrupt,              // Interrupt from the BNO sensor
 
     // Data Output
-
+    output reg [79:0]   sensor_data,                // Latched data from the sensor
+    output reg          sensor_data_ready
 
 );
 
@@ -72,8 +73,8 @@ module VoxLink_BNO_Driver #(
         8'h00,                //  7: Feature Flags
         8'h00,                //  8: Change Sensitivity LSB
         8'h00,                //  9: Change Sensitivity MSB
-        8'hC4,                // 10: Report Interval LSB (0x09C4 = 2500us = 400Hz)
-        8'h09,                // 11: Report Interval 
+        8'h20,                // 10: Report Interval LSB (0x4E20 = 20,000us = 50Hz)
+        8'h4E,                // 11: Report Interval 
         8'h00,                // 12: Report Interval 
         8'h00,                // 13: Report Interval MSB
         8'h00,                // 14: Batch Interval LSB
@@ -87,7 +88,7 @@ module VoxLink_BNO_Driver #(
     };
 
     // ---------------------------------------------------------
-    // ISOLATED COUNTER DATAPATH
+    // Isolated Counter Datapath
     // ---------------------------------------------------------
 
     always @(posedge sys_clk or posedge sys_rst) 
@@ -102,7 +103,7 @@ module VoxLink_BNO_Driver #(
 
 
     // ---------------------------------------------------------
-    // MAIN CONTROL FSM
+    // Main Control FSM
     // ---------------------------------------------------------
 
 
@@ -130,6 +131,10 @@ module VoxLink_BNO_Driver #(
             clr_byte_counter        <= 1'b0;
             inc_byte_counter        <= 1'b0;
 
+            // Output registers
+            sensor_data             <= {80{1'b0}};
+            sensor_data_ready       <= 1'b0;
+
             // Copy the subscription message into a shiftable register
             subscription_shift_reg  <= BNO_SUBSCRIPTION_PAYLOAD;
 
@@ -144,8 +149,9 @@ module VoxLink_BNO_Driver #(
             match_target_length <= (byte_counter == target_length);
 
             // In clocked always block the last assignment to a register in the code block wins for that clock cycle
-            clr_byte_counter <= 1'b0;
-            inc_byte_counter <= 1'b0;
+            clr_byte_counter    <= 1'b0;
+            inc_byte_counter    <= 1'b0;
+            sensor_data_ready   <= 1'b0;
 
             case(bno_state)
 
@@ -202,6 +208,8 @@ module VoxLink_BNO_Driver #(
                             // In addition to the packet length we mask out the continuation bit
                             target_length <= {1'b0, rx_data[6:0], packet_length[7:0]} - 16'd1;
                         end
+
+                        sensor_data <= {sensor_data[71:0], rx_data};
                     end
 
                     if (match_packet_length == 1)
@@ -218,12 +226,13 @@ module VoxLink_BNO_Driver #(
                             end
                             else if (boot_packet_counter == 2'd3)
                             begin
-                                bno_state   <= BNO_INITIAL_IDLE_STATE;
+                                sensor_data_ready   <= 1'b1;
+                                bno_state           <= BNO_INITIAL_IDLE_STATE;
                             end
                             else
                             begin
                                 boot_packet_counter <= boot_packet_counter + 2'd1;
-                                bno_state   <= BNO_INITIAL_IDLE_STATE;
+                                bno_state           <= BNO_INITIAL_IDLE_STATE;
                             end
                         end
                     end
@@ -253,8 +262,12 @@ module VoxLink_BNO_Driver #(
                     end
                     else
                     begin
-                        trigger_tx <= 1'b1;
                         tx_data    <= subscription_shift_reg[175:168];
+
+                        if (driver_waiting == 1'b1)
+                            trigger_tx <= 1'b1;
+                        else
+                            trigger_tx <= 1'b0;
                     end
                 end
 

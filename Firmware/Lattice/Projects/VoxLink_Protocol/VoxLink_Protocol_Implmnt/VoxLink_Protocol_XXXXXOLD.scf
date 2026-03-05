@@ -1,4 +1,4 @@
-# Written by Synplify Pro version maplat, Build 1612R. Synopsys Run ID: sid1771608399 
+# Written by Synplify Pro version maplat, Build 1612R. Synopsys Run ID: sid1772458060 
 # Top Level Design Parameters 
 
 # Clocks 
@@ -12,6 +12,8 @@ create_clock -period 9.950 -waveform {0.000 4.975} -name {sys_clk} [get_pins {cl
 # Paths Between Clocks 
 
 # Multicycle Constraints 
+set_multicycle_path 2 -setup -from [get_cells {VoxLink_I2C_Driver_inst.i2c_state[7] VoxLink_I2C_Driver_inst.i2c_state[6] VoxLink_I2C_Driver_inst.i2c_state[5] VoxLink_I2C_Driver_inst.i2c_state[4] VoxLink_I2C_Driver_inst.i2c_state[3] VoxLink_I2C_Driver_inst.i2c_state[2] VoxLink_I2C_Driver_inst.i2c_state[1] VoxLink_I2C_Driver_inst.i2c_state[0]}] -to [get_cells {VoxLink_I2C_Driver_inst.bit_counter[0] VoxLink_I2C_Driver_inst.bit_counter[1] VoxLink_I2C_Driver_inst.bit_counter[2]}] 
+set_multicycle_path 2 -setup -from [get_cells {VoxLink_I2C_Driver_inst.i2c_state[7] VoxLink_I2C_Driver_inst.i2c_state[6] VoxLink_I2C_Driver_inst.i2c_state[5] VoxLink_I2C_Driver_inst.i2c_state[4] VoxLink_I2C_Driver_inst.i2c_state[3] VoxLink_I2C_Driver_inst.i2c_state[2] VoxLink_I2C_Driver_inst.i2c_state[1] VoxLink_I2C_Driver_inst.i2c_state[0]}] 
 
 # Point-to-point Delay Constraints 
 

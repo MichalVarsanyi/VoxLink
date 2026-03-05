@@ -6,7 +6,7 @@
 
 * Build Date:         Dec  9 2020 17:31:51
 
-* File Generated:     Feb 28 2026 22:38:27
+* File Generated:     Mar 2 2026 16:53:08
 
 * Purpose:            General info of design implementation
 
@@ -17,7 +17,7 @@
 Synthesis/Placement Summary:
 ----------------------------
     Status:  Successful
-    Runtime: 0 seconds
+    Runtime: 1 seconds
 
 Device Info:
 ------------
@@ -27,11 +27,11 @@ Device Info:
 
 Design statistics:
 ------------------
-    FFs:                  165
-    LUTs:                 254
+    FFs:                  362
+    LUTs:                 471
     RAMs:                 0
-    IOBs:                 6
-    GBs:                  5
+    IOBs:                 7
+    GBs:                  6
     PLLs:                 1
     Warm Boots:           0
     I2C_FIFOs:            0
@@ -46,12 +46,12 @@ Design statistics:
 
 Logic Resource Utilization:
 ---------------------------
-    Total Logic Cells: 272/1248
-        Combinational Logic Cells: 107      out of   1248      8.57372%
-        Sequential Logic Cells:    165      out of   1248      13.2212%
-        Logic Tiles:               61       out of   156       39.1026%
+    Total Logic Cells: 491/1248
+        Combinational Logic Cells: 129      out of   1248      10.3365%
+        Sequential Logic Cells:    362      out of   1248      29.0064%
+        Logic Tiles:               93       out of   156       59.6154%
     Registers: 
-        Logic Registers:           165      out of   1248      13.2212%
+        Logic Registers:           362      out of   1248      29.0064%
         IO Registers:              0        out of   240       0
     Block RAMs:                    0        out of   14        0%
     Warm Boots:                    0        out of   1         0%
@@ -66,9 +66,9 @@ Logic Resource Utilization:
     IR_IPs:                        0        out of   1         0%
     Pins:
         Input Pins:                2        out of   26        7.69231%
-        Output Pins:               2        out of   26        7.69231%
+        Output Pins:               3        out of   26        11.5385%
         InOut Pins:                2        out of   26        7.69231%
-    Global Buffers:                5        out of   8         62.5%
+    Global Buffers:                6        out of   8         75%
     PLLs:                          1        out of   1         100%
 
 IO Bank Utilization:
@@ -76,7 +76,7 @@ IO Bank Utilization:
     Bank 3: 0        out of   0         0%
     Bank 1: 0        out of   0         0%
     Bank 0: 3        out of   12        25%
-    Bank 2: 3        out of   14        21.4286%
+    Bank 2: 4        out of   14        28.5714%
 
 Detailed I/O Info:
 ------------------
@@ -91,6 +91,7 @@ Detailed I/O Info:
     ----------  ---------  -----------  -------  -------  -----------                                -----------    
     B6          Output     SB_LVCMOS    No       0        Output Tristatable by Enable               bno_rstn       
     E2          Output     SB_LVCMOS    No       2        Simple Output                              vox_clk_p      
+    F3          Output     SB_LVCMOS    No       2        Simple Output                              vox_clk_n      
 
     Inoutput Pins: 
     Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function                                Signal Name    
@@ -102,23 +103,24 @@ Detailed Global Buffer Info:
 ----------------------------
     Buffer Number  IO Bank  Driven By  Fanout  Signal Name                                                
     -------------  -------  ---------  ------  -----------                                                
-    4              0                   165     locked_i_g                                                 
-    1              0                   165     sys_clk                                                    
-    3              0                   34      VoxLink_BNO_Driver_Inst.subscription_shift_reg_0_sqmuxa_g  
+    2              0                   362     sys_clk                                                    
+    1              0                   71      II_6.bits_remaininge_0_i_g                                 
     6              2                   1       clk_12mhz_bufg                                             
-    5              2                   23      VoxLink_BNO_Driver_Inst.target_length_0_sqmuxa_g           
+    5              2                   39      VoxLink_BNO_Driver_Inst.subscription_shift_reg_0_sqmuxa_g  
+    4              0                   335     locked_i_g                                                 
+    3              0                   83      VoxLink_BNO_Driver_Inst.target_length_0_sqmuxa_0_g         
 
 
 Router Summary:
 ---------------
     Status:  Successful
-    Runtime: 2 seconds
+    Runtime: 4 seconds
 
 Routing Resource Utilization:
 -----------------------------
-              Local line of tile     1752 out of  28951      6.0516%
-                          Span 4      221 out of   6784      3.25767%
-                         Span 12       43 out of   1456      2.9533%
-                  Global network        5 out of      8      62.5%
-      Vertical Inter-LUT Connect       20 out of   1092      1.8315%
+              Local line of tile     3056 out of  28951      10.5558%
+                          Span 4      495 out of   6784      7.29658%
+                         Span 12       54 out of   1456      3.70879%
+                  Global network        6 out of      8      75%
+      Vertical Inter-LUT Connect       32 out of   1092      2.9304%
 

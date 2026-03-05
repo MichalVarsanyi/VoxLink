@@ -34,7 +34,8 @@ module Top(
     output      led_tx,
 
     // VoxLink
-    output reg  vox_clk_p
+    output      vox_clk_p,
+    output      vox_clk_n
 );
 
 
@@ -46,9 +47,9 @@ module Top(
     assign          sys_rst = !locked;
 
     // LED
-    wire            led_io_r;
-    wire            led_rx_r;
-    wire            led_tx_r;
+    reg             led_io_r;
+    reg             led_rx_r;
+    reg             led_tx_r;
 
 // ---------------------------------------------
 // Clock
@@ -110,30 +111,30 @@ module Top(
 // Blinky LED
 // ---------------------------------------------
 
-    // reg [26:0]  blink_counter;
+    reg [26:0]  blink_counter;
 
     always @(posedge sys_clk or posedge sys_rst)
     begin
         if(sys_rst)
         begin
-            // led_io_r        <= 1'b1;
-            // led_rx_r        <= 1'b1;
-            // led_tx_r        <= 1'b1; 
+            led_io_r        <= 1'b1;
+            led_rx_r        <= 1'b1;
+            led_tx_r        <= 1'b1; 
         end
-    //     else
-    //     begin
-    //         if(blink_counter == {27{1'b1}})
-    //         begin
-    //             blink_counter   <= {27{1'b0}};
-    //             led_io_r        <= ~led_io_r;
-    //             // led_rx_r        <= ~led_rx_r;
-    //             // led_tx_r        <= ~led_tx_r;
-    //         end
-    //         else
-    //         begin
-    //             blink_counter   <= blink_counter + 1;
-    //         end
-    //     end
+        else
+        begin
+            if(blink_counter == {27{1'b1}})
+            begin
+                blink_counter   <= {27{1'b0}};
+                led_io_r        <= ~led_io_r;
+                led_rx_r        <= ~led_rx_r;
+                led_tx_r        <= ~led_tx_r;
+            end
+            else
+            begin
+                blink_counter   <= blink_counter + 1;
+            end
+        end
     end
     
 
@@ -197,7 +198,7 @@ module Top(
 
     VoxLink_I2C_Driver #(
         .CLK_FREQ(100_500_000),  // System Clock Frequency
-        .I2C_FREQ(400_000)        // Target I2C Speed
+        .I2C_FREQ(100_000)        // Target I2C Speed
     ) VoxLink_I2C_Driver_inst (
         // General
         .sys_clk        (sys_clk),
@@ -226,6 +227,9 @@ module Top(
 // BNO086 Sensor Driver
 // -----------------------------------------------------
 
+    wire [79:0] sensor_data;
+    wire        sensor_data_ready;
+
     VoxLink_BNO_Driver #(
         .BNO_ADDRESS(7'h4B)                         // Check the SA0 pin of the BNO086 in the schematic diagram
     ) VoxLink_BNO_Driver_Inst (
@@ -248,20 +252,33 @@ module Top(
         .driver_finished_tranaction(driver_finished_tranaction),    // Driver has finished a sequence of transaction commands and is now in the idle state
 
         // Sensor
-        .bno_interrupt(bno_interrupt)               // Interrupt from the BNO sensor
+        .bno_interrupt(bno_interrupt),              // Interrupt from the BNO sensor
+
+        .sensor_data(sensor_data),                  // Latched data from the sensor
+        .sensor_data_ready(sensor_data_ready)
 );
 
-    always @(posedge sys_clk or posedge sys_rst)
-    begin
-        if(sys_rst)
-        begin
-            vox_clk_p        <= 1'b0;
-        end
-        else
-        begin
-            vox_clk_p        <= bno_interrupt;
-        end
-    end
+// -----------------------------------------------------
+// VoxLink Protocol Driver
+// -----------------------------------------------------
+
+    VoxLink_VOX_Protocol #(
+        .CLK_FREQ(100_500_000),  // System Clock Frequency
+        .VOX_FREQ(100_000)       // Target VoxLink Speed
+    )(
+        // General
+        .sys_clk(sys_clk),
+        .sys_rst(sys_rst),
+
+        // Data Input
+        .sensor_data(sensor_data),                // Latched data from the sensor
+        .sensor_data_ready(sensor_data_ready),
+
+        // Transmit Output
+        .vox_tx(vox_clk_n),
+        .vox_clk(vox_clk_p)
+
+    );
 
 
 endmodule
