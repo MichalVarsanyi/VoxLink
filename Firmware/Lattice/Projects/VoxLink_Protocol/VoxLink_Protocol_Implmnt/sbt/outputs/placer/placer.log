@@ -6,7 +6,7 @@
 
 * Build Date:         Dec  9 2020 17:55:50
 
-* File Generated:     Feb 25 2026 13:49:16
+* File Generated:     Mar 2 2026 16:52:49
 
 * Purpose:            
 
@@ -38,15 +38,15 @@ W2715: Warning for set_io Constraint: Ignoring pin assignment for led_tx, as it 
 W2715: Warning for set_io Constraint: Ignoring pin assignment for led_io, as it is not connected to any PAD
 
 Input Design Statistics
-    Number of LUTs      	:	128
-    Number of DFFs      	:	106
+    Number of LUTs      	:	304
+    Number of DFFs      	:	362
     Number of DFFs packed to IO	:	0
-    Number of Carrys    	:	18
+    Number of Carrys    	:	98
     Number of RAMs      	:	0
     Number of ROMs      	:	0
-    Number of IOs       	:	4
+    Number of IOs       	:	5
     Number of GBIOs     	:	2
-    Number of GBs       	:	4
+    Number of GBs       	:	6
     Number of WarmBoot  	:	0
     Number of PLLs      	:	1
     Number of I2CFIFOs      	:	0
@@ -66,16 +66,16 @@ I2077: Start design legalization
 W2218: SB_GB_IO 'VoxLink_I2C_Driver_inst.SB_GB_IO_inst_sda' is assigned to a non-GB pin 'D6'. Replacing it with SB_IO 'VoxLink_I2C_Driver_inst.SB_GB_IO_inst_sda'
 
 Design Legalization Statistics
-    Number of feedthru LUTs inserted to legalize input of DFFs     	:	38
+    Number of feedthru LUTs inserted to legalize input of DFFs     	:	158
     Number of feedthru LUTs inserted for LUTs driving multiple DFFs	:	0
-    Number of LUTs replicated for LUTs driving multiple DFFs       	:	0
-    Number of feedthru LUTs inserted to legalize output of CARRYs  	:	3
+    Number of LUTs replicated for LUTs driving multiple DFFs       	:	1
+    Number of feedthru LUTs inserted to legalize output of CARRYs  	:	5
     Number of feedthru LUTs inserted to legalize global signals    	:	1
     Number of feedthru CARRYs inserted to legalize input of CARRYs 	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 01xxxx  	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 10xxxx  	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 11xxxx  	:	0
-    Total LUTs inserted                                            	:	42
+    Total LUTs inserted                                            	:	165
     Total CARRYs inserted                                          	:	0
 
 
@@ -84,31 +84,31 @@ I2088: Phase 1, elapsed time : 0.0 (sec)
 
 
 Phase 2
-I2088: Phase 2, elapsed time : 0.0 (sec)
+I2088: Phase 2, elapsed time : 0.1 (sec)
 
 Phase 3
 Info-1404: Inferred PLL generated clock at u_pll/PLLOUTCORE
 Info-1404: Inferred PLL generated clock at u_pll/PLLOUTGLOBAL
-Warning-1034: Found non-unate timing arc, from pin "in3" to pin "lcout" of instance "GB_BUFFER_clk_12mhz_bufg_THRU_LUT4_0_LC_169", in the clock network. Converting the timing arc to positive-unate
+Warning-1034: Found non-unate timing arc, from pin "in3" to pin "lcout" of instance "GB_BUFFER_clk_12mhz_bufg_THRU_LUT4_0_LC_468", in the clock network. Converting the timing arc to positive-unate
 
 Design Statistics after Packing
-    Number of LUTs      	:	171
-    Number of DFFs      	:	106
+    Number of LUTs      	:	471
+    Number of DFFs      	:	362
     Number of DFFs packed to IO	:	0
-    Number of Carrys    	:	18
+    Number of Carrys    	:	98
 
 Device Utilization Summary after Packing
     Sequential LogicCells
-        LUT and DFF      	:	93
-        LUT, DFF and CARRY	:	13
+        LUT and DFF      	:	289
+        LUT, DFF and CARRY	:	73
     Combinational LogicCells
-        Only LUT         	:	62
-        CARRY Only       	:	2
-        LUT with CARRY   	:	3
-    LogicCells                  :	173/1248
-    PLBs                        :	26/156
+        Only LUT         	:	104
+        CARRY Only       	:	20
+        LUT with CARRY   	:	5
+    LogicCells                  :	491/1248
+    PLBs                        :	69/156
     BRAMs                       :	0/14
-    IOs and GBIOs               :	6/21
+    IOs and GBIOs               :	7/21
     PLLs                        :	1/1
     I2CFIFOs                    :	0/2
     SBIOODs                     :	0/5
@@ -122,27 +122,27 @@ Device Utilization Summary after Packing
     HFOSCs                      :	0/1
 
 
-I2088: Phase 3, elapsed time : 0.3 (sec)
+I2088: Phase 3, elapsed time : 0.8 (sec)
 
 Phase 4
 I2088: Phase 4, elapsed time : 0.1 (sec)
 
 Phase 5
-I2088: Phase 5, elapsed time : 0.1 (sec)
+I2088: Phase 5, elapsed time : 0.8 (sec)
 
 Phase 6
-I2088: Phase 6, elapsed time : 9.0 (sec)
+I2088: Phase 6, elapsed time : 14.9 (sec)
 
 Final Design Statistics
-    Number of LUTs      	:	171
-    Number of DFFs      	:	106
+    Number of LUTs      	:	471
+    Number of DFFs      	:	362
     Number of DFFs packed to IO	:	0
-    Number of Carrys    	:	18
+    Number of Carrys    	:	98
     Number of RAMs      	:	0
     Number of ROMs      	:	0
-    Number of IOs       	:	5
+    Number of IOs       	:	6
     Number of GBIOs     	:	1
-    Number of GBs       	:	4
+    Number of GBs       	:	6
     Number of WarmBoot  	:	0
     Number of PLLs      	:	1
     Number of I2CFIFOs      	:	0
@@ -157,10 +157,10 @@ Final Design Statistics
     Number of HFOSCs     	:	0
 
 Device Utilization Summary
-    LogicCells                  :	173/1248
-    PLBs                        :	38/156
+    LogicCells                  :	491/1248
+    PLBs                        :	93/156
     BRAMs                       :	0/14
-    IOs and GBIOs               :	6/21
+    IOs and GBIOs               :	7/21
     PLLs                        :	1/1
     I2CFIFOs                    :	0/2
     SBIOODs                     :	0/5
@@ -188,7 +188,7 @@ analysis after routing.
 =====================================================================
 Number of clocks: 4
 Clock: clk_12mhz | Frequency: N/A | Target: 12.00 MHz
-Clock: sys_clk | Frequency: 109.96 MHz | Target: 100.50 MHz
+Clock: sys_clk | Frequency: 85.35 MHz | Target: 100.50 MHz
 Clock: u_pll/PLLOUTCORE | Frequency: N/A | Target: 100.50 MHz
 Clock: u_pll/PLLOUTGLOBAL | Frequency: N/A | Target: 100.50 MHz
 
@@ -198,5 +198,5 @@ Clock: u_pll/PLLOUTGLOBAL | Frequency: N/A | Target: 100.50 MHz
 
 I2054: Placement of design completed successfully
 
-I2076: Placer run-time: 9.7 sec.
+I2076: Placer run-time: 17.2 sec.
 

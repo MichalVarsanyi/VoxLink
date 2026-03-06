@@ -1,4 +1,4 @@
-# Wed Feb 25 13:49:09 2026
+# Mon Mar 02 16:52:42 2026
 
 Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -12,26 +12,25 @@ Printing clock  summary report in "C:\Users\varsa\Desktop\School\5_semester\Bach
 @N: MF248 |Running in 64-bit mode.
 @N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 104MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 104MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 103MB)
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 104MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 104MB)
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
 
 @N: MO111 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":28:16:28:23|Tristate driver bno_rstn (in view: work.Top(verilog)) on net bno_rstn (in view: work.Top(verilog)) has its enable tied to GND.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data[7:0] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 
 ICG Latch Removal Summary:
 Number of ICG latches removed:	0
 Number of ICG latches not removed:	0
 syn_allowed_resources : blockrams=16  set on top level netlist Top
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 135MB)
 
 
 
@@ -41,16 +40,17 @@ Clock Summary
 Start                            Requested     Requested     Clock                        Clock                Clock
 Clock                            Frequency     Period        Type                         Group                Load 
 --------------------------------------------------------------------------------------------------------------------
+System                           1.0 MHz       1000.000      system                       system_clkgroup      0    
 Top|sys_clkout_derived_clock     100.5 MHz     9.950         derived (from clk_12mhz)     default_clkgroup     0    
 clk_12mhz                        12.0 MHz      83.333        declared                     default_clkgroup     0    
-sys_clk                          100.5 MHz     9.950         declared                     default_clkgroup     259  
+sys_clk                          100.5 MHz     9.950         declared                     default_clkgroup     505  
 ====================================================================================================================
 
 Finished Pre Mapping Phase.
 @N: MO111 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":28:16:28:23|Tristate driver bno_rstn (in view: work.Top(verilog)) on net bno_rstn (in view: work.Top(verilog)) has its enable tied to GND.
 @N: BN225 |Writing default property annotation file C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLink_Protocol_Implmnt\VoxLink_Protocol.sap.
 
-Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 135MB)
 
 Encoding state machine i2c_state[7:0] (in view: work.VoxLink_I2C_Driver_Z1(verilog))
 original code -> new code
@@ -62,32 +62,23 @@ original code -> new code
    0101 -> 00100000
    0110 -> 01000000
    0111 -> 10000000
-Encoding state machine bno_state[5:0] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_5_6_Z2(verilog))
+Encoding state machine bno_state[4:0] (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog))
 original code -> new code
-   0000 -> 000001
-   0001 -> 000010
-   0010 -> 000100
-   0011 -> 001000
-   0100 -> 010000
-   0101 -> 100000
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[7] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[6] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[5] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[4] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[3] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[2] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[1] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":161:4:161:9|Removing sequential instance rx_data_r[0] (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+   0000 -> 00001
+   0001 -> 00010
+   0010 -> 00100
+   0011 -> 01000
+   0100 -> 10000
 None
 None
 
-Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 48MB peak: 134MB)
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 50MB peak: 135MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed Feb 25 13:49:09 2026
+# Mon Mar 02 16:52:43 2026
 
 ###########################################################]

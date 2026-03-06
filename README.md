@@ -1,6 +1,9 @@
 
 # Protocol Parameters
 ### **⚠️ Warning: Parameters are still subject to change! ⚠️**
+
+- During programming, exceeding internal clocking speeds of 100MHz on the iCE40UL1K-CM36AI FPGA proved to be virtually impossible. In the future, instantiating the hard IP I2C blocks in the FPGA silicon may increase the speed. Realistically, however, switching to a higher speed grade of FPGAs will probably be the best option.
+
 ### **Speed**: 50-100 MHz
 $$
 f_{\mathrm{bandwidth}} = 2 \cdot f_{\mathrm{sensor}} \cdot N_{\mathrm{devices}} \cdot (L_{\mathrm{header}} + L_{\mathrm{data}}) 
