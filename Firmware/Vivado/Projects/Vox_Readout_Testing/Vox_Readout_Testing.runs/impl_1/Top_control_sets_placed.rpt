@@ -1,0 +1,90 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Mar  6 11:27:23 2026
+| Host         : LAPTOP-GK6ER3TV running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
+| Design       : Top
+| Device       : xc7a15t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    12 |
+|    Minimum number of control sets                        |    12 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    27 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    12 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     5 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              21 |           10 |
+| No           | No                    | Yes                    |              66 |           21 |
+| No           | Yes                   | No                     |              85 |           29 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             129 |           35 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+--------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+| Clock Signal |                                                       Enable Signal                                                      |              Set/Reset Signal              | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------+--------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+|  sys_clk     |                                                                                                                          | MV_UART_Inst/uart_txd_i_1_n_0              |                1 |              1 |         1.00 |
+|  sys_clk     | Vox_Receiver_Inst/vox_clk_rising_edge                                                                                    | Vox_Receiver_Inst/AS[0]                    |                1 |              6 |         6.00 |
+|  sys_clk     | MV_UART_Inst/rx_bit_counter[7]_i_1_n_0                                                                                   | Vox_Receiver_Inst/AS[0]                    |                3 |              7 |         2.33 |
+|  sys_clk     | MV_UART_Inst/tx_bit_counter[7]_i_1_n_0                                                                                   | Vox_Receiver_Inst/AS[0]                    |                3 |              7 |         2.33 |
+|  sys_clk     | MV_UART_Inst/received_message_r0                                                                                         | MV_UART_Inst/received_message_r[7]_i_1_n_0 |                3 |              8 |         2.67 |
+|  sys_clk     | MV_UART_Inst/received_good_reg_n_0                                                                                       | Vox_Receiver_Inst/AS[0]                    |                1 |              8 |         8.00 |
+|  sys_clk     | MV_UART_Inst/transmit_message_r[9]_i_1_n_0                                                                               | Vox_Receiver_Inst/AS[0]                    |                2 |              9 |         4.50 |
+|  sys_clk     |                                                                                                                          |                                            |               10 |             21 |         2.10 |
+|  sys_clk     | MV_UART_FIFO_Interface_inst/UART_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0]       | Vox_Receiver_Inst/AS[0]                    |                7 |             22 |         3.14 |
+|  sys_clk     | MV_UART_FIFO_Interface_inst/UART_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/wr_en_0[0] | Vox_Receiver_Inst/AS[0]                    |                6 |             22 |         3.67 |
+|  sys_clk     | MV_UART_Inst/uart_rxd_received                                                                                           | Vox_Receiver_Inst/AS[0]                    |                9 |             40 |         4.44 |
+|  sys_clk     |                                                                                                                          | Vox_Receiver_Inst/AS[0]                    |               49 |            150 |         3.06 |
++--------------+--------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+
+
