@@ -314,21 +314,14 @@ Here is a video fo a blink sketch I programmed in Verilog to verify the function
 
 ![image](images/fpga_blink.gif)
 
-### HDL Development
-Here is a comprehensive HDL development log of the completed Verilog blocks:
-
-- **Top Entity**
-   - **PLL and GBuf**
-- **I2C Driver**
-   - **Inout primitive instantiation**
-   - **TX**
-   - **RX**
-- **BNO Driver**
-   - **Advertisement**
-   - **Subscribe**
-   - *Read*
-- *VoxLink Packet*
-
 ![image](images/I2C_Advertisement.png)
 
 Image of the BNO086 sensor advertisement packet. SDA line is in green, SCL in yelow, and blue indicates the last byte of interest.
+
+### Schedule
+
+- Controller Board Development Deadline - 25rd of March
+- Sensor Board Core Module Deadline     - 30th of March
+- Sensor Shell Module Deadline          - 4th of April
+- Controller Bringup                    - 7 Days from the arrival of the board
+- VoxLink Protocol Development          - 16 Days
