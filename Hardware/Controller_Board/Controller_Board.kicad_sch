@@ -28,6 +28,48 @@
 		(uuid "d68d7259-79d2-4e88-8252-2cafe4e035fe")
 	)
 	(sheet
+		(at 170.18 86.36)
+		(size 35.56 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "1e694702-8554-4dde-9e80-993f5c02b8d7")
+		(property "Sheetname" "FPGA_Config"
+			(at 170.18 85.6484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "fpga_config.kicad_sch"
+			(at 170.18 112.3446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Controller_Board"
+				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 59.69 74.93)
 		(size 50.8 27.305)
 		(exclude_from_sim no)
@@ -85,7 +127,7 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "77637722-5c93-4eaa-a1cc-47897016a2a9")
-		(property "Sheetname" "FPGA Power"
+		(property "Sheetname" "FPGA_Power"
 			(at 128.27 64.0584 0)
 			(effects
 				(font
@@ -112,7 +154,49 @@
 		)
 	)
 	(sheet
-		(at 86.36 -78.74)
+		(at 231.14 86.36)
+		(size 44.45 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9851e49e-1b9b-43e7-98e9-5307aaba6efe")
+		(property "Sheetname" "Connectivity"
+			(at 231.14 85.6484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "connectivity.kicad_sch"
+			(at 231.14 117.4246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Controller_Board"
+				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 213.36 35.56)
 		(size 45.72 30.48)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -128,7 +212,7 @@
 		)
 		(uuid "cd46e716-e63c-4118-a3e6-5dedd1612b37")
 		(property "Sheetname" "FTDI"
-			(at 86.36 -79.4516 0)
+			(at 213.36 34.8484 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -137,7 +221,7 @@
 			)
 		)
 		(property "Sheetfile" "ftdi.kicad_sch"
-			(at 86.36 -47.6754 0)
+			(at 213.36 66.6246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
