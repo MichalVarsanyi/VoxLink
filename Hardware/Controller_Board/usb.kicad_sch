@@ -9,5 +9,956 @@
 		(company "Czech Technical University in Prague")
 		(comment 1 "Designer: Michal Varsanyi")
 	)
-	(lib_symbols)
+	(lib_symbols
+		(symbol "Custom_VoxLink_Symbols:USB2512"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 42.418 79.756 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP3.7x3.7mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.mouser.sk/ProductDetail/Microchip-Technology/USB2532-1080AEN-TR?qs=3i1%252BhB2xfwnqLAgBp2F6Xg%3D%3D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "USB2512_1_1"
+				(rectangle
+					(start 13.97 77.47)
+					(end 44.45 6.35)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at 11.43 66.04 0)
+					(length 2.54)
+					(name "USBUP_D+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 63.5 0)
+					(length 2.54)
+					(name "USBUP_D-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 50.8 0)
+					(length 2.54)
+					(name "CFG_SEL0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 48.26 0)
+					(length 2.54)
+					(name "CFG_SEL1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 45.72 0)
+					(length 2.54)
+					(name "NON_REM0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 43.18 0)
+					(length 2.54)
+					(name "NON_REM1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 38.1 0)
+					(length 2.54)
+					(name "OCS_N2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 35.56 0)
+					(length 2.54)
+					(name "OCS_N1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 33.02 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 33.02 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 33.02 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 33.02 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 33.02 0)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 33.02 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 33.02 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 33.02 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 21.59 0)
+					(length 2.54)
+					(name "VBUS_DET"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 13.97 0)
+					(length 2.54)
+					(name "TEST"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 24.13 80.01 270)
+					(length 2.54)
+					(name "VDDA33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "36"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 26.67 80.01 270)
+					(length 2.54)
+					(name "VDDA33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 26.67 3.81 90)
+					(length 2.54)
+					(name "EP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "37"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 29.21 80.01 270)
+					(length 2.54)
+					(name "VDDA33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 31.75 80.01 270)
+					(length 2.54)
+					(name "VDDA33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 34.29 80.01 270)
+					(length 2.54)
+					(name "VDD33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 36.83 80.01 270)
+					(length 2.54)
+					(name "VDD33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 46.99 66.04 180)
+					(length 2.54)
+					(name "NRESET"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 46.99 62.23 180)
+					(length 2.54)
+					(name "RBIAS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "35"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 46.99 52.07 180)
+					(length 2.54)
+					(name "USBDP_D1-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 46.99 49.53 180)
+					(length 2.54)
+					(name "USBDP_D1+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 46.99 45.72 180)
+					(length 2.54)
+					(name "USBDP_D2-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 46.99 43.18 180)
+					(length 2.54)
+					(name "USBDP_D2+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 46.99 38.1 180)
+					(length 2.54)
+					(name "PRTPWR1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 46.99 35.56 180)
+					(length 2.54)
+					(name "PRTPWR2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 46.99 27.94 180)
+					(length 2.54)
+					(name "CRFILT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 46.99 25.4 180)
+					(length 2.54)
+					(name "PLLFILT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "34"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 46.99 17.78 180)
+					(length 2.54)
+					(name "XTALIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 46.99 13.97 180)
+					(length 2.54)
+					(name "XTALOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "Make it more pretty"
+		(exclude_from_sim no)
+		(at 180.594 131.064 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "69f49239-25ef-4e11-be72-5e15f6790d96")
+	)
+	(text "OCS have internal pullup resistors\nSince we have non-removable devices\nwe won't check the over-current"
+		(exclude_from_sim no)
+		(at 90.17 98.298 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ad6cccb3-0ea8-469c-b0df-a70af491ce04")
+	)
+	(no_connect
+		(at 148.59 96.52)
+		(uuid "02b4ddd3-4525-4e0a-aba8-1ffc9f7c00c3")
+	)
+	(no_connect
+		(at 113.03 96.52)
+		(uuid "03858503-2a04-4a01-9d22-f351eaffcabe")
+	)
+	(no_connect
+		(at 113.03 99.06)
+		(uuid "11b10140-9cac-4673-8a6a-dc0f4214da27")
+	)
+	(no_connect
+		(at 148.59 99.06)
+		(uuid "ac337003-18b6-4784-bdc2-9749a6f90b3d")
+	)
+	(no_connect
+		(at 113.03 101.6)
+		(uuid "f1fec305-b8c0-4d53-9257-4c65fc8cc037")
+	)
+	(symbol
+		(lib_id "Custom_VoxLink_Symbols:USB2512")
+		(at 101.6 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "667c09ee-6a12-4318-a515-1c9b0858db93")
+		(property "Reference" "U12"
+			(at 130.4133 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 130.4133 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP3.7x3.7mm"
+			(at 101.6 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Microchip-Technology/USB2532-1080AEN-TR?qs=3i1%252BhB2xfwnqLAgBp2F6Xg%3D%3D"
+			(at 101.6 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "24"
+			(uuid "17e38b06-05a5-46bc-a14a-6fd416eb3bb1")
+		)
+		(pin "28"
+			(uuid "d432dc89-d1a5-4cb4-8d88-b0a973d9d0d5")
+		)
+		(pin "22"
+			(uuid "2f2af8ae-f7b0-4115-a362-e28980adaaba")
+		)
+		(pin ""
+			(uuid "7ef29d87-2021-4b85-98d2-b75c486a9643")
+		)
+		(pin ""
+			(uuid "adb04ad1-6c5e-4ed8-ba93-d246aeff944c")
+		)
+		(pin "25"
+			(uuid "5b8cf149-1118-445a-81f0-e0cbbd151dc5")
+		)
+		(pin "21"
+			(uuid "e60e2354-e7a3-43d4-9c93-1913802092a1")
+		)
+		(pin "18"
+			(uuid "b37582e1-8ced-41a1-9d50-ca8c882bd73f")
+		)
+		(pin "7"
+			(uuid "fc0e5933-7b54-475a-8d8d-df9864e7b205")
+		)
+		(pin "13"
+			(uuid "f68e75c2-f984-40fc-923c-8ab7fad9fd3e")
+		)
+		(pin "17"
+			(uuid "fdbf6f4e-b9e2-45b5-a7a0-cddc3d069c02")
+		)
+		(pin "19"
+			(uuid "142ac3cc-ea6a-464e-89d8-1b7a40e9008b")
+		)
+		(pin "27"
+			(uuid "0f43f271-4ef4-4805-9bd4-10fd989ad7e7")
+		)
+		(pin "11"
+			(uuid "0adae666-cf06-46af-990d-d51d145f41f5")
+		)
+		(pin "6"
+			(uuid "519d8f1d-1d5d-4a7e-917e-21d7d23f0bcd")
+		)
+		(pin "8"
+			(uuid "fac733fd-79ef-41de-b786-94cacee082c8")
+		)
+		(pin "20"
+			(uuid "4c181fd2-556a-43f6-8646-54de76ea7edd")
+		)
+		(pin "9"
+			(uuid "ca7376d5-c285-4698-9f03-b11792d7bb9a")
+		)
+		(pin "14"
+			(uuid "29b7ffbc-a099-48df-a9a3-00b9084d7c24")
+		)
+		(pin "34"
+			(uuid "9912a980-0d3a-4ed6-b224-43705019d4ec")
+		)
+		(pin "32"
+			(uuid "206f4233-1c0d-4876-990b-7f945f426a3a")
+		)
+		(pin "33"
+			(uuid "2a3130e8-3081-41c9-9131-2da9212a672c")
+		)
+		(pin "4"
+			(uuid "e2295813-5cc7-48cd-b832-ba48b64cd0ef")
+		)
+		(pin "16"
+			(uuid "a9e49a9b-ca42-475f-a3b1-7439ec2660f1")
+		)
+		(pin "12"
+			(uuid "273f9136-faf2-49d6-887a-e6503dd09017")
+		)
+		(pin "35"
+			(uuid "2d59f8e6-0919-41fb-8818-0342e26969f1")
+		)
+		(pin "1"
+			(uuid "5837a03a-1ffd-4537-a4b5-1e143ea8297c")
+		)
+		(pin "36"
+			(uuid "7368d0a1-285b-4243-a471-7c35bf3b4421")
+		)
+		(pin "2"
+			(uuid "46b59d78-7a4c-4433-9864-b46b51d5b4ad")
+		)
+		(pin "3"
+			(uuid "d3acf1be-f259-41db-88fe-786c1473d3a7")
+		)
+		(pin "5"
+			(uuid "4437aa34-e6ea-45ae-8799-defb0ca24130")
+		)
+		(pin "15"
+			(uuid "7afca34d-a996-410b-aa78-482b2e0780f1")
+		)
+		(pin "29"
+			(uuid "32694f72-3931-4297-95f2-9de044e715f3")
+		)
+		(pin "10"
+			(uuid "26416d41-b4bd-42f0-9c37-0a7366dad8d3")
+		)
+		(pin "37"
+			(uuid "d521d77a-09ea-4fe1-b9d3-54f164d4e382")
+		)
+		(pin "23"
+			(uuid "10e79354-7328-4983-bb4b-3b1e0921149f")
+		)
+		(pin "26"
+			(uuid "a563a263-abf2-4901-8e76-baa5bda7bf99")
+		)
+		(instances
+			(project ""
+				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/6841ebe0-d0f7-414d-8e63-132e7a23cd7b"
+					(reference "U12")
+					(unit 1)
+				)
+			)
+		)
+	)
 )
