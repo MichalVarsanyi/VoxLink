@@ -286,69 +286,11 @@
 					(hide yes)
 				)
 			)
-			(symbol "XC7A35T-CPG236_0_1"
-				(rectangle
-					(start 33.02 35.56)
-					(end 63.5 -44.45)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(text "CONFIG"
-					(at 34.036 23.876 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-						(justify left)
-					)
-				)
-				(text "CONFIG"
-					(at 48.514 33.274 0)
-					(effects
-						(font
-							(size 2.54 2.54)
-						)
-					)
-				)
-				(text "JTAG"
-					(at 62.484 29.21 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-						(justify right)
-					)
-				)
-				(text "FLAGS"
-					(at 62.484 -9.144 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-						(justify right)
-					)
-				)
-				(text "MODE"
-					(at 62.738 8.382 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-						(justify right)
-					)
-				)
-				(text "SPI FLASH"
-					(at 62.738 -27.178 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-						(justify right)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
 					)
 				)
 			)
@@ -2243,6 +2185,70 @@
 				)
 			)
 			(symbol "XC7A35T-CPG236_2_1"
+				(rectangle
+					(start 33.02 36.83)
+					(end 63.5 -44.45)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(text "CONFIG"
+					(at 34.036 24.13 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+						(justify left)
+					)
+				)
+				(text "CONFIG"
+					(at 48.514 33.528 0)
+					(effects
+						(font
+							(size 2.54 2.54)
+						)
+					)
+				)
+				(text "JTAG"
+					(at 62.484 29.464 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+						(justify right)
+					)
+				)
+				(text "FLAGS"
+					(at 62.484 -8.89 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+						(justify right)
+					)
+				)
+				(text "MODE"
+					(at 62.738 8.636 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+						(justify right)
+					)
+				)
+				(text "SPI FLASH"
+					(at 62.738 -26.924 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+						(justify right)
+					)
+				)
 				(pin bidirectional line
 					(at 29.21 21.59 0)
 					(length 3.81)
@@ -2362,6 +2368,24 @@
 						)
 					)
 					(number "B11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 29.21 -6.35 0)
+					(length 3.81)
+					(name "MGTRREF_216"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "C7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6316,6 +6340,9 @@
 		)
 		(pin "U11"
 			(uuid "9172558b-e6fb-4edc-a95a-55cf27c7d5ff")
+		)
+		(pin "C7"
+			(uuid "1aff1994-157b-40cd-9df1-08f0d0178a34")
 		)
 		(instances
 			(project ""

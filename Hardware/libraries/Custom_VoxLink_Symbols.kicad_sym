@@ -8149,76 +8149,18 @@
 				(hide yes)
 			)
 		)
-		(symbol "XC7A35T-CPG236_0_1"
-			(rectangle
-				(start -77.47 30.48)
-				(end -46.99 -49.53)
-				(stroke
-					(width 0)
-					(type solid)
-				)
-				(fill
-					(type background)
-				)
-			)
-			(text "CONFIG"
-				(at -76.454 18.796 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(text "CONFIG"
-				(at -61.976 28.194 0)
-				(effects
-					(font
-						(size 2.54 2.54)
-					)
-				)
-			)
-			(text "JTAG"
-				(at -48.006 24.13 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify right)
-				)
-			)
-			(text "FLAGS"
-				(at -48.006 -14.224 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify right)
-				)
-			)
-			(text "MODE"
-				(at -47.752 3.302 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify right)
-				)
-			)
-			(text "SPI FLASH"
-				(at -47.752 -32.258 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify right)
+		(property "ki_locked" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
 		(symbol "XC7A35T-CPG236_1_1"
 			(rectangle
 				(start -17.78 43.18)
-				(end 19.05 -45.72)
+				(end 19.05 -46.99)
 				(stroke
 					(width 0)
 					(type solid)
@@ -8452,7 +8394,25 @@
 				)
 			)
 			(pin power_in line
-				(at -21.59 -20.32 0)
+				(at -21.59 -19.05 0)
+				(length 3.81)
+				(name "MGTRREF_216"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "C7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -21.59 -21.59 0)
 				(length 3.81)
 				(name "MGTAVCC"
 					(effects
@@ -8470,7 +8430,7 @@
 				)
 			)
 			(pin power_in line
-				(at -21.59 -22.86 0)
+				(at -21.59 -24.13 0)
 				(length 3.81)
 				(name "MGTAVCC"
 					(effects
@@ -8488,7 +8448,7 @@
 				)
 			)
 			(pin power_in line
-				(at -21.59 -25.4 0)
+				(at -21.59 -26.67 0)
 				(length 3.81)
 				(name "MGTAVCC"
 					(effects
@@ -8506,7 +8466,7 @@
 				)
 			)
 			(pin power_in line
-				(at -21.59 -27.94 0)
+				(at -21.59 -29.21 0)
 				(length 3.81)
 				(name "MGTAVCC"
 					(effects
@@ -8524,7 +8484,7 @@
 				)
 			)
 			(pin power_in line
-				(at -21.59 -30.48 0)
+				(at -21.59 -31.75 0)
 				(length 3.81)
 				(name "MGTAVCC"
 					(effects
@@ -8542,7 +8502,7 @@
 				)
 			)
 			(pin power_in line
-				(at -21.59 -34.29 0)
+				(at -21.59 -35.56 0)
 				(length 3.81)
 				(name "MGTAVTT"
 					(effects
@@ -8560,7 +8520,7 @@
 				)
 			)
 			(pin power_in line
-				(at -21.59 -36.83 0)
+				(at -21.59 -38.1 0)
 				(length 3.81)
 				(name "MGTAVTT"
 					(effects
@@ -8578,7 +8538,7 @@
 				)
 			)
 			(pin power_in line
-				(at -21.59 -39.37 0)
+				(at -21.59 -40.64 0)
 				(length 3.81)
 				(name "MGTAVTT"
 					(effects
@@ -8596,7 +8556,7 @@
 				)
 			)
 			(pin power_in line
-				(at -21.59 -41.91 0)
+				(at -21.59 -43.18 0)
 				(length 3.81)
 				(name "MGTAVTT"
 					(effects
@@ -8614,7 +8574,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 3.81)
 				(name "GND"
 					(effects
@@ -8632,7 +8592,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8651,7 +8611,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8670,7 +8630,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8689,7 +8649,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8708,7 +8668,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8727,7 +8687,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8746,7 +8706,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8765,7 +8725,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8784,7 +8744,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8803,7 +8763,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8822,7 +8782,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8841,7 +8801,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8860,7 +8820,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8879,7 +8839,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8898,7 +8858,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8917,7 +8877,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8936,7 +8896,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8955,7 +8915,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8974,7 +8934,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -8993,7 +8953,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9012,7 +8972,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9031,7 +8991,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9050,7 +9010,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9069,7 +9029,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9088,7 +9048,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9107,7 +9067,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9126,7 +9086,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9145,7 +9105,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9164,7 +9124,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9183,7 +9143,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9202,7 +9162,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9221,7 +9181,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9240,7 +9200,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9259,7 +9219,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9278,7 +9238,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9297,7 +9257,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9316,7 +9276,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9335,7 +9295,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9354,7 +9314,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9373,7 +9333,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9392,7 +9352,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9411,7 +9371,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9430,7 +9390,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9449,7 +9409,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9468,7 +9428,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9487,7 +9447,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9506,7 +9466,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9525,7 +9485,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9544,7 +9504,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9563,7 +9523,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9582,7 +9542,7 @@
 				)
 			)
 			(pin power_in line
-				(at -1.27 -49.53 90)
+				(at -1.27 -50.8 90)
 				(length 6.35)
 				(hide yes)
 				(name "GND"
@@ -9601,7 +9561,7 @@
 				)
 			)
 			(pin power_in line
-				(at 2.54 -49.53 90)
+				(at 2.54 -50.8 90)
 				(length 3.81)
 				(name "GNDADC_0"
 					(effects
@@ -10106,6 +10066,70 @@
 			)
 		)
 		(symbol "XC7A35T-CPG236_2_1"
+			(rectangle
+				(start 33.02 36.83)
+				(end 63.5 -44.45)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(text "CONFIG"
+				(at 34.036 24.13 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(text "CONFIG"
+				(at 48.514 33.528 0)
+				(effects
+					(font
+						(size 2.54 2.54)
+					)
+				)
+			)
+			(text "JTAG"
+				(at 62.484 29.464 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(text "FLAGS"
+				(at 62.484 -8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(text "MODE"
+				(at 62.738 8.636 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(text "SPI FLASH"
+				(at 62.738 -26.924 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
 			(pin bidirectional line
 				(at 29.21 21.59 0)
 				(length 3.81)
@@ -10225,24 +10249,6 @@
 					)
 				)
 				(number "B11"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 29.21 -6.35 0)
-				(length 3.81)
-				(name "MGTRREF_216"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "C7"
 					(effects
 						(font
 							(size 1.27 1.27)
