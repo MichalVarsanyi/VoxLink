@@ -1,6 +1,7 @@
 
 # Protocol Parameters
-### **⚠️ Warning: Parameters are still subject to change! ⚠️**
+> [!WARNING]  
+> Parameters are still subject to change!
 
 - During programming, exceeding internal clocking speeds of 100MHz on the iCE40UL1K-CM36AI FPGA proved to be virtually impossible. In the future, instantiating the hard IP I2C blocks in the FPGA silicon may increase the speed. Realistically, however, switching to a higher speed grade of FPGAs will probably be the best option.
 
@@ -136,7 +137,8 @@ $$
 
 This means the transmission line will appear as a **lumped element** (no impedance matching needed as the reflections are negligible) only for **traces shorter than 27.5mm**. Anything **above** this length needs to be treated as a **distributed element** and requires **impedance matching**.
 
-> ⚠️ **Impedance control is required for both the cable and the connector assembly!**
+> [!IMPORTANT]
+> Impedance control is required for both the cable and the connector assembly!
 
 | Ethernet | USB |
 |:--------:|:--------:|
@@ -318,9 +320,64 @@ Here is a video fo a blink sketch I programmed in Verilog to verify the function
 
 Image of the BNO086 sensor advertisement packet. SDA line is in green, SCL in yelow, and blue indicates the last byte of interest.
 
+## Schematic Diagram - Controller Board
+
+The controller board consists of the following 7 schematic pages: Power, FPGA_Power, FPGA_Config, JTAG, Serial, USB, and Connectivity. In the following sections, the purpose of each page will be outlined.
+
+To see the final schematic, click [here](https://github.com/MichalVarsanyi/VoxLink/blob/main/Hardware/Controller_Board/schematic.pdf) (Please note that not all the pages are loaded right away. To see the complete schematic, please click the **'More Pages'** button at the bottom of the page)
+
+### Power
+This section contains switching regulators generating all the necessary voltage levels for the Xilinx FPGA onboard, as well as the sensor board chains. The power can be supplied via an XT30 connector for normal operation or the USB-C for limited-programming tasks. Please note the following restrictions:
+> [!CAUTION]
+> The **maximum** input voltage is **48V**!
+
+> [!WARNING]
+> The USB-C power should not be used for operation with multiple sensor boards connected!
+
+The snubber network is designed to handle 100V; however, the 5V switching regulator can handle only 65V. Implementing the snubber greatly reduces the inductive voltage spikes from connecting long cables; however, implementing a 53V working and 63V clamping voltage ESD diode will eliminate ESD events or possible voltage spikes in case the snubber fails to address them.
+
+### FPGA_Power
+
+This section houses decoupling capacitors for the Xilinx FPGA. Due to PCB assembly, the choice was 0201 footprints. The capacitor selection was roughly 1x 100nF per VDD pin. Extra filtering is used for the XADC.
+
+### FPGA_Config
+
+This is the configuration of the FPGA. Some of the following design choices will be explained below:
+- The XADC GND was connected to the digital GND for two reasons. In the current design, the XADC is not used. The benefit of having a proper grounding outweighs the benefits of splitting groundplanes at these frequencies.
+- The PUDC (FPGA pin E18) is tied HIGH to disable internal pullup resistors during booting
+- The current MODE configuration makes the FPGA boot in SPI mode and read from the SPI flash
+- Init_b is used to delay the booting. Please refer to the schematic for an explanation of why we don't need to delay this process.
+
+> [!NOTE]
+> The JTAG (TDI, TDO, ...) has no signal flipping like UART does
+
+### JTAG
+
+This is the FTDI implementation of the JTAG programming protocol. The schematic is identical to the FT2232H design of the Programming Board; the only difference is the use of FT232H, which is a single-channel version of the FT2232H. Note the different configuration of the power input/output pins. Please refer to the datasheet for VCCD operation (VREGIN = 5V -> VCCD = 3V3 output | VREGIN = 3V3 -> VCCD = 3V3 input).
+
+### Serial
+
+Another FT232H is used to implement a USB 2.0 High-Speed 480Mbit/s transfer link to the PC. The SYNC 245 FIFO mode was used on the FTDI chip. This configuration needs to be configured in the attached EEPROM memory. In the SYNC 245 FIFO mode, the FTDI chips consume all the resources; thus, in the case of FT2232H, the B channel cannot be used. Apart from not being able to implement JTAG on channel B of the FT2232H, the program_ftdi utility provided by Xilinx has no way of signaling that the JTAG is on channel B, restricting the JTAG to channel A. This was the main reason two FTDI chips were used in this design.
+
+### USB
+
+This is the integrated USB hub allowing the two FT232H chips to communicate via a single USB-C connection. It is important to check the USB +/- pairs, as reverting them results in the destruction of the components. The strapping options allow the user to configure the USB hub using just resistors. The default configuration is selected by tying CFG_SEL0 and CFG_SEL1 LOW. Then the NON_REM (non-removable) pins are set to 10, to indicate both of the FTDI chips are non-removable and permanently attached to the HUB IC.
+
+Furthermore, the FT232H is connected in a way to allow the implementation of UART to Serial bridge, which minimizes testing time. Please note that UART  will be implemented in the first implementation of VoxLink.
+
+### Connectivity
+
+This is the physical interface for the sensor boards to terminate their connections. The shielded RJ45 connectors were chosen in order to provide a rugged and impedance-matched termination.
+
+> [!NOTE]
+> The Controller Board is designed to work with LVDS signaling and for transfer speeds up to 100MBit/s
+
+Although LVDS signaling is supported by the RJ45 twisted wire pair terminations, single-ended transmission will be implemented in the first implementation of VoxLink.
+
 ### Schedule
 
-- Controller Board Development Deadline - 25rd of March
+- **Controller Board Development Deadline** - 25rd of March
+   - Finished Schematic Design - 17th of March
 - Sensor Board Core Module Deadline     - 30th of March
 - Sensor Shell Module Deadline          - 4th of April
 - Controller Bringup                    - 7 Days from the arrival of the board
