@@ -323,5 +323,5 @@ Image of the BNO086 sensor advertisement packet. SDA line is in green, SCL in ye
 - Controller Board Development Deadline - 25rd of March
 - Sensor Board Core Module Deadline     - 30th of March
 - Sensor Shell Module Deadline          - 4th of April
-- Controller Bringup                    - 7 DAYS from the arrival of the board
+- Controller Bringup                    - 7 Days from the arrival of the board
 - VoxLink Protocol Development          - 16 Days
