@@ -1680,7 +1680,7 @@
 						)
 					)
 				)
-				(number "1"
+				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1698,7 +1698,7 @@
 						)
 					)
 				)
-				(number "2"
+				(number "1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1729,7 +1729,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Custom_VoxLink_Footprints:X2SON-3"
 			(at 0 0 0)
 			(effects
 				(font
@@ -3853,7 +3853,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Custom_VoxLink_Footprints:LT8645S"
+		(property "Footprint" "Custom_VoxLink_Footprints:LQFN-32-6EP_6x4mm_P0.5mm_EP1.355x1.125mm"
 			(at 0 0 0)
 			(effects
 				(font
@@ -6019,6 +6019,201 @@
 					)
 				)
 				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "TDS5311P"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 3.81 1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TDS5311P"
+			(at 3.81 -0.635 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:DFN-6-1EP_2x2mm_P0.65mm_EP1x1.6mm"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Semtech/TDS5311P.C?qs=vcFyY%252BOcAyj8qKAYi7WPvA%3D%3D"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "TDS5311P_1_1"
+			(rectangle
+				(start -2.54 5.08)
+				(end 2.54 -5.08)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin input line
+				(at 0 7.62 270)
+				(length 2.54)
+				(name "VIN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 0 7.62 270)
+				(length 2.54)
+				(hide yes)
+				(name "VIN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 0 7.62 270)
+				(length 2.54)
+				(hide yes)
+				(name "VIN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 0 -7.62 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 0 -7.62 90)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 0 -7.62 90)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 0 -7.62 90)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -8571,7 +8766,7 @@
 				)
 			)
 			(pin input line
-				(at 46.99 73.66 180)
+				(at 46.99 74.93 180)
 				(length 2.54)
 				(name "RBIAS"
 					(effects
@@ -10801,8 +10996,26 @@
 					)
 				)
 			)
+			(pin bidirectional line
+				(at -19.05 17.78 0)
+				(length 3.81)
+				(name "IO_L3P_T0_DQS_PUDC_B_14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "E18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 			(pin input line
-				(at -19.05 20.32 0)
+				(at -19.05 10.16 0)
 				(length 3.81)
 				(name "VP_0"
 					(effects
@@ -10820,7 +11033,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 17.78 0)
+				(at -19.05 7.62 0)
 				(length 3.81)
 				(name "VN_0"
 					(effects
@@ -10838,7 +11051,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 12.7 0)
+				(at -19.05 2.54 0)
 				(length 3.81)
 				(name "VREFP_0"
 					(effects
@@ -10856,7 +11069,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 10.16 0)
+				(at -19.05 0 0)
 				(length 3.81)
 				(name "VREFN_0"
 					(effects
@@ -10874,7 +11087,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 5.08 0)
+				(at -19.05 -5.08 0)
 				(length 3.81)
 				(name "DXP_0"
 					(effects
@@ -10892,7 +11105,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 2.54 0)
+				(at -19.05 -7.62 0)
 				(length 3.81)
 				(name "DXN_0"
 					(effects
@@ -11082,6 +11295,24 @@
 					)
 				)
 				(number "U11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 19.05 -20.32 180)
+				(length 3.81)
+				(name "IO_L3N_T0_DQS_EMCCLK_14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "E19"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -11455,8 +11686,8 @@
 		)
 		(symbol "XC7A35T-CPG236_4_1"
 			(rectangle
-				(start -13.97 52.07)
-				(end 21.59 -90.17)
+				(start -13.97 46.99)
+				(end 21.59 -91.44)
 				(stroke
 					(width 0)
 					(type solid)
@@ -11466,7 +11697,7 @@
 				)
 			)
 			(text "BANK 14"
-				(at -8.89 44.45 0)
+				(at -8.89 39.37 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -11476,46 +11707,10 @@
 				)
 			)
 			(text "IO Banks"
-				(at 3.81 48.26 0)
+				(at 3.81 43.18 0)
 				(effects
 					(font
 						(size 2.54 2.54)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -17.78 41.91 0)
-				(length 3.81)
-				(name "IO_L3P_T0_DQS_PUDC_B_14"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "E18"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -17.78 39.37 0)
-				(length 3.81)
-				(name "IO_L3N_T0_DQS_EMCCLK_14"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "E19"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
 					)
 				)
 			)
@@ -12544,7 +12739,7 @@
 		(symbol "XC7A35T-CPG236_6_1"
 			(rectangle
 				(start -11.43 38.1)
-				(end 13.97 -36.83)
+				(end 13.97 -44.45)
 				(stroke
 					(width 0)
 					(type solid)
@@ -12808,14 +13003,14 @@
 			(pin bidirectional line
 				(at -15.24 -7.62 0)
 				(length 3.81)
-				(name "IO_L11N_T1_SRCC_34"
+				(name "IO_L12N_T1_MRCC_34"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "V4"
+				(number "W4"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -12844,14 +13039,14 @@
 			(pin bidirectional line
 				(at -15.24 -12.7 0)
 				(length 3.81)
-				(name "IO_L12N_T1_MRCC_34"
+				(name "IO_L11N_T1_SRCC_34"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "W4"
+				(number "V4"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -12860,7 +13055,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -15.24 -15.24 0)
+				(at -15.24 -22.86 0)
 				(length 3.81)
 				(name "IO_L13P_T2_MRCC_34"
 					(effects
@@ -12878,7 +13073,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -15.24 -17.78 0)
+				(at -15.24 -25.4 0)
 				(length 3.81)
 				(name "IO_L13N_T2_MRCC_34"
 					(effects
@@ -12896,7 +13091,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -15.24 -20.32 0)
+				(at -15.24 -27.94 0)
 				(length 3.81)
 				(name "IO_L14P_T2_SRCC_34"
 					(effects
@@ -12914,7 +13109,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -15.24 -22.86 0)
+				(at -15.24 -30.48 0)
 				(length 3.81)
 				(name "IO_L14N_T2_SRCC_34"
 					(effects
@@ -12932,7 +13127,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -15.24 -25.4 0)
+				(at -15.24 -33.02 0)
 				(length 3.81)
 				(name "IO_L16P_T2_34"
 					(effects
@@ -12950,7 +13145,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -15.24 -27.94 0)
+				(at -15.24 -35.56 0)
 				(length 3.81)
 				(name "IO_L16N_T2_34"
 					(effects
@@ -12968,7 +13163,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -15.24 -30.48 0)
+				(at -15.24 -38.1 0)
 				(length 3.81)
 				(name "IO_L19P_T3_34"
 					(effects
@@ -12986,7 +13181,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -15.24 -33.02 0)
+				(at -15.24 -40.64 0)
 				(length 3.81)
 				(name "IO_L19N_T3_VREF_34"
 					(effects
@@ -13006,7 +13201,7 @@
 		)
 		(symbol "XC7A35T-CPG236_7_1"
 			(rectangle
-				(start -12.7 34.29)
+				(start -12.7 19.05)
 				(end 15.24 -27.94)
 				(stroke
 					(width 0)
@@ -13017,7 +13212,7 @@
 				)
 			)
 			(text "BANK 35"
-				(at -7.62 26.67 0)
+				(at -7.62 11.43 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -13027,118 +13222,10 @@
 				)
 			)
 			(text "IO Banks"
-				(at 1.27 30.48 0)
+				(at 1.27 15.24 0)
 				(effects
 					(font
 						(size 2.54 2.54)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -16.51 24.13 0)
-				(length 3.81)
-				(name "IO_L1P_T0_AD4P_35"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "G3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -16.51 21.59 0)
-				(length 3.81)
-				(name "IO_L1N_T0_AD4N_35"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "G2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -16.51 19.05 0)
-				(length 3.81)
-				(name "IO_L2P_T0_AD12P_35"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "H2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -16.51 16.51 0)
-				(length 3.81)
-				(name "IO_L2N_T0_AD12N_35"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "J2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -16.51 13.97 0)
-				(length 3.81)
-				(name "IO_L3P_T0_DQS_AD5P_35"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "H1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -16.51 11.43 0)
-				(length 3.81)
-				(name "IO_L3N_T0_DQS_AD5N_35"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "J1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
 					)
 				)
 			)
@@ -13387,6 +13474,145 @@
 					)
 				)
 				(number "P1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "XC7A35T-CPG236_8_1"
+			(rectangle
+				(start -13.97 15.24)
+				(end 12.7 -11.43)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(text "BANK 35"
+				(at -8.89 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+					)
+				)
+			)
+			(text "IO Banks"
+				(at 0 11.43 0)
+				(effects
+					(font
+						(size 2.54 2.54)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -17.78 5.08 0)
+				(length 3.81)
+				(name "IO_L1P_T0_AD4P_35"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "G3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -17.78 2.54 0)
+				(length 3.81)
+				(name "IO_L1N_T0_AD4N_35"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "G2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -17.78 0 0)
+				(length 3.81)
+				(name "IO_L2P_T0_AD12P_35"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "H2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -17.78 -2.54 0)
+				(length 3.81)
+				(name "IO_L2N_T0_AD12N_35"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "J2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -17.78 -5.08 0)
+				(length 3.81)
+				(name "IO_L3P_T0_DQS_AD5P_35"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "H1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -17.78 -7.62 0)
+				(length 3.81)
+				(name "IO_L3N_T0_DQS_AD5N_35"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "J1"
 					(effects
 						(font
 							(size 1.27 1.27)
