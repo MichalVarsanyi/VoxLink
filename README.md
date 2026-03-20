@@ -370,7 +370,7 @@ Furthermore, the FT232H is connected in a way to allow the implementation of UAR
 This is the physical interface for the sensor boards to terminate their connections. The shielded RJ45 connectors were chosen in order to provide a rugged and impedance-matched termination.
 
 > [!NOTE]
-> The Controller Board is designed to work with LVDS signaling and for transfer speeds up to 100MBit/s
+> The Controller Board is designed to work with LVDS signaling and with transfer speeds up to 100MBit/s
 
 Although LVDS signaling is supported by the RJ45 twisted wire pair terminations, single-ended transmission will be implemented in the first implementation of VoxLink.
 
