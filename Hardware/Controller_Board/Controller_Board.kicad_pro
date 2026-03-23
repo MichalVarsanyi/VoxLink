@@ -522,33 +522,45 @@
         "wire_width": 6
       },
       {
-        "bus_width": 12,
         "line_style": 0,
         "name": "1V0",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 4,
+        "priority": 6,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "tuning_profile": "",
-        "wire_width": 6
+        "tuning_profile": ""
       },
       {
         "name": "1V8",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 3,
+        "priority": 5,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "tuning_profile": ""
       },
       {
         "name": "3V3",
         "pcb_color": "rgb(255, 255, 0)",
-        "priority": 2,
+        "priority": 4,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "tuning_profile": ""
+      },
+      {
+        "name": "FPGA_FLASH",
+        "pcb_color": "rgb(0, 255, 255)",
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "tuning_profile": ""
       },
       {
         "name": "GND",
         "pcb_color": "rgb(132, 132, 132)",
-        "priority": 1,
+        "priority": 3,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "tuning_profile": ""
+      },
+      {
+        "name": "VOX_LED",
+        "pcb_color": "rgb(0, 255, 0)",
+        "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "tuning_profile": ""
       },
@@ -560,7 +572,7 @@
         "microvia_drill": 0.15,
         "name": "VOX_LINK",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
+        "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.1,
         "tuning_profile": "",
@@ -601,6 +613,14 @@
       {
         "netclass": "VOX_LINK",
         "pattern": "/Connectivity/P*_TX*"
+      },
+      {
+        "netclass": "FPGA_FLASH",
+        "pattern": "/FPGA_Config/*_FPGA*"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "P*"
       }
     ]
   },
