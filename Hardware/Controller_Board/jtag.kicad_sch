@@ -2517,7 +2517,7 @@
 		)
 		(uuid "e822c483-72ee-4a00-8c81-cd3e3c6efc79")
 	)
-	(text_box "FTDI USB-to-UART"
+	(text_box "FTDI USB-to-JTAG"
 		(exclude_from_sim no)
 		(at 106.045 20.32 0)
 		(size 167.64 140.97)
@@ -2612,12 +2612,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2e41dc09-580e-475f-852f-3effbd6c91c5")
-	)
-	(junction
-		(at 154.94 36.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "35416045-12b7-4866-aab6-b005333b103a")
 	)
 	(junction
 		(at 114.3 36.83)
@@ -2916,16 +2910,6 @@
 			(type default)
 		)
 		(uuid "255286a3-bfe6-42ef-8cc2-e9eaab41e34f")
-	)
-	(wire
-		(pts
-			(xy 154.94 36.83) (xy 165.1 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2659a538-5a39-43b2-9a3f-e349270a4439")
 	)
 	(wire
 		(pts
@@ -3646,16 +3630,6 @@
 			(type default)
 		)
 		(uuid "ea850d2d-6b82-4254-9ae6-ef5cad000d3e")
-	)
-	(wire
-		(pts
-			(xy 165.1 36.83) (xy 165.1 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ec123b0f-0bb2-4ced-a04d-ccf645931b39")
 	)
 	(wire
 		(pts
@@ -5491,88 +5465,6 @@
 			(project "Controller_Board"
 				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/cd46e716-e63c-4118-a3e6-5dedd1612b37"
 					(reference "R405")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 165.1 41.91 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3f7cb0e9-dd2b-4182-8e4b-31ac6778484e")
-		(property "Reference" "C406"
-			(at 162.814 40.894 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 162.814 42.926 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 164.1348 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 165.1 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2e033491-7359-474c-a6d8-3c2be12ef4f8")
-		)
-		(pin "2"
-			(uuid "3e8bd1a0-bc08-4b2a-a880-6a1fe2408149")
-		)
-		(instances
-			(project "Controller_Board"
-				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/cd46e716-e63c-4118-a3e6-5dedd1612b37"
-					(reference "C406")
 					(unit 1)
 				)
 			)
@@ -7628,7 +7520,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 54.9148 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -8927,7 +8819,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 54.9148 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -9514,85 +9406,6 @@
 			(project "Controller_Board"
 				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/cd46e716-e63c-4118-a3e6-5dedd1612b37"
 					(reference "#PWR0401")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 165.1 45.72 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e438c1a3-2514-41e5-92c5-f182dbe46b71")
-		(property "Reference" "#PWR0410"
-			(at 165.1 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 165.1 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 165.1 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 165.1 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0aaddb68-ea4b-4452-8786-15981a8912c9")
-		)
-		(instances
-			(project "Controller_Board"
-				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/cd46e716-e63c-4118-a3e6-5dedd1612b37"
-					(reference "#PWR0410")
 					(unit 1)
 				)
 			)

@@ -525,42 +525,57 @@
         "line_style": 0,
         "name": "1V0",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 6,
+        "priority": 7,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "tuning_profile": ""
       },
       {
         "name": "1V8",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 5,
+        "priority": 6,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "tuning_profile": ""
       },
       {
         "name": "3V3",
         "pcb_color": "rgb(255, 255, 0)",
-        "priority": 4,
+        "priority": 5,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "tuning_profile": ""
       },
       {
         "name": "FPGA_FLASH",
-        "pcb_color": "rgb(0, 255, 255)",
-        "priority": 1,
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "tuning_profile": ""
       },
       {
         "name": "GND",
         "pcb_color": "rgb(132, 132, 132)",
-        "priority": 3,
+        "priority": 4,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "tuning_profile": ""
       },
       {
-        "name": "VOX_LED",
-        "pcb_color": "rgb(0, 255, 0)",
+        "clearance": 0.11,
+        "diff_pair_gap": 0.11,
+        "diff_pair_width": 0.12,
+        "microvia_diameter": 0.25,
+        "microvia_drill": 0.15,
+        "name": "USB",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.12,
+        "tuning_profile": "",
+        "via_diameter": 0.25,
+        "via_drill": 0.15
+      },
+      {
+        "name": "VOX_LED",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "tuning_profile": ""
       },
@@ -572,7 +587,7 @@
         "microvia_drill": 0.15,
         "name": "VOX_LINK",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
+        "priority": 3,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.1,
         "tuning_profile": "",
@@ -621,6 +636,14 @@
       {
         "netclass": "Default",
         "pattern": "P*"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "*D+"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "*D-"
       }
     ]
   },
@@ -772,7 +795,7 @@
         "uuid": "4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d"
       }
     ],
-    "used_designators": "",
+    "used_designators": "H1-4,#PWR797-800",
     "variants": []
   },
   "sheets": [

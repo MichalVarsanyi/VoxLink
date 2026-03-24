@@ -5579,7 +5579,7 @@
 	)
 	(global_label "JTAG_D+"
 		(shape input)
-		(at 224.79 102.87 0)
+		(at 224.79 109.22 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5589,7 +5589,7 @@
 		)
 		(uuid "0cb1b272-bb4f-4428-965e-b89ffc1e186b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 235.879 102.87 0)
+			(at 235.879 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5651,7 +5651,7 @@
 	)
 	(global_label "SERIAL_D-"
 		(shape input)
-		(at 224.79 106.68 0)
+		(at 224.79 100.33 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5661,7 +5661,7 @@
 		)
 		(uuid "5ab88670-369a-4989-9ca4-151ffa7d3cca")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 237.9352 106.68 0)
+			(at 237.9352 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5675,7 +5675,7 @@
 	)
 	(global_label "SERIAL_D+"
 		(shape input)
-		(at 224.79 109.22 0)
+		(at 224.79 102.87 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5685,7 +5685,7 @@
 		)
 		(uuid "8cc32206-a1ca-4ace-9f1c-e0826357aaab")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 237.9352 109.22 0)
+			(at 237.9352 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5699,7 +5699,7 @@
 	)
 	(global_label "JTAG_D-"
 		(shape input)
-		(at 224.79 100.33 0)
+		(at 224.79 106.68 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5709,7 +5709,7 @@
 		)
 		(uuid "afe2b39f-4823-4dfa-ad2e-1476b438a936")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 235.879 100.33 0)
+			(at 235.879 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6860,6 +6860,85 @@
 			(project "Controller_Board"
 				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/6841ebe0-d0f7-414d-8e63-132e7a23cd7b"
 					(reference "#PWR0609")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 62.23 68.58 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "40d0730c-cfc4-477b-8362-1450dddf7371")
+		(property "Reference" "#PWR0640"
+			(at 62.23 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 62.23 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 62.23 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f4870967-f872-4bc2-8350-2626e98a99c8")
+		)
+		(instances
+			(project "Controller_Board"
+				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/6841ebe0-d0f7-414d-8e63-132e7a23cd7b"
+					(reference "#PWR0640")
 					(unit 1)
 				)
 			)
@@ -10209,6 +10288,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D_TVS")
+		(at 62.23 64.77 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bc5f1b91-d535-4067-b798-cd8e50e5f66f")
+		(property "Reference" "D604"
+			(at 60.198 63.5 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS"
+			(at 60.198 66.04 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 62.23 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Littelfuse/SESD0402X1UN-0020-090?qs=R4Nx89tKnBiKqBxpGxncNA%3D%3D"
+			(at 62.23 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Bidirectional transient-voltage-suppression diode"
+			(at 62.23 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bf156291-acf0-49aa-8aca-e5382ac5ffb8")
+		)
+		(pin "2"
+			(uuid "d00f26c4-b7ac-4157-b1e9-c742a4e73395")
+		)
+		(instances
+			(project "Controller_Board"
+				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/6841ebe0-d0f7-414d-8e63-132e7a23cd7b"
+					(reference "D604")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:VBUS")
 		(at 177.8 125.73 0)
 		(mirror y)
@@ -10443,6 +10604,85 @@
 			(project "Controller_Board"
 				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/6841ebe0-d0f7-414d-8e63-132e7a23cd7b"
 					(reference "#PWR0608")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VBUS")
+		(at 62.23 60.96 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "db0f8a57-901b-4df5-b151-cd2e007d301c")
+		(property "Reference" "#PWR0628"
+			(at 62.23 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VBUS"
+			(at 62.23 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 62.23 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6a6494be-d2c5-4690-9b0e-f604c21798a0")
+		)
+		(instances
+			(project "Controller_Board"
+				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/6841ebe0-d0f7-414d-8e63-132e7a23cd7b"
+					(reference "#PWR0628")
 					(unit 1)
 				)
 			)
