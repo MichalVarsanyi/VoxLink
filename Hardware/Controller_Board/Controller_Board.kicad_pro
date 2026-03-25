@@ -50,7 +50,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.2
+          "min_clearance": 0.25
         }
       },
       "diff_pair_dimensions": [
@@ -201,7 +201,8 @@
       "track_widths": [
         0.0,
         0.1,
-        0.2
+        0.2,
+        1.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -524,14 +525,14 @@
       {
         "line_style": 0,
         "name": "1V0",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "pcb_color": "rgb(255, 0, 255)",
         "priority": 7,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "tuning_profile": ""
       },
       {
         "name": "1V8",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "pcb_color": "rgb(255, 153, 0)",
         "priority": 6,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "tuning_profile": ""
@@ -795,7 +796,7 @@
         "uuid": "4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d"
       }
     ],
-    "used_designators": "H1-4,#PWR797-800",
+    "used_designators": "C109,C114,C117-130,#PWR125,#PWR135,#PWR140-153",
     "variants": []
   },
   "sheets": [

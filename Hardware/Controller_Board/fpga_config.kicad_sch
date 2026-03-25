@@ -7801,7 +7801,7 @@
 	)
 	(text "Test Points"
 		(exclude_from_sim no)
-		(at 68.58 142.748 0)
+		(at 85.852 143.256 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7876,8 +7876,8 @@
 	)
 	(text_box "FPGA IOs"
 		(exclude_from_sim no)
-		(at 50.8 133.35 0)
-		(size 88.9 50.8)
+		(at 74.93 133.35 0)
+		(size 64.77 50.8)
 		(margins 1.5 1.5 1.5 1.5)
 		(stroke
 			(width 0)
@@ -8019,12 +8019,24 @@
 		(uuid "d9dc39a7-e3a0-4cc3-8a21-5b6d64bb289a")
 	)
 	(no_connect
+		(at 96.52 158.75)
+		(uuid "0f2ffee9-30c8-4d6b-8f15-0ba860e76b91")
+	)
+	(no_connect
 		(at 96.52 171.45)
 		(uuid "299459cf-a7f5-49af-846e-87ea32eef9cf")
 	)
 	(no_connect
 		(at 96.52 176.53)
 		(uuid "6915e9eb-05f4-4834-a2a6-ab6ebdcfa33f")
+	)
+	(no_connect
+		(at 96.52 156.21)
+		(uuid "8784ff39-c72f-40d4-a24c-4b5dc2d9e7b6")
+	)
+	(no_connect
+		(at 96.52 153.67)
+		(uuid "9e05cd65-5968-4c95-b9de-b59cf74cc3ba")
 	)
 	(no_connect
 		(at 96.52 173.99)
@@ -8043,16 +8055,6 @@
 			(type default)
 		)
 		(uuid "017a78ab-97c4-400f-9fa1-92c838059bfc")
-	)
-	(wire
-		(pts
-			(xy 68.58 158.75) (xy 68.58 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0868d9e8-3ec8-4124-aa20-1558a9bbe301")
 	)
 	(wire
 		(pts
@@ -8136,16 +8138,6 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 153.67) (xy 81.28 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2aa3d124-660e-4a98-85a9-768ec1f8df89")
-	)
-	(wire
-		(pts
 			(xy 102.87 116.84) (xy 132.08 116.84)
 		)
 		(stroke
@@ -8186,7 +8178,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 163.83) (xy 96.52 163.83)
+			(xy 82.55 163.83) (xy 96.52 163.83)
 		)
 		(stroke
 			(width 0)
@@ -8206,7 +8198,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 163.83) (xy 55.88 152.4)
+			(xy 82.55 163.83) (xy 82.55 152.4)
 		)
 		(stroke
 			(width 0)
@@ -8273,16 +8265,6 @@
 			(type default)
 		)
 		(uuid "59c5f8cd-5c2f-4aaa-9070-7dc4e36344fb")
-	)
-	(wire
-		(pts
-			(xy 81.28 153.67) (xy 96.52 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5af2d025-7be2-46a5-aedd-38951c8edb0e")
 	)
 	(wire
 		(pts
@@ -8476,16 +8458,6 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 158.75) (xy 96.52 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a987cbf8-6d7a-4d87-9f4f-87e1329a500b")
-	)
-	(wire
-		(pts
 			(xy 63.5 86.36) (xy 64.77 86.36)
 		)
 		(stroke
@@ -8616,7 +8588,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 161.29) (xy 96.52 161.29)
+			(xy 88.9 161.29) (xy 96.52 161.29)
 		)
 		(stroke
 			(width 0)
@@ -8646,16 +8618,6 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 156.21) (xy 74.93 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e36794e8-42f7-421f-a3f2-063d8ce6e6fc")
-	)
-	(wire
-		(pts
 			(xy 102.87 68.58) (xy 111.76 68.58)
 		)
 		(stroke
@@ -8666,7 +8628,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 161.29) (xy 62.23 152.4)
+			(xy 88.9 161.29) (xy 88.9 152.4)
 		)
 		(stroke
 			(width 0)
@@ -8693,16 +8655,6 @@
 			(type default)
 		)
 		(uuid "e8fd18b9-7941-47a6-939c-372626a80a47")
-	)
-	(wire
-		(pts
-			(xy 74.93 156.21) (xy 96.52 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ef63845c-7fac-439f-97e3-da53e8caad6c")
 	)
 	(wire
 		(pts
@@ -11048,84 +11000,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 81.28 152.4 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0dd0f58a-5313-44e0-b7ac-8acafe20d1d3")
-		(property "Reference" "TP305"
-			(at 78.486 145.542 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "K3"
-			(at 80.01 147.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 86.36 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 86.36 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 81.28 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1e6823e7-29a1-4d41-8538-afc5b4e29ed2")
-		)
-		(instances
-			(project "Controller_Board"
-				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/1e694702-8554-4dde-9e80-993f5c02b8d7"
-					(reference "TP305")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 171.45 109.22 0)
 		(unit 1)
@@ -13271,7 +13145,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 62.23 152.4 0)
+		(at 88.9 152.4 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13281,7 +13155,7 @@
 		(dnp no)
 		(uuid "79b19aa3-5051-44a5-81c5-a28995377fa1")
 		(property "Reference" "TP302"
-			(at 59.436 145.542 0)
+			(at 86.106 145.542 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13292,7 +13166,7 @@
 			)
 		)
 		(property "Value" "M2"
-			(at 60.96 147.32 0)
+			(at 87.63 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13303,7 +13177,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 67.31 152.4 0)
+			(at 93.98 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13314,7 +13188,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 67.31 152.4 0)
+			(at 93.98 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13325,7 +13199,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 62.23 152.4 0)
+			(at 88.9 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14397,84 +14271,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 74.93 152.4 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c71cb56a-f7c4-49a5-9199-10df8a09d449")
-		(property "Reference" "TP304"
-			(at 72.136 145.542 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "L3"
-			(at 73.66 147.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 80.01 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 80.01 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 74.93 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7b7d251d-6d9c-418b-baba-bca140566ab5")
-		)
-		(instances
-			(project "Controller_Board"
-				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/1e694702-8554-4dde-9e80-993f5c02b8d7"
-					(reference "TP304")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 218.44 100.33 0)
 		(mirror y)
@@ -14548,84 +14344,6 @@
 			(project "Controller_Board"
 				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/1e694702-8554-4dde-9e80-993f5c02b8d7"
 					(reference "#PWR0314")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 68.58 152.4 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d0af268e-f3bc-4da3-be4f-96c0634e36f1")
-		(property "Reference" "TP303"
-			(at 65.786 145.542 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "M3"
-			(at 67.31 147.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 73.66 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 73.66 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 68.58 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "659e6c40-a3ff-48d1-aa77-41ad8362aeb2")
-		)
-		(instances
-			(project "Controller_Board"
-				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/1e694702-8554-4dde-9e80-993f5c02b8d7"
-					(reference "TP303")
 					(unit 1)
 				)
 			)
@@ -15114,7 +14832,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 55.88 152.4 0)
+		(at 82.55 152.4 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15124,7 +14842,7 @@
 		(dnp no)
 		(uuid "eebe6539-d21d-4679-b635-d3e3f4f6c328")
 		(property "Reference" "TP301"
-			(at 53.086 145.542 0)
+			(at 79.756 145.542 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15135,7 +14853,7 @@
 			)
 		)
 		(property "Value" "N3"
-			(at 54.61 147.32 0)
+			(at 81.28 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15146,7 +14864,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 60.96 152.4 0)
+			(at 87.63 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15157,7 +14875,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 60.96 152.4 0)
+			(at 87.63 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15168,7 +14886,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 55.88 152.4 0)
+			(at 82.55 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
