@@ -61,7 +61,7 @@
         },
         {
           "gap": 0.14,
-          "via_gap": 0.1,
+          "via_gap": 0.3,
           "width": 0.1
         }
       ],
@@ -93,7 +93,7 @@
         "extra_footprint": "warning",
         "footprint": "error",
         "footprint_filters_mismatch": "warning",
-        "footprint_symbol_field_mismatch": "warning",
+        "footprint_symbol_field_mismatch": "ignore",
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "warning",
         "hole_clearance": "error",
@@ -471,8 +471,8 @@
       "global_label_dangling": "warning",
       "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
-      "isolated_pin_label": "ignore",
-      "label_dangling": "ignore",
+      "isolated_pin_label": "warning",
+      "label_dangling": "warning",
       "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
       "lib_symbol_mismatch": "warning",
@@ -484,7 +484,7 @@
       "net_not_bus_member": "warning",
       "no_connect_connected": "warning",
       "no_connect_dangling": "warning",
-      "pin_not_connected": "ignore",
+      "pin_not_connected": "warning",
       "pin_not_driven": "error",
       "pin_to_pin": "error",
       "power_pin_not_driven": "error",
@@ -496,7 +496,7 @@
       "single_global_label": "warning",
       "stacked_pin_name": "warning",
       "unannotated": "error",
-      "unconnected_wire_endpoint": "ignore",
+      "unconnected_wire_endpoint": "warning",
       "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
@@ -686,7 +686,7 @@
   "schematic": {
     "annotate_start_num": 0,
     "annotation": {
-      "method": 0,
+      "method": 1,
       "sort_order": 1
     },
     "bom_export_filename": "${PROJECTNAME}.csv",
@@ -817,13 +817,17 @@
         "uuid": "4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d"
       }
     ],
-    "used_designators": "D605-613,#PWR131,#PWR162-164,#PWR641-650,#PWR801-809,U1,R118-122,Q1-2,C135-136",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
     [
       "4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d",
       "Controller_Board"
+    ],
+    [
+      "e8d78bfe-983d-4ba8-aef9-7583d653e85e",
+      "Input"
     ],
     [
       "400d08e1-cc00-4f58-94c5-a4308ce2c7f0",
