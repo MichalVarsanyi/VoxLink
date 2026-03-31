@@ -2786,12 +2786,6 @@
 		(uuid "334a61d5-0252-43a8-afdc-f5c4088f8bd6")
 	)
 	(junction
-		(at 193.04 46.99)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3702e580-3b33-4aeb-854e-7ae382b6e9f6")
-	)
-	(junction
 		(at 204.47 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2822,12 +2816,6 @@
 		(uuid "ac1bc10f-0913-498a-bfd0-30c12f419513")
 	)
 	(junction
-		(at 193.04 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "acfc0498-eef2-4a26-8d4f-cb16b2349cbd")
-	)
-	(junction
 		(at 31.75 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2856,12 +2844,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ebb68551-410f-4652-8005-ceda1fd6ac1b")
-	)
-	(junction
-		(at 193.04 69.85)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f872593b-d51c-4e91-993c-6008b0e6bc26")
 	)
 	(no_connect
 		(at 160.02 50.8)
@@ -2909,16 +2891,6 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 69.85) (xy 193.04 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0c1e450a-fc18-440b-9fdd-f33174f8a59e")
-	)
-	(wire
-		(pts
 			(xy 88.9 44.45) (xy 88.9 43.18)
 		)
 		(stroke
@@ -2926,16 +2898,6 @@
 			(type default)
 		)
 		(uuid "0f3d594e-d00f-4970-94a6-52c0f41e5374")
-	)
-	(wire
-		(pts
-			(xy 193.04 68.58) (xy 193.04 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1124d407-29cb-4e13-a7fb-736417a895ba")
 	)
 	(wire
 		(pts
@@ -2976,16 +2938,6 @@
 			(type default)
 		)
 		(uuid "1c710221-6540-4283-8e1e-11e6085a132e")
-	)
-	(wire
-		(pts
-			(xy 193.04 91.44) (xy 193.04 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "20af055b-80bf-4c3e-9917-8025245e0422")
 	)
 	(wire
 		(pts
@@ -3240,16 +3192,6 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 46.99) (xy 193.04 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4f5505d2-2db8-409e-ada6-72749d29b3f5")
-	)
-	(wire
-		(pts
 			(xy 83.82 63.5) (xy 80.01 63.5)
 		)
 		(stroke
@@ -3400,6 +3342,16 @@
 	)
 	(wire
 		(pts
+			(xy 193.04 91.44) (xy 193.04 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79f5e974-0889-4c57-8773-d407ec5e302b")
+	)
+	(wire
+		(pts
 			(xy 29.21 82.55) (xy 29.21 85.09)
 		)
 		(stroke
@@ -3407,6 +3359,16 @@
 			(type default)
 		)
 		(uuid "7b275ad7-64b2-4ff4-bb81-efded531862f")
+	)
+	(wire
+		(pts
+			(xy 193.04 68.58) (xy 193.04 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b9733a9-8f9a-4c78-8cd7-a90f4b6a1fe5")
 	)
 	(wire
 		(pts
@@ -3607,16 +3569,6 @@
 			(type default)
 		)
 		(uuid "b6c40df9-bc3d-4f6a-ac08-4550d0b4c552")
-	)
-	(wire
-		(pts
-			(xy 193.04 92.71) (xy 193.04 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b76d3afd-9d77-44f8-875e-8dd246e9dd34")
 	)
 	(wire
 		(pts
@@ -6630,7 +6582,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
 			(at 116.5352 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -6672,83 +6624,6 @@
 			(project "Core_Module"
 				(path "/398400c4-e3dc-429d-bda6-2a1ff309aedd/a05d2c9f-ab45-4ccf-a5ec-e88493cd84d4"
 					(reference "C115")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 193.04 55.88 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0946ab43-5e45-43f5-b58c-9205f14a095c")
-		(property "Reference" "#PWR0110"
-			(at 193.04 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 193.04 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 193.04 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 193.04 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 193.04 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9d5755f8-1aa4-406a-b3a8-592d7d41c381")
-		)
-		(instances
-			(project "Core_Module"
-				(path "/398400c4-e3dc-429d-bda6-2a1ff309aedd/a05d2c9f-ab45-4ccf-a5ec-e88493cd84d4"
-					(reference "#PWR0110")
 					(unit 1)
 				)
 			)
@@ -6934,7 +6809,7 @@
 				)
 			)
 		)
-		(property "Value" "TPS7A20L_2V2"
+		(property "Value" "TPS7A20L_2V5"
 			(at 44.45 81.026 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8812,7 +8687,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
 			(at 28.2448 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -9442,7 +9317,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 163.83 105.41 0)
+		(at 163.83 97.79 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9452,7 +9327,7 @@
 		(dnp no)
 		(uuid "4af02dff-0046-4b65-8c10-d0d1789ef07d")
 		(property "Reference" "#PWR0147"
-			(at 163.83 111.76 0)
+			(at 163.83 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9463,7 +9338,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 163.83 109.22 0)
+			(at 163.83 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9474,7 +9349,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 163.83 105.41 0)
+			(at 163.83 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9485,7 +9360,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 105.41 0)
+			(at 163.83 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9496,7 +9371,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 163.83 105.41 0)
+			(at 163.83 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9750,87 +9625,6 @@
 			(project "Core_Module"
 				(path "/398400c4-e3dc-429d-bda6-2a1ff309aedd/a05d2c9f-ab45-4ccf-a5ec-e88493cd84d4"
 					(reference "#PWR0116")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 193.04 74.93 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5671e647-f362-4b79-8196-17fdf224a0a5")
-		(property "Reference" "C106"
-			(at 196.85 74.295 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4u7"
-			(at 196.85 76.835 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 194.0052 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GRM21BZ71H475KE15L?qs=Ey7%2FXF42M3fI%252Bx6DckdKtg%3D%3D"
-			(at 193.04 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 193.04 74.93 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dc9e45a2-4ce8-4417-9f17-c73a46908ec8")
-		)
-		(pin "2"
-			(uuid "b04f2bbb-a222-4cf0-8581-8656d7771691")
-		)
-		(instances
-			(project "Core_Module"
-				(path "/398400c4-e3dc-429d-bda6-2a1ff309aedd/a05d2c9f-ab45-4ccf-a5ec-e88493cd84d4"
-					(reference "C106")
 					(unit 1)
 				)
 			)
@@ -10485,7 +10279,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
 			(at 164.7952 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -10644,7 +10438,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
 			(at 56.8452 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -11181,83 +10975,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 193.04 101.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8ac93333-43a1-4d61-b5a3-7908c373b246")
-		(property "Reference" "#PWR0140"
-			(at 193.04 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 193.04 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 193.04 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 193.04 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 193.04 101.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9aa8be54-4798-431a-aae5-19454f12d99b")
-		)
-		(instances
-			(project "Core_Module"
-				(path "/398400c4-e3dc-429d-bda6-2a1ff309aedd/a05d2c9f-ab45-4ccf-a5ec-e88493cd84d4"
-					(reference "#PWR0140")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 44.45 95.25 0)
 		(unit 1)
 		(body_style 1)
@@ -11450,7 +11167,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
 			(at 30.7848 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -12345,83 +12062,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 193.04 78.74 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b17ea6a9-f658-4ac1-87ac-28f093da24b3")
-		(property "Reference" "#PWR0123"
-			(at 193.04 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 193.04 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 193.04 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 193.04 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 193.04 78.74 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7fa2d176-9fd5-4cb3-8bd2-5444b29deec1")
-		)
-		(instances
-			(project "Core_Module"
-				(path "/398400c4-e3dc-429d-bda6-2a1ff309aedd/a05d2c9f-ab45-4ccf-a5ec-e88493cd84d4"
-					(reference "#PWR0123")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 55.88 54.61 0)
 		(unit 1)
@@ -12455,7 +12095,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
 			(at 56.8452 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -12930,7 +12570,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
 			(at 85.3948 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -12972,87 +12612,6 @@
 			(project "Core_Module"
 				(path "/398400c4-e3dc-429d-bda6-2a1ff309aedd/a05d2c9f-ab45-4ccf-a5ec-e88493cd84d4"
 					(reference "C114")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 193.04 97.79 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "caa3100d-1ca8-46db-a5a5-5a8f7a2d53d0")
-		(property "Reference" "C111"
-			(at 196.85 97.155 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4u7"
-			(at 196.85 99.695 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 194.0052 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GRM21BZ71H475KE15L?qs=Ey7%2FXF42M3fI%252Bx6DckdKtg%3D%3D"
-			(at 193.04 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 193.04 97.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b417982e-5e5e-4213-96a9-1bda6b77eedf")
-		)
-		(pin "2"
-			(uuid "32756ca6-ca7e-4fac-b7d5-fbf660d1afa4")
-		)
-		(instances
-			(project "Core_Module"
-				(path "/398400c4-e3dc-429d-bda6-2a1ff309aedd/a05d2c9f-ab45-4ccf-a5ec-e88493cd84d4"
-					(reference "C111")
 					(unit 1)
 				)
 			)
@@ -13296,169 +12855,6 @@
 			(project "Core_Module"
 				(path "/398400c4-e3dc-429d-bda6-2a1ff309aedd/a05d2c9f-ab45-4ccf-a5ec-e88493cd84d4"
 					(reference "U101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 163.83 101.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d32c492a-1e21-4201-8849-a64a4a1cc715")
-		(property "Reference" "R102"
-			(at 166.37 100.3299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 166.37 102.8699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 162.052 101.6 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW040210K0JNED?qs=sGAEpiMZZMtlubZbdhIBIFsfWmIKznfcMCgOmcXe42g%3D"
-			(at 163.83 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 163.83 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "456b9e9c-72af-4241-9ffc-276fa325355b")
-		)
-		(pin "1"
-			(uuid "73f51aad-e383-46d8-85ab-5f28ee412926")
-		)
-		(instances
-			(project "Core_Module"
-				(path "/398400c4-e3dc-429d-bda6-2a1ff309aedd/a05d2c9f-ab45-4ccf-a5ec-e88493cd84d4"
-					(reference "R102")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 193.04 52.07 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d37b0386-cbf4-4882-a66a-7a560283a7e1")
-		(property "Reference" "C102"
-			(at 196.85 51.435 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4u7"
-			(at 196.85 53.975 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 194.0052 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GRM21BZ71H475KE15L?qs=Ey7%2FXF42M3fI%252Bx6DckdKtg%3D%3D"
-			(at 193.04 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 193.04 52.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ac5ce283-bc3e-4d7b-b9f1-8a832f72f912")
-		)
-		(pin "2"
-			(uuid "7ab51c05-6282-4ffa-8400-d9d877afad66")
-		)
-		(instances
-			(project "Core_Module"
-				(path "/398400c4-e3dc-429d-bda6-2a1ff309aedd/a05d2c9f-ab45-4ccf-a5ec-e88493cd84d4"
-					(reference "C102")
 					(unit 1)
 				)
 			)
