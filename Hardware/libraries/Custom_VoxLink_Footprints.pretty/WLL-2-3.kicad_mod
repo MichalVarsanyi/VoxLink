@@ -1,0 +1,135 @@
+(footprint "WLL-2-3"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "49c35df4-62ee-452a-91c9-6bc78463bb43")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "WLL-2-3"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "1872d949-fa5c-425f-b161-36f15189dd09")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ea633ac7-8f1c-4163-ba5d-d4c661923070")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "20835d18-3b90-4167-ab31-2dbb0563793d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.25 -0.55)
+		(end -0.25 0.2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "c64b22be-78c6-4782-8d46-d5bfde336710")
+	)
+	(fp_line
+		(start -0.25 -0.55)
+		(end 0.25 -0.55)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "00c6d327-06b8-4aa1-8d70-2ca66142bd94")
+	)
+	(fp_line
+		(start 0.25 -0.55)
+		(end 0.25 0.2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "12729552-5ee5-4fb4-a85f-90850c74dbec")
+	)
+	(fp_line
+		(start 0.25 0.2)
+		(end -0.25 0.2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "7739bf97-1f7a-4446-84d7-d05ed79ee3db")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "1d7eae1a-e44c-42fd-b3f5-3f2af4df221f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at 0 -0.36)
+		(size 0.24 0.17)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "3bc34221-54a5-4bda-a96c-bf9c8849c6cd")
+	)
+	(pad "2" smd rect
+		(at 0 0)
+		(size 0.24 0.17)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "0f8104e2-4f2a-4cd7-bee8-30b3ea55c561")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Hardware/libraries/3D/ESD241B1W0201E6327XTSA1.stp"
+		(offset
+			(xyz 0 0.2 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -90)
+		)
+	)
+)
