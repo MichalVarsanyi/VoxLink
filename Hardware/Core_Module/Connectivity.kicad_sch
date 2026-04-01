@@ -1600,8 +1600,8 @@
 	)
 	(text_box "ESD Protection"
 		(exclude_from_sim no)
-		(at 99.06 91.44 0)
-		(size 93.98 63.5)
+		(at 88.9 90.17 0)
+		(size 120.65 57.15)
 		(margins 1.5 1.5 1.5 1.5)
 		(stroke
 			(width 0)
@@ -1622,8 +1622,8 @@
 	)
 	(text_box "Edge Connectors"
 		(exclude_from_sim no)
-		(at 106.68 46.99 0)
-		(size 100.33 36.83)
+		(at 93.98 50.8 0)
+		(size 110.49 36.83)
 		(margins 1.5 1.5 1.5 1.5)
 		(stroke
 			(width 0)
@@ -1644,7 +1644,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 76.2) (xy 115.57 76.2)
+			(xy 115.57 80.01) (xy 102.87 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1654,7 +1654,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 72.39) (xy 128.27 73.66)
+			(xy 115.57 76.2) (xy 115.57 77.47)
 		)
 		(stroke
 			(width 0)
@@ -1664,7 +1664,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 73.66) (xy 115.57 73.66)
+			(xy 115.57 77.47) (xy 102.87 77.47)
 		)
 		(stroke
 			(width 0)
@@ -1674,7 +1674,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 77.47) (xy 128.27 76.2)
+			(xy 115.57 81.28) (xy 115.57 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1684,7 +1684,7 @@
 	)
 	(global_label "RGB2"
 		(shape input)
-		(at 115.57 71.12 0)
+		(at 102.87 74.93 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1694,7 +1694,7 @@
 		)
 		(uuid "0103cb14-bc24-4f64-9f75-c2a36c4c0408")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 123.5747 71.12 0)
+			(at 110.8747 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1708,7 +1708,7 @@
 	)
 	(global_label "IRLED"
 		(shape input)
-		(at 167.64 68.58 0)
+		(at 154.94 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1718,31 +1718,7 @@
 		)
 		(uuid "0b97380b-2925-4d2a-bf88-d435ee6e5158")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 175.9471 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "I2C_SCL"
-		(shape input)
-		(at 140.97 60.96 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0f28552c-184b-4e6d-8eba-82634673b87e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 151.5147 60.96 0)
+			(at 163.2471 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1756,7 +1732,7 @@
 	)
 	(global_label "IOT_27A"
 		(shape input)
-		(at 167.64 71.12 0)
+		(at 154.94 74.93 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1766,7 +1742,7 @@
 		)
 		(uuid "119dd448-877b-4b80-bdca-92c73cae350e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 178.0033 71.12 0)
+			(at 165.3033 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1780,7 +1756,7 @@
 	)
 	(global_label "IOB_0A"
 		(shape input)
-		(at 140.97 73.66 0)
+		(at 128.27 77.47 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1790,7 +1766,7 @@
 		)
 		(uuid "1a373b4a-2594-4876-bfca-c0ed67ad368a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 150.4262 73.66 0)
+			(at 137.7262 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1804,7 +1780,7 @@
 	)
 	(global_label "IOT_25A"
 		(shape input)
-		(at 167.64 60.96 0)
+		(at 154.94 64.77 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1814,7 +1790,7 @@
 		)
 		(uuid "1b7624a6-ed16-4574-8162-b2eb9b28fc3a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 178.0033 60.96 0)
+			(at 165.3033 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1828,7 +1804,7 @@
 	)
 	(global_label "FLASH_~{CS}"
 		(shape input)
-		(at 199.39 60.96 0)
+		(at 186.69 64.77 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1838,7 +1814,31 @@
 		)
 		(uuid "2402340a-df5d-40a9-91cc-3732e95e7e50")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 211.5676 60.96 0)
+			(at 198.8676 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "IOT_22B_G0"
+		(shape input)
+		(at 120.65 110.49 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "264f3d93-a48a-4436-8c8c-dfa6a1a45a96")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 120.65 96.4982 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1852,7 +1852,7 @@
 	)
 	(global_label "IOB_5B"
 		(shape input)
-		(at 115.57 66.04 0)
+		(at 102.87 69.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1862,7 +1862,7 @@
 		)
 		(uuid "288c3726-53bf-44cb-b7cc-b81c84a63c2f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.2076 66.04 0)
+			(at 112.5076 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1876,7 +1876,7 @@
 	)
 	(global_label "IOB_4A"
 		(shape input)
-		(at 130.81 134.62 90)
+		(at 120.65 133.35 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1886,7 +1886,7 @@
 		)
 		(uuid "316e20d4-c341-4099-96d8-ea54a8211f4c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 130.81 125.1638 90)
+			(at 120.65 123.8938 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1900,7 +1900,7 @@
 	)
 	(global_label "IOB_7B_G5"
 		(shape input)
-		(at 140.97 68.58 0)
+		(at 128.27 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1910,7 +1910,7 @@
 		)
 		(uuid "31beacaf-2bd2-4c2d-8878-a4bd5675d4a7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 154.0547 68.58 0)
+			(at 141.3547 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1924,7 +1924,7 @@
 	)
 	(global_label "FLASH_SCK"
 		(shape input)
-		(at 231.14 132.08 90)
+		(at 189.23 110.49 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1934,7 +1934,7 @@
 		)
 		(uuid "3221ceeb-5485-4790-a262-691cca18e1aa")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 231.14 118.6324 90)
+			(at 189.23 97.0424 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1948,7 +1948,7 @@
 	)
 	(global_label "IOT_18B"
 		(shape input)
-		(at 115.57 60.96 0)
+		(at 102.87 64.77 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1958,7 +1958,31 @@
 		)
 		(uuid "41559ecd-153c-4897-8f3a-f143331d1571")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 126.1147 60.96 0)
+			(at 113.4147 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "IOB_3B_G6"
+		(shape input)
+		(at 128.27 74.93 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "495b7a90-5609-45ea-9a54-b8ad14d56727")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 141.3547 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1972,7 +1996,7 @@
 	)
 	(global_label "IOT_25A"
 		(shape input)
-		(at 146.05 134.62 90)
+		(at 135.89 133.35 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1982,7 +2006,7 @@
 		)
 		(uuid "49903b2a-19b6-48e7-a674-493a15f08982")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.05 124.2567 90)
+			(at 135.89 122.9867 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1996,7 +2020,7 @@
 	)
 	(global_label "IOB_6A"
 		(shape input)
-		(at 140.97 66.04 0)
+		(at 128.27 69.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2006,7 +2030,7 @@
 		)
 		(uuid "4bdb6341-64ac-4a44-90a2-0dc5dd8a3e4c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 150.4262 66.04 0)
+			(at 137.7262 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2018,9 +2042,9 @@
 			)
 		)
 	)
-	(global_label "I2C_SDA"
+	(global_label "IOT_22B_G0"
 		(shape input)
-		(at 163.83 111.76 90)
+		(at 128.27 64.77 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2028,33 +2052,9 @@
 			)
 			(justify left)
 		)
-		(uuid "523042c0-73ea-4582-a666-404260aa6349")
+		(uuid "5ca4066c-d2cb-4ee4-ab49-973ec39eb1f5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 163.83 101.1548 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "I2C_SDA"
-		(shape input)
-		(at 140.97 71.12 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "555fc198-a092-4f88-9714-abbc2471733e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 151.5752 71.12 0)
+			(at 142.2618 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2068,7 +2068,7 @@
 	)
 	(global_label "IOB_1B"
 		(shape input)
-		(at 172.72 111.76 90)
+		(at 162.56 110.49 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2078,7 +2078,7 @@
 		)
 		(uuid "5d93d978-31bf-4c2b-ba0f-d750a1b17d21")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 172.72 102.1224 90)
+			(at 162.56 100.8524 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2092,7 +2092,7 @@
 	)
 	(global_label "FLASH_MOSI"
 		(shape input)
-		(at 240.03 132.08 90)
+		(at 198.12 110.49 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2102,7 +2102,31 @@
 		)
 		(uuid "5d9f06e7-558b-4b75-abce-2f9734d8239d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 240.03 117.7857 90)
+			(at 198.12 96.1957 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "IOT_21A_G1"
+		(shape input)
+		(at 154.94 80.01 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5fa04229-fdaf-4688-bf25-548e1dff02a8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 168.7504 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2116,7 +2140,7 @@
 	)
 	(global_label "CDONE"
 		(shape input)
-		(at 204.47 132.08 90)
+		(at 189.23 133.35 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2126,31 +2150,7 @@
 		)
 		(uuid "64c061c8-3056-4a70-b924-afffb6928294")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 204.47 122.7448 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "I2C_~{RST}"
-		(shape input)
-		(at 123.19 111.76 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "64e14a6c-1f3a-4b1d-a2ef-fc035cdd354f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 123.19 101.2758 90)
+			(at 189.23 124.0148 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2164,7 +2164,7 @@
 	)
 	(global_label "IOB_7B_G5"
 		(shape input)
-		(at 154.94 111.76 90)
+		(at 144.78 110.49 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2174,7 +2174,7 @@
 		)
 		(uuid "6642fa20-fc32-4c7d-8c63-dd94ef6f976d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 154.94 98.6753 90)
+			(at 144.78 97.4053 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2188,7 +2188,7 @@
 	)
 	(global_label "CDONE"
 		(shape input)
-		(at 199.39 71.12 0)
+		(at 186.69 74.93 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2198,31 +2198,7 @@
 		)
 		(uuid "776c358d-5960-4f54-a458-601fb2f44595")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 208.7252 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "I2C_~{RST}"
-		(shape input)
-		(at 167.64 76.2 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8154d52a-012c-46fd-a00f-b2b1d373c790")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 178.1242 76.2 0)
+			(at 196.0252 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2236,7 +2212,7 @@
 	)
 	(global_label "IOT_27A"
 		(shape input)
-		(at 107.95 111.76 90)
+		(at 97.79 110.49 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2246,7 +2222,7 @@
 		)
 		(uuid "8dcc50dd-5564-4c0c-8359-c0d5383d1f12")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 107.95 101.3967 90)
+			(at 97.79 100.1267 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2260,7 +2236,7 @@
 	)
 	(global_label "RGB1"
 		(shape input)
-		(at 115.57 68.58 0)
+		(at 102.87 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2270,7 +2246,7 @@
 		)
 		(uuid "932ccb35-0600-48f7-b813-fda671f2456d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 123.5747 68.58 0)
+			(at 110.8747 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2284,7 +2260,7 @@
 	)
 	(global_label "IOB_10A"
 		(shape input)
-		(at 138.43 111.76 90)
+		(at 128.27 110.49 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2294,7 +2270,7 @@
 		)
 		(uuid "98985904-523a-4cb5-a693-68ba2d79abfb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 138.43 101.0943 90)
+			(at 128.27 99.8243 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2308,7 +2284,7 @@
 	)
 	(global_label "FLASH_MISO"
 		(shape input)
-		(at 199.39 63.5 0)
+		(at 186.69 67.31 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2318,7 +2294,7 @@
 		)
 		(uuid "9ad44995-e096-4da4-8da7-b59be5c15d3f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 213.6843 63.5 0)
+			(at 200.9843 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2332,7 +2308,7 @@
 	)
 	(global_label "IOT_19A"
 		(shape input)
-		(at 167.64 63.5 0)
+		(at 154.94 67.31 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2342,7 +2318,7 @@
 		)
 		(uuid "9e553ab2-38f6-46cd-a6d2-480dea16bab8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 178.0033 63.5 0)
+			(at 165.3033 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2356,7 +2332,7 @@
 	)
 	(global_label "IOB_5B"
 		(shape input)
-		(at 123.19 134.62 90)
+		(at 113.03 133.35 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2366,7 +2342,7 @@
 		)
 		(uuid "a023b217-5191-49e0-8882-60253e43cc02")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 123.19 124.9824 90)
+			(at 113.03 123.7124 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2380,7 +2356,7 @@
 	)
 	(global_label "IOT_18B"
 		(shape input)
-		(at 181.61 134.62 90)
+		(at 171.45 133.35 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2390,7 +2366,7 @@
 		)
 		(uuid "a57978b5-f9e5-460c-8046-b066aef61daf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 181.61 124.0753 90)
+			(at 171.45 122.8053 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2404,7 +2380,7 @@
 	)
 	(global_label "IOB_1B"
 		(shape input)
-		(at 140.97 76.2 0)
+		(at 128.27 80.01 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2414,7 +2390,7 @@
 		)
 		(uuid "a8273c8d-975b-41f2-8e3e-47ca744b47f8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 150.6076 76.2 0)
+			(at 137.9076 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2428,7 +2404,7 @@
 	)
 	(global_label "~{CRESET}"
 		(shape input)
-		(at 195.58 132.08 90)
+		(at 180.34 133.35 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2438,7 +2414,7 @@
 		)
 		(uuid "aae55cac-2d76-409b-96cf-f3caa0649d85")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 195.58 122.0797 90)
+			(at 180.34 123.3497 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2452,7 +2428,7 @@
 	)
 	(global_label "RGB1"
 		(shape input)
-		(at 115.57 134.62 90)
+		(at 105.41 133.35 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2462,7 +2438,7 @@
 		)
 		(uuid "ad16c64e-a931-425d-a0a5-f8170b1d252c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 115.57 126.6153 90)
+			(at 105.41 125.3453 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2476,7 +2452,7 @@
 	)
 	(global_label "IOT_24B"
 		(shape input)
-		(at 167.64 73.66 0)
+		(at 154.94 77.47 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2486,7 +2462,7 @@
 		)
 		(uuid "b2667d5c-61a7-4d52-8271-3fe3c65d40a1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 178.1847 73.66 0)
+			(at 165.4847 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2500,7 +2476,7 @@
 	)
 	(global_label "IOT_19A"
 		(shape input)
-		(at 154.94 134.62 90)
+		(at 144.78 133.35 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2510,7 +2486,7 @@
 		)
 		(uuid "b5556408-b7ae-4bcc-aac2-c6baa6c6441b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 154.94 124.2567 90)
+			(at 144.78 122.9867 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2524,7 +2500,7 @@
 	)
 	(global_label "FLASH_SCK"
 		(shape input)
-		(at 199.39 66.04 0)
+		(at 186.69 69.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2534,7 +2510,7 @@
 		)
 		(uuid "b999e408-dfc6-4dcc-a572-34828faba94d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 212.8376 66.04 0)
+			(at 200.1376 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2548,7 +2524,7 @@
 	)
 	(global_label "BARCODE"
 		(shape input)
-		(at 163.83 134.62 90)
+		(at 153.67 133.35 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2558,7 +2534,7 @@
 		)
 		(uuid "c11bf086-fbd2-45cf-b340-2eb7d229047b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 163.83 122.9867 90)
+			(at 153.67 121.7167 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2572,7 +2548,7 @@
 	)
 	(global_label "IOT_24B"
 		(shape input)
-		(at 115.57 111.76 90)
+		(at 105.41 110.49 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2582,7 +2558,7 @@
 		)
 		(uuid "c82f23bf-9269-48e9-8d4c-63b90ec5fe81")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 115.57 101.2153 90)
+			(at 105.41 99.9453 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2596,7 +2572,7 @@
 	)
 	(global_label "BARCODE"
 		(shape input)
-		(at 167.64 66.04 0)
+		(at 154.94 69.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2606,31 +2582,7 @@
 		)
 		(uuid "c9801b0b-d9db-448c-9dbe-9c85bae40810")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 179.2733 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "I2C_SCL"
-		(shape input)
-		(at 130.81 111.76 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ced4a8ce-65bb-4776-a2fc-df8a24dce437")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 130.81 101.2153 90)
+			(at 166.5733 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2644,7 +2596,7 @@
 	)
 	(global_label "FLASH_MOSI"
 		(shape input)
-		(at 199.39 68.58 0)
+		(at 186.69 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2654,7 +2606,7 @@
 		)
 		(uuid "cf6441d0-5461-415a-a307-efa49e30c95a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 213.6843 68.58 0)
+			(at 200.9843 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2668,7 +2620,7 @@
 	)
 	(global_label "~{CRESET}"
 		(shape input)
-		(at 199.39 73.66 0)
+		(at 186.69 77.47 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2678,7 +2630,7 @@
 		)
 		(uuid "d0537519-1b96-43cc-9b06-28333dddb796")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 209.3903 73.66 0)
+			(at 196.6903 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2692,7 +2644,7 @@
 	)
 	(global_label "FLASH_MISO"
 		(shape input)
-		(at 222.25 132.08 90)
+		(at 180.34 110.49 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2702,7 +2654,7 @@
 		)
 		(uuid "d6662486-7729-4c24-895c-2c37a6dd4cd6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 222.25 117.7857 90)
+			(at 180.34 96.1957 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2716,7 +2668,7 @@
 	)
 	(global_label "IRLED"
 		(shape input)
-		(at 172.72 134.62 90)
+		(at 162.56 133.35 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2726,7 +2678,7 @@
 		)
 		(uuid "df8ee13d-18e2-4158-8e0f-dbc0b7aab5d0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 172.72 126.3129 90)
+			(at 162.56 125.0429 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2740,7 +2692,7 @@
 	)
 	(global_label "IOB_6A"
 		(shape input)
-		(at 146.05 111.76 90)
+		(at 135.89 110.49 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2750,7 +2702,7 @@
 		)
 		(uuid "e7c7df60-0946-42e4-868e-cdfed898bc81")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.05 102.3038 90)
+			(at 135.89 101.0338 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2764,7 +2716,7 @@
 	)
 	(global_label "IOB_10A"
 		(shape input)
-		(at 140.97 63.5 0)
+		(at 128.27 67.31 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2774,7 +2726,7 @@
 		)
 		(uuid "eaa9119e-3dd6-48e8-aed8-5b2e685b0976")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 151.6357 63.5 0)
+			(at 138.9357 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2788,7 +2740,7 @@
 	)
 	(global_label "RGB2"
 		(shape input)
-		(at 107.95 134.62 90)
+		(at 97.79 133.35 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2798,7 +2750,7 @@
 		)
 		(uuid "f41e4e43-dbae-4db5-af6d-651b14a17e40")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 107.95 126.6153 90)
+			(at 97.79 125.3453 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2812,7 +2764,7 @@
 	)
 	(global_label "IOB_0A"
 		(shape input)
-		(at 181.61 111.76 90)
+		(at 171.45 110.49 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2822,7 +2774,55 @@
 		)
 		(uuid "f42f7576-2afd-49cf-8a39-631da5ec5737")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 181.61 102.3038 90)
+			(at 171.45 101.0338 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "IOT_21A_G1"
+		(shape input)
+		(at 113.03 110.49 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f60ddd12-d798-441b-9bc5-f23fce3b9555")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 113.03 96.6796 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "IOB_3B_G6"
+		(shape input)
+		(at 153.67 110.49 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f7ddb022-7dc9-4f77-b61a-ab3ca87cebd5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 153.67 97.4053 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2836,7 +2836,7 @@
 	)
 	(global_label "FLASH_~{CS}"
 		(shape input)
-		(at 213.36 132.08 90)
+		(at 198.12 133.35 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2846,7 +2846,7 @@
 		)
 		(uuid "fa0e867d-7031-4aa0-af59-d3b711265d7b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 213.36 119.9024 90)
+			(at 198.12 121.1724 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2860,7 +2860,7 @@
 	)
 	(global_label "IOB_4A"
 		(shape input)
-		(at 115.57 63.5 0)
+		(at 102.87 67.31 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2870,7 +2870,7 @@
 		)
 		(uuid "fd88f8c2-67aa-4468-afd1-299adcd81836")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.0262 63.5 0)
+			(at 112.3262 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2884,7 +2884,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 154.94 142.24 0)
+		(at 144.78 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2894,7 +2894,7 @@
 		(dnp no)
 		(uuid "052e94f3-8133-4299-ac0d-26ec427d69d1")
 		(property "Reference" "#PWR0220"
-			(at 154.94 148.59 0)
+			(at 144.78 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2905,7 +2905,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 154.94 146.05 0)
+			(at 144.78 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2916,7 +2916,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 154.94 142.24 0)
+			(at 144.78 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2927,7 +2927,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 142.24 0)
+			(at 144.78 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2938,7 +2938,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 154.94 142.24 0)
+			(at 144.78 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2961,7 +2961,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 204.47 135.89 90)
+		(at 189.23 137.16 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2972,7 +2972,7 @@
 		(fields_autoplaced yes)
 		(uuid "072dc2f6-b237-427e-8ef6-da8c35714bcc")
 		(property "Reference" "D221"
-			(at 207.01 134.6199 90)
+			(at 191.77 135.8899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2983,7 +2983,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 207.01 137.1599 90)
+			(at 191.77 138.4299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2994,7 +2994,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 204.47 135.89 0)
+			(at 189.23 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3005,7 +3005,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 204.47 135.89 0)
+			(at 189.23 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3016,7 +3016,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 204.47 135.89 0)
+			(at 189.23 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3043,7 +3043,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 107.95 119.38 0)
+		(at 97.79 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3053,7 +3053,7 @@
 		(dnp no)
 		(uuid "085d005d-e1e7-46ff-95ad-fb162f2b25d8")
 		(property "Reference" "#PWR0203"
-			(at 107.95 125.73 0)
+			(at 97.79 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3064,7 +3064,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 107.95 123.19 0)
+			(at 97.79 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3075,7 +3075,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 107.95 119.38 0)
+			(at 97.79 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3086,7 +3086,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 107.95 119.38 0)
+			(at 97.79 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3097,7 +3097,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 107.95 119.38 0)
+			(at 97.79 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3120,7 +3120,7 @@
 	)
 	(symbol
 		(lib_id "power:+4V")
-		(at 138.43 134.62 0)
+		(at 128.27 133.35 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3130,7 +3130,7 @@
 		(dnp no)
 		(uuid "0877b974-54de-46ed-ad80-9d7e6018a633")
 		(property "Reference" "#PWR0213"
-			(at 138.43 138.43 0)
+			(at 128.27 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3141,7 +3141,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 138.43 130.81 0)
+			(at 128.27 129.54 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3151,7 +3151,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 138.43 134.62 0)
+			(at 128.27 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3162,7 +3162,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 138.43 134.62 0)
+			(at 128.27 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3173,7 +3173,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+4V\""
-			(at 138.43 134.62 0)
+			(at 128.27 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3197,7 +3197,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 222.25 135.89 90)
+		(at 180.34 114.3 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3208,7 +3208,7 @@
 		(fields_autoplaced yes)
 		(uuid "0a53c414-e9d6-418e-81a1-22012448969e")
 		(property "Reference" "D223"
-			(at 224.79 134.6199 90)
+			(at 182.88 113.0299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3219,7 +3219,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 224.79 137.1599 90)
+			(at 182.88 115.5699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3230,7 +3230,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 222.25 135.89 0)
+			(at 180.34 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3241,7 +3241,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 222.25 135.89 0)
+			(at 180.34 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3252,7 +3252,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 222.25 135.89 0)
+			(at 180.34 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3279,7 +3279,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 130.81 119.38 0)
+		(at 120.65 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3289,7 +3289,7 @@
 		(dnp no)
 		(uuid "0aaaf754-daa4-4c80-b585-6f144c42a3a2")
 		(property "Reference" "#PWR0206"
-			(at 130.81 125.73 0)
+			(at 120.65 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3300,7 +3300,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 130.81 123.19 0)
+			(at 120.65 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3311,7 +3311,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 130.81 119.38 0)
+			(at 120.65 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3322,7 +3322,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 130.81 119.38 0)
+			(at 120.65 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3333,7 +3333,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 130.81 119.38 0)
+			(at 120.65 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3356,7 +3356,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 107.95 115.57 90)
+		(at 97.79 114.3 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3367,7 +3367,7 @@
 		(fields_autoplaced yes)
 		(uuid "0e3183c2-cf5e-491c-b89b-33051e68954c")
 		(property "Reference" "D201"
-			(at 110.49 114.2999 90)
+			(at 100.33 113.0299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3378,7 +3378,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 110.49 116.8399 90)
+			(at 100.33 115.5699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3389,7 +3389,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 107.95 115.57 0)
+			(at 97.79 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3400,7 +3400,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 107.95 115.57 0)
+			(at 97.79 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3411,7 +3411,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 107.95 115.57 0)
+			(at 97.79 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3438,7 +3438,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 163.83 138.43 90)
+		(at 153.67 137.16 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3449,7 +3449,7 @@
 		(fields_autoplaced yes)
 		(uuid "16a563ac-a45f-41ed-a5a8-325e72a79106")
 		(property "Reference" "D218"
-			(at 166.37 137.1599 90)
+			(at 156.21 135.8899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3460,7 +3460,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 166.37 139.6999 90)
+			(at 156.21 138.4299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3471,7 +3471,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 163.83 138.43 0)
+			(at 153.67 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3482,7 +3482,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 138.43 0)
+			(at 153.67 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3493,7 +3493,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 163.83 138.43 0)
+			(at 153.67 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3520,7 +3520,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 123.19 115.57 90)
+		(at 113.03 114.3 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3531,7 +3531,7 @@
 		(fields_autoplaced yes)
 		(uuid "2449791a-ed17-4a7d-96ce-399fc4017583")
 		(property "Reference" "D203"
-			(at 125.73 114.2999 90)
+			(at 115.57 113.0299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3542,7 +3542,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 125.73 116.8399 90)
+			(at 115.57 115.5699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3553,7 +3553,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 123.19 115.57 0)
+			(at 113.03 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3564,7 +3564,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 123.19 115.57 0)
+			(at 113.03 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3575,7 +3575,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 123.19 115.57 0)
+			(at 113.03 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3602,7 +3602,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 181.61 142.24 0)
+		(at 171.45 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3612,7 +3612,7 @@
 		(dnp no)
 		(uuid "2576c70c-4b25-4c73-9134-0a1872966772")
 		(property "Reference" "#PWR0223"
-			(at 181.61 148.59 0)
+			(at 171.45 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3623,7 +3623,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 181.61 146.05 0)
+			(at 171.45 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3634,7 +3634,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 142.24 0)
+			(at 171.45 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3645,7 +3645,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 142.24 0)
+			(at 171.45 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3656,7 +3656,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 181.61 142.24 0)
+			(at 171.45 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3679,7 +3679,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 146.05 142.24 0)
+		(at 135.89 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3689,7 +3689,7 @@
 		(dnp no)
 		(uuid "26473480-7383-4e78-923b-cea9388fd6a8")
 		(property "Reference" "#PWR0219"
-			(at 146.05 148.59 0)
+			(at 135.89 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3700,7 +3700,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 146.05 146.05 0)
+			(at 135.89 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3711,7 +3711,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 146.05 142.24 0)
+			(at 135.89 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3722,7 +3722,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 146.05 142.24 0)
+			(at 135.89 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3733,7 +3733,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 146.05 142.24 0)
+			(at 135.89 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3756,7 +3756,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 204.47 139.7 0)
+		(at 189.23 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3766,7 +3766,7 @@
 		(dnp no)
 		(uuid "2cefa7aa-c5fe-43a7-bc5b-a850e9680582")
 		(property "Reference" "#PWR0224"
-			(at 204.47 146.05 0)
+			(at 189.23 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3777,7 +3777,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 204.47 143.51 0)
+			(at 189.23 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3788,7 +3788,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 204.47 139.7 0)
+			(at 189.23 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3799,7 +3799,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 204.47 139.7 0)
+			(at 189.23 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3810,7 +3810,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 204.47 139.7 0)
+			(at 189.23 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3833,7 +3833,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 115.57 138.43 90)
+		(at 105.41 137.16 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3844,7 +3844,7 @@
 		(fields_autoplaced yes)
 		(uuid "3007fd87-7088-436b-a1f7-e304a895d0d4")
 		(property "Reference" "D212"
-			(at 118.11 137.1599 90)
+			(at 107.95 135.8899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3855,7 +3855,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 118.11 139.6999 90)
+			(at 107.95 138.4299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3866,7 +3866,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 115.57 138.43 0)
+			(at 105.41 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3877,7 +3877,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 115.57 138.43 0)
+			(at 105.41 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3888,7 +3888,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 115.57 138.43 0)
+			(at 105.41 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3915,7 +3915,7 @@
 	)
 	(symbol
 		(lib_id "power:+4V")
-		(at 128.27 72.39 0)
+		(at 115.57 76.2 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3925,7 +3925,7 @@
 		(dnp no)
 		(uuid "411588c2-5c04-4da0-aa9e-61b38b34e41c")
 		(property "Reference" "#PWR0201"
-			(at 128.27 76.2 0)
+			(at 115.57 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3936,7 +3936,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 128.27 68.58 0)
+			(at 115.57 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3946,7 +3946,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 128.27 72.39 0)
+			(at 115.57 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3957,7 +3957,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 128.27 72.39 0)
+			(at 115.57 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3968,7 +3968,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+4V\""
-			(at 128.27 72.39 0)
+			(at 115.57 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3992,7 +3992,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 146.05 138.43 90)
+		(at 135.89 137.16 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4003,7 +4003,7 @@
 		(fields_autoplaced yes)
 		(uuid "49011a8d-f4a3-417e-85df-9473ba1e0eb6")
 		(property "Reference" "D216"
-			(at 148.59 137.1599 90)
+			(at 138.43 135.8899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4014,7 +4014,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 148.59 139.6999 90)
+			(at 138.43 138.4299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4025,7 +4025,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 146.05 138.43 0)
+			(at 135.89 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4036,7 +4036,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 146.05 138.43 0)
+			(at 135.89 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4047,7 +4047,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 146.05 138.43 0)
+			(at 135.89 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4074,7 +4074,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 138.43 119.38 0)
+		(at 128.27 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4084,7 +4084,7 @@
 		(dnp no)
 		(uuid "4a5633ca-5273-49b9-84c4-36d860281741")
 		(property "Reference" "#PWR0207"
-			(at 138.43 125.73 0)
+			(at 128.27 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4095,7 +4095,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 138.43 123.19 0)
+			(at 128.27 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4106,7 +4106,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 138.43 119.38 0)
+			(at 128.27 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4117,7 +4117,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 138.43 119.38 0)
+			(at 128.27 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4128,7 +4128,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 138.43 119.38 0)
+			(at 128.27 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4151,7 +4151,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 181.61 119.38 0)
+		(at 171.45 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4161,7 +4161,7 @@
 		(dnp no)
 		(uuid "4a978515-c9e9-4976-b32f-08bb4929e2b4")
 		(property "Reference" "#PWR0212"
-			(at 181.61 125.73 0)
+			(at 171.45 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4172,7 +4172,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 181.61 123.19 0)
+			(at 171.45 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4183,7 +4183,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 119.38 0)
+			(at 171.45 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4194,7 +4194,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 119.38 0)
+			(at 171.45 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4205,7 +4205,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 181.61 119.38 0)
+			(at 171.45 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4228,7 +4228,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 163.83 115.57 90)
+		(at 153.67 114.3 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4239,7 +4239,7 @@
 		(fields_autoplaced yes)
 		(uuid "4e433745-11e9-46a5-b5ed-bc8bd3514719")
 		(property "Reference" "D208"
-			(at 166.37 114.2999 90)
+			(at 156.21 113.0299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4250,7 +4250,7 @@
 			)
 		)
 		(property "Value" "TSV"
-			(at 166.37 116.8399 90)
+			(at 156.21 115.5699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4261,7 +4261,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 163.83 115.57 0)
+			(at 153.67 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4272,7 +4272,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 115.57 0)
+			(at 153.67 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4283,7 +4283,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 163.83 115.57 0)
+			(at 153.67 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4310,7 +4310,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 240.03 135.89 90)
+		(at 198.12 114.3 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4321,7 +4321,7 @@
 		(fields_autoplaced yes)
 		(uuid "51ec3fc4-01ef-4f71-a183-9ff4a2374605")
 		(property "Reference" "D225"
-			(at 242.57 134.6199 90)
+			(at 200.66 113.0299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4332,7 +4332,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 242.57 137.1599 90)
+			(at 200.66 115.5699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4343,7 +4343,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 240.03 135.89 0)
+			(at 198.12 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4354,7 +4354,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 240.03 135.89 0)
+			(at 198.12 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4365,7 +4365,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 240.03 135.89 0)
+			(at 198.12 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4392,7 +4392,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 222.25 139.7 0)
+		(at 180.34 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4402,7 +4402,7 @@
 		(dnp no)
 		(uuid "56dceaa3-145e-4580-a107-77016ee2e0b8")
 		(property "Reference" "#PWR0226"
-			(at 222.25 146.05 0)
+			(at 180.34 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4413,7 +4413,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 222.25 143.51 0)
+			(at 180.34 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4424,7 +4424,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 222.25 139.7 0)
+			(at 180.34 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4435,7 +4435,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 222.25 139.7 0)
+			(at 180.34 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4446,7 +4446,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 222.25 139.7 0)
+			(at 180.34 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4469,7 +4469,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 115.57 115.57 90)
+		(at 105.41 114.3 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4480,7 +4480,7 @@
 		(fields_autoplaced yes)
 		(uuid "5c1bb34f-820f-45f8-b332-0f8c161400bf")
 		(property "Reference" "D202"
-			(at 118.11 114.2999 90)
+			(at 107.95 113.0299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4491,7 +4491,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 118.11 116.8399 90)
+			(at 107.95 115.5699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4502,7 +4502,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 115.57 115.57 0)
+			(at 105.41 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4513,7 +4513,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 115.57 115.57 0)
+			(at 105.41 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4524,7 +4524,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 115.57 115.57 0)
+			(at 105.41 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4551,7 +4551,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 138.43 142.24 0)
+		(at 128.27 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4561,7 +4561,7 @@
 		(dnp no)
 		(uuid "6152ed0f-e6b5-4fb1-baf0-a92b95bb270a")
 		(property "Reference" "#PWR0218"
-			(at 138.43 148.59 0)
+			(at 128.27 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4572,7 +4572,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 138.43 146.05 0)
+			(at 128.27 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4583,7 +4583,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 138.43 142.24 0)
+			(at 128.27 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4594,7 +4594,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 138.43 142.24 0)
+			(at 128.27 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4605,7 +4605,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 138.43 142.24 0)
+			(at 128.27 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4628,7 +4628,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 138.43 138.43 90)
+		(at 128.27 137.16 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4639,7 +4639,7 @@
 		(fields_autoplaced yes)
 		(uuid "64c9f378-eb10-4653-b4fb-2fde84fccd2e")
 		(property "Reference" "D215"
-			(at 140.97 137.1599 90)
+			(at 130.81 135.8899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4650,7 +4650,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 140.97 139.6999 90)
+			(at 130.81 138.4299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4661,7 +4661,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 138.43 138.43 0)
+			(at 128.27 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4672,7 +4672,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Infineon-Technologies/ESD241B1W0201E6327XTSA1?qs=HXFqYaX1Q2zrgA7VYwJgaA%3D%3D"
-			(at 138.43 138.43 0)
+			(at 128.27 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4683,7 +4683,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 138.43 138.43 0)
+			(at 128.27 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4710,7 +4710,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 195.58 139.7 0)
+		(at 180.34 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4720,7 +4720,7 @@
 		(dnp no)
 		(uuid "68436e60-3f07-470e-8072-111996934b23")
 		(property "Reference" "#PWR0229"
-			(at 195.58 146.05 0)
+			(at 180.34 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4731,7 +4731,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 195.58 143.51 0)
+			(at 180.34 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4742,7 +4742,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 195.58 139.7 0)
+			(at 180.34 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4753,7 +4753,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.58 139.7 0)
+			(at 180.34 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4764,7 +4764,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 195.58 139.7 0)
+			(at 180.34 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4787,7 +4787,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 181.61 138.43 90)
+		(at 171.45 137.16 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4798,7 +4798,7 @@
 		(fields_autoplaced yes)
 		(uuid "6d793850-ce2d-44b1-b75c-f48accbe5717")
 		(property "Reference" "D220"
-			(at 184.15 137.1599 90)
+			(at 173.99 135.8899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4809,7 +4809,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 184.15 139.6999 90)
+			(at 173.99 138.4299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4820,7 +4820,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 181.61 138.43 0)
+			(at 171.45 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4831,7 +4831,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 138.43 0)
+			(at 171.45 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4842,7 +4842,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 181.61 138.43 0)
+			(at 171.45 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4869,7 +4869,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x06_Socket")
-		(at 194.31 66.04 0)
+		(at 181.61 69.85 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -4880,7 +4880,7 @@
 		(dnp no)
 		(uuid "752507c4-0da4-41e2-820a-40a09a3570da")
 		(property "Reference" "J205"
-			(at 195.072 54.864 0)
+			(at 182.372 58.674 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4890,7 +4890,7 @@
 			)
 		)
 		(property "Value" "Connector_Top"
-			(at 195.072 57.404 0)
+			(at 182.372 61.214 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4900,7 +4900,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:6-Pin_Casselated_Edge"
-			(at 194.31 66.04 0)
+			(at 181.61 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4911,7 +4911,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 194.31 66.04 0)
+			(at 181.61 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4922,7 +4922,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x06, script generated"
-			(at 194.31 66.04 0)
+			(at 181.61 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4961,7 +4961,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 107.95 142.24 0)
+		(at 97.79 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4971,7 +4971,7 @@
 		(dnp no)
 		(uuid "79a0f5f7-c9f2-4d28-a084-3e58f9dcdbde")
 		(property "Reference" "#PWR0214"
-			(at 107.95 148.59 0)
+			(at 97.79 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4982,7 +4982,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 107.95 146.05 0)
+			(at 97.79 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4993,7 +4993,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 107.95 142.24 0)
+			(at 97.79 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5004,7 +5004,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 107.95 142.24 0)
+			(at 97.79 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5015,7 +5015,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 107.95 142.24 0)
+			(at 97.79 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5038,7 +5038,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 130.81 142.24 0)
+		(at 120.65 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5048,7 +5048,7 @@
 		(dnp no)
 		(uuid "7a3f63a9-8d98-4c80-a41b-d8d9603a2784")
 		(property "Reference" "#PWR0217"
-			(at 130.81 148.59 0)
+			(at 120.65 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5059,7 +5059,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 130.81 146.05 0)
+			(at 120.65 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5070,7 +5070,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 130.81 142.24 0)
+			(at 120.65 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5081,7 +5081,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 130.81 142.24 0)
+			(at 120.65 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5092,7 +5092,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 130.81 142.24 0)
+			(at 120.65 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5115,7 +5115,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x07_Socket")
-		(at 135.89 68.58 0)
+		(at 123.19 72.39 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -5126,7 +5126,7 @@
 		(dnp no)
 		(uuid "7d79e313-040a-4a28-bff5-2fd7000d699c")
 		(property "Reference" "J202"
-			(at 143.764 54.864 0)
+			(at 131.064 58.674 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5136,7 +5136,7 @@
 			)
 		)
 		(property "Value" "Connector_Bottom"
-			(at 143.764 57.404 0)
+			(at 131.064 61.214 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5146,7 +5146,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:7-Pin_Casselated_Edge"
-			(at 135.89 68.58 0)
+			(at 123.19 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5157,7 +5157,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.89 68.58 0)
+			(at 123.19 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5168,7 +5168,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x07, script generated"
-			(at 135.89 68.58 0)
+			(at 123.19 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5210,7 +5210,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 107.95 138.43 90)
+		(at 97.79 137.16 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5221,7 +5221,7 @@
 		(fields_autoplaced yes)
 		(uuid "7e96305c-7677-41f4-b17b-2b0380096785")
 		(property "Reference" "D211"
-			(at 110.49 137.1599 90)
+			(at 100.33 135.8899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5232,7 +5232,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 110.49 139.6999 90)
+			(at 100.33 138.4299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5243,7 +5243,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 107.95 138.43 0)
+			(at 97.79 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5254,7 +5254,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 107.95 138.43 0)
+			(at 97.79 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5265,7 +5265,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 107.95 138.43 0)
+			(at 97.79 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5292,7 +5292,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 172.72 115.57 90)
+		(at 162.56 114.3 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5303,7 +5303,7 @@
 		(fields_autoplaced yes)
 		(uuid "85276b13-7178-4c93-84f7-c681c55e4705")
 		(property "Reference" "D209"
-			(at 175.26 114.2999 90)
+			(at 165.1 113.0299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5314,7 +5314,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 175.26 116.8399 90)
+			(at 165.1 115.5699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5325,7 +5325,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 172.72 115.57 0)
+			(at 162.56 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5336,7 +5336,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 172.72 115.57 0)
+			(at 162.56 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5347,7 +5347,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 172.72 115.57 0)
+			(at 162.56 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5375,7 +5375,7 @@
 	(symbol
 		(lib_name "Conn_01x07_Socket_1")
 		(lib_id "Connector:Conn_01x07_Socket")
-		(at 110.49 68.58 0)
+		(at 97.79 72.39 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -5386,7 +5386,7 @@
 		(dnp no)
 		(uuid "8e939a7e-769c-403b-9d3c-f39af475298e")
 		(property "Reference" "J201"
-			(at 117.856 54.864 0)
+			(at 105.156 58.674 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5396,7 +5396,7 @@
 			)
 		)
 		(property "Value" "Connector_Left"
-			(at 117.602 57.404 0)
+			(at 104.902 61.214 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5406,7 +5406,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:7-Pin_Casselated_Edge"
-			(at 110.49 68.58 0)
+			(at 97.79 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5417,7 +5417,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 110.49 68.58 0)
+			(at 97.79 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5428,7 +5428,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x07, script generated"
-			(at 110.49 68.58 0)
+			(at 97.79 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5470,7 +5470,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 172.72 142.24 0)
+		(at 162.56 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5480,7 +5480,7 @@
 		(dnp no)
 		(uuid "93b16cb5-d252-4d43-a13f-8027d11b69aa")
 		(property "Reference" "#PWR0222"
-			(at 172.72 148.59 0)
+			(at 162.56 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5491,7 +5491,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 172.72 146.05 0)
+			(at 162.56 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5502,7 +5502,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 172.72 142.24 0)
+			(at 162.56 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5513,7 +5513,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 172.72 142.24 0)
+			(at 162.56 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5524,7 +5524,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 172.72 142.24 0)
+			(at 162.56 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5547,7 +5547,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 146.05 115.57 90)
+		(at 135.89 114.3 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5558,7 +5558,7 @@
 		(fields_autoplaced yes)
 		(uuid "97b5f925-6bb6-4b86-8d07-84fedebb7aa7")
 		(property "Reference" "D206"
-			(at 148.59 114.2999 90)
+			(at 138.43 113.0299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5569,7 +5569,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 148.59 116.8399 90)
+			(at 138.43 115.5699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5580,7 +5580,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 146.05 115.57 0)
+			(at 135.89 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5591,7 +5591,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 146.05 115.57 0)
+			(at 135.89 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5602,7 +5602,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 146.05 115.57 0)
+			(at 135.89 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5629,7 +5629,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 115.57 142.24 0)
+		(at 105.41 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5639,7 +5639,7 @@
 		(dnp no)
 		(uuid "9a6b97d5-64cd-4901-be8c-5284c7f50f58")
 		(property "Reference" "#PWR0215"
-			(at 115.57 148.59 0)
+			(at 105.41 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5650,7 +5650,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 115.57 146.05 0)
+			(at 105.41 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5661,7 +5661,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 115.57 142.24 0)
+			(at 105.41 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5672,7 +5672,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 115.57 142.24 0)
+			(at 105.41 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5683,7 +5683,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 115.57 142.24 0)
+			(at 105.41 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5706,7 +5706,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x07_Socket")
-		(at 162.56 68.58 0)
+		(at 149.86 72.39 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -5717,7 +5717,7 @@
 		(dnp no)
 		(uuid "a15a01b2-449f-4e7d-a978-efc8c751852a")
 		(property "Reference" "J203"
-			(at 169.926 54.864 0)
+			(at 157.226 58.674 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5727,7 +5727,7 @@
 			)
 		)
 		(property "Value" "Connector_Right"
-			(at 169.926 57.404 0)
+			(at 157.226 61.214 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5737,7 +5737,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:7-Pin_Casselated_Edge"
-			(at 162.56 68.58 0)
+			(at 149.86 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5748,7 +5748,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 68.58 0)
+			(at 149.86 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5759,7 +5759,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x07, script generated"
-			(at 162.56 68.58 0)
+			(at 149.86 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5801,7 +5801,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 138.43 115.57 90)
+		(at 128.27 114.3 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5812,7 +5812,7 @@
 		(fields_autoplaced yes)
 		(uuid "abcc0915-fd3f-4394-a57b-c578ded00826")
 		(property "Reference" "D205"
-			(at 140.97 114.2999 90)
+			(at 130.81 113.0299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5823,7 +5823,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 140.97 116.8399 90)
+			(at 130.81 115.5699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5834,7 +5834,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 138.43 115.57 0)
+			(at 128.27 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5845,7 +5845,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 138.43 115.57 0)
+			(at 128.27 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5856,7 +5856,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 138.43 115.57 0)
+			(at 128.27 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5883,7 +5883,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 130.81 115.57 90)
+		(at 120.65 114.3 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5894,7 +5894,7 @@
 		(fields_autoplaced yes)
 		(uuid "aca2e829-ad04-4b89-aab3-c6ba72eb9d7e")
 		(property "Reference" "D204"
-			(at 133.35 114.2999 90)
+			(at 123.19 113.0299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5905,7 +5905,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 133.35 116.8399 90)
+			(at 123.19 115.5699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5916,7 +5916,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 130.81 115.57 0)
+			(at 120.65 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5927,7 +5927,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 130.81 115.57 0)
+			(at 120.65 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5938,7 +5938,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 130.81 115.57 0)
+			(at 120.65 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5965,7 +5965,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 163.83 119.38 0)
+		(at 153.67 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5975,7 +5975,7 @@
 		(dnp no)
 		(uuid "acde0c9c-0303-414d-b506-0eac966487f1")
 		(property "Reference" "#PWR0210"
-			(at 163.83 125.73 0)
+			(at 153.67 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5986,7 +5986,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 163.83 123.19 0)
+			(at 153.67 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5997,7 +5997,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 163.83 119.38 0)
+			(at 153.67 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6008,7 +6008,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 119.38 0)
+			(at 153.67 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6019,7 +6019,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 163.83 119.38 0)
+			(at 153.67 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6042,7 +6042,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 213.36 139.7 0)
+		(at 198.12 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6052,7 +6052,7 @@
 		(dnp no)
 		(uuid "ae5a7bdd-41f5-45f0-8e62-aed1bbcaa60c")
 		(property "Reference" "#PWR0225"
-			(at 213.36 146.05 0)
+			(at 198.12 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6063,7 +6063,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 213.36 143.51 0)
+			(at 198.12 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6074,7 +6074,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 213.36 139.7 0)
+			(at 198.12 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6085,7 +6085,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 213.36 139.7 0)
+			(at 198.12 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6096,7 +6096,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 213.36 139.7 0)
+			(at 198.12 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6119,7 +6119,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 231.14 139.7 0)
+		(at 189.23 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6129,7 +6129,7 @@
 		(dnp no)
 		(uuid "b28a8101-0949-42f2-90a8-81acb37867f0")
 		(property "Reference" "#PWR0227"
-			(at 231.14 146.05 0)
+			(at 189.23 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6140,7 +6140,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 231.14 143.51 0)
+			(at 189.23 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6151,7 +6151,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 231.14 139.7 0)
+			(at 189.23 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6162,7 +6162,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 231.14 139.7 0)
+			(at 189.23 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6173,7 +6173,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 231.14 139.7 0)
+			(at 189.23 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6196,7 +6196,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 154.94 119.38 0)
+		(at 144.78 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6206,7 +6206,7 @@
 		(dnp no)
 		(uuid "b3abc46b-2592-4156-86e2-f3837e5fd641")
 		(property "Reference" "#PWR0209"
-			(at 154.94 125.73 0)
+			(at 144.78 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6217,7 +6217,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 154.94 123.19 0)
+			(at 144.78 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6228,7 +6228,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 154.94 119.38 0)
+			(at 144.78 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6239,7 +6239,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 119.38 0)
+			(at 144.78 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6250,7 +6250,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 154.94 119.38 0)
+			(at 144.78 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6273,7 +6273,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 123.19 119.38 0)
+		(at 113.03 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6283,7 +6283,7 @@
 		(dnp no)
 		(uuid "b814daa3-0cc7-4568-b34e-b393c6b15f86")
 		(property "Reference" "#PWR0205"
-			(at 123.19 125.73 0)
+			(at 113.03 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6294,7 +6294,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 123.19 123.19 0)
+			(at 113.03 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6305,7 +6305,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 123.19 119.38 0)
+			(at 113.03 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6316,7 +6316,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 123.19 119.38 0)
+			(at 113.03 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6327,7 +6327,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 123.19 119.38 0)
+			(at 113.03 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6350,7 +6350,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 172.72 138.43 90)
+		(at 162.56 137.16 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6361,7 +6361,7 @@
 		(fields_autoplaced yes)
 		(uuid "b881ea1e-f613-4ee6-b57a-96b94119e9d5")
 		(property "Reference" "D219"
-			(at 175.26 137.1599 90)
+			(at 165.1 135.8899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6372,7 +6372,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 175.26 139.6999 90)
+			(at 165.1 138.4299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6383,7 +6383,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 172.72 138.43 0)
+			(at 162.56 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6394,7 +6394,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 172.72 138.43 0)
+			(at 162.56 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6405,7 +6405,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 172.72 138.43 0)
+			(at 162.56 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6432,7 +6432,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 231.14 135.89 90)
+		(at 189.23 114.3 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6443,7 +6443,7 @@
 		(fields_autoplaced yes)
 		(uuid "bea42e90-fbe2-4976-96c8-e62cb08adca5")
 		(property "Reference" "D224"
-			(at 233.68 134.6199 90)
+			(at 191.77 113.0299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6454,7 +6454,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 233.68 137.1599 90)
+			(at 191.77 115.5699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6465,7 +6465,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 231.14 135.89 0)
+			(at 189.23 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6476,7 +6476,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 231.14 135.89 0)
+			(at 189.23 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6487,7 +6487,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 231.14 135.89 0)
+			(at 189.23 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6514,7 +6514,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 123.19 142.24 0)
+		(at 113.03 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6524,7 +6524,7 @@
 		(dnp no)
 		(uuid "c369f3a4-2fc5-44ee-8f9a-1b099bd42dc2")
 		(property "Reference" "#PWR0216"
-			(at 123.19 148.59 0)
+			(at 113.03 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6535,7 +6535,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 123.19 146.05 0)
+			(at 113.03 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6546,7 +6546,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 123.19 142.24 0)
+			(at 113.03 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6557,7 +6557,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 123.19 142.24 0)
+			(at 113.03 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6568,7 +6568,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 123.19 142.24 0)
+			(at 113.03 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6591,7 +6591,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 128.27 77.47 0)
+		(at 115.57 81.28 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6601,7 +6601,7 @@
 		(dnp no)
 		(uuid "c5971263-aa0b-47ed-bfb1-7fa929b8a539")
 		(property "Reference" "#PWR0202"
-			(at 128.27 83.82 0)
+			(at 115.57 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6612,7 +6612,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 128.27 81.28 0)
+			(at 115.57 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6623,7 +6623,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 128.27 77.47 0)
+			(at 115.57 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6634,7 +6634,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 128.27 77.47 0)
+			(at 115.57 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6645,7 +6645,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 128.27 77.47 0)
+			(at 115.57 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6668,7 +6668,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 195.58 135.89 90)
+		(at 180.34 137.16 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6679,7 +6679,7 @@
 		(fields_autoplaced yes)
 		(uuid "c9ad09e8-ebb3-4e10-873a-ad97635944f6")
 		(property "Reference" "D226"
-			(at 198.12 134.6199 90)
+			(at 182.88 135.8899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6690,7 +6690,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 198.12 137.1599 90)
+			(at 182.88 138.4299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6701,7 +6701,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 195.58 135.89 0)
+			(at 180.34 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6712,7 +6712,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.58 135.89 0)
+			(at 180.34 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6723,7 +6723,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 195.58 135.89 0)
+			(at 180.34 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6750,7 +6750,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 146.05 119.38 0)
+		(at 135.89 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6760,7 +6760,7 @@
 		(dnp no)
 		(uuid "cdf49fdc-0e8c-4b3a-a12c-1ada2251c647")
 		(property "Reference" "#PWR0208"
-			(at 146.05 125.73 0)
+			(at 135.89 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6771,7 +6771,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 146.05 123.19 0)
+			(at 135.89 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6782,7 +6782,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 146.05 119.38 0)
+			(at 135.89 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6793,7 +6793,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 146.05 119.38 0)
+			(at 135.89 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6804,7 +6804,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 146.05 119.38 0)
+			(at 135.89 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6827,7 +6827,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 172.72 119.38 0)
+		(at 162.56 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6837,7 +6837,7 @@
 		(dnp no)
 		(uuid "ce59a1e7-22ba-4758-ac31-a49c4caf0c8c")
 		(property "Reference" "#PWR0211"
-			(at 172.72 125.73 0)
+			(at 162.56 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6848,7 +6848,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 172.72 123.19 0)
+			(at 162.56 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6859,7 +6859,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 172.72 119.38 0)
+			(at 162.56 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6870,7 +6870,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 172.72 119.38 0)
+			(at 162.56 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6881,7 +6881,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 172.72 119.38 0)
+			(at 162.56 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6904,7 +6904,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 154.94 115.57 90)
+		(at 144.78 114.3 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6915,7 +6915,7 @@
 		(fields_autoplaced yes)
 		(uuid "d7c23b57-9953-4b2c-87fc-4587d8c68407")
 		(property "Reference" "D207"
-			(at 157.48 114.2999 90)
+			(at 147.32 113.0299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6926,7 +6926,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 157.48 116.8399 90)
+			(at 147.32 115.5699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6937,7 +6937,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 154.94 115.57 0)
+			(at 144.78 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6948,7 +6948,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 115.57 0)
+			(at 144.78 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6959,7 +6959,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 154.94 115.57 0)
+			(at 144.78 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6986,7 +6986,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 181.61 115.57 90)
+		(at 171.45 114.3 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6997,7 +6997,7 @@
 		(fields_autoplaced yes)
 		(uuid "e045217d-c28e-4098-a004-792607939d11")
 		(property "Reference" "D210"
-			(at 184.15 114.2999 90)
+			(at 173.99 113.0299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7008,7 +7008,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 184.15 116.8399 90)
+			(at 173.99 115.5699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7019,7 +7019,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 181.61 115.57 0)
+			(at 171.45 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7030,7 +7030,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 115.57 0)
+			(at 171.45 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7041,7 +7041,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 181.61 115.57 0)
+			(at 171.45 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7068,7 +7068,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 213.36 135.89 90)
+		(at 198.12 137.16 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7079,7 +7079,7 @@
 		(fields_autoplaced yes)
 		(uuid "e1836724-f653-460a-bedc-cdae05b9cf5b")
 		(property "Reference" "D222"
-			(at 215.9 134.6199 90)
+			(at 200.66 135.8899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7090,7 +7090,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 215.9 137.1599 90)
+			(at 200.66 138.4299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7101,7 +7101,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 213.36 135.89 0)
+			(at 198.12 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7112,7 +7112,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 213.36 135.89 0)
+			(at 198.12 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7123,7 +7123,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 213.36 135.89 0)
+			(at 198.12 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7150,7 +7150,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 130.81 138.43 90)
+		(at 120.65 137.16 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7161,7 +7161,7 @@
 		(fields_autoplaced yes)
 		(uuid "e3fe1950-52e2-4136-ad90-b168f78fc306")
 		(property "Reference" "D214"
-			(at 133.35 137.1599 90)
+			(at 123.19 135.8899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7172,7 +7172,7 @@
 			)
 		)
 		(property "Value" ""
-			(at 133.35 139.6999 90)
+			(at 123.19 138.4299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7183,7 +7183,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 130.81 138.43 0)
+			(at 120.65 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7194,7 +7194,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 130.81 138.43 0)
+			(at 120.65 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7205,7 +7205,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 130.81 138.43 0)
+			(at 120.65 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7232,7 +7232,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 123.19 138.43 90)
+		(at 113.03 137.16 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7243,7 +7243,7 @@
 		(fields_autoplaced yes)
 		(uuid "e8517f3d-196b-4405-97ed-ef03bf3fbb84")
 		(property "Reference" "D213"
-			(at 125.73 137.1599 90)
+			(at 115.57 135.8899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7254,7 +7254,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 125.73 139.6999 90)
+			(at 115.57 138.4299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7265,7 +7265,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 123.19 138.43 0)
+			(at 113.03 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7276,7 +7276,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 123.19 138.43 0)
+			(at 113.03 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7287,7 +7287,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 123.19 138.43 0)
+			(at 113.03 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7314,7 +7314,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 240.03 139.7 0)
+		(at 198.12 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7324,7 +7324,7 @@
 		(dnp no)
 		(uuid "ea98d82f-e314-41be-af99-3bb32d566798")
 		(property "Reference" "#PWR0228"
-			(at 240.03 146.05 0)
+			(at 198.12 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7335,7 +7335,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 240.03 143.51 0)
+			(at 198.12 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7346,7 +7346,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 240.03 139.7 0)
+			(at 198.12 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7357,7 +7357,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 240.03 139.7 0)
+			(at 198.12 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7368,7 +7368,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 240.03 139.7 0)
+			(at 198.12 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7391,7 +7391,7 @@
 	)
 	(symbol
 		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 154.94 138.43 90)
+		(at 144.78 137.16 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7402,7 +7402,7 @@
 		(fields_autoplaced yes)
 		(uuid "ee56cd2c-1103-4834-9baf-1350d2b48f3b")
 		(property "Reference" "D217"
-			(at 157.48 137.1599 90)
+			(at 147.32 135.8899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7413,7 +7413,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 157.48 139.6999 90)
+			(at 147.32 138.4299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7424,7 +7424,7 @@
 			)
 		)
 		(property "Footprint" "Custom_VoxLink_Footprints:WLL-2-3"
-			(at 154.94 138.43 0)
+			(at 144.78 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7435,7 +7435,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 138.43 0)
+			(at 144.78 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7446,7 +7446,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 154.94 138.43 0)
+			(at 144.78 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7473,7 +7473,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 115.57 119.38 0)
+		(at 105.41 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7483,7 +7483,7 @@
 		(dnp no)
 		(uuid "f255c1af-7b6b-49b7-9cf0-f61e6ec560d7")
 		(property "Reference" "#PWR0204"
-			(at 115.57 125.73 0)
+			(at 105.41 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7494,7 +7494,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 115.57 123.19 0)
+			(at 105.41 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7505,7 +7505,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 115.57 119.38 0)
+			(at 105.41 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7516,7 +7516,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 115.57 119.38 0)
+			(at 105.41 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7527,7 +7527,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 115.57 119.38 0)
+			(at 105.41 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7550,7 +7550,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 163.83 142.24 0)
+		(at 153.67 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7560,7 +7560,7 @@
 		(dnp no)
 		(uuid "f3b95a18-4ede-4ac8-867b-db74ee458cb6")
 		(property "Reference" "#PWR0221"
-			(at 163.83 148.59 0)
+			(at 153.67 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7571,7 +7571,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 163.83 146.05 0)
+			(at 153.67 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7582,7 +7582,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 163.83 142.24 0)
+			(at 153.67 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7593,7 +7593,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 142.24 0)
+			(at 153.67 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7604,7 +7604,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 163.83 142.24 0)
+			(at 153.67 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

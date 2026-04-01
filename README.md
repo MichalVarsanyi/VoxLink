@@ -329,7 +329,7 @@ To see the final schematic, click [here](https://github.com/MichalVarsanyi/VoxLi
 ### Power
 This section contains switching regulators generating all the necessary voltage levels for the Xilinx FPGA onboard, as well as the sensor board chains. The power can be supplied via an XT30 connector for normal operation or the USB-C for limited-programming tasks. Please note the following restrictions:
 > [!CAUTION]
-> The **maximum** input voltage is **48V**!
+> The **maximum** input voltage is **48V**! The **maximum** input current is **3A**!
 
 > [!WARNING]
 > The USB-C power should not be used for operation with multiple sensor boards connected!
@@ -372,13 +372,18 @@ This is the physical interface for the sensor boards to terminate their connecti
 > [!NOTE]
 > The Controller Board is designed to work with LVDS signaling and with transfer speeds up to 100MBit/s
 
+> [!CAUTION]
+> Two RJ45 connectors connected to Xilinx FPGA BANK 35 **DO NOT SUPPORT LVDS** signaling and are **3.3V ONLY**! Do **NOT** connect LVDS logic to these ports!
+
 Although LVDS signaling is supported by the RJ45 twisted wire pair terminations, single-ended transmission will be implemented in the first implementation of VoxLink.
 
 ### Schedule
 
 - **Controller Board Development Deadline** - 25rd of March
    - Finished Schematic Design - 17th of March
-- Sensor Board Core Module Deadline     - 30th of March
+   - Finished PCB Design - 29th of March
+- **Sensor Board Core Module Deadline**     - 30th of March
+   - Finishedn Lattice Design - 1st of April
 - Sensor Shell Module Deadline          - 4th of April
 - Controller Bringup                    - 7 Days from the arrival of the board
 - VoxLink Protocol Development          - 16 Days
