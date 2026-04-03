@@ -383,7 +383,10 @@ Although LVDS signaling is supported by the RJ45 twisted wire pair terminations,
    - Finished Schematic Design - 17th of March
    - Finished PCB Design - 29th of March
 - **Sensor Board Core Module Deadline**     - 30th of March
-   - Finishedn Lattice Design - 1st of April
-- Sensor Shell Module Deadline          - 4th of April
+   - Finished Lattice Design - 1st of April
+- **Sensor Shell Module Deadline** - 4th of April
+   - Finished BNO086 Design - 2nd of April
+   - Finished BUS Shell     - 2nd of April
+   - Finished DAISY Shell   - 2nd of April
 - Controller Bringup                    - 7 Days from the arrival of the board
 - VoxLink Protocol Development          - 16 Days

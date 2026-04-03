@@ -2396,7 +2396,7 @@
 	)
 	(text "Keep close to the FPGA pads!"
 		(exclude_from_sim no)
-		(at 207.264 40.132 0)
+		(at 209.296 40.132 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2415,6 +2415,17 @@
 			)
 		)
 		(uuid "5e1f94f0-ac94-4a7f-bbfd-c963acf1e646")
+	)
+	(text "No room for larger bulk capacitors"
+		(exclude_from_sim no)
+		(at 216.408 34.798 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "76d83357-76c5-4e35-9d87-be139413b0f8")
 	)
 	(text "VCCIO0 = 3V3"
 		(exclude_from_sim no)
@@ -2482,7 +2493,7 @@
 	)
 	(text "Keep close to the FPGA pads!"
 		(exclude_from_sim no)
-		(at 212.852 90.932 0)
+		(at 209.55 90.932 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2722,7 +2733,7 @@
 		)
 		(uuid "b93a1179-e49a-4457-8566-62f1c7f29d26")
 	)
-	(text_box "Input Snubber"
+	(text_box "Input Bulk"
 		(exclude_from_sim no)
 		(at 152.4 78.74 0)
 		(size 25.4 33.02)
@@ -6842,7 +6853,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/81-GRM155R61H105KE5D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C335102.html"
 			(at 115.57 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -6855,6 +6866,28 @@
 		)
 		(property "Description" ""
 			(at 115.57 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C335102"
+			(at 115.57 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 115.57 100.33 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6923,7 +6956,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C668346.html"
 			(at 204.47 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -6936,6 +6969,28 @@
 		)
 		(property "Description" ""
 			(at 204.47 52.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C668346"
+			(at 204.47 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 204.47 52.07 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7001,7 +7056,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://eu.mouser.com/ProductDetail/71-CRCW040222R0JNEDC"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C3009113.html"
 			(at 116.84 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -7014,6 +7069,28 @@
 		)
 		(property "Description" ""
 			(at 116.84 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C3009113"
+			(at 116.84 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 116.84 63.5 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7079,7 +7156,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Texas-Instruments/TPS7A20225PDQNR?qs=IKkN%2F947nfD9gDMQG8ZFsA%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C41487851.html?s_z=n_TPS7A20225PDQNR%2520"
 			(at 44.45 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -7091,6 +7168,28 @@
 			)
 		)
 		(property "Description" "300 mA Low Dropout Voltage Regulator, Fixed Output, 1.6..6.0Vin, Low-Noise (7μV RMS), 6.5μA IQ LDO, X2SON-5"
+			(at 44.45 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C41487851"
+			(at 44.45 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
 			(at 44.45 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -7170,7 +7269,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C1519040.html?s_z=n_C1519040"
 			(at 210.82 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -7193,6 +7292,28 @@
 			)
 		)
 		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Lattice/ICE40UL1K-CM36AI?qs=XJu%252BLGjWfSAZhGGFZ7EiQg%3D%3D"
+			(at 210.82 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1519040"
+			(at 210.82 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Lattice"
 			(at 210.82 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -7751,7 +7872,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C1519040.html?s_z=n_C1519040"
 			(at 267.97 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -7774,6 +7895,28 @@
 			)
 		)
 		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Lattice/ICE40UL1K-CM36AI?qs=XJu%252BLGjWfSAZhGGFZ7EiQg%3D%3D"
+			(at 267.97 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1519040"
+			(at 267.97 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Lattice"
 			(at 267.97 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -8387,7 +8530,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "N25Q032A"
+		(property "Value" "W25Q32JV"
 			(at 134.62 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8409,7 +8552,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.alliancememory.com/wp-content/uploads/Micron_Datasheet_N25Q032A_RevJ.pdf"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C2999380.html?s_z=n_W25Q32JVUUIQ"
 			(at 132.08 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -8432,6 +8575,28 @@
 			)
 		)
 		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Alliance-Memory/N25Q032A13EF4A0F?qs=W%2FMpXkg%252BdQ7U8RXBL9SP8A%3D%3D"
+			(at 132.08 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2999380"
+			(at 132.08 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Winbond"
 			(at 132.08 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -8751,7 +8916,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C1519040.html?s_z=n_C1519040"
 			(at 85.09 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -8774,6 +8939,28 @@
 			)
 		)
 		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Lattice/ICE40UL1K-CM36AI?qs=XJu%252BLGjWfSAZhGGFZ7EiQg%3D%3D"
+			(at 85.09 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1519040"
+			(at 85.09 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Lattice"
 			(at 85.09 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -8947,7 +9134,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/81-GRM155R61H105KE5D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C335102.html"
 			(at 29.21 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -8960,6 +9147,28 @@
 		)
 		(property "Description" ""
 			(at 29.21 91.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C335102"
+			(at 29.21 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 29.21 91.44 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9337,7 +9546,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C1519040.html?s_z=n_C1519040"
 			(at 33.02 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -9360,6 +9569,28 @@
 			)
 		)
 		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Lattice/ICE40UL1K-CM36AI?qs=XJu%252BLGjWfSAZhGGFZ7EiQg%3D%3D"
+			(at 33.02 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1519040"
+			(at 33.02 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Lattice"
 			(at 33.02 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -9489,7 +9720,7 @@
 	)
 	(symbol
 		(lib_id "power:+4V")
-		(at 163.83 90.17 0)
+		(at 163.83 93.98 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9499,7 +9730,7 @@
 		(dnp no)
 		(uuid "498ed33e-15f1-45b8-9a2a-66a73f758d86")
 		(property "Reference" "#PWR0128"
-			(at 163.83 93.98 0)
+			(at 163.83 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9510,7 +9741,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 163.83 86.36 0)
+			(at 163.83 90.17 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9520,7 +9751,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 163.83 90.17 0)
+			(at 163.83 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9531,7 +9762,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 90.17 0)
+			(at 163.83 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9542,7 +9773,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+4V\""
-			(at 163.83 90.17 0)
+			(at 163.83 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9566,7 +9797,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 163.83 97.79 0)
+		(at 163.83 101.6 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9576,7 +9807,7 @@
 		(dnp no)
 		(uuid "4af02dff-0046-4b65-8c10-d0d1789ef07d")
 		(property "Reference" "#PWR0147"
-			(at 163.83 104.14 0)
+			(at 163.83 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9587,7 +9818,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 163.83 101.6 0)
+			(at 163.83 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9598,7 +9829,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 163.83 97.79 0)
+			(at 163.83 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9609,7 +9840,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 97.79 0)
+			(at 163.83 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9620,7 +9851,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 163.83 97.79 0)
+			(at 163.83 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9686,7 +9917,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW040210K0JNED?qs=sGAEpiMZZMtlubZbdhIBIFsfWmIKznfcMCgOmcXe42g%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C844303.html"
 			(at 154.94 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -9698,6 +9929,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 154.94 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C844303"
+			(at 154.94 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
 			(at 154.94 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -10496,7 +10749,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 163.83 93.98 0)
+		(at 163.83 97.79 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10507,7 +10760,7 @@
 		(fields_autoplaced yes)
 		(uuid "6f9756d5-bee0-4b10-9421-8d9a8b1129bb")
 		(property "Reference" "C110"
-			(at 167.64 93.345 0)
+			(at 167.64 97.155 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10517,8 +10770,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
-			(at 167.64 95.885 0)
+		(property "Value" "2.2u"
+			(at 167.64 99.695 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10529,7 +10782,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
-			(at 164.7952 97.79 0)
+			(at 164.7952 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10539,8 +10792,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GRM21BZ71H475KE15L?qs=Ey7%2FXF42M3fI%252Bx6DckdKtg%3D%3D"
-			(at 163.83 93.98 0)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C335106.html"
+			(at 163.83 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10551,7 +10804,29 @@
 			)
 		)
 		(property "Description" ""
-			(at 163.83 93.98 0)
+			(at 163.83 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C335106"
+			(at 163.83 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 163.83 97.79 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10698,7 +10973,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/81-GRM155R61H105KE5D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C335102.html"
 			(at 55.88 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -10711,6 +10986,28 @@
 		)
 		(property "Description" ""
 			(at 55.88 91.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C335102"
+			(at 55.88 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 55.88 91.44 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10777,7 +11074,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://eu.mouser.com/ProductDetail/ECS/ECS-1612MV-120-CN-TR?qs=MLItCLRbWsx7QgJvjn3Wzg%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C2032475.html"
 			(at 88.265 60.325 0)
 			(hide yes)
 			(show_name no)
@@ -10789,6 +11086,28 @@
 			)
 		)
 		(property "Description" "Crystal Clock Oscillator, Abracon ASCO"
+			(at 93.98 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "SMD1612-4P"
+			(at 93.98 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Abracon"
 			(at 93.98 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -10942,7 +11261,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C4153580.html"
 			(at 161.29 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -10966,6 +11285,28 @@
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 161.29 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C4153580"
+			(at 161.29 180.34 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Kingbright"
+			(at 161.29 180.34 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11345,7 +11686,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C668346.html"
 			(at 88.9 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -11358,6 +11699,28 @@
 		)
 		(property "Description" ""
 			(at 88.9 48.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C668346"
+			(at 88.9 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 88.9 48.26 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11427,7 +11790,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/81-GRM155R61H105KE5D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C335102.html"
 			(at 31.75 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -11440,6 +11803,28 @@
 		)
 		(property "Description" ""
 			(at 31.75 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C335102"
+			(at 31.75 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 31.75 54.61 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11508,7 +11893,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C1519040.html?s_z=n_C1519040"
 			(at 151.13 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -11531,6 +11916,28 @@
 			)
 		)
 		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Lattice/ICE40UL1K-CM36AI?qs=XJu%252BLGjWfSAZhGGFZ7EiQg%3D%3D"
+			(at 151.13 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1519040"
+			(at 151.13 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Lattice"
 			(at 151.13 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -11934,7 +12341,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C668346.html"
 			(at 204.47 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -11947,6 +12354,28 @@
 		)
 		(property "Description" ""
 			(at 204.47 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C668346"
+			(at 204.47 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 204.47 74.93 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12015,7 +12444,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C5846955.html"
 			(at 227.33 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -12039,6 +12468,28 @@
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 227.33 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C5846955"
+			(at 227.33 138.43 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Kingbright"
+			(at 227.33 138.43 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12182,7 +12633,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Texas-Instruments/TPS7A20L33PDQNR?qs=dbcCsuKDzFXsu6ygYTlhWw%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C22445532.html?s_z=n_TPS7A20L33PDQNR"
 			(at 104.14 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -12194,6 +12645,28 @@
 			)
 		)
 		(property "Description" "300 mA Low Dropout Voltage Regulator, Fixed Output, 1.6..6.0Vin, Low-Noise (7μV RMS), 6.5μA IQ LDO, X2SON-5"
+			(at 104.14 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22445532"
+			(at 104.14 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
 			(at 104.14 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -12251,7 +12724,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "510R"
+		(property "Value" "499R"
 			(at 158.75 171.4499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12273,7 +12746,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW0402510RFKEDC?qs=sGAEpiMZZMtlubZbdhIBIIZe04wfiaJWQqqezGnbl1g%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C2094902.html"
 			(at 161.29 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -12285,6 +12758,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 161.29 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2094902"
+			(at 161.29 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
 			(at 161.29 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -12355,7 +12850,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/81-GRM155R61H105KE5D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C335102.html"
 			(at 55.88 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -12368,6 +12863,28 @@
 		)
 		(property "Description" ""
 			(at 55.88 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C335102"
+			(at 55.88 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 55.88 54.61 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12436,7 +12953,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C668346.html"
 			(at 204.47 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -12449,6 +12966,28 @@
 		)
 		(property "Description" ""
 			(at 204.47 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C668346"
+			(at 204.47 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 204.47 97.79 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12517,7 +13056,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C668346.html"
 			(at 127 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -12530,6 +13069,28 @@
 		)
 		(property "Description" ""
 			(at 127 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C668346"
+			(at 127 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 127 133.35 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12830,7 +13391,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/81-GRM155R61H105KE5D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C335102.html"
 			(at 86.36 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -12843,6 +13404,28 @@
 		)
 		(property "Description" ""
 			(at 86.36 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C335102"
+			(at 86.36 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 86.36 100.33 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13063,7 +13646,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Texas-Instruments/TPS7A20L12PDQNR?qs=dbcCsuKDzFUEY7w1y6byNg%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C30875939.html?s_z=n_C30875939"
 			(at 44.45 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -13075,6 +13658,28 @@
 			)
 		)
 		(property "Description" "300 mA Low Dropout Voltage Regulator, Fixed Output, 1.6..6.0Vin, Low-Noise (7μV RMS), 6.5μA IQ LDO, X2SON-5"
+			(at 44.45 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C30875939"
+			(at 44.45 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
 			(at 44.45 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -13306,7 +13911,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C668346.html"
 			(at 215.9 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -13319,6 +13924,28 @@
 		)
 		(property "Description" ""
 			(at 215.9 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C668346"
+			(at 215.9 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 215.9 97.79 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13441,7 +14068,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "510R"
+		(property "Value" "499R"
 			(at 229.87 132.0799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13463,7 +14090,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW0402510RFKEDC?qs=sGAEpiMZZMtlubZbdhIBIIZe04wfiaJWQqqezGnbl1g%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C2094902.html"
 			(at 227.33 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -13475,6 +14102,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 227.33 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2094902"
+			(at 227.33 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
 			(at 227.33 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -13545,7 +14194,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW040210K0JNED?qs=sGAEpiMZZMtlubZbdhIBIFsfWmIKznfcMCgOmcXe42g%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C844303.html"
 			(at 162.56 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -13557,6 +14206,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 162.56 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C844303"
+			(at 162.56 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
 			(at 162.56 143.51 0)
 			(hide yes)
 			(show_name no)
