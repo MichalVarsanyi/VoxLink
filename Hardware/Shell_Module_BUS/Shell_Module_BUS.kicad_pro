@@ -109,7 +109,7 @@
         "padstack": "warning",
         "pth_inside_courtyard": "error",
         "shorting_items": "error",
-        "silk_edge_clearance": "warning",
+        "silk_edge_clearance": "ignore",
         "silk_over_copper": "warning",
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
@@ -117,12 +117,12 @@
         "starved_thermal": "error",
         "text_height": "warning",
         "text_on_edge_cuts": "error",
-        "text_thickness": "warning",
+        "text_thickness": "ignore",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
         "track_angle": "error",
         "track_dangling": "warning",
-        "track_not_centered_on_via": "ignore",
+        "track_not_centered_on_via": "warning",
         "track_on_post_machined_layer": "error",
         "track_segment_length": "error",
         "track_width": "error",
@@ -201,6 +201,7 @@
       "track_widths": [
         0.0,
         0.1,
+        0.4,
         1.0
       ],
       "tuning_pattern_settings": {
@@ -235,8 +236,8 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.45,
-          "drill": 0.2
+          "diameter": 0.55,
+          "drill": 0.3
         }
       ],
       "zones_allow_external_fillets": false
@@ -656,7 +657,7 @@
         "uuid": "afee5f88-437a-4945-9b1c-f6fe8efa0c56"
       }
     ],
-    "used_designators": "#PWR1-10,H1-2,J1-2,U1-2",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [

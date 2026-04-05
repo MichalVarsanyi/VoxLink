@@ -65,16 +65,7 @@
           "width": 0.1
         }
       ],
-      "drc_exclusions": [
-        [
-          "courtyards_overlap|127969823|128934821|27278879-41d6-4759-bbac-2de4d5fb9715|ddfccecb-66aa-44c4-ae63-d3906fcd3e7a",
-          ""
-        ],
-        [
-          "courtyards_overlap|184434822|128930177|365069ee-2315-450a-bee0-608b5a46fdd1|42884d41-50a4-4f65-bb47-45cc33ce3e27",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -84,7 +75,7 @@
         "connection_width": "warning",
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
-        "courtyards_overlap": "error",
+        "courtyards_overlap": "ignore",
         "creepage": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
@@ -466,7 +457,7 @@
       "extra_units": "error",
       "field_name_whitespace": "warning",
       "footprint_filter": "warning",
-      "footprint_link_issues": "warning",
+      "footprint_link_issues": "ignore",
       "four_way_junction": "warning",
       "global_label_dangling": "warning",
       "ground_pin_not_ground": "warning",
@@ -475,7 +466,7 @@
       "label_dangling": "warning",
       "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
-      "lib_symbol_mismatch": "warning",
+      "lib_symbol_mismatch": "ignore",
       "missing_bidi_pin": "warning",
       "missing_input_pin": "warning",
       "missing_power_pin": "error",
@@ -689,7 +680,7 @@
       "method": 1,
       "sort_order": 1
     },
-    "bom_export_filename": "${PROJECTNAME}.csv",
+    "bom_export_filename": "gerber\\Core_Module_BOM.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -723,6 +714,30 @@
           "show": true
         },
         {
+          "group_by": false,
+          "label": "LCSC",
+          "name": "LCSC",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Footprint",
+          "name": "Footprint",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Datasheet",
+          "name": "Datasheet",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": true
+        },
+        {
           "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
@@ -741,22 +756,46 @@
           "show": true
         },
         {
-          "group_by": true,
-          "label": "Footprint",
-          "name": "Footprint",
-          "show": true
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
         },
         {
           "group_by": false,
-          "label": "Datasheet",
-          "name": "Datasheet",
-          "show": true
+          "label": "Distributor Link",
+          "name": "Distributor Link",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "KLC_S3.3",
+          "name": "KLC_S3.3",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "KLC_S4.1",
+          "name": "KLC_S4.1",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },

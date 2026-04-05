@@ -981,7 +981,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_FET:Q_Dual_NMOS_S1G1S2G2D2D1"
+		(symbol "Q_Dual_NMOS_S1G1S2G2D2D1_1"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -991,10 +991,11 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "Q"
-				(at 5.08 1.905 0)
+			(property "Reference" "Q101"
+				(at 7.62 1.2701 0)
 				(show_name no)
 				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1002,10 +1003,11 @@
 					(justify left)
 				)
 			)
-			(property "Value" "Q_Dual_NMOS_S1G1S2G2D2D1"
-				(at 5.08 0 0)
+			(property "Value" "Si7252ADP"
+				(at 7.62 -1.2699 0)
 				(show_name no)
 				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1013,7 +1015,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Package_SO:PowerPAK_SO-8_Dual"
 				(at 5.08 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1035,7 +1037,366 @@
 					)
 				)
 			)
-			(property "Description" "Dual NMOS transistor, 6 pin package"
+			(property "Description" ""
+				(at 2.286 -12.192 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "transistor NMOS N-MOS N-MOSFET"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Q_Dual_NMOS_S1G1S2G2D2D1_1_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.921 0.381) (xy 3.683 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Q_Dual_NMOS_S1G1S2G2D2D1_1_1_1"
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "Q_Dual_NMOS_S1G1S2G2D2D1_1_2_1"
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Transistor_FET:Q_Dual_NMOS_S1G1S2G2D2D1"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q101"
+				(at 7.62 1.2701 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Si7252ADP"
+				(at 7.62 -1.2699 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_SO:PowerPAK_SO-8_Dual"
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
 				(at 2.286 -12.192 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1271,7 +1632,7 @@
 							)
 						)
 					)
-					(number "6"
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1327,7 +1688,7 @@
 							)
 						)
 					)
-					(number "5"
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1659,7 +2020,7 @@
 		)
 		(uuid "acebad50-cd8a-4730-86f2-3f7d0ccd9979")
 	)
-	(text "3.33A Current Limit"
+	(text "2.94A Current Limit"
 		(exclude_from_sim no)
 		(at 146.812 61.214 0)
 		(effects
@@ -1668,20 +2029,6 @@
 			)
 		)
 		(uuid "b4982a72-8201-41aa-9bf0-a6666b0bd0d4")
-	)
-	(text "Maybe connect the P8_RX J4 and H4 and use the Bank 35 at 3V3"
-		(exclude_from_sim no)
-		(at 147.066 42.164 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-				(color 255 0 0 1)
-			)
-			(justify left)
-		)
-		(uuid "e0784390-c6bb-404c-a9e1-cfc5614d3540")
 	)
 	(text_box "UVLO Protection"
 		(exclude_from_sim no)
@@ -3616,7 +3963,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "06ea464b-ae9d-4d94-b8e3-44a0af3153d7")
-		(property "Reference" "#PWR0106"
+		(property "Reference" "#PWR0107"
 			(at 54.61 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -3676,7 +4023,7 @@
 		(instances
 			(project "Controller_Board"
 				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/e8d78bfe-983d-4ba8-aef9-7583d653e85e"
-					(reference "#PWR0106")
+					(reference "#PWR0107")
 					(unit 1)
 				)
 			)
@@ -3823,6 +4170,50 @@
 				)
 			)
 		)
+		(property "LCSC" "C431092"
+			(at 44.45 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Amass"
+			(at 44.45 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 44.45 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 44.45 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "a0b990bb-b997-4e07-aa6a-75aca7a5a9b4")
 		)
@@ -3893,6 +4284,50 @@
 			)
 		)
 		(property "Description" ""
+			(at 143.51 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C688380"
+			(at 143.51 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "ADI"
+			(at 143.51 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 143.51 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 143.51 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -3990,7 +4425,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C482106.html"
 			(at 123.19 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -4002,6 +4437,50 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 123.19 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C482106"
+			(at 123.19 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 123.19 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 123.19 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 123.19 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -4149,7 +4628,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCE21BR72A104KA01L?qs=sGAEpiMZZMvsSlwiRhF8qtYrDJZp5VWM5A0neNo3IOOEPzYKXzcdhg%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C85866.html"
 			(at 99.06 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -4161,6 +4640,50 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 99.06 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C85866"
+			(at 99.06 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 99.06 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 99.06 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 99.06 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -4330,6 +4853,50 @@
 				)
 			)
 		)
+		(property "LCSC" " C9900267203"
+			(at 106.68 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Semtech"
+			(at 106.68 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 106.68 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 106.68 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "6de0e852-b6cc-4210-91e1-cde4e26aedb8")
 		)
@@ -4404,7 +4971,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCE21BR72A104KA01L?qs=sGAEpiMZZMvsSlwiRhF8qtYrDJZp5VWM5A0neNo3IOOEPzYKXzcdhg%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C77020.html"
 			(at 158.75 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -4416,6 +4983,50 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 158.75 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C77020"
+			(at 158.75 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 158.75 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 158.75 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 158.75 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -4452,7 +5063,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "679b1040-0997-4224-95b3-9cc6a82059a8")
-		(property "Reference" "#PWR0107"
+		(property "Reference" "#PWR0106"
 			(at 123.19 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -4513,7 +5124,7 @@
 		(instances
 			(project "Controller_Board"
 				(path "/4e6e1af1-ede9-4a56-9d5f-a8dfd7fbcf8d/e8d78bfe-983d-4ba8-aef9-7583d653e85e"
-					(reference "#PWR0107")
+					(reference "#PWR0106")
 					(unit 1)
 				)
 			)
@@ -4564,7 +5175,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCE21BR72A104KA01L?qs=sGAEpiMZZMvsSlwiRhF8qtYrDJZp5VWM5A0neNo3IOOEPzYKXzcdhg%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C77019.html"
 			(at 123.19 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -4576,6 +5187,50 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 123.19 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C77019"
+			(at 123.19 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 123.19 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 123.19 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 123.19 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -4646,7 +5301,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C2076674.html"
 			(at 123.19 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -4658,6 +5313,50 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 123.19 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2076674"
+			(at 123.19 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 123.19 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 123.19 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 123.19 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -4728,7 +5427,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C2076674.html"
 			(at 123.19 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -4740,6 +5439,50 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 123.19 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2076674"
+			(at 123.19 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 123.19 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 123.19 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 123.19 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -4864,7 +5607,7 @@
 				)
 			)
 		)
-		(property "Value" "15mOhm 1/2W"
+		(property "Value" "17mOhm 1/2W"
 			(at 147.32 65.278 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4885,7 +5628,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C201283.html"
 			(at 147.32 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -4898,6 +5641,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 147.32 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C201283"
+			(at 147.32 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Walter"
+			(at 147.32 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 147.32 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 147.32 67.31 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4945,7 +5732,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "4.7u"
 			(at 86.36 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4967,7 +5754,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GRM32EC72A106KE05L?qs=sGAEpiMZZMvsSlwiRhF8qtsBU8Zhqm2R4P3pA1nH%2FQWQz2steIMHAw%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C2997285.html"
 			(at 88.9 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -4979,6 +5766,50 @@
 			)
 		)
 		(property "Description" ""
+			(at 88.9 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2997285"
+			(at 88.9 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 88.9 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 88.9 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 88.9 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -5027,7 +5858,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "277k"
+		(property "Value" "280k"
 			(at 121.666 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5049,7 +5880,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C4198226.html"
 			(at 123.19 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -5061,6 +5892,50 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 123.19 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C4198226"
+			(at 123.19 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 123.19 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 123.19 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 123.19 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -5087,9 +5962,9 @@
 		)
 	)
 	(symbol
+		(lib_name "Q_Dual_NMOS_S1G1S2G2D2D1_1")
 		(lib_id "Transistor_FET:Q_Dual_NMOS_S1G1S2G2D2D1")
-		(at 133.35 69.85 270)
-		(mirror x)
+		(at 123.19 69.85 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5099,29 +5974,31 @@
 		(dnp no)
 		(uuid "bd5ad1ec-04ce-421f-a5d5-bcbd5737a080")
 		(property "Reference" "Q101"
-			(at 130.302 61.468 90)
+			(at 121.9199 62.23 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "Si7252ADP"
-			(at 133.096 63.754 90)
+			(at 124.4599 62.23 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Package_SO:PowerPAK_SO-8_Dual"
-			(at 133.35 64.77 0)
+			(at 123.19 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5131,8 +6008,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 133.35 64.77 0)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C3289528.html?s_z=n_Si7252ADP"
+			(at 123.19 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5143,7 +6020,51 @@
 			)
 		)
 		(property "Description" ""
-			(at 121.158 67.564 0)
+			(at 135.382 67.564 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C3289528"
+			(at 123.19 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 123.19 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 123.19 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 123.19 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5459,7 +6380,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C445774.html"
 			(at 88.9 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -5471,6 +6392,50 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 88.9 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C445774"
+			(at 88.9 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 88.9 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 88.9 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 88.9 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -5597,7 +6562,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "23k"
+		(property "Value" "23.2k"
 			(at 121.666 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5619,7 +6584,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C2076557.html"
 			(at 123.19 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -5631,6 +6596,50 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 123.19 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2076557"
+			(at 123.19 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 123.19 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 123.19 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 123.19 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -5658,7 +6667,8 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:Q_Dual_NMOS_S1G1S2G2D2D1")
-		(at 123.19 69.85 90)
+		(at 133.35 69.85 270)
+		(mirror x)
 		(unit 2)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5668,7 +6678,7 @@
 		(dnp no)
 		(uuid "f79e861e-4bd8-4425-bfe2-4ef11920184f")
 		(property "Reference" "Q101"
-			(at 121.9199 62.23 0)
+			(at 134.6201 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5680,7 +6690,7 @@
 			)
 		)
 		(property "Value" "Si7252ADP"
-			(at 124.4599 62.23 0)
+			(at 132.0801 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5692,7 +6702,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:PowerPAK_SO-8_Dual"
-			(at 123.19 64.77 0)
+			(at 133.35 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5702,8 +6712,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 123.19 64.77 0)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C3289528.html?s_z=n_Si7252ADP"
+			(at 133.35 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5714,7 +6724,51 @@
 			)
 		)
 		(property "Description" ""
-			(at 135.382 67.564 0)
+			(at 121.158 67.564 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C3289528"
+			(at 133.35 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 133.35 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 133.35 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 133.35 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
