@@ -61,9 +61,3 @@ set_property BITSTREAM.CONFIG.NEXT_CONFIG_REBOOT Disable [current_design]
 
 # Specify clock frequency
 create_clock -period 83.333 -name SYSCLK -waveform {0.000 41.666} [get_ports clk_12mhz]
-
-
-
-
-
-

@@ -1,0 +1,401 @@
+
+*** Running vivado
+    with args -log Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Tue Apr  7 16:22:49 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source Top.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 531.500 ; gain = 200.633
+Command: read_checkpoint -auto_incremental -incremental C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/utils_1/imports/synth_1/Top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/utils_1/imports/synth_1/Top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Top -part xc7a35tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Device 21-9227] Part: xc7a35tcsg324-1 does not have CEAM library.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13560
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1383.848 ; gain = 447.711
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'xadc_clkout', assumed default net type 'wire' [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:149]
+INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:22]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:1951]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:1951]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:82508]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 63.000000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 83.333000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 3.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 7 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.000000 - type: double 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:82508]
+WARNING: [Synth 8-7071] port 'CLKFBOUTB' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_General_inst' [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:145]
+WARNING: [Synth 8-7071] port 'CLKOUT0B' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_General_inst' [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:145]
+WARNING: [Synth 8-7071] port 'CLKOUT1B' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_General_inst' [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:145]
+WARNING: [Synth 8-7071] port 'CLKOUT2' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_General_inst' [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:145]
+WARNING: [Synth 8-7071] port 'CLKOUT2B' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_General_inst' [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:145]
+WARNING: [Synth 8-7071] port 'CLKOUT3' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_General_inst' [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:145]
+WARNING: [Synth 8-7071] port 'CLKOUT3B' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_General_inst' [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:145]
+WARNING: [Synth 8-7071] port 'CLKOUT4' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_General_inst' [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:145]
+WARNING: [Synth 8-7071] port 'CLKOUT5' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_General_inst' [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:145]
+WARNING: [Synth 8-7071] port 'CLKOUT6' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_General_inst' [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:145]
+WARNING: [Synth 8-7023] instance 'MMCME2_BASE_General_inst' of module 'MMCME2_BASE' has 18 connections declared, but only 8 given [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:145]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (0#1) [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:22]
+WARNING: [Synth 8-3848] Net P1_TX_P in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:33]
+WARNING: [Synth 8-3848] Net P1_TX_N in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:33]
+WARNING: [Synth 8-3848] Net P2_TX_P in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:38]
+WARNING: [Synth 8-3848] Net P2_TX_N in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:38]
+WARNING: [Synth 8-3848] Net P3_TX_P in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:43]
+WARNING: [Synth 8-3848] Net P3_TX_N in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:43]
+WARNING: [Synth 8-3848] Net P4_TX_P in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:48]
+WARNING: [Synth 8-3848] Net P4_TX_N in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:48]
+WARNING: [Synth 8-3848] Net P5_TX_P in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:53]
+WARNING: [Synth 8-3848] Net P5_TX_N in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:53]
+WARNING: [Synth 8-3848] Net P6_TX_P in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:58]
+WARNING: [Synth 8-3848] Net P6_TX_N in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:58]
+WARNING: [Synth 8-3848] Net P7_TX_P in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:63]
+WARNING: [Synth 8-3848] Net P7_TX_N in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:63]
+WARNING: [Synth 8-3848] Net P8_TX_P in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:68]
+WARNING: [Synth 8-3848] Net P8_TX_N in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:68]
+WARNING: [Synth 8-3848] Net P9_TX_P in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:73]
+WARNING: [Synth 8-3848] Net P9_TX_N in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:73]
+WARNING: [Synth 8-3848] Net P2_L1 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:79]
+WARNING: [Synth 8-3848] Net P2_L2 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:79]
+WARNING: [Synth 8-3848] Net P3_L1 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:80]
+WARNING: [Synth 8-3848] Net P3_L2 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:80]
+WARNING: [Synth 8-3848] Net P4_L1 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:81]
+WARNING: [Synth 8-3848] Net P4_L2 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:81]
+WARNING: [Synth 8-3848] Net P5_L1 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:82]
+WARNING: [Synth 8-3848] Net P5_L2 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:82]
+WARNING: [Synth 8-3848] Net P6_L1 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:83]
+WARNING: [Synth 8-3848] Net P6_L2 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:83]
+WARNING: [Synth 8-3848] Net P7_L1 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:84]
+WARNING: [Synth 8-3848] Net P7_L2 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:84]
+WARNING: [Synth 8-3848] Net P8_L1 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:85]
+WARNING: [Synth 8-3848] Net P8_L2 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:85]
+WARNING: [Synth 8-3848] Net P9_L1 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:86]
+WARNING: [Synth 8-3848] Net P9_L2 in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:86]
+WARNING: [Synth 8-3848] Net SERIAL_OE_n in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:89]
+WARNING: [Synth 8-3848] Net SERIAL_PWR_n in module/entity Top does not have driver. [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:90]
+WARNING: [Synth 8-7129] Port P1_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P1_TX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P2_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P2_TX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P3_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P3_TX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P4_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P4_TX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P5_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P5_TX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P6_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P6_TX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P7_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P7_TX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P8_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P8_TX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P9_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P9_TX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P2_L1 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P2_L2 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P3_L1 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P3_L2 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P4_L1 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P4_L2 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P5_L1 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P5_L2 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P6_L1 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P6_L2 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P7_L1 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P7_L2 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P8_L1 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P8_L2 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P9_L1 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P9_L2 in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_OE_n in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_PWR_n in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_D[7] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_D[6] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_D[5] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_D[4] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_D[3] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_D[2] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_D[1] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_D[0] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P1_RX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P1_RX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P1_CLK_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P1_CLK_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P2_RX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P2_RX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P2_CLK_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P2_CLK_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P3_RX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P3_RX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P3_CLK_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P3_CLK_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P4_RX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P4_RX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P4_CLK_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P4_CLK_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P5_RX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P5_RX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P5_CLK_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P5_CLK_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P6_RX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P6_RX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P6_CLK_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P6_CLK_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P7_RX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P7_RX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P7_CLK_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P7_CLK_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P8_RX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P8_RX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P8_CLK_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P8_CLK_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P9_RX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P9_RX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P9_CLK_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P9_CLK_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_SIWU_n in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_WR_n in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_RXF_n in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_RD_n in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_TXE_n in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SERIAL_CLK in module Top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1492.875 ; gain = 556.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1492.875 ; gain = 556.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1492.875 ; gain = 556.738
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1492.875 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Constraints/VoxLink_Controller.xdc]
+Finished Parsing XDC File [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Constraints/VoxLink_Controller.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Constraints/VoxLink_Controller.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1509.879 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1509.879 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1509.879 ; gain = 573.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1509.879 ; gain = 573.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1509.879 ; gain = 573.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1509.879 ; gain = 573.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   28 Bit       Adders := 1     
++---Registers : 
+	               28 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port P1_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P1_TX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P2_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P2_TX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P3_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P3_TX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P4_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P4_TX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P5_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P5_TX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P6_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P6_TX_N in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P7_TX_P in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P7_TX_N in module Top is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1509.879 ; gain = 573.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1509.879 ; gain = 573.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1509.879 ; gain = 573.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1509.879 ; gain = 573.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1509.879 ; gain = 573.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1509.879 ; gain = 573.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1509.879 ; gain = 573.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1509.879 ; gain = 573.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1509.879 ; gain = 573.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1509.879 ; gain = 573.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     2|
+|2     |CARRY4      |     7|
+|3     |LUT1        |     2|
+|4     |LUT4        |    33|
+|5     |LUT5        |     2|
+|6     |LUT6        |     1|
+|7     |MMCME2_BASE |     1|
+|8     |FDCE        |     2|
+|9     |FDPE        |    28|
+|10    |IBUF        |     1|
+|11    |OBUF        |     2|
+|12    |OBUFT       |    36|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1509.879 ; gain = 573.742
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 87 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1509.879 ; gain = 556.738
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1509.879 ; gain = 573.742
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1509.879 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1509.879 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Synth Design complete | Checksum: dc2fc8dd
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 148 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1509.879 ; gain = 973.641
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1509.879 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/synth_1/Top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  7 16:23:36 2026...
