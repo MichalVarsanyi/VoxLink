@@ -1,0 +1,141 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "398400c4-e3dc-429d-bda6-2a1ff309aedd")
+	(paper "A4")
+	(title_block
+		(title "Root")
+		(date "2026-03-31")
+		(rev "2.0")
+		(company "Czech Technical University in Prague")
+		(comment 1 "Designer: Michal Varsanyi")
+		(comment 2 "Reviewer: Michal Varsanyi")
+	)
+	(lib_symbols)
+	(text "Technical Sheet Only!\nPlease refer to the subsequent sheets for schematic"
+		(exclude_from_sim no)
+		(at 144.78 79.756 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "650e7c63-664f-4139-ac9a-a06bb14f2c6f")
+	)
+	(text "Root [0]"
+		(exclude_from_sim no)
+		(at 15.748 20.066 0)
+		(effects
+			(font
+				(face "Arial")
+				(size 12.7 12.7)
+				(thickness 0.762)
+				(bold yes)
+				(color 132 0 0 1)
+			)
+			(justify left top)
+		)
+		(uuid "eec028fb-f24b-4eaa-a3ff-8da45e8f36cf")
+	)
+	(sheet
+		(at 88.9 88.9)
+		(size 50.8 34.29)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "a05d2c9f-ab45-4ccf-a5ec-e88493cd84d4")
+		(property "Sheetname" "FPGA"
+			(at 88.9 88.1884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "fpga.kicad_sch"
+			(at 88.9 123.7746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Core_Module"
+				(path "/398400c4-e3dc-429d-bda6-2a1ff309aedd"
+					(page "1")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 149.86 88.9)
+		(size 50.8 34.29)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "dbbe58bb-ba71-4ca5-8a9a-5dc2e79ec521")
+		(property "Sheetname" "Connectivity"
+			(at 149.86 88.1884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Connectivity.kicad_sch"
+			(at 149.86 123.7746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Core_Module"
+				(path "/398400c4-e3dc-429d-bda6-2a1ff309aedd"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "0")
+		)
+	)
+	(embedded_fonts no)
+)

@@ -11427,6 +11427,10 @@
 		(uuid "25dcaf8c-de00-4413-912d-2dfccfb58fd8")
 	)
 	(no_connect
+		(at 388.62 69.85)
+		(uuid "2749ca5c-7ae2-4707-a92e-53e5fda11337")
+	)
+	(no_connect
 		(at 151.13 116.84)
 		(uuid "275a1ded-e9da-4d4d-9d27-642a4dcd07ee")
 	)
@@ -11465,10 +11469,6 @@
 	(no_connect
 		(at 388.62 77.47)
 		(uuid "3a793b4c-39ab-4266-a1bb-7188d10fe742")
-	)
-	(no_connect
-		(at 447.04 168.91)
-		(uuid "3df564a3-eefd-4a2c-bb3f-b26bc6ec3ab7")
 	)
 	(no_connect
 		(at 241.3 114.3)
@@ -11531,6 +11531,10 @@
 		(uuid "5d402540-d58b-42c5-9b26-2a35182c2487")
 	)
 	(no_connect
+		(at 388.62 67.31)
+		(uuid "5d6ab9e9-d8e5-4d02-bf06-210e1bb1ed37")
+	)
+	(no_connect
 		(at 281.94 52.07)
 		(uuid "5ddb160e-096e-40a8-94ab-0be2c51640c6")
 	)
@@ -11541,10 +11545,6 @@
 	(no_connect
 		(at 76.2 116.84)
 		(uuid "602f4e57-5e45-4fc1-95ce-b1e5251f4df7")
-	)
-	(no_connect
-		(at 447.04 166.37)
-		(uuid "60e66966-d339-4af5-86d0-357e7e94e4a9")
 	)
 	(no_connect
 		(at 281.94 67.31)
@@ -11943,6 +11943,16 @@
 			(type default)
 		)
 		(uuid "08601226-5817-4b92-a20e-21983f8dec97")
+	)
+	(wire
+		(pts
+			(xy 436.88 168.91) (xy 447.04 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08742bf4-d270-422f-8067-3233475bbb8f")
 	)
 	(wire
 		(pts
@@ -12536,16 +12546,6 @@
 	)
 	(wire
 		(pts
-			(xy 378.46 69.85) (xy 388.62 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5724378d-a388-4338-8cbc-3aa49d58a34f")
-	)
-	(wire
-		(pts
 			(xy 271.78 102.87) (xy 281.94 102.87)
 		)
 		(stroke
@@ -12916,6 +12916,16 @@
 	)
 	(wire
 		(pts
+			(xy 436.88 166.37) (xy 447.04 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c8ae35c-c734-4f9d-b1c2-a09fe4411fb8")
+	)
+	(wire
+		(pts
 			(xy 101.6 106.68) (xy 91.44 106.68)
 		)
 		(stroke
@@ -13233,16 +13243,6 @@
 			(type default)
 		)
 		(uuid "bf70ba2b-2f79-4c44-a4d5-94ae8db58742")
-	)
-	(wire
-		(pts
-			(xy 378.46 67.31) (xy 388.62 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bfe54998-06dd-478b-8cbd-27f0e903bf32")
 	)
 	(wire
 		(pts
@@ -14487,17 +14487,6 @@
 		)
 		(uuid "98c5e509-f4d5-4d7a-9b8e-b236a96394ab")
 	)
-	(label "P8_RX_N"
-		(at 378.46 69.85 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.1588)
-			)
-			(justify left bottom)
-		)
-		(uuid "98e85450-9a34-4abb-a650-280a290848a1")
-	)
 	(label "P1_CLK_N"
 		(at 76.2 86.36 180)
 		(effects
@@ -14839,6 +14828,17 @@
 		)
 		(uuid "b723b926-5d5a-4d09-9942-5a50f1739298")
 	)
+	(label "P8_RX_P"
+		(at 436.88 166.37 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+			)
+			(justify left bottom)
+		)
+		(uuid "b79ec958-951e-47be-9f52-cb19f6dae8df")
+	)
 	(label "P8_CLK_N"
 		(at 226.06 132.08 180)
 		(effects
@@ -14871,6 +14871,17 @@
 			(justify right bottom)
 		)
 		(uuid "bf549f53-6339-4099-a8f8-05570bb21949")
+	)
+	(label "P8_RX_N"
+		(at 436.88 168.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+			)
+			(justify left bottom)
+		)
+		(uuid "bf9556d3-a077-478e-a9d0-ef5bfb2c633b")
 	)
 	(label "P2_RX_P"
 		(at 271.78 148.59 0)
@@ -15003,17 +15014,6 @@
 			(justify left bottom)
 		)
 		(uuid "cfe14b93-a1fd-44ba-85f1-27591cd47aa3")
-	)
-	(label "P8_RX_P"
-		(at 378.46 67.31 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.1588)
-			)
-			(justify left bottom)
-		)
-		(uuid "d0b5e3a2-e730-453c-b64b-b4aed68e2486")
 	)
 	(label "P4_CLK_N"
 		(at 176.53 86.36 180)
@@ -16715,6 +16715,50 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 138.43 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 138.43 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 138.43 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 138.43 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c979cdec-5350-4af2-9242-b734332d753a")
 		)
@@ -16950,6 +16994,50 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 153.67 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 153.67 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 153.67 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 153.67 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "904e5483-278e-432b-a8c3-7322d8f066b1")
 		)
@@ -17007,7 +17095,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Littelfuse/SESD0402X1UN-0020-090?qs=R4Nx89tKnBiKqBxpGxncNA%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C1973340.html?s_z=n_SESD0402X1UN-0020-090"
 			(at 52.07 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -17020,6 +17108,50 @@
 		)
 		(property "Description" "Bidirectional transient-voltage-suppression diode"
 			(at 52.07 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1973340"
+			(at 52.07 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 52.07 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 52.07 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 52.07 234.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17089,7 +17221,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C125068.html?s_z=n_C125068"
 			(at 55.88 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -17101,6 +17233,50 @@
 			)
 		)
 		(property "Description" ""
+			(at 55.88 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C125068"
+			(at 55.88 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TE"
+			(at 55.88 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 55.88 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 55.88 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -17599,7 +17775,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 115.57 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -17612,6 +17788,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 115.57 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 115.57 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 115.57 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 115.57 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 115.57 92.71 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17757,7 +17977,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 40.64 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -17770,6 +17990,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 40.64 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 40.64 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 40.64 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 40.64 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 40.64 86.36 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18074,7 +18338,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 158.75 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -18097,6 +18361,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 158.75 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 158.75 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 158.75 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 158.75 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 158.75 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -18191,7 +18499,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C125068.html?s_z=n_C125068"
 			(at 55.88 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -18203,6 +18511,50 @@
 			)
 		)
 		(property "Description" ""
+			(at 55.88 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C125068"
+			(at 55.88 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TE"
+			(at 55.88 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 55.88 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 55.88 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -18466,7 +18818,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 83.82 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -18489,6 +18841,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 83.82 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 83.82 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 83.82 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 83.82 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 83.82 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -18580,7 +18976,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 190.5 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -18593,6 +18989,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 190.5 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 190.5 173.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 190.5 173.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 190.5 173.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 190.5 173.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18662,7 +19102,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C125068.html?s_z=n_C125068"
 			(at 130.81 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -18674,6 +19114,50 @@
 			)
 		)
 		(property "Description" ""
+			(at 130.81 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C125068"
+			(at 130.81 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TE"
+			(at 130.81 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 130.81 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 130.81 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -18873,6 +19357,50 @@
 			)
 		)
 		(property "Description" ""
+			(at 468.63 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1521726"
+			(at 468.63 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Xilinx"
+			(at 468.63 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 468.63 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 468.63 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -20144,7 +20672,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 233.68 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -20167,6 +20695,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 233.68 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 233.68 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 233.68 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 233.68 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 233.68 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -20335,7 +20907,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 190.5 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -20348,6 +20920,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 190.5 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 190.5 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 190.5 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 190.5 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 190.5 92.71 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20415,7 +21031,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 158.75 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -20438,6 +21054,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 158.75 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 158.75 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 158.75 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 158.75 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 158.75 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -20687,7 +21347,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 40.64 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -20700,6 +21360,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 40.64 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 40.64 173.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 40.64 173.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 40.64 173.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 40.64 173.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21556,7 +22260,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 115.57 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -21569,6 +22273,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 115.57 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 115.57 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 115.57 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 115.57 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 115.57 86.36 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21635,7 +22383,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 40.64 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -21648,6 +22396,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 40.64 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 40.64 180.34 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 40.64 180.34 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 40.64 180.34 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 40.64 180.34 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22111,7 +22903,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 158.75 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -22134,6 +22926,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 158.75 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 158.75 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 158.75 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 158.75 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 158.75 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -22229,7 +23065,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 83.82 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -22252,6 +23088,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 83.82 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 83.82 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 83.82 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 83.82 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 83.82 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -22423,7 +23303,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 158.75 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -22446,6 +23326,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 158.75 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 158.75 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 158.75 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 158.75 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 158.75 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -22791,6 +23715,50 @@
 			)
 		)
 		(property "Description" ""
+			(at 356.87 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1521726"
+			(at 356.87 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Xilinx"
+			(at 356.87 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 356.87 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 356.87 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -23984,7 +24952,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 233.68 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -24007,6 +24975,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 233.68 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 233.68 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 233.68 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 233.68 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 233.68 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -24252,7 +25264,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 40.64 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -24265,6 +25277,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 40.64 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 40.64 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 40.64 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 40.64 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 40.64 92.71 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24333,7 +25389,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 158.75 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -24356,6 +25412,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 158.75 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 158.75 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 158.75 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 158.75 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 158.75 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -24845,7 +25945,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Littelfuse/SESD0402X1UN-0020-090?qs=R4Nx89tKnBiKqBxpGxncNA%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C1973340.html?s_z=n_SESD0402X1UN-0020-090"
 			(at 43.18 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -24858,6 +25958,50 @@
 		)
 		(property "Description" "Bidirectional transient-voltage-suppression diode"
 			(at 43.18 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1973340"
+			(at 43.18 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 43.18 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 43.18 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 43.18 234.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25003,7 +26147,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 115.57 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -25016,6 +26160,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 115.57 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 115.57 138.43 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 115.57 138.43 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 115.57 138.43 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 115.57 138.43 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25082,7 +26270,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 190.5 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -25095,6 +26283,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 190.5 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 190.5 138.43 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 190.5 138.43 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 190.5 138.43 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 190.5 138.43 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25579,6 +26811,50 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 146.05 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 146.05 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 146.05 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 146.05 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0ec2d50e-e799-4de2-9cc8-02193ddc9e46")
 		)
@@ -25636,7 +26912,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 158.75 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -25659,6 +26935,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 158.75 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 158.75 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 158.75 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 158.75 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 158.75 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -25832,7 +27152,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Littelfuse/SESD0402X1UN-0020-090?qs=R4Nx89tKnBiKqBxpGxncNA%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C1973340.html?s_z=n_SESD0402X1UN-0020-090"
 			(at 69.85 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -25845,6 +27165,50 @@
 		)
 		(property "Description" "Bidirectional transient-voltage-suppression diode"
 			(at 69.85 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1973340"
+			(at 69.85 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 69.85 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 69.85 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 69.85 234.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25911,7 +27275,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 83.82 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -25934,6 +27298,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 83.82 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 83.82 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 83.82 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 83.82 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 83.82 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -26287,6 +27695,50 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 130.81 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 130.81 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 130.81 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 130.81 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2f752250-48c4-4307-8984-4374df2f2af5")
 		)
@@ -26422,7 +27874,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 83.82 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -26445,6 +27897,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 83.82 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 83.82 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 83.82 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 83.82 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 83.82 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -26615,7 +28111,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 115.57 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -26628,6 +28124,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 115.57 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 115.57 132.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 115.57 132.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 115.57 132.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 115.57 132.08 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26773,7 +28313,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 40.64 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -26786,6 +28326,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 40.64 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 40.64 132.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 40.64 132.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 40.64 132.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 40.64 132.08 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27641,7 +29225,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 83.82 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -27664,6 +29248,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 83.82 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 83.82 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 83.82 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 83.82 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 83.82 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -27851,6 +29479,50 @@
 			)
 		)
 		(property "Description" ""
+			(at 410.21 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1521726"
+			(at 410.21 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Xilinx"
+			(at 410.21 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 410.21 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 410.21 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -29200,7 +30872,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 40.64 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -29213,6 +30885,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 40.64 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 40.64 138.43 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 40.64 138.43 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 40.64 138.43 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 40.64 138.43 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29279,7 +30995,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 115.57 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -29292,6 +31008,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 115.57 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 115.57 173.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 115.57 173.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 115.57 173.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 115.57 173.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29437,7 +31197,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 190.5 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -29450,6 +31210,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 190.5 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 190.5 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 190.5 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 190.5 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 190.5 86.36 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29833,7 +31637,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Littelfuse/SESD0402X1UN-0020-090?qs=R4Nx89tKnBiKqBxpGxncNA%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C1973340.html?s_z=n_SESD0402X1UN-0020-090"
 			(at 105.41 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -29846,6 +31650,50 @@
 		)
 		(property "Description" "Bidirectional transient-voltage-suppression diode"
 			(at 105.41 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1973340"
+			(at 105.41 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 105.41 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 105.41 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 105.41 234.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30085,6 +31933,50 @@
 			)
 		)
 		(property "Description" ""
+			(at 303.53 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1521726"
+			(at 303.53 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Xilinx"
+			(at 303.53 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 303.53 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 303.53 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -31200,7 +33092,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Littelfuse/SESD0402X1UN-0020-090?qs=R4Nx89tKnBiKqBxpGxncNA%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C1973340.html?s_z=n_SESD0402X1UN-0020-090"
 			(at 60.96 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -31213,6 +33105,50 @@
 		)
 		(property "Description" "Bidirectional transient-voltage-suppression diode"
 			(at 60.96 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1973340"
+			(at 60.96 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 60.96 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 60.96 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 60.96 234.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31281,7 +33217,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 83.82 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -31304,6 +33240,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 83.82 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 83.82 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 83.82 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 83.82 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 83.82 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -31398,7 +33378,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C125068.html?s_z=n_C125068"
 			(at 130.81 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -31410,6 +33390,50 @@
 			)
 		)
 		(property "Description" ""
+			(at 130.81 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C125068"
+			(at 130.81 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TE"
+			(at 130.81 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 130.81 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 130.81 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -31516,7 +33540,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Littelfuse/SESD0402X1UN-0020-090?qs=R4Nx89tKnBiKqBxpGxncNA%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C1973340.html?s_z=n_SESD0402X1UN-0020-090"
 			(at 96.52 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -31529,6 +33553,50 @@
 		)
 		(property "Description" "Bidirectional transient-voltage-suppression diode"
 			(at 96.52 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1973340"
+			(at 96.52 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 96.52 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 96.52 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 96.52 234.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31756,7 +33824,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Littelfuse/SESD0402X1UN-0020-090?qs=R4Nx89tKnBiKqBxpGxncNA%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C1973340.html?s_z=n_SESD0402X1UN-0020-090"
 			(at 34.29 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -31769,6 +33837,50 @@
 		)
 		(property "Description" "Bidirectional transient-voltage-suppression diode"
 			(at 34.29 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1973340"
+			(at 34.29 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 34.29 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 34.29 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 34.29 234.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31996,7 +34108,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Littelfuse/SESD0402X1UN-0020-090?qs=R4Nx89tKnBiKqBxpGxncNA%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C1973340.html?s_z=n_SESD0402X1UN-0020-090"
 			(at 78.74 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -32009,6 +34121,50 @@
 		)
 		(property "Description" "Bidirectional transient-voltage-suppression diode"
 			(at 78.74 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1973340"
+			(at 78.74 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 78.74 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 78.74 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 78.74 234.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32078,7 +34234,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C125068.html?s_z=n_C125068"
 			(at 55.88 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -32090,6 +34246,50 @@
 			)
 		)
 		(property "Description" ""
+			(at 55.88 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C125068"
+			(at 55.88 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TE"
+			(at 55.88 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 55.88 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 55.88 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -32273,7 +34473,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 233.68 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -32296,6 +34496,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 233.68 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 233.68 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 233.68 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 233.68 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 233.68 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -32705,7 +34949,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 246.38 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -32728,6 +34972,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 246.38 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 246.38 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 246.38 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 246.38 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 246.38 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -33135,7 +35423,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 190.5 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -33148,6 +35436,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 190.5 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 190.5 132.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 190.5 132.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 190.5 132.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 190.5 132.08 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -33296,7 +35628,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C125068.html?s_z=n_C125068"
 			(at 205.74 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -33308,6 +35640,50 @@
 			)
 		)
 		(property "Description" ""
+			(at 205.74 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C125068"
+			(at 205.74 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TE"
+			(at 205.74 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 205.74 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 205.74 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -33490,7 +35866,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 115.57 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -33503,6 +35879,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 115.57 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 115.57 180.34 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 115.57 180.34 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 115.57 180.34 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 115.57 180.34 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -33651,7 +36071,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 246.38 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -33674,6 +36094,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 246.38 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 246.38 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 246.38 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 246.38 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 246.38 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -34003,7 +36467,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C125068.html?s_z=n_C125068"
 			(at 205.74 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -34015,6 +36479,50 @@
 			)
 		)
 		(property "Description" ""
+			(at 205.74 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C125068"
+			(at 205.74 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TE"
+			(at 205.74 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 205.74 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 205.74 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -34121,7 +36629,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C125068.html?s_z=n_C125068"
 			(at 130.81 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -34133,6 +36641,50 @@
 			)
 		)
 		(property "Description" ""
+			(at 130.81 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C125068"
+			(at 130.81 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TE"
+			(at 130.81 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 130.81 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 130.81 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -34476,7 +37028,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106794.html?s_z=n_C106794"
 			(at 233.68 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -34499,6 +37051,50 @@
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/595-TPD4E02B04DQAR"
+			(at 233.68 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106794"
+			(at 233.68 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 233.68 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 233.68 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 233.68 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -34670,7 +37266,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Littelfuse/SESD0402X1UN-0020-090?qs=R4Nx89tKnBiKqBxpGxncNA%3D%3D"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C1973340.html?s_z=n_SESD0402X1UN-0020-090"
 			(at 87.63 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -34683,6 +37279,50 @@
 		)
 		(property "Description" "Bidirectional transient-voltage-suppression diode"
 			(at 87.63 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1973340"
+			(at 87.63 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 87.63 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 87.63 234.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 87.63 234.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34752,7 +37392,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C125068.html?s_z=n_C125068"
 			(at 205.74 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -34764,6 +37404,50 @@
 			)
 		)
 		(property "Description" ""
+			(at 205.74 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C125068"
+			(at 205.74 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TE"
+			(at 205.74 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 205.74 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
 			(at 205.74 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -34867,7 +37551,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C71623.html"
 			(at 190.5 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -34880,6 +37564,50 @@
 		)
 		(property "Description" "Resistor"
 			(at 190.5 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71623"
+			(at 190.5 180.34 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 190.5 180.34 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 190.5 180.34 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.1" ""
+			(at 190.5 180.34 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
