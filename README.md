@@ -55,9 +55,9 @@ The Direct Master-Slave is very **versatile to sampling frequency and packet siz
  - Timestamp - Identification number of the packet
  - Data
 
-| 7 Bits | 7 Bits | 4 Bits | Experimental | 16-64 Bits |
+| 12 Bits | 12 Bits | 8 Bits | 64 Bits | 16 Bits |
 |:--------:|:--------:|:--------:|:--------:|:--------:|
-| Instance ID | Length | Timestamp | CRC | Data |
+| Address | Timestamp | Command | Data | CRC |
 
 
 # Physical Layer
@@ -388,5 +388,18 @@ Although LVDS signaling is supported by the RJ45 twisted wire pair terminations,
    - Finished BNO086 Design - 2nd of April
    - Finished BUS Shell     - 2nd of April
    - Finished DAISY Shell   - 2nd of April
-- Controller Bringup                    - 7 Days from the arrival of the board
-- VoxLink Protocol Development          - 16 Days
+- **VoxLink Protocol Development**
+1. CRC implementation
+2. Timestamp, address, and command implementation
+3. Core module flyby + data append mechanism
+4. Core/Controller board receive
+5. Communication with PC (structure) + miscellaneous
+6. Board bringup
+
+- **Thesis Outline**
+1. Introduction
+2. State of the Art
+3. Engineering Requirements
+4. Hardware
+5. Firmware
+6. Testing
