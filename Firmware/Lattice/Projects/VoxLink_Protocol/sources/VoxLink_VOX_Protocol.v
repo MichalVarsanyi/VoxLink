@@ -7,8 +7,8 @@ module VoxLink_VOX_Protocol #(
     input sys_rst,
 
     // Data Input
-    input [79:0]   sensor_data,                // Latched data from the sensor
-    input          sensor_data_ready,
+    input [111:0]  packet_data,                // Assembled packet with CRC
+    input          packet_ready,
 
     // Transmit Output
     output vox_tx,
@@ -53,30 +53,27 @@ module VoxLink_VOX_Protocol #(
     // Main Control Loop
     // ---------------------------------------------------------
 
-    reg [63:0]  sensor_data_r;
-    reg [6:0]   bits_remaining;
+    reg [111:0] packet_data_r;
+    reg [7:0]   bits_remaining;
 
-    assign vox_tx = (bits_remaining > 0) ? sensor_data_r[63] : 1'b0;
+    assign vox_tx = (bits_remaining > 0) ? packet_data_r[111] : 1'b0;
 
     always @(posedge sys_clk or posedge sys_rst)
     begin
         if (sys_rst)
         begin
-            // Transmit Output
-            // vox_tx      <= 1'b0;
-            vox_clk     <= 1'b1;
+            vox_clk         <= 1'b1;
 
-            // Data Processing
-            sensor_data_r   <= {64{1'b0}};
-            bits_remaining  <= {7{1'b0}};
+            packet_data_r   <= {112{1'b0}};
+            bits_remaining  <= {8{1'b0}};
         end
         else
         begin
             // Data Latching
-            if (sensor_data_ready == 1)
+            if (packet_ready == 1)
             begin
-                sensor_data_r <= sensor_data[79:16];
-                bits_remaining <= 7'd64;
+                packet_data_r  <= packet_data;
+                bits_remaining <= 8'd112;
             end
 
             // VoxLink SCK
@@ -90,7 +87,7 @@ module VoxLink_VOX_Protocol #(
 
                     1:
                     begin
-                        sensor_data_r <= {sensor_data_r[62:0], 1'b0};
+                        packet_data_r  <= {packet_data_r[110:0], 1'b0};
                         bits_remaining <= bits_remaining - 1;
                         vox_clk <= 1'b0;
                     end

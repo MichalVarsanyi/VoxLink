@@ -239,7 +239,7 @@ localparam  MAILBOX                                 = 1;    // MAILBOX address
         .sys_clk(sys_clk),
         
 
-        .sensor_data(64'h0000_0000_2000_2000),
+        .sensor_data(sensor_data),
         .sensor_data_valid(sensor_data_valid),
         
         // Multiplexer output

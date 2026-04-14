@@ -41,7 +41,7 @@ module VoxLink_BNO_Driver #(
     // Subscription
     localparam  BNO_SUBSCRIBE_WRITE_STATE               = 4'd4;
 
-    reg [15:0] byte_counter;
+    reg [9:0] byte_counter;
 
     reg [15:0] packet_length;
     reg [15:0] target_length; // This is the received packet_length - 1
@@ -94,11 +94,11 @@ module VoxLink_BNO_Driver #(
     always @(posedge sys_clk or posedge sys_rst) 
     begin
         if (sys_rst)
-            byte_counter <= 16'd0;
+            byte_counter <= 10'd0;
         else if (clr_byte_counter)
-            byte_counter <= 16'd0;
+            byte_counter <= 10'd0;
         else if (inc_byte_counter)
-            byte_counter <= byte_counter + 16'd1;
+            byte_counter <= byte_counter + 10'd1;
     end
 
 
@@ -169,7 +169,7 @@ module VoxLink_BNO_Driver #(
                 // We transmit the address of the sensor
                 BNO_ADVERTISEMENT_ADDR_STATE:
                 begin
-                    // Send the sensor address and the read command
+                    // Send the sensor address and the read command {BNO_ADDRESS, READ}
                     tx_data             <= {BNO_ADDRESS, 1'b1};
                     trigger_tx          <= 1'b1;
                     finish_transaction  <= 1'b0;
@@ -193,15 +193,16 @@ module VoxLink_BNO_Driver #(
                 begin
                     trigger_rx  <= 1'b1;
 
+                    // We wait for the I2C driver to receive data
                     if (rx_valid == 1'b1)
                     begin
                         inc_byte_counter <= 1'b1;
 
                         // Capture the packet length
-                        if (byte_counter == 16'd0) 
+                        if (byte_counter == 0) 
                             packet_length[7:0]  <= rx_data;
 
-                        if (byte_counter == 16'd1) 
+                        if (byte_counter == 1) 
                         begin
                             packet_length[15:8]   <= {1'b0, rx_data[6:0]};
                             
@@ -209,9 +210,11 @@ module VoxLink_BNO_Driver #(
                             target_length <= {1'b0, rx_data[6:0], packet_length[7:0]} - 16'd1;
                         end
 
+                        // We have a shift register where we push our received data
                         sensor_data <= {sensor_data[71:0], rx_data};
                     end
 
+                    // We have seen the entire message length
                     if (match_packet_length == 1)
                     begin
                         trigger_rx  <= 1'b0;

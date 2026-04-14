@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/_GIT/FPGA/HW/7-SERIES/Projects/Vox_Readout_Testing/Vox_Readout_Testing.runs/synth_1/Top.tcl"
+  variable script "C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.runs/synth_1/Top.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,7 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 5
 set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
@@ -66,25 +65,25 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/_GIT/FPGA/HW/7-SERIES/Projects/Vox_Readout_Testing/Vox_Readout_Testing.cache/wt [current_project]
-set_property parent.project_path C:/_GIT/FPGA/HW/7-SERIES/Projects/Vox_Readout_Testing/Vox_Readout_Testing.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.cache/wt [current_project]
+set_property parent.project_path C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/_GIT/FPGA/HW/7-SERIES/Projects/Vox_Readout_Testing/Vox_Readout_Testing.cache/ip [current_project]
+set_property ip_output_repo c:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/_GIT/FPGA/HW/7-SERIES/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/new/MV_UART.v
-  C:/_GIT/FPGA/HW/7-SERIES/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/new/MV_UART_FIFO_Interface.v
-  C:/_GIT/FPGA/HW/7-SERIES/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/new/Vox_Receiver.v
-  C:/_GIT/FPGA/HW/7-SERIES/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/new/Vox_Testing_Multiplexer.v
-  C:/_GIT/FPGA/HW/7-SERIES/Source/Verilog/Top_Vox_Readout_Testing.v
+  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/new/MV_UART.v
+  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/new/MV_UART_FIFO_Interface.v
+  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/new/Vox_Receiver.v
+  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/new/Vox_Testing_Multiplexer.v
+  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_Vox_Readout_Testing.v
 }
-read_ip -quiet C:/_GIT/FPGA/HW/7-SERIES/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
-set_property used_in_implementation false [get_files -all c:/_GIT/FPGA/HW/7-SERIES/Projects/Vox_Readout_Testing/MV_test.gen/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc]
-set_property used_in_implementation false [get_files -all c:/_GIT/FPGA/HW/7-SERIES/Projects/Vox_Readout_Testing/MV_test.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_ooc.xdc]
+read_ip -quiet C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/MV_test.gen/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/MV_test.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -100,7 +99,7 @@ set_property used_in_implementation false [get_files C:/_GIT/FPGA/HW/7-SERIES/So
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/_GIT/FPGA/HW/7-SERIES/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/utils_1/imports/synth_1/Top.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/utils_1/imports/synth_1/Top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

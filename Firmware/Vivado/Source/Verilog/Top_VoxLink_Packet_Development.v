@@ -108,20 +108,5 @@ localparam  MAILBOX                                 = 1;    // MAILBOX address
     );
 
 
-//--------------------------------------------------------------------------------------------- //       
-//  Timestamp
-//--------------------------------------------------------------------------------------------- //
-// Check if the system clock is running and increment the timestamp
-
-    reg [11:0]      timestamp;
-    always @(posedge sys_clk) 
-    begin
-        if(sys_rst)
-            timestamp   <= {12{1'b0}};
-        else
-        begin
-            timestamp   <= timestamp + 1;
-        end
-    end
 
 endmodule

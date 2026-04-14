@@ -259,20 +259,42 @@ module Top(
 );
 
 // -----------------------------------------------------
+// VoxLink Packet Builder
+// -----------------------------------------------------
+
+    wire [111:0] packet_data;
+    wire         packet_ready;
+
+    VoxLink_Packet_Builder #(
+        .ADDRESS(12'h001),
+        .COMMAND(8'h02),
+        .CLK_FREQ_HZ(100_500_000)
+    ) VoxLink_Packet_Builder_Inst (
+        .sys_clk(sys_clk),
+        .sys_rst(sys_rst),
+
+        .sensor_data(sensor_data),
+        .sensor_data_ready(sensor_data_ready),
+
+        .packet_data(packet_data),
+        .packet_ready(packet_ready)
+    );
+
+// -----------------------------------------------------
 // VoxLink Protocol Driver
 // -----------------------------------------------------
 
     VoxLink_VOX_Protocol #(
         .CLK_FREQ(100_500_000),  // System Clock Frequency
         .VOX_FREQ(100_000)       // Target VoxLink Speed
-    )(
+    ) VoxLink_VOX_Protocol_Inst (
         // General
         .sys_clk(sys_clk),
         .sys_rst(sys_rst),
 
         // Data Input
-        .sensor_data(sensor_data),                // Latched data from the sensor
-        .sensor_data_ready(sensor_data_ready),
+        .packet_data(packet_data),
+        .packet_ready(packet_ready),
 
         // Transmit Output
         .vox_tx(vox_clk_n),

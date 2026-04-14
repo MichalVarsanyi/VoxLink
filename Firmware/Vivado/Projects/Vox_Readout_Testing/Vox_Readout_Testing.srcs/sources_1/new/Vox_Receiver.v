@@ -53,31 +53,33 @@ module Vox_Receiver (
     // ---------------------------------------------------------
     // 3. Data Shift Register & Counter
     // ---------------------------------------------------------
-    reg [63:0] shift_reg;
-    reg [6:0]  bit_counter;
+    // Full 112-bit packet: Address(12) | Timestamp(12) | Command(8) | Data(64) | CRC(16)
+    // We shift in all 112 bits, then extract the 64-bit Data field at bits [79:16].
+    reg [111:0] shift_reg;
+    reg [7:0]   bit_counter;
 
     always @(posedge sys_clk) begin
         if (sys_rst) begin
-            shift_reg       <= 64'd0;
-            bit_counter     <= 7'd0;
-            sensor_data <= 64'd0;
-            sensor_data_valid      <= 1'b0;
+            shift_reg         <= 112'd0;
+            bit_counter       <= 8'd0;
+            sensor_data       <= 64'd0;
+            sensor_data_valid <= 1'b0;
         end else begin
             // Default state: valid pulse is 1 cycle only
             sensor_data_valid <= 1'b0;
 
             if (vox_clk_rising_edge) begin
                 // Shift the safely synchronized bit into the register
-                shift_reg <= {shift_reg[62:0], vox_rx_sync};
-                
+                shift_reg <= {shift_reg[110:0], vox_rx_sync};
+
                 // Count the bits
-                if (bit_counter == 7'd63) begin
-                    // We received all 64 bits! 
-                    sensor_data <= {shift_reg[62:0], vox_rx_sync}; 
-                    sensor_data_valid      <= 1'b1;                          // Trigger the multiplexer
-                    bit_counter     <= 7'd0;                          // Reset for the next packet
+                if (bit_counter == 8'd111) begin
+                    // We received all 112 bits — extract the 64-bit Data field
+                    sensor_data       <= {shift_reg[78:16], vox_rx_sync};
+                    sensor_data_valid <= 1'b1;
+                    bit_counter       <= 8'd0;
                 end else begin
-                    bit_counter <= bit_counter + 7'd1;
+                    bit_counter <= bit_counter + 8'd1;
                 end
             end
         end

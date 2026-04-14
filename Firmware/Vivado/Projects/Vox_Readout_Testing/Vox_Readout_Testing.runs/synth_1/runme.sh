@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/_GIT/FPGA/HW/7-SERIES/Projects/Vox_Readout_Testing/Vox_Readout_Testing.runs/synth_1'
+HD_PWD='C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

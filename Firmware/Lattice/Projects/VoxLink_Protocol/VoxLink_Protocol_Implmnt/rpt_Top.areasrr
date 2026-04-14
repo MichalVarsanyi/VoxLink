@@ -9,18 +9,18 @@ Part:			ICE40UL1KCM36A (Lattice)
 SEQUENTIAL ELEMENTS
 Name      Total elements     Utilization     Notes
 --------------------------------------------------
-FLOPS     362                100 %                
+FLOPS     636                100 %                
 ==================================================
-Total SEQUENTIAL ELEMENTS in the block Top:	362 (45.88 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block Top:	636 (48.15 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name       Total elements     Utilization     Notes
 ---------------------------------------------------
-LUTS       304                100 %                
-CARRYS     98                 100 %                
+LUTS       528                100 %                
+CARRYS     126                100 %                
 ===================================================
-Total COMBINATIONAL LOGIC in the block Top:	402 (50.95 % Utilization)
+Total COMBINATIONAL LOGIC in the block Top:	654 (49.51 % Utilization)
 
 
 IO PADS
@@ -28,7 +28,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 PADS     13                 100 %                
 =================================================
-Total IO PADS in the block Top:	13 (1.65 % Utilization)
+Total IO PADS in the block Top:	13 (0.98 % Utilization)
 
 ----------------------------------------------------------------------------------------
 ########   Utilization report for  cell:   VoxLink_BNO_Driver_75_0_1_2_3_4_Z2   ########
@@ -38,26 +38,26 @@ Instance path:   Top.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2
 SEQUENTIAL ELEMENTS
 Name      Total elements     Utilization     Notes
 --------------------------------------------------
-FLOPS     187                51.7 %               
+FLOPS     182                28.6 %               
 ==================================================
-Total SEQUENTIAL ELEMENTS in the block Top.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2:	187 (23.70 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block Top.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2:	182 (13.78 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name       Total elements     Utilization     Notes
 ---------------------------------------------------
-LUTS       88                 28.9 %               
-CARRYS     46                 46.9 %               
+LUTS       96                 18.2 %               
+CARRYS     40                 31.7 %               
 ===================================================
-Total COMBINATIONAL LOGIC in the block Top.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2:	134 (16.98 % Utilization)
+Total COMBINATIONAL LOGIC in the block Top.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2:	136 (10.30 % Utilization)
 
 
 IO PADS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-PADS     2                  15.4 %               
+PADS     1                  7.69 %               
 =================================================
-Total IO PADS in the block Top.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2:	2 (0.25 % Utilization)
+Total IO PADS in the block Top.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2:	1 (0.08 % Utilization)
 
 ---------------------------------------------------------------------------
 ########   Utilization report for  cell:   VoxLink_I2C_Driver_Z1   ########
@@ -67,18 +67,18 @@ Instance path:   Top.VoxLink_I2C_Driver_Z1
 SEQUENTIAL ELEMENTS
 Name      Total elements     Utilization     Notes
 --------------------------------------------------
-FLOPS     62                 17.1 %               
+FLOPS     62                 9.75 %               
 ==================================================
-Total SEQUENTIAL ELEMENTS in the block Top.VoxLink_I2C_Driver_Z1:	62 (7.86 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block Top.VoxLink_I2C_Driver_Z1:	62 (4.69 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name       Total elements     Utilization     Notes
 ---------------------------------------------------
-LUTS       88                 28.9 %               
-CARRYS     10                 10.2 %               
+LUTS       86                 16.3 %               
+CARRYS     10                 7.94 %               
 ===================================================
-Total COMBINATIONAL LOGIC in the block Top.VoxLink_I2C_Driver_Z1:	98 (12.42 % Utilization)
+Total COMBINATIONAL LOGIC in the block Top.VoxLink_I2C_Driver_Z1:	96 (7.27 % Utilization)
 
 
 IO PADS
@@ -86,7 +86,86 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 PADS     2                  15.4 %               
 =================================================
-Total IO PADS in the block Top.VoxLink_I2C_Driver_Z1:	2 (0.25 % Utilization)
+Total IO PADS in the block Top.VoxLink_I2C_Driver_Z1:	2 (0.15 % Utilization)
+
+-------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   VoxLink_Packet_Builder_1_2_100500000s   ########
+Instance path:   Top.VoxLink_Packet_Builder_1_2_100500000s                                 
+===========================================================================================
+
+SEQUENTIAL ELEMENTS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+FLOPS     231                36.3 %               
+==================================================
+Total SEQUENTIAL ELEMENTS in the block Top.VoxLink_Packet_Builder_1_2_100500000s:	231 (17.49 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+LUTS       170                32.2 %               
+CARRYS     34                 27 %                 
+===================================================
+Total COMBINATIONAL LOGIC in the block Top.VoxLink_Packet_Builder_1_2_100500000s:	204 (15.44 % Utilization)
+
+
+IO PADS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     1                  7.69 %               
+=================================================
+Total IO PADS in the block Top.VoxLink_Packet_Builder_1_2_100500000s:	1 (0.08 % Utilization)
+
+----------------------------------------------------------------------------------------
+########   Utilization report for  cell:   VoxLink_CRC16_Koopman_112s_16s_8s   ######## 
+Instance path:   VoxLink_Packet_Builder_1_2_100500000s.VoxLink_CRC16_Koopman_112s_16s_8s
+========================================================================================
+
+SEQUENTIAL ELEMENTS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+FLOPS     122                19.2 %               
+==================================================
+Total SEQUENTIAL ELEMENTS in the block VoxLink_Packet_Builder_1_2_100500000s.VoxLink_CRC16_Koopman_112s_16s_8s:	122 (9.24 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+LUTS       128                24.2 %               
+CARRYS     7                  5.56 %               
+===================================================
+Total COMBINATIONAL LOGIC in the block VoxLink_Packet_Builder_1_2_100500000s.VoxLink_CRC16_Koopman_112s_16s_8s:	135 (10.22 % Utilization)
+
+
+IO PADS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     1                  7.69 %               
+=================================================
+Total IO PADS in the block VoxLink_Packet_Builder_1_2_100500000s.VoxLink_CRC16_Koopman_112s_16s_8s:	1 (0.08 % Utilization)
+
+---------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   VoxLink_Timestamp_12s_100500000s_100500s_18s   ######## 
+Instance path:   VoxLink_Packet_Builder_1_2_100500000s.VoxLink_Timestamp_12s_100500000s_100500s_18s
+===================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+FLOPS     30                 4.72 %               
+==================================================
+Total SEQUENTIAL ELEMENTS in the block VoxLink_Packet_Builder_1_2_100500000s.VoxLink_Timestamp_12s_100500000s_100500s_18s:	30 (2.27 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+LUTS       38                 7.2 %                
+CARRYS     27                 21.4 %               
+===================================================
+Total COMBINATIONAL LOGIC in the block VoxLink_Packet_Builder_1_2_100500000s.VoxLink_Timestamp_12s_100500000s_100500s_18s:	65 (4.92 % Utilization)
 
 -------------------------------------------------------------------------------------------------------
 ########   Utilization report for  cell:   VoxLink_VOX_Protocol_100500000s_100000s_502s_1546   ########
@@ -96,18 +175,18 @@ Instance path:   Top.VoxLink_VOX_Protocol_100500000s_100000s_502s_1546
 SEQUENTIAL ELEMENTS
 Name      Total elements     Utilization     Notes
 --------------------------------------------------
-FLOPS     85                 23.5 %               
+FLOPS     133                20.9 %               
 ==================================================
-Total SEQUENTIAL ELEMENTS in the block Top.VoxLink_VOX_Protocol_100500000s_100000s_502s_1546:	85 (10.77 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block Top.VoxLink_VOX_Protocol_100500000s_100000s_502s_1546:	133 (10.07 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name       Total elements     Utilization     Notes
 ---------------------------------------------------
-LUTS       91                 29.9 %               
-CARRYS     16                 16.3 %               
+LUTS       139                26.3 %               
+CARRYS     16                 12.7 %               
 ===================================================
-Total COMBINATIONAL LOGIC in the block Top.VoxLink_VOX_Protocol_100500000s_100000s_502s_1546:	107 (13.56 % Utilization)
+Total COMBINATIONAL LOGIC in the block Top.VoxLink_VOX_Protocol_100500000s_100000s_502s_1546:	155 (11.73 % Utilization)
 
 
 IO PADS
@@ -115,7 +194,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 PADS     1                  7.69 %               
 =================================================
-Total IO PADS in the block Top.VoxLink_VOX_Protocol_100500000s_100000s_502s_1546:	1 (0.13 % Utilization)
+Total IO PADS in the block Top.VoxLink_VOX_Protocol_100500000s_100000s_502s_1546:	1 (0.08 % Utilization)
 
 
 ##### END OF AREA REPORT #####]
