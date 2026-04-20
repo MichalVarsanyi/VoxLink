@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20250114)
+	(version 20260306)
 	(generator "eeschema")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(uuid "fe9a638d-fa93-4116-8200-ad3660cc4e7d")
 	(paper "A4")
 	(title_block
@@ -15,62 +15,78 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
 				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Value" "ICE40UL1K-CM36AI"
 				(at 0 1.778 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Footprint" "Custom_VoxLink_Footprints:ICE40UL1K_UCBGA-36"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Lattice/ICE40UL1K-CM36AI?qs=XJu%252BLGjWfSAZhGGFZ7EiQg%3D%3D"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_locked" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -98,60 +114,6 @@
 					)
 				)
 				(pin power_in line
-					(at -8.89 11.43 0)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "D3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -8.89 8.89 0)
-					(length 2.54)
-					(name "VCCPLL"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "D4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -8.89 6.35 0)
-					(length 2.54)
-					(name "VPP2V5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
 					(at -8.89 1.27 0)
 					(length 2.54)
 					(name "VCCIO0"
@@ -170,34 +132,16 @@
 					)
 				)
 				(pin power_in line
-					(at -8.89 -1.27 0)
+					(at -8.89 6.35 0)
 					(length 2.54)
-					(name "VCCIO2"
+					(name "VPP2V5"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "E3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -8.89 -3.81 0)
-					(length 2.54)
-					(name "SPI_VCCIO1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E4"
+					(number "B4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -259,6 +203,78 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at -8.89 11.43 0)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "D3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -8.89 8.89 0)
+					(length 2.54)
+					(name "VCCPLL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "D4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -8.89 -1.27 0)
+					(length 2.54)
+					(name "VCCIO2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "E3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -8.89 -3.81 0)
+					(length 2.54)
+					(name "SPI_VCCIO1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "E4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
 			(symbol "ICE40UL1K-CM36AI_2_1"
 				(rectangle
@@ -281,16 +297,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at -2.54 -22.86 90)
+					(at 8.89 -5.08 180)
 					(length 2.54)
-					(name "IOB_10A"
+					(name "IOB_5B"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "D6"
+					(number "C1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -299,16 +315,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at 0 -22.86 90)
+					(at 8.89 -2.54 180)
 					(length 2.54)
-					(name "IOB_3B_G6"
+					(name "IOB_4A"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "F2"
+					(number "D1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -335,16 +351,34 @@
 					)
 				)
 				(pin bidirectional line
-					(at 8.89 10.16 180)
+					(at -2.54 -22.86 90)
 					(length 2.54)
-					(name "IOB_7B_G5"
+					(name "IOB_10A"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "F3"
+					(number "D6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 8.89 1.27 180)
+					(length 2.54)
+					(name "IOB_1B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "E1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -389,16 +423,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at 8.89 1.27 180)
+					(at 0 -22.86 90)
 					(length 2.54)
-					(name "IOB_1B"
+					(name "IOB_3B_G6"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "E1"
+					(number "F2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -407,34 +441,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at 8.89 -2.54 180)
+					(at 8.89 10.16 180)
 					(length 2.54)
-					(name "IOB_4A"
+					(name "IOB_7B_G5"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "D1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 8.89 -5.08 180)
-					(length 2.54)
-					(name "IOB_5B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "C1"
+					(number "F3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -464,16 +480,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at 8.89 6.35 180)
+					(at 8.89 -1.27 180)
 					(length 2.54)
-					(name "IOT_18B"
+					(name "IOT_25A"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "B5"
+					(number "A3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -518,34 +534,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at 8.89 -1.27 180)
+					(at 8.89 6.35 180)
 					(length 2.54)
-					(name "IOT_25A"
+					(name "IOT_18B"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "A3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 8.89 -3.81 180)
-					(length 2.54)
-					(name "IOT_27A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "C2"
+					(number "B5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -564,6 +562,24 @@
 						)
 					)
 					(number "B6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 8.89 -3.81 180)
+					(length 2.54)
+					(name "IOT_27A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "C2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -619,42 +635,6 @@
 					)
 				)
 				(pin bidirectional line
-					(at 8.89 2.54 180)
-					(length 2.54)
-					(name "RGB0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 8.89 0 180)
-					(length 2.54)
-					(name "RGB1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
 					(at 8.89 -2.54 180)
 					(length 2.54)
 					(name "RGB2"
@@ -665,6 +645,24 @@
 						)
 					)
 					(number "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 8.89 2.54 180)
+					(length 2.54)
+					(name "RGB0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -708,6 +706,24 @@
 						)
 					)
 				)
+				(pin bidirectional line
+					(at 8.89 0 180)
+					(length 2.54)
+					(name "RGB1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
 			(symbol "ICE40UL1K-CM36AI_5_1"
 				(rectangle
@@ -738,16 +754,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at 11.43 5.08 180)
+					(at 11.43 -8.89 180)
 					(length 2.54)
-					(name "IOB_14A_SO"
+					(name "IOB_11B_CDONE"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "F6"
+					(number "D5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -791,6 +807,24 @@
 						)
 					)
 				)
+				(pin input line
+					(at 11.43 -12.7 180)
+					(length 2.54)
+					(name "~{CRESET}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "F4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin bidirectional line
 					(at 11.43 -2.54 180)
 					(length 2.54)
@@ -810,34 +844,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at 11.43 -8.89 180)
+					(at 11.43 5.08 180)
 					(length 2.54)
-					(name "IOB_11B_CDONE"
+					(name "IOB_14A_SO"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "D5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 11.43 -12.7 180)
-					(length 2.54)
-					(name "~{CRESET}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "F4"
+					(number "F6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -852,8 +868,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
 				(at 7.112 10.668 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -862,6 +882,8 @@
 			)
 			(property "Value" "TLV840"
 				(at 4.572 8.636 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -870,38 +892,46 @@
 			)
 			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Distributor Link" "https://www.mouser.sk/ProductDetail/Texas-Instruments/TLV840MADL22DBVRQ1?qs=TuK3vfAjtkWsBU%252BpeSRNtg%3D%3D"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "TLV840_1_1"
@@ -917,34 +947,16 @@
 					)
 				)
 				(pin input line
-					(at -10.16 2.54 0)
+					(at 10.16 0 180)
 					(length 2.54)
-					(name "~{MR}"
+					(name "~{RESET}"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 -2.54 0)
-					(length 2.54)
-					(name "CT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -989,16 +1001,34 @@
 					)
 				)
 				(pin input line
-					(at 10.16 0 180)
+					(at -10.16 2.54 0)
 					(length 2.54)
-					(name "~{RESET}"
+					(name "~{MR}"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "CT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1019,8 +1049,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "C"
 				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1030,6 +1064,8 @@
 			)
 			(property "Value" "C"
 				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1039,47 +1075,57 @@
 			)
 			(property "Footprint" ""
 				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Unpolarized capacitor"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "cap capacitor"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "C_*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "C_0_1"
@@ -1112,7 +1158,7 @@
 				(pin passive line
 					(at 0 3.81 270)
 					(length 2.794)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1130,7 +1176,7 @@
 				(pin passive line
 					(at 0 -3.81 90)
 					(length 2.794)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1158,8 +1204,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "R"
 				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1168,6 +1218,8 @@
 			)
 			(property "Value" "R"
 				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1176,47 +1228,57 @@
 			)
 			(property "Footprint" ""
 				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Resistor"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "R res resistor"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "R_*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "R_0_1"
@@ -1236,7 +1298,7 @@
 				(pin passive line
 					(at 0 3.81 270)
 					(length 1.27)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1254,7 +1316,7 @@
 				(pin passive line
 					(at 0 -3.81 90)
 					(length 1.27)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1276,8 +1338,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
 				(at -3.81 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1286,6 +1352,8 @@
 			)
 			(property "Value" "TPS7A20xxxDQN"
 				(at 6.35 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1294,47 +1362,57 @@
 			)
 			(property "Footprint" "Package_SON:Texas_X2SON-4_1x1mm_P0.65mm"
 				(at 0 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps7a20.pdf"
 				(at 0 12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "300 mA Low Dropout Voltage Regulator, Fixed Output, 1.6..6.0Vin, Low-Noise (7μV RMS), 6.5μA IQ LDO, X2SON-5"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "Single Output LDO Texas-Instruments"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "*X2SON*1x1mm*P0.65mm*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "TPS7A20xxxDQN_0_1"
@@ -1349,17 +1427,35 @@
 						(type background)
 					)
 				)
-				(pin power_in line
-					(at -7.62 2.54 0)
+				(pin power_out line
+					(at 7.62 2.54 180)
 					(length 2.54)
-					(name "IN"
+					(name "OUT"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1386,34 +1482,16 @@
 					)
 				)
 				(pin power_in line
-					(at 0 -7.62 90)
+					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "GND"
+					(name "IN"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 7.62 2.54 180)
-					(length 2.54)
-					(name "OUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1445,7 +1523,7 @@
 			(embedded_fonts no)
 		)
 		(symbol "power:+3.3VA"
-			(power)
+			(power global)
 			(pin_numbers
 				(hide yes)
 			)
@@ -1456,17 +1534,23 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "#PWR"
 				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Value" "+3.3VA"
 				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1475,38 +1559,46 @@
 			)
 			(property "Footprint" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Power symbol creates a global label with name \"+3.3VA\""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "global power"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "+3.3VA_0_1"
@@ -1551,7 +1643,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1570,7 +1662,7 @@
 			(embedded_fonts no)
 		)
 		(symbol "power:+4V"
-			(power)
+			(power global)
 			(pin_numbers
 				(hide yes)
 			)
@@ -1581,17 +1673,23 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "#PWR"
 				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Value" "+4V"
 				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1600,38 +1698,46 @@
 			)
 			(property "Footprint" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Power symbol creates a global label with name \"+4V\""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "global power"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "+4V_0_1"
@@ -1676,7 +1782,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1695,7 +1801,7 @@
 			(embedded_fonts no)
 		)
 		(symbol "power:GND"
-			(power)
+			(power global)
 			(pin_numbers
 				(hide yes)
 			)
@@ -1706,17 +1812,23 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "#PWR"
 				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Value" "GND"
 				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1725,38 +1837,46 @@
 			)
 			(property "Footprint" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "global power"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "GND_0_1"
@@ -1777,7 +1897,7 @@
 				(pin power_in line
 					(at 0 0 270)
 					(length 0)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5066,12 +5186,14 @@
 		(uuid "f9b2ca87-c198-4be8-b9f1-1c9f1c8ee376")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 145.8903 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -5079,14 +5201,18 @@
 		(lib_id "Device:C")
 		(at 173.99 99.06 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0000e7d8-98f9-4b4c-bc9a-ca4ab7949422")
 		(property "Reference" "C214"
 			(at 177.8 98.425 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5096,6 +5222,8 @@
 		)
 		(property "Value" "100n"
 			(at 177.8 100.965 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5105,24 +5233,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 174.9552 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
 			(at 173.99 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 173.99 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5136,7 +5270,7 @@
 			(uuid "f3ddeaf0-d3d3-4e77-b9fd-ebfbcca16966")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C214")
 					(unit 1)
@@ -5148,49 +5282,61 @@
 		(lib_id "power:GND")
 		(at 173.99 80.01 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "01bcb014-0127-4918-95a3-e0f0a72925d4")
 		(property "Reference" "#PWR048"
 			(at 173.99 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 173.99 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 173.99 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 173.99 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 173.99 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5201,7 +5347,7 @@
 			(uuid "87d7ac7e-58c1-4315-a069-09bc88886483")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR048")
 					(unit 1)
@@ -5213,49 +5359,61 @@
 		(lib_id "power:GND")
 		(at 66.04 113.03 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "06dbec35-8451-40f8-8dab-83680673aaf6")
 		(property "Reference" "#PWR035"
 			(at 66.04 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 66.04 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 66.04 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 66.04 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 66.04 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5266,7 +5424,7 @@
 			(uuid "660d547e-60d6-413e-a9cc-2ab9e08de7b3")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR035")
 					(unit 1)
@@ -5278,23 +5436,29 @@
 		(lib_id "power:+3.3VA")
 		(at 162.56 69.85 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a14c686-3def-4d22-9208-3d56ef59c6af")
 		(property "Reference" "#PWR020"
 			(at 162.56 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "+1V2_CORE"
 			(at 162.56 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5303,24 +5467,30 @@
 		)
 		(property "Footprint" ""
 			(at 162.56 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 162.56 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 162.56 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5331,7 +5501,7 @@
 			(uuid "148b8be3-21e1-44dc-977b-c0a2c5cfcfd2")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR020")
 					(unit 1)
@@ -5343,49 +5513,61 @@
 		(lib_id "power:GND")
 		(at 185.42 125.73 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "0d072944-b784-4272-838d-f6f16623b3a5")
 		(property "Reference" "#PWR038"
 			(at 185.42 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 185.42 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 185.42 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 185.42 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 185.42 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5396,7 +5578,7 @@
 			(uuid "a01097ba-6a69-4699-b35d-9e0abe58344f")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR038")
 					(unit 1)
@@ -5409,22 +5591,28 @@
 		(at 129.54 93.98 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "0dbcef17-c7af-4209-b561-3950a0d0a63d")
 		(property "Reference" "#PWR07"
 			(at 129.54 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "VCCIO1"
 			(at 129.54 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5433,24 +5621,30 @@
 		)
 		(property "Footprint" ""
 			(at 129.54 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 129.54 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 129.54 93.98 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5461,7 +5655,7 @@
 			(uuid "4d3f0cfb-5800-490e-9b49-e7c32ac2a847")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR07")
 					(unit 1)
@@ -5473,49 +5667,61 @@
 		(lib_id "power:GND")
 		(at 191.77 80.01 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "15216600-4f7a-4d74-a417-cc3adc63b3a7")
 		(property "Reference" "#PWR018"
 			(at 191.77 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 191.77 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 191.77 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 191.77 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 191.77 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5526,7 +5732,7 @@
 			(uuid "5930d548-b3f3-49bf-8038-18919b3c36dc")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR018")
 					(unit 1)
@@ -5538,49 +5744,61 @@
 		(lib_id "power:GND")
 		(at 162.56 102.87 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "163900e4-ccf1-48a0-9a3f-b4dca97cb00b")
 		(property "Reference" "#PWR015"
 			(at 162.56 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 162.56 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 162.56 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 162.56 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 162.56 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5591,7 +5809,7 @@
 			(uuid "19629552-d650-4ed1-badd-d8f90b44b3c8")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR015")
 					(unit 1)
@@ -5603,14 +5821,18 @@
 		(lib_id "Device:C")
 		(at 203.2 76.2 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "18598d51-7040-43f9-a596-e23acb73a72d")
 		(property "Reference" "C212"
 			(at 207.01 75.565 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5620,6 +5842,8 @@
 		)
 		(property "Value" "100n"
 			(at 207.01 78.105 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5629,24 +5853,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 204.1652 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
 			(at 203.2 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 203.2 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5660,7 +5890,7 @@
 			(uuid "688cade7-afbc-4763-bfaa-66ecc215208c")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C212")
 					(unit 1)
@@ -5673,49 +5903,61 @@
 		(at 41.91 76.2 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "18ace9e2-fc9d-498b-abe9-f776f0205147")
 		(property "Reference" "#PWR023"
 			(at 41.91 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 41.91 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 41.91 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 41.91 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 41.91 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5726,7 +5968,7 @@
 			(uuid "a6b1d818-dcb2-4322-8331-7faed0fd49eb")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR023")
 					(unit 1)
@@ -5739,14 +5981,18 @@
 		(at 39.37 109.22 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1eae76c9-db98-43ef-bd79-a5b4222b980a")
 		(property "Reference" "C203"
 			(at 35.56 108.585 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5756,6 +6002,8 @@
 		)
 		(property "Value" "1u"
 			(at 35.56 111.125 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5765,24 +6013,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 38.4048 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/81-GRM155R61H105KE5D"
 			(at 39.37 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 39.37 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5796,7 +6050,7 @@
 			(uuid "421c9bc9-27e1-4265-96a6-1e6fe35ee2c3")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C203")
 					(unit 1)
@@ -5808,49 +6062,61 @@
 		(lib_id "power:GND")
 		(at 245.11 99.06 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "2a577fcf-7e25-432a-a9ca-269c097395c7")
 		(property "Reference" "#PWR036"
 			(at 245.11 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 245.11 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 245.11 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 245.11 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 245.11 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5861,7 +6127,7 @@
 			(uuid "87411d8a-ddb9-4beb-9c1c-d2da18f22e50")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR036")
 					(unit 1)
@@ -5874,22 +6140,28 @@
 		(at 66.04 100.33 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "2ad9ebbf-4177-4182-8c2c-b5a070afc949")
 		(property "Reference" "#PWR030"
 			(at 66.04 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "+2V5_NVCM"
 			(at 68.326 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5898,24 +6170,30 @@
 		)
 		(property "Footprint" ""
 			(at 66.04 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 66.04 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 66.04 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5926,7 +6204,7 @@
 			(uuid "1ead0384-cc17-43a7-8cb3-18b34e9a5b8b")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR030")
 					(unit 1)
@@ -5938,22 +6216,28 @@
 		(lib_id "power:+3.3VA")
 		(at 241.3 81.28 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "36058fdd-b239-4c28-a549-e0456fde3b65")
 		(property "Reference" "#PWR06"
 			(at 241.3 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "VCCIO0"
 			(at 241.3 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5962,24 +6246,30 @@
 		)
 		(property "Footprint" ""
 			(at 241.3 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 241.3 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 241.3 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5990,7 +6280,7 @@
 			(uuid "89086fc6-88e8-4959-b1bb-e8d2b1eb6cf9")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR06")
 					(unit 1)
@@ -6003,23 +6293,29 @@
 		(at 241.3 69.85 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3a0373b2-74cb-4cf7-bf13-a4cc09947ef0")
 		(property "Reference" "#PWR049"
 			(at 241.3 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "+1V2_CORE"
 			(at 241.3 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6028,24 +6324,30 @@
 		)
 		(property "Footprint" ""
 			(at 241.3 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 241.3 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 241.3 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6056,7 +6358,7 @@
 			(uuid "b3731486-ce1a-4335-b4df-5343adc62cf5")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR049")
 					(unit 1)
@@ -6068,61 +6370,73 @@
 		(lib_id "power:GND")
 		(at 57.15 113.03 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "42e84339-2789-44c5-a2c9-f83ad90c0c30")
 		(property "Reference" "#PWR034"
 			(at 57.15 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 57.15 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 57.15 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 57.15 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 57.15 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
 			(uuid "3cd1f6fa-9547-491e-84a8-bbf0a88864b8")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR034")
 					(unit 1)
@@ -6135,14 +6449,18 @@
 		(at 36.83 162.56 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "45659372-496d-4f8f-a352-25ccb1349b5a")
 		(property "Reference" "C205"
 			(at 33.02 161.925 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6152,6 +6470,8 @@
 		)
 		(property "Value" "1u"
 			(at 33.02 164.465 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6161,24 +6481,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 35.8648 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/81-GRM155R61H105KE5D"
 			(at 36.83 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 36.83 162.56 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6192,7 +6518,7 @@
 			(uuid "cb2b4936-5e26-46a2-93c8-d417b3a877ae")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C205")
 					(unit 1)
@@ -6205,13 +6531,17 @@
 		(at 129.54 97.79 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "4eb91a4b-746f-4bc6-8fbd-67c3ef488ff0")
 		(property "Reference" "R201"
 			(at 127 96.5199 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6221,6 +6551,8 @@
 		)
 		(property "Value" "10k"
 			(at 127 99.0599 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6230,29 +6562,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 131.318 97.79 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW040210K0JNED?qs=sGAEpiMZZMtlubZbdhIBIFsfWmIKznfcMCgOmcXe42g%3D"
 			(at 129.54 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 129.54 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -6262,7 +6600,7 @@
 			(uuid "6830fd52-5c04-4fe8-9830-ac08803a065b")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "R201")
 					(unit 1)
@@ -6275,22 +6613,28 @@
 		(at 203.2 69.85 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "50a1bafc-b6fd-48e6-94d8-36cb14323840")
 		(property "Reference" "#PWR019"
 			(at 203.2 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "+1V2_PLL"
 			(at 203.2 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6299,24 +6643,30 @@
 		)
 		(property "Footprint" ""
 			(at 203.2 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 203.2 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 203.2 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6327,7 +6677,7 @@
 			(uuid "d54a7fe2-a7d1-43b3-8f02-a4d81c93f14f")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR019")
 					(unit 1)
@@ -6340,49 +6690,61 @@
 		(at 105.41 91.44 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "54272211-3a10-46ed-9860-8669fbfb6afe")
 		(property "Reference" "#PWR080"
 			(at 105.41 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 105.41 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 105.41 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 105.41 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 105.41 91.44 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6393,7 +6755,7 @@
 			(uuid "1ee7cca6-c8f6-4fc4-b0c5-2d881cc5adf8")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR080")
 					(unit 1)
@@ -6405,61 +6767,73 @@
 		(lib_id "power:GND")
 		(at 54.61 113.03 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "57589732-1a8e-4c06-a865-5488b2d7caeb")
 		(property "Reference" "#PWR033"
 			(at 54.61 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 54.61 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 54.61 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 54.61 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 54.61 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
 			(uuid "9baeac55-cca8-43f4-a3a4-9fb86478ccc6")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR033")
 					(unit 1)
@@ -6471,14 +6845,18 @@
 		(lib_id "Device:C")
 		(at 162.56 121.92 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5a5a968d-7845-4704-90cf-08f41360a137")
 		(property "Reference" "C215"
 			(at 166.37 121.285 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6488,6 +6866,8 @@
 		)
 		(property "Value" "4u7"
 			(at 166.37 123.825 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6497,24 +6877,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 163.5252 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GRM21BZ71H475KE15L?qs=Ey7%2FXF42M3fI%252Bx6DckdKtg%3D%3D"
 			(at 162.56 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 162.56 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6528,7 +6914,7 @@
 			(uuid "7e2d516b-5727-4a9c-a3ea-5427be017cac")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C215")
 					(unit 1)
@@ -6540,61 +6926,73 @@
 		(lib_id "power:GND")
 		(at 54.61 76.2 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "5a7ab9c4-9b4a-4a93-908f-483436e9db10")
 		(property "Reference" "#PWR024"
 			(at 54.61 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 54.61 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 54.61 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 54.61 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 54.61 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
 			(uuid "ee888db5-e4cc-4307-a17b-705f94b043d4")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR024")
 					(unit 1)
@@ -6606,49 +7004,61 @@
 		(lib_id "power:GND")
 		(at 66.04 76.2 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "5fde6831-ad55-4405-a213-a9b1f316f656")
 		(property "Reference" "#PWR026"
 			(at 66.04 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 66.04 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 66.04 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 66.04 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 66.04 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6659,7 +7069,7 @@
 			(uuid "d5815222-3da8-4738-a937-9b74d1a62eda")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR026")
 					(unit 1)
@@ -6671,22 +7081,28 @@
 		(lib_id "power:+3.3VA")
 		(at 229.87 81.28 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "6775b340-c2c6-4059-bc89-0436998eb40d")
 		(property "Reference" "#PWR050"
 			(at 229.87 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "VCCIO2"
 			(at 229.87 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6695,24 +7111,30 @@
 		)
 		(property "Footprint" ""
 			(at 229.87 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 229.87 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 229.87 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6723,7 +7145,7 @@
 			(uuid "33180bdb-2a74-4e11-88e4-39c9b5fa9403")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR050")
 					(unit 1)
@@ -6735,61 +7157,73 @@
 		(lib_id "power:GND")
 		(at 57.15 76.2 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "698d725d-0aaa-4fe5-a7c6-04ee55a0749a")
 		(property "Reference" "#PWR025"
 			(at 57.15 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 57.15 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 57.15 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 57.15 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 57.15 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
 			(uuid "1778b6d2-7216-4e82-bace-d9d21ac20910")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR025")
 					(unit 1)
@@ -6801,13 +7235,17 @@
 		(lib_id "Custom_VoxLink_Symbols:TLV840")
 		(at 110.49 104.14 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "6fdd4353-0009-4a87-b65b-8627f618329c")
 		(property "Reference" "U204"
 			(at 117.348 90.678 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6816,6 +7254,8 @@
 		)
 		(property "Value" "TLV840MADL"
 			(at 117.348 93.218 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6824,38 +7264,46 @@
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
 			(at 110.49 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 110.49 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 110.49 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Distributor Link" "https://www.mouser.sk/ProductDetail/Texas-Instruments/TLV840MADL22DBVRQ1?qs=TuK3vfAjtkWsBU%252BpeSRNtg%3D%3D"
 			(at 110.49 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "3"
@@ -6874,7 +7322,7 @@
 			(uuid "22fee996-4bad-4c44-a633-161057ecc243")
 		)
 		(instances
-			(project ""
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "U204")
 					(unit 1)
@@ -6886,14 +7334,18 @@
 		(lib_id "Device:C")
 		(at 162.56 76.2 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "712c7a98-a65a-4eb7-b9c4-c41bb73f4352")
 		(property "Reference" "C209"
 			(at 166.37 75.565 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6903,6 +7355,8 @@
 		)
 		(property "Value" "4u7"
 			(at 166.37 78.105 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6912,24 +7366,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 163.5252 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GRM21BZ71H475KE15L?qs=Ey7%2FXF42M3fI%252Bx6DckdKtg%3D%3D"
 			(at 162.56 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 162.56 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6943,7 +7403,7 @@
 			(uuid "3281d02b-ab00-4337-9624-72bb207246da")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C209")
 					(unit 1)
@@ -6955,14 +7415,18 @@
 		(lib_id "Device:C")
 		(at 66.04 109.22 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "712daf51-23cd-4f36-92ea-c7192b9c7d88")
 		(property "Reference" "C204"
 			(at 69.85 108.585 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6972,6 +7436,8 @@
 		)
 		(property "Value" "1u"
 			(at 69.85 111.125 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6981,24 +7447,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 67.0052 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/81-GRM155R61H105KE5D"
 			(at 66.04 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 66.04 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7012,7 +7484,7 @@
 			(uuid "7c1577b2-9a17-443c-91c8-cb4970f1106e")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C204")
 					(unit 1)
@@ -7024,14 +7496,18 @@
 		(lib_id "Device:C")
 		(at 66.04 162.56 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "728c8187-d0e9-4c45-86f2-e13c6d7d5c35")
 		(property "Reference" "C206"
 			(at 69.85 161.925 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7041,6 +7517,8 @@
 		)
 		(property "Value" "1u"
 			(at 69.85 164.465 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7050,24 +7528,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 67.0052 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/81-GRM155R61H105KE5D"
 			(at 66.04 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 66.04 162.56 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7081,7 +7565,7 @@
 			(uuid "ee7d8c7e-48f8-491f-8c01-596261db6cf6")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C206")
 					(unit 1)
@@ -7093,61 +7577,73 @@
 		(lib_id "power:GND")
 		(at 54.61 166.37 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "77cae59e-0503-417d-908a-8cf88680c84e")
 		(property "Reference" "#PWR042"
 			(at 54.61 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 54.61 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 54.61 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 54.61 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 54.61 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
 			(uuid "ce910831-d9e5-47d5-8c5e-5c6faba17028")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR042")
 					(unit 1)
@@ -7159,13 +7655,17 @@
 		(lib_id "Regulator_Linear:TPS7A20xxxDQN")
 		(at 54.61 105.41 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "799efb80-5ba1-4c7b-b5a4-be753b9bb994")
 		(property "Reference" "U202"
 			(at 54.61 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7174,6 +7674,8 @@
 		)
 		(property "Value" "TPS7A20L_2V2"
 			(at 54.61 98.806 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7182,29 +7684,35 @@
 		)
 		(property "Footprint" "Package_SON:Texas_X2SON-4_1x1mm_P0.65mm"
 			(at 54.61 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Texas-Instruments/TPS7A20225PDQNR?qs=IKkN%2F947nfD9gDMQG8ZFsA%3D%3D"
 			(at 54.61 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "300 mA Low Dropout Voltage Regulator, Fixed Output, 1.6..6.0Vin, Low-Noise (7μV RMS), 6.5μA IQ LDO, X2SON-5"
 			(at 54.61 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -7223,7 +7731,7 @@
 			(uuid "3ded4081-3373-48bc-907a-b4c2100ab236")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "U202")
 					(unit 1)
@@ -7235,49 +7743,61 @@
 		(lib_id "power:GND")
 		(at 173.99 125.73 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "7a43a557-2474-4d75-adf0-0d44646a96a6")
 		(property "Reference" "#PWR037"
 			(at 173.99 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 173.99 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 173.99 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 173.99 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 173.99 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7288,7 +7808,7 @@
 			(uuid "4580825b-a17d-42d3-abc1-9e87071ca033")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR037")
 					(unit 1)
@@ -7300,49 +7820,61 @@
 		(lib_id "power:GND")
 		(at 66.04 166.37 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "7ab84c1a-6fa0-499a-a652-e2464fadca9e")
 		(property "Reference" "#PWR044"
 			(at 66.04 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 66.04 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 66.04 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 66.04 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 66.04 166.37 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7353,7 +7885,7 @@
 			(uuid "68dad71d-30f4-4be2-a7fd-01b37d2afae6")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR044")
 					(unit 1)
@@ -7366,13 +7898,17 @@
 		(at 105.41 87.63 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "7fc4e2f0-3156-4fa7-9295-2b02e7d72f6f")
 		(property "Reference" "C207"
 			(at 101.6 86.995 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7382,6 +7918,8 @@
 		)
 		(property "Value" "100n"
 			(at 101.6 89.535 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7391,24 +7929,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 104.4448 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
 			(at 105.41 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 105.41 87.63 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7422,7 +7966,7 @@
 			(uuid "f0d43cc7-c932-4aa3-b972-8874bc6dd260")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C207")
 					(unit 1)
@@ -7435,22 +7979,28 @@
 		(at 45.72 100.33 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "88d1ca3c-9462-4cd9-abb7-e7ac5ef18680")
 		(property "Reference" "#PWR099"
 			(at 45.72 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "VCCIO1"
 			(at 45.72 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7459,24 +8009,30 @@
 		)
 		(property "Footprint" ""
 			(at 45.72 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 45.72 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 45.72 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7499,14 +8055,18 @@
 		(lib_id "Device:C")
 		(at 66.04 72.39 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8eb49a8d-48b9-428b-844a-6b7649a6dfe2")
 		(property "Reference" "C202"
 			(at 69.85 71.755 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7516,6 +8076,8 @@
 		)
 		(property "Value" "1u"
 			(at 69.85 74.295 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7525,24 +8087,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 67.0052 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/81-GRM155R61H105KE5D"
 			(at 66.04 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 66.04 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7556,7 +8124,7 @@
 			(uuid "88e37f40-3c95-4845-8e66-c64c3e5636d7")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C202")
 					(unit 1)
@@ -7568,13 +8136,17 @@
 		(lib_id "Device:C")
 		(at 185.42 121.92 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "8ecbebe1-2619-45f8-9381-89a25ede8302")
 		(property "Reference" "C217"
 			(at 189.23 121.285 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7584,6 +8156,8 @@
 		)
 		(property "Value" "100n"
 			(at 189.23 123.825 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7593,24 +8167,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 186.3852 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
 			(at 185.42 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 185.42 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7624,7 +8204,7 @@
 			(uuid "8a6a1cfb-6132-4471-857c-0593d301c82b")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C217")
 					(unit 1)
@@ -7637,13 +8217,17 @@
 		(at 97.79 111.76 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "94868c7e-3964-4b64-8648-0a4f15061f08")
 		(property "Reference" "C208"
 			(at 93.98 111.125 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7653,6 +8237,8 @@
 		)
 		(property "Value" "33n"
 			(at 93.98 113.665 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7662,24 +8248,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 96.8248 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GRM155R71C333KA01D?qs=tOieHv2smhlspVEfNTUeXw%3D%3D"
 			(at 97.79 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 97.79 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7693,7 +8285,7 @@
 			(uuid "fe89a512-ef0d-4109-8788-63e74572fedd")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C208")
 					(unit 1)
@@ -7706,22 +8298,28 @@
 		(at 162.56 92.71 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "94ee118e-a811-4ad3-a96f-9243987209c1")
 		(property "Reference" "#PWR014"
 			(at 162.56 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "+2V5_NVCM"
 			(at 162.56 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7730,24 +8328,30 @@
 		)
 		(property "Footprint" ""
 			(at 162.56 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 162.56 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 162.56 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7758,7 +8362,7 @@
 			(uuid "a1e72745-f672-46b4-aa9c-f8adae9b3c6d")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR014")
 					(unit 1)
@@ -7771,49 +8375,61 @@
 		(at 97.79 115.57 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "9d8cba00-8fbc-4539-a0f9-861b565f1f7b")
 		(property "Reference" "#PWR092"
 			(at 97.79 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 97.79 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 97.79 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 97.79 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 97.79 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7824,7 +8440,7 @@
 			(uuid "92198172-b780-42b3-91a9-2106f6a7561a")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR092")
 					(unit 1)
@@ -7836,14 +8452,18 @@
 		(lib_id "Device:C")
 		(at 173.99 121.92 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9fcb7f47-bc2d-4e0a-8bce-b813cb95c526")
 		(property "Reference" "C216"
 			(at 177.8 121.285 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7853,6 +8473,8 @@
 		)
 		(property "Value" "100n"
 			(at 177.8 123.825 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7862,24 +8484,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 174.9552 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
 			(at 173.99 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 173.99 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7893,7 +8521,7 @@
 			(uuid "610f4a90-15af-4f7d-96da-438fa2b9d4d7")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C216")
 					(unit 1)
@@ -7905,22 +8533,28 @@
 		(lib_id "power:+4V")
 		(at 41.91 64.77 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "a0e9c94d-63a1-48a2-aa14-f1f7bde472c8")
 		(property "Reference" "#PWR022"
 			(at 41.91 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "+5V"
 			(at 41.91 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7929,29 +8563,35 @@
 		)
 		(property "Footprint" ""
 			(at 41.91 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 41.91 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+4V\""
 			(at 41.91 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7971,49 +8611,61 @@
 		(at 39.37 113.03 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "a3950c15-bb5f-475e-9255-38d5529fdfe8")
 		(property "Reference" "#PWR032"
 			(at 39.37 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 39.37 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 39.37 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 39.37 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 39.37 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8024,7 +8676,7 @@
 			(uuid "3b7f69ba-b416-40ff-9d15-97a0f8ba1581")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR032")
 					(unit 1)
@@ -8036,61 +8688,73 @@
 		(lib_id "power:GND")
 		(at 57.15 166.37 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "a6baf918-5b06-479c-adbb-fe195a1f0ec8")
 		(property "Reference" "#PWR043"
 			(at 57.15 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 57.15 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 57.15 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 57.15 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 57.15 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
 			(uuid "a6ad432b-48cc-4503-bf78-694bfd8d0141")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR043")
 					(unit 1)
@@ -8103,22 +8767,28 @@
 		(at 85.09 154.94 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "a7ebb42a-ce4d-4b54-abdc-dc1a76d8a2c0")
 		(property "Reference" "#PWR09"
 			(at 85.09 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "VCCIO1"
 			(at 85.09 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8127,24 +8797,30 @@
 		)
 		(property "Footprint" ""
 			(at 85.09 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 85.09 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 85.09 154.94 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8155,7 +8831,7 @@
 			(uuid "991c3c0f-cd93-40eb-b92c-d2dcaa6508f5")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR09")
 					(unit 1)
@@ -8167,13 +8843,17 @@
 		(lib_id "Regulator_Linear:TPS7A20xxxDQN")
 		(at 54.61 158.75 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "aa82ecd3-9f07-42b7-a9fa-d3b8cff1ae14")
 		(property "Reference" "U203"
 			(at 54.61 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8182,6 +8862,8 @@
 		)
 		(property "Value" "TPS7A20L_3V3"
 			(at 54.61 152.146 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8190,29 +8872,35 @@
 		)
 		(property "Footprint" "Package_SON:Texas_X2SON-4_1x1mm_P0.65mm"
 			(at 54.61 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Texas-Instruments/TPS7A20L33PDQNR?qs=dbcCsuKDzFXsu6ygYTlhWw%3D%3D"
 			(at 54.61 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "300 mA Low Dropout Voltage Regulator, Fixed Output, 1.6..6.0Vin, Low-Noise (7μV RMS), 6.5μA IQ LDO, X2SON-5"
 			(at 54.61 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -8231,7 +8919,7 @@
 			(uuid "72988bb4-c134-43d1-9170-e55e887b08c6")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "U203")
 					(unit 1)
@@ -8243,22 +8931,28 @@
 		(lib_id "power:+4V")
 		(at 36.83 153.67 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "b0ce3eb5-6042-4d90-b5e4-d8d6f2866d5a")
 		(property "Reference" "#PWR040"
 			(at 36.83 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "+5V"
 			(at 36.83 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8267,36 +8961,42 @@
 		)
 		(property "Footprint" ""
 			(at 36.83 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 36.83 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+4V\""
 			(at 36.83 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
 			(uuid "71f07f71-7480-47de-98bf-d33fe5937c6b")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR040")
 					(unit 1)
@@ -8309,22 +9009,28 @@
 		(at 229.87 69.85 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "b660ab69-509a-46a2-9247-4c03a67ef418")
 		(property "Reference" "#PWR017"
 			(at 229.87 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "+1V2_PLL"
 			(at 229.87 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8333,24 +9039,30 @@
 		)
 		(property "Footprint" ""
 			(at 229.87 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 229.87 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 229.87 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8374,14 +9086,18 @@
 		(at 41.91 72.39 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ba7eaebf-d81c-4a55-871e-7ce58229d7a4")
 		(property "Reference" "C201"
 			(at 38.1 71.755 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8391,6 +9107,8 @@
 		)
 		(property "Value" "1u"
 			(at 38.1 74.295 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8400,24 +9118,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 40.9448 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/81-GRM155R61H105KE5D"
 			(at 41.91 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 41.91 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8431,7 +9155,7 @@
 			(uuid "28ed6b58-354e-47eb-86ba-64ef29b289f7")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C201")
 					(unit 1)
@@ -8444,49 +9168,61 @@
 		(at 36.83 166.37 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "c5cf0d96-0334-418c-8d18-ae91b2dcd411")
 		(property "Reference" "#PWR041"
 			(at 36.83 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 36.83 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 36.83 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 36.83 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 36.83 166.37 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8497,7 +9233,7 @@
 			(uuid "89c61392-c726-4e87-a772-3c4d5d20ef92")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR041")
 					(unit 1)
@@ -8510,22 +9246,28 @@
 		(at 44.45 153.67 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "c7ee9d1a-6a2e-4e15-83b2-604cfd464fe2")
 		(property "Reference" "#PWR097"
 			(at 44.45 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "+1V2_CORE"
 			(at 44.45 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8534,24 +9276,30 @@
 		)
 		(property "Footprint" ""
 			(at 44.45 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 44.45 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 44.45 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8574,49 +9322,61 @@
 		(lib_id "power:GND")
 		(at 162.56 80.01 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "cb93fab2-8232-4931-8846-b2b4b5a9d943")
 		(property "Reference" "#PWR054"
 			(at 162.56 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 162.56 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 162.56 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 162.56 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 162.56 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8627,7 +9387,7 @@
 			(uuid "0b0b3195-ce43-4aa0-a396-444e8c7aeb77")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR054")
 					(unit 1)
@@ -8640,22 +9400,28 @@
 		(at 218.44 69.85 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "cded2f03-3637-4983-8aeb-8a53ee3c7323")
 		(property "Reference" "#PWR028"
 			(at 218.44 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "+2V5_NVCM"
 			(at 218.44 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8664,24 +9430,30 @@
 		)
 		(property "Footprint" ""
 			(at 218.44 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 218.44 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 218.44 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8692,7 +9464,7 @@
 			(uuid "25ac492c-5369-4a3c-a248-1789bba5e2da")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR028")
 					(unit 1)
@@ -8705,22 +9477,28 @@
 		(at 66.04 64.77 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "cfcbcd8a-5097-48c4-b30d-6dd70c05fd89")
 		(property "Reference" "#PWR021"
 			(at 66.04 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "+1V2_CORE"
 			(at 68.326 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8729,24 +9507,30 @@
 		)
 		(property "Footprint" ""
 			(at 66.04 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 66.04 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 66.04 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8757,7 +9541,7 @@
 			(uuid "6d539da0-7642-470d-98dd-69bba2f9fe6b")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR021")
 					(unit 1)
@@ -8769,22 +9553,28 @@
 		(lib_id "power:+4V")
 		(at 39.37 100.33 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "d62fc00c-621c-4ed0-bdfd-590119cec805")
 		(property "Reference" "#PWR031"
 			(at 39.37 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "+5V"
 			(at 39.37 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8793,36 +9583,42 @@
 		)
 		(property "Footprint" ""
 			(at 39.37 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 39.37 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+4V\""
 			(at 39.37 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
 			(uuid "42ca5363-31e5-4497-abb7-fb98d7649449")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR031")
 					(unit 1)
@@ -8835,22 +9631,28 @@
 		(at 92.71 154.94 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "d7365e92-6590-4d1e-857a-7706662eaedc")
 		(property "Reference" "#PWR010"
 			(at 92.71 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "VCCIO2"
 			(at 92.71 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8859,24 +9661,30 @@
 		)
 		(property "Footprint" ""
 			(at 92.71 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 92.71 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 92.71 154.94 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8887,7 +9695,7 @@
 			(uuid "884f61a7-facd-4299-97de-6ebfb57e7200")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR010")
 					(unit 1)
@@ -8899,49 +9707,61 @@
 		(lib_id "power:GND")
 		(at 162.56 125.73 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "da38c969-7d3e-4bf2-875f-4814c22d2f99")
 		(property "Reference" "#PWR013"
 			(at 162.56 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 162.56 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 162.56 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 162.56 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 162.56 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8952,7 +9772,7 @@
 			(uuid "eb2c7dee-7ea9-47f0-9867-49c7d85383d4")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR013")
 					(unit 1)
@@ -8965,49 +9785,61 @@
 		(at 110.49 114.3 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "da752538-f6d3-4f67-8632-9b81ccaff139")
 		(property "Reference" "#PWR081"
 			(at 110.49 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 110.49 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 110.49 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 110.49 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 110.49 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9018,7 +9850,7 @@
 			(uuid "2fbf2a54-454b-4c90-86e7-ea14d0e1b648")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR081")
 					(unit 1)
@@ -9030,14 +9862,18 @@
 		(lib_id "Device:C")
 		(at 173.99 76.2 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dc449f26-4a27-46fe-ab4b-f732c579b6aa")
 		(property "Reference" "C210"
 			(at 177.8 75.565 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9047,6 +9883,8 @@
 		)
 		(property "Value" "100n"
 			(at 177.8 78.105 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9056,24 +9894,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 174.9552 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"
 			(at 173.99 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 173.99 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9087,7 +9931,7 @@
 			(uuid "db58f322-6f67-4554-be15-f931423c64c6")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C210")
 					(unit 1)
@@ -9100,22 +9944,28 @@
 		(at 162.56 115.57 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "dd421b94-611d-47b0-b335-14b212a27730")
 		(property "Reference" "#PWR012"
 			(at 162.56 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "+3V3"
 			(at 162.56 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9124,24 +9974,30 @@
 		)
 		(property "Footprint" ""
 			(at 162.56 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 162.56 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 162.56 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9152,7 +10008,7 @@
 			(uuid "f0161341-df53-4264-a3b6-a26de954c4ea")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR012")
 					(unit 1)
@@ -9164,49 +10020,61 @@
 		(lib_id "power:GND")
 		(at 173.99 102.87 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "e75b1e8d-6643-49b2-868c-22664f9b6572")
 		(property "Reference" "#PWR046"
 			(at 173.99 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 173.99 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 173.99 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 173.99 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 173.99 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9217,7 +10085,7 @@
 			(uuid "b49e9c11-971b-4155-9935-7d65d6fea094")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR046")
 					(unit 1)
@@ -9230,22 +10098,28 @@
 		(at 69.85 154.94 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "e92d37fe-5e34-4fe9-ad5b-98f8af9991ba")
 		(property "Reference" "#PWR039"
 			(at 69.85 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "+3V3"
 			(at 69.85 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9254,24 +10128,30 @@
 		)
 		(property "Footprint" ""
 			(at 69.85 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 69.85 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 69.85 154.94 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9282,7 +10162,7 @@
 			(uuid "1c5caf70-58e6-4ac4-8f36-e7cda03e9d19")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR039")
 					(unit 1)
@@ -9294,49 +10174,61 @@
 		(lib_id "power:GND")
 		(at 203.2 80.01 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "ea1fd9ae-d0f8-4273-8824-482ab23d9f13")
 		(property "Reference" "#PWR047"
 			(at 203.2 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND"
 			(at 203.2 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 203.2 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 203.2 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 203.2 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9347,7 +10239,7 @@
 			(uuid "48c5a7b9-340f-41f5-ac29-70fbb31bc60b")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR047")
 					(unit 1)
@@ -9359,13 +10251,17 @@
 		(lib_id "Device:R")
 		(at 181.61 71.12 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp yes)
 		(uuid "eb21f49c-d982-442c-bded-ce09c754a08c")
 		(property "Reference" "R202"
 			(at 181.61 66.04 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9374,6 +10270,8 @@
 		)
 		(property "Value" "100R"
 			(at 181.61 68.326 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9382,29 +10280,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 181.61 72.898 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Vishay/CRCW0402100RFKEDC?qs=sGAEpiMZZMtlubZbdhIBIIZe04wfiaJW7kRS7%252Bi%252ByYs%3D"
 			(at 181.61 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 181.61 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -9414,7 +10318,7 @@
 			(uuid "02d55125-c246-4fc5-ba7e-f1a6bcf47914")
 		)
 		(instances
-			(project ""
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "R202")
 					(unit 1)
@@ -9426,22 +10330,28 @@
 		(lib_id "power:+3.3VA")
 		(at 218.44 81.28 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "ee4ba10f-f811-46e5-9a87-83653ab7eba3")
 		(property "Reference" "#PWR011"
 			(at 218.44 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "VCCIO1"
 			(at 218.44 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9450,24 +10360,30 @@
 		)
 		(property "Footprint" ""
 			(at 218.44 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 218.44 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 218.44 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9478,7 +10394,7 @@
 			(uuid "ccf6dd03-ecf2-4c22-ba8d-20c7d742f850")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR011")
 					(unit 1)
@@ -9490,13 +10406,17 @@
 		(lib_id "Regulator_Linear:TPS7A20xxxDQN")
 		(at 54.61 68.58 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "f04c4ff5-0948-4c28-b695-74ea6c362605")
 		(property "Reference" "U201"
 			(at 54.61 58.674 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9505,6 +10425,8 @@
 		)
 		(property "Value" "TPS7A20L_1V2"
 			(at 54.61 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9513,29 +10435,35 @@
 		)
 		(property "Footprint" "Package_SON:Texas_X2SON-4_1x1mm_P0.65mm"
 			(at 54.61 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Texas-Instruments/TPS7A20L12PDQNR?qs=dbcCsuKDzFUEY7w1y6byNg%3D%3D"
 			(at 54.61 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "300 mA Low Dropout Voltage Regulator, Fixed Output, 1.6..6.0Vin, Low-Noise (7μV RMS), 6.5μA IQ LDO, X2SON-5"
 			(at 54.61 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -9554,7 +10482,7 @@
 			(uuid "8897557c-1b75-4352-8c35-d026d3048e1f")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "U201")
 					(unit 1)
@@ -9566,14 +10494,18 @@
 		(lib_id "Device:C")
 		(at 191.77 76.2 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "f2a0cf0d-9ef4-49ea-83c2-08a94aa855c8")
 		(property "Reference" "C211"
 			(at 195.58 75.565 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9583,6 +10515,8 @@
 		)
 		(property "Value" "4u7"
 			(at 195.58 78.105 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9592,24 +10526,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 192.7352 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 191.77 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 191.77 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9623,7 +10563,7 @@
 			(uuid "c282d440-d4c6-42ff-916a-fb1be9bb8e39")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C211")
 					(unit 1)
@@ -9636,22 +10576,28 @@
 		(at 77.47 154.94 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "f37a1c89-94b7-4648-958b-69296cf9f32e")
 		(property "Reference" "#PWR08"
 			(at 77.47 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "VCCIO0"
 			(at 77.47 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9660,24 +10606,30 @@
 		)
 		(property "Footprint" ""
 			(at 77.47 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 77.47 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 77.47 154.94 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9688,7 +10640,7 @@
 			(uuid "24011909-5345-4668-bb2f-9fea6d86ce76")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR08")
 					(unit 1)
@@ -9701,22 +10653,28 @@
 		(at 110.49 81.28 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "fa47d67b-4b77-4a3e-900e-c8062d632603")
 		(property "Reference" "#PWR079"
 			(at 110.49 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "+1V2_CORE"
 			(at 112.776 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9725,24 +10683,30 @@
 		)
 		(property "Footprint" ""
 			(at 110.49 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 110.49 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 110.49 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9753,7 +10717,7 @@
 			(uuid "07df9e01-8f67-44d0-89bc-9a14e8614dd0")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "#PWR079")
 					(unit 1)
@@ -9765,64 +10729,78 @@
 		(lib_id "Custom_VoxLink_Symbols:ICE40UL1K-CM36AI")
 		(at 255.27 82.55 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fac36554-96e8-4034-afdc-1b766a40b32a")
 		(property "Reference" "U301"
 			(at 255.27 78.994 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "ICE40UL1K-CM36AI"
 			(at 255.27 80.772 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Package_BGA:UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm"
 			(at 255.27 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 255.27 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 255.27 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Distributor Link" "https://eu.mouser.com/ProductDetail/Lattice/ICE40UL1K-CM36AI?qs=XJu%252BLGjWfSAZhGGFZ7EiQg%3D%3D"
 			(at 255.27 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "E4"
@@ -9946,14 +10924,18 @@
 		(lib_id "Device:C")
 		(at 162.56 99.06 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fc58336c-8939-4497-ad38-e74c22c1ad66")
 		(property "Reference" "C213"
 			(at 166.37 98.425 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9963,6 +10945,8 @@
 		)
 		(property "Value" "4u7"
 			(at 166.37 100.965 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9972,24 +10956,30 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 163.5252 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.sk/ProductDetail/Murata-Electronics/GRM21BZ71H475KE15L?qs=Ey7%2FXF42M3fI%252Bx6DckdKtg%3D%3D"
 			(at 162.56 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 162.56 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10003,7 +10993,7 @@
 			(uuid "541e31ee-2ad7-4f15-af7f-247128eba840")
 		)
 		(instances
-			(project "VoxLink"
+			(project "VoxSense"
 				(path "/ded7c4da-7d9f-418d-838f-f5efc7d9c9cb/834e4732-f30d-482c-8608-d3ea3dbb4e9c"
 					(reference "C213")
 					(unit 1)

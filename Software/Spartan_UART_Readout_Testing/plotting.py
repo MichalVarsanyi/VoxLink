@@ -54,9 +54,9 @@ def update_plot(frame):
     reply = ser.read(4)
     
     if len(reply) == 4:
-        # 3. Unpack into TWO 16-bit signed integers (Big-Endian)
-        # '>hh' means Big-Endian ('>'), short int ('h'), short int ('h')
-        raw_z, raw_w = struct.unpack('>hh', reply)
+        # 3. Unpack into TWO 16-bit signed integers (Little-Endian)
+        # '<hh' means Little-Endian ('<'), short int ('h'), short int ('h')
+        raw_z, raw_w = struct.unpack('<hh', reply)
         
         # 4. Convert Q14 format to standard float (-1.0 to 1.0)
         float_z = raw_z / 16384.0
