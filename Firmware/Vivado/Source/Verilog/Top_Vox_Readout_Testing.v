@@ -239,8 +239,8 @@ localparam  MAILBOX                                 = 1;    // MAILBOX address
         .sys_clk(sys_clk),
         
 
-        .sensor_data(sensor_data),
-        .sensor_data_valid(sensor_data_valid),
+        .sensor_data(crc_verified_data_r),
+        .sensor_data_valid(crc_verified_data_valid_r),
         
         // Multiplexer output
         .reg_mux_out(reg_mux_out),
@@ -278,8 +278,9 @@ localparam  MAILBOX                                 = 1;    // MAILBOX address
 //  Receiving
 //--------------------------------------------------------------------------------------------- //
 
-    wire [63:0] sensor_data;
-    wire        sensor_data_valid;
+    wire [63:0]  sensor_data;
+    wire [111:0] sensor_packet;
+    wire         sensor_data_valid;
 
     Vox_Receiver #(
     )
@@ -291,10 +292,55 @@ localparam  MAILBOX                                 = 1;    // MAILBOX address
         // Physical Sensor Interface
         .vox_clk_in(vox_clk),
         .vox_rx_in(vox_rxd),
-        
+
         // Received Sensor Data
         .sensor_data(sensor_data),
+        .sensor_packet(sensor_packet),
         .sensor_data_valid(sensor_data_valid)
     );
+
+//--------------------------------------------------------------------------------------------- //       
+//  CRC Detection
+//--------------------------------------------------------------------------------------------- //
+
+    // Internal registers holding the CRC passed data
+    reg  [63:0]     crc_verified_data_r;
+    reg             crc_verified_data_valid_r;
+
+    // Wires from the CRC module
+    wire            crc_data_valid;
+    wire [15:0]     crc_value;
+        
+    VoxLink_CRC16_Koopman #(
+    )
+    VoxLink_CRC16_Koopman_inst (
+        .sys_clk(sys_clk),
+        .sys_rst(sys_rst),
+        .data(sensor_packet),  //112 BITS!
+        .trigger_crc(sensor_data_valid),
+        .crc_value(crc_value),
+        .data_w_crc(),
+        .crc_valid(crc_data_valid)
+    );
+
+        always @(posedge sys_clk)
+        begin
+            if (sys_rst)
+            begin
+                crc_verified_data_r         <= {64{1'b0}};
+                crc_verified_data_valid_r   <= 1'b0;
+            end
+            else
+            begin
+                crc_verified_data_valid_r   <= 1'b0;
+                if (crc_data_valid && crc_value == 16'h0000)
+                begin
+                    crc_verified_data_r         <= sensor_data;
+                    crc_verified_data_valid_r   <= 1'b1;
+                end
+            end
+
+            
+        end
 
 endmodule

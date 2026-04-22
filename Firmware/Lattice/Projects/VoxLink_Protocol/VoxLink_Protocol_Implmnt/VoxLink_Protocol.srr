@@ -3,7 +3,7 @@
 #OS: Windows 8 6.2
 #Hostname: LAPTOP-GK6ER3TV
 
-# Tue Apr 14 17:05:44 2026
+# Wed Apr 22 14:04:45 2026
 
 #Implementation: VoxLink_Protocol_Implmnt
 
@@ -32,6 +32,9 @@ Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys softwa
 @I::"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Timestamp.v" (library work)
 @I::"C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_CRC16_Koopman.v" (library work)
 Verilog syntax check successful!
+
+Compiler output is up to date.  No re-compile necessary
+
 Selecting top level module Top
 @N: CG364 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v":578:7:578:11|Synthesizing module SB_GB in library work.
 
@@ -172,12 +175,12 @@ State machine has 8 reachable states with original encodings of:
    0110
    0111
 
-At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 74MB peak: 83MB)
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 70MB peak: 71MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Tue Apr 14 17:05:44 2026
+# Wed Apr 22 14:04:46 2026
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
@@ -190,7 +193,7 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Tue Apr 14 17:05:44 2026
+# Wed Apr 22 14:04:46 2026
 
 ###########################################################]
 @END
@@ -200,7 +203,7 @@ At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Tue Apr 14 17:05:44 2026
+# Wed Apr 22 14:04:46 2026
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
@@ -214,12 +217,12 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Tue Apr 14 17:05:46 2026
+# Wed Apr 22 14:04:47 2026
 
 ###########################################################]
 Pre-mapping Report
 
-# Tue Apr 14 17:05:46 2026
+# Wed Apr 22 14:04:48 2026
 
 Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -300,12 +303,12 @@ Pre-mapping successful!
 At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 51MB peak: 137MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Tue Apr 14 17:05:46 2026
+# Wed Apr 22 14:04:48 2026
 
 ###########################################################]
 Map & Optimize Report
 
-# Tue Apr 14 17:05:46 2026
+# Wed Apr 22 14:04:48 2026
 
 Synopsys Lattice Technology Mapper, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -399,7 +402,7 @@ Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; M
 
 @N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_crc16_koopman.v":36:4:36:9|Removing sequential instance VoxLink_Packet_Builder_Inst.VoxLink_CRC16_Koopman_Inst.code_word_register[1] (in view: work.Top(verilog)) because it does not drive other instances.
 
-Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 143MB)
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 143MB)
 
 @N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_crc16_koopman.v":36:4:36:9|Removing sequential instance VoxLink_Packet_Builder_Inst.VoxLink_CRC16_Koopman_Inst.code_word_register[2] (in view: work.Top(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_crc16_koopman.v":36:4:36:9|Removing sequential instance VoxLink_Packet_Builder_Inst.VoxLink_CRC16_Koopman_Inst.code_word_register[3] (in view: work.Top(verilog)) because it does not drive other instances.
@@ -416,7 +419,7 @@ Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; M
 @N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_crc16_koopman.v":36:4:36:9|Removing sequential instance VoxLink_Packet_Builder_Inst.VoxLink_CRC16_Koopman_Inst.code_word_register[14] (in view: work.Top(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_crc16_koopman.v":36:4:36:9|Removing sequential instance VoxLink_Packet_Builder_Inst.VoxLink_CRC16_Koopman_Inst.code_word_register[15] (in view: work.Top(verilog)) because it does not drive other instances.
 
-Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 143MB)
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 143MB)
 
 
 Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 143MB)
@@ -472,7 +475,7 @@ Clock Tree ID     Driving Element     Drive Element Type              Fanout    
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 144MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 114MB peak: 144MB)
 
 Writing Analyst data base C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLink_Protocol_Implmnt\synwork\VoxLink_Protocol_m.srm
 
@@ -484,10 +487,10 @@ Writing EDIF Netlist and constraint files
 @N: FX1056 |Writing EDF file: C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLink_Protocol_Implmnt\VoxLink_Protocol.edf
 L-2016.09L+ice40
 
-Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 144MB)
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 144MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 141MB peak: 144MB)
+Start final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 141MB peak: 144MB)
 
 @W: MT246 :"c:\users\varsa\desktop\school\5_semester\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":96:6:96:15|Blackbox SB_RGBA_DRV is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
 @N: MT615 |Found clock clk_12mhz with period 83.33ns 
@@ -496,7 +499,7 @@ Start final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:0
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Tue Apr 14 17:05:48 2026
+# Timing Report written on Wed Apr 22 14:04:50 2026
 #
 
 
@@ -968,10 +971,10 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 Timing exceptions that could not be applied
 None
 
-Finished final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 141MB peak: 144MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 141MB peak: 144MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 141MB peak: 144MB)
+Finished timing report (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 141MB peak: 144MB)
 
 ---------------------------------------
 Resource Usage Report for Top 
@@ -1015,9 +1018,9 @@ Distribution of All Consumed Luts 528 = 528
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 29MB peak: 144MB)
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 29MB peak: 144MB)
 
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Tue Apr 14 17:05:48 2026
+Process took 0h:00m:02s realtime, 0h:00m:01s cputime
+# Wed Apr 22 14:04:50 2026
 
 ###########################################################]

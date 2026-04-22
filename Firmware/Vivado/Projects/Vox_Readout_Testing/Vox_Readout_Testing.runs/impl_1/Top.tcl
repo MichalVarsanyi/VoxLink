@@ -123,7 +123,7 @@ OPTRACE "add files" START { }
   add_files -quiet C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.runs/synth_1/Top.dcp
   read_ip -quiet C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/_GIT/FPGA/HW/7-SERIES/Source/Constrains/Vox_Readout_Testing.xdc
+  read_xdc C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Constraints/Vox_Readout_Testing.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

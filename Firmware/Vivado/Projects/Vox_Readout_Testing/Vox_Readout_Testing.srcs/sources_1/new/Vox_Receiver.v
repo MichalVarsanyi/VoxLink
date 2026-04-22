@@ -10,8 +10,9 @@ module Vox_Receiver (
     input wire vox_rx_in,
 
     // Received Sensor Data
-    output reg [63:0] sensor_data,
-    output reg        sensor_data_valid
+    output reg [63:0]  sensor_data,
+    output reg [111:0] sensor_packet,   // Full packet for CRC verification
+    output reg         sensor_data_valid
 );
 
     // ---------------------------------------------------------
@@ -63,6 +64,7 @@ module Vox_Receiver (
             shift_reg         <= 112'd0;
             bit_counter       <= 8'd0;
             sensor_data       <= 64'd0;
+            sensor_packet     <= 112'd0;
             sensor_data_valid <= 1'b0;
         end else begin
             // Default state: valid pulse is 1 cycle only
@@ -73,9 +75,14 @@ module Vox_Receiver (
                 shift_reg <= {shift_reg[110:0], vox_rx_sync};
 
                 // Count the bits
-                if (bit_counter == 8'd111) begin
-                    // We received all 112 bits — extract the 64-bit Data field
-                    sensor_data       <= {shift_reg[78:16], vox_rx_sync};
+                if (bit_counter == 8'd111) 
+                begin
+                    // We received all 112 bits — capture the full packet (including
+                    // the final bit being shifted in this cycle) and extract the
+                    // 64-bit Data field. The 112th bit is part of the CRC, not Data,
+                    // so shift_reg[78:15] already holds the complete Data field.
+                    sensor_packet     <= {shift_reg[110:0], vox_rx_sync};
+                    sensor_data       <= shift_reg[78:15];
                     sensor_data_valid <= 1'b1;
                     bit_counter       <= 8'd0;
                 end else begin

@@ -77,6 +77,7 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/new/MV_UART.v
   C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/new/MV_UART_FIFO_Interface.v
+  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/new/VoxLink_CRC16_Koopman.v
   C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/new/Vox_Receiver.v
   C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/Vox_Readout_Testing/Vox_Readout_Testing.srcs/sources_1/new/Vox_Testing_Multiplexer.v
   C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_Vox_Readout_Testing.v
@@ -94,8 +95,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/_GIT/FPGA/HW/7-SERIES/Source/Constrains/Vox_Readout_Testing.xdc
-set_property used_in_implementation false [get_files C:/_GIT/FPGA/HW/7-SERIES/Source/Constrains/Vox_Readout_Testing.xdc]
+read_xdc C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Constraints/Vox_Readout_Testing.xdc
+set_property used_in_implementation false [get_files C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Constraints/Vox_Readout_Testing.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 

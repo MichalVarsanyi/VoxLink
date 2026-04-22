@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/_GIT/FPGA/HW/7-SERIES/Source/Constrains/Vox_Readout_Testing.xdc rfile:../../../../../../../../../../../../../../_GIT/FPGA/HW/7-SERIES/Source/Constrains/Vox_Readout_Testing.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Constraints/Vox_Readout_Testing.xdc rfile:../../../../../Source/Constraints/Vox_Readout_Testing.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN L17 [get_ports clk_12mhz]
 set_property src_info {type:XDC file:1 line:10 export:INPUT save:INPUT read:READ} [current_design]
