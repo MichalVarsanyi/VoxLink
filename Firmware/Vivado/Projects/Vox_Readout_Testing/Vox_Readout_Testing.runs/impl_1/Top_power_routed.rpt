@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Wed Apr 22 17:42:53 2026
+| Date             : Wed Apr 22 19:38:32 2026
 | Host             : LAPTOP-GK6ER3TV running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.175        |
+| Total On-Chip Power (W)  | 0.178        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.103        |
+| Dynamic (W)              | 0.106        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.1         |
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.007 |        5 |       --- |             --- |
-| Slice Logic    |     0.002 |     1201 |       --- |             --- |
-|   LUT as Logic |     0.001 |      328 |     10400 |            3.15 |
-|   Register     |    <0.001 |      732 |     20800 |            3.52 |
+| Clocks         |     0.009 |        5 |       --- |             --- |
+| Slice Logic    |     0.002 |     1445 |       --- |             --- |
+|   LUT as Logic |     0.001 |      416 |     10400 |            4.00 |
+|   Register     |    <0.001 |      886 |     20800 |            4.26 |
 |   CARRY4       |    <0.001 |       15 |      8150 |            0.18 |
 |   Others       |     0.000 |       38 |       --- |             --- |
-| Signals        |     0.002 |      839 |       --- |             --- |
+| Signals        |     0.002 |      995 |       --- |             --- |
 | Block RAM      |    <0.001 |      0.5 |        25 |            2.00 |
 | MMCM           |     0.093 |        1 |         5 |           20.00 |
 | I/O            |    <0.001 |        6 |       106 |            5.66 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.175 |          |           |                 |
+| Total          |     0.178 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.020 |       0.011 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.023 |       0.013 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.064 |       0.051 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -141,14 +141,15 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-------------------------------+-----------+
-| Name                          | Power (W) |
-+-------------------------------+-----------+
-| Top                           |     0.103 |
-|   MV_UART_FIFO_Interface_inst |     0.002 |
-|   MV_UART_Inst                |     0.002 |
-|   VoxLink_CRC16_Koopman_inst  |     0.002 |
-|   Vox_Receiver_Inst           |     0.003 |
-+-------------------------------+-----------+
++--------------------------------+-----------+
+| Name                           | Power (W) |
++--------------------------------+-----------+
+| Top                            |     0.106 |
+|   MV_UART_FIFO_Interface_inst  |     0.002 |
+|   MV_UART_Inst                 |     0.002 |
+|   VoxLink_CRC16_Koopman_inst   |     0.002 |
+|   Vox_Receiver_Inst            |     0.003 |
+|   Vox_Testing_Multiplexer_Inst |     0.002 |
++--------------------------------+-----------+
 
 

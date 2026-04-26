@@ -29,72 +29,72 @@ module Top
     // CLK Input
     input       clk_12mhz,
 
-    // P1 Differential Pairs
-    output wire P1_TX_P, P1_TX_N,
-    input  wire P1_RX_P, P1_RX_N,
-    input  wire P1_CLK_P, P1_CLK_N,
+    // // P1 Differential Pairs
+    // output wire P1_TX_P, P1_TX_N,
+    // input  wire P1_RX_P, P1_RX_N,
+    // input  wire P1_CLK_P, P1_CLK_N,
 
-    // P2 Differential Pairs
-    output wire P2_TX_P, P2_TX_N,
-    input  wire P2_RX_P, P2_RX_N,
-    input  wire P2_CLK_P, P2_CLK_N,
+    // // P2 Differential Pairs
+    // output wire P2_TX_P, P2_TX_N,
+    // input  wire P2_RX_P, P2_RX_N,
+    // input  wire P2_CLK_P, P2_CLK_N,
 
-    // P3 Differential Pairs
-    output wire P3_TX_P, P3_TX_N,
-    input  wire P3_RX_P, P3_RX_N,
-    input  wire P3_CLK_P, P3_CLK_N,
+    // // P3 Differential Pairs
+    // output wire P3_TX_P, P3_TX_N,
+    // input  wire P3_RX_P, P3_RX_N,
+    // input  wire P3_CLK_P, P3_CLK_N,
 
-    // P4 Differential Pairs
-    output wire P4_TX_P, P4_TX_N,
-    input  wire P4_RX_P, P4_RX_N,
-    input  wire P4_CLK_P, P4_CLK_N,
+    // // P4 Differential Pairs
+    // output wire P4_TX_P, P4_TX_N,
+    // input  wire P4_RX_P, P4_RX_N,
+    // input  wire P4_CLK_P, P4_CLK_N,
 
-    // P5 Differential Pairs
-    output wire P5_TX_P, P5_TX_N,
-    input  wire P5_RX_P, P5_RX_N,
-    input  wire P5_CLK_P, P5_CLK_N,
+    // // P5 Differential Pairs
+    // output wire P5_TX_P, P5_TX_N,
+    // input  wire P5_RX_P, P5_RX_N,
+    // input  wire P5_CLK_P, P5_CLK_N,
 
-    // P6 Differential Pairs
-    output wire P6_TX_P, P6_TX_N,
-    input  wire P6_RX_P, P6_RX_N,
-    input  wire P6_CLK_P, P6_CLK_N,
+    // // P6 Differential Pairs
+    // output wire P6_TX_P, P6_TX_N,
+    // input  wire P6_RX_P, P6_RX_N,
+    // input  wire P6_CLK_P, P6_CLK_N,
 
-    // P7 Differential Pairs
-    output wire P7_TX_P, P7_TX_N,
-    input  wire P7_RX_P, P7_RX_N,
-    input  wire P7_CLK_P, P7_CLK_N,
+    // // P7 Differential Pairs
+    // output wire P7_TX_P, P7_TX_N,
+    // input  wire P7_RX_P, P7_RX_N,
+    // input  wire P7_CLK_P, P7_CLK_N,
 
-    // P8 Differential Pairs
-    output wire P8_TX_P, P8_TX_N,
-    input  wire P8_RX_P, P8_RX_N,
-    input  wire P8_CLK_P, P8_CLK_N,
+    // // P8 Differential Pairs
+    // output wire P8_TX_P, P8_TX_N,
+    // input  wire P8_RX_P, P8_RX_N,
+    // input  wire P8_CLK_P, P8_CLK_N,
 
-    // P9 Differential Pairs
-    output wire P9_TX_P, P9_TX_N,
-    input  wire P9_RX_P, P9_RX_N,
-    input  wire P9_CLK_P, P9_CLK_N,
+    // // P9 Differential Pairs
+    // output wire P9_TX_P, P9_TX_N,
+    // input  wire P9_RX_P, P9_RX_N,
+    // input  wire P9_CLK_P, P9_CLK_N,
 
     // Output LEDs
-    output reg  P1_L1, P1_L2,
-    output wire P2_L1, P2_L2,
-    output wire P3_L1, P3_L2,
-    output wire P4_L1, P4_L2,
-    output wire P5_L1, P5_L2,
-    output wire P6_L1, P6_L2,
-    output wire P7_L1, P7_L2,
-    output wire P8_L1, P8_L2,
-    output wire P9_L1, P9_L2,
+    // output reg  P1_L1, P1_L2
+//    output reg P2_L1, P2_L2
+    // output reg P3_L1, P3_L2
+    // output reg P4_L1, P4_L2
+    // output reg P5_L1, P5_L2
+    // output reg P6_L1, P6_L2
+     output reg P7_L1, P7_L2
+    // output reg P8_L1, P8_L2
+    // output reg P9_L1, P9_L2
 
-    // Serial /FTDI Interface
-    output wire SERIAL_OE_n,   
-    output wire SERIAL_PWR_n,  
-    input  wire SERIAL_SIWU_n,
-    input  wire SERIAL_WR_n,
-    input  wire SERIAL_RXF_n,
-    input  wire SERIAL_RD_n,
-    input  wire SERIAL_TXE_n,
-    inout  wire [7:0] SERIAL_D,
-    input  wire SERIAL_CLK
+    // // Serial /FTDI Interface
+    // output wire SERIAL_OE_n,   
+    // output wire SERIAL_PWR_n,  
+    // input  wire SERIAL_SIWU_n,
+    // input  wire SERIAL_WR_n,
+    // input  wire SERIAL_RXF_n,
+    // input  wire SERIAL_RD_n,
+    // input  wire SERIAL_TXE_n,
+    // inout  wire [7:0] SERIAL_D,
+    // input  wire SERIAL_CLK
 );
 
 //--------------------------------------------------------------------------------------------- //       
@@ -174,16 +174,16 @@ module Top
         if (sys_rst) 
         begin
             led_counter     <= {28{1'b1}};
-            P1_L1        <= 1'b0;
-            P1_L2        <= 1'b0;
+            P7_L1        <= 1'b1;
+            P7_L2        <= 1'b0;
         end
         else 
         begin
             if (led_counter == {28{1'b1}}) 
             begin
                 led_counter <= {28{1'b0}};
-                P1_L1      <= ~P1_L1;
-                P1_L2      <= ~P1_L2;
+                P7_L1      <= ~P7_L1;
+                P7_L2      <= ~P7_L2;
             end
             else 
             begin

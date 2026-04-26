@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Wed Apr 22 17:42:37 2026
+| Date         : Wed Apr 22 19:38:11 2026
 | Host         : LAPTOP-GK6ER3TV running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
 | Design       : Top
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    17 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    28 |
+| Unused register locations in slices containing registers |    34 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              26 |           12 |
-| No           | No                    | Yes                    |              65 |           23 |
-| No           | Yes                   | No                     |              88 |           36 |
+| No           | No                    | No                     |              26 |            9 |
+| No           | No                    | Yes                    |             155 |           51 |
+| No           | Yes                   | No                     |              88 |           33 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              32 |            7 |
-| Yes          | Yes                   | No                     |             521 |           93 |
+| Yes          | No                    | Yes                    |              64 |           11 |
+| Yes          | Yes                   | No                     |             553 |          110 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -74,22 +74,22 @@ Table of Contents
 | Clock Signal |                                                       Enable Signal                                                      |              Set/Reset Signal              | Slice Load Count | Bel Load Count | Bels / Slice |
 +--------------+--------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
 |  sys_clk     |                                                                                                                          | MV_UART_Inst/uart_txd_i_1_n_0              |                1 |              1 |         1.00 |
-|  sys_clk     | MV_UART_Inst/rx_bit_counter[7]_i_1_n_0                                                                                   | Vox_Receiver_Inst/SR[0]                    |                3 |              7 |         2.33 |
+|  sys_clk     | MV_UART_Inst/rx_bit_counter[7]_i_1_n_0                                                                                   | Vox_Receiver_Inst/SR[0]                    |                5 |              7 |         1.40 |
 |  sys_clk     | MV_UART_Inst/tx_bit_counter[7]_i_1_n_0                                                                                   | Vox_Receiver_Inst/SR[0]                    |                3 |              7 |         2.33 |
-|  sys_clk     | MV_UART_Inst/received_message_r0                                                                                         | MV_UART_Inst/received_message_r[7]_i_1_n_0 |                1 |              8 |         8.00 |
-|  sys_clk     | MV_UART_Inst/received_good_reg_n_0                                                                                       | Vox_Receiver_Inst/SR[0]                    |                1 |              8 |         8.00 |
+|  sys_clk     | MV_UART_Inst/received_message_r0                                                                                         | MV_UART_Inst/received_message_r[7]_i_1_n_0 |                2 |              8 |         4.00 |
+|  sys_clk     | MV_UART_Inst/received_good_reg_n_0                                                                                       | Vox_Receiver_Inst/SR[0]                    |                2 |              8 |         4.00 |
 |  sys_clk     | MV_UART_Inst/transmit_message_r[9]_i_1_n_0                                                                               | Vox_Receiver_Inst/SR[0]                    |                4 |              9 |         2.25 |
-|  sys_clk     | MV_UART_FIFO_Interface_inst/UART_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/wr_en_0[0] | Vox_Receiver_Inst/SR[0]                    |                6 |             22 |         3.67 |
+|  sys_clk     | MV_UART_FIFO_Interface_inst/UART_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/wr_en_0[0] | Vox_Receiver_Inst/SR[0]                    |                8 |             22 |         2.75 |
 |  sys_clk     | MV_UART_FIFO_Interface_inst/UART_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0]       | Vox_Receiver_Inst/SR[0]                    |                8 |             22 |         2.75 |
 |  sys_clk     | VoxLink_CRC16_Koopman_inst/p_0_in                                                                                        | VoxLink_CRC16_Koopman_inst/data_counter_r  |                6 |             24 |         4.00 |
-|  sys_clk     |                                                                                                                          |                                            |               12 |             26 |         2.17 |
-|  sys_clk     | VoxLink_CRC16_Koopman_inst/E[0]                                                                                          | Vox_Receiver_Inst/SR[0]                    |                4 |             32 |         8.00 |
-|  sys_clk     | crc_verified_data_valid_r                                                                                                | Vox_Receiver_Inst/SR[0]                    |                7 |             32 |         4.57 |
-|  sys_clk     | MV_UART_Inst/uart_rxd_received                                                                                           | Vox_Receiver_Inst/SR[0]                    |                7 |             40 |         5.71 |
-|  sys_clk     | Vox_Receiver_Inst/p_1_in[0]                                                                                              | Vox_Receiver_Inst/SR[0]                    |               18 |            111 |         6.17 |
-|  sys_clk     | Vox_Receiver_Inst/sensor_data_valid_i_1_n_0                                                                              | Vox_Receiver_Inst/SR[0]                    |               15 |            112 |         7.47 |
-|  sys_clk     | Vox_Receiver_Inst/vox_clk_rising_edge                                                                                    | Vox_Receiver_Inst/SR[0]                    |               17 |            119 |         7.00 |
-|  sys_clk     |                                                                                                                          | Vox_Receiver_Inst/SR[0]                    |               58 |            152 |         2.62 |
+|  sys_clk     |                                                                                                                          |                                            |                9 |             26 |         2.89 |
+|  sys_clk     | MV_UART_Inst/uart_rxd_received                                                                                           | Vox_Receiver_Inst/SR[0]                    |                9 |             40 |         4.44 |
+|  sys_clk     | VoxLink_CRC16_Koopman_inst/E[0]                                                                                          | Vox_Receiver_Inst/SR[0]                    |               10 |             64 |         6.40 |
+|  sys_clk     | crc_verified_data_valid_r                                                                                                | Vox_Receiver_Inst/SR[0]                    |               11 |             64 |         5.82 |
+|  sys_clk     | Vox_Receiver_Inst/p_1_in[0]                                                                                              | Vox_Receiver_Inst/SR[0]                    |               15 |            111 |         7.40 |
+|  sys_clk     | Vox_Receiver_Inst/sensor_data_valid_i_1_n_0                                                                              | Vox_Receiver_Inst/SR[0]                    |               16 |            112 |         7.00 |
+|  sys_clk     | Vox_Receiver_Inst/vox_clk_rising_edge                                                                                    | Vox_Receiver_Inst/SR[0]                    |               22 |            119 |         5.41 |
+|  sys_clk     |                                                                                                                          | Vox_Receiver_Inst/SR[0]                    |               83 |            242 |         2.92 |
 +--------------+--------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
 
 
