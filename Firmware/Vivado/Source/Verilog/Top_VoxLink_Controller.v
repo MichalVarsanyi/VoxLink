@@ -39,8 +39,8 @@ module Top
     // input  wire P2_RX_P, P2_RX_N,
     // input  wire P2_CLK_P, P2_CLK_N,
 
-    // // P3 Differential Pairs
-    // output wire P3_TX_P, P3_TX_N,
+    // P3 Differential Pairs
+    input P3_TX_P, P3_TX_N,
     // input  wire P3_RX_P, P3_RX_N,
     // input  wire P3_CLK_P, P3_CLK_N,
 
@@ -77,11 +77,11 @@ module Top
     // Output LEDs
     // output reg  P1_L1, P1_L2
 //    output reg P2_L1, P2_L2
-    // output reg P3_L1, P3_L2
+    output reg P3_L1, P3_L2,
     // output reg P4_L1, P4_L2
     // output reg P5_L1, P5_L2
     // output reg P6_L1, P6_L2
-     output reg P7_L1, P7_L2
+    //  output reg P7_L1, P7_L2
     // output reg P8_L1, P8_L2
     // output reg P9_L1, P9_L2
 
@@ -95,7 +95,18 @@ module Top
     // input  wire SERIAL_TXE_n,
     // inout  wire [7:0] SERIAL_D,
     // input  wire SERIAL_CLK
+
+    input   SERIAL_D1,  // FPGA UART RXD | FTDI TXD = transmitter output
+    output  SERIAL_D2   // FPGA UART TXD | FTDI RXD = receiver input
 );
+
+    // We include a header file in which we define constants. It's more readable, when the most important values are defined in a separate file.
+    //    `include "Spartan_UART_API_Reg_Params.vh"
+    localparam  MAILBOX                 = 1;    // MAILBOX address
+
+// ---- Version --------------------------------------------------------------------------- //
+
+    localparam  FPGA_FIRMWARE_REVISION  = 32'h00000001;   
 
 //--------------------------------------------------------------------------------------------- //       
 //  Wire declarations
@@ -109,6 +120,17 @@ module Top
     wire            sys_clk;        // 252 MHz
     wire            sys_rst;
     assign          sys_rst = !locked;
+
+    // MV_UART_FIFO_Interface
+    wire            MV_UART_FIFO_Interface_txd_rdy;
+    wire [7:0]      MV_UART_FIFO_Interface_txd_message;
+    wire            MV_UART_FIFO_Interface_txd_start;
+    
+    wire            MV_UART_FIFO_Interface_fifo_full;
+    
+    wire [14:0]     reg_read_addr;
+    wire [14:0]     reg_write_addr;
+    wire [31:0]     reg_write_data;
 
 //--------------------------------------------------------------------------------------------- //       
 //  Clock
@@ -174,16 +196,16 @@ module Top
         if (sys_rst) 
         begin
             led_counter     <= {28{1'b1}};
-            P7_L1        <= 1'b1;
-            P7_L2        <= 1'b0;
+            P3_L1        <= 1'b1;
+            P3_L2        <= 1'b0;
         end
         else 
         begin
             if (led_counter == {28{1'b1}}) 
             begin
                 led_counter <= {28{1'b0}};
-                P7_L1      <= ~P7_L1;
-                P7_L2      <= ~P7_L2;
+                P3_L1      <= ~P3_L1;
+                P3_L2      <= ~P3_L2;
             end
             else 
             begin
@@ -191,4 +213,192 @@ module Top
             end
         end
     end
+
+//--------------------------------------------------------------------------------------------- //       
+//  Timestamp
+//--------------------------------------------------------------------------------------------- //
+// Check if the system clock is running and increment the timestamp  
+
+    reg [63:0]      timestamp;
+    always @(posedge sys_clk) 
+        if(sys_rst)
+            timestamp   <= {64{1'b0}};
+        else
+        begin
+            timestamp   <= timestamp + 1;
+        end
+        
+//--------------------------------------------------------------------------------------------- //       
+//  Mailbox
+//--------------------------------------------------------------------------------------------- //
+// Mailbox is a testing register, which can be written to and read from        
+        
+    reg [31:0] mailbox;      
+           
+    always @(posedge sys_clk)
+    begin
+        if(sys_rst)
+            mailbox         <= {32{1'b0}};
+        else
+        begin
+            if(reg_write_addr == MAILBOX)
+                mailbox     <= reg_write_data;
+        end
+    end        
+
+//--------------------------------------------------------------------------------------------- //       
+//  UART
+//--------------------------------------------------------------------------------------------- //  
+
+    wire [7:0]  uart_rxd_message;
+    wire        uart_rxd_received;
+
+    MV_UART #(
+        .BAUD_RATE(BAUD_RATE),
+        .TARGET_CLOCK(252)  //In MHz
+    )
+    MV_UART_Inst(
+        // General
+        .sys_clk                    (sys_clk),
+        .sys_rst                    (sys_rst),
+        
+        // Receive
+        .uart_rxd                   (SERIAL_D1),
+        .uart_rxd_message           (uart_rxd_message),
+        .uart_rxd_received          (uart_rxd_received),
+        
+        // Transmit
+        .uart_txd                   (SERIAL_D2),     // Output UART data pin
+        .uart_txd_transmit_ready    (MV_UART_FIFO_Interface_txd_rdy),
+        .uart_txd_message           (MV_UART_FIFO_Interface_txd_message),
+        .uart_txd_transmit          (MV_UART_FIFO_Interface_txd_start)
+    );
+    
+    
+//--------------------------------------------------------------------------------------------- //       
+//  UART Parser
+//--------------------------------------------------------------------------------------------- //
+// Interface between controller and UART blocks
+
+    (* MARK_DEBUG="true" *) wire [7:0]      reg_mux_out;
+    wire            reg_mux_out_transmit;
+    wire            uart_read_execute;
+    
+    MV_UART_FIFO_Interface MV_UART_FIFO_Interface_inst (
+        // General
+        .sys_rst                (sys_rst),
+        .sys_clk                (sys_clk), 
+        
+        // UART PC-to-FPGA
+        .uart_rxd_message       (uart_rxd_message),
+        .uart_rxd_received      (uart_rxd_received), 
+        
+        // Output UART Side     - FIFO message output 
+        .txd_rdy                (MV_UART_FIFO_Interface_txd_rdy),      // Rename MV_UART_FIFO_Interface to UART_Parser 
+        .txd_message            (MV_UART_FIFO_Interface_txd_message),
+        .txd_start              (MV_UART_FIFO_Interface_txd_start),
+
+        // Input Controlle Side - FIFO message input
+        .fifo_full              (MV_UART_FIFO_Interface_fifo_full),
+        .fifo_data_in           (reg_mux_out),
+        .fifo_wren              (reg_mux_out_transmit),
+        .uart_read_execute      (uart_read_execute),
+        
+        // Address
+        .reg_read_addr          (reg_read_addr),
+        .reg_write_addr         (reg_write_addr),
+        .reg_write_data         (reg_write_data)
+    );
+    
+//--------------------------------------------------------------------------------------------- //       
+//  VoxLink UART Interface
+//--------------------------------------------------------------------------------------------- //
+
+        Vox_Testing_Multiplexer #(
+        )
+        Vox_Testing_Multiplexer_Inst (
+        // General
+        .sys_rst(sys_rst),
+        .sys_clk(sys_clk),
+        
+
+        .sensor_data(crc_verified_data_r),
+        .sensor_data_valid(crc_verified_data_valid_r),
+        
+        // Multiplexer output
+        .reg_mux_out(reg_mux_out),
+        .reg_mux_out_transmit(reg_mux_out_transmit),
+        
+        // Multiplexer selector
+        .reg_read_addr(reg_read_addr)
+    );
+
+//--------------------------------------------------------------------------------------------- //       
+//  Receiving
+//--------------------------------------------------------------------------------------------- //
+
+    (* MARK_DEBUG="true" *) wire [63:0]  sensor_data;
+    wire [111:0] sensor_packet;
+    (* MARK_DEBUG="true" *) wire         sensor_data_valid;
+
+    Vox_Receiver #(
+    )
+    Vox_Receiver_Inst (
+        // General
+        .sys_clk(sys_clk),
+        .sys_rst(sys_rst),
+
+        // Physical Sensor Interface
+        .vox_clk_in(P3_TX_N),
+        .vox_rx_in(P3_TX_P),
+
+        // Received Sensor Data
+        .sensor_data(sensor_data),
+        .sensor_packet(sensor_packet),
+        .sensor_data_valid(sensor_data_valid)
+    );
+
+//--------------------------------------------------------------------------------------------- //       
+//  CRC Detection
+//--------------------------------------------------------------------------------------------- //
+
+    // Internal registers holding the CRC passed data
+    reg  [63:0]     crc_verified_data_r;
+    reg             crc_verified_data_valid_r;
+
+    // Wires from the CRC module
+    wire            crc_data_valid;
+    wire [15:0]     crc_value;
+        
+    VoxLink_CRC16_Koopman #(
+    )
+    VoxLink_CRC16_Koopman_inst (
+        .sys_clk(sys_clk),
+        .sys_rst(sys_rst),
+        .data(sensor_packet),  //112 BITS!
+        .trigger_crc(sensor_data_valid),
+        .crc_value(crc_value),
+        .data_w_crc(),
+        .crc_valid(crc_data_valid)
+    );
+
+        always @(posedge sys_clk)
+        begin
+            if (sys_rst)
+            begin
+                crc_verified_data_r         <= {64{1'b0}};
+                crc_verified_data_valid_r   <= 1'b0;
+            end
+            else
+            begin
+                crc_verified_data_valid_r   <= 1'b0;
+                if (crc_data_valid && crc_value == 16'h0000)
+                begin
+                    crc_verified_data_r         <= sensor_data;
+                    crc_verified_data_valid_r   <= 1'b1;
+                end
+            end
+
+            
+        end
 endmodule

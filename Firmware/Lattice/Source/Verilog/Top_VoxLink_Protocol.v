@@ -30,12 +30,12 @@ module Top(
 
     // LEDs
     output      led_io,
-    output      led_rx,
-    output      led_tx,
+    // output      led_rx,
+    // output      led_tx,
 
     // VoxLink
-    output      vox_clk_p,
-    output      vox_clk_n
+    output      vox_clk,
+    output      vox_txd
 );
 
 
@@ -48,8 +48,8 @@ module Top(
 
     // LED
     reg             led_io_r;
-    reg             led_rx_r;
-    reg             led_tx_r;
+    // reg             led_rx_r;
+    // reg             led_tx_r;
 
 // ---------------------------------------------
 // Clock
@@ -91,19 +91,19 @@ module Top(
     SB_RGBA_DRV #(
         .CURRENT_MODE("0b1"),
         .RGB0_CURRENT("0b000001"),
-        .RGB1_CURRENT("0b000011"),
-        .RGB2_CURRENT("0b000001")
+        .RGB1_CURRENT(),
+        .RGB2_CURRENT()
     ) led_driver (
         .CURREN(1'b1),
         .RGBLEDEN(1'b1),
 
         .RGB0PWM(led_io_r),
-        .RGB1PWM(led_rx_r),
-        .RGB2PWM(led_tx_r),
+        .RGB1PWM(),
+        .RGB2PWM(),
 
         .RGB0(led_io),
-        .RGB1(led_rx),
-        .RGB2(led_tx)
+        .RGB1(),
+        .RGB2()
     );
 
 
@@ -118,8 +118,8 @@ module Top(
         if(sys_rst)
         begin
             led_io_r        <= 1'b1;
-            led_rx_r        <= 1'b1;
-            led_tx_r        <= 1'b1; 
+            // led_rx_r        <= 1'b1;
+            // led_tx_r        <= 1'b1; 
         end
         else
         begin
@@ -127,8 +127,8 @@ module Top(
             begin
                 blink_counter   <= {27{1'b0}};
                 led_io_r        <= ~led_io_r;
-                led_rx_r        <= ~led_rx_r;
-                led_tx_r        <= ~led_tx_r;
+                // led_rx_r        <= ~led_rx_r;
+                // led_tx_r        <= ~led_tx_r;
             end
             else
             begin
@@ -297,8 +297,8 @@ module Top(
         .packet_ready(packet_ready),
 
         // Transmit Output
-        .vox_tx(vox_clk_n),
-        .vox_clk(vox_clk_p)
+        .vox_tx(vox_txd),
+        .vox_clk(vox_clk)
 
     );
 

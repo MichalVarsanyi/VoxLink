@@ -6,7 +6,7 @@
 
 * Build Date:         Dec  9 2020 17:31:51
 
-* File Generated:     Apr 22 2026 14:05:15
+* File Generated:     Apr 27 2026 17:24:21
 
 * Purpose:            General info of design implementation
 
@@ -17,7 +17,7 @@
 Synthesis/Placement Summary:
 ----------------------------
     Status:  Successful
-    Runtime: 1 seconds
+    Runtime: 0 seconds
 
 Device Info:
 ------------
@@ -49,7 +49,7 @@ Logic Resource Utilization:
     Total Logic Cells: 778/1248
         Combinational Logic Cells: 142      out of   1248      11.3782%
         Sequential Logic Cells:    636      out of   1248      50.9615%
-        Logic Tiles:               117      out of   156       75%
+        Logic Tiles:               126      out of   156       80.7692%
     Registers: 
         Logic Registers:           636      out of   1248      50.9615%
         IO Registers:              0        out of   240       0
@@ -75,37 +75,37 @@ IO Bank Utilization:
 --------------------
     Bank 3: 0        out of   0         0%
     Bank 1: 0        out of   0         0%
-    Bank 0: 3        out of   12        25%
-    Bank 2: 4        out of   14        28.5714%
+    Bank 0: 1        out of   12        8.33333%
+    Bank 2: 6        out of   14        42.8571%
 
 Detailed I/O Info:
 ------------------
     Input Pins: 
     Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function                                Signal Name    
     ----------  ---------  -----------  -------  -------  -----------                                -----------    
-    A3          Input      SB_LVCMOS    No       0        Simple Input                               bno_interrupt  
-    F2          Input      SB_LVCMOS    No       2        Simple Input                               clk_12mhz      
+    D2          Input      SB_LVCMOS    No       2        Simple Input                               clk_12mhz      
+    E1          Input      SB_LVCMOS    No       2        Simple Input                               bno_interrupt  
 
     Output Pins: 
     Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function                                Signal Name    
     ----------  ---------  -----------  -------  -------  -----------                                -----------    
-    B6          Output     SB_LVCMOS    No       0        Output Tristatable by Enable               bno_rstn       
-    E2          Output     SB_LVCMOS    No       2        Simple Output                              vox_clk_p      
-    F3          Output     SB_LVCMOS    No       2        Simple Output                              vox_clk_n      
+    B5          Output     SB_LVCMOS    No       0        Output Tristatable by Enable               bno_rstn       
+    F2          Output     SB_LVCMOS    No       2        Simple Output                              vox_clk        
+    F3          Output     SB_LVCMOS    No       2        Simple Output                              vox_txd        
 
     Inoutput Pins: 
     Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function                                Signal Name    
     ----------  ---------  -----------  -------  -------  -----------                                -----------    
-    C6          InOut      SB_LVCMOS    No       0        Simple Input Output Tristatable by Enable  i2c_scl        
-    D6          InOut      SB_LVCMOS    No       2        Simple Input Output Tristatable by Enable  i2c_sda        
+    C1          InOut      SB_LVCMOS    No       2        Simple Input Output Tristatable by Enable  i2c_scl        
+    D1          InOut      SB_LVCMOS    No       2        Simple Input Output Tristatable by Enable  i2c_sda        
 
 Detailed Global Buffer Info:
 ----------------------------
     Buffer Number  IO Bank  Driven By  Fanout  Signal Name                                                                               
     -------------  -------  ---------  ------  -----------                                                                               
     5              2                   119     VoxLink_VOX_Protocol_Inst.bits_remaininge_0_i_g                                           
-    1              0                   96      VoxLink_BNO_Driver_Inst.N_72_i_g                                                          
-    2              0                   636     sys_clk                                                                                   
+    1              0                   96      VoxLink_BNO_Driver_Inst.N_66_i_g                                                          
+    7              2                   636     sys_clk                                                                                   
     6              2                   1       clk_12mhz_bufg                                                                            
     3              0                   86      VoxLink_Packet_Builder_Inst.VoxLink_CRC16_Koopman_Inst.code_word_register_1_sqmuxa_i_0_g  
     4              0                   571     locked_i_g                                                                                

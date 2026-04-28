@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timeStamp 2026 4 22 14 4 50)
+      (timeStamp 2026 4 27 17 23 57)
       (author "Synopsys, Inc.")
       (program "Synplify Pro" (version "L-2016.09L+ice40, mapper maplat, Build 1612R"))
      )
@@ -1302,7 +1302,7 @@
            (portRef (member packet_data 89))
            (portRef I1 (instanceRef crc_value_esr_RNO_12))
           ))
-          (net N_65_i (joined
+          (net N_28_i (joined
            (portRef O (instanceRef crc_value_esr_RNO_11))
            (portRef D (instanceRef crc_value_esr_11))
           ))
@@ -3806,8 +3806,8 @@
            (port (array (rename packet_data "packet_data[100:0]") 101) (direction INPUT))
            (port locked_i_g (direction INPUT))
            (port sys_clk (direction INPUT))
-           (port vox_clk_n_c (direction OUTPUT))
-           (port vox_clk_p_c (direction OUTPUT))
+           (port vox_txd_c (direction OUTPUT))
+           (port vox_clk_c (direction OUTPUT))
            (port packet_ready (direction INPUT))
          )
          (contents
@@ -6117,12 +6117,12 @@
            (portRef I0 (instanceRef i2c_sck_en_RNICQLJ))
            (portRef I0 (instanceRef vox_clk_RNO))
           ))
-          (net vox_clk_p_c (joined
+          (net vox_clk_c (joined
            (portRef Q (instanceRef vox_clk))
            (portRef I1 (instanceRef i2c_sck_en_RNIRGKL1))
            (portRef I1 (instanceRef i2c_sck_en_RNICQLJ))
            (portRef I2 (instanceRef vox_clk_RNO))
-           (portRef vox_clk_p_c)
+           (portRef vox_clk_c)
           ))
           (net (rename vox_clkZ0 "vox_clk") (joined
            (portRef O (instanceRef vox_clk_RNO))
@@ -6284,9 +6284,9 @@
            (portRef Q (instanceRef packet_data_r_111))
            (portRef I0 (instanceRef packet_data_r_RNIVLK91_111))
           ))
-          (net vox_clk_n_c (joined
+          (net vox_txd_c (joined
            (portRef O (instanceRef packet_data_r_RNIVLK91_111))
-           (portRef vox_clk_n_c)
+           (portRef vox_txd_c)
           ))
           (net (rename bits_remainingZ0Z_3 "bits_remaining[3]") (joined
            (portRef Q (instanceRef bits_remaining_3))
@@ -8779,7 +8779,7 @@
           (instance (rename byte_counter_cry_c_8 "byte_counter_cry_c[8]") (viewRef PRIM (cellRef SB_CARRY (libraryRef sb_ice)))          )
           (instance GND (viewRef PRIM (cellRef GND (libraryRef sb_ice)))          )
           (instance VCC (viewRef PRIM (cellRef VCC (libraryRef sb_ice)))          )
-          (net N_72_i_g (joined
+          (net N_66_i_g (joined
            (portRef GLOBAL_BUFFER_OUTPUT (instanceRef bno_state_RNI0TVB_0_3))
            (portRef E (instanceRef packet_length_7))
            (portRef E (instanceRef packet_length_6))
@@ -8878,7 +8878,7 @@
            (portRef E (instanceRef packet_length_9))
            (portRef E (instanceRef packet_length_8))
           ))
-          (net N_72_i (joined
+          (net N_66_i (joined
            (portRef O (instanceRef bno_state_RNI0TVB_3))
            (portRef USER_SIGNAL_TO_GLOBAL_BUFFER (instanceRef bno_state_RNI0TVB_0_3))
           ))
@@ -9705,7 +9705,7 @@
            (portRef O (instanceRef finish_transaction_RNO))
            (portRef D (instanceRef finish_transaction))
           ))
-          (net N_93 (joined
+          (net N_90 (joined
            (portRef O (instanceRef byte_counter_RNIN3IN3_5))
            (portRef I0 (instanceRef bno_state_RNIHVQG4_3))
            (portRef I0 (instanceRef packet_length_RNO_15))
@@ -9733,7 +9733,7 @@
            (portRef I3 (instanceRef packet_length_RNO_0))
            (portRef I3 (instanceRef packet_length_RNO_8))
           ))
-          (net N_80_i_0 (joined
+          (net N_74_i (joined
            (portRef O (instanceRef packet_length_RNO_8))
            (portRef D (instanceRef packet_length_8))
           ))
@@ -9745,7 +9745,7 @@
            (portRef I3 (instanceRef packet_length_RNO_1))
            (portRef I3 (instanceRef packet_length_RNO_9))
           ))
-          (net N_79_i_0 (joined
+          (net N_73_i (joined
            (portRef O (instanceRef packet_length_RNO_9))
            (portRef D (instanceRef packet_length_9))
           ))
@@ -9762,7 +9762,7 @@
            (portRef I3 (instanceRef packet_length_RNO_2))
            (portRef I3 (instanceRef packet_length_RNO_10))
           ))
-          (net N_78_i (joined
+          (net N_72_i (joined
            (portRef O (instanceRef packet_length_RNO_10))
            (portRef D (instanceRef packet_length_10))
           ))
@@ -9779,7 +9779,7 @@
            (portRef I3 (instanceRef packet_length_RNO_3))
            (portRef I3 (instanceRef packet_length_RNO_11))
           ))
-          (net N_77_i (joined
+          (net N_71_i (joined
            (portRef O (instanceRef packet_length_RNO_11))
            (portRef D (instanceRef packet_length_11))
           ))
@@ -9796,7 +9796,7 @@
            (portRef I3 (instanceRef packet_length_RNO_4))
            (portRef I3 (instanceRef packet_length_RNO_12))
           ))
-          (net N_76_i (joined
+          (net N_70_i (joined
            (portRef O (instanceRef packet_length_RNO_12))
            (portRef D (instanceRef packet_length_12))
           ))
@@ -9813,7 +9813,7 @@
            (portRef I3 (instanceRef packet_length_RNO_5))
            (portRef I3 (instanceRef packet_length_RNO_13))
           ))
-          (net N_75_i (joined
+          (net N_69_i (joined
            (portRef O (instanceRef packet_length_RNO_13))
            (portRef D (instanceRef packet_length_13))
           ))
@@ -9830,35 +9830,35 @@
            (portRef I3 (instanceRef packet_length_RNO_6))
            (portRef I3 (instanceRef packet_length_RNO_14))
           ))
-          (net N_74_i (joined
+          (net N_68_i (joined
            (portRef O (instanceRef packet_length_RNO_14))
            (portRef D (instanceRef packet_length_14))
           ))
-          (net N_85_i_0 (joined
+          (net N_82_i_0 (joined
            (portRef O (instanceRef packet_length_RNO_0))
            (portRef D (instanceRef packet_length_0))
           ))
-          (net N_84_i_0 (joined
+          (net N_81_i_0 (joined
            (portRef O (instanceRef packet_length_RNO_1))
            (portRef D (instanceRef packet_length_1))
           ))
-          (net N_64_i (joined
+          (net N_80_i_0 (joined
            (portRef O (instanceRef packet_length_RNO_2))
            (portRef D (instanceRef packet_length_2))
           ))
-          (net N_62_i (joined
+          (net N_79_i_0 (joined
            (portRef O (instanceRef packet_length_RNO_3))
            (portRef D (instanceRef packet_length_3))
           ))
-          (net N_60_i (joined
+          (net N_78_i (joined
            (portRef O (instanceRef packet_length_RNO_4))
            (portRef D (instanceRef packet_length_4))
           ))
-          (net N_83_i_0 (joined
+          (net N_77_i (joined
            (portRef O (instanceRef packet_length_RNO_5))
            (portRef D (instanceRef packet_length_5))
           ))
-          (net N_82_i_0 (joined
+          (net N_76_i (joined
            (portRef O (instanceRef packet_length_RNO_6))
            (portRef D (instanceRef packet_length_6))
           ))
@@ -9867,7 +9867,7 @@
            (portRef D (instanceRef sensor_data_7))
            (portRef I3 (instanceRef packet_length_RNO_7))
           ))
-          (net N_81_i_0 (joined
+          (net N_75_i (joined
            (portRef O (instanceRef packet_length_RNO_7))
            (portRef D (instanceRef packet_length_7))
           ))
@@ -9992,7 +9992,7 @@
            (portRef I1 (instanceRef match_packet_length_2_0_I_21_c_RNO))
            (portRef I2 (instanceRef packet_length_RNO_15))
           ))
-          (net N_73_i (joined
+          (net N_67_i (joined
            (portRef O (instanceRef packet_length_RNO_15))
            (portRef D (instanceRef packet_length_15))
           ))
@@ -12695,8 +12695,8 @@
         (property langParams (string "RGB0_CURRENT RGB1_CURRENT RGB2_CURRENT CURRENT_MODE"))
         (property black_box_pad_pin (string "RGB0,RGB1,RGB2"))
         (property CURRENT_MODE (string "0b1"))
-        (property RGB2_CURRENT (string "0b000001"))
-        (property RGB1_CURRENT (string "0b000011"))
+        (property RGB2_CURRENT (string "0b000000"))
+        (property RGB1_CURRENT (string "0b000000"))
         (property RGB0_CURRENT (string "0b000001"))
         (property orig_inst_of (string "SB_RGBA_DRV"))
        )
@@ -12710,10 +12710,8 @@
            (port bno_rstn (direction OUTPUT))
            (port bno_interrupt (direction INPUT))
            (port led_io (direction OUTPUT))
-           (port led_rx (direction OUTPUT))
-           (port led_tx (direction OUTPUT))
-           (port vox_clk_p (direction OUTPUT))
-           (port vox_clk_n (direction OUTPUT))
+           (port vox_clk (direction OUTPUT))
+           (port vox_txd (direction OUTPUT))
          )
          (contents
           (instance u_pll_RNISDD6_0 (viewRef PRIM (cellRef SB_GB (libraryRef sb_ice)))          )
@@ -12840,11 +12838,11 @@
            (property NEG_TRIGGER (string "0"))
            (property PIN_TYPE (string "101001"))
           )
-          (instance vox_clk_p_obuf (viewRef PRIM (cellRef SB_IO (libraryRef sb_ice)))
+          (instance vox_clk_obuf (viewRef PRIM (cellRef SB_IO (libraryRef sb_ice)))
            (property NEG_TRIGGER (string "0"))
            (property PIN_TYPE (string "011001"))
           )
-          (instance vox_clk_n_obuf (viewRef PRIM (cellRef SB_IO (libraryRef sb_ice)))
+          (instance vox_txd_obuf (viewRef PRIM (cellRef SB_IO (libraryRef sb_ice)))
            (property NEG_TRIGGER (string "0"))
            (property PIN_TYPE (string "011001"))
           )
@@ -12933,8 +12931,6 @@
           (instance led_driver (viewRef verilog (cellRef SB_RGBA_DRV))
            (property CURRENT_MODE (string "0b1"))
            (property RGB0_CURRENT (string "0b000001"))
-           (property RGB1_CURRENT (string "0b000011"))
-           (property RGB2_CURRENT (string "0b000001"))
           )
           (instance clk_pll (viewRef PRIM (cellRef SB_GB (libraryRef sb_ice)))
           )
@@ -12985,14 +12981,6 @@
           (net led_io (joined
            (portRef RGB0 (instanceRef led_driver))
            (portRef led_io)
-          ))
-          (net led_rx (joined
-           (portRef RGB1 (instanceRef led_driver))
-           (portRef led_rx)
-          ))
-          (net led_tx (joined
-           (portRef RGB2 (instanceRef led_driver))
-           (portRef led_tx)
           ))
           (net (rename GNDZ0 "GND") (joined
            (portRef Y (instanceRef GND))
@@ -13173,8 +13161,6 @@
           ))
           (net (rename led_io_rZ0 "led_io_r") (joined
            (portRef Q (instanceRef led_io_r))
-           (portRef RGB2PWM (instanceRef led_driver))
-           (portRef RGB1PWM (instanceRef led_driver))
            (portRef RGB0PWM (instanceRef led_driver))
            (portRef I3 (instanceRef led_io_r_RNO))
           ))
@@ -14083,21 +14069,21 @@
            (portRef PACKAGE_PIN (instanceRef bno_interrupt_ibuf))
            (portRef bno_interrupt)
           ))
-          (net vox_clk_p_c (joined
-           (portRef vox_clk_p_c (instanceRef VoxLink_VOX_Protocol_Inst))
-           (portRef D_OUT_0 (instanceRef vox_clk_p_obuf))
+          (net vox_clk_c (joined
+           (portRef vox_clk_c (instanceRef VoxLink_VOX_Protocol_Inst))
+           (portRef D_OUT_0 (instanceRef vox_clk_obuf))
           ))
-          (net vox_clk_p (joined
-           (portRef PACKAGE_PIN (instanceRef vox_clk_p_obuf))
-           (portRef vox_clk_p)
+          (net vox_clk (joined
+           (portRef PACKAGE_PIN (instanceRef vox_clk_obuf))
+           (portRef vox_clk)
           ))
-          (net vox_clk_n_c (joined
-           (portRef vox_clk_n_c (instanceRef VoxLink_VOX_Protocol_Inst))
-           (portRef D_OUT_0 (instanceRef vox_clk_n_obuf))
+          (net vox_txd_c (joined
+           (portRef vox_txd_c (instanceRef VoxLink_VOX_Protocol_Inst))
+           (portRef D_OUT_0 (instanceRef vox_txd_obuf))
           ))
-          (net vox_clk_n (joined
-           (portRef PACKAGE_PIN (instanceRef vox_clk_n_obuf))
-           (portRef vox_clk_n)
+          (net vox_txd (joined
+           (portRef PACKAGE_PIN (instanceRef vox_txd_obuf))
+           (portRef vox_txd)
           ))
           (net locked_i (joined
            (portRef O (instanceRef u_pll_RNISDD6))

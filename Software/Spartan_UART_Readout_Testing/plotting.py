@@ -1,12 +1,13 @@
 import serial
 import struct
+import time
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from collections import deque
 import sys
 
 # --- Configuration ---
-COM_PORT = 'COM4'           # Adjust if necessary
+COM_PORT = 'COM13'           # Adjust if necessary
 BAUD_RATE = 1000000
 MAX_POINTS = 200            # Number of points visible on the X-axis
 POLL_ADDRESS = 67           # Decimal 67 (0x43)
@@ -18,6 +19,17 @@ READ_PACKET = bytes([0x00, POLL_ADDRESS])
 #   Address(12) | Timestamp(12) | Command(8) | Data(64) | CRC(16)
 PACKET_BYTES = 14
 Q14_SCALE    = 16384.0
+
+# --- Packet logging ---
+# Every poll response is dumped to a log file. Stop the script (Ctrl-C / close
+# the plot window) when you see a spike on the chart, then inspect the tail of
+# the log around the timestamp the spike occurred.
+PACKET_LOG_PATH = 'spikes.log'
+
+packet_log = open(PACKET_LOG_PATH, 'w', buffering=1)  # line-buffered
+packet_log.write("# wallclock_s  TS  Addr  Cmd  CRC  q0 q1 q2 q3  raw_hex\n")
+
+T0 = time.monotonic()
 
 # --- Setup Serial Connection ---
 try:
@@ -85,15 +97,28 @@ def update_plot(frame):
         #    (per-int16 little-endian, same convention as the sensor's original pack).
         q0_raw, q1_raw, q2_raw, q3_raw = struct.unpack('<hhhh', reply[4:12])
 
-        q0_data.append(q0_raw / Q14_SCALE)
-        q1_data.append(q1_raw / Q14_SCALE)
-        q2_data.append(q2_raw / Q14_SCALE)
-        q3_data.append(q3_raw / Q14_SCALE)
+        q0v = q0_raw / Q14_SCALE
+        q1v = q1_raw / Q14_SCALE
+        q2v = q2_raw / Q14_SCALE
+        q3v = q3_raw / Q14_SCALE
+
+        q0_data.append(q0v)
+        q1_data.append(q1v)
+        q2_data.append(q2v)
+        q3_data.append(q3v)
 
         info_text.set_text(
             f"Addr: 0x{address:03X}   Cmd: 0x{command:02X}\n"
             f"TS:   {timestamp}\n"
             f"CRC:  0x{crc:04X}"
+        )
+
+        # --- Packet logging (every poll, no filtering) ---
+        packet_log.write(
+            f"{time.monotonic()-T0:8.3f}  TS={timestamp:4d}  "
+            f"Addr=0x{address:03X}  Cmd=0x{command:02X}  CRC=0x{crc:04X}  "
+            f"q=({q0v:+.4f},{q1v:+.4f},{q2v:+.4f},{q3v:+.4f})  "
+            f"raw={reply.hex()}\n"
         )
     else:
         # Prevent stutter if a packet is dropped
@@ -111,8 +136,9 @@ def update_plot(frame):
 
 
 # --- Run the Animation ---
-# Polling every 20ms (50Hz) to match your BNO08x sensor rate!
-ani = animation.FuncAnimation(fig, update_plot, interval=20, blit=True)
+# Oversample at ~200 Hz so we never miss a fresh sensor frame; the FPGA just
+# returns the most recent CRC-validated packet, so duplicate reads are harmless.
+ani = animation.FuncAnimation(fig, update_plot, interval=10, blit=True)
 
 try:
     plt.show()
@@ -120,4 +146,6 @@ except KeyboardInterrupt:
     print("Plotting stopped.")
 finally:
     ser.close()
+    packet_log.close()
     print("Serial port safely closed.")
+    print(f"Packet log written to {PACKET_LOG_PATH}.")
