@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/impl_1/Top.tcl"
+  variable script "C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/impl_1/Top.tcl"
   variable category "vivado_impl"
 }
 
@@ -104,15 +104,17 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 5
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 11  }
   reset_param project.defaultXPMLibraries 
-  open_checkpoint C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/impl_1/Top.dcp
-  set_property webtalk.parent_dir C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.cache/wt [current_project]
-  set_property parent.project_path C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.xpr [current_project]
-  set_property ip_repo_paths C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/ip/fifo_generator_0 [current_project]
+  open_checkpoint C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/impl_1/Top.dcp
+  set_property webtalk.parent_dir C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.cache/wt [current_project]
+  set_property parent.project_path C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.xpr [current_project]
+  set_property ip_repo_paths C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/ip/fifo_generator_0 [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.cache/ip [current_project]
+  set_property ip_output_repo C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "init_design_reports" START { REPORT }
@@ -261,4 +263,35 @@ OPTRACE "route_design write_checkpoint" END { }
 
 OPTRACE "route_design misc" END { }
 OPTRACE "Phase: Route Design" END { }
+OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
+OPTRACE "write_bitstream setup" START { }
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+OPTRACE "read constraints: write_bitstream" START { }
+OPTRACE "read constraints: write_bitstream" END { }
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  catch { write_mem_info -force -no_partial_mmi Top.mmi }
+OPTRACE "write_bitstream setup" END { }
+OPTRACE "write_bitstream" START { }
+  write_bitstream -force Top.bit 
+OPTRACE "write_bitstream" END { }
+OPTRACE "write_bitstream misc" START { }
+OPTRACE "read constraints: write_bitstream_post" START { }
+OPTRACE "read constraints: write_bitstream_post" END { }
+  catch {write_debug_probes -quiet -force Top}
+  catch {file copy -force Top.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "write_bitstream misc" END { }
+OPTRACE "Phase: Write Bitstream" END { }
 OPTRACE "impl_1" END { }

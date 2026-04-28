@@ -13,7 +13,7 @@
       <Properties Property="PROGRAM.CFG_PROGRAM" value="1"/>
       <Properties Property="PROGRAM.CHECKSUM" value="0"/>
       <Properties Property="PROGRAM.ERASE" value="1"/>
-      <Properties Property="PROGRAM.FILES" value="$_project_name_.runs/impl_1/mem_cfg.mcs"/>
+      <Properties Property="PROGRAM.FILES" value="$_project_name_.runs/impl_1/quaternion_readout_v2.mcs"/>
       <Properties Property="PROGRAM.PRM_FILE" value=""/>
       <Properties Property="PROGRAM.UNUSED_PIN_TERMINATION" value="pull-none"/>
       <Properties Property="PROGRAM.VERIFY" value="1"/>
@@ -23,10 +23,631 @@
     <Object name="xc7a35t_0" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value=""/>
       <Properties Property="PROBES.FILE" value=""/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/Top.bit"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value=""/>
       <Properties Property="PROGRAM.HW_CFGMEM_PART" value="is25lp256d-spi-x1_x2_x4"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>
-  <probeset name="hw project" active="false"/>
+  <ObjectList object_type="hw_ila" gui_info="">
+    <Object name="" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+    <Object name="u_ila_0" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq15&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq15&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[14:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq15&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="MV_UART_FIFO_Interface_inst/reg_read_addr[14]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_read_addr[13]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_read_addr[12]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_read_addr[11]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_read_addr[10]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_read_addr[9]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_read_addr[8]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_read_addr[7]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_read_addr[6]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_read_addr[5]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_read_addr[4]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_read_addr[3]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_read_addr[2]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_read_addr[1]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_read_addr[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq15&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq15&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[14:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq15&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_addr[14]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_addr[13]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_addr[12]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_addr[11]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_addr[10]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_addr[9]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_addr[8]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_addr[7]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_addr[6]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_addr[5]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_addr[4]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_addr[3]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_addr[2]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_addr[1]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_addr[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[31]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[30]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[29]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[28]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[27]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[26]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[25]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[24]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[23]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[22]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[21]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[20]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[19]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[18]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[17]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[16]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[15]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[14]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[13]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[12]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[11]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[10]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[9]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[8]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[7]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[6]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[5]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[4]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[3]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[2]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[1]"/>
+        <net name="MV_UART_FIFO_Interface_inst/reg_write_data[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[2:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_cnt[2]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_cnt[1]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_cnt[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq40&apos;hXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq40&apos;hXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[39:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq40&apos;hXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[39]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[38]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[37]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[36]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[35]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[34]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[33]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[32]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[31]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[30]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[29]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[28]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[27]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[26]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[25]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[24]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[23]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[22]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[21]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[20]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[19]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[18]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[17]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[16]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[15]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[14]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[13]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[12]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[11]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[10]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[9]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[8]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[7]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[6]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[5]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[4]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[3]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[2]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[1]"/>
+        <net name="MV_UART_FIFO_Interface_inst/uart_rxd_r[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[7:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="MV_UART_Inst/received_message[7]"/>
+        <net name="MV_UART_Inst/received_message[6]"/>
+        <net name="MV_UART_Inst/received_message[5]"/>
+        <net name="MV_UART_Inst/received_message[4]"/>
+        <net name="MV_UART_Inst/received_message[3]"/>
+        <net name="MV_UART_Inst/received_message[2]"/>
+        <net name="MV_UART_Inst/received_message[1]"/>
+        <net name="MV_UART_Inst/received_message[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[1:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="MV_UART_Inst/uart_rxd_r[1]"/>
+        <net name="MV_UART_Inst/uart_rxd_r[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe13[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="MV_UART_Inst/uart_tx_state"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq112&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq112&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe10[111:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq112&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[111]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[110]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[109]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[108]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[107]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[106]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[105]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[104]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[103]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[102]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[101]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[100]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[99]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[98]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[97]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[96]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[95]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[94]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[93]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[92]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[91]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[90]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[89]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[88]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[87]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[86]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[85]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[84]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[83]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[82]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[81]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[80]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[79]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[78]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[77]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[76]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[75]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[74]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[73]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[72]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[71]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[70]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[69]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[68]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[67]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[66]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[65]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[64]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[63]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[62]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[61]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[60]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[59]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[58]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[57]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[56]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[55]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[54]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[53]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[52]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[51]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[50]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[49]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[48]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[47]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[46]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[45]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[44]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[43]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[42]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[41]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[40]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[39]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[38]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[37]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[36]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[35]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[34]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[33]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[32]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[31]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[30]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[29]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[28]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[27]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[26]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[25]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[24]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[23]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[22]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[21]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[20]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[19]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[18]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[17]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[16]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[15]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[14]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[13]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[12]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[11]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[10]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[9]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[8]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[7]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[6]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[5]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[4]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[3]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[2]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[1]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq14&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq14&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe9[13:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq14&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r[13]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r[12]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r[11]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r[10]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r[9]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r[8]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r[7]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r[6]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r[5]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r[4]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r[3]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r[2]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r[1]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq15&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq15&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe11[14:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq15&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_read_addr[14]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_read_addr[13]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_read_addr[12]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_read_addr[11]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_read_addr[10]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_read_addr[9]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_read_addr[8]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_read_addr[7]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_read_addr[6]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_read_addr[5]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_read_addr[4]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_read_addr[3]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_read_addr[2]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_read_addr[1]"/>
+        <net name="Vox_Testing_Multiplexer_Inst/reg_read_addr[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[7:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="reg_mux_out[7]"/>
+        <net name="reg_mux_out[6]"/>
+        <net name="reg_mux_out[5]"/>
+        <net name="reg_mux_out[4]"/>
+        <net name="reg_mux_out[3]"/>
+        <net name="reg_mux_out[2]"/>
+        <net name="reg_mux_out[1]"/>
+        <net name="reg_mux_out[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe7[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="sensor_data[63]"/>
+        <net name="sensor_data[62]"/>
+        <net name="sensor_data[61]"/>
+        <net name="sensor_data[60]"/>
+        <net name="sensor_data[59]"/>
+        <net name="sensor_data[58]"/>
+        <net name="sensor_data[57]"/>
+        <net name="sensor_data[56]"/>
+        <net name="sensor_data[55]"/>
+        <net name="sensor_data[54]"/>
+        <net name="sensor_data[53]"/>
+        <net name="sensor_data[52]"/>
+        <net name="sensor_data[51]"/>
+        <net name="sensor_data[50]"/>
+        <net name="sensor_data[49]"/>
+        <net name="sensor_data[48]"/>
+        <net name="sensor_data[47]"/>
+        <net name="sensor_data[46]"/>
+        <net name="sensor_data[45]"/>
+        <net name="sensor_data[44]"/>
+        <net name="sensor_data[43]"/>
+        <net name="sensor_data[42]"/>
+        <net name="sensor_data[41]"/>
+        <net name="sensor_data[40]"/>
+        <net name="sensor_data[39]"/>
+        <net name="sensor_data[38]"/>
+        <net name="sensor_data[37]"/>
+        <net name="sensor_data[36]"/>
+        <net name="sensor_data[35]"/>
+        <net name="sensor_data[34]"/>
+        <net name="sensor_data[33]"/>
+        <net name="sensor_data[32]"/>
+        <net name="sensor_data[31]"/>
+        <net name="sensor_data[30]"/>
+        <net name="sensor_data[29]"/>
+        <net name="sensor_data[28]"/>
+        <net name="sensor_data[27]"/>
+        <net name="sensor_data[26]"/>
+        <net name="sensor_data[25]"/>
+        <net name="sensor_data[24]"/>
+        <net name="sensor_data[23]"/>
+        <net name="sensor_data[22]"/>
+        <net name="sensor_data[21]"/>
+        <net name="sensor_data[20]"/>
+        <net name="sensor_data[19]"/>
+        <net name="sensor_data[18]"/>
+        <net name="sensor_data[17]"/>
+        <net name="sensor_data[16]"/>
+        <net name="sensor_data[15]"/>
+        <net name="sensor_data[14]"/>
+        <net name="sensor_data[13]"/>
+        <net name="sensor_data[12]"/>
+        <net name="sensor_data[11]"/>
+        <net name="sensor_data[10]"/>
+        <net name="sensor_data[9]"/>
+        <net name="sensor_data[8]"/>
+        <net name="sensor_data[7]"/>
+        <net name="sensor_data[6]"/>
+        <net name="sensor_data[5]"/>
+        <net name="sensor_data[4]"/>
+        <net name="sensor_data[3]"/>
+        <net name="sensor_data[2]"/>
+        <net name="sensor_data[1]"/>
+        <net name="sensor_data[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe12[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="sensor_data_valid"/>
+      </nets>
+    </probe>
+  </probeset>
 </hwsession>

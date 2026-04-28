@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Tue Apr 28 08:14:06 2026
+| Date         : Tue Apr 28 12:46:19 2026
 | Host         : LAPTOP-GK6ER3TV running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
 | Design       : Top
@@ -34,8 +34,8 @@ Table of Contents
 | Slice LUTs*             |  376 |     0 |          0 |     20800 |  1.81 |
 |   LUT as Logic          |  376 |     0 |          0 |     20800 |  1.81 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         |  838 |     0 |          0 |     41600 |  2.01 |
-|   Register as Flip Flop |  838 |     0 |          0 |     41600 |  2.01 |
+| Slice Registers         |  934 |     0 |          0 |     41600 |  2.25 |
+|   Register as Flip Flop |  934 |     0 |          0 |     41600 |  2.25 |
 |   Register as Latch     |    0 |     0 |          0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |      8150 |  0.00 |
@@ -58,9 +58,9 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 29    |          Yes |           - |          Set |
-| 191   |          Yes |           - |        Reset |
+| 239   |          Yes |           - |        Reset |
 | 2     |          Yes |         Set |            - |
-| 616   |          Yes |       Reset |            - |
+| 664   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,12 +149,12 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       |  616 |        Flop & Latch |
-| FDCE       |  191 |        Flop & Latch |
-| LUT6       |  131 |                 LUT |
+| FDRE       |  664 |        Flop & Latch |
+| FDCE       |  239 |        Flop & Latch |
+| LUT6       |  179 |                 LUT |
 | LUT3       |  130 |                 LUT |
-| LUT5       |   95 |                 LUT |
 | LUT4       |   71 |                 LUT |
+| LUT5       |   47 |                 LUT |
 | FDPE       |   29 |        Flop & Latch |
 | LUT2       |   19 |                 LUT |
 | CARRY4     |    7 |          CarryLogic |

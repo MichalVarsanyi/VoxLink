@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/synth_1/Top.tcl"
+  variable script "C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/synth_1/Top.tcl"
   variable category "vivado_synth"
 }
 
@@ -63,28 +63,28 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.cache/wt [current_project]
-set_property parent.project_path C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.xpr [current_project]
+set_property webtalk.parent_dir C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.cache/wt [current_project]
+set_property parent.project_path C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths c:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/ip/fifo_generator_0 [current_project]
+set_property ip_repo_paths c:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/ip/fifo_generator_0 [current_project]
 update_ip_catalog
-set_property ip_output_repo c:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.cache/ip [current_project]
+set_property ip_output_repo c:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART.v
-  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART_FIFO_Interface.v
-  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/VoxLink_CRC16_Koopman.v
-  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/Vox_Receiver.v
-  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/Vox_Testing_Multiplexer.v
-  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v
+  C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART.v
+  C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART_FIFO_Interface.v
+  C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/VoxLink_CRC16_Koopman.v
+  C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/Vox_Receiver.v
+  C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/Vox_Testing_Multiplexer.v
+  C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v
 }
-read_ip -quiet C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/MV_test.gen/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/MV_test.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_ooc.xdc]
+read_ip -quiet C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
+set_property used_in_implementation false [get_files -all c:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/MV_test.gen/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc]
+set_property used_in_implementation false [get_files -all c:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/MV_test.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -95,12 +95,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Constraints/VoxLink_Controller.xdc
-set_property used_in_implementation false [get_files C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Source/Constraints/VoxLink_Controller.xdc]
+read_xdc C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Constraints/VoxLink_Controller.xdc
+set_property used_in_implementation false [get_files C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Constraints/VoxLink_Controller.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/utils_1/imports/synth_1/Top.dcp
+read_checkpoint -auto_incremental -incremental C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/utils_1/imports/synth_1/Top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

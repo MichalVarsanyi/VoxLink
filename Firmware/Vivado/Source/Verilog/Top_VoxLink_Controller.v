@@ -363,7 +363,7 @@ module Top
 //--------------------------------------------------------------------------------------------- //
 
     // Internal registers holding the CRC passed data
-    reg  [63:0]     crc_verified_data_r;
+    reg  [111:0]     crc_verified_data_r;
     reg             crc_verified_data_valid_r;
 
     // Wires from the CRC module
@@ -386,7 +386,7 @@ module Top
         begin
             if (sys_rst)
             begin
-                crc_verified_data_r         <= {64{1'b0}};
+                crc_verified_data_r         <= {112{1'b0}};
                 crc_verified_data_valid_r   <= 1'b0;
             end
             else
@@ -394,7 +394,7 @@ module Top
                 crc_verified_data_valid_r   <= 1'b0;
                 if (crc_data_valid && crc_value == 16'h0000)
                 begin
-                    crc_verified_data_r         <= sensor_data;
+                    crc_verified_data_r         <= sensor_packet;
                     crc_verified_data_valid_r   <= 1'b1;
                 end
             end
