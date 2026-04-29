@@ -48,9 +48,9 @@ q3_data = deque([0.0] * MAX_POINTS, maxlen=MAX_POINTS)
 
 # --- Setup Matplotlib Figure ---
 fig, ax = plt.subplots()
-line_q0, = ax.plot(x_data, q0_data, color='red',     label='Quat[0]',        linewidth=1.5)
-line_q1, = ax.plot(x_data, q1_data, color='lime',    label='Quat[1]',        linewidth=1.5)
-line_q2, = ax.plot(x_data, q2_data, color='cyan',    label='Quat[2] (K/Z)',  linewidth=1.5)
+line_q0, = ax.plot(x_data, q0_data, color='red',     label='Quat[0] (X)',        linewidth=1.5)
+line_q1, = ax.plot(x_data, q1_data, color='lime',    label='Quat[1] (Y)',        linewidth=1.5)
+line_q2, = ax.plot(x_data, q2_data, color='cyan',    label='Quat[2] (Z)',  linewidth=1.5)
 line_q3, = ax.plot(x_data, q3_data, color='magenta', label='Quat[3] (Real)', linewidth=1.5)
 
 # Styling the graph

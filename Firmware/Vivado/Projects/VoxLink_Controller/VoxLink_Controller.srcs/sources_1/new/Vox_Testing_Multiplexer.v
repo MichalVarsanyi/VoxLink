@@ -28,6 +28,9 @@ module Vox_Testing_Multiplexer(
         // Multiplexer input
         input       [111:0]           sensor_data,
         input                         sensor_data_valid,
+
+        // Diagnostic
+        input       [31:0]            mailbox,
         
         // Multiplexer output
         output [7:0]                  reg_mux_out,
@@ -80,6 +83,11 @@ module Vox_Testing_Multiplexer(
                     // Load the full 14-byte packet and mark all 14 bytes for transmission.
                     reg_mux_out_r           <= sensor_data_r;
                     reg_mux_out_transmit_r  <= {14{1'b1}};
+                end
+                1:
+                begin
+                    reg_mux_out_r          <= {mailbox[31:0], 80'h0};   // put 4 bytes at the MSB end
+                    reg_mux_out_transmit_r <= 14'b1111_0000_0000_00;    // arm only 4 transmit flags
                 end
                 default:
                 begin

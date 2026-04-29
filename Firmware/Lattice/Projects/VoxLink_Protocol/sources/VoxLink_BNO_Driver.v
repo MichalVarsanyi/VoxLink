@@ -73,8 +73,8 @@ module VoxLink_BNO_Driver #(
         8'h00,                //  7: Feature Flags
         8'h00,                //  8: Change Sensitivity LSB
         8'h00,                //  9: Change Sensitivity MSB
-        8'h20,                // 10: Report Interval LSB (0x4E20 = 20,000us = 50Hz)
-        8'h4E,                // 11: Report Interval 
+        8'hC4,                // 10: Report Interval LSB (0x4E20 = 20,000us = 50Hz)
+        8'h09,                // 11: Report Interval 
         8'h00,                // 12: Report Interval 
         8'h00,                // 13: Report Interval MSB
         8'h00,                // 14: Batch Interval LSB

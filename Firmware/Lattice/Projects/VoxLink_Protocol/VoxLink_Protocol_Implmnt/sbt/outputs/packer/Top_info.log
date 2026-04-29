@@ -6,7 +6,7 @@
 
 * Build Date:         Dec  9 2020 17:31:51
 
-* File Generated:     Apr 27 2026 17:24:21
+* File Generated:     Apr 29 2026 10:08:08
 
 * Purpose:            General info of design implementation
 
@@ -14,7 +14,7 @@
 
 * ******************************************************************************
 
-Command Line: C:\lscc\iCEcube2.2020.12\sbt_backend\bin\win32\opt\packer.exe  C:\lscc\iCEcube2.2020.12\sbt_backend\devices\ICE40T01.dev  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/VoxLink_Protocol_Implmnt\sbt\netlist\oadb-Top  --package  CM36A  --outdir  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/VoxLink_Protocol_Implmnt\sbt\outputs\packer  --translator  C:\lscc\iCEcube2.2020.12\sbt_backend\bin\sdc_translator.tcl  --src_sdc_file  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/VoxLink_Protocol_Implmnt\sbt\outputs\placer\Top_pl.sdc  --dst_sdc_file  C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/VoxLink_Protocol_Implmnt\sbt\outputs\packer\Top_pk.sdc  --devicename  iCE40UL1K  
+Command Line: C:\lscc\iCEcube2.2020.12\sbt_backend\bin\win32\opt\packer.exe  C:\lscc\iCEcube2.2020.12\sbt_backend\devices\ICE40T01.dev  C:/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/VoxLink_Protocol_Implmnt\sbt\netlist\oadb-Top  --package  CM36A  --outdir  C:/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/VoxLink_Protocol_Implmnt\sbt\outputs\packer  --translator  C:\lscc\iCEcube2.2020.12\sbt_backend\bin\sdc_translator.tcl  --src_sdc_file  C:/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/VoxLink_Protocol_Implmnt\sbt\outputs\placer\Top_pl.sdc  --dst_sdc_file  C:/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/VoxLink_Protocol_Implmnt\sbt\outputs\packer\Top_pk.sdc  --devicename  iCE40UL1K  
 
 ***** Device Info *****
 Chip: iCE40UL1K
@@ -23,8 +23,8 @@ Size: 12 X 14
 
 ***** Design Utilization Info *****
 Design: Top
-Used Logic Cell: 778/1248
-Used Logic Tile: 126/156
+Used Logic Cell: 759/1248
+Used Logic Tile: 125/156
 Used IO Cell:    7/48
 Used Bram Cell For iCE40: 0/14
 Used PLL For iCE40: 0/1
@@ -36,7 +36,7 @@ Clock Domain: sys_clk
 Clock Source: sys_clkout 
 Clock Driver: clk_pll (ICE_GB)
 Driver Position: (10, 0, 1)
-Fanout to FF: 636
+Fanout to FF: 617
 Fanout to Tile: 116
 
 
@@ -45,71 +45,71 @@ Logic cell utilization per tile
     . . . . + . . . . 1 . . . . 
    ----------------------------
 15|                             
-14|   0 0 0 0 0 0 0 0 0 0 0 0   
-13|   0 1 0 1 4 6 8 1 0 0 0 0   
-12|   0 1 0 5 6 6 8 8 1 0 3 0   
-11| 0 1 7 0 8 8 7 8 6 7 0 8 2 1 
-10| 1 8 8 0 8 8 8 8 8 8 0 8 2 1 
- 9| 2 8 8 0 8 8 8 8 8 7 0 8 8 1 
- 8| 2 7 8 0 8 8 8 8 8 8 0 8 5 8 
- 7| 8 8 8 0 8 8 8 6 1 8 0 8 7 8 
- 6| 8 8 3 0 7 8 8 7 8 6 0 7 7 5 
- 5| 1 3 8 0 8 8 4 7 8 8 0 5 5 1 
- 4| 0 4 8 0 6 4 8 8 8 8 0 5 0 0 
- 3|   5 8 0 7 8 8 6 7 8 0 8 0   
- 2|   8 0 0 1 8 8 8 8 8 0 0 0   
- 1|   1 0 0 0 1 2 1 0 0 0 0 0   
+14|   0 0 0 1 1 2 1 1 0 0 0 0   
+13|   0 0 0 5 7 4 8 4 0 0 1 0   
+12|   0 1 0 7 8 8 7 8 1 0 2 0   
+11| 0 0 1 0 7 8 8 6 8 3 0 7 8 0 
+10| 0 0 0 0 8 7 8 7 8 8 0 2 6 0 
+ 9| 1 8 1 0 8 8 8 8 8 8 0 8 6 0 
+ 8| 6 8 4 0 8 8 8 8 5 8 0 2 4 1 
+ 7| 8 8 1 0 8 8 8 7 8 7 0 8 8 0 
+ 6| 8 7 3 0 8 8 8 8 8 8 0 3 4 0 
+ 5| 8 8 8 0 8 8 5 8 8 8 0 7 8 0 
+ 4| 0 5 8 0 8 7 8 7 1 1 0 6 0 0 
+ 3|   4 8 0 8 1 8 5 5 7 0 8 0   
+ 2|   1 0 0 7 8 8 8 8 7 0 0 0   
+ 1|   1 1 0 3 8 7 7 8 7 0 0 0   
  0|                             
 
 Maximum number of Logic cells per logic tile: 8
-Average number of Logic cells per logic tile: 6.17
+Average number of Logic cells per logic tile: 6.07
 
 ***** Input Pin Density Info *****
 Number of input nets per logic tile
      .  .  .  .  +  .  .  .  .  1  .  .  .  . 
    ------------------------------------------
 15|                                           
-14|     0  0  0  0  0  0  0  0  0  0  0  0    
-13|     0  1  0  1  4  6  8  1  0  0  0  0    
-12|     0  1  0  5  6  6  8  9  3  0  8  0    
-11|  0  1  7  0  8  8 10 17 14 16  0 15  6  1 
-10|  1  8  8  0  8  8  8 17 15 14  0 16  5  4 
- 9|  2  8  8  0 17 17  8 20 19 15  0 16 17  1 
- 8|  2  7 17  0 18 18  8 14 14 20  0 18 10  9 
- 7| 17 18 18  0 18 17 18 14  2 15  0 12 10  8 
- 6| 17 17  6  0 12 17 17 14 16 13  0  7  6  4 
- 5|  4 12 16  0 16 18  8 19 16 15  0  4  5  1 
- 4|  0 16 16  0 16  4 16 18 20 15  0  8  0  0 
- 3|     8 16  0 15 15  8 10 10 18  0 17  0    
- 2|    17  0  0  3 13 17 18 13 10  0  0  0    
- 1|     1  0  0  0  2  2  1  0  0  0  0  0    
+14|     0  0  0  2  1  2  1  1  0  0  0  0    
+13|     0  0  0  5  7  4  9 12  0  0  1  0    
+12|     0  1  0  7  8  8 15 16  3  0  5  0    
+11|  0  0  1  0  7  8  8 18 16  8  0 11 15  0 
+10|  0  0  0  0  8  7 17 13 15  8  0  5 13  0 
+ 9|  1  8  1  0  8  8 18 17 15  8  0 17 12  0 
+ 8|  6  8  4  0  8  8 18 17 12 17  0  5  8  1 
+ 7|  8 17  1  0  8 17 18 15 18 18  0  9 17  0 
+ 6| 17 12  6  0 17 17 18 21 18 15  0  9  6  0 
+ 5|  6  7 16  0 18 18  9 16 14 13  0 17 17  0 
+ 4|  0 18 16  0 13 16 18  8  4  3  0 14  0  0 
+ 3|    16 16  0 16  2 14  7 12 12  0 12  0    
+ 2|     4  0  0 11 16 22 15 13  9  0  0  0    
+ 1|     1  1  0  8 16 20 15 12  9  0  0  0    
  0|                                           
 
-Maximum number of input nets per logic tile: 20
-Average number of input nets per logic tile: 10.91
+Maximum number of input nets per logic tile: 22
+Average number of input nets per logic tile: 10.82
 
 Number of input pins per logic tile
      .  .  .  .  +  .  .  .  .  1  .  .  .  . 
    ------------------------------------------
 15|                                           
-14|     0  0  0  0  0  0  0  0  0  0  0  0    
-13|     0  1  0  1  4  6  8  1  0  0  0  0    
-12|     0  1  0  5  6  6  8 15  3  0  8  0    
-11|  0  1  7  0  8  8 10 27 22 23  0 26  8  1 
-10|  1  8  8  0  8  8  8 30 28 25  0 22  6  4 
- 9|  2  8  8  0 24 24  8 28 30 28  0 22 24  1 
- 8|  2  7 24  0 32 32  8 29 31 32  0 32 20 15 
- 7| 24 32 32  0 32 24 32 17  2 27  0 28 14  8 
- 6| 24 31  6  0 28 24 24 20 16 20  0  7  6  5 
- 5|  4 12 16  0 17 26  8 22 16 22  0  5  5  1 
- 4|  0 16 16  0 24  4 17 32 27 19  0 13  0  0 
- 3|    13 16  0 27 24  8 10 20 32  0 17  0    
- 2|    17  0  0  3 32 24 32 27 24  0  0  0    
- 1|     1  0  0  0  2  2  1  0  0  0  0  0    
+14|     0  0  0  2  1  2  1  1  0  0  0  0    
+13|     0  0  0  5  7  4 15 12  0  0  1  0    
+12|     0  1  0  7  8  8 21 22  3  0  5  0    
+11|  0  0  1  0  7  8  8 20 22 12  0 25 26  0 
+10|  0  0  0  0  8  7 24 15 32  8  0  6 22  0 
+ 9|  1  8  1  0  8  8 32 30 27  8  0 24 22  0 
+ 8|  6  8  4  0  8  8 32 24 12 23  0  5 11  1 
+ 7|  8 31  1  0  8 24 32 17 30 26  0 15 18  0 
+ 6| 24 28  6  0 24 24 32 27 29 19  0 11  9  0 
+ 5|  7  8 16  0 32 32 15 17 27 30  0 28 18  0 
+ 4|  0 18 16  0 21 28 32 13  4  3  0 20  0  0 
+ 3|    16 16  0 24  2 24  9 20 28  0 32  0    
+ 2|     4  0  0 28 16 25 24 27 21  0  0  0    
+ 1|     1  1  0 12 16 25 19 24 21  0  0  0    
  0|                                           
 
 Maximum number of input pins per logic tile: 32
-Average number of input pins per logic tile: 15.70
+Average number of input pins per logic tile: 15.61
 
 ***** Run Time Info *****
 Run Time:  0

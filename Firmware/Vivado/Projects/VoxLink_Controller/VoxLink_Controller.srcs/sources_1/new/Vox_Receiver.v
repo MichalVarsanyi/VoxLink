@@ -2,12 +2,12 @@
 
 module Vox_Receiver (
     // General
-    input wire sys_clk,       // Fast internal clock (e.g., 252 MHz)
-    input wire sys_rst,
+    input  sys_clk,       // Fast internal clock (e.g., 252 MHz)
+    input  sys_rst,
 
     // Physical Sensor Interface
-    input wire vox_clk_in,
-    input wire vox_rx_in,
+    input  vox_clk,
+    input  vox_rx,
 
     // Received Sensor Data
     output reg [63:0]  sensor_data,
@@ -16,40 +16,20 @@ module Vox_Receiver (
 );
 
     // ---------------------------------------------------------
-    // 1. XPM Synchronizers (CDC)
-    // ---------------------------------------------------------
-    wire vox_clk_sync;
-    wire vox_rx_sync;
-
-    // Synchronize both the incoming clock and data to sys_clk
-    xpm_cdc_array_single #(
-        .DEST_SYNC_FF(4),   // 4-stage synchronization
-        .INIT_SYNC_FF(0),
-        .SIM_ASSERT_CHK(0),
-        .SRC_INPUT_REG(0),
-        .WIDTH(2)           // Synchronizing 2 bits: {clk, rx}
-    ) VoxLink_CDC_Inst (
-        .dest_out({vox_clk_sync, vox_rx_sync}),
-        .dest_clk(sys_clk),
-        .src_clk(1'b0),     // Unused since SRC_INPUT_REG=0
-        .src_in({vox_clk_in, vox_rx_in})
-    );
-
-    // ---------------------------------------------------------
     // 2. Edge Detection for the Clock
     // ---------------------------------------------------------
     // We need a 1-cycle delay of the SAFE synced signal to detect the transition
-    reg vox_clk_sync_d;
+    reg vox_clk_d;
     
     always @(posedge sys_clk) begin
         if (sys_rst)
-            vox_clk_sync_d <= 1'b0;
+            vox_clk_d <= 1'b0;
         else
-            vox_clk_sync_d <= vox_clk_sync;
+            vox_clk_d <= vox_clk;
     end
 
     // Detect the exact moment the synchronized clock goes from LOW to HIGH
-    wire vox_clk_rising_edge = (vox_clk_sync == 1'b1) && (vox_clk_sync_d == 1'b0);
+    wire vox_clk_rising_edge = (vox_clk == 1'b1) && (vox_clk_d == 1'b0);
     
     // ---------------------------------------------------------
     // 3. Data Shift Register & Counter
@@ -72,7 +52,7 @@ module Vox_Receiver (
 
             if (vox_clk_rising_edge) begin
                 // Shift the safely synchronized bit into the register
-                shift_reg <= {shift_reg[110:0], vox_rx_sync};
+                shift_reg <= {shift_reg[110:0], vox_rx};
 
                 // Count the bits
                 if (bit_counter == 8'd111) 
@@ -81,7 +61,7 @@ module Vox_Receiver (
                     // the final bit being shifted in this cycle) and extract the
                     // 64-bit Data field. The 112th bit is part of the CRC, not Data,
                     // so shift_reg[78:15] already holds the complete Data field.
-                    sensor_packet     <= {shift_reg[110:0], vox_rx_sync};
+                    sensor_packet     <= {shift_reg[110:0], vox_rx};
                     sensor_data       <= shift_reg[78:15];
                     sensor_data_valid <= 1'b1;
                     bit_counter       <= 8'd0;

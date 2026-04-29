@@ -139,6 +139,8 @@ set_property PACKAGE_PIN N2 [get_ports P3_TX_P]
 set_property IOSTANDARD LVCMOS33 [get_ports P3_TX_P]
 set_property PACKAGE_PIN N1 [get_ports P3_TX_N]
 set_property IOSTANDARD LVCMOS33 [get_ports P3_TX_N]
+# set_property PULLDOWN TRUE [get_ports P3_TX_P]
+# set_property PULLDOWN TRUE [get_ports P3_TX_N]
 
 # set_property PACKAGE_PIN U1 [get_ports P3_RX_P]
 # set_property IOSTANDARD LVCMOS33 [get_ports P3_RX_P]

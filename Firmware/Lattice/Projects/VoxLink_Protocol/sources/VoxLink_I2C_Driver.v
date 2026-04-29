@@ -27,9 +27,9 @@ module VoxLink_I2C_Driver #(
 
 );
 
-    // ---------------------------------------------------------
-    // Setting up the inout prots
-    // ---------------------------------------------------------
+// ---------------------------------------------------------
+// Setting up the inout prots
+// ---------------------------------------------------------
 
     // COMMENT OUT FOR SIMULATION
     // In the iCE40 Technology Library, look for the schematic in section 4. I/O Primitives
@@ -51,7 +51,7 @@ module VoxLink_I2C_Driver #(
         .D_OUT_1           (),
         .D_OUT_0           (1'b0),
         .D_IN_1            (),
-        .D_IN_0            (i2c_sda_read)
+        .D_IN_0            (i2c_sda_read_async)
     );
 
     SB_GB_IO #(
@@ -70,8 +70,56 @@ module VoxLink_I2C_Driver #(
         .D_OUT_1           (),
         .D_OUT_0           (1'b0),
         .D_IN_1            (),
-        .D_IN_0            (i2c_scl_read)
+        .D_IN_0            (i2c_scl_read_async)
     );
+
+// -----------------------------------------------------------------------------
+// 2-stage CDC synchronizer for SDA readback
+// -----------------------------------------------------------------------------
+
+    wire i2c_sda_sync_ff1;
+    wire i2c_sda_sync_ff2;
+
+    SB_DFF i2c_sda_sync_stage_1 (
+        .Q(i2c_sda_sync_ff1),
+        .C(sys_clk),
+        .D(i2c_sda_read_async)
+    );
+
+    SB_DFF i2c_sda_sync_stage_2 (
+        .Q(i2c_sda_sync_ff2),
+        .C(sys_clk),
+        .D(i2c_sda_sync_ff1)
+    );
+
+    assign i2c_sda_read = i2c_sda_sync_ff2;
+
+
+// -----------------------------------------------------------------------------
+// 2-stage CDC synchronizer for SCL readback
+// -----------------------------------------------------------------------------
+
+    wire i2c_scl_sync_ff1;
+    wire i2c_scl_sync_ff2;
+
+    SB_DFF i2c_scl_sync_stage_1 (
+        .Q(i2c_scl_sync_ff1),
+        .C(sys_clk),
+        .D(i2c_scl_read_async)
+    );
+
+    SB_DFF i2c_scl_sync_stage_2 (
+        .Q(i2c_scl_sync_ff2),
+        .C(sys_clk),
+        .D(i2c_scl_sync_ff1)
+    );
+
+    assign i2c_scl_read = i2c_scl_sync_ff2;
+
+// -----------------------------------------------------------------------------
+// Register Declarations
+// -----------------------------------------------------------------------------
+
 
     // These are the internal states for the I2C lines.
     reg int_scl;
@@ -81,9 +129,11 @@ module VoxLink_I2C_Driver #(
     reg int_rx_valid;
     reg [7:0] tx_data_r;
 
-    wire i2c_sda_read;
+    wire i2c_sda_read_async;
     wire i2c_sda_drive;
+    wire i2c_sda_read;
 
+    wire i2c_scl_read_async;
     wire i2c_scl_read;
     wire i2c_scl_drive;
 
@@ -101,11 +151,11 @@ module VoxLink_I2C_Driver #(
     // assign i2c_scl_read = i2c_scl;
 
 
-    // ---------------------------------------------------------
-    // Setting up I2C SCK
-    // ---------------------------------------------------------
+// ---------------------------------------------------------
+// Setting up I2C SCK
+// ---------------------------------------------------------
     // The clock generated is twice as fast as the desired I2C
-    localparam DIVIDER = (CLK_FREQ / I2C_FREQ) / 2;
+    localparam DIVIDER = (CLK_FREQ / I2C_FREQ) / 4;
     localparam RELOAD_VAL = 12'h800 - DIVIDER[11:0];
     
     reg [11:0] i2c_sck_counter;
@@ -134,9 +184,9 @@ module VoxLink_I2C_Driver #(
         end
     end
 
-    // ---------------------------------------------------------
-    // Main I2C FSM
-    // ---------------------------------------------------------
+// ---------------------------------------------------------
+// Main I2C FSM
+// ---------------------------------------------------------
 
     reg [3:0]   i2c_state;
     localparam  I2C_IDLE_STATE          = 4'd0;
@@ -291,7 +341,7 @@ module VoxLink_I2C_Driver #(
 
                         // Maybe add this to the case statement?
                         // Sample the data bit when SCL is HIGH and stable
-                        if (tick_counter == 2'd1)
+                        if (tick_counter == 2'd2)
                         begin
                             // Shift left
                             rx_data_r <= {rx_data_r[6:0], i2c_sda_read};
@@ -349,7 +399,7 @@ module VoxLink_I2C_Driver #(
                             tick_counter <= tick_counter + 2'd1;
 
                         // Sample the ACK at the center of the clock pulse
-                        if (tick_counter == 2'd1)
+                        if (tick_counter == 2'd2)
                             target_nack <= i2c_sda_read; 
                     end
 
@@ -480,9 +530,9 @@ module VoxLink_I2C_Driver #(
     end
 
 
-    // ---------------------------------------------------------
-    // Done and Valid Flag Output Edge Detector
-    // ---------------------------------------------------------
+// ---------------------------------------------------------
+// Done and Valid Flag Output Edge Detector
+// ---------------------------------------------------------
     reg [1:0] tx_shift;
     reg [1:0] rx_shift;
 

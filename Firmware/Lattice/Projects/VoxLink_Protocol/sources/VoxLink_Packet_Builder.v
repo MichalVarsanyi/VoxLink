@@ -27,6 +27,7 @@ module VoxLink_Packet_Builder #(
     // ---------------------------------------------------------
 
     wire [11:0] timestamp;
+    reg         timestamp_q;
 
     VoxLink_Timestamp #(
         .TIMESTAMP_WIDTH(12),
@@ -37,6 +38,17 @@ module VoxLink_Packet_Builder #(
         .clear_time(sensor_data_ready),
         .timestamp(timestamp)
     );
+
+    // We delay timestamp by one clock cycle to reduce negative slack. This signal is not critical
+    always @(posedge sys_clk)
+    begin
+        if (sys_rst)
+            timestamp_q <= 1'b0;
+        else
+            timestamp_q <= timestamp;
+    end
+
+
 
     // ---------------------------------------------------------
     // Packet Assembly + CRC
@@ -56,7 +68,7 @@ module VoxLink_Packet_Builder #(
             trigger_crc <= 1'b0;
 
             if (sensor_data_ready) begin
-                raw_packet  <= {ADDRESS, timestamp, COMMAND, sensor_data[79:16], 16'h0000};
+                raw_packet  <= {ADDRESS, timestamp_q, COMMAND, sensor_data[79:16], 16'h0000};
                 trigger_crc <= 1'b1;
             end
         end

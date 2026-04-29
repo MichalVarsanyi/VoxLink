@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Apr 28 12:45:16 2026
-# Process ID: 23020
+# Start of session at: Tue Apr 28 16:34:17 2026
+# Process ID: 27852
 # Current directory: C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/synth_1
 # Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
 # Log file: C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/synth_1/Top.vds
@@ -19,10 +19,10 @@
 # Host memory       :33736 MB
 # Swap memory       :3355 MB
 # Total Virtual     :37091 MB
-# Available Virtual :16040 MB
+# Available Virtual :15422 MB
 #-----------------------------------------------------------
 source Top.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 530.133 ; gain = 199.590
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 532.516 ; gain = 200.719
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/ip/fifo_generator_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
@@ -41,15 +41,11 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4304
+INFO: [Synth 8-7075] Helper process launched with PID 26024
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1394.312 ; gain = 449.504
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1393.840 ; gain = 450.652
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'xadc_clkout', assumed default net type 'wire' [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:171]
-INFO: [Synth 8-11241] undeclared symbol 'crc_verified_data_r', assumed default net type 'wire' [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:325]
-INFO: [Synth 8-11241] undeclared symbol 'crc_verified_data_valid_r', assumed default net type 'wire' [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:326]
-WARNING: [Synth 8-8895] 'crc_verified_data_r' is already implicitly declared on line 325 [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:366]
-WARNING: [Synth 8-8895] 'crc_verified_data_valid_r' is already implicitly declared on line 326 [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:367]
 INFO: [Synth 8-6157] synthesizing module 'Top' [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:22]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:1951]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:1951]
@@ -79,62 +75,63 @@ WARNING: [Synth 8-7071] port 'CLKOUT4' of module 'MMCME2_BASE' is unconnected fo
 WARNING: [Synth 8-7071] port 'CLKOUT5' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_General_inst' [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:167]
 WARNING: [Synth 8-7071] port 'CLKOUT6' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_General_inst' [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:167]
 WARNING: [Synth 8-7023] instance 'MMCME2_BASE_General_inst' of module 'MMCME2_BASE' has 18 connections declared, but only 8 given [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:167]
-INFO: [Synth 8-6157] synthesizing module 'MV_UART' [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART.v:23]
-	Parameter BAUD_RATE bound to: 1000000 - type: integer 
-	Parameter TARGET_CLOCK bound to: 252 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single' [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
 	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
 	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
-	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter WIDTH bound to: 2 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single' (0#1) [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
-WARNING: [Synth 8-7071] port 'src_clk' of module 'xpm_cdc_array_single' is unconnected for instance 'xpm_cdc_array_single_input_inst' [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART.v:89]
-WARNING: [Synth 8-7023] instance 'xpm_cdc_array_single_input_inst' of module 'xpm_cdc_array_single' has 4 connections declared, but only 3 given [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART.v:89]
-INFO: [Synth 8-6155] done synthesizing module 'MV_UART' (0#1) [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART.v:23]
-INFO: [Synth 8-6157] synthesizing module 'MV_UART_FIFO_Interface' [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART_FIFO_Interface.v:29]
-INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/synth_1/.Xil/Vivado-23020-LAPTOP-GK6ER3TV/realtime/fifo_generator_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (0#1) [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/synth_1/.Xil/Vivado-23020-LAPTOP-GK6ER3TV/realtime/fifo_generator_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'data_count' of module 'fifo_generator_0' is unconnected for instance 'UART_FIFO' [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART_FIFO_Interface.v:87]
-WARNING: [Synth 8-7023] instance 'UART_FIFO' of module 'fifo_generator_0' has 10 connections declared, but only 9 given [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART_FIFO_Interface.v:87]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART_FIFO_Interface.v:177]
-INFO: [Synth 8-6155] done synthesizing module 'MV_UART_FIFO_Interface' (0#1) [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART_FIFO_Interface.v:29]
-INFO: [Synth 8-6157] synthesizing module 'Vox_Testing_Multiplexer' [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/Vox_Testing_Multiplexer.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Vox_Testing_Multiplexer' (0#1) [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/Vox_Testing_Multiplexer.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Vox_Receiver' [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/Vox_Receiver.v:3]
+INFO: [Synth 8-6157] synthesizing module 'MV_UART' [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART.v:23]
+	Parameter BAUD_RATE bound to: 1000000 - type: integer 
+	Parameter TARGET_CLOCK bound to: 252 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized0' [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
 	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
 	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
-	Parameter WIDTH bound to: 2 - type: integer 
+	Parameter WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized0' (0#1) [C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+WARNING: [Synth 8-7071] port 'src_clk' of module 'xpm_cdc_array_single' is unconnected for instance 'xpm_cdc_array_single_input_inst' [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART.v:89]
+WARNING: [Synth 8-7023] instance 'xpm_cdc_array_single_input_inst' of module 'xpm_cdc_array_single' has 4 connections declared, but only 3 given [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART.v:89]
+INFO: [Synth 8-6155] done synthesizing module 'MV_UART' (0#1) [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MV_UART_FIFO_Interface' [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART_FIFO_Interface.v:29]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/synth_1/.Xil/Vivado-27852-LAPTOP-GK6ER3TV/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (0#1) [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/synth_1/.Xil/Vivado-27852-LAPTOP-GK6ER3TV/realtime/fifo_generator_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'data_count' of module 'fifo_generator_0' is unconnected for instance 'UART_FIFO' [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART_FIFO_Interface.v:87]
+WARNING: [Synth 8-7023] instance 'UART_FIFO' of module 'fifo_generator_0' has 10 connections declared, but only 9 given [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART_FIFO_Interface.v:87]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART_FIFO_Interface.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'MV_UART_FIFO_Interface' (0#1) [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/MV_UART_FIFO_Interface.v:29]
+WARNING: [Synth 8-689] width (33) of port connection 'reg_write_data' does not match port width (32) of module 'MV_UART_FIFO_Interface' [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:344]
+INFO: [Synth 8-6157] synthesizing module 'Vox_Testing_Multiplexer' [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/Vox_Testing_Multiplexer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Vox_Testing_Multiplexer' (0#1) [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/Vox_Testing_Multiplexer.v:23]
+WARNING: [Synth 8-689] width (33) of port connection 'mailbox' does not match port width (32) of module 'Vox_Testing_Multiplexer' [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:368]
+INFO: [Synth 8-6157] synthesizing module 'Vox_Receiver' [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/Vox_Receiver.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'Vox_Receiver' (0#1) [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/Vox_Receiver.v:3]
 INFO: [Synth 8-6157] synthesizing module 'VoxLink_CRC16_Koopman' [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/VoxLink_CRC16_Koopman.v:20]
 INFO: [Synth 8-6155] done synthesizing module 'VoxLink_CRC16_Koopman' (0#1) [C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.srcs/sources_1/new/VoxLink_CRC16_Koopman.v:20]
 INFO: [Synth 8-6155] done synthesizing module 'Top' (0#1) [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:22]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'MV_UART_Inst'. This will prevent further optimization [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:260]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'MV_UART_FIFO_Interface_inst'. This will prevent further optimization [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:287]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Vox_Testing_Multiplexer_Inst'. This will prevent further optimization [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:319]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Vox_Receiver_Inst'. This will prevent further optimization [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:346]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'VoxLink_CRC16_Koopman_inst'. This will prevent further optimization [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:375]
-WARNING: [Synth 8-6014] Unused sequential element timestamp_reg was removed.  [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:225]
-WARNING: [Synth 8-6014] Unused sequential element mailbox_reg was removed.  [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:241]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'MV_UART_Inst'. This will prevent further optimization [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:294]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'MV_UART_FIFO_Interface_inst'. This will prevent further optimization [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:321]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Vox_Testing_Multiplexer_Inst'. This will prevent further optimization [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:358]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Vox_Receiver_Inst'. This will prevent further optimization [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:388]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'VoxLink_CRC16_Koopman_inst'. This will prevent further optimization [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:417]
+WARNING: [Synth 8-6014] Unused sequential element timestamp_reg was removed.  [C:/BachelorProject/VoxLink/Firmware/Vivado/Source/Verilog/Top_VoxLink_Controller.v:259]
 WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1512.500 ; gain = 567.691
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1512.652 ; gain = 569.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1512.500 ; gain = 567.691
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1512.652 ; gain = 569.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1512.500 ; gain = 567.691
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1512.652 ; gain = 569.465
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1512.500 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1512.652 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -153,33 +150,33 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl
 INFO: [Project 1-1714] 2 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1613.918 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1606.418 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   MMCME2_BASE => MMCME2_ADV: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1613.918 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1606.418 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'MV_UART_FIFO_Interface_inst/UART_FIFO' at clock pin 'clk' is different from the actual clock period '3.968', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1606.418 ; gain = 663.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1606.418 ; gain = 663.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for MV_UART_FIFO_Interface_inst/UART_FIFO. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for xpm_cdc_array_single_input_inst1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for MV_UART_Inst/xpm_cdc_array_single_input_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for Vox_Receiver_Inst/VoxLink_CDC_Inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1606.418 ; gain = 663.230
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'data_handling_state_reg' in module 'MV_UART_FIFO_Interface'
 ---------------------------------------------------------------------------------------------------
@@ -192,7 +189,7 @@ DATA_HANDLING_STATE_TRANSMIT_FALLEDGE |                               10 |      
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'data_handling_state_reg' using encoding 'sequential' in module 'MV_UART_FIFO_Interface'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1606.418 ; gain = 663.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -209,6 +206,7 @@ Detailed RTL Component Info :
 	              112 Bit    Registers := 6     
 	               64 Bit    Registers := 1     
 	               40 Bit    Registers := 1     
+	               33 Bit    Registers := 1     
 	               32 Bit    Registers := 1     
 	               28 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
@@ -221,9 +219,10 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 20    
 +---Muxes : 
-	   2 Input  112 Bit        Muxes := 3     
+	   2 Input  112 Bit        Muxes := 4     
 	   2 Input   32 Bit        Muxes := 3     
 	   2 Input   15 Bit        Muxes := 5     
+	   2 Input   14 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 2     
 	   3 Input    8 Bit        Muxes := 2     
 	   2 Input    8 Bit        Muxes := 2     
@@ -254,25 +253,25 @@ WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1606.418 ; gain = 663.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1606.418 ; gain = 663.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1606.418 ; gain = 663.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1606.418 ; gain = 663.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -290,37 +289,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1606.418 ; gain = 663.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1606.418 ; gain = 663.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1606.418 ; gain = 663.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1606.418 ; gain = 663.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1606.418 ; gain = 663.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1606.418 ; gain = 663.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -342,41 +341,41 @@ Report Cell Usage:
 |3     |CARRY4         |     7|
 |4     |LUT1           |     5|
 |5     |LUT2           |    19|
-|6     |LUT3           |   130|
-|7     |LUT4           |    71|
-|8     |LUT5           |    47|
-|9     |LUT6           |   179|
+|6     |LUT3           |   135|
+|7     |LUT4           |    88|
+|8     |LUT5           |   101|
+|9     |LUT6           |   108|
 |10    |MMCME2_BASE    |     1|
 |11    |FDCE           |   239|
 |12    |FDPE           |    29|
-|13    |FDRE           |   664|
+|13    |FDRE           |   696|
 |14    |FDSE           |     2|
 |15    |IBUF           |     4|
 |16    |OBUF           |     3|
 +------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1606.418 ; gain = 663.230
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 1613.918 ; gain = 567.691
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1613.918 ; gain = 669.109
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 1606.418 ; gain = 569.465
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1606.418 ; gain = 663.230
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1613.918 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1606.418 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1613.918 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1606.418 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   MMCME2_BASE => MMCME2_ADV: 1 instance 
 
-Synth Design complete | Checksum: 9ee61cf2
+Synth Design complete | Checksum: e93f605e
 INFO: [Common 17-83] Releasing license: Synthesis
-63 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
+61 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:53 . Memory (MB): peak = 1613.918 ; gain = 1070.887
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1613.918 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1606.418 ; gain = 1061.570
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1606.418 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/synth_1/Top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 12:46:19 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 16:35:14 2026...

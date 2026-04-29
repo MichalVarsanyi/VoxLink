@@ -84,6 +84,26 @@ module Top(
         .GLOBAL_BUFFER_OUTPUT(sys_clk)
     );
 
+// -----------------------------------------------------------------------------
+// 2-stage CDC synchronizer for SCL readback
+// -----------------------------------------------------------------------------
+
+    wire bno_interrupt_ff1;
+    wire bno_interrupt_ff2;
+
+    SB_DFF i2c_scl_sync_stage_1 (
+        .Q(bno_interrupt_ff1),
+        .C(sys_clk),
+        .D(bno_interrupt)
+    );
+
+    SB_DFF i2c_scl_sync_stage_2 (
+        .Q(bno_interrupt_ff2),
+        .C(sys_clk),
+        .D(bno_interrupt_ff1)
+    );
+
+    assign bno_interrupt_sync = bno_interrupt_ff2;
 
 // ---------------------------------------------
 // RGB Infrastructure
@@ -252,7 +272,7 @@ module Top(
         .driver_finished_tranaction(driver_finished_tranaction),    // Driver has finished a sequence of transaction commands and is now in the idle state
 
         // Sensor
-        .bno_interrupt(bno_interrupt),              // Interrupt from the BNO sensor
+        .bno_interrupt(bno_interrupt_sync),              // Interrupt from the BNO sensor
 
         .sensor_data(sensor_data),                  // Latched data from the sensor
         .sensor_data_ready(sensor_data_ready)
@@ -286,7 +306,7 @@ module Top(
 
     VoxLink_VOX_Protocol #(
         .CLK_FREQ(100_500_000),  // System Clock Frequency
-        .VOX_FREQ(100_000)       // Target VoxLink Speed
+        .VOX_FREQ(400_000)       // Target VoxLink Speed
     ) VoxLink_VOX_Protocol_Inst (
         // General
         .sys_clk(sys_clk),

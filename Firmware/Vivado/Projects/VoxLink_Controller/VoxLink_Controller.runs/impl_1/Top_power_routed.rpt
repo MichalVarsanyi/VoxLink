@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Tue Apr 28 13:05:36 2026
+| Date             : Tue Apr 28 16:36:39 2026
 | Host             : LAPTOP-GK6ER3TV running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.009 |        5 |       --- |             --- |
-| Slice Logic    |     0.002 |     1544 |       --- |             --- |
+| Slice Logic    |     0.001 |     1581 |       --- |             --- |
 |   LUT as Logic |     0.001 |      419 |     20800 |            2.01 |
-|   Register     |    <0.001 |      983 |     41600 |            2.36 |
+|   Register     |    <0.001 |     1015 |     41600 |            2.44 |
 |   CARRY4       |    <0.001 |       15 |      8150 |            0.18 |
 |   Others       |     0.000 |       38 |       --- |             --- |
-| Signals        |     0.002 |     1092 |       --- |             --- |
+| Signals        |     0.002 |     1128 |       --- |             --- |
 | Block RAM      |    <0.001 |      0.5 |        50 |            1.00 |
 | MMCM           |     0.093 |        1 |         5 |           20.00 |
 | I/O            |    <0.001 |        7 |       210 |            3.33 |
@@ -148,7 +148,7 @@ Table of Contents
 |   MV_UART_FIFO_Interface_inst  |     0.002 |
 |   MV_UART_Inst                 |     0.002 |
 |   VoxLink_CRC16_Koopman_inst   |     0.002 |
-|   Vox_Receiver_Inst            |     0.003 |
+|   Vox_Receiver_Inst            |     0.002 |
 |   Vox_Testing_Multiplexer_Inst |     0.002 |
 +--------------------------------+-----------+
 

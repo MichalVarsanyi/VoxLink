@@ -1,28 +1,28 @@
 #--  Synopsys, Inc.
 #--  Version L-2016.09L+ice40
-#--  Project file C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLink_Protocol_Implmnt\scratchproject.prs
+#--  Project file C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLink_Protocol_Implmnt\scratchproject.prs
 
 #project files
-add_file -verilog "C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Lattice/Source/Verilog/Top_VoxLink_Protocol.v"
-add_file -verilog "C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/sources/VoxLink_I2C_Driver.v"
-add_file -verilog "C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/sources/VoxLink_BNO_Driver.v"
-add_file -verilog "C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/sources/VoxLink_VOX_Protocol.v"
-add_file -verilog "C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/sources/VoxLink_Packet_Builder.v"
-add_file -verilog "C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/sources/VoxLink_Timestamp.v"
-add_file -verilog "C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/sources/VoxLink_CRC16_Koopman.v"
-add_file -constraint "C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Lattice/Source/Constraints/VoxLink_Constraints.sdc"
+add_file -verilog "C:/BachelorProject/VoxLink/Firmware/Lattice/Source/Verilog/Top_VoxLink_Protocol.v"
+add_file -verilog "C:/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/sources/VoxLink_I2C_Driver.v"
+add_file -verilog "C:/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/sources/VoxLink_BNO_Driver.v"
+add_file -verilog "C:/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/sources/VoxLink_VOX_Protocol.v"
+add_file -verilog "C:/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/sources/VoxLink_Packet_Builder.v"
+add_file -verilog "C:/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/sources/VoxLink_Timestamp.v"
+add_file -verilog "C:/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/sources/VoxLink_CRC16_Koopman.v"
+add_file -constraint "C:/BachelorProject/VoxLink/Firmware/Lattice/Source/Constraints/VoxLink_Constraints.sdc"
 
 
 
 #implementation: "VoxLink_Protocol_Implmnt"
-impl -add C:\Users\varsa\Desktop\School\5_semester\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLink_Protocol_Implmnt -type fpga
+impl -add C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLink_Protocol_Implmnt -type fpga
 
 #
 #implementation attributes
 
 set_option -vlog_std v2001
 set_option -project_relative_includes 1
-set_option -include_path {C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/}
+set_option -include_path {C:/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/}
 
 #device options
 set_option -technology SBTiCE40UL
@@ -71,5 +71,5 @@ set_option -auto_infer_blackbox 0
 set_option -write_apr_constraint 1
 
 #set result format/file last
-project -result_file "C:/Users/varsa/Desktop/School/5_semester/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/VoxLink_Protocol_Implmnt/VoxLink_Protocol.edf"
+project -result_file "C:/BachelorProject/VoxLink/Firmware/Lattice/Projects/VoxLink_Protocol/VoxLink_Protocol_Implmnt/VoxLink_Protocol.edf"
 impl -active "VoxLink_Protocol_Implmnt"

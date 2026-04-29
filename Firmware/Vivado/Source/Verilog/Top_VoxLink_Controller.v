@@ -130,7 +130,7 @@ module Top
     
     wire [14:0]     reg_read_addr;
     wire [14:0]     reg_write_addr;
-    wire [31:0]     reg_write_data;
+    wire [32:0]    reg_write_data;
 
 //--------------------------------------------------------------------------------------------- //       
 //  Clock
@@ -185,6 +185,40 @@ module Top
         .I(sys_clkout)                     // 1-bit input: Clock input
     );
 
+
+//--------------------------------------------------------------------------------------------- //       
+//  Cross Domain Crossing
+//--------------------------------------------------------------------------------------------- //
+
+
+    //Cross Domain Crossing
+    wire [1:0] p3_tx_async;
+    wire [1:0] p3_tx_cdc;
+
+    // Drive the async bus with the raw top-level pins so the CDC has an
+    // actual signal to synchronize. {P, N} → cdc[1] = P, cdc[0] = N to
+    // match the P3_TX_P_cdc / P3_TX_N_cdc unpack below.
+    assign p3_tx_async = {P3_TX_P, P3_TX_N};
+
+    xpm_cdc_array_single
+    #(
+        .DEST_SYNC_FF(4),   // DECIMAL; range: 2-10
+        .INIT_SYNC_FF(0),   // DECIMAL; 0=disable simulation init values, 1=enable simulation init values
+        .SIM_ASSERT_CHK(0), // DECIMAL; 0=disable simulation messages, 1=enable simulation messages
+        .SRC_INPUT_REG(0),  // DECIMAL; 0=do not register input, 1=register input (when not zero, source clock for the input register needed)
+        .WIDTH(2)           // DECIMAL; range: 1-1024
+    )
+    xpm_cdc_array_single_input_inst1
+    (
+        .dest_out(p3_tx_cdc),
+        .dest_clk(sys_clk),
+        .src_clk(1'b0),
+        .src_in(p3_tx_async)
+    );
+
+    wire P3_TX_P_cdc = p3_tx_cdc[1];
+    wire P3_TX_N_cdc = p3_tx_cdc[0];
+
 //--------------------------------------------------------------------------------------------- //       
 //  LED Hello World
 //--------------------------------------------------------------------------------------------- //
@@ -233,7 +267,7 @@ module Top
 //--------------------------------------------------------------------------------------------- //
 // Mailbox is a testing register, which can be written to and read from        
         
-    reg [31:0] mailbox;      
+    reg [32:0] mailbox;      
            
     always @(posedge sys_clk)
     begin
@@ -310,9 +344,14 @@ module Top
         .reg_write_data         (reg_write_data)
     );
     
-//--------------------------------------------------------------------------------------------- //       
+//--------------------------------------------------------------------------------------------- //
 //  VoxLink UART Interface
 //--------------------------------------------------------------------------------------------- //
+
+    // Declared up front so the multiplexer sees the real 112-bit reg, not an
+    // implicit 1-bit wire created by forward reference.
+    reg [111:0] crc_verified_data_r;
+    reg         crc_verified_data_valid_r;
 
         Vox_Testing_Multiplexer #(
         )
@@ -320,10 +359,13 @@ module Top
         // General
         .sys_rst(sys_rst),
         .sys_clk(sys_clk),
-        
+
 
         .sensor_data(crc_verified_data_r),
         .sensor_data_valid(crc_verified_data_valid_r),
+
+        // Diagnostic
+        .mailbox(mailbox),
         
         // Multiplexer output
         .reg_mux_out(reg_mux_out),
@@ -349,8 +391,8 @@ module Top
         .sys_rst(sys_rst),
 
         // Physical Sensor Interface
-        .vox_clk_in(P3_TX_N),
-        .vox_rx_in(P3_TX_P),
+        .vox_clk(P3_TX_N_cdc),
+        .vox_rx(P3_TX_P_cdc),
 
         // Received Sensor Data
         .sensor_data(sensor_data),
@@ -362,9 +404,9 @@ module Top
 //  CRC Detection
 //--------------------------------------------------------------------------------------------- //
 
-    // Internal registers holding the CRC passed data
-    reg  [111:0]     crc_verified_data_r;
-    reg             crc_verified_data_valid_r;
+    // (crc_verified_data_r / crc_verified_data_valid_r are declared above
+    //  the multiplexer instantiation to avoid a forward-reference implicit
+    //  net being created at the port connection.)
 
     // Wires from the CRC module
     wire            crc_data_valid;
