@@ -130,7 +130,7 @@ module Top
     
     wire [14:0]     reg_read_addr;
     wire [14:0]     reg_write_addr;
-    wire [32:0]    reg_write_data;
+    wire [32:0]     reg_write_data;
 
 //--------------------------------------------------------------------------------------------- //       
 //  Clock
@@ -191,7 +191,7 @@ module Top
 //--------------------------------------------------------------------------------------------- //
 
 
-    //Cross Domain Crossing
+    // VoxLink Input
     wire [1:0] p3_tx_async;
     wire [1:0] p3_tx_cdc;
 
@@ -208,7 +208,7 @@ module Top
         .SRC_INPUT_REG(0),  // DECIMAL; 0=do not register input, 1=register input (when not zero, source clock for the input register needed)
         .WIDTH(2)           // DECIMAL; range: 1-1024
     )
-    xpm_cdc_array_single_input_inst1
+    xpm_cdc_array_single_inst1
     (
         .dest_out(p3_tx_cdc),
         .dest_clk(sys_clk),
@@ -218,6 +218,27 @@ module Top
 
     wire P3_TX_P_cdc = p3_tx_cdc[1];
     wire P3_TX_N_cdc = p3_tx_cdc[0];
+
+
+
+    // VoxLink Input
+    wire serial_d1_cdc;
+
+    xpm_cdc_array_single
+    #(
+        .DEST_SYNC_FF(4),   // DECIMAL; range: 2-10
+        .INIT_SYNC_FF(0),   // DECIMAL; 0=disable simulation init values, 1=enable simulation init values
+        .SIM_ASSERT_CHK(0), // DECIMAL; 0=disable simulation messages, 1=enable simulation messages
+        .SRC_INPUT_REG(0),  // DECIMAL; 0=do not register input, 1=register input (when not zero, source clock for the input register needed)
+        .WIDTH(1)           // DECIMAL; range: 1-1024
+    )
+    xpm_cdc_array_single_inst_ftdi
+    (
+        .dest_out(serial_d1_cdc),
+        .dest_clk(sys_clk),
+        .src_clk(1'b0),
+        .src_in(SERIAL_D1)
+    );
 
 //--------------------------------------------------------------------------------------------- //       
 //  LED Hello World
@@ -297,7 +318,7 @@ module Top
         .sys_rst                    (sys_rst),
         
         // Receive
-        .uart_rxd                   (SERIAL_D1),
+        .uart_rxd                   (serial_d1_cdc),
         .uart_rxd_message           (uart_rxd_message),
         .uart_rxd_received          (uart_rxd_received),
         

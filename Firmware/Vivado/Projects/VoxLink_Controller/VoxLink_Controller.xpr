@@ -44,6 +44,7 @@
     <Option Name="SimulatorGccVersionRiviera" Val="9.3.0"/>
     <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
     <Option Name="BoardPart" Val=""/>
+    <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -154,7 +155,7 @@
       <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="Top"/>
+        <Option Name="TopModule" Val="MV_UART_FIFO_Interface"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>

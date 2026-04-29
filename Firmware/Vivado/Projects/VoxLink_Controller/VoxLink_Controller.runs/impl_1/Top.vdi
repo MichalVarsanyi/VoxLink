@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Apr 28 16:57:03 2026
-# Process ID: 27228
+# Start of session at: Wed Apr 29 10:41:30 2026
+# Process ID: 6504
 # Current directory: C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/impl_1
 # Command line: vivado.exe -log Top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Top.tcl -notrace
 # Log file: C:/BachelorProject/VoxLink/Firmware/Vivado/Projects/VoxLink_Controller/VoxLink_Controller.runs/impl_1/Top.vdi
@@ -17,46 +17,46 @@
 # CPU Physical cores:16
 # CPU Logical cores :22
 # Host memory       :33736 MB
-# Swap memory       :3355 MB
-# Total Virtual     :37091 MB
-# Available Virtual :14274 MB
+# Swap memory       :3087 MB
+# Total Virtual     :36823 MB
+# Available Virtual :14220 MB
 #-----------------------------------------------------------
 source Top.tcl -notrace
 Command: open_checkpoint Top_routed.dcp
 
 Starting open_checkpoint Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 346.371 ; gain = 5.324
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 345.668 ; gain = 5.273
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: [Device 21-9227] Part: xc7a35tcsg324-1 does not have CEAM library.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 935.914 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 935.965 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2024.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1027.172 ; gain = 0.117
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1025.480 ; gain = 0.293
 INFO: [Timing 38-478] Restoring timing data from binary archive.
 INFO: [Timing 38-479] Binary timing data restore complete.
 INFO: [Project 1-856] Restoring constraints from binary archive.
 INFO: [Project 1-853] Binary constraint restore complete.
 INFO: [Designutils 20-5722] Start Reading Physical Databases.
 Reading placement.
-Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1640.055 ; gain = 0.000
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1638.312 ; gain = 0.000
 Reading placer database...
-Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1640.055 ; gain = 0.000
-Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1640.055 ; gain = 0.000
-Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1640.055 ; gain = 0.000
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1638.312 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1638.312 ; gain = 0.000
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1638.312 ; gain = 0.000
 Reading routing.
-Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1640.055 ; gain = 0.000
-Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 1640.055 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 1640.055 ; gain = 7.547
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1640.055 ; gain = 0.000
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1638.312 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.077 . Memory (MB): peak = 1638.312 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.115 . Memory (MB): peak = 1638.312 ; gain = 7.941
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1638.312 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Project 1-604] Checkpoint was created with Vivado v2024.1 (64-bit) build 5076996
-open_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1640.055 ; gain = 1305.609
+open_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1638.312 ; gain = 1305.672
 Command: write_bitstream -force Top.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -77,12 +77,12 @@ Loading route data...
 Processing options...
 Creating bitmap...
 Creating bitstream...
-Bitstream compression saved 13469504 bits.
+Bitstream compression saved 13575648 bits.
 Writing bitstream ./Top.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-83] Releasing license: Implementation
 24 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2134.969 ; gain = 494.914
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 16:57:25 2026...
+write_bitstream: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2128.004 ; gain = 489.691
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 29 10:41:52 2026...

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Tue Apr 28 16:35:14 2026
+| Date         : Wed Apr 29 10:30:37 2026
 | Host         : LAPTOP-GK6ER3TV running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
 | Design       : Top
@@ -34,8 +34,8 @@ Table of Contents
 | Slice LUTs*             |  377 |     0 |          0 |     20800 |  1.81 |
 |   LUT as Logic          |  377 |     0 |          0 |     20800 |  1.81 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         |  966 |     0 |          0 |     41600 |  2.32 |
-|   Register as Flip Flop |  966 |     0 |          0 |     41600 |  2.32 |
+| Slice Registers         |  970 |     0 |          0 |     41600 |  2.33 |
+|   Register as Flip Flop |  970 |     0 |          0 |     41600 |  2.33 |
 |   Register as Latch     |    0 |     0 |          0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |      8150 |  0.00 |
@@ -60,7 +60,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 29    |          Yes |           - |          Set |
 | 239   |          Yes |           - |        Reset |
 | 2     |          Yes |         Set |            - |
-| 696   |          Yes |       Reset |            - |
+| 700   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,7 +149,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       |  696 |        Flop & Latch |
+| FDRE       |  700 |        Flop & Latch |
 | FDCE       |  239 |        Flop & Latch |
 | LUT3       |  135 |                 LUT |
 | LUT6       |  108 |                 LUT |
