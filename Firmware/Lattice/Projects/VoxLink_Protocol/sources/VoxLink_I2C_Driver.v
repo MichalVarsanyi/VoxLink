@@ -73,20 +73,21 @@ module VoxLink_I2C_Driver #(
         .D_IN_0            (i2c_scl_read_async)
     );
 
-// -----------------------------------------------------------------------------
-// 2-stage CDC synchronizer for SDA readback
-// -----------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------- //       
+//  Cross Domain Crossing
+//--------------------------------------------------------------------------------------------- //
 
+    // Sensor SDA
     wire i2c_sda_sync_ff1;
     wire i2c_sda_sync_ff2;
 
-    SB_DFF i2c_sda_sync_stage_1 (
+    SB_DFF i2c_sda_cdc_stage_1 (
         .Q(i2c_sda_sync_ff1),
         .C(sys_clk),
         .D(i2c_sda_read_async)
     );
 
-    SB_DFF i2c_sda_sync_stage_2 (
+    SB_DFF i2c_sda_cdc_stage_2 (
         .Q(i2c_sda_sync_ff2),
         .C(sys_clk),
         .D(i2c_sda_sync_ff1)
@@ -95,20 +96,17 @@ module VoxLink_I2C_Driver #(
     assign i2c_sda_read = i2c_sda_sync_ff2;
 
 
-// -----------------------------------------------------------------------------
-// 2-stage CDC synchronizer for SCL readback
-// -----------------------------------------------------------------------------
-
+    // Sensor SCL
     wire i2c_scl_sync_ff1;
     wire i2c_scl_sync_ff2;
 
-    SB_DFF i2c_scl_sync_stage_1 (
+    SB_DFF i2c_scl_cdc_stage_1 (
         .Q(i2c_scl_sync_ff1),
         .C(sys_clk),
         .D(i2c_scl_read_async)
     );
 
-    SB_DFF i2c_scl_sync_stage_2 (
+    SB_DFF i2c_scl_cdc_stage_2 (
         .Q(i2c_scl_sync_ff2),
         .C(sys_clk),
         .D(i2c_scl_sync_ff1)

@@ -135,10 +135,10 @@ set_property IOSTANDARD LVCMOS33 [get_ports clk_12mhz]
 #  BANK 34
 ###################################################################
 
-set_property PACKAGE_PIN N2 [get_ports P3_TX_P]
-set_property IOSTANDARD LVCMOS33 [get_ports P3_TX_P]
-set_property PACKAGE_PIN N1 [get_ports P3_TX_N]
-set_property IOSTANDARD LVCMOS33 [get_ports P3_TX_N]
+        # set_property PACKAGE_PIN N2 [get_ports P3_TX_P]
+        # set_property IOSTANDARD LVCMOS33 [get_ports P3_TX_P]
+        # set_property PACKAGE_PIN N1 [get_ports P3_TX_N]
+        # set_property IOSTANDARD LVCMOS33 [get_ports P3_TX_N]
 # set_property PULLDOWN TRUE [get_ports P3_TX_P]
 # set_property PULLDOWN TRUE [get_ports P3_TX_N]
 
@@ -188,10 +188,10 @@ set_property IOSTANDARD LVCMOS33 [get_ports P3_L2]
 # set_property PACKAGE_PIN K3 [get_ports P1_L2]
 # set_property IOSTANDARD LVCMOS33 [get_ports P1_L2]
 
-# set_property PACKAGE_PIN P4 [get_ports P2_L1]
-# set_property IOSTANDARD LVCMOS33 [get_ports P2_L1]
-# set_property PACKAGE_PIN P5 [get_ports P2_L2]
-# set_property IOSTANDARD LVCMOS33 [get_ports P2_L2]
+set_property PACKAGE_PIN P4 [get_ports P2_L1]
+set_property IOSTANDARD LVCMOS33 [get_ports P2_L1]
+set_property PACKAGE_PIN P5 [get_ports P2_L2]
+set_property IOSTANDARD LVCMOS33 [get_ports P2_L2]
 
 # !!! WARNING ALL ETHERNET PINS ARE REFERENCED TO BOARD SILKSCREEN, NOT THE SCHEMATIC NAMING !!!
 # !!! WARNING ALL ETHERNET PINS ARE REFERENCED TO BOARD SILKSCREEN, NOT THE SCHEMATIC NAMING !!!
@@ -251,10 +251,10 @@ set_property IOSTANDARD LVCMOS33 [get_ports SERIAL_D1]
 # set_property PACKAGE_PIN E1 [get_ports P1_CLK_N]
 # set_property IOSTANDARD LVCMOS33 [get_ports P1_CLK_N]
 
-# set_property PACKAGE_PIN J4 [get_ports P2_RX_P]
-# set_property IOSTANDARD LVCMOS33 [get_ports P2_RX_P]
-# set_property PACKAGE_PIN H4 [get_ports P2_RX_N]
-# set_property IOSTANDARD LVCMOS33 [get_ports P2_RX_N]
+set_property PACKAGE_PIN J4 [get_ports P2_RX_P]
+set_property IOSTANDARD LVCMOS33 [get_ports P2_RX_P]
+set_property PACKAGE_PIN H4 [get_ports P2_RX_N]
+set_property IOSTANDARD LVCMOS33 [get_ports P2_RX_N]
 
 # set_property PACKAGE_PIN J3 [get_ports P2_TX_P]
 # set_property IOSTANDARD LVCMOS33 [get_ports P2_TX_P]

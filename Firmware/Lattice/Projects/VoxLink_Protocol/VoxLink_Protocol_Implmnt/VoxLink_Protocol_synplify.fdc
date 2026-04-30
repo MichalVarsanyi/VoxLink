@@ -8,6 +8,18 @@ create_clock -name {clk_12mhz} -period {83.333} [get_ports {clk_12mhz}]
 # line 2 in c:/bachelorproject/voxlink/firmware/lattice/source/constraints/voxlink_constraints.sdc
 
 create_clock -name {sys_clk} -period {9.950} [get_nets {sys_clk}]
-set_multicycle_path -setup -from [get_cells {VoxLink_I2C_Driver_inst.i2c_state[*]}] -to [get_cells {VoxLink_I2C_Driver_inst.bit_counter[*]}] {2}
-set_multicycle_path -setup -from [get_cells {VoxLink_I2C_Driver_inst.i2c_state[*]}] {2}
-set_multicycle_path -hold -from [get_cells {VoxLink_I2C_Driver_inst.i2c_state[*]}] {1}
+
+#1003 : set_multicycle_path -setup -from [get_registers *i2c_state*] -to [get_registers *bit_counter*] 2
+# line 5 in c:/bachelorproject/voxlink/firmware/lattice/source/constraints/voxlink_constraints.sdc
+
+set_multicycle_path -setup -from [get_registers *i2c_state*] -to [get_registers *bit_counter*] {2}
+
+#1004 : set_multicycle_path -setup -from [get_registers *i2c_state*] 2
+# line 6 in c:/bachelorproject/voxlink/firmware/lattice/source/constraints/voxlink_constraints.sdc
+
+set_multicycle_path -setup -from [get_registers *i2c_state*] {2}
+
+#1005 : set_multicycle_path -hold -from [get_registers *i2c_state*] 1
+# line 7 in c:/bachelorproject/voxlink/firmware/lattice/source/constraints/voxlink_constraints.sdc
+
+set_multicycle_path -hold -from [get_registers *i2c_state*] {1}

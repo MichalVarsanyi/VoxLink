@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../MV_test.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_sim_netlist.v" \
+"../../../../VoxLink_Controller.srcs/sources_1/new/MV_UART.v" \
+"../../../../VoxLink_Controller.srcs/sources_1/new/MV_UART_FIFO_Interface.v" \
+"../../../../VoxLink_Controller.srcs/sources_1/new/VoxLink_CRC16_Koopman.v" \
+"../../../../VoxLink_Controller.srcs/sources_1/new/Vox_Receiver.v" \
+"../../../../VoxLink_Controller.srcs/sources_1/new/Vox_Testing_Multiplexer.v" \
+"../../../../../../Source/Verilog/Top_VoxLink_Controller.v" \
+"../../../../../../../Lattice/Projects/VoxLink_Protocol/sources/VoxLink_Multinode_Protocol.v" \
+"../../../../../../../Lattice/Source/Simulation/VoxLink_Protocol_Multinode_TB.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

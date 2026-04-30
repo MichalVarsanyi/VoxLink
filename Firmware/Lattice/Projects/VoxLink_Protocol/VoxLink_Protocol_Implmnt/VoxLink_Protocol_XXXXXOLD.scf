@@ -1,9 +1,8 @@
-# Written by Synplify Pro version maplat, Build 1612R. Synopsys Run ID: sid1772458060 
+# Written by Synplify Pro version maplat, Build 1612R. Synopsys Run ID: sid1777471949 
 # Top Level Design Parameters 
 
 # Clocks 
-create_clock -period 83.333 -waveform {0.000 41.666} -name {clk_12mhz} [get_ports {clk_12mhz}] 
-create_clock -period 9.950 -waveform {0.000 4.975} -name {sys_clk} [get_pins {clk_pll/GLOBAL_BUFFER_OUTPUT}] 
+create_clock -period 9.950 -waveform {0.000 4.975} -name {sys_clk} [get_pins {sys_clk_ibuf_gb_io/GLOBAL_BUFFER_OUTPUT}] 
 
 # Virtual Clocks 
 
@@ -12,8 +11,6 @@ create_clock -period 9.950 -waveform {0.000 4.975} -name {sys_clk} [get_pins {cl
 # Paths Between Clocks 
 
 # Multicycle Constraints 
-set_multicycle_path 2 -setup -from [get_cells {VoxLink_I2C_Driver_inst.i2c_state[7] VoxLink_I2C_Driver_inst.i2c_state[6] VoxLink_I2C_Driver_inst.i2c_state[5] VoxLink_I2C_Driver_inst.i2c_state[4] VoxLink_I2C_Driver_inst.i2c_state[3] VoxLink_I2C_Driver_inst.i2c_state[2] VoxLink_I2C_Driver_inst.i2c_state[1] VoxLink_I2C_Driver_inst.i2c_state[0]}] -to [get_cells {VoxLink_I2C_Driver_inst.bit_counter[0] VoxLink_I2C_Driver_inst.bit_counter[1] VoxLink_I2C_Driver_inst.bit_counter[2]}] 
-set_multicycle_path 2 -setup -from [get_cells {VoxLink_I2C_Driver_inst.i2c_state[7] VoxLink_I2C_Driver_inst.i2c_state[6] VoxLink_I2C_Driver_inst.i2c_state[5] VoxLink_I2C_Driver_inst.i2c_state[4] VoxLink_I2C_Driver_inst.i2c_state[3] VoxLink_I2C_Driver_inst.i2c_state[2] VoxLink_I2C_Driver_inst.i2c_state[1] VoxLink_I2C_Driver_inst.i2c_state[0]}] 
 
 # Point-to-point Delay Constraints 
 
@@ -46,6 +43,10 @@ set_multicycle_path 2 -setup -from [get_cells {VoxLink_I2C_Driver_inst.i2c_state
 # Input Transition Constraints 
 
 # Unused constraints (intentionally commented out) 
+# create_clock -name clk_12mhz -period 83.333 [get_ports clk_12mhz]
+# set_multicycle_path -setup -from [get_registers *i2c_state*] -to [get_registers *bit_counter*] 2
+# set_multicycle_path -setup -from [get_registers *i2c_state*] 2
+# set_multicycle_path -hold -from [get_registers *i2c_state*] 1
 
 # Non-forward-annotatable constraints (intentionally commented out) 
 

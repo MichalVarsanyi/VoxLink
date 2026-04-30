@@ -14,33 +14,9 @@
 
 
 #---------------------------------------------------------------------------------------------       
-#  Eval
-#---------------------------------------------------------------------------------------------
-
-# LED
-#set_io led_io           A2
-#set_io led_rx           B1
-#set_io led_tx           A1
-
-# CLK
-#set_io clk_12mhz        F2
-
-# Sensor
-#set_io i2c_scl          C6
-#set_io i2c_sda          D6
-
-#set_io bno_rstn         B6
-#set_io bno_interrupt    A3
-
-# VoxLink
-#set_io vox_clk          E2
-#set_io vox_txd          F3
-
-
-
-#---------------------------------------------------------------------------------------------       
 #  Core
 #---------------------------------------------------------------------------------------------
+
 
 # LED
 set_io led_io           A2
@@ -49,12 +25,21 @@ set_io led_io           A2
 set_io clk_12mhz        D2
 
 # Sensor
-set_io i2c_scl          C1
-set_io i2c_sda          D1
+#set_io i2c_scl          C1
+#set_io i2c_sda          D1
 
-set_io bno_rstn         B5
-set_io bno_interrupt    E1
+#set_io bno_rstn         B5
+#set_io bno_interrupt    E1
 
 # VoxLink
-set_io vox_clk          F2
-set_io vox_txd          F3
+set_io vox_in_clk_p     B6
+#set_io vox_in_clk_n     B2
+
+#set_io vox_out_clk_p    C6
+#set_io vox_out_clk_n    D6
+
+set_io vox_in_rxd_p     A4
+#set_io vox_in_rxd_n     A3
+
+set_io vox_out_rxd_p    F3
+set_io vox_out_rxd_n    F2

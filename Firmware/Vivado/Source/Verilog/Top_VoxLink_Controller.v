@@ -36,11 +36,11 @@ module Top
 
     // // P2 Differential Pairs
     // output wire P2_TX_P, P2_TX_N,
-    // input  wire P2_RX_P, P2_RX_N,
+    input P2_RX_P, P2_RX_N,
     // input  wire P2_CLK_P, P2_CLK_N,
 
     // P3 Differential Pairs
-    input P3_TX_P, P3_TX_N,
+    // input P3_TX_P, P3_TX_N,
     // input  wire P3_RX_P, P3_RX_N,
     // input  wire P3_CLK_P, P3_CLK_N,
 
@@ -76,7 +76,7 @@ module Top
 
     // Output LEDs
     // output reg  P1_L1, P1_L2
-//    output reg P2_L1, P2_L2
+    output reg P2_L1, P2_L2,
     output reg P3_L1, P3_L2,
     // output reg P4_L1, P4_L2
     // output reg P5_L1, P5_L2
@@ -198,7 +198,7 @@ module Top
     // Drive the async bus with the raw top-level pins so the CDC has an
     // actual signal to synchronize. {P, N} → cdc[1] = P, cdc[0] = N to
     // match the P3_TX_P_cdc / P3_TX_N_cdc unpack below.
-    assign p3_tx_async = {P3_TX_P, P3_TX_N};
+    assign p3_tx_async = {P2_RX_P, P2_RX_N};
 
     xpm_cdc_array_single
     #(
@@ -251,6 +251,8 @@ module Top
         if (sys_rst) 
         begin
             led_counter     <= {28{1'b1}};
+            P2_L1        <= 1'b0;
+            P2_L2        <= 1'b1;
             P3_L1        <= 1'b1;
             P3_L2        <= 1'b0;
         end
@@ -259,6 +261,8 @@ module Top
             if (led_counter == {28{1'b1}}) 
             begin
                 led_counter <= {28{1'b0}};
+                P2_L1      <= ~P2_L1;
+                P2_L2      <= ~P2_L2;
                 P3_L1      <= ~P3_L1;
                 P3_L2      <= ~P3_L2;
             end

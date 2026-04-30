@@ -6,7 +6,7 @@
 
 * Build Date:         Dec  9 2020 17:31:51
 
-* File Generated:     Apr 29 2026 10:08:08
+* File Generated:     Apr 29 2026 16:14:10
 
 * Purpose:            General info of design implementation
 
@@ -27,11 +27,11 @@ Device Info:
 
 Design statistics:
 ------------------
-    FFs:                  617
-    LUTs:                 738
+    FFs:                  32
+    LUTs:                 44
     RAMs:                 0
-    IOBs:                 7
-    GBs:                  6
+    IOBs:                 3
+    GBs:                  3
     PLLs:                 1
     Warm Boots:           0
     I2C_FIFOs:            0
@@ -46,12 +46,12 @@ Design statistics:
 
 Logic Resource Utilization:
 ---------------------------
-    Total Logic Cells: 759/1248
-        Combinational Logic Cells: 142      out of   1248      11.3782%
-        Sequential Logic Cells:    617      out of   1248      49.4391%
-        Logic Tiles:               125      out of   156       80.1282%
+    Total Logic Cells: 44/1248
+        Combinational Logic Cells: 12       out of   1248      0.961538%
+        Sequential Logic Cells:    32       out of   1248      2.5641%
+        Logic Tiles:               12       out of   156       7.69231%
     Registers: 
-        Logic Registers:           617      out of   1248      49.4391%
+        Logic Registers:           32       out of   1248      2.5641%
         IO Registers:              0        out of   240       0
     Block RAMs:                    0        out of   14        0%
     Warm Boots:                    0        out of   1         0%
@@ -65,62 +65,51 @@ Logic Resource Utilization:
     LEDDA_IPs:                     0        out of   1         0%
     IR_IPs:                        0        out of   1         0%
     Pins:
-        Input Pins:                2        out of   26        7.69231%
-        Output Pins:               3        out of   26        11.5385%
-        InOut Pins:                2        out of   26        7.69231%
-    Global Buffers:                6        out of   8         75%
+        Input Pins:                1        out of   26        3.84615%
+        Output Pins:               2        out of   26        7.69231%
+        InOut Pins:                0        out of   26        0%
+    Global Buffers:                3        out of   8         37.5%
     PLLs:                          1        out of   1         100%
 
 IO Bank Utilization:
 --------------------
     Bank 3: 0        out of   0         0%
     Bank 1: 0        out of   0         0%
-    Bank 0: 1        out of   12        8.33333%
-    Bank 2: 6        out of   14        42.8571%
+    Bank 0: 0        out of   12        0%
+    Bank 2: 3        out of   14        21.4286%
 
 Detailed I/O Info:
 ------------------
     Input Pins: 
-    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function                                Signal Name    
-    ----------  ---------  -----------  -------  -------  -----------                                -----------    
-    D2          Input      SB_LVCMOS    No       2        Simple Input                               clk_12mhz      
-    E1          Input      SB_LVCMOS    No       2        Simple Input                               bno_interrupt  
+    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function    Signal Name    
+    ----------  ---------  -----------  -------  -------  -----------    -----------    
+    D2          Input      SB_LVCMOS    No       2        Simple Input   clk_12mhz      
 
     Output Pins: 
-    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function                                Signal Name    
-    ----------  ---------  -----------  -------  -------  -----------                                -----------    
-    B5          Output     SB_LVCMOS    No       0        Output Tristatable by Enable               bno_rstn       
-    F2          Output     SB_LVCMOS    No       2        Simple Output                              vox_clk        
-    F3          Output     SB_LVCMOS    No       2        Simple Output                              vox_txd        
-
-    Inoutput Pins: 
-    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function                                Signal Name    
-    ----------  ---------  -----------  -------  -------  -----------                                -----------    
-    C1          InOut      SB_LVCMOS    No       2        Simple Input Output Tristatable by Enable  i2c_scl        
-    D1          InOut      SB_LVCMOS    No       2        Simple Input Output Tristatable by Enable  i2c_sda        
+    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function    Signal Name    
+    ----------  ---------  -----------  -------  -------  -----------    -----------    
+    F2          Output     SB_LVCMOS    No       2        Simple Output  vox_out_rxd_n  
+    F3          Output     SB_LVCMOS    No       2        Simple Output  vox_out_rxd_p  
 
 Detailed Global Buffer Info:
 ----------------------------
-    Buffer Number  IO Bank  Driven By  Fanout  Signal Name                                                                               
-    -------------  -------  ---------  ------  -----------                                                                               
-    5              2                   119     VoxLink_VOX_Protocol_Inst.bits_remaininge_0_i_g                                           
-    1              0                   96      VoxLink_BNO_Driver_Inst.N_84_i_0_g                                                        
-    7              2                   617     sys_clk                                                                                   
-    6              2                   1       clk_12mhz_bufg                                                                            
-    3              0                   75      VoxLink_Packet_Builder_Inst.VoxLink_CRC16_Koopman_Inst.code_word_register_1_sqmuxa_i_0_g  
-    4              0                   557     locked_i_g                                                                                
+    Buffer Number  IO Bank  Driven By  Fanout  Signal Name     
+    -------------  -------  ---------  ------  -----------     
+    4              0                   1       clk_12mhz_bufg  
+    5              2                   28      locked_g        
+    3              0                   32      sys_clk         
 
 
 Router Summary:
 ---------------
     Status:  Successful
-    Runtime: 2 seconds
+    Runtime: 1 seconds
 
 Routing Resource Utilization:
 -----------------------------
-              Local line of tile     4757 out of  28951      16.4312%
-                          Span 4      712 out of   6784      10.4953%
-                         Span 12       79 out of   1456      5.42582%
-                  Global network        6 out of      8      75%
-      Vertical Inter-LUT Connect       35 out of   1092      3.20513%
+              Local line of tile      286 out of  28951      0.987876%
+                          Span 4       28 out of   6784      0.412736%
+                         Span 12        6 out of   1456      0.412088%
+                  Global network        3 out of      8      37.5%
+      Vertical Inter-LUT Connect        2 out of   1092      0.18315%
 
