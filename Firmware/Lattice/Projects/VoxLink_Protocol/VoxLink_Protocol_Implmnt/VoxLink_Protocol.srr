@@ -3,7 +3,7 @@
 #OS: Windows 8 6.2
 #Hostname: LAPTOP-GK6ER3TV
 
-# Wed Apr 29 16:14:02 2026
+# Fri May 01 18:30:44 2026
 
 #Implementation: VoxLink_Protocol_Implmnt
 
@@ -21,8 +21,11 @@ Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys softwa
 @I::"C:\lscc\iCEcube2.2020.12\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
 @I::"C:\lscc\iCEcube2.2020.12\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
 @I::"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v" (library work)
+@I::"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Multinode_Protocol.v" (library work)
+@I::"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Reg_FIFO.v" (library work)
 Verilog syntax check successful!
-Options changed - recompiling
+File C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Multinode_Protocol.v changed - recompiling
+File C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Reg_FIFO.v changed - recompiling
 Selecting top level module Top
 @N: CG364 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v":578:7:578:11|Synthesizing module SB_GB in library work.
 
@@ -30,29 +33,42 @@ Selecting top level module Top
 
 @N: CG364 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v":33:7:33:12|Synthesizing module SB_DFF in library work.
 
+@N: CG364 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Reg_FIFO.v":1:7:1:22|Synthesizing module VoxLink_Reg_FIFO in library work.
+
+	FIFO_DEPTH=32'b00000000000000000000000000010000
+	ADDR_WIDTH=32'b00000000000000000000000000000100
+	COUNT_WIDTH=32'b00000000000000000000000000000101
+   Generated name = VoxLink_Reg_FIFO_16s_4s_5s
+
+@N: CG179 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Reg_FIFO.v":83:34:83:38|Removing redundant assignment.
+@N: CG364 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Multinode_Protocol.v":1:7:1:32|Synthesizing module VoxLink_Multinode_Protocol in library work.
+
+	CLK_FREQ=32'b00000101111111011000001000100000
+	VOX_FREQ=32'b00000000000001100001101010000000
+	DIVIDER=32'b00000000000000000000000001111101
+	RELOAD_VAL=12'b011110000011
+	PACKET_FRAMES=3'b111
+   Generated name = VoxLink_Multinode_Protocol_100500000s_400000s_125s_1923_7
+
 @N: CG364 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v":4120:7:4120:17|Synthesizing module SB_RGBA_DRV in library work.
 
 @N: CG364 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":21:7:21:9|Synthesizing module Top in library work.
 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":85:20:85:20|Input EXTFEEDBACK on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":86:21:86:21|Input DYNAMICDELAY on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":81:6:81:10|Input SDI on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":81:6:81:10|Input SCLK on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":81:6:81:10|Input LATCHINPUTVALUE on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":176:16:176:16|Input RGB1PWM on instance led_driver is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":177:16:177:16|Input RGB2PWM on instance led_driver is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@A: CL282 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":190:4:190:9|Feedback mux created for signal blink_counter[26:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
-@W: CL156 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":107:11:107:23|*Input bno_interrupt to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
-@W: CL156 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":107:11:107:23|*Input bno_interrupt to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
-@N: CL159 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":35:16:35:27|Input vox_in_clk_p is unused.
-@N: CL159 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":41:16:41:27|Input vox_in_rxd_p is unused.
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":89:20:89:20|Input EXTFEEDBACK on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":90:21:90:21|Input DYNAMICDELAY on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":85:6:85:10|Input SDI on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":85:6:85:10|Input SCLK on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":85:6:85:10|Input LATCHINPUTVALUE on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":195:16:195:16|Input RGB1PWM on instance led_driver is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":196:16:196:16|Input RGB2PWM on instance led_driver is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@A: CL282 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":209:4:209:9|Feedback mux created for signal blink_counter[26:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
 
-At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 70MB peak: 71MB)
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 71MB peak: 73MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Wed Apr 29 16:14:02 2026
+# Fri May 01 18:30:44 2026
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
@@ -60,12 +76,12 @@ Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
 @N: NF107 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":21:7:21:9|Selected library: work cell: Top view verilog as top level
 @N: NF107 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":21:7:21:9|Selected library: work cell: Top view verilog as top level
 
-At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 68MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Wed Apr 29 16:14:02 2026
+# Fri May 01 18:30:44 2026
 
 ###########################################################]
 @END
@@ -75,7 +91,7 @@ At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Wed Apr 29 16:14:02 2026
+# Fri May 01 18:30:44 2026
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
@@ -84,17 +100,17 @@ File C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLi
 @N: NF107 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":21:7:21:9|Selected library: work cell: Top view verilog as top level
 @N: NF107 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":21:7:21:9|Selected library: work cell: Top view verilog as top level
 
-At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 68MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Wed Apr 29 16:14:03 2026
+# Fri May 01 18:30:46 2026
 
 ###########################################################]
 Pre-mapping Report
 
-# Wed Apr 29 16:14:03 2026
+# Fri May 01 18:30:46 2026
 
 Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -108,17 +124,19 @@ Printing clock  summary report in "C:\BachelorProject\VoxLink\Firmware\Lattice\P
 @N: MF248 |Running in 64-bit mode.
 @N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 102MB)
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
 
 
 Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 104MB)
 
+@N: BN362 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_reg_fifo.v":46:4:46:9|Removing sequential instance overflow_sticky (in view: work.VoxLink_Reg_FIFO_16s_4s_5s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_reg_fifo.v":46:4:46:9|Removing sequential instance underflow_sticky (in view: work.VoxLink_Reg_FIFO_16s_4s_5s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 
 ICG Latch Removal Summary:
 Number of ICG latches removed:	0
@@ -138,7 +156,7 @@ Clock                            Frequency     Period        Type               
 System                           1.0 MHz       1000.000      system                       system_clkgroup      0    
 Top|sys_clkout_derived_clock     100.5 MHz     9.950         derived (from clk_12mhz)     default_clkgroup     0    
 clk_12mhz                        12.0 MHz      83.333        declared                     default_clkgroup     0    
-sys_clk                          100.5 MHz     9.950         declared                     default_clkgroup     32   
+sys_clk                          100.5 MHz     9.950         declared                     default_clkgroup     122  
 ====================================================================================================================
 
 Finished Pre Mapping Phase.
@@ -155,12 +173,12 @@ Pre-mapping successful!
 At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 48MB peak: 134MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed Apr 29 16:14:03 2026
+# Fri May 01 18:30:46 2026
 
 ###########################################################]
 Map & Optimize Report
 
-# Wed Apr 29 16:14:04 2026
+# Fri May 01 18:30:46 2026
 
 Synopsys Lattice Technology Mapper, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -198,43 +216,44 @@ Available hyper_sources - for debug and ip models
 
 Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
 
-@N: MO231 :"c:\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":190:4:190:9|Found counter in view:work.Top(verilog) instance blink_counter[26:0] 
+@N: MO231 :"c:\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":209:4:209:9|Found counter in view:work.Top(verilog) instance blink_counter[26:0] 
 
 Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
 
 
-Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 134MB)
 
 
-Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 134MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:00s		     5.07ns		  36 /        28
-@N: FX1017 :"c:\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":81:6:81:10|SB_GB inserted on the net locked.
+   1		0h:00m:00s		     2.68ns		 168 /       118
+@N: FX1017 :|SB_GB inserted on the net locked_i.
+@N: FX1017 :"c:\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":85:6:85:10|SB_GB inserted on the net locked.
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 135MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 135MB)
 
 
 
@@ -243,25 +262,25 @@ Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:
 
 #### START OF CLOCK OPTIMIZATION REPORT #####[
 
-1 non-gated/non-generated clock tree(s) driving 32 clock pin(s) of sequential element(s)
+1 non-gated/non-generated clock tree(s) driving 122 clock pin(s) of sequential element(s)
 0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
 0 instances converted, 0 sequential instances remain driven by gated/generated clocks
 
 ================================= Non-Gated/Non-Generated Clocks =================================
 Clock Tree ID     Driving Element     Drive Element Type              Fanout     Sample Instance  
 --------------------------------------------------------------------------------------------------
-@K:CKID0001       sys_clk_keep        clock definition on keepbuf     32         blink_counter[10]
+@K:CKID0001       sys_clk_keep        clock definition on keepbuf     122        blink_counter[10]
 ==================================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 134MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 136MB)
 
 Writing Analyst data base C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLink_Protocol_Implmnt\synwork\VoxLink_Protocol_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 134MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 136MB)
 
 Writing EDIF Netlist and constraint files
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
@@ -269,19 +288,19 @@ Writing EDIF Netlist and constraint files
 @N: FX1056 |Writing EDF file: C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLink_Protocol_Implmnt\VoxLink_Protocol.edf
 L-2016.09L+ice40
 
-Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
+Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 136MB)
 
-@W: MT246 :"c:\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":171:6:171:15|Blackbox SB_RGBA_DRV is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT246 :"c:\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":190:6:190:15|Blackbox SB_RGBA_DRV is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
 @N: MT615 |Found clock clk_12mhz with period 83.33ns 
 @N: MT615 |Found clock Top|sys_clkout_derived_clock with period 9.95ns 
 @N: MT615 |Found clock sys_clk with period 9.95ns 
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Wed Apr 29 16:14:04 2026
+# Timing Report written on Fri May 01 18:30:47 2026
 #
 
 
@@ -301,14 +320,14 @@ Performance Summary
 *******************
 
 
-Worst slack in design: 0.427
+Worst slack in design: -3.009
 
                                  Requested     Estimated     Requested     Estimated                 Clock                        Clock           
 Starting Clock                   Frequency     Frequency     Period        Period        Slack       Type                         Group           
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Top|sys_clkout_derived_clock     100.5 MHz     NA            9.950         NA            NA          derived (from clk_12mhz)     default_clkgroup
 clk_12mhz                        12.0 MHz      NA            83.333        NA            DCM/PLL     declared                     default_clkgroup
-sys_clk                          100.5 MHz     105.0 MHz     9.950         9.523         0.427       declared                     default_clkgroup
+sys_clk                          100.5 MHz     77.2 MHz      9.950         12.959        -3.009      declared                     default_clkgroup
 System                           1.0 MHz       NA            1000.000      NA            NA          system                       system_clkgroup 
 ==================================================================================================================================================
 @N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack
@@ -320,13 +339,13 @@ System                           1.0 MHz       NA            1000.000      NA   
 Clock Relationships
 *******************
 
-Clocks             |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
----------------------------------------------------------------------------------------------------------
-Starting  Ending   |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
----------------------------------------------------------------------------------------------------------
-sys_clk   System   |  9.950       9.154  |  No paths    -      |  No paths    -      |  No paths    -    
-sys_clk   sys_clk  |  9.950       0.428  |  No paths    -      |  No paths    -      |  No paths    -    
-=========================================================================================================
+Clocks             |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------
+Starting  Ending   |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------
+sys_clk   System   |  9.950       9.154   |  No paths    -      |  No paths    -      |  No paths    -    
+sys_clk   sys_clk  |  9.950       -3.009  |  No paths    -      |  No paths    -      |  No paths    -    
+==========================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -348,41 +367,41 @@ Detailed Report for Clock: sys_clk
 Starting Points with Worst Slack
 ********************************
 
-                      Starting                                                Arrival          
-Instance              Reference     Type        Pin     Net                   Time        Slack
-                      Clock                                                                    
------------------------------------------------------------------------------------------------
-blink_counter[0]      sys_clk       SB_DFFE     Q       blink_counter[0]      0.796       0.427
-blink_counter[1]      sys_clk       SB_DFFE     Q       blink_counter[1]      0.796       0.627
-blink_counter[2]      sys_clk       SB_DFFE     Q       blink_counter[2]      0.796       0.828
-blink_counter[3]      sys_clk       SB_DFFE     Q       blink_counter[3]      0.796       1.028
-blink_counter[4]      sys_clk       SB_DFFE     Q       blink_counter[4]      0.796       1.228
-blink_counter[6]      sys_clk       SB_DFFE     Q       blink_counter[6]      0.796       1.270
-blink_counter[7]      sys_clk       SB_DFFE     Q       blink_counter[7]      0.796       1.342
-blink_counter[10]     sys_clk       SB_DFFE     Q       blink_counter[10]     0.796       1.342
-blink_counter[8]      sys_clk       SB_DFFE     Q       blink_counter[8]      0.796       1.373
-blink_counter[14]     sys_clk       SB_DFFE     Q       blink_counter[14]     0.796       1.373
-===============================================================================================
+                                                               Starting                                             Arrival           
+Instance                                                       Reference     Type         Pin     Net               Time        Slack 
+                                                               Clock                                                                  
+--------------------------------------------------------------------------------------------------------------------------------------
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[0]          sys_clk       SB_DFFR      Q       count[0]          0.796       -3.009
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[1]          sys_clk       SB_DFFR      Q       count[1]          0.796       -2.957
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[2]          sys_clk       SB_DFFR      Q       count[2]          0.796       -1.173
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[3]          sys_clk       SB_DFFR      Q       count[3]          0.796       -1.162
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]          sys_clk       SB_DFFR      Q       count[4]          0.796       -1.121
+VoxLink_Multinode_Protocol_Inst.magic_full_r                   sys_clk       SB_DFFR      Q       magic_full_r      0.796       -0.701
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[0]            sys_clk       SB_DFFER     Q       mem[0]            0.796       -0.659
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[2]            sys_clk       SB_DFFER     Q       mem[2]            0.796       -0.587
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[8]            sys_clk       SB_DFFER     Q       mem[8]            0.796       -0.587
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer[2]     sys_clk       SB_DFFR      Q       rd_pointer[2]     0.796       -0.556
+======================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                      Starting                                                  Required          
-Instance              Reference     Type        Pin     Net                     Time         Slack
-                      Clock                                                                       
---------------------------------------------------------------------------------------------------
-blink_counter[26]     sys_clk       SB_DFFE     D       blink_counter_s[26]     9.795        0.427
-blink_counter[25]     sys_clk       SB_DFFE     D       blink_counter_s[25]     9.795        0.627
-blink_counter[24]     sys_clk       SB_DFFE     D       blink_counter_s[24]     9.795        0.828
-blink_counter[23]     sys_clk       SB_DFFE     D       blink_counter_s[23]     9.795        1.028
-blink_counter[22]     sys_clk       SB_DFFE     D       blink_counter_s[22]     9.795        1.228
-led_io_r              sys_clk       SB_DFFS     D       led_io_r_0              9.795        1.239
-blink_counter[21]     sys_clk       SB_DFFE     D       blink_counter_s[21]     9.795        1.428
-blink_counter[20]     sys_clk       SB_DFFE     D       blink_counter_s[20]     9.795        1.627
-blink_counter[19]     sys_clk       SB_DFFE     D       blink_counter_s[19]     9.795        1.827
-blink_counter[18]     sys_clk       SB_DFFE     D       blink_counter_s[18]     9.795        2.027
-==================================================================================================
+                                                          Starting                                                    Required           
+Instance                                                  Reference     Type         Pin     Net                      Time         Slack 
+                                                          Clock                                                                          
+-----------------------------------------------------------------------------------------------------------------------------------------
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]     sys_clk       SB_DFFR      D       count_RNO[4]             9.795        -3.009
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[3]     sys_clk       SB_DFFR      D       count_RNO[3]             9.795        -2.809
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[2]     sys_clk       SB_DFFR      D       count_RNO[2]             9.795        -2.609
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[0]     sys_clk       SB_DFFR      D       un1_count_axb_0          9.795        -0.773
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[1]     sys_clk       SB_DFFR      D       count_RNO[1]             9.795        -0.773
+VoxLink_Multinode_Protocol_Inst.magic_register_r[0]       sys_clk       SB_DFFER     D       N_63                     9.795        -0.659
+VoxLink_Multinode_Protocol_Inst.magic_counter_r[0]        sys_clk       SB_DFFR      D       magic_counter_r_4[0]     9.795        -0.577
+VoxLink_Multinode_Protocol_Inst.magic_counter_r[1]        sys_clk       SB_DFFR      D       magic_counter_r_4[1]     9.795        -0.577
+VoxLink_Multinode_Protocol_Inst.magic_counter_r[2]        sys_clk       SB_DFFR      D       magic_counter_r_4[2]     9.795        -0.577
+VoxLink_Multinode_Protocol_Inst.magic_counter_r[3]        sys_clk       SB_DFFR      D       magic_counter_r_4[3]     9.795        -0.577
+=========================================================================================================================================
 
 
 
@@ -396,105 +415,249 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.795
 
-    - Propagation time:                      9.367
+    - Propagation time:                      12.804
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     0.428
+    = Slack (critical) :                     -3.009
 
-    Number of logic level(s):                27
-    Starting point:                          blink_counter[0] / Q
-    Ending point:                            blink_counter[26] / D
+    Number of logic level(s):                8
+    Starting point:                          VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[0] / Q
+    Ending point:                            VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4] / D
     The start point is clocked by            sys_clk [rising] on pin C
     The end   point is clocked by            sys_clk [rising] on pin C
 
-Instance / Net                           Pin      Pin               Arrival     No. of    
-Name                        Type         Name     Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------
-blink_counter[0]            SB_DFFE      Q        Out     0.796     0.796       -         
-blink_counter[0]            Net          -        -       0.834     -           3         
-blink_counter_cry_c[0]      SB_CARRY     I0       In      -         1.630       -         
-blink_counter_cry_c[0]      SB_CARRY     CO       Out     0.380     2.009       -         
-blink_counter_cry[0]        Net          -        -       0.014     -           2         
-blink_counter_cry_c[1]      SB_CARRY     CI       In      -         2.023       -         
-blink_counter_cry_c[1]      SB_CARRY     CO       Out     0.186     2.209       -         
-blink_counter_cry[1]        Net          -        -       0.014     -           2         
-blink_counter_cry_c[2]      SB_CARRY     CI       In      -         2.223       -         
-blink_counter_cry_c[2]      SB_CARRY     CO       Out     0.186     2.409       -         
-blink_counter_cry[2]        Net          -        -       0.014     -           2         
-blink_counter_cry_c[3]      SB_CARRY     CI       In      -         2.423       -         
-blink_counter_cry_c[3]      SB_CARRY     CO       Out     0.186     2.609       -         
-blink_counter_cry[3]        Net          -        -       0.014     -           2         
-blink_counter_cry_c[4]      SB_CARRY     CI       In      -         2.623       -         
-blink_counter_cry_c[4]      SB_CARRY     CO       Out     0.186     2.809       -         
-blink_counter_cry[4]        Net          -        -       0.014     -           2         
-blink_counter_cry_c[5]      SB_CARRY     CI       In      -         2.823       -         
-blink_counter_cry_c[5]      SB_CARRY     CO       Out     0.186     3.009       -         
-blink_counter_cry[5]        Net          -        -       0.014     -           2         
-blink_counter_cry_c[6]      SB_CARRY     CI       In      -         3.023       -         
-blink_counter_cry_c[6]      SB_CARRY     CO       Out     0.186     3.209       -         
-blink_counter_cry[6]        Net          -        -       0.014     -           2         
-blink_counter_cry_c[7]      SB_CARRY     CI       In      -         3.223       -         
-blink_counter_cry_c[7]      SB_CARRY     CO       Out     0.186     3.409       -         
-blink_counter_cry[7]        Net          -        -       0.014     -           2         
-blink_counter_cry_c[8]      SB_CARRY     CI       In      -         3.423       -         
-blink_counter_cry_c[8]      SB_CARRY     CO       Out     0.186     3.609       -         
-blink_counter_cry[8]        Net          -        -       0.014     -           2         
-blink_counter_cry_c[9]      SB_CARRY     CI       In      -         3.623       -         
-blink_counter_cry_c[9]      SB_CARRY     CO       Out     0.186     3.809       -         
-blink_counter_cry[9]        Net          -        -       0.014     -           2         
-blink_counter_cry_c[10]     SB_CARRY     CI       In      -         3.823       -         
-blink_counter_cry_c[10]     SB_CARRY     CO       Out     0.186     4.009       -         
-blink_counter_cry[10]       Net          -        -       0.014     -           2         
-blink_counter_cry_c[11]     SB_CARRY     CI       In      -         4.023       -         
-blink_counter_cry_c[11]     SB_CARRY     CO       Out     0.186     4.209       -         
-blink_counter_cry[11]       Net          -        -       0.014     -           2         
-blink_counter_cry_c[12]     SB_CARRY     CI       In      -         4.223       -         
-blink_counter_cry_c[12]     SB_CARRY     CO       Out     0.186     4.409       -         
-blink_counter_cry[12]       Net          -        -       0.014     -           2         
-blink_counter_cry_c[13]     SB_CARRY     CI       In      -         4.423       -         
-blink_counter_cry_c[13]     SB_CARRY     CO       Out     0.186     4.609       -         
-blink_counter_cry[13]       Net          -        -       0.014     -           2         
-blink_counter_cry_c[14]     SB_CARRY     CI       In      -         4.623       -         
-blink_counter_cry_c[14]     SB_CARRY     CO       Out     0.186     4.809       -         
-blink_counter_cry[14]       Net          -        -       0.014     -           2         
-blink_counter_cry_c[15]     SB_CARRY     CI       In      -         4.823       -         
-blink_counter_cry_c[15]     SB_CARRY     CO       Out     0.186     5.009       -         
-blink_counter_cry[15]       Net          -        -       0.014     -           2         
-blink_counter_cry_c[16]     SB_CARRY     CI       In      -         5.023       -         
-blink_counter_cry_c[16]     SB_CARRY     CO       Out     0.186     5.209       -         
-blink_counter_cry[16]       Net          -        -       0.014     -           2         
-blink_counter_cry_c[17]     SB_CARRY     CI       In      -         5.223       -         
-blink_counter_cry_c[17]     SB_CARRY     CO       Out     0.186     5.409       -         
-blink_counter_cry[17]       Net          -        -       0.014     -           2         
-blink_counter_cry_c[18]     SB_CARRY     CI       In      -         5.423       -         
-blink_counter_cry_c[18]     SB_CARRY     CO       Out     0.186     5.609       -         
-blink_counter_cry[18]       Net          -        -       0.014     -           2         
-blink_counter_cry_c[19]     SB_CARRY     CI       In      -         5.623       -         
-blink_counter_cry_c[19]     SB_CARRY     CO       Out     0.186     5.809       -         
-blink_counter_cry[19]       Net          -        -       0.014     -           2         
-blink_counter_cry_c[20]     SB_CARRY     CI       In      -         5.823       -         
-blink_counter_cry_c[20]     SB_CARRY     CO       Out     0.186     6.009       -         
-blink_counter_cry[20]       Net          -        -       0.014     -           2         
-blink_counter_cry_c[21]     SB_CARRY     CI       In      -         6.023       -         
-blink_counter_cry_c[21]     SB_CARRY     CO       Out     0.186     6.209       -         
-blink_counter_cry[21]       Net          -        -       0.014     -           2         
-blink_counter_cry_c[22]     SB_CARRY     CI       In      -         6.223       -         
-blink_counter_cry_c[22]     SB_CARRY     CO       Out     0.186     6.409       -         
-blink_counter_cry[22]       Net          -        -       0.014     -           2         
-blink_counter_cry_c[23]     SB_CARRY     CI       In      -         6.423       -         
-blink_counter_cry_c[23]     SB_CARRY     CO       Out     0.186     6.609       -         
-blink_counter_cry[23]       Net          -        -       0.014     -           2         
-blink_counter_cry_c[24]     SB_CARRY     CI       In      -         6.623       -         
-blink_counter_cry_c[24]     SB_CARRY     CO       Out     0.186     6.809       -         
-blink_counter_cry[24]       Net          -        -       0.014     -           2         
-blink_counter_cry_c[25]     SB_CARRY     CI       In      -         6.823       -         
-blink_counter_cry_c[25]     SB_CARRY     CO       Out     0.186     7.009       -         
-blink_counter_cry[25]       Net          -        -       0.386     -           1         
-blink_counter_RNO[26]       SB_LUT4      I3       In      -         7.395       -         
-blink_counter_RNO[26]       SB_LUT4      O        Out     0.465     7.861       -         
-blink_counter_s[26]         Net          -        -       1.507     -           1         
-blink_counter[26]           SB_DFFE      D        In      -         9.367       -         
-==========================================================================================
-Total path delay (propagation time + setup) of 9.522 is 6.445(67.7%) logic and 3.077(32.3%) route.
+Instance / Net                                                                     Pin      Pin               Arrival     No. of    
+Name                                                                  Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------------------------
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[0]                 SB_DFFR      Q        Out     0.796     0.796       -         
+count[0]                                                              Net          -        -       1.599     -           3         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR06U[0]         SB_LUT4      I0       In      -         2.395       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR06U[0]         SB_LUT4      O        Out     0.661     3.056       -         
+fifo_empty_1                                                          Net          -        -       1.371     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR9FB2[4]        SB_LUT4      I3       In      -         4.427       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR9FB2[4]        SB_LUT4      O        Out     0.465     4.893       -         
+fifo_empty                                                            Net          -        -       1.371     -           4         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2_0[4]      SB_LUT4      I0       In      -         6.263       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2_0[4]      SB_LUT4      O        Out     0.569     6.832       -         
+count_RNIEQRV2_0[4]                                                   Net          -        -       0.905     -           17        
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_s0_c     SB_CARRY     I0       In      -         7.737       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_s0_c     SB_CARRY     CO       Out     0.380     8.117       -         
+un1_count_cry_1_s0                                                    Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_s0_c     SB_CARRY     CI       In      -         8.130       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_s0_c     SB_CARRY     CO       Out     0.186     8.316       -         
+un1_count_cry_2_s0                                                    Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_s0_c     SB_CARRY     CI       In      -         8.331       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_s0_c     SB_CARRY     CO       Out     0.186     8.517       -         
+un1_count_cry_3_s0                                                    Net          -        -       0.386     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_0[4]           SB_LUT4      I3       In      -         8.902       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_0[4]           SB_LUT4      O        Out     0.465     9.368       -         
+un1_count_s0[4]                                                       Net          -        -       1.371     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]             SB_LUT4      I2       In      -         10.739      -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]             SB_LUT4      O        Out     0.558     11.297      -         
+count_RNO[4]                                                          Net          -        -       1.507     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]                 SB_DFFR      D        In      -         12.804      -         
+====================================================================================================================================
+Total path delay (propagation time + setup) of 12.959 is 4.421(34.1%) logic and 8.538(65.9%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      9.950
+    - Setup time:                            0.155
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.795
+
+    - Propagation time:                      12.752
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -2.957
+
+    Number of logic level(s):                8
+    Starting point:                          VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[1] / Q
+    Ending point:                            VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4] / D
+    The start point is clocked by            sys_clk [rising] on pin C
+    The end   point is clocked by            sys_clk [rising] on pin C
+
+Instance / Net                                                                     Pin      Pin               Arrival     No. of    
+Name                                                                  Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------------------------
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[1]                 SB_DFFR      Q        Out     0.796     0.796       -         
+count[1]                                                              Net          -        -       1.599     -           4         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR06U[0]         SB_LUT4      I1       In      -         2.395       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR06U[0]         SB_LUT4      O        Out     0.558     2.953       -         
+fifo_empty_1                                                          Net          -        -       1.371     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR9FB2[4]        SB_LUT4      I3       In      -         4.324       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR9FB2[4]        SB_LUT4      O        Out     0.424     4.748       -         
+fifo_empty                                                            Net          -        -       1.371     -           4         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2_0[4]      SB_LUT4      I0       In      -         6.119       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2_0[4]      SB_LUT4      O        Out     0.661     6.780       -         
+count_RNIEQRV2_0[4]                                                   Net          -        -       0.905     -           17        
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_s0_c     SB_CARRY     I0       In      -         7.685       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_s0_c     SB_CARRY     CO       Out     0.380     8.065       -         
+un1_count_cry_1_s0                                                    Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_s0_c     SB_CARRY     CI       In      -         8.079       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_s0_c     SB_CARRY     CO       Out     0.186     8.265       -         
+un1_count_cry_2_s0                                                    Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_s0_c     SB_CARRY     CI       In      -         8.279       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_s0_c     SB_CARRY     CO       Out     0.186     8.465       -         
+un1_count_cry_3_s0                                                    Net          -        -       0.386     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_0[4]           SB_LUT4      I3       In      -         8.851       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_0[4]           SB_LUT4      O        Out     0.465     9.316       -         
+un1_count_s0[4]                                                       Net          -        -       1.371     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]             SB_LUT4      I2       In      -         10.687      -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]             SB_LUT4      O        Out     0.558     11.245      -         
+count_RNO[4]                                                          Net          -        -       1.507     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]                 SB_DFFR      D        In      -         12.752      -         
+====================================================================================================================================
+Total path delay (propagation time + setup) of 12.907 is 4.369(33.8%) logic and 8.538(66.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      9.950
+    - Setup time:                            0.155
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.795
+
+    - Propagation time:                      12.711
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -2.916
+
+    Number of logic level(s):                8
+    Starting point:                          VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[0] / Q
+    Ending point:                            VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4] / D
+    The start point is clocked by            sys_clk [rising] on pin C
+    The end   point is clocked by            sys_clk [rising] on pin C
+
+Instance / Net                                                                     Pin      Pin               Arrival     No. of    
+Name                                                                  Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------------------------
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[0]                 SB_DFFR      Q        Out     0.796     0.796       -         
+count[0]                                                              Net          -        -       1.599     -           3         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR06U[0]         SB_LUT4      I0       In      -         2.395       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR06U[0]         SB_LUT4      O        Out     0.661     3.056       -         
+fifo_empty_1                                                          Net          -        -       1.371     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR9FB2[4]        SB_LUT4      I3       In      -         4.427       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR9FB2[4]        SB_LUT4      O        Out     0.465     4.893       -         
+fifo_empty                                                            Net          -        -       1.371     -           4         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2_0[4]      SB_LUT4      I0       In      -         6.263       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2_0[4]      SB_LUT4      O        Out     0.569     6.832       -         
+count_RNIEQRV2_0[4]                                                   Net          -        -       0.905     -           17        
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_s1_c     SB_CARRY     I0       In      -         7.737       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_s1_c     SB_CARRY     CO       Out     0.380     8.117       -         
+un1_count_cry_1_s1                                                    Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_s1_c     SB_CARRY     CI       In      -         8.130       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_s1_c     SB_CARRY     CO       Out     0.186     8.316       -         
+un1_count_cry_2_s1                                                    Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_s1_c     SB_CARRY     CI       In      -         8.331       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_s1_c     SB_CARRY     CO       Out     0.186     8.517       -         
+un1_count_cry_3_s1                                                    Net          -        -       0.386     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_1[4]           SB_LUT4      I3       In      -         8.902       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_1[4]           SB_LUT4      O        Out     0.465     9.368       -         
+un1_count_s1[4]                                                       Net          -        -       1.371     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]             SB_LUT4      I3       In      -         10.739      -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]             SB_LUT4      O        Out     0.465     11.204      -         
+count_RNO[4]                                                          Net          -        -       1.507     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]                 SB_DFFR      D        In      -         12.711      -         
+====================================================================================================================================
+Total path delay (propagation time + setup) of 12.866 is 4.328(33.6%) logic and 8.538(66.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      9.950
+    - Setup time:                            0.155
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.795
+
+    - Propagation time:                      12.659
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -2.864
+
+    Number of logic level(s):                8
+    Starting point:                          VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[1] / Q
+    Ending point:                            VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4] / D
+    The start point is clocked by            sys_clk [rising] on pin C
+    The end   point is clocked by            sys_clk [rising] on pin C
+
+Instance / Net                                                                     Pin      Pin               Arrival     No. of    
+Name                                                                  Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------------------------
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[1]                 SB_DFFR      Q        Out     0.796     0.796       -         
+count[1]                                                              Net          -        -       1.599     -           4         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR06U[0]         SB_LUT4      I1       In      -         2.395       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR06U[0]         SB_LUT4      O        Out     0.558     2.953       -         
+fifo_empty_1                                                          Net          -        -       1.371     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR9FB2[4]        SB_LUT4      I3       In      -         4.324       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR9FB2[4]        SB_LUT4      O        Out     0.424     4.748       -         
+fifo_empty                                                            Net          -        -       1.371     -           4         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2_0[4]      SB_LUT4      I0       In      -         6.119       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2_0[4]      SB_LUT4      O        Out     0.661     6.780       -         
+count_RNIEQRV2_0[4]                                                   Net          -        -       0.905     -           17        
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_s1_c     SB_CARRY     I0       In      -         7.685       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_s1_c     SB_CARRY     CO       Out     0.380     8.065       -         
+un1_count_cry_1_s1                                                    Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_s1_c     SB_CARRY     CI       In      -         8.079       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_s1_c     SB_CARRY     CO       Out     0.186     8.265       -         
+un1_count_cry_2_s1                                                    Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_s1_c     SB_CARRY     CI       In      -         8.279       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_s1_c     SB_CARRY     CO       Out     0.186     8.465       -         
+un1_count_cry_3_s1                                                    Net          -        -       0.386     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_1[4]           SB_LUT4      I3       In      -         8.851       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_1[4]           SB_LUT4      O        Out     0.465     9.316       -         
+un1_count_s1[4]                                                       Net          -        -       1.371     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]             SB_LUT4      I3       In      -         10.687      -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]             SB_LUT4      O        Out     0.465     11.152      -         
+count_RNO[4]                                                          Net          -        -       1.507     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]                 SB_DFFR      D        In      -         12.659      -         
+====================================================================================================================================
+Total path delay (propagation time + setup) of 12.814 is 4.276(33.4%) logic and 8.538(66.6%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      9.950
+    - Setup time:                            0.155
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.795
+
+    - Propagation time:                      12.604
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -2.809
+
+    Number of logic level(s):                7
+    Starting point:                          VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[0] / Q
+    Ending point:                            VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4] / D
+    The start point is clocked by            sys_clk [rising] on pin C
+    The end   point is clocked by            sys_clk [rising] on pin C
+
+Instance / Net                                                                     Pin      Pin               Arrival     No. of    
+Name                                                                  Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------------------------
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[0]                 SB_DFFR      Q        Out     0.796     0.796       -         
+count[0]                                                              Net          -        -       1.599     -           3         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR06U[0]         SB_LUT4      I0       In      -         2.395       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR06U[0]         SB_LUT4      O        Out     0.661     3.056       -         
+fifo_empty_1                                                          Net          -        -       1.371     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR9FB2[4]        SB_LUT4      I3       In      -         4.427       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR9FB2[4]        SB_LUT4      O        Out     0.465     4.893       -         
+fifo_empty                                                            Net          -        -       1.371     -           4         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2_0[4]      SB_LUT4      I0       In      -         6.263       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2_0[4]      SB_LUT4      O        Out     0.569     6.832       -         
+count_RNIEQRV2_0[4]                                                   Net          -        -       0.905     -           17        
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_s0_c     SB_CARRY     I0       In      -         7.737       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_s0_c     SB_CARRY     CO       Out     0.380     8.117       -         
+un1_count_cry_2_s0                                                    Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_s0_c     SB_CARRY     CI       In      -         8.130       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_s0_c     SB_CARRY     CO       Out     0.186     8.316       -         
+un1_count_cry_3_s0                                                    Net          -        -       0.386     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_0[4]           SB_LUT4      I3       In      -         8.703       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_0[4]           SB_LUT4      O        Out     0.465     9.168       -         
+un1_count_s0[4]                                                       Net          -        -       1.371     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]             SB_LUT4      I2       In      -         10.539      -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]             SB_LUT4      O        Out     0.558     11.097      -         
+count_RNO[4]                                                          Net          -        -       1.507     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]                 SB_DFFR      D        In      -         12.604      -         
+====================================================================================================================================
+Total path delay (propagation time + setup) of 12.759 is 4.235(33.2%) logic and 8.524(66.8%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -505,47 +668,52 @@ Timing exceptions that could not be applied
 @W: MT446 :"c:/bachelorproject/voxlink/firmware/lattice/source/constraints/voxlink_constraints.sdc":5:0:5:0|Timing constraint (from [get_registers *i2c_state*] to [get_registers *bit_counter*]) (multi path 2) was not applied to the design because none of the '-from' objects specified by the constraint exist in the design 
 @W: MT446 :"c:/bachelorproject/voxlink/firmware/lattice/source/constraints/voxlink_constraints.sdc":6:0:6:0|Timing constraint (from [get_registers *i2c_state*]) (multi path 2) was not applied to the design because none of the '-from' objects specified by the constraint exist in the design 
 
-Finished final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 136MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
+Finished timing report (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 136MB)
 
 ---------------------------------------
 Resource Usage Report for Top 
 
 Mapping to part: ice40ul1kcm36a
 Cell usage:
-SB_CARRY        26 uses
+GND             2 uses
+SB_CARRY        43 uses
 SB_DFF          4 uses
 SB_DFFE         27 uses
-SB_DFFS         1 use
-SB_GB           3 uses
+SB_DFFER        48 uses
+SB_DFFR         35 uses
+SB_DFFS         7 uses
+SB_DFFSR        1 use
+SB_GB           4 uses
 SB_PLL40_CORE   1 use
 SB_RGBA_DRV     1 use
-SB_LUT4         37 uses
+VCC             2 uses
+SB_LUT4         155 uses
 
 I/O ports: 6
-I/O primitives: 3
-SB_IO          3 uses
+I/O primitives: 5
+SB_IO          5 uses
 
 I/O Register bits:                  0
-Register bits not including I/Os:   32 (2%)
+Register bits not including I/Os:   122 (10%)
 Total load per clock:
    clk_12mhz: 1
-   sys_clk: 32
+   sys_clk: 122
    Top|sys_clkout_derived_clock: 1
 
 @S |Mapping Summary:
-Total  LUTs: 37 (3%)
+Total  LUTs: 155 (13%)
 
 Distribution of All Consumed LUTs = LUT4 
-Distribution of All Consumed Luts 37 = 37 
+Distribution of All Consumed Luts 155 = 155 
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 27MB peak: 134MB)
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 28MB peak: 136MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed Apr 29 16:14:04 2026
+# Fri May 01 18:30:47 2026
 
 ###########################################################]

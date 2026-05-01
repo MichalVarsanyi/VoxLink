@@ -1,10 +1,13 @@
 `timescale 1ns / 1ps
 
-module tb_VoxLink_Multinode_Protocol;
+module tb_VoxLink_Multinode_Protocol_50in_49out;
 
-    // -------------------------------------------------------------------------
-    // Testbench signals
-    // -------------------------------------------------------------------------
+    localparam integer SYS_FREQ_HZ = 200_000_000;
+    localparam integer IN_FREQ_HZ  = 50_000_000;
+    localparam integer OUT_FREQ_HZ = 25_000_000;
+
+    real SYS_HALF_PERIOD_NS;
+    real IN_HALF_PERIOD_NS;
 
     reg sys_clk;
     reg sys_rst;
@@ -15,20 +18,9 @@ module tb_VoxLink_Multinode_Protocol;
     wire vox_out_rxd_p;
     wire vox_out_rxd_n;
 
-    // -------------------------------------------------------------------------
-    // DUT
-    //
-    // Important:
-    // With your current divider logic, setting VOX_FREQ = CLK_FREQ causes
-    // DIVIDER = 0, so vox_sck_en pulses every sys_clk cycle.
-    //
-    // With sys_clk = 200 MHz, vox_clk_drive toggles every 5 ns,
-    // creating a 100 MHz output clock.
-    // -------------------------------------------------------------------------
-
     VoxLink_Multinode_Protocol #(
-        .CLK_FREQ(200_000_000),
-        .VOX_FREQ(200_000_000)
+        .CLK_FREQ(SYS_FREQ_HZ),
+        .VOX_FREQ(OUT_FREQ_HZ)
     ) dut (
         .sys_clk       (sys_clk),
         .sys_rst       (sys_rst),
@@ -40,76 +32,85 @@ module tb_VoxLink_Multinode_Protocol;
         .vox_out_rxd_n (vox_out_rxd_n)
     );
 
-    // -------------------------------------------------------------------------
-    // 200 MHz system clock
-    //
-    // Period = 5 ns
-    // -------------------------------------------------------------------------
-
     initial begin
+        SYS_HALF_PERIOD_NS = 1.0e9 / (2.0 * SYS_FREQ_HZ);
+
         sys_clk = 1'b0;
-        forever #2.5 sys_clk = ~sys_clk;
+        forever #(SYS_HALF_PERIOD_NS) sys_clk = ~sys_clk;
     end
 
-    // -------------------------------------------------------------------------
-    // 112-bit test payload
-    // -------------------------------------------------------------------------
-
-    reg [111:0] test_data;
+    reg [15:0] test_packet_0;
+    reg [15:0] test_packet_1;
+    reg [15:0] test_packet_2;
 
     integer i;
 
     initial begin
-        test_data = {
-            16'hA5A5,
-            16'h1234,
-            16'hBEEF,
-            16'hCAFE,
-            16'h0F0F,
-            16'h55AA,
-            16'hFACE
-        };
+        IN_HALF_PERIOD_NS = 1.0e9 / (2.0 * IN_FREQ_HZ);
 
-        // Initial idle state
+        test_packet_0 = 16'hFF00;
+        test_packet_1 = 16'hA55A;
+        test_packet_2 = 16'h1234;
+
         sys_rst      = 1'b1;
-        vox_in_clk_p = 1'b0;   // idle low
-        vox_in_rxd_p = 1'b0;
-
-        // Reset
-        repeat (20) @(posedge sys_clk);
-        sys_rst = 1'b0;
-
-        repeat (20) @(posedge sys_clk);
-
-        // ---------------------------------------------------------------------
-        // Shift 112 bits into DUT at 100 MHz
-        //
-        // 100 MHz period = 10 ns
-        // Half-period    = 5 ns
-        //
-        // DUT samples on rising edge of vox_in_clk_p.
-        // Data changes while input clock is low.
-        // ---------------------------------------------------------------------
-
-        for (i = 111; i >= 0; i = i - 1) begin
-            vox_in_clk_p = 1'b0;
-            vox_in_rxd_p = test_data[i];
-
-            #5;     // 5 ns low
-
-            vox_in_clk_p = 1'b1;
-
-            #5;     // 5 ns high
-        end
-
-        // Return to idle
         vox_in_clk_p = 1'b0;
         vox_in_rxd_p = 1'b0;
 
-        // Let output side continue
-        #2000;
+        repeat (20) @(posedge sys_clk);
+        sys_rst = 1'b0;
 
-        $finish;
+        #1.3;
+
+        repeat (10) @(posedge sys_clk);
+
+        for (i = 15; i >= 0; i = i - 1) begin
+            vox_in_clk_p = 1'b0;
+            vox_in_rxd_p = test_packet_0[i];
+
+            #(IN_HALF_PERIOD_NS);
+
+            vox_in_clk_p = 1'b1;
+
+            #(IN_HALF_PERIOD_NS);
+        end
+
+        vox_in_clk_p = 1'b0;
+        vox_in_rxd_p = 1'b0;
+
+        repeat (10) @(posedge sys_clk);
+
+        for (i = 15; i >= 0; i = i - 1) begin
+            vox_in_clk_p = 1'b0;
+            vox_in_rxd_p = test_packet_1[i];
+
+            #(IN_HALF_PERIOD_NS);
+
+            vox_in_clk_p = 1'b1;
+
+            #(IN_HALF_PERIOD_NS);
+        end
+
+        vox_in_clk_p = 1'b0;
+        vox_in_rxd_p = 1'b0;
+
+        repeat (10) @(posedge sys_clk);
+
+        for (i = 15; i >= 0; i = i - 1) begin
+            vox_in_clk_p = 1'b0;
+            vox_in_rxd_p = test_packet_2[i];
+
+            #(IN_HALF_PERIOD_NS);
+
+            vox_in_clk_p = 1'b1;
+
+            #(IN_HALF_PERIOD_NS);
+        end
+
+        vox_in_clk_p = 1'b0;
+        vox_in_rxd_p = 1'b0;
+
+        repeat (200) @(posedge sys_clk);
+
     end
 
 endmodule

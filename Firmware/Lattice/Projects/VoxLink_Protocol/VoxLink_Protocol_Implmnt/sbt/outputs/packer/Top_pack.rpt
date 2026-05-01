@@ -6,7 +6,7 @@
 
 * Build Date:         Dec  9 2020 17:31:51
 
-* File Generated:     Apr 29 2026 16:14:10
+* File Generated:     May 1 2026 18:31:04
 
 * Purpose:            General info of design implementation
 
@@ -27,11 +27,11 @@ Device Info:
 
 Design statistics:
 ------------------
-    FFs:                  32
-    LUTs:                 44
+    FFs:                  122
+    LUTs:                 179
     RAMs:                 0
-    IOBs:                 3
-    GBs:                  3
+    IOBs:                 5
+    GBs:                  4
     PLLs:                 1
     Warm Boots:           0
     I2C_FIFOs:            0
@@ -46,12 +46,12 @@ Design statistics:
 
 Logic Resource Utilization:
 ---------------------------
-    Total Logic Cells: 44/1248
-        Combinational Logic Cells: 12       out of   1248      0.961538%
-        Sequential Logic Cells:    32       out of   1248      2.5641%
-        Logic Tiles:               12       out of   156       7.69231%
+    Total Logic Cells: 182/1248
+        Combinational Logic Cells: 60       out of   1248      4.80769%
+        Sequential Logic Cells:    122      out of   1248      9.77564%
+        Logic Tiles:               37       out of   156       23.7179%
     Registers: 
-        Logic Registers:           32       out of   1248      2.5641%
+        Logic Registers:           122      out of   1248      9.77564%
         IO Registers:              0        out of   240       0
     Block RAMs:                    0        out of   14        0%
     Warm Boots:                    0        out of   1         0%
@@ -65,17 +65,17 @@ Logic Resource Utilization:
     LEDDA_IPs:                     0        out of   1         0%
     IR_IPs:                        0        out of   1         0%
     Pins:
-        Input Pins:                1        out of   26        3.84615%
+        Input Pins:                3        out of   26        11.5385%
         Output Pins:               2        out of   26        7.69231%
         InOut Pins:                0        out of   26        0%
-    Global Buffers:                3        out of   8         37.5%
+    Global Buffers:                4        out of   8         50%
     PLLs:                          1        out of   1         100%
 
 IO Bank Utilization:
 --------------------
     Bank 3: 0        out of   0         0%
     Bank 1: 0        out of   0         0%
-    Bank 0: 0        out of   12        0%
+    Bank 0: 2        out of   12        16.6667%
     Bank 2: 3        out of   14        21.4286%
 
 Detailed I/O Info:
@@ -83,6 +83,8 @@ Detailed I/O Info:
     Input Pins: 
     Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function    Signal Name    
     ----------  ---------  -----------  -------  -------  -----------    -----------    
+    A4          Input      SB_LVCMOS    No       0        Simple Input   vox_in_rxd_p   
+    B6          Input      SB_LVCMOS    No       0        Simple Input   vox_in_clk_p   
     D2          Input      SB_LVCMOS    No       2        Simple Input   clk_12mhz      
 
     Output Pins: 
@@ -95,6 +97,7 @@ Detailed Global Buffer Info:
 ----------------------------
     Buffer Number  IO Bank  Driven By  Fanout  Signal Name     
     -------------  -------  ---------  ------  -----------     
-    4              0                   1       clk_12mhz_bufg  
+    6              2                   122     sys_clk         
+    4              0                   91      locked_i_g      
+    3              0                   1       clk_12mhz_bufg  
     5              2                   28      locked_g        
-    3              0                   32      sys_clk         

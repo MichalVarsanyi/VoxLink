@@ -1,52 +1,209 @@
 ble_pack LC_PLL_PLL_BUFFER_u_pll_LOCK {PLL_BUFFER_u_pll_LOCK_THRU_LUT4_0}
 clb_pack PLB_PLL_u_pllLOCK {LC_PLL_PLL_BUFFER_u_pll_LOCK}
-ble_pack blink_counter[0]_LC_0 {blink_counter[0], blink_counter_cry_c[0], blink_counter_RNO[0]}
-ble_pack blink_counter[1]_LC_1 {blink_counter[1], blink_counter_cry_c[1], blink_counter_RNO[1]}
-ble_pack blink_counter[2]_LC_12 {blink_counter[2], blink_counter_cry_c[2], blink_counter_RNO[2]}
-ble_pack blink_counter[3]_LC_20 {blink_counter[3], blink_counter_cry_c[3], blink_counter_RNO[3]}
-ble_pack blink_counter[4]_LC_21 {blink_counter[4], blink_counter_cry_c[4], blink_counter_RNO[4]}
-ble_pack blink_counter[5]_LC_22 {blink_counter[5], blink_counter_cry_c[5], blink_counter_RNO[5]}
-ble_pack blink_counter[6]_LC_23 {blink_counter[6], blink_counter_cry_c[6], blink_counter_RNO[6]}
-ble_pack blink_counter[7]_LC_24 {blink_counter[7], blink_counter_cry_c[7], blink_counter_RNO[7]}
-clb_pack PLB_1 {blink_counter[0]_LC_0, blink_counter[1]_LC_1, blink_counter[2]_LC_12, blink_counter[3]_LC_20, blink_counter[4]_LC_21, blink_counter[5]_LC_22, blink_counter[6]_LC_23, blink_counter[7]_LC_24}
-ble_pack blink_counter[8]_LC_25 {blink_counter[8], blink_counter_cry_c[8], blink_counter_RNO[8]}
-ble_pack blink_counter[9]_LC_26 {blink_counter[9], blink_counter_cry_c[9], blink_counter_RNO[9]}
-ble_pack blink_counter[10]_LC_2 {blink_counter[10], blink_counter_cry_c[10], blink_counter_RNO[10]}
-ble_pack blink_counter[11]_LC_3 {blink_counter[11], blink_counter_cry_c[11], blink_counter_RNO[11]}
-ble_pack blink_counter[12]_LC_4 {blink_counter[12], blink_counter_cry_c[12], blink_counter_RNO[12]}
-ble_pack blink_counter[13]_LC_5 {blink_counter[13], blink_counter_cry_c[13], blink_counter_RNO[13]}
-ble_pack blink_counter[14]_LC_6 {blink_counter[14], blink_counter_cry_c[14], blink_counter_RNO[14]}
-ble_pack blink_counter[15]_LC_7 {blink_counter[15], blink_counter_cry_c[15], blink_counter_RNO[15]}
-clb_pack PLB_2 {blink_counter[8]_LC_25, blink_counter[9]_LC_26, blink_counter[10]_LC_2, blink_counter[11]_LC_3, blink_counter[12]_LC_4, blink_counter[13]_LC_5, blink_counter[14]_LC_6, blink_counter[15]_LC_7}
-ble_pack blink_counter[16]_LC_8 {blink_counter[16], blink_counter_cry_c[16], blink_counter_RNO[16]}
-ble_pack blink_counter[17]_LC_9 {blink_counter[17], blink_counter_cry_c[17], blink_counter_RNO[17]}
-ble_pack blink_counter[18]_LC_10 {blink_counter[18], blink_counter_cry_c[18], blink_counter_RNO[18]}
-ble_pack blink_counter[19]_LC_11 {blink_counter[19], blink_counter_cry_c[19], blink_counter_RNO[19]}
-ble_pack blink_counter[20]_LC_13 {blink_counter[20], blink_counter_cry_c[20], blink_counter_RNO[20]}
-ble_pack blink_counter[21]_LC_14 {blink_counter[21], blink_counter_cry_c[21], blink_counter_RNO[21]}
-ble_pack blink_counter[22]_LC_15 {blink_counter[22], blink_counter_cry_c[22], blink_counter_RNO[22]}
-ble_pack blink_counter[23]_LC_16 {blink_counter[23], blink_counter_cry_c[23], blink_counter_RNO[23]}
-clb_pack PLB_3 {blink_counter[16]_LC_8, blink_counter[17]_LC_9, blink_counter[18]_LC_10, blink_counter[19]_LC_11, blink_counter[20]_LC_13, blink_counter[21]_LC_14, blink_counter[22]_LC_15, blink_counter[23]_LC_16}
-ble_pack blink_counter[24]_LC_17 {blink_counter[24], blink_counter_cry_c[24], blink_counter_RNO[24]}
-ble_pack blink_counter[25]_LC_18 {blink_counter[25], blink_counter_cry_c[25], blink_counter_RNO[25]}
-ble_pack blink_counter[26]_LC_19 {blink_counter[26], blink_counter_RNO[26]}
-clb_pack PLB_4 {blink_counter[24]_LC_17, blink_counter[25]_LC_18, blink_counter[26]_LC_19}
-ble_pack led_io_r_RNO_1_LC_29 {led_io_r_RNO_1}
-ble_pack led_io_r_LC_27 {led_io_r, led_io_r_RNO}
-ble_pack led_io_r_RNO_2_LC_30 {led_io_r_RNO_2}
-ble_pack led_io_r_RNO_4_LC_32 {led_io_r_RNO_4}
-ble_pack led_io_r_RNO_3_LC_31 {led_io_r_RNO_3}
-clb_pack PLB_5 {led_io_r_RNO_1_LC_29, led_io_r_LC_27, led_io_r_RNO_2_LC_30, led_io_r_RNO_4_LC_32, led_io_r_RNO_3_LC_31}
-ble_pack led_io_r_RNO_5_LC_33 {led_io_r_RNO_5}
-ble_pack led_io_r_RNO_6_LC_34 {led_io_r_RNO_6}
-ble_pack led_io_r_RNO_7_LC_35 {led_io_r_RNO_7}
-ble_pack led_io_r_RNO_8_LC_36 {led_io_r_RNO_8}
-ble_pack led_io_r_RNO_0_LC_28 {led_io_r_RNO_0}
-ble_pack vox_clk_cdc_stage_2_LC_38 {vox_clk_cdc_stage_2, vox_clk_cdc_stage_2_THRU_LUT4_0}
-ble_pack vox_clk_cdc_stage_1_LC_37 {vox_clk_cdc_stage_1, vox_clk_cdc_stage_1_THRU_LUT4_0}
-ble_pack vox_rxd_cdc_stage_2_LC_40 {vox_rxd_cdc_stage_2, vox_rxd_cdc_stage_2_THRU_LUT4_0}
-clb_pack PLB_6 {led_io_r_RNO_5_LC_33, led_io_r_RNO_6_LC_34, led_io_r_RNO_7_LC_35, led_io_r_RNO_8_LC_36, led_io_r_RNO_0_LC_28, vox_clk_cdc_stage_2_LC_38, vox_clk_cdc_stage_1_LC_37, vox_rxd_cdc_stage_2_LC_40}
-ble_pack GB_BUFFER_clk_12mhz_bufg_THRU_LUT4_0_LC_41 {GB_BUFFER_clk_12mhz_bufg_THRU_LUT4_0}
-ble_pack vox_rxd_cdc_stage_1_LC_39 {vox_rxd_cdc_stage_1, vox_rxd_cdc_stage_1_THRU_LUT4_0}
-ble_pack LC_43 {CONSTANT_ONE_LUT4}
-clb_pack PLB_7 {GB_BUFFER_clk_12mhz_bufg_THRU_LUT4_0_LC_41, vox_rxd_cdc_stage_1_LC_39, LC_43}
+ble_pack blink_counter[0]_LC_118 {blink_counter[0], blink_counter_cry_c[0], blink_counter_RNO[0]}
+ble_pack blink_counter[1]_LC_119 {blink_counter[1], blink_counter_cry_c[1], blink_counter_RNO[1]}
+ble_pack blink_counter[2]_LC_130 {blink_counter[2], blink_counter_cry_c[2], blink_counter_RNO[2]}
+ble_pack blink_counter[3]_LC_138 {blink_counter[3], blink_counter_cry_c[3], blink_counter_RNO[3]}
+ble_pack blink_counter[4]_LC_139 {blink_counter[4], blink_counter_cry_c[4], blink_counter_RNO[4]}
+ble_pack blink_counter[5]_LC_140 {blink_counter[5], blink_counter_cry_c[5], blink_counter_RNO[5]}
+ble_pack blink_counter[6]_LC_141 {blink_counter[6], blink_counter_cry_c[6], blink_counter_RNO[6]}
+ble_pack blink_counter[7]_LC_142 {blink_counter[7], blink_counter_cry_c[7], blink_counter_RNO[7]}
+clb_pack PLB_1 {blink_counter[0]_LC_118, blink_counter[1]_LC_119, blink_counter[2]_LC_130, blink_counter[3]_LC_138, blink_counter[4]_LC_139, blink_counter[5]_LC_140, blink_counter[6]_LC_141, blink_counter[7]_LC_142}
+ble_pack blink_counter[8]_LC_143 {blink_counter[8], blink_counter_cry_c[8], blink_counter_RNO[8]}
+ble_pack blink_counter[9]_LC_144 {blink_counter[9], blink_counter_cry_c[9], blink_counter_RNO[9]}
+ble_pack blink_counter[10]_LC_120 {blink_counter[10], blink_counter_cry_c[10], blink_counter_RNO[10]}
+ble_pack blink_counter[11]_LC_121 {blink_counter[11], blink_counter_cry_c[11], blink_counter_RNO[11]}
+ble_pack blink_counter[12]_LC_122 {blink_counter[12], blink_counter_cry_c[12], blink_counter_RNO[12]}
+ble_pack blink_counter[13]_LC_123 {blink_counter[13], blink_counter_cry_c[13], blink_counter_RNO[13]}
+ble_pack blink_counter[14]_LC_124 {blink_counter[14], blink_counter_cry_c[14], blink_counter_RNO[14]}
+ble_pack blink_counter[15]_LC_125 {blink_counter[15], blink_counter_cry_c[15], blink_counter_RNO[15]}
+clb_pack PLB_2 {blink_counter[8]_LC_143, blink_counter[9]_LC_144, blink_counter[10]_LC_120, blink_counter[11]_LC_121, blink_counter[12]_LC_122, blink_counter[13]_LC_123, blink_counter[14]_LC_124, blink_counter[15]_LC_125}
+ble_pack blink_counter[16]_LC_126 {blink_counter[16], blink_counter_cry_c[16], blink_counter_RNO[16]}
+ble_pack blink_counter[17]_LC_127 {blink_counter[17], blink_counter_cry_c[17], blink_counter_RNO[17]}
+ble_pack blink_counter[18]_LC_128 {blink_counter[18], blink_counter_cry_c[18], blink_counter_RNO[18]}
+ble_pack blink_counter[19]_LC_129 {blink_counter[19], blink_counter_cry_c[19], blink_counter_RNO[19]}
+ble_pack blink_counter[20]_LC_131 {blink_counter[20], blink_counter_cry_c[20], blink_counter_RNO[20]}
+ble_pack blink_counter[21]_LC_132 {blink_counter[21], blink_counter_cry_c[21], blink_counter_RNO[21]}
+ble_pack blink_counter[22]_LC_133 {blink_counter[22], blink_counter_cry_c[22], blink_counter_RNO[22]}
+ble_pack blink_counter[23]_LC_134 {blink_counter[23], blink_counter_cry_c[23], blink_counter_RNO[23]}
+clb_pack PLB_3 {blink_counter[16]_LC_126, blink_counter[17]_LC_127, blink_counter[18]_LC_128, blink_counter[19]_LC_129, blink_counter[20]_LC_131, blink_counter[21]_LC_132, blink_counter[22]_LC_133, blink_counter[23]_LC_134}
+ble_pack blink_counter[24]_LC_135 {blink_counter[24], blink_counter_cry_c[24], blink_counter_RNO[24]}
+ble_pack blink_counter[25]_LC_136 {blink_counter[25], blink_counter_cry_c[25], blink_counter_RNO[25]}
+ble_pack blink_counter[26]_LC_137 {blink_counter[26], blink_counter_RNO[26]}
+clb_pack PLB_4 {blink_counter[24]_LC_135, blink_counter[25]_LC_136, blink_counter[26]_LC_137}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_s1_c_LC_177 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_s1_c}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[1]_LC_49 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[1], VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_s1_c, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[1]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_1[2]_LC_50 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_s1_c, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_1[2]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_1[3]_LC_51 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_s1_c, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_1[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_1[4]_LC_52 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_1[4]}
+clb_pack PLB_5 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_s1_c_LC_177, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[1]_LC_49, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_1[2]_LC_50, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_1[3]_LC_51, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_1[4]_LC_52}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_s0_c_LC_178 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_s0_c}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_0[2]_LC_46 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_s0_c, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_0[2]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_0[3]_LC_47 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_s0_c, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_0[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_0[4]_LC_48 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_0[4]}
+clb_pack PLB_6 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_s0_c_LC_178, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_0[2]_LC_46, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_0[3]_LC_47, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO_0[4]_LC_48}
+ble_pack VoxLink_Multinode_Protocol_Inst.un2_vox_sck_counter_cry_1_c_LC_179 {VoxLink_Multinode_Protocol_Inst.un2_vox_sck_counter_cry_1_c}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_sck_counter[1]_LC_108 {VoxLink_Multinode_Protocol_Inst.vox_sck_counter[1], VoxLink_Multinode_Protocol_Inst.un2_vox_sck_counter_cry_2_c, VoxLink_Multinode_Protocol_Inst.vox_sck_counter_RNO[1]}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_sck_counter[2]_LC_109 {VoxLink_Multinode_Protocol_Inst.vox_sck_counter[2], VoxLink_Multinode_Protocol_Inst.un2_vox_sck_counter_cry_3_c, VoxLink_Multinode_Protocol_Inst.vox_sck_counter_RNO[2]}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_sck_counter[3]_LC_110 {VoxLink_Multinode_Protocol_Inst.vox_sck_counter[3], VoxLink_Multinode_Protocol_Inst.un2_vox_sck_counter_cry_4_c, VoxLink_Multinode_Protocol_Inst.vox_sck_counter_RNO[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_sck_counter[4]_LC_111 {VoxLink_Multinode_Protocol_Inst.vox_sck_counter[4], VoxLink_Multinode_Protocol_Inst.un2_vox_sck_counter_cry_5_c, VoxLink_Multinode_Protocol_Inst.vox_sck_counter_RNO[4]}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_sck_counter[5]_LC_112 {VoxLink_Multinode_Protocol_Inst.vox_sck_counter[5], VoxLink_Multinode_Protocol_Inst.un2_vox_sck_counter_cry_6_c, VoxLink_Multinode_Protocol_Inst.vox_sck_counter_RNO[5]}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[1]_LC_102 {VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[1], VoxLink_Multinode_Protocol_Inst.un2_vox_sck_counter_cry_7_c, VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0_RNO[1]}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[2]_LC_103 {VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[2], VoxLink_Multinode_Protocol_Inst.un2_vox_sck_counter_cry_8_c, VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0_RNO[2]}
+clb_pack PLB_7 {VoxLink_Multinode_Protocol_Inst.un2_vox_sck_counter_cry_1_c_LC_179, VoxLink_Multinode_Protocol_Inst.vox_sck_counter[1]_LC_108, VoxLink_Multinode_Protocol_Inst.vox_sck_counter[2]_LC_109, VoxLink_Multinode_Protocol_Inst.vox_sck_counter[3]_LC_110, VoxLink_Multinode_Protocol_Inst.vox_sck_counter[4]_LC_111, VoxLink_Multinode_Protocol_Inst.vox_sck_counter[5]_LC_112, VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[1]_LC_102, VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[2]_LC_103}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[3]_LC_104 {VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[3], VoxLink_Multinode_Protocol_Inst.un2_vox_sck_counter_cry_9_c, VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0_RNO[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[4]_LC_105 {VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[4], VoxLink_Multinode_Protocol_Inst.un2_vox_sck_counter_cry_10_c, VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0_RNO[4]}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[5]_LC_106 {VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[5], VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0_RNO[5]}
+clb_pack PLB_8 {VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[3]_LC_104, VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[4]_LC_105, VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[5]_LC_106}
+ble_pack VoxLink_Multinode_Protocol_Inst.bit_count_r_RNI25C71[3]_LC_0 {VoxLink_Multinode_Protocol_Inst.bit_count_r_RNI25C71[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.bit_count_r[3]_LC_6 {VoxLink_Multinode_Protocol_Inst.bit_count_r[3], VoxLink_Multinode_Protocol_Inst.bit_count_r_RNO[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.bit_count_r[1]_LC_4 {VoxLink_Multinode_Protocol_Inst.bit_count_r[1], VoxLink_Multinode_Protocol_Inst.bit_count_r_RNO[1]}
+ble_pack VoxLink_Multinode_Protocol_Inst.bit_count_r[2]_LC_5 {VoxLink_Multinode_Protocol_Inst.bit_count_r[2], VoxLink_Multinode_Protocol_Inst.bit_count_r_RNO[2]}
+ble_pack VoxLink_Multinode_Protocol_Inst.bit_count_r_RNO_0[3]_LC_3 {VoxLink_Multinode_Protocol_Inst.bit_count_r_RNO_0[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.bit_count_r_RNIF0MJ[1]_LC_1 {VoxLink_Multinode_Protocol_Inst.bit_count_r_RNIF0MJ[1]}
+ble_pack VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_0_LC_116 {VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_packet_r_RNO_0_LC_21 {VoxLink_Multinode_Protocol_Inst.transmit_packet_r_RNO_0}
+clb_pack PLB_9 {VoxLink_Multinode_Protocol_Inst.bit_count_r_RNI25C71[3]_LC_0, VoxLink_Multinode_Protocol_Inst.bit_count_r[3]_LC_6, VoxLink_Multinode_Protocol_Inst.bit_count_r[1]_LC_4, VoxLink_Multinode_Protocol_Inst.bit_count_r[2]_LC_5, VoxLink_Multinode_Protocol_Inst.bit_count_r_RNO_0[3]_LC_3, VoxLink_Multinode_Protocol_Inst.bit_count_r_RNIF0MJ[1]_LC_1, VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_0_LC_116, VoxLink_Multinode_Protocol_Inst.transmit_packet_r_RNO_0_LC_21}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_full_r_RNO_0_LC_19 {VoxLink_Multinode_Protocol_Inst.magic_full_r_RNO_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_counter_r[3]_LC_15 {VoxLink_Multinode_Protocol_Inst.magic_counter_r[3], VoxLink_Multinode_Protocol_Inst.magic_counter_r_RNO[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_full_r_RNIM4TJ2_LC_17 {VoxLink_Multinode_Protocol_Inst.magic_full_r_RNIM4TJ2}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_counter_r[2]_LC_14 {VoxLink_Multinode_Protocol_Inst.magic_counter_r[2], VoxLink_Multinode_Protocol_Inst.magic_counter_r_RNO[2]}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_counter_r[1]_LC_13 {VoxLink_Multinode_Protocol_Inst.magic_counter_r[1], VoxLink_Multinode_Protocol_Inst.magic_counter_r_RNO[1]}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_counter_r[0]_LC_11 {VoxLink_Multinode_Protocol_Inst.magic_counter_r[0], VoxLink_Multinode_Protocol_Inst.magic_counter_r_RNO[0]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer[0]_LC_82 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer[0], VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer_RNO[0]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer[1]_LC_84 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer[1], VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer_RNO[1]}
+clb_pack PLB_10 {VoxLink_Multinode_Protocol_Inst.magic_full_r_RNO_0_LC_19, VoxLink_Multinode_Protocol_Inst.magic_counter_r[3]_LC_15, VoxLink_Multinode_Protocol_Inst.magic_full_r_RNIM4TJ2_LC_17, VoxLink_Multinode_Protocol_Inst.magic_counter_r[2]_LC_14, VoxLink_Multinode_Protocol_Inst.magic_counter_r[1]_LC_13, VoxLink_Multinode_Protocol_Inst.magic_counter_r[0]_LC_11, VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer[0]_LC_82, VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer[1]_LC_84}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[1]_LC_24 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[1], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[1]}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[2]_LC_31 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[2], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[2]}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[3]_LC_32 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[3], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[4]_LC_33 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[4], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[4]}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[5]_LC_34 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[5], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[5]}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[6]_LC_35 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[6], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[6]}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[7]_LC_36 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[7], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[7]}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[8]_LC_37 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[8], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[8]}
+clb_pack PLB_11 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[1]_LC_24, VoxLink_Multinode_Protocol_Inst.transmit_shift_r[2]_LC_31, VoxLink_Multinode_Protocol_Inst.transmit_shift_r[3]_LC_32, VoxLink_Multinode_Protocol_Inst.transmit_shift_r[4]_LC_33, VoxLink_Multinode_Protocol_Inst.transmit_shift_r[5]_LC_34, VoxLink_Multinode_Protocol_Inst.transmit_shift_r[6]_LC_35, VoxLink_Multinode_Protocol_Inst.transmit_shift_r[7]_LC_36, VoxLink_Multinode_Protocol_Inst.transmit_shift_r[8]_LC_37}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[10]_LC_25 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[10], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[10]}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[11]_LC_26 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[11], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[11]}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[12]_LC_27 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[12], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[12]}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[13]_LC_28 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[13], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[13]}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[14]_LC_29 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[14], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[14]}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[15]_LC_30 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[15], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[15]}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[9]_LC_38 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[9], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[9]}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNI6TJG[15]_LC_22 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNI6TJG[15]}
+clb_pack PLB_12 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[10]_LC_25, VoxLink_Multinode_Protocol_Inst.transmit_shift_r[11]_LC_26, VoxLink_Multinode_Protocol_Inst.transmit_shift_r[12]_LC_27, VoxLink_Multinode_Protocol_Inst.transmit_shift_r[13]_LC_28, VoxLink_Multinode_Protocol_Inst.transmit_shift_r[14]_LC_29, VoxLink_Multinode_Protocol_Inst.transmit_shift_r[15]_LC_30, VoxLink_Multinode_Protocol_Inst.transmit_shift_r[9]_LC_38, VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNI6TJG[15]_LC_22}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2_0[4]_LC_40 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2_0[4]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR9FB2[4]_LC_44 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR9FB2[4]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR06U[0]_LC_42 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR06U[0]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[0]_LC_45 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[0], VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[0]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[2]_LC_53 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[2], VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[2]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[3]_LC_54 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[3], VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR3NL1[4]_LC_43 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR3NL1[4]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2[4]_LC_41 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2[4]}
+clb_pack PLB_13 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2_0[4]_LC_40, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR9FB2[4]_LC_44, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR06U[0]_LC_42, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[0]_LC_45, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[2]_LC_53, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[3]_LC_54, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIR3NL1[4]_LC_43, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2[4]_LC_41}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]_LC_55 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4], VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNI4VOJ5[4]_LC_39 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNI4VOJ5[4]}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_full_r_LC_18 {VoxLink_Multinode_Protocol_Inst.magic_full_r, VoxLink_Multinode_Protocol_Inst.magic_full_r_RNO}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_full_r_RNI7JVT_LC_16 {VoxLink_Multinode_Protocol_Inst.magic_full_r_RNI7JVT}
+ble_pack VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_LC_115 {VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r, VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_packet_r_LC_20 {VoxLink_Multinode_Protocol_Inst.transmit_packet_r, VoxLink_Multinode_Protocol_Inst.transmit_packet_r_RNO}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_sck_en_RNICDO01_LC_113 {VoxLink_Multinode_Protocol_Inst.vox_sck_en_RNICDO01}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_clk_internal_r_LC_100 {VoxLink_Multinode_Protocol_Inst.vox_clk_internal_r, VoxLink_Multinode_Protocol_Inst.vox_clk_internal_r_RNO}
+clb_pack PLB_14 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]_LC_55, VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNI4VOJ5[4]_LC_39, VoxLink_Multinode_Protocol_Inst.magic_full_r_LC_18, VoxLink_Multinode_Protocol_Inst.magic_full_r_RNI7JVT_LC_16, VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_LC_115, VoxLink_Multinode_Protocol_Inst.transmit_packet_r_LC_20, VoxLink_Multinode_Protocol_Inst.vox_sck_en_RNICDO01_LC_113, VoxLink_Multinode_Protocol_Inst.vox_clk_internal_r_LC_100}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNI3NJU[7]_LC_56 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNI3NJU[7]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNIKQFH[3]_LC_62 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNIKQFH[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[0]_LC_81 {VoxLink_Multinode_Protocol_Inst.magic_register_r[0], VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer_RNI5GI04[0]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer_RNI46F22[1]_LC_80 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer_RNI46F22[1]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNIGB3R[4]_LC_59 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNIGB3R[4]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNI7LVD[0]_LC_57 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNI7LVD[0]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNIVIJU[6]_LC_63 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNIVIJU[6]}
+clb_pack PLB_15 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNI3NJU[7]_LC_56, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNIKQFH[3]_LC_62, VoxLink_Multinode_Protocol_Inst.magic_register_r[0]_LC_81, VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer_RNI46F22[1]_LC_80, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNIGB3R[4]_LC_59, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNI7LVD[0]_LC_57, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNIVIJU[6]_LC_63}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNI9NVD[1]_LC_58 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNI9NVD[1]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNIKF3R[5]_LC_61 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNIKF3R[5]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[1]_LC_65 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[1], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[1]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[9]_LC_79 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[9], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[9]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[5]_LC_75 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[5], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[5]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[13]_LC_69 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[13], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[13]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[0]_LC_64 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[0], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[0]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[4]_LC_74 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[4], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[4]}
+clb_pack PLB_16 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNI9NVD[1]_LC_58, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNIKF3R[5]_LC_61, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[1]_LC_65, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[9]_LC_79, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[5]_LC_75, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[13]_LC_69, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[0]_LC_64, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[4]_LC_74}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNIIOFH[2]_LC_60 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNIIOFH[2]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[2]_LC_72 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[2], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[2]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[10]_LC_66 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[10], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[10]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[11]_LC_67 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[11], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[11]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[3]_LC_73 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[3], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[6]_LC_76 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[6], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[6]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[14]_LC_70 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[14], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[14]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[15]_LC_71 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[15], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[15]}
+clb_pack PLB_17 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNIIOFH[2]_LC_60, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[2]_LC_72, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[10]_LC_66, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[11]_LC_67, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[3]_LC_73, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[6]_LC_76, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[14]_LC_70, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[15]_LC_71}
+ble_pack led_io_r_RNO_0_LC_146 {led_io_r_RNO_0}
+ble_pack led_io_r_LC_145 {led_io_r, led_io_r_RNO}
+ble_pack led_io_r_RNO_1_LC_147 {led_io_r_RNO_1}
+ble_pack led_io_r_RNO_3_LC_149 {led_io_r_RNO_3}
+ble_pack led_io_r_RNO_2_LC_148 {led_io_r_RNO_2}
+clb_pack PLB_18 {led_io_r_RNO_0_LC_146, led_io_r_LC_145, led_io_r_RNO_1_LC_147, led_io_r_RNO_3_LC_149, led_io_r_RNO_2_LC_148}
+ble_pack led_io_r_RNO_4_LC_150 {led_io_r_RNO_4}
+ble_pack led_io_r_RNO_5_LC_151 {led_io_r_RNO_5}
+ble_pack led_io_r_RNO_6_LC_152 {led_io_r_RNO_6}
+ble_pack led_io_r_RNO_7_LC_153 {led_io_r_RNO_7}
+ble_pack VoxLink_Multinode_Protocol_Inst.frame_counter_r_RNO_0[2]_LC_8 {VoxLink_Multinode_Protocol_Inst.frame_counter_r_RNO_0[2]}
+ble_pack VoxLink_Multinode_Protocol_Inst.frame_counter_r[2]_LC_10 {VoxLink_Multinode_Protocol_Inst.frame_counter_r[2], VoxLink_Multinode_Protocol_Inst.frame_counter_r_RNO[2]}
+ble_pack VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_1_LC_117 {VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_1}
+ble_pack VoxLink_Multinode_Protocol_Inst.frame_counter_r[0]_LC_7 {VoxLink_Multinode_Protocol_Inst.frame_counter_r[0], VoxLink_Multinode_Protocol_Inst.frame_counter_r_RNO[0]}
+clb_pack PLB_19 {led_io_r_RNO_4_LC_150, led_io_r_RNO_5_LC_151, led_io_r_RNO_6_LC_152, led_io_r_RNO_7_LC_153, VoxLink_Multinode_Protocol_Inst.frame_counter_r_RNO_0[2]_LC_8, VoxLink_Multinode_Protocol_Inst.frame_counter_r[2]_LC_10, VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_1_LC_117, VoxLink_Multinode_Protocol_Inst.frame_counter_r[0]_LC_7}
+ble_pack VoxLink_Multinode_Protocol_Inst.frame_counter_r[1]_LC_9 {VoxLink_Multinode_Protocol_Inst.frame_counter_r[1], VoxLink_Multinode_Protocol_Inst.frame_counter_r_RNO[1]}
+ble_pack VoxLink_Multinode_Protocol_Inst.bit_count_r[0]_LC_2 {VoxLink_Multinode_Protocol_Inst.bit_count_r[0], VoxLink_Multinode_Protocol_Inst.bit_count_r_RNO[0]}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_sck_en_RNIJ0OU1_LC_114 {VoxLink_Multinode_Protocol_Inst.vox_sck_en_RNIJ0OU1}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer[2]_LC_85 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer[2], VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer_RNO[2]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer_RNO_0[3]_LC_83 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer_RNO_0[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer[3]_LC_86 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer[3], VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer_RNO[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer[2]_LC_98 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer[2], VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNO[2]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_0[2]_LC_87 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_0[2]}
+clb_pack PLB_20 {VoxLink_Multinode_Protocol_Inst.frame_counter_r[1]_LC_9, VoxLink_Multinode_Protocol_Inst.bit_count_r[0]_LC_2, VoxLink_Multinode_Protocol_Inst.vox_sck_en_RNIJ0OU1_LC_114, VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer[2]_LC_85, VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer_RNO_0[3]_LC_83, VoxLink_Multinode_Protocol_Inst.u_input_fifo.rd_pointer[3]_LC_86, VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer[2]_LC_98, VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_0[2]_LC_87}
+ble_pack VoxLink_Multinode_Protocol_Inst.transmit_shift_r[0]_LC_23 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[0], VoxLink_Multinode_Protocol_Inst.transmit_shift_r_RNO[0]}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_counter_r_RNO_0[3]_LC_12 {VoxLink_Multinode_Protocol_Inst.magic_counter_r_RNO_0[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_0[3]_LC_88 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_0[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_1[3]_LC_90 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_1[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_2[3]_LC_93 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_2[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH[3]_LC_94 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_1[2]_LC_89 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_1[2]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNO_0[3]_LC_96 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNO_0[3]}
+clb_pack PLB_21 {VoxLink_Multinode_Protocol_Inst.transmit_shift_r[0]_LC_23, VoxLink_Multinode_Protocol_Inst.magic_counter_r_RNO_0[3]_LC_12, VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_0[3]_LC_88, VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_1[3]_LC_90, VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_2[3]_LC_93, VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH[3]_LC_94, VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_1[2]_LC_89, VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNO_0[3]_LC_96}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[12]_LC_68 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[12], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[12]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[8]_LC_78 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[8], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[8]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH[2]_LC_91 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH[2]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[7]_LC_77 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[7], VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem_RNO[7]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_2[2]_LC_92 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_2[2]}
+ble_pack u_pll_RNISDD6_0_LC_154 {u_pll_RNISDD6_0}
+ble_pack GB_BUFFER_clk_12mhz_bufg_THRU_LUT4_0_LC_176 {GB_BUFFER_clk_12mhz_bufg_THRU_LUT4_0}
+ble_pack LC_181 {CONSTANT_ONE_LUT4}
+clb_pack PLB_22 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[12]_LC_68, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[8]_LC_78, VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH[2]_LC_91, VoxLink_Multinode_Protocol_Inst.u_input_fifo.mem[7]_LC_77, VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNITMTH_2[2]_LC_92, u_pll_RNISDD6_0_LC_154, GB_BUFFER_clk_12mhz_bufg_THRU_LUT4_0_LC_176, LC_181}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer[3]_LC_99 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer[3], VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNO[3]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer[0]_LC_95 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer[0], VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNO[0]}
+ble_pack VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer[1]_LC_97 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer[1], VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer_RNO[1]}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[0]_LC_101 {VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[0], VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0_RNO[0]}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_sck_counter[0]_LC_107 {VoxLink_Multinode_Protocol_Inst.vox_sck_counter[0], VoxLink_Multinode_Protocol_Inst.vox_sck_counter_RNO[0]}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_sck_en_LC_171 {VoxLink_Multinode_Protocol_Inst.vox_sck_en, VoxLink_Multinode_Protocol_Inst.vox_sck_en_THRU_LUT4_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.vox_in_clk_p_d_LC_170 {VoxLink_Multinode_Protocol_Inst.vox_in_clk_p_d, VoxLink_Multinode_Protocol_Inst.vox_in_clk_p_d_THRU_LUT4_0}
+clb_pack PLB_23 {VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer[3]_LC_99, VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer[0]_LC_95, VoxLink_Multinode_Protocol_Inst.u_input_fifo.wr_pointer[1]_LC_97, VoxLink_Multinode_Protocol_Inst.vox_sck_counter_0[0]_LC_101, VoxLink_Multinode_Protocol_Inst.vox_sck_counter[0]_LC_107, VoxLink_Multinode_Protocol_Inst.vox_sck_en_LC_171, VoxLink_Multinode_Protocol_Inst.vox_in_clk_p_d_LC_170}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[1]_LC_155 {VoxLink_Multinode_Protocol_Inst.magic_register_r[1], VoxLink_Multinode_Protocol_Inst.magic_register_r_1_THRU_LUT4_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[2]_LC_162 {VoxLink_Multinode_Protocol_Inst.magic_register_r[2], VoxLink_Multinode_Protocol_Inst.magic_register_r_2_THRU_LUT4_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[3]_LC_163 {VoxLink_Multinode_Protocol_Inst.magic_register_r[3], VoxLink_Multinode_Protocol_Inst.magic_register_r_3_THRU_LUT4_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[4]_LC_164 {VoxLink_Multinode_Protocol_Inst.magic_register_r[4], VoxLink_Multinode_Protocol_Inst.magic_register_r_4_THRU_LUT4_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[5]_LC_165 {VoxLink_Multinode_Protocol_Inst.magic_register_r[5], VoxLink_Multinode_Protocol_Inst.magic_register_r_5_THRU_LUT4_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[6]_LC_166 {VoxLink_Multinode_Protocol_Inst.magic_register_r[6], VoxLink_Multinode_Protocol_Inst.magic_register_r_6_THRU_LUT4_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[7]_LC_167 {VoxLink_Multinode_Protocol_Inst.magic_register_r[7], VoxLink_Multinode_Protocol_Inst.magic_register_r_7_THRU_LUT4_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[8]_LC_168 {VoxLink_Multinode_Protocol_Inst.magic_register_r[8], VoxLink_Multinode_Protocol_Inst.magic_register_r_8_THRU_LUT4_0}
+clb_pack PLB_24 {VoxLink_Multinode_Protocol_Inst.magic_register_r[1]_LC_155, VoxLink_Multinode_Protocol_Inst.magic_register_r[2]_LC_162, VoxLink_Multinode_Protocol_Inst.magic_register_r[3]_LC_163, VoxLink_Multinode_Protocol_Inst.magic_register_r[4]_LC_164, VoxLink_Multinode_Protocol_Inst.magic_register_r[5]_LC_165, VoxLink_Multinode_Protocol_Inst.magic_register_r[6]_LC_166, VoxLink_Multinode_Protocol_Inst.magic_register_r[7]_LC_167, VoxLink_Multinode_Protocol_Inst.magic_register_r[8]_LC_168}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[10]_LC_156 {VoxLink_Multinode_Protocol_Inst.magic_register_r[10], VoxLink_Multinode_Protocol_Inst.magic_register_r_10_THRU_LUT4_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[11]_LC_157 {VoxLink_Multinode_Protocol_Inst.magic_register_r[11], VoxLink_Multinode_Protocol_Inst.magic_register_r_11_THRU_LUT4_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[12]_LC_158 {VoxLink_Multinode_Protocol_Inst.magic_register_r[12], VoxLink_Multinode_Protocol_Inst.magic_register_r_12_THRU_LUT4_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[13]_LC_159 {VoxLink_Multinode_Protocol_Inst.magic_register_r[13], VoxLink_Multinode_Protocol_Inst.magic_register_r_13_THRU_LUT4_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[14]_LC_160 {VoxLink_Multinode_Protocol_Inst.magic_register_r[14], VoxLink_Multinode_Protocol_Inst.magic_register_r_14_THRU_LUT4_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[15]_LC_161 {VoxLink_Multinode_Protocol_Inst.magic_register_r[15], VoxLink_Multinode_Protocol_Inst.magic_register_r_15_THRU_LUT4_0}
+ble_pack VoxLink_Multinode_Protocol_Inst.magic_register_r[9]_LC_169 {VoxLink_Multinode_Protocol_Inst.magic_register_r[9], VoxLink_Multinode_Protocol_Inst.magic_register_r_9_THRU_LUT4_0}
+clb_pack PLB_25 {VoxLink_Multinode_Protocol_Inst.magic_register_r[10]_LC_156, VoxLink_Multinode_Protocol_Inst.magic_register_r[11]_LC_157, VoxLink_Multinode_Protocol_Inst.magic_register_r[12]_LC_158, VoxLink_Multinode_Protocol_Inst.magic_register_r[13]_LC_159, VoxLink_Multinode_Protocol_Inst.magic_register_r[14]_LC_160, VoxLink_Multinode_Protocol_Inst.magic_register_r[15]_LC_161, VoxLink_Multinode_Protocol_Inst.magic_register_r[9]_LC_169}
+ble_pack vox_clk_cdc_stage_1_LC_172 {vox_clk_cdc_stage_1, vox_clk_cdc_stage_1_THRU_LUT4_0}
+ble_pack vox_clk_cdc_stage_2_LC_173 {vox_clk_cdc_stage_2, vox_clk_cdc_stage_2_THRU_LUT4_0}
+ble_pack vox_rxd_cdc_stage_1_LC_174 {vox_rxd_cdc_stage_1, vox_rxd_cdc_stage_1_THRU_LUT4_0}
+ble_pack vox_rxd_cdc_stage_2_LC_175 {vox_rxd_cdc_stage_2, vox_rxd_cdc_stage_2_THRU_LUT4_0}
+clb_pack PLB_26 {vox_clk_cdc_stage_1_LC_172, vox_clk_cdc_stage_2_LC_173, vox_rxd_cdc_stage_1_LC_174, vox_rxd_cdc_stage_2_LC_175}

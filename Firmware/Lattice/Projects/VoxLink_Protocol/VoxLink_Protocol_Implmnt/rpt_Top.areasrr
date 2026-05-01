@@ -9,26 +9,68 @@ Part:			ICE40UL1KCM36A (Lattice)
 SEQUENTIAL ELEMENTS
 Name      Total elements     Utilization     Notes
 --------------------------------------------------
-FLOPS     32                 100 %                
+FLOPS     122                100 %                
 ==================================================
-Total SEQUENTIAL ELEMENTS in the block Top:	32 (29.91 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block Top:	122 (35.99 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name       Total elements     Utilization     Notes
 ---------------------------------------------------
-LUTS       37                 100 %                
-CARRYS     26                 100 %                
+LUTS       155                100 %                
+CARRYS     43                 100 %                
 ===================================================
-Total COMBINATIONAL LOGIC in the block Top:	63 (58.88 % Utilization)
+Total COMBINATIONAL LOGIC in the block Top:	198 (58.41 % Utilization)
 
 
 IO PADS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-PADS     6                  100 %                
+PADS     9                  100 %                
 =================================================
-Total IO PADS in the block Top:	6 (5.61 % Utilization)
+Total IO PADS in the block Top:	9 (2.65 % Utilization)
+
+---------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   VoxLink_Multinode_Protocol_100500000s_400000s_125s_1923_7   ########
+Instance path:   Top.VoxLink_Multinode_Protocol_100500000s_400000s_125s_1923_7                                 
+===============================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+FLOPS     90                 73.8 %               
+==================================================
+Total SEQUENTIAL ELEMENTS in the block Top.VoxLink_Multinode_Protocol_100500000s_400000s_125s_1923_7:	90 (26.55 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+LUTS       118                76.1 %               
+CARRYS     17                 39.5 %               
+===================================================
+Total COMBINATIONAL LOGIC in the block Top.VoxLink_Multinode_Protocol_100500000s_400000s_125s_1923_7:	135 (39.82 % Utilization)
+
+-----------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   VoxLink_Reg_FIFO_16s_4s_5s   ########                     
+Instance path:   VoxLink_Multinode_Protocol_100500000s_400000s_125s_1923_7.VoxLink_Reg_FIFO_16s_4s_5s
+=====================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+FLOPS     29                 23.8 %               
+==================================================
+Total SEQUENTIAL ELEMENTS in the block VoxLink_Multinode_Protocol_100500000s_400000s_125s_1923_7.VoxLink_Reg_FIFO_16s_4s_5s:	29 (8.55 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+LUTS       61                 39.4 %               
+CARRYS     7                  16.3 %               
+===================================================
+Total COMBINATIONAL LOGIC in the block VoxLink_Multinode_Protocol_100500000s_400000s_125s_1923_7.VoxLink_Reg_FIFO_16s_4s_5s:	68 (20.06 % Utilization)
 
 
 ##### END OF AREA REPORT #####]

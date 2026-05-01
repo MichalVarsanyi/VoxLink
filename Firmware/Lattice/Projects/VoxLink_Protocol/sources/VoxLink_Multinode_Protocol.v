@@ -21,7 +21,7 @@ module VoxLink_Multinode_Protocol #(
 );
 
 //--------------------------------------------------------------------------------------------- //
-//  Clock (Rising) Edge Detection
+//  Clock (Rising) Edge Detection  [CD — implemented here in top]
 //--------------------------------------------------------------------------------------------- //
 
     reg vox_in_clk_p_d;
@@ -29,13 +29,44 @@ module VoxLink_Multinode_Protocol #(
     always @(posedge sys_clk)
     begin
         if (sys_rst)
-            vox_in_clk_p_d <= 1'b1;        // input idle HIGH
+            vox_in_clk_p_d <= 1'b0;
         else
             vox_in_clk_p_d <= vox_in_clk_p;
     end
 
     wire clk_in_rising  = ~vox_in_clk_p_d &  vox_in_clk_p;
     wire clk_in_falling =  vox_in_clk_p_d & ~vox_in_clk_p;
+
+//--------------------------------------------------------------------------------------------- //
+// FIFO — bit buffer between CD and magic buffer
+//--------------------------------------------------------------------------------------------- //
+
+    wire fifo_full;
+    wire fifo_empty;
+    wire fifo_rd_bit;
+
+    // Write one bit on every detected rising edge of the input clock
+    wire fifo_wr_en  = clk_in_rising;
+    wire fifo_wr_bit = vox_in_rxd_p;
+
+    // Read declared as wire; driven combinatorially after magic_full_r is declared below
+    wire fifo_rd_en;
+
+    VoxLink_Reg_FIFO #(
+        // WARNING! FIFO_DEPTH VALUE MUST THE POWER OF 2!!!
+        .FIFO_DEPTH(16)
+    ) u_input_fifo (
+        .sys_clk          (sys_clk),
+        .sys_rst          (sys_rst),
+        .wr_en            (fifo_wr_en),
+        .wr_bit           (fifo_wr_bit),
+        .fifo_full        (fifo_full),
+        .rd_en            (fifo_rd_en),
+        .rd_bit           (fifo_rd_bit),
+        .fifo_empty       (fifo_empty),
+        .overflow_sticky  (),
+        .underflow_sticky ()
+    );
 
 //--------------------------------------------------------------------------------------------- //
 // Setting up VoxLink SCK
@@ -69,130 +100,95 @@ module VoxLink_Multinode_Protocol #(
         end
     end
 
-//--------------------------------------------------------------------------------------------- //
-// Magic 16-bit Shift Register
-//--------------------------------------------------------------------------------------------- //
 
-    reg [15:0]  magic_register_r;
-    reg [3:0]   magic_counter_r;
-    reg         magic_valid_r;
-
-    always @(posedge sys_clk or posedge sys_rst)
-    begin
-        if (sys_rst)
-        begin
-            magic_register_r <= {16{1'b0}};
-            magic_counter_r  <= {4{1'b0}};
-            magic_valid_r    <= 1'b0;
-        end
-        else
-        begin
-            magic_valid_r <= 1'b0;
-
-            if (clk_in_rising == 1)
-            begin
-                magic_register_r <= {magic_register_r[14:0], vox_in_rxd_p};
-
-                if (magic_counter_r == 15)
-                begin
-                    magic_counter_r <= {4{1'b0}};
-                    magic_valid_r   <= 1'b1;
-                end
-                else
-                    magic_counter_r <= magic_counter_r + 1;
-            end
-        end
-    end
-
-//--------------------------------------------------------------------------------------------- //
-// Transmit Loop
-// Packet = 7 x 16-bit chunks: [magic | timestamp | data(x4) | CRC]
-// Output clock idles LOW. Starts on first magic_valid_r, stops after 7th chunk.
-//--------------------------------------------------------------------------------------------- //
-
-    // Number of frames within a packet
     localparam PACKET_FRAMES = 3'd7;
 
-    // Flag for transmitting - when high, undergoing transmission
-    reg         transmit_packet_r;
+    // Magic buffer
+    reg [15:0]  magic_register_r;
+    reg [3:0]   magic_counter_r;
+    reg         magic_full_r;       // level: 1 = 16 bits ready, waiting for transmitter
 
-    // Frame and bit counters
+    // Transmit
+    reg         transmit_packet_r;
     reg [2:0]   frame_counter_r;
     reg [3:0]   bit_count_r;
-
-    // Transmitting shift register
     reg [15:0]  transmit_shift_r;
-
-    // Internal clocking signal
     reg         vox_clk_internal_r;
+    reg         wait_for_chunk_r;  // stretch: clock held LOW until magic_full_r
 
+    // Magic buffer is hungry whenever it is not full — drives FIFO read continuously
+    assign fifo_rd_en = !magic_full_r && !fifo_empty;
 
-    // Drive the output clock with the internal register
+    // Clock on N line, data MSB-first on P line
     assign vox_out_rxd_n = vox_clk_internal_r;
-
-    // Output bit transmission, if transmit_packet_r is high, we assign the MSB, else its 0
-    assign vox_out_rxd_p = transmit_packet_r ? transmit_shift_r[15] : 1'b0;  // MSB-first
+    assign vox_out_rxd_p = transmit_packet_r ? transmit_shift_r[15] : 1'b0;
 
     always @(posedge sys_clk or posedge sys_rst)
     begin
         if (sys_rst)
         begin
-            // Flags
-            transmit_packet_r      <= 1'b0;
-
-            // Counters
+            magic_register_r   <= 16'd0;
+            magic_counter_r    <= 4'd0;
+            magic_full_r       <= 1'b0;
+            transmit_packet_r  <= 1'b0;
             frame_counter_r    <= 3'd0;
-            bit_count_r      <= 4'd0;
-
-            // Internal shift register
-            transmit_shift_r <= 16'd0;
-
-            // Internal clock
-            vox_clk_internal_r    <= 1'b0;
+            bit_count_r        <= 4'd0;
+            transmit_shift_r   <= 16'd0;
+            vox_clk_internal_r <= 1'b0;
+            wait_for_chunk_r   <= 1'b0;
         end
         else
         begin
-            // Transmission circuit - only drive clock when transmit flag is high,
-            // and if there is a pulse from the SCK generator
-            if (transmit_packet_r && vox_sck_en)
+            if (!magic_full_r && !fifo_empty)
+            begin
+                magic_register_r <= {magic_register_r[14:0], fifo_rd_bit};
+
+                if (magic_counter_r == 4'd15)
+                begin
+                    magic_counter_r <= 4'd0;
+                    magic_full_r    <= 1'b1;
+                end
+                else
+                    magic_counter_r <= magic_counter_r + 4'd1;
+            end
+
+            if (transmit_packet_r && vox_sck_en && !wait_for_chunk_r)
             begin
                 if (vox_clk_internal_r == 1'b0)
                 begin
-                    vox_clk_internal_r <= 1'b1;      // Rising edge: receiver samples here
+                    vox_clk_internal_r <= 1'b1;
                 end
                 else
                 begin
-                    vox_clk_internal_r    <= 1'b0;   // Falling edge: prepare next data
-                    transmit_shift_r <= {transmit_shift_r[14:0], 1'b0};
-                    bit_count_r      <= bit_count_r + 4'd1;
+                    vox_clk_internal_r <= 1'b0;
+                    transmit_shift_r   <= {transmit_shift_r[14:0], 1'b0};
+                    bit_count_r        <= bit_count_r + 4'd1;
 
-                    // If everything has been transmitted
-                    if ((bit_count_r == 4'd15) && (frame_counter_r == PACKET_FRAMES))
+                    if (bit_count_r == 4'd15)
                     begin
-                        // We idle
-                        transmit_packet_r <= 1'b0;
+                        if (frame_counter_r == PACKET_FRAMES)
+                            transmit_packet_r <= 1'b0;
+                        else
+                            wait_for_chunk_r  <= 1'b1;  // hold clock LOW until next chunk ready
                     end
                 end
             end
 
-            // Loading the buffered data into the transmit register
-            if (magic_valid_r)
+            if (magic_full_r && (!transmit_packet_r || wait_for_chunk_r))
             begin
                 transmit_shift_r <= magic_register_r;
+                magic_full_r     <= 1'b0;
                 bit_count_r      <= 4'd0;
+                wait_for_chunk_r <= 1'b0;
 
-                if (transmit_packet_r == 0)
+                if (!transmit_packet_r)
                 begin
-                    // We set trigger the transmission flag
-                    transmit_packet_r   <= 1'b1;
-
-                    // We reset the frame counter here
-                    frame_counter_r <= 3'd1;      // chunk 1 = magic header
+                    transmit_packet_r <= 1'b1;
+                    frame_counter_r   <= 3'd1;
                 end
                 else
                     frame_counter_r <= frame_counter_r + 3'd1;
             end
         end
     end
-
 endmodule

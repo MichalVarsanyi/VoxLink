@@ -6,7 +6,7 @@
 
 * Build Date:         Dec  9 2020 17:31:51
 
-* File Generated:     Apr 29 2026 16:14:10
+* File Generated:     May 1 2026 18:31:04
 
 * Purpose:            Detailed IO and package pin info
 
@@ -22,7 +22,7 @@ Pin Number, Pin Type Name, Signal Name, Direction, Global Buffer, IO Standard, P
 A1, PIO_RGB, not used, , , , , , , topBank
 A2, PIO_RGB, led_io, Output, ,SB_LVCMOS, No Pull Up, , RGB0 Output, topBank
 A3, PIO, not used, , , , , , , topBank
-A4, PIO, not used, , , , , , , topBank
+A4, PIO, vox_in_rxd_p, Input, , SB_LVCMOS, No Pull Up, , Simple Input, topBank
 A5, PIO_BARCODE, not used, , , , , , , topBank
 A6, PIO_LED, not used, , , , , , , topBank
 B1, PIO_RGB, not used, , , , , , , topBank
@@ -30,7 +30,7 @@ B2, PIO, not used, , , , , , , topBank
 B3, VCCIO_0, not used, , , , , , , topBank
 B4, VPP, not used, , , , , , , topBank
 B5, PIO, not used, , , , , , , topBank
-B6, PIO_GBIN, not used, , , , , , , topBank
+B6, PIO_GBIN, vox_in_clk_p, Input, , SB_LVCMOS, No Pull Up, , Simple Input, topBank
 C1, PIO, not used, , , , , , , bottomBank
 C2, PIO, not used, , , , , , , topBank
 C3, GND, not used, , , , , , , UnknownBank
@@ -55,4 +55,4 @@ F3, PIO_GBIN, vox_out_rxd_p, Output, , SB_LVCMOS, No Pull Up, , Simple Output, b
 F4, CRESET_B, not used, , , , , , , bottomBank
 F5, SPI_SS_B, not used, , , , , , , bottomBank
 F6, SPI_SO, not used, , , , , , , bottomBank
-Total Number of Used Pins, 4
+Total Number of Used Pins, 6

@@ -14,8 +14,8 @@ POLL_ADDRESS = 67           # Decimal 67 (0x43)
 # The read request: 1-byte write-flag (0) + 1-byte address
 READ_PACKET = bytes([0x00, POLL_ADDRESS])
 
-# New VoxLink packet format, 112 bits = 14 bytes, transmitted MSB-first:
-#   Address(12) | Timestamp(12) | Command(8) | Data(64) | CRC(16)
+# VoxLink packet format, 112 bits = 14 bytes, transmitted MSB-first:
+#   addr(10) | cmd(6) | timestamp(16) | data(64) | CRC(16)
 PACKET_BYTES = 14
 Q14_SCALE    = 16384.0
 
@@ -81,9 +81,9 @@ def update_plot(frame):
         # 3. The FPGA shifts MSB-first, so the first byte is packet[111:104].
         #    Unpack the 112-bit integer and slice the fields.
         packet_int = int.from_bytes(reply, 'big')
-        address   = (packet_int >> 100) & 0xFFF
-        timestamp = (packet_int >> 88)  & 0xFFF
-        command   = (packet_int >> 80)  & 0xFF
+        address   = (packet_int >> 102) & 0x3FF
+        command   = (packet_int >> 96)  & 0x3F
+        timestamp = (packet_int >> 80)  & 0xFFFF
         crc       =  packet_int         & 0xFFFF
 
         # 4. Data field = bytes 4..11 of the packet. Match the old '<hh' byte order

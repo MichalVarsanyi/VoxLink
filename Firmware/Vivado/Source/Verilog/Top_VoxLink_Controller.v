@@ -40,9 +40,9 @@ module Top
     // input  wire P2_CLK_P, P2_CLK_N,
 
     // P3 Differential Pairs
-    // input P3_TX_P, P3_TX_N,
-    // input  wire P3_RX_P, P3_RX_N,
-    // input  wire P3_CLK_P, P3_CLK_N,
+    // input  P3_TX_P, P3_TX_N,
+    output  P3_RX_P,  //P3_RX_N,
+    output  P3_CLK_P, // P3_CLK_N,
 
     // // P4 Differential Pairs
     // output wire P4_TX_P, P4_TX_N,
@@ -465,7 +465,87 @@ module Top
                     crc_verified_data_valid_r   <= 1'b1;
                 end
             end
-
-            
         end
+
+//--------------------------------------------------------------------------------------------- //
+//  VoxLink Dummy Packet Transmitter
+//  addr=0x001 cmd=0x02 ts=0xABCD data=0xDEADBEEFCAFEBABE crc=0x759D
+//  P3_RX_N → Lattice vox_in_clk_p (clock, idle HIGH)
+//  P3_RX_P → Lattice vox_in_rxd_p (data)
+//--------------------------------------------------------------------------------------------- //
+
+    localparam [111:0] TX_PACKET     = {10'h001, 6'h02, 16'hABCD, 64'hDEAD_BEEF_CAFE_BABE, 16'h759D};
+    localparam         TX_DIVIDER    = (252_000_000 / 400_000) / 2;  // 315
+    localparam         TX_RELOAD_VAL = 12'h800 - TX_DIVIDER;          // 1733
+
+    reg [11:0]  tx_sck_ctr;
+    reg         tx_sck_en;
+
+    always @(posedge sys_clk or posedge sys_rst)
+    begin
+        if (sys_rst) begin tx_sck_ctr <= TX_RELOAD_VAL; tx_sck_en <= 1'b0; end
+        else begin
+            if (tx_sck_ctr[11]) begin tx_sck_ctr <= TX_RELOAD_VAL; tx_sck_en <= 1'b1; end
+            else                 begin tx_sck_ctr <= tx_sck_ctr + 12'd1; tx_sck_en <= 1'b0; end
+        end
+    end
+
+    reg [24:0]  tx_period_ctr;
+    reg [111:0] tx_shift_r;
+    reg [6:0]   tx_bit_cnt;
+    reg         tx_active;
+    reg         tx_clk_r;
+    reg         tx_data_r;
+
+    assign P3_CLK_P = tx_clk_r;
+    assign P3_RX_P  = tx_data_r;
+
+    always @(posedge sys_clk or posedge sys_rst)
+    begin
+        if (sys_rst)
+        begin
+            tx_period_ctr <= {25{1'b1}};
+            tx_shift_r    <= {112{1'b0}};
+            tx_bit_cnt    <= 7'd0;
+            tx_active     <= 1'b0;
+            tx_clk_r      <= 1'b0;
+            tx_data_r     <= 1'b0;
+        end
+        else
+        begin
+            tx_period_ctr <= tx_period_ctr - 25'd1;
+
+            if (tx_period_ctr == 25'd0 && !tx_active)
+            begin
+                tx_active  <= 1'b1;
+                tx_data_r  <= TX_PACKET[111];
+                tx_shift_r <= {TX_PACKET[110:0], 1'b0};
+                tx_bit_cnt <= 7'd1;
+            end
+
+            if (tx_active && tx_sck_en)
+            begin
+                if (!tx_clk_r)
+                begin
+                    tx_clk_r <= 1'b1;
+                end
+                else
+                begin
+                    tx_clk_r <= 1'b0;
+                    if (tx_bit_cnt == 7'd112)
+                    begin
+                        tx_active <= 1'b0;
+                        tx_data_r <= 1'b0;
+                    end
+                    else
+                    begin
+                        tx_data_r  <= tx_shift_r[111];
+                        tx_shift_r <= {tx_shift_r[110:0], 1'b0};
+                        tx_bit_cnt <= tx_bit_cnt + 7'd1;
+                    end
+                end
+            end
+        end
+    end
+
 endmodule
