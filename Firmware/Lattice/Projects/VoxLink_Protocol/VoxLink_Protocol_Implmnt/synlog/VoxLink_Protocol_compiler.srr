@@ -15,9 +15,7 @@ Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys softwa
 @I::"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Multinode_Protocol.v" (library work)
 @I::"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Reg_FIFO.v" (library work)
 Verilog syntax check successful!
-File C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v changed - recompiling
 File C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Multinode_Protocol.v changed - recompiling
-File C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Reg_FIFO.v changed - recompiling
 Selecting top level module Top
 @N: CG364 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v":578:7:578:11|Synthesizing module SB_GB in library work.
 
@@ -44,6 +42,7 @@ Selecting top level module Top
 	PACKET_FRAMES=3'b111
    Generated name = VoxLink_Multinode_Protocol_100500000s_400000s_32s_8032s_125s_1923_7_Z1
 
+@W: CL169 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Multinode_Protocol.v":172:4:172:9|Pruning unused register node_addr_r[9:0]. Make sure that there are no unused intermediate registers.
 @N: CG364 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v":4120:7:4120:17|Synthesizing module SB_RGBA_DRV in library work.
 
 @N: CG364 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":21:7:21:9|Synthesizing module Top in library work.
@@ -57,12 +56,12 @@ Selecting top level module Top
 @W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":197:16:197:16|Input RGB2PWM on instance led_driver is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
 @A: CL282 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":210:4:210:9|Feedback mux created for signal blink_counter[26:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
 
-At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 72MB peak: 75MB)
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 72MB peak: 78MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sat May 02 14:10:09 2026
+# Sat May 02 18:21:50 2026
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
@@ -75,16 +74,16 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sat May 02 14:10:09 2026
+# Sat May 02 18:21:50 2026
 
 ###########################################################]
 @END
 
-At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 4MB peak: 4MB)
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 4MB peak: 4MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sat May 02 14:10:09 2026
+# Sat May 02 18:21:50 2026
 
 ###########################################################]

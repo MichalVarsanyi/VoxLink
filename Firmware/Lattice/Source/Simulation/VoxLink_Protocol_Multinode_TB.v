@@ -39,18 +39,14 @@ module tb_VoxLink_Multinode_Protocol_50in_49out;
         forever #(SYS_HALF_PERIOD_NS) sys_clk = ~sys_clk;
     end
 
-    reg [15:0] test_packet_0;
-    reg [15:0] test_packet_1;
-    reg [15:0] test_packet_2;
+    reg [111:0] init_packet;
 
     integer i;
 
     initial begin
         IN_HALF_PERIOD_NS = 1.0e9 / (2.0 * IN_FREQ_HZ);
 
-        test_packet_0 = 16'hFF00;
-        test_packet_1 = 16'hA55A;
-        test_packet_2 = 16'h1234;
+        init_packet = 112'h0001_0000_0080_0000_0000_0000_0000;
 
         sys_rst      = 1'b1;
         vox_in_clk_p = 1'b0;
@@ -63,9 +59,9 @@ module tb_VoxLink_Multinode_Protocol_50in_49out;
 
         repeat (10) @(posedge sys_clk);
 
-        for (i = 15; i >= 0; i = i - 1) begin
+        for (i = 111; i >= 0; i = i - 1) begin
             vox_in_clk_p = 1'b0;
-            vox_in_rxd_p = test_packet_0[i];
+            vox_in_rxd_p = init_packet[i];
 
             #(IN_HALF_PERIOD_NS);
 
@@ -77,39 +73,7 @@ module tb_VoxLink_Multinode_Protocol_50in_49out;
         vox_in_clk_p = 1'b0;
         vox_in_rxd_p = 1'b0;
 
-        repeat (10) @(posedge sys_clk);
-
-        for (i = 15; i >= 0; i = i - 1) begin
-            vox_in_clk_p = 1'b0;
-            vox_in_rxd_p = test_packet_1[i];
-
-            #(IN_HALF_PERIOD_NS);
-
-            vox_in_clk_p = 1'b1;
-
-            #(IN_HALF_PERIOD_NS);
-        end
-
-        vox_in_clk_p = 1'b0;
-        vox_in_rxd_p = 1'b0;
-
-        repeat (10) @(posedge sys_clk);
-
-        for (i = 15; i >= 8; i = i - 1) begin
-            vox_in_clk_p = 1'b0;
-            vox_in_rxd_p = test_packet_2[i];
-
-            #(IN_HALF_PERIOD_NS);
-
-            vox_in_clk_p = 1'b1;
-
-            #(IN_HALF_PERIOD_NS);
-        end
-
-        vox_in_clk_p = 1'b0;
-        vox_in_rxd_p = 1'b0;
-
-        repeat (400) @(posedge sys_clk);
+        repeat (2000) @(posedge sys_clk);
 
     end
 

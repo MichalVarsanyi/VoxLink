@@ -253,16 +253,16 @@ set_property IOSTANDARD LVCMOS33 [get_ports SERIAL_D1]
 
 set_property PACKAGE_PIN J4 [get_ports P2_RX_P]
 set_property IOSTANDARD LVCMOS33 [get_ports P2_RX_P]
-set_property PACKAGE_PIN H4 [get_ports P2_RX_N]
-set_property IOSTANDARD LVCMOS33 [get_ports P2_RX_N]
+# set_property PACKAGE_PIN H4 [get_ports P2_RX_N]
+# set_property IOSTANDARD LVCMOS33 [get_ports P2_RX_N]
 
 # set_property PACKAGE_PIN J3 [get_ports P2_TX_P]
 # set_property IOSTANDARD LVCMOS33 [get_ports P2_TX_P]
 # set_property PACKAGE_PIN J2 [get_ports P2_TX_N]
 # set_property IOSTANDARD LVCMOS33 [get_ports P2_TX_N]
 
-# set_property PACKAGE_PIN K2 [get_ports P2_CLK_P]
-# set_property IOSTANDARD LVCMOS33 [get_ports P2_CLK_P]
+set_property PACKAGE_PIN K2 [get_ports P2_CLK_P]
+set_property IOSTANDARD LVCMOS33 [get_ports P2_CLK_P]
 # set_property PACKAGE_PIN K1 [get_ports P2_CLK_N]
 # set_property IOSTANDARD LVCMOS33 [get_ports P2_CLK_N]
 

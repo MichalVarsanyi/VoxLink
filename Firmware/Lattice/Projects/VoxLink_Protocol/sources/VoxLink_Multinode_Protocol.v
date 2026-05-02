@@ -10,14 +10,14 @@ module VoxLink_Multinode_Protocol #(
     input       vox_in_clk_p,
     // input       vox_in_clk_n,
 
-    // output      vox_out_clk_p,
+    output      vox_out_clk_p,
     // output      vox_out_clk_n,
 
     input       vox_in_rxd_p,
     // input       vox_in_rxd_n,
 
-    output      vox_out_rxd_p,
-    output      vox_out_rxd_n
+    output      vox_out_rxd_p
+    // output      vox_out_rxd_n
 );
 
 //--------------------------------------------------------------------------------------------- //
@@ -47,17 +47,30 @@ module VoxLink_Multinode_Protocol #(
     localparam TIMEOUT_CYCLES = TIMEOUT_CLOCKS * (CLK_FREQ / VOX_FREQ);
 
     reg [15:0] timeout_counter_r;
-
-    wire timeout_pulse = (timeout_counter_r == TIMEOUT_CYCLES - 1);
+    reg        timeout_pulse;
 
     always @(posedge sys_clk or posedge sys_rst)
     begin
         if (sys_rst)
+        begin
             timeout_counter_r <= 16'd0;
+            timeout_pulse     <= 1'b0;
+        end
         else if (clk_in_rising || timeout_pulse)
+        begin
             timeout_counter_r <= 16'd0;
+            timeout_pulse     <= 1'b0;
+        end
+        else if (timeout_counter_r == TIMEOUT_CYCLES - 1)
+        begin
+            timeout_counter_r <= 16'd0;
+            timeout_pulse     <= 1'b1;
+        end
         else
+        begin
             timeout_counter_r <= timeout_counter_r + 16'd1;
+            timeout_pulse     <= 1'b0;
+        end
     end
 
 //--------------------------------------------------------------------------------------------- //
@@ -145,11 +158,14 @@ module VoxLink_Multinode_Protocol #(
     reg         vox_clk_internal_r;
     reg         wait_for_chunk_r;  // stretch: clock held LOW until magic_full_r
 
+    reg         init_mode_active_r;
+    reg [9:0]   node_addr_r;
+
     // Magic buffer is hungry whenever it is not full — drives FIFO read continuously
     assign fifo_rd_en = !magic_full_r && !fifo_empty;
 
     // Assign the internal clocking signal to the output
-    assign vox_out_rxd_n = vox_clk_internal_r;
+    assign vox_out_clk_p = vox_clk_internal_r;
     // Assign the RXD output as the last bit in the transmit_shift_r register
     assign vox_out_rxd_p = transmit_packet_r ? transmit_shift_r[15] : 1'b0;
 
@@ -166,6 +182,8 @@ module VoxLink_Multinode_Protocol #(
             transmit_shift_r   <= 16'd0;
             vox_clk_internal_r <= 1'b0;
             wait_for_chunk_r   <= 1'b0;
+            init_mode_active_r <= 1'b0;
+            node_addr_r        <= 10'd0;
         end
         else if (timeout_pulse)
         begin
@@ -178,6 +196,7 @@ module VoxLink_Multinode_Protocol #(
             transmit_shift_r   <= 16'd0;
             vox_clk_internal_r <= 1'b0;
             wait_for_chunk_r   <= 1'b0;
+            init_mode_active_r <= 1'b0;
         end
         else
         begin
@@ -209,7 +228,10 @@ module VoxLink_Multinode_Protocol #(
                     if (bit_count_r == 4'd15)
                     begin
                         if (frame_counter_r == PACKET_FRAMES)
-                            transmit_packet_r <= 1'b0;
+                        begin
+                            transmit_packet_r  <= 1'b0;
+                            init_mode_active_r <= 1'b0;
+                        end
                         else
                             wait_for_chunk_r  <= 1'b1;  // hold clock LOW until next chunk ready
                     end
@@ -218,18 +240,29 @@ module VoxLink_Multinode_Protocol #(
 
             if (magic_full_r && (!transmit_packet_r || wait_for_chunk_r))
             begin
-                transmit_shift_r <= magic_register_r;
                 magic_full_r     <= 1'b0;
                 bit_count_r      <= 4'd0;
                 wait_for_chunk_r <= 1'b0;
 
                 if (!transmit_packet_r)
                 begin
-                    transmit_packet_r <= 1'b1;
-                    frame_counter_r   <= 3'd1;
+                    transmit_packet_r  <= 1'b1;
+                    frame_counter_r    <= 3'd1;
+                    init_mode_active_r <= (magic_register_r == 16'h0001) && (frame_counter_r == 3'd0);
+                    transmit_shift_r   <= magic_register_r;
                 end
                 else
+                begin
                     frame_counter_r <= frame_counter_r + 3'd1;
+
+                    if (frame_counter_r == 3'd2 && init_mode_active_r)
+                    begin
+                        node_addr_r     <= magic_register_r[15:6];
+                        transmit_shift_r <= {magic_register_r[15:6] + 10'd1, 6'b0};
+                    end
+                    else
+                        transmit_shift_r <= magic_register_r;
+                end
             end
         end
     end

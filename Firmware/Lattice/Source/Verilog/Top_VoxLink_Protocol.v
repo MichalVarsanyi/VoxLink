@@ -35,14 +35,14 @@ module Top(
     input       vox_in_clk_p,
     // input       vox_in_clk_n,
 
-    // input       vox_out_clk_p,
-    // input       vox_out_clk_n,
+    output      vox_out_clk_p,
+    // output      vox_out_clk_n,
 
     input       vox_in_rxd_p,
     // input       vox_in_rxd_n,
 
-    output      vox_out_rxd_p,
-    output      vox_out_rxd_n
+    output      vox_out_rxd_p
+    // output      vox_out_rxd_n
 );
 
 //--------------------------------------------------------------------------------------------- //       
@@ -176,7 +176,7 @@ module Top(
         .vox_in_rxd_p   (vox_rxd_sync),
 
         .vox_out_rxd_p  (vox_out_rxd_p),
-        .vox_out_rxd_n  (vox_out_rxd_n)
+        .vox_out_clk_p  (vox_out_clk_p)
     );
 
 //--------------------------------------------------------------------------------------------- //       

@@ -36,8 +36,8 @@ module Top
 
     // // P2 Differential Pairs
     // output wire P2_TX_P, P2_TX_N,
-    input P2_RX_P, P2_RX_N,
-    // input  wire P2_CLK_P, P2_CLK_N,
+    input P2_RX_P, // P2_RX_N,
+    input P2_CLK_P, // P2_CLK_N,
 
     // P3 Differential Pairs
     // input  P3_TX_P, P3_TX_N,
@@ -198,7 +198,7 @@ module Top
     // Drive the async bus with the raw top-level pins so the CDC has an
     // actual signal to synchronize. {P, N} → cdc[1] = P, cdc[0] = N to
     // match the P3_TX_P_cdc / P3_TX_N_cdc unpack below.
-    assign p3_tx_async = {P2_RX_P, P2_RX_N};
+    assign p3_tx_async = {P2_RX_P, P2_CLK_P};
 
     xpm_cdc_array_single
     #(
@@ -474,7 +474,7 @@ module Top
 //  P3_RX_P → Lattice vox_in_rxd_p (data)
 //--------------------------------------------------------------------------------------------- //
 
-    localparam [111:0] TX_PACKET     = {10'h001, 6'h02, 16'hABCD, 64'hDEAD_BEEF_CAFE_BABE, 16'h759D};
+    localparam [111:0] TX_PACKET     = {10'd0, 6'd1, 16'h0000, 64'h0000_0000_0000_0000, 16'h0000};
     localparam         TX_DIVIDER    = (252_000_000 / 400_000) / 2;  // 315
     localparam         TX_RELOAD_VAL = 12'h800 - TX_DIVIDER;          // 1733
 

@@ -6,7 +6,7 @@
 
 * Build Date:         Dec  9 2020 17:31:51
 
-* File Generated:     May 2 2026 14:10:37
+* File Generated:     May 2 2026 18:22:09
 
 * Purpose:            General info of design implementation
 
@@ -27,8 +27,8 @@ Device Info:
 
 Design statistics:
 ------------------
-    FFs:                  138
-    LUTs:                 225
+    FFs:                  140
+    LUTs:                 266
     RAMs:                 0
     IOBs:                 5
     GBs:                  4
@@ -46,12 +46,12 @@ Design statistics:
 
 Logic Resource Utilization:
 ---------------------------
-    Total Logic Cells: 226/1248
-        Combinational Logic Cells: 88       out of   1248      7.05128%
-        Sequential Logic Cells:    138      out of   1248      11.0577%
-        Logic Tiles:               46       out of   156       29.4872%
+    Total Logic Cells: 268/1248
+        Combinational Logic Cells: 128      out of   1248      10.2564%
+        Sequential Logic Cells:    140      out of   1248      11.2179%
+        Logic Tiles:               53       out of   156       33.9744%
     Registers: 
-        Logic Registers:           138      out of   1248      11.0577%
+        Logic Registers:           140      out of   1248      11.2179%
         IO Registers:              0        out of   240       0
     Block RAMs:                    0        out of   14        0%
     Warm Boots:                    0        out of   1         0%
@@ -75,8 +75,8 @@ IO Bank Utilization:
 --------------------
     Bank 3: 0        out of   0         0%
     Bank 1: 0        out of   0         0%
-    Bank 0: 2        out of   12        16.6667%
-    Bank 2: 3        out of   14        21.4286%
+    Bank 0: 3        out of   12        25%
+    Bank 2: 2        out of   14        14.2857%
 
 Detailed I/O Info:
 ------------------
@@ -90,14 +90,14 @@ Detailed I/O Info:
     Output Pins: 
     Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function    Signal Name    
     ----------  ---------  -----------  -------  -------  -----------    -----------    
-    F2          Output     SB_LVCMOS    No       2        Simple Output  vox_out_rxd_n  
+    C6          Output     SB_LVCMOS    No       0        Simple Output  vox_out_clk_p  
     F3          Output     SB_LVCMOS    No       2        Simple Output  vox_out_rxd_p  
 
 Detailed Global Buffer Info:
 ----------------------------
     Buffer Number  IO Bank  Driven By  Fanout  Signal Name     
     -------------  -------  ---------  ------  -----------     
-    6              2                   138     sys_clk         
-    4              0                   107     locked_i_g      
+    6              2                   140     sys_clk         
+    4              0                   109     locked_i_g      
     3              0                   1       clk_12mhz_bufg  
     5              2                   28      locked_g        

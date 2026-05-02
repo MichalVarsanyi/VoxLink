@@ -3,7 +3,7 @@
 #OS: Windows 8 6.2
 #Hostname: LAPTOP-GK6ER3TV
 
-# Sat May 02 14:10:08 2026
+# Sat May 02 18:21:49 2026
 
 #Implementation: VoxLink_Protocol_Implmnt
 
@@ -24,9 +24,7 @@ Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys softwa
 @I::"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Multinode_Protocol.v" (library work)
 @I::"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Reg_FIFO.v" (library work)
 Verilog syntax check successful!
-File C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v changed - recompiling
 File C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Multinode_Protocol.v changed - recompiling
-File C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Reg_FIFO.v changed - recompiling
 Selecting top level module Top
 @N: CG364 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v":578:7:578:11|Synthesizing module SB_GB in library work.
 
@@ -53,6 +51,7 @@ Selecting top level module Top
 	PACKET_FRAMES=3'b111
    Generated name = VoxLink_Multinode_Protocol_100500000s_400000s_32s_8032s_125s_1923_7_Z1
 
+@W: CL169 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Multinode_Protocol.v":172:4:172:9|Pruning unused register node_addr_r[9:0]. Make sure that there are no unused intermediate registers.
 @N: CG364 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v":4120:7:4120:17|Synthesizing module SB_RGBA_DRV in library work.
 
 @N: CG364 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":21:7:21:9|Synthesizing module Top in library work.
@@ -66,12 +65,12 @@ Selecting top level module Top
 @W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":197:16:197:16|Input RGB2PWM on instance led_driver is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
 @A: CL282 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":210:4:210:9|Feedback mux created for signal blink_counter[26:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
 
-At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 72MB peak: 75MB)
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 72MB peak: 78MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sat May 02 14:10:09 2026
+# Sat May 02 18:21:50 2026
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
@@ -84,17 +83,17 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sat May 02 14:10:09 2026
+# Sat May 02 18:21:50 2026
 
 ###########################################################]
 @END
 
-At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 4MB peak: 4MB)
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 4MB peak: 4MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sat May 02 14:10:09 2026
+# Sat May 02 18:21:50 2026
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
@@ -108,12 +107,12 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sat May 02 14:10:10 2026
+# Sat May 02 18:21:51 2026
 
 ###########################################################]
 Pre-mapping Report
 
-# Sat May 02 14:10:11 2026
+# Sat May 02 18:21:51 2026
 
 Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -159,7 +158,7 @@ Clock                            Frequency     Period        Type               
 System                           1.0 MHz       1000.000      system                       system_clkgroup      0    
 Top|sys_clkout_derived_clock     100.5 MHz     9.950         derived (from clk_12mhz)     default_clkgroup     0    
 clk_12mhz                        12.0 MHz      83.333        declared                     default_clkgroup     0    
-sys_clk                          100.5 MHz     9.950         declared                     default_clkgroup     138  
+sys_clk                          100.5 MHz     9.950         declared                     default_clkgroup     140  
 ====================================================================================================================
 
 Finished Pre Mapping Phase.
@@ -176,12 +175,12 @@ Pre-mapping successful!
 At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 48MB peak: 134MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sat May 02 14:10:11 2026
+# Sat May 02 18:21:51 2026
 
 ###########################################################]
 Map & Optimize Report
 
-# Sat May 02 14:10:11 2026
+# Sat May 02 18:21:51 2026
 
 Synopsys Lattice Technology Mapper, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -220,44 +219,44 @@ Available hyper_sources - for debug and ip models
 Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
 
 @N: MO231 :"c:\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":210:4:210:9|Found counter in view:work.Top(verilog) instance blink_counter[26:0] 
-@N: MO231 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_multinode_protocol.v":53:4:53:9|Found counter in view:work.VoxLink_Multinode_Protocol_100500000s_400000s_32s_8032s_125s_1923_7_Z1(verilog) instance timeout_counter_r[15:0] 
+@N: MO231 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_multinode_protocol.v":52:4:52:9|Found counter in view:work.VoxLink_Multinode_Protocol_100500000s_400000s_32s_8032s_125s_1923_7_Z1(verilog) instance timeout_counter_r[15:0] 
 
-Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
-
-
-Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
 
 
-Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 135MB)
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 136MB)
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 135MB)
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 136MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 136MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 135MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 136MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 136MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 140MB)
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 136MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 141MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:00s		     2.68ns		 239 /       134
+   1		0h:00m:00s		     4.05ns		 280 /       136
 @N: FX1017 :|SB_GB inserted on the net locked_i.
 @N: FX1017 :"c:\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":86:6:86:10|SB_GB inserted on the net locked.
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 140MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 140MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 141MB)
 
 
 
@@ -266,21 +265,21 @@ Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:
 
 #### START OF CLOCK OPTIMIZATION REPORT #####[
 
-1 non-gated/non-generated clock tree(s) driving 138 clock pin(s) of sequential element(s)
+1 non-gated/non-generated clock tree(s) driving 140 clock pin(s) of sequential element(s)
 0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
 0 instances converted, 0 sequential instances remain driven by gated/generated clocks
 
 ================================= Non-Gated/Non-Generated Clocks =================================
 Clock Tree ID     Driving Element     Drive Element Type              Fanout     Sample Instance  
 --------------------------------------------------------------------------------------------------
-@K:CKID0001       sys_clk_keep        clock definition on keepbuf     138        blink_counter[10]
+@K:CKID0001       sys_clk_keep        clock definition on keepbuf     140        blink_counter[10]
 ==================================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 140MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 141MB)
 
 Writing Analyst data base C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLink_Protocol_Implmnt\synwork\VoxLink_Protocol_m.srm
 
@@ -295,7 +294,7 @@ L-2016.09L+ice40
 Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 142MB)
+Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
 
 @W: MT246 :"c:\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":191:6:191:15|Blackbox SB_RGBA_DRV is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
 @N: MT615 |Found clock clk_12mhz with period 83.33ns 
@@ -304,7 +303,7 @@ Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:0
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Sat May 02 14:10:12 2026
+# Timing Report written on Sat May 02 18:21:52 2026
 #
 
 
@@ -324,14 +323,14 @@ Performance Summary
 *******************
 
 
-Worst slack in design: -2.826
+Worst slack in design: -1.569
 
                                  Requested     Estimated     Requested     Estimated                 Clock                        Clock           
 Starting Clock                   Frequency     Frequency     Period        Period        Slack       Type                         Group           
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Top|sys_clkout_derived_clock     100.5 MHz     NA            9.950         NA            NA          derived (from clk_12mhz)     default_clkgroup
 clk_12mhz                        12.0 MHz      NA            83.333        NA            DCM/PLL     declared                     default_clkgroup
-sys_clk                          100.5 MHz     78.3 MHz      9.950         12.776        -2.826      declared                     default_clkgroup
+sys_clk                          100.5 MHz     86.8 MHz      9.950         11.519        -1.569      declared                     default_clkgroup
 System                           1.0 MHz       NA            1000.000      NA            NA          system                       system_clkgroup 
 ==================================================================================================================================================
 @N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack
@@ -348,7 +347,7 @@ Clocks             |    rise  to  rise    |    fall  to  fall   |    rise  to  f
 Starting  Ending   |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
 ----------------------------------------------------------------------------------------------------------
 sys_clk   System   |  9.950       9.154   |  No paths    -      |  No paths    -      |  No paths    -    
-sys_clk   sys_clk  |  9.950       -2.826  |  No paths    -      |  No paths    -      |  No paths    -    
+sys_clk   sys_clk  |  9.950       -1.569  |  No paths    -      |  No paths    -      |  No paths    -    
 ==========================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
@@ -372,40 +371,40 @@ Starting Points with Worst Slack
 ********************************
 
                                                           Starting                                                    Arrival           
-Instance                                                  Reference     Type        Pin     Net                       Time        Slack 
+Instance                                                  Reference     Type         Pin     Net                      Time        Slack 
                                                           Clock                                                                         
 ----------------------------------------------------------------------------------------------------------------------------------------
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r[0]      sys_clk       SB_DFFR     Q       timeout_counter_r[0]      0.796       -2.826
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r[1]      sys_clk       SB_DFFR     Q       timeout_counter_r[1]      0.796       -2.754
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r[4]      sys_clk       SB_DFFR     Q       timeout_counter_r[4]      0.796       -2.754
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r[2]      sys_clk       SB_DFFR     Q       timeout_counter_r[2]      0.796       -2.723
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r[7]      sys_clk       SB_DFFR     Q       timeout_counter_r[7]      0.796       -2.723
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r[6]      sys_clk       SB_DFFR     Q       timeout_counter_r[6]      0.796       -2.682
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r[8]      sys_clk       SB_DFFR     Q       timeout_counter_r[8]      0.796       -2.650
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r[10]     sys_clk       SB_DFFR     Q       timeout_counter_r[10]     0.796       -2.650
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r[3]      sys_clk       SB_DFFR     Q       timeout_counter_r[3]      0.796       -2.630
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r[5]      sys_clk       SB_DFFR     Q       timeout_counter_r[5]      0.796       -2.630
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[0]     sys_clk       SB_DFFR      Q       count[0]                 0.796       -1.569
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[1]     sys_clk       SB_DFFR      Q       count[1]                 0.796       -1.497
+VoxLink_Multinode_Protocol_Inst.vox_in_clk_p_d            sys_clk       SB_DFFSR     Q       vox_in_clk_p_d           0.796       -1.497
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[2]     sys_clk       SB_DFFR      Q       count[2]                 0.796       -1.466
+vox_clk_cdc_stage_2                                       sys_clk       SB_DFF       Q       vox_clk_ff2              0.796       -1.424
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[3]     sys_clk       SB_DFFR      Q       count[3]                 0.796       -1.373
+VoxLink_Multinode_Protocol_Inst.timeout_counter_r[4]      sys_clk       SB_DFFR      Q       timeout_counter_r[4]     0.796       -0.773
+VoxLink_Multinode_Protocol_Inst.frame_counter_r[0]        sys_clk       SB_DFFR      Q       frame_counter_r[0]       0.796       -0.721
+VoxLink_Multinode_Protocol_Inst.timeout_counter_r[0]      sys_clk       SB_DFFR      Q       timeout_counter_r[0]     0.796       -0.701
+VoxLink_Multinode_Protocol_Inst.timeout_counter_r[6]      sys_clk       SB_DFFR      Q       timeout_counter_r[6]     0.796       -0.701
 ========================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                                                          Starting                                                 Required           
-Instance                                                  Reference     Type        Pin     Net                    Time         Slack 
-                                                          Clock                                                                       
---------------------------------------------------------------------------------------------------------------------------------------
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r          sys_clk       SB_DFFR     D       wait_for_chunk_r_0     9.795        -2.826
-VoxLink_Multinode_Protocol_Inst.bit_count_r[3]            sys_clk       SB_DFFR     D       bit_count_r_6[3]       9.795        -2.588
-VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]     sys_clk       SB_DFFR     D       count_5[4]             9.795        -1.569
-VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[3]     sys_clk       SB_DFFR     D       count_5[3]             9.795        -1.369
-VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[2]     sys_clk       SB_DFFR     D       count_5[2]             9.795        -1.169
-VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[1]     sys_clk       SB_DFFR     D       count_5[1]             9.795        -0.969
-VoxLink_Multinode_Protocol_Inst.bit_count_r[1]            sys_clk       SB_DFFR     D       bit_count_r_6[1]       9.795        -0.773
-VoxLink_Multinode_Protocol_Inst.bit_count_r[2]            sys_clk       SB_DFFR     D       bit_count_r_6[2]       9.795        -0.773
-VoxLink_Multinode_Protocol_Inst.bit_count_r[0]            sys_clk       SB_DFFR     D       bit_count_r_6[0]       9.795        -0.762
-VoxLink_Multinode_Protocol_Inst.magic_full_r              sys_clk       SB_DFFR     D       magic_full_r_0         9.795        -0.762
-======================================================================================================================================
+                                                          Starting                                                      Required           
+Instance                                                  Reference     Type        Pin     Net                         Time         Slack 
+                                                          Clock                                                                            
+-------------------------------------------------------------------------------------------------------------------------------------------
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]     sys_clk       SB_DFFR     D       count_5[4]                  9.795        -1.569
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[3]     sys_clk       SB_DFFR     D       count_5[3]                  9.795        -1.369
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[2]     sys_clk       SB_DFFR     D       count_5[2]                  9.795        -1.169
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[1]     sys_clk       SB_DFFR     D       count_5[1]                  9.795        -0.969
+VoxLink_Multinode_Protocol_Inst.timeout_counter_r[0]      sys_clk       SB_DFFR     D       timeout_counter_r_lm[0]     9.795        -0.773
+VoxLink_Multinode_Protocol_Inst.timeout_counter_r[1]      sys_clk       SB_DFFR     D       timeout_counter_r_lm[1]     9.795        -0.773
+VoxLink_Multinode_Protocol_Inst.timeout_counter_r[2]      sys_clk       SB_DFFR     D       timeout_counter_r_lm[2]     9.795        -0.773
+VoxLink_Multinode_Protocol_Inst.timeout_counter_r[3]      sys_clk       SB_DFFR     D       timeout_counter_r_lm[3]     9.795        -0.773
+VoxLink_Multinode_Protocol_Inst.timeout_counter_r[4]      sys_clk       SB_DFFR     D       timeout_counter_r_lm[4]     9.795        -0.773
+VoxLink_Multinode_Protocol_Inst.timeout_counter_r[5]      sys_clk       SB_DFFR     D       timeout_counter_r_lm[5]     9.795        -0.773
+===========================================================================================================================================
 
 
 
@@ -419,39 +418,48 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.795
 
-    - Propagation time:                      12.621
+    - Propagation time:                      11.364
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -2.826
+    = Slack (critical) :                     -1.569
 
-    Number of logic level(s):                5
-    Starting point:                          VoxLink_Multinode_Protocol_Inst.timeout_counter_r[0] / Q
-    Ending point:                            VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r / D
+    Number of logic level(s):                8
+    Starting point:                          VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[0] / Q
+    Ending point:                            VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4] / D
     The start point is clocked by            sys_clk [rising] on pin C
     The end   point is clocked by            sys_clk [rising] on pin C
 
-Instance / Net                                                                Pin      Pin               Arrival     No. of    
-Name                                                              Type        Name     Dir     Delay     Time        Fan Out(s)
--------------------------------------------------------------------------------------------------------------------------------
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r[0]              SB_DFFR     Q        Out     0.796     0.796       -         
-timeout_counter_r[0]                                              Net         -        -       1.599     -           3         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNIUGVU[0]      SB_LUT4     I0       In      -         2.395       -         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNIUGVU[0]      SB_LUT4     O        Out     0.661     3.056       -         
-timeout_pulse_8                                                   Net         -        -       1.371     -           1         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNI2KTA5[0]     SB_LUT4     I0       In      -         4.427       -         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNI2KTA5[0]     SB_LUT4     O        Out     0.661     5.089       -         
-timeout_pulse                                                     Net         -        -       1.371     -           75        
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNI97T86         SB_LUT4     I0       In      -         6.460       -         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNI97T86         SB_LUT4     O        Out     0.661     7.121       -         
-N_104                                                             Net         -        -       1.371     -           7         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_0            SB_LUT4     I1       In      -         8.492       -         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_0            SB_LUT4     O        Out     0.589     9.082       -         
-N_11                                                              Net         -        -       1.371     -           1         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO              SB_LUT4     I0       In      -         10.453      -         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO              SB_LUT4     O        Out     0.661     11.114      -         
-wait_for_chunk_r_0                                                Net         -        -       1.507     -           1         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r                  SB_DFFR     D        In      -         12.621      -         
-===============================================================================================================================
-Total path delay (propagation time + setup) of 12.776 is 4.186(32.8%) logic and 8.590(67.2%) route.
+Instance / Net                                                                      Pin      Pin               Arrival     No. of    
+Name                                                                   Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------------------------
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[0]                  SB_DFFR      Q        Out     0.796     0.796       -         
+count[0]                                                               Net          -        -       1.599     -           4         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIQ5CS1[0]         SB_LUT4      I0       In      -         2.395       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIQ5CS1[0]         SB_LUT4      O        Out     0.661     3.056       -         
+N_15                                                                   Net          -        -       1.371     -           4         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2[4]         SB_LUT4      I0       In      -         4.427       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2[4]         SB_LUT4      O        Out     0.661     5.089       -         
+un1_count12_0[0]                                                       Net          -        -       1.371     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c_inv     SB_LUT4      I0       In      -         6.460       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c_inv     SB_LUT4      O        Out     0.661     7.121       -         
+un1_count12_0_i[0]                                                     Net          -        -       0.905     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c         SB_CARRY     I0       In      -         8.026       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c         SB_CARRY     CO       Out     0.380     8.406       -         
+un1_count_cry_0                                                        Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_c         SB_CARRY     CI       In      -         8.420       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_c         SB_CARRY     CO       Out     0.186     8.606       -         
+un1_count_cry_1                                                        Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_c         SB_CARRY     CI       In      -         8.620       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_c         SB_CARRY     CO       Out     0.186     8.806       -         
+un1_count_cry_2                                                        Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_c         SB_CARRY     CI       In      -         8.820       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_c         SB_CARRY     CO       Out     0.186     9.006       -         
+un1_count_cry_3                                                        Net          -        -       0.386     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]              SB_LUT4      I3       In      -         9.392       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]              SB_LUT4      O        Out     0.465     9.857       -         
+count_5[4]                                                             Net          -        -       1.507     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]                  SB_DFFR      D        In      -         11.364      -         
+=====================================================================================================================================
+Total path delay (propagation time + setup) of 11.519 is 4.338(37.7%) logic and 7.181(62.3%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -461,39 +469,48 @@ Path information for path number 2:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.795
 
-    - Propagation time:                      12.549
+    - Propagation time:                      11.292
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -2.754
+    = Slack (non-critical) :                 -1.497
 
-    Number of logic level(s):                5
-    Starting point:                          VoxLink_Multinode_Protocol_Inst.timeout_counter_r[1] / Q
-    Ending point:                            VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r / D
+    Number of logic level(s):                8
+    Starting point:                          VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[1] / Q
+    Ending point:                            VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4] / D
     The start point is clocked by            sys_clk [rising] on pin C
     The end   point is clocked by            sys_clk [rising] on pin C
 
-Instance / Net                                                                Pin      Pin               Arrival     No. of    
-Name                                                              Type        Name     Dir     Delay     Time        Fan Out(s)
--------------------------------------------------------------------------------------------------------------------------------
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r[1]              SB_DFFR     Q        Out     0.796     0.796       -         
-timeout_counter_r[1]                                              Net         -        -       1.599     -           3         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNIUGVU[0]      SB_LUT4     I1       In      -         2.395       -         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNIUGVU[0]      SB_LUT4     O        Out     0.589     2.984       -         
-timeout_pulse_8                                                   Net         -        -       1.371     -           1         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNI2KTA5[0]     SB_LUT4     I0       In      -         4.355       -         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNI2KTA5[0]     SB_LUT4     O        Out     0.661     5.017       -         
-timeout_pulse                                                     Net         -        -       1.371     -           75        
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNI97T86         SB_LUT4     I0       In      -         6.388       -         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNI97T86         SB_LUT4     O        Out     0.661     7.049       -         
-N_104                                                             Net         -        -       1.371     -           7         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_0            SB_LUT4     I1       In      -         8.420       -         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_0            SB_LUT4     O        Out     0.589     9.009       -         
-N_11                                                              Net         -        -       1.371     -           1         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO              SB_LUT4     I0       In      -         10.380      -         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO              SB_LUT4     O        Out     0.661     11.042      -         
-wait_for_chunk_r_0                                                Net         -        -       1.507     -           1         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r                  SB_DFFR     D        In      -         12.549      -         
-===============================================================================================================================
-Total path delay (propagation time + setup) of 12.704 is 4.114(32.4%) logic and 8.590(67.6%) route.
+Instance / Net                                                                      Pin      Pin               Arrival     No. of    
+Name                                                                   Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------------------------
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[1]                  SB_DFFR      Q        Out     0.796     0.796       -         
+count[1]                                                               Net          -        -       1.599     -           4         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIQ5CS1[0]         SB_LUT4      I1       In      -         2.395       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIQ5CS1[0]         SB_LUT4      O        Out     0.589     2.984       -         
+N_15                                                                   Net          -        -       1.371     -           4         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2[4]         SB_LUT4      I0       In      -         4.355       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2[4]         SB_LUT4      O        Out     0.661     5.017       -         
+un1_count12_0[0]                                                       Net          -        -       1.371     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c_inv     SB_LUT4      I0       In      -         6.388       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c_inv     SB_LUT4      O        Out     0.661     7.049       -         
+un1_count12_0_i[0]                                                     Net          -        -       0.905     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c         SB_CARRY     I0       In      -         7.954       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c         SB_CARRY     CO       Out     0.380     8.334       -         
+un1_count_cry_0                                                        Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_c         SB_CARRY     CI       In      -         8.348       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_c         SB_CARRY     CO       Out     0.186     8.534       -         
+un1_count_cry_1                                                        Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_c         SB_CARRY     CI       In      -         8.548       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_c         SB_CARRY     CO       Out     0.186     8.734       -         
+un1_count_cry_2                                                        Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_c         SB_CARRY     CI       In      -         8.748       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_c         SB_CARRY     CO       Out     0.186     8.934       -         
+un1_count_cry_3                                                        Net          -        -       0.386     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]              SB_LUT4      I3       In      -         9.320       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]              SB_LUT4      O        Out     0.465     9.785       -         
+count_5[4]                                                             Net          -        -       1.507     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]                  SB_DFFR      D        In      -         11.292      -         
+=====================================================================================================================================
+Total path delay (propagation time + setup) of 11.447 is 4.266(37.3%) logic and 7.181(62.7%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -503,39 +520,48 @@ Path information for path number 3:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.795
 
-    - Propagation time:                      12.549
+    - Propagation time:                      11.292
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -2.754
+    = Slack (non-critical) :                 -1.497
 
-    Number of logic level(s):                5
-    Starting point:                          VoxLink_Multinode_Protocol_Inst.timeout_counter_r[4] / Q
-    Ending point:                            VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r / D
+    Number of logic level(s):                8
+    Starting point:                          VoxLink_Multinode_Protocol_Inst.vox_in_clk_p_d / Q
+    Ending point:                            VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4] / D
     The start point is clocked by            sys_clk [rising] on pin C
     The end   point is clocked by            sys_clk [rising] on pin C
 
-Instance / Net                                                                Pin      Pin               Arrival     No. of    
-Name                                                              Type        Name     Dir     Delay     Time        Fan Out(s)
--------------------------------------------------------------------------------------------------------------------------------
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r[4]              SB_DFFR     Q        Out     0.796     0.796       -         
-timeout_counter_r[4]                                              Net         -        -       1.599     -           3         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNIJ60V[4]      SB_LUT4     I0       In      -         2.395       -         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNIJ60V[4]      SB_LUT4     O        Out     0.661     3.056       -         
-timeout_pulse_9                                                   Net         -        -       1.371     -           1         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNI2KTA5[0]     SB_LUT4     I1       In      -         4.427       -         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNI2KTA5[0]     SB_LUT4     O        Out     0.589     5.017       -         
-timeout_pulse                                                     Net         -        -       1.371     -           75        
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNI97T86         SB_LUT4     I0       In      -         6.388       -         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNI97T86         SB_LUT4     O        Out     0.661     7.049       -         
-N_104                                                             Net         -        -       1.371     -           7         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_0            SB_LUT4     I1       In      -         8.420       -         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_0            SB_LUT4     O        Out     0.589     9.009       -         
-N_11                                                              Net         -        -       1.371     -           1         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO              SB_LUT4     I0       In      -         10.380      -         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO              SB_LUT4     O        Out     0.661     11.042      -         
-wait_for_chunk_r_0                                                Net         -        -       1.507     -           1         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r                  SB_DFFR     D        In      -         12.549      -         
-===============================================================================================================================
-Total path delay (propagation time + setup) of 12.704 is 4.114(32.4%) logic and 8.590(67.6%) route.
+Instance / Net                                                                      Pin      Pin               Arrival     No. of    
+Name                                                                   Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------------------------
+VoxLink_Multinode_Protocol_Inst.vox_in_clk_p_d                         SB_DFFSR     Q        Out     0.796     0.796       -         
+vox_in_clk_p_d                                                         Net          -        -       1.599     -           1         
+VoxLink_Multinode_Protocol_Inst.vox_in_clk_p_d_RNIOLUB                 SB_LUT4      I0       In      -         2.395       -         
+VoxLink_Multinode_Protocol_Inst.vox_in_clk_p_d_RNIOLUB                 SB_LUT4      O        Out     0.661     3.056       -         
+clk_in_rising                                                          Net          -        -       1.371     -           8         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2[4]         SB_LUT4      I1       In      -         4.427       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2[4]         SB_LUT4      O        Out     0.589     5.017       -         
+un1_count12_0[0]                                                       Net          -        -       1.371     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c_inv     SB_LUT4      I0       In      -         6.388       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c_inv     SB_LUT4      O        Out     0.661     7.049       -         
+un1_count12_0_i[0]                                                     Net          -        -       0.905     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c         SB_CARRY     I0       In      -         7.954       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c         SB_CARRY     CO       Out     0.380     8.334       -         
+un1_count_cry_0                                                        Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_c         SB_CARRY     CI       In      -         8.348       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_c         SB_CARRY     CO       Out     0.186     8.534       -         
+un1_count_cry_1                                                        Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_c         SB_CARRY     CI       In      -         8.548       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_c         SB_CARRY     CO       Out     0.186     8.734       -         
+un1_count_cry_2                                                        Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_c         SB_CARRY     CI       In      -         8.748       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_c         SB_CARRY     CO       Out     0.186     8.934       -         
+un1_count_cry_3                                                        Net          -        -       0.386     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]              SB_LUT4      I3       In      -         9.320       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]              SB_LUT4      O        Out     0.465     9.785       -         
+count_5[4]                                                             Net          -        -       1.507     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]                  SB_DFFR      D        In      -         11.292      -         
+=====================================================================================================================================
+Total path delay (propagation time + setup) of 11.447 is 4.266(37.3%) logic and 7.181(62.7%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -545,39 +571,48 @@ Path information for path number 4:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.795
 
-    - Propagation time:                      12.518
+    - Propagation time:                      11.261
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -2.723
+    = Slack (non-critical) :                 -1.466
 
-    Number of logic level(s):                5
-    Starting point:                          VoxLink_Multinode_Protocol_Inst.timeout_counter_r[2] / Q
-    Ending point:                            VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r / D
+    Number of logic level(s):                8
+    Starting point:                          VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[2] / Q
+    Ending point:                            VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4] / D
     The start point is clocked by            sys_clk [rising] on pin C
     The end   point is clocked by            sys_clk [rising] on pin C
 
-Instance / Net                                                                Pin      Pin               Arrival     No. of    
-Name                                                              Type        Name     Dir     Delay     Time        Fan Out(s)
--------------------------------------------------------------------------------------------------------------------------------
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r[2]              SB_DFFR     Q        Out     0.796     0.796       -         
-timeout_counter_r[2]                                              Net         -        -       1.599     -           3         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNIUGVU[0]      SB_LUT4     I2       In      -         2.395       -         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNIUGVU[0]      SB_LUT4     O        Out     0.558     2.953       -         
-timeout_pulse_8                                                   Net         -        -       1.371     -           1         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNI2KTA5[0]     SB_LUT4     I0       In      -         4.324       -         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNI2KTA5[0]     SB_LUT4     O        Out     0.661     4.986       -         
-timeout_pulse                                                     Net         -        -       1.371     -           75        
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNI97T86         SB_LUT4     I0       In      -         6.356       -         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNI97T86         SB_LUT4     O        Out     0.661     7.018       -         
-N_104                                                             Net         -        -       1.371     -           7         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_0            SB_LUT4     I1       In      -         8.389       -         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_0            SB_LUT4     O        Out     0.589     8.978       -         
-N_11                                                              Net         -        -       1.371     -           1         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO              SB_LUT4     I0       In      -         10.349      -         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO              SB_LUT4     O        Out     0.661     11.011      -         
-wait_for_chunk_r_0                                                Net         -        -       1.507     -           1         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r                  SB_DFFR     D        In      -         12.518      -         
-===============================================================================================================================
-Total path delay (propagation time + setup) of 12.673 is 4.083(32.2%) logic and 8.590(67.8%) route.
+Instance / Net                                                                      Pin      Pin               Arrival     No. of    
+Name                                                                   Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------------------------
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[2]                  SB_DFFR      Q        Out     0.796     0.796       -         
+count[2]                                                               Net          -        -       1.599     -           4         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIQ5CS1[0]         SB_LUT4      I2       In      -         2.395       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIQ5CS1[0]         SB_LUT4      O        Out     0.558     2.953       -         
+N_15                                                                   Net          -        -       1.371     -           4         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2[4]         SB_LUT4      I0       In      -         4.324       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2[4]         SB_LUT4      O        Out     0.661     4.986       -         
+un1_count12_0[0]                                                       Net          -        -       1.371     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c_inv     SB_LUT4      I0       In      -         6.356       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c_inv     SB_LUT4      O        Out     0.661     7.018       -         
+un1_count12_0_i[0]                                                     Net          -        -       0.905     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c         SB_CARRY     I0       In      -         7.923       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c         SB_CARRY     CO       Out     0.380     8.303       -         
+un1_count_cry_0                                                        Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_c         SB_CARRY     CI       In      -         8.316       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_c         SB_CARRY     CO       Out     0.186     8.502       -         
+un1_count_cry_1                                                        Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_c         SB_CARRY     CI       In      -         8.517       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_c         SB_CARRY     CO       Out     0.186     8.703       -         
+un1_count_cry_2                                                        Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_c         SB_CARRY     CI       In      -         8.716       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_c         SB_CARRY     CO       Out     0.186     8.902       -         
+un1_count_cry_3                                                        Net          -        -       0.386     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]              SB_LUT4      I3       In      -         9.289       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]              SB_LUT4      O        Out     0.465     9.754       -         
+count_5[4]                                                             Net          -        -       1.507     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]                  SB_DFFR      D        In      -         11.261      -         
+=====================================================================================================================================
+Total path delay (propagation time + setup) of 11.416 is 4.235(37.1%) logic and 7.181(62.9%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -587,39 +622,48 @@ Path information for path number 5:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.795
 
-    - Propagation time:                      12.518
+    - Propagation time:                      11.219
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -2.723
+    = Slack (non-critical) :                 -1.424
 
-    Number of logic level(s):                5
-    Starting point:                          VoxLink_Multinode_Protocol_Inst.timeout_counter_r[7] / Q
-    Ending point:                            VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r / D
+    Number of logic level(s):                8
+    Starting point:                          vox_clk_cdc_stage_2 / Q
+    Ending point:                            VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4] / D
     The start point is clocked by            sys_clk [rising] on pin C
     The end   point is clocked by            sys_clk [rising] on pin C
 
-Instance / Net                                                                Pin      Pin               Arrival     No. of    
-Name                                                              Type        Name     Dir     Delay     Time        Fan Out(s)
--------------------------------------------------------------------------------------------------------------------------------
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r[7]              SB_DFFR     Q        Out     0.796     0.796       -         
-timeout_counter_r[7]                                              Net         -        -       1.599     -           3         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNILQEM1[7]     SB_LUT4     I0       In      -         2.395       -         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNILQEM1[7]     SB_LUT4     O        Out     0.661     3.056       -         
-timeout_pulse_10                                                  Net         -        -       1.371     -           1         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNI2KTA5[0]     SB_LUT4     I2       In      -         4.427       -         
-VoxLink_Multinode_Protocol_Inst.timeout_counter_r_RNI2KTA5[0]     SB_LUT4     O        Out     0.558     4.986       -         
-timeout_pulse                                                     Net         -        -       1.371     -           75        
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNI97T86         SB_LUT4     I0       In      -         6.356       -         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNI97T86         SB_LUT4     O        Out     0.661     7.018       -         
-N_104                                                             Net         -        -       1.371     -           7         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_0            SB_LUT4     I1       In      -         8.389       -         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO_0            SB_LUT4     O        Out     0.589     8.978       -         
-N_11                                                              Net         -        -       1.371     -           1         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO              SB_LUT4     I0       In      -         10.349      -         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r_RNO              SB_LUT4     O        Out     0.661     11.011      -         
-wait_for_chunk_r_0                                                Net         -        -       1.507     -           1         
-VoxLink_Multinode_Protocol_Inst.wait_for_chunk_r                  SB_DFFR     D        In      -         12.518      -         
-===============================================================================================================================
-Total path delay (propagation time + setup) of 12.673 is 4.083(32.2%) logic and 8.590(67.8%) route.
+Instance / Net                                                                      Pin      Pin               Arrival     No. of    
+Name                                                                   Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------------------------
+vox_clk_cdc_stage_2                                                    SB_DFF       Q        Out     0.796     0.796       -         
+vox_clk_ff2                                                            Net          -        -       1.599     -           2         
+VoxLink_Multinode_Protocol_Inst.vox_in_clk_p_d_RNIOLUB                 SB_LUT4      I1       In      -         2.395       -         
+VoxLink_Multinode_Protocol_Inst.vox_in_clk_p_d_RNIOLUB                 SB_LUT4      O        Out     0.589     2.984       -         
+clk_in_rising                                                          Net          -        -       1.371     -           8         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2[4]         SB_LUT4      I1       In      -         4.355       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNIEQRV2[4]         SB_LUT4      O        Out     0.589     4.944       -         
+un1_count12_0[0]                                                       Net          -        -       1.371     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c_inv     SB_LUT4      I0       In      -         6.315       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c_inv     SB_LUT4      O        Out     0.661     6.977       -         
+un1_count12_0_i[0]                                                     Net          -        -       0.905     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c         SB_CARRY     I0       In      -         7.882       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_0_c         SB_CARRY     CO       Out     0.380     8.261       -         
+un1_count_cry_0                                                        Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_c         SB_CARRY     CI       In      -         8.275       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_1_c         SB_CARRY     CO       Out     0.186     8.461       -         
+un1_count_cry_1                                                        Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_c         SB_CARRY     CI       In      -         8.475       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_2_c         SB_CARRY     CO       Out     0.186     8.661       -         
+un1_count_cry_2                                                        Net          -        -       0.014     -           2         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_c         SB_CARRY     CI       In      -         8.675       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.un1_count_cry_3_c         SB_CARRY     CO       Out     0.186     8.861       -         
+un1_count_cry_3                                                        Net          -        -       0.386     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]              SB_LUT4      I3       In      -         9.247       -         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count_RNO[4]              SB_LUT4      O        Out     0.465     9.712       -         
+count_5[4]                                                             Net          -        -       1.507     -           1         
+VoxLink_Multinode_Protocol_Inst.u_input_fifo.count[4]                  SB_DFFR      D        In      -         11.219      -         
+=====================================================================================================================================
+Total path delay (propagation time + setup) of 11.374 is 4.193(36.9%) logic and 7.181(63.1%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -641,41 +685,41 @@ Resource Usage Report for Top
 Mapping to part: ice40ul1kcm36a
 Cell usage:
 GND             2 uses
-SB_CARRY        55 uses
+SB_CARRY        63 uses
 SB_DFF          4 uses
 SB_DFFE         27 uses
 SB_DFFER        49 uses
-SB_DFFR         50 uses
+SB_DFFR         52 uses
 SB_DFFS         7 uses
 SB_DFFSR        1 use
 SB_GB           4 uses
 SB_PLL40_CORE   1 use
 SB_RGBA_DRV     1 use
 VCC             2 uses
-SB_LUT4         216 uses
+SB_LUT4         257 uses
 
 I/O ports: 6
 I/O primitives: 5
 SB_IO          5 uses
 
 I/O Register bits:                  0
-Register bits not including I/Os:   138 (12%)
+Register bits not including I/Os:   140 (12%)
 Total load per clock:
    clk_12mhz: 1
-   sys_clk: 138
+   sys_clk: 140
    Top|sys_clkout_derived_clock: 1
 
 @S |Mapping Summary:
-Total  LUTs: 216 (19%)
+Total  LUTs: 257 (22%)
 
 Distribution of All Consumed LUTs = LUT4 
-Distribution of All Consumed Luts 216 = 216 
+Distribution of All Consumed Luts 257 = 257 
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 28MB peak: 142MB)
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 29MB peak: 142MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sat May 02 14:10:12 2026
+# Sat May 02 18:21:52 2026
 
 ###########################################################]
