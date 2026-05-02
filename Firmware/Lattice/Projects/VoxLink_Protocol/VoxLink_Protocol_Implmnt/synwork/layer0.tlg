@@ -12,25 +12,27 @@ Selecting top level module Top
 	COUNT_WIDTH=32'b00000000000000000000000000000101
    Generated name = VoxLink_Reg_FIFO_16s_4s_5s
 
-@N: CG179 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Reg_FIFO.v":83:34:83:38|Removing redundant assignment.
+@N: CG179 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Reg_FIFO.v":94:34:94:38|Removing redundant assignment.
 @N: CG364 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Multinode_Protocol.v":1:7:1:32|Synthesizing module VoxLink_Multinode_Protocol in library work.
 
 	CLK_FREQ=32'b00000101111111011000001000100000
 	VOX_FREQ=32'b00000000000001100001101010000000
+	TIMEOUT_CLOCKS=32'b00000000000000000000000000100000
+	TIMEOUT_CYCLES=32'b00000000000000000001111101100000
 	DIVIDER=32'b00000000000000000000000001111101
 	RELOAD_VAL=12'b011110000011
 	PACKET_FRAMES=3'b111
-   Generated name = VoxLink_Multinode_Protocol_100500000s_400000s_125s_1923_7
+   Generated name = VoxLink_Multinode_Protocol_100500000s_400000s_32s_8032s_125s_1923_7_Z1
 
 @N: CG364 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v":4120:7:4120:17|Synthesizing module SB_RGBA_DRV in library work.
 
 @N: CG364 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":21:7:21:9|Synthesizing module Top in library work.
 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":89:20:89:20|Input EXTFEEDBACK on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":90:21:90:21|Input DYNAMICDELAY on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":85:6:85:10|Input SDI on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":85:6:85:10|Input SCLK on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":85:6:85:10|Input LATCHINPUTVALUE on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":195:16:195:16|Input RGB1PWM on instance led_driver is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":196:16:196:16|Input RGB2PWM on instance led_driver is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@A: CL282 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":209:4:209:9|Feedback mux created for signal blink_counter[26:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":90:20:90:20|Input EXTFEEDBACK on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":91:21:91:21|Input DYNAMICDELAY on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":86:6:86:10|Input SDI on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":86:6:86:10|Input SCLK on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":86:6:86:10|Input LATCHINPUTVALUE on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":196:16:196:16|Input RGB1PWM on instance led_driver is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":197:16:197:16|Input RGB2PWM on instance led_driver is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@A: CL282 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":210:4:210:9|Feedback mux created for signal blink_counter[26:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.

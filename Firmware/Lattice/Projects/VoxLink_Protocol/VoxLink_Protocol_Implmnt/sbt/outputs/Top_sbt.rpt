@@ -6,7 +6,7 @@
 
 * Build Date:         Dec  9 2020 17:31:51
 
-* File Generated:     May 1 2026 18:31:04
+* File Generated:     May 2 2026 14:10:37
 
 * Purpose:            General info of design implementation
 
@@ -27,8 +27,8 @@ Device Info:
 
 Design statistics:
 ------------------
-    FFs:                  122
-    LUTs:                 179
+    FFs:                  138
+    LUTs:                 225
     RAMs:                 0
     IOBs:                 5
     GBs:                  4
@@ -46,12 +46,12 @@ Design statistics:
 
 Logic Resource Utilization:
 ---------------------------
-    Total Logic Cells: 182/1248
-        Combinational Logic Cells: 60       out of   1248      4.80769%
-        Sequential Logic Cells:    122      out of   1248      9.77564%
-        Logic Tiles:               37       out of   156       23.7179%
+    Total Logic Cells: 226/1248
+        Combinational Logic Cells: 88       out of   1248      7.05128%
+        Sequential Logic Cells:    138      out of   1248      11.0577%
+        Logic Tiles:               46       out of   156       29.4872%
     Registers: 
-        Logic Registers:           122      out of   1248      9.77564%
+        Logic Registers:           138      out of   1248      11.0577%
         IO Registers:              0        out of   240       0
     Block RAMs:                    0        out of   14        0%
     Warm Boots:                    0        out of   1         0%
@@ -97,8 +97,8 @@ Detailed Global Buffer Info:
 ----------------------------
     Buffer Number  IO Bank  Driven By  Fanout  Signal Name     
     -------------  -------  ---------  ------  -----------     
-    6              2                   122     sys_clk         
-    4              0                   91      locked_i_g      
+    6              2                   138     sys_clk         
+    4              0                   107     locked_i_g      
     3              0                   1       clk_12mhz_bufg  
     5              2                   28      locked_g        
 
@@ -106,13 +106,13 @@ Detailed Global Buffer Info:
 Router Summary:
 ---------------
     Status:  Successful
-    Runtime: 1 seconds
+    Runtime: 2 seconds
 
 Routing Resource Utilization:
 -----------------------------
-              Local line of tile     1242 out of  28951      4.29001%
-                          Span 4      106 out of   6784      1.5625%
-                         Span 12       16 out of   1456      1.0989%
+              Local line of tile     1581 out of  28951      5.46095%
+                          Span 4      154 out of   6784      2.27005%
+                         Span 12       24 out of   1456      1.64835%
                   Global network        4 out of      8      50%
-      Vertical Inter-LUT Connect       20 out of   1092      1.8315%
+      Vertical Inter-LUT Connect       37 out of   1092      3.38828%
 

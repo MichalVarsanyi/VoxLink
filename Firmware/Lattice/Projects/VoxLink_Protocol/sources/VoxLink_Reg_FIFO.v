@@ -15,6 +15,10 @@ module VoxLink_Reg_FIFO #(
     output      rd_bit,
     output      fifo_empty,
 
+    // Extra synchronous FIFO reset / flush
+    input       fifo_rst,
+
+
     // Diagnostic Flags
     output reg  overflow_sticky,
     output reg  underflow_sticky
@@ -25,7 +29,7 @@ module VoxLink_Reg_FIFO #(
     localparam COUNT_WIDTH = ADDR_WIDTH + 1;
 
     // FIFO Register
-    reg [FIFO_DEPTH-1:0] mem;
+    reg [FIFO_DEPTH-1:0] fifo_data;
 
     // Pointers and counters
     reg [ADDR_WIDTH-1:0]  wr_pointer;
@@ -37,7 +41,7 @@ module VoxLink_Reg_FIFO #(
     assign fifo_empty = (count == 0);
 
     // Current bit ready to be read
-    assign rd_bit = mem[rd_pointer];
+    assign rd_bit = fifo_data[rd_pointer];
 
     // Flags which trigger read/write
     wire trigger_read  = rd_en && !fifo_empty;
@@ -51,8 +55,15 @@ module VoxLink_Reg_FIFO #(
             count                   <= {COUNT_WIDTH{1'b0}};
             overflow_sticky         <= 1'b0;
             underflow_sticky        <= 1'b0;
-            mem                     <= {FIFO_DEPTH{1'b0}};
+            fifo_data               <= {FIFO_DEPTH{1'b0}};
         end 
+        else if (fifo_rst)  // FIFO synchronous reset for timeout
+        begin
+            wr_pointer <= {ADDR_WIDTH{1'b0}};
+            rd_pointer <= {ADDR_WIDTH{1'b0}};
+            count      <= {COUNT_WIDTH{1'b0}};
+            fifo_data  <= {FIFO_DEPTH{1'b0}};
+        end
         else
         begin
             // If the FIFO is full, we want to write, and we do not trigger a read
@@ -67,7 +78,7 @@ module VoxLink_Reg_FIFO #(
             if (trigger_write)
             begin
                 // We write bit to the current free address
-                mem[wr_pointer] <= wr_bit;
+                fifo_data[wr_pointer] <= wr_bit;
                 // We increment the address
                 wr_pointer      <= wr_pointer + 1'b1;
             end

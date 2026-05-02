@@ -1,6 +1,6 @@
 module VoxLink_Multinode_Protocol #(
-    parameter CLK_FREQ = 150_000_000,
-    parameter VOX_FREQ = 100_000
+    parameter CLK_FREQ = 100_500_000,
+    parameter VOX_FREQ = 400_000
 )(
     // General
     input sys_clk,
@@ -21,11 +21,13 @@ module VoxLink_Multinode_Protocol #(
 );
 
 //--------------------------------------------------------------------------------------------- //
-//  Clock (Rising) Edge Detection  [CD — implemented here in top]
+//  Clock Edge Detection
 //--------------------------------------------------------------------------------------------- //
 
     reg vox_in_clk_p_d;
 
+    // A simple shift register with two sampled clk signals
+    // If one older is low and the new one is high -> clk rising edge
     always @(posedge sys_clk)
     begin
         if (sys_rst)
@@ -38,9 +40,32 @@ module VoxLink_Multinode_Protocol #(
     wire clk_in_falling =  vox_in_clk_p_d & ~vox_in_clk_p;
 
 //--------------------------------------------------------------------------------------------- //
-// FIFO — bit buffer between CD and magic buffer
+// Timeout Counter
 //--------------------------------------------------------------------------------------------- //
 
+    localparam TIMEOUT_CLOCKS = 32;
+    localparam TIMEOUT_CYCLES = TIMEOUT_CLOCKS * (CLK_FREQ / VOX_FREQ);
+
+    reg [15:0] timeout_counter_r;
+
+    wire timeout_pulse = (timeout_counter_r == TIMEOUT_CYCLES - 1);
+
+    always @(posedge sys_clk or posedge sys_rst)
+    begin
+        if (sys_rst)
+            timeout_counter_r <= 16'd0;
+        else if (clk_in_rising || timeout_pulse)
+            timeout_counter_r <= 16'd0;
+        else
+            timeout_counter_r <= timeout_counter_r + 16'd1;
+    end
+
+//--------------------------------------------------------------------------------------------- //
+// Input FIFO Stage
+//--------------------------------------------------------------------------------------------- //
+// FIFO is used to mitigate the effect of different clock speeds for the incoming and outbound data
+
+    // FIFO flags
     wire fifo_full;
     wire fifo_empty;
     wire fifo_rd_bit;
@@ -64,6 +89,7 @@ module VoxLink_Multinode_Protocol #(
         .rd_en            (fifo_rd_en),
         .rd_bit           (fifo_rd_bit),
         .fifo_empty       (fifo_empty),
+        .fifo_rst         (timeout_pulse),
         .overflow_sticky  (),
         .underflow_sticky ()
     );
@@ -100,6 +126,9 @@ module VoxLink_Multinode_Protocol #(
         end
     end
 
+//--------------------------------------------------------------------------------------------- //
+// Main loop
+//--------------------------------------------------------------------------------------------- //
 
     localparam PACKET_FRAMES = 3'd7;
 
@@ -119,13 +148,26 @@ module VoxLink_Multinode_Protocol #(
     // Magic buffer is hungry whenever it is not full — drives FIFO read continuously
     assign fifo_rd_en = !magic_full_r && !fifo_empty;
 
-    // Clock on N line, data MSB-first on P line
+    // Assign the internal clocking signal to the output
     assign vox_out_rxd_n = vox_clk_internal_r;
+    // Assign the RXD output as the last bit in the transmit_shift_r register
     assign vox_out_rxd_p = transmit_packet_r ? transmit_shift_r[15] : 1'b0;
 
     always @(posedge sys_clk or posedge sys_rst)
     begin
         if (sys_rst)
+        begin
+            magic_register_r   <= 16'd0;
+            magic_counter_r    <= 4'd0;
+            magic_full_r       <= 1'b0;
+            transmit_packet_r  <= 1'b0;
+            frame_counter_r    <= 3'd0;
+            bit_count_r        <= 4'd0;
+            transmit_shift_r   <= 16'd0;
+            vox_clk_internal_r <= 1'b0;
+            wait_for_chunk_r   <= 1'b0;
+        end
+        else if (timeout_pulse)
         begin
             magic_register_r   <= 16'd0;
             magic_counter_r    <= 4'd0;

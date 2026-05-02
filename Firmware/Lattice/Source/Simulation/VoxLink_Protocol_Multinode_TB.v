@@ -95,7 +95,7 @@ module tb_VoxLink_Multinode_Protocol_50in_49out;
 
         repeat (10) @(posedge sys_clk);
 
-        for (i = 15; i >= 0; i = i - 1) begin
+        for (i = 15; i >= 8; i = i - 1) begin
             vox_in_clk_p = 1'b0;
             vox_in_rxd_p = test_packet_2[i];
 
@@ -109,7 +109,7 @@ module tb_VoxLink_Multinode_Protocol_50in_49out;
         vox_in_clk_p = 1'b0;
         vox_in_rxd_p = 1'b0;
 
-        repeat (200) @(posedge sys_clk);
+        repeat (400) @(posedge sys_clk);
 
     end
 

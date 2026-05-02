@@ -71,6 +71,7 @@ module Top(
     // BUFG rounting of external clock
     wire clk_12mhz_bufg;
 
+    // Routing inside the GBUF clock fabric
     SB_GB clk_in (
         .USER_SIGNAL_TO_GLOBAL_BUFFER(clk_12mhz),
         .GLOBAL_BUFFER_OUTPUT(clk_12mhz_bufg)
