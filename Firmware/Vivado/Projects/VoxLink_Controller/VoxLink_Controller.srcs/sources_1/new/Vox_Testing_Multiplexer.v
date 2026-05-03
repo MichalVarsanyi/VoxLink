@@ -31,7 +31,8 @@ module Vox_Testing_Multiplexer(
 
         // Diagnostic
         input       [31:0]            mailbox,
-        
+        input       [9:0]             init_data,
+
         // Multiplexer output
         output [7:0]                  reg_mux_out,
         output                        reg_mux_out_transmit,
@@ -88,6 +89,11 @@ module Vox_Testing_Multiplexer(
                 begin
                     reg_mux_out_r          <= {mailbox[31:0], 80'h0};   // put 4 bytes at the MSB end
                     reg_mux_out_transmit_r <= 14'b1111_0000_0000_00;    // arm only 4 transmit flags
+                end
+                2:
+                begin
+                    reg_mux_out_r          <= {init_data, 102'h0};
+                    reg_mux_out_transmit_r <= 14'b1100_0000_0000_00;
                 end
                 default:
                 begin

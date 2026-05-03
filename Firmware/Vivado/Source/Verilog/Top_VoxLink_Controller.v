@@ -292,8 +292,8 @@ module Top
 //--------------------------------------------------------------------------------------------- //
 // Mailbox is a testing register, which can be written to and read from        
         
-    reg [32:0] mailbox;      
-           
+    reg [32:0] mailbox;
+
     always @(posedge sys_clk)
     begin
         if(sys_rst)
@@ -303,7 +303,33 @@ module Top
             if(reg_write_addr == MAILBOX)
                 mailbox     <= reg_write_data;
         end
-    end        
+    end
+
+//--------------------------------------------------------------------------------------------- //       
+//  Initialization Output
+//--------------------------------------------------------------------------------------------- //
+
+    localparam INIT_ADDR = 15'd2;
+
+    (* MARK_DEBUG="true" *) reg [9:0]  init_data_r;
+    (* MARK_DEBUG="true" *) reg        init_trigger_r;
+
+    always @(posedge sys_clk)
+    begin
+        if (sys_rst)
+        begin
+            init_data_r    <= 10'd0;
+            init_trigger_r <= 1'b0;
+        end
+        else
+        begin
+            init_trigger_r <= 1'b0;
+            if (reg_write_addr == INIT_ADDR)
+                init_trigger_r <= 1'b1;
+            if (sensor_data_valid && sensor_packet[111:96] == 16'h0001)
+                init_data_r <= sensor_packet[79:70];
+        end
+    end
 
 //--------------------------------------------------------------------------------------------- //       
 //  UART
@@ -391,11 +417,12 @@ module Top
 
         // Diagnostic
         .mailbox(mailbox),
-        
+        .init_data(init_data_r),
+
         // Multiplexer output
         .reg_mux_out(reg_mux_out),
         .reg_mux_out_transmit(reg_mux_out_transmit),
-        
+
         // Multiplexer selector
         .reg_read_addr(reg_read_addr)
     );
@@ -490,7 +517,6 @@ module Top
         end
     end
 
-    reg [24:0]  tx_period_ctr;
     reg [111:0] tx_shift_r;
     reg [6:0]   tx_bit_cnt;
     reg         tx_active;
@@ -504,7 +530,6 @@ module Top
     begin
         if (sys_rst)
         begin
-            tx_period_ctr <= {25{1'b1}};
             tx_shift_r    <= {112{1'b0}};
             tx_bit_cnt    <= 7'd0;
             tx_active     <= 1'b0;
@@ -513,9 +538,7 @@ module Top
         end
         else
         begin
-            tx_period_ctr <= tx_period_ctr - 25'd1;
-
-            if (tx_period_ctr == 25'd0 && !tx_active)
+            if (init_trigger_r && !tx_active)
             begin
                 tx_active  <= 1'b1;
                 tx_data_r  <= TX_PACKET[111];

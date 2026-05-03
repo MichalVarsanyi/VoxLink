@@ -1,5 +1,6 @@
 import serial
 import struct
+import time
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from collections import deque
@@ -10,9 +11,26 @@ COM_PORT = 'COM13'           # Adjust if necessary
 BAUD_RATE = 1000000
 MAX_POINTS = 200            # Number of points visible on the X-axis
 POLL_ADDRESS = 67           # Decimal 67 (0x43)
+INIT_ADDRESS = 2
 
 # The read request: 1-byte write-flag (0) + 1-byte address
 READ_PACKET = bytes([0x00, POLL_ADDRESS])
+
+INIT_VALUE = 0
+
+
+def send_write(ser, address, data):
+    addr = address & 0x7FFF
+    data &= 0xFFFFFFFF
+    pkt = bytes([
+        0x80 | ((addr >> 8) & 0x7F),
+        addr & 0xFF,
+        (data >> 24) & 0xFF,
+        (data >> 16) & 0xFF,
+        (data >> 8)  & 0xFF,
+        data         & 0xFF,
+    ])
+    ser.write(pkt)
 
 # VoxLink packet format, 112 bits = 14 bytes, transmitted MSB-first:
 #   addr(10) | cmd(6) | timestamp(16) | data(64) | CRC(16)
@@ -26,6 +44,17 @@ try:
 except Exception as e:
     print(f"Failed to connect to {COM_PORT}: {e}")
     sys.exit(1)
+
+ser.reset_input_buffer()
+send_write(ser, INIT_ADDRESS, (INIT_VALUE & 0x3FF) << 6)
+time.sleep(0.01)
+ser.write(bytes([0x00, INIT_ADDRESS]))
+init_reply = ser.read(2)
+if len(init_reply) == 2:
+    init_readback = ((init_reply[0] << 8) | init_reply[1]) >> 6
+    print(f"Init sent (value={INIT_VALUE}); read-back from addr {INIT_ADDRESS}: {init_readback}")
+else:
+    print(f"Init sent (value={INIT_VALUE}); read-back from addr {INIT_ADDRESS} timed out ({len(init_reply)} bytes)")
 
 # --- Setup Data Buffers ---
 x_data  = deque(range(MAX_POINTS), maxlen=MAX_POINTS)
