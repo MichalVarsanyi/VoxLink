@@ -309,9 +309,11 @@ module Top
 //  Initialization Output
 //--------------------------------------------------------------------------------------------- //
 
+    // This is the address which when received will trigger the init packet
     localparam INIT_ADDR = 15'd2;
-
+    // This is the current node count
     (* MARK_DEBUG="true" *) reg [9:0]  init_data_r;
+    // This is the init trigger flag, which will trigger the packet transmision, once the INIT_ADDR is received
     (* MARK_DEBUG="true" *) reg        init_trigger_r;
 
     always @(posedge sys_clk)
@@ -326,14 +328,55 @@ module Top
             init_trigger_r <= 1'b0;
             if (reg_write_addr == INIT_ADDR)
                 init_trigger_r <= 1'b1;
+
+            // If we have a new sensor data and the header of the packet is the init packet
             if (sensor_data_valid && sensor_packet[111:96] == 16'h0001)
+                // Save the current node count into init_data_r
                 init_data_r <= sensor_packet[79:70];
         end
     end
 
-//--------------------------------------------------------------------------------------------- //       
+//--------------------------------------------------------------------------------------------- //
+//  Data Readout
+//--------------------------------------------------------------------------------------------- //
+
+    // This is the address which when received will trigger the readout packet
+    localparam RUN_ADDR = 15'd3;
+    // The readout_active_r is a register storing whether we want the readout to be running or not 
+    (* MARK_DEBUG="true" *) reg readout_active_r;
+    // The readout_trigger_r is the flag triggering a new readout loop once conditions are met
+    (* MARK_DEBUG="true" *) reg readout_trigger_r;
+
+    always @(posedge sys_clk)
+    begin
+        if (sys_rst)
+        begin
+            readout_active_r        <= 1'b0;
+            readout_trigger_r       <= 1'b0;
+        end
+        else
+        begin
+            readout_trigger_r       <= 1'b0;
+
+            // When the readout address is received:
+            if (reg_write_addr == RUN_ADDR)
+            begin
+                // We assign the HIGH or LOW to both register at the same time
+                readout_active_r    <= reg_write_data[0];
+                readout_trigger_r   <= reg_write_data[0];
+            end
+            // If we want the readout to be running, we have received a new data, and the header of that data is our readout command:
+            else if (readout_active_r && sensor_data_valid && sensor_packet[111:96] == 16'h0003)
+            begin
+                // We trigger a new readout loop
+                readout_trigger_r   <= 1'b1;
+            end
+        end
+    end
+
+//--------------------------------------------------------------------------------------------- //
 //  UART
-//--------------------------------------------------------------------------------------------- //  
+//--------------------------------------------------------------------------------------------- //
 
     wire [7:0]  uart_rxd_message;
     wire        uart_rxd_received;
@@ -399,8 +442,9 @@ module Top
 //  VoxLink UART Interface
 //--------------------------------------------------------------------------------------------- //
 
-    // Declared up front so the multiplexer sees the real 112-bit reg, not an
-    // implicit 1-bit wire created by forward reference.
+    // The crc_verified_data_valid_r is used to store the last data with the correct CRC code
+    // If no new correct data will be received as the new readout is requested from the PC
+    // This old crc_verified_data_r will be provided
     reg [111:0] crc_verified_data_r;
     reg         crc_verified_data_valid_r;
 
@@ -435,6 +479,8 @@ module Top
     wire [111:0] sensor_packet;
     (* MARK_DEBUG="true" *) wire         sensor_data_valid;
 
+    // This module monitors the incoming CLK and SDA signals
+    // When a new packet is received, it will pulse the sensor_data_valid and update sensor_data and sensor_packet
     Vox_Receiver #(
     )
     Vox_Receiver_Inst (
@@ -456,14 +502,12 @@ module Top
 //  CRC Detection
 //--------------------------------------------------------------------------------------------- //
 
-    // (crc_verified_data_r / crc_verified_data_valid_r are declared above
-    //  the multiplexer instantiation to avoid a forward-reference implicit
-    //  net being created at the port connection.)
-
     // Wires from the CRC module
     wire            crc_data_valid;
     wire [15:0]     crc_value;
-        
+    
+
+    // This module takes the sensor_packet and computes the crc_value
     VoxLink_CRC16_Koopman #(
     )
     VoxLink_CRC16_Koopman_inst (
@@ -476,99 +520,41 @@ module Top
         .crc_valid(crc_data_valid)
     );
 
-        always @(posedge sys_clk)
-        begin
-            if (sys_rst)
-            begin
-                crc_verified_data_r         <= {112{1'b0}};
-                crc_verified_data_valid_r   <= 1'b0;
-            end
-            else
-            begin
-                crc_verified_data_valid_r   <= 1'b0;
-                if (crc_data_valid && crc_value == 16'h0000)
-                begin
-                    crc_verified_data_r         <= sensor_packet;
-                    crc_verified_data_valid_r   <= 1'b1;
-                end
-            end
-        end
-
-//--------------------------------------------------------------------------------------------- //
-//  VoxLink Dummy Packet Transmitter
-//  addr=0x001 cmd=0x02 ts=0xABCD data=0xDEADBEEFCAFEBABE crc=0x759D
-//  P3_RX_N → Lattice vox_in_clk_p (clock, idle HIGH)
-//  P3_RX_P → Lattice vox_in_rxd_p (data)
-//--------------------------------------------------------------------------------------------- //
-
-    localparam [111:0] TX_PACKET     = {10'd0, 6'd1, 16'h0000, 64'h0000_0000_0000_0000, 16'h0000};
-    localparam         TX_DIVIDER    = (252_000_000 / 400_000) / 2;  // 315
-    localparam         TX_RELOAD_VAL = 12'h800 - TX_DIVIDER;          // 1733
-
-    reg [11:0]  tx_sck_ctr;
-    reg         tx_sck_en;
-
-    always @(posedge sys_clk or posedge sys_rst)
-    begin
-        if (sys_rst) begin tx_sck_ctr <= TX_RELOAD_VAL; tx_sck_en <= 1'b0; end
-        else begin
-            if (tx_sck_ctr[11]) begin tx_sck_ctr <= TX_RELOAD_VAL; tx_sck_en <= 1'b1; end
-            else                 begin tx_sck_ctr <= tx_sck_ctr + 12'd1; tx_sck_en <= 1'b0; end
-        end
-    end
-
-    reg [111:0] tx_shift_r;
-    reg [6:0]   tx_bit_cnt;
-    reg         tx_active;
-    reg         tx_clk_r;
-    reg         tx_data_r;
-
-    assign P3_CLK_P = tx_clk_r;
-    assign P3_RX_P  = tx_data_r;
-
-    always @(posedge sys_clk or posedge sys_rst)
+    always @(posedge sys_clk)
     begin
         if (sys_rst)
         begin
-            tx_shift_r    <= {112{1'b0}};
-            tx_bit_cnt    <= 7'd0;
-            tx_active     <= 1'b0;
-            tx_clk_r      <= 1'b0;
-            tx_data_r     <= 1'b0;
+            crc_verified_data_r         <= {112{1'b0}};
+            crc_verified_data_valid_r   <= 1'b0;
         end
         else
         begin
-            if (init_trigger_r && !tx_active)
-            begin
-                tx_active  <= 1'b1;
-                tx_data_r  <= TX_PACKET[111];
-                tx_shift_r <= {TX_PACKET[110:0], 1'b0};
-                tx_bit_cnt <= 7'd1;
-            end
+            crc_verified_data_valid_r   <= 1'b0;
 
-            if (tx_active && tx_sck_en)
+            // When the crc_data_valid indicated the CRC is computed and the crc_vlaue is 0:
+            if (crc_data_valid && crc_value == 16'h0000)
             begin
-                if (!tx_clk_r)
-                begin
-                    tx_clk_r <= 1'b1;
-                end
-                else
-                begin
-                    tx_clk_r <= 1'b0;
-                    if (tx_bit_cnt == 7'd112)
-                    begin
-                        tx_active <= 1'b0;
-                        tx_data_r <= 1'b0;
-                    end
-                    else
-                    begin
-                        tx_data_r  <= tx_shift_r[111];
-                        tx_shift_r <= {tx_shift_r[110:0], 1'b0};
-                        tx_bit_cnt <= tx_bit_cnt + 7'd1;
-                    end
-                end
+                // Then we can update the CRC verified data register
+                crc_verified_data_r         <= sensor_packet;
+                crc_verified_data_valid_r   <= 1'b1;
             end
         end
     end
+
+//--------------------------------------------------------------------------------------------- //
+//  VoxLink Transmitter
+//--------------------------------------------------------------------------------------------- //
+
+    VoxLink_TXD_Driver #(
+        .CLK_FREQ (252_000_000),
+        .VOX_FREQ (400_000)
+    ) VoxLink_TXD_Driver_inst (
+        .sys_clk         (sys_clk),
+        .sys_rst         (sys_rst),
+        .init_trigger    (init_trigger_r),
+        .readout_trigger (readout_trigger_r),
+        .vox_clk         (P3_CLK_P),
+        .vox_data        (P3_RX_P)
+    );
 
 endmodule

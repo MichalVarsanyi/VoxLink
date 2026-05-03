@@ -9,17 +9,16 @@ module VoxLink_Reg_FIFO #(
     // Control Flags
     input       wr_en,
     input       wr_bit,
-    output      fifo_full,
 
     input       rd_en,
     output      rd_bit,
-    output      fifo_empty,
 
     // Extra synchronous FIFO reset / flush
     input       fifo_rst,
 
-
     // Diagnostic Flags
+    output      fifo_full,
+    output      fifo_empty,
     output reg  overflow_sticky,
     output reg  underflow_sticky
 );

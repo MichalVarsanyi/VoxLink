@@ -52,9 +52,12 @@ ser.write(bytes([0x00, INIT_ADDRESS]))
 init_reply = ser.read(2)
 if len(init_reply) == 2:
     init_readback = ((init_reply[0] << 8) | init_reply[1]) >> 6
-    print(f"Init sent (value={INIT_VALUE}); read-back from addr {INIT_ADDRESS}: {init_readback}")
+    print(f"Number of initialized nodes: {init_readback}")
 else:
     print(f"Init sent (value={INIT_VALUE}); read-back from addr {INIT_ADDRESS} timed out ({len(init_reply)} bytes)")
+
+send_write(ser, 3, 1)
+print("Run mode started.")
 
 # --- Setup Data Buffers ---
 x_data  = deque(range(MAX_POINTS), maxlen=MAX_POINTS)
