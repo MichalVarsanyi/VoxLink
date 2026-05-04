@@ -9,17 +9,6 @@ module TestBench;
 
     wire         crc_valid;
 
-
-    VoxLink_Timestamp timestamp(
-        // General Input
-        .sys_clk(clk),
-        .sys_rst(rst),
-
-        .clear_time(),
-
-        .timestamp()
-    );
-
     VoxLink_CRC16_Koopman dut (
         // Inputs
         .sys_clk    (clk),
@@ -44,7 +33,7 @@ module TestBench;
     initial begin
         rst         = 1'b1;
         trigger_crc = 1'b0;
-        data        = 112'h11223344556677889900AABB0000;
+        data        = {10'h001, 6'h02, 16'hABCD, 64'hDEAD_BEEF_CAFE_BABE, 16'd0};
 
         // Hold reset for 3 clock cycles, then release
         repeat(3) @(posedge clk); #1;

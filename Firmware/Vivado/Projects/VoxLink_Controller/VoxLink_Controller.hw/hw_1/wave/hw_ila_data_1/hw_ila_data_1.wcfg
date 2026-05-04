@@ -10,122 +10,27 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="29"></ZoomEndTime>
+      <ZoomEndTime time="4,097"></ZoomEndTime>
       <Cursor1Time time="0"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="185"></NameColumnWidth>
-      <ValueColumnWidth column_width="142"></ValueColumnWidth>
+      <ValueColumnWidth column_width="130"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
-   <wvobject fp_name="MV_UART_Inst/received_message" type="array">
+   <WVObjectSize size="2" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="init_trigger_r" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">MV_UART_Inst/received_message[7:0]</obj_property>
-      <obj_property name="ObjectShortName">received_message[7:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">init_trigger_r</obj_property>
+      <obj_property name="ObjectShortName">init_trigger_r</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="MV_UART_Inst/uart_rxd_r" type="array">
+   <wvobject fp_name="init_data_r" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">MV_UART_Inst/uart_rxd_r[1:0]</obj_property>
-      <obj_property name="ObjectShortName">uart_rxd_r[1:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="MV_UART_FIFO_Interface_inst/reg_read_addr" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">MV_UART_FIFO_Interface_inst/reg_read_addr[14:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_read_addr[14:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="MV_UART_FIFO_Interface_inst/reg_write_addr" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">MV_UART_FIFO_Interface_inst/reg_write_addr[14:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_write_addr[14:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="MV_UART_FIFO_Interface_inst/reg_write_data" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">MV_UART_FIFO_Interface_inst/reg_write_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_write_data[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="MV_UART_FIFO_Interface_inst/uart_rxd_cnt" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">MV_UART_FIFO_Interface_inst/uart_rxd_cnt[2:0]</obj_property>
-      <obj_property name="ObjectShortName">uart_rxd_cnt[2:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="MV_UART_FIFO_Interface_inst/uart_rxd_r" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">MV_UART_FIFO_Interface_inst/uart_rxd_r[39:0]</obj_property>
-      <obj_property name="ObjectShortName">uart_rxd_r[39:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="sensor_data" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">sensor_data[63:0]</obj_property>
-      <obj_property name="ObjectShortName">sensor_data[63:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="reg_mux_out" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">reg_mux_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_mux_out[7:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">Vox_Testing_Multiplexer_Inst/reg_mux_out_transmit_r[13:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_mux_out_transmit_r[13:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="Vox_Testing_Multiplexer_Inst/reg_mux_out_r" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">Vox_Testing_Multiplexer_Inst/reg_mux_out_r[111:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_mux_out_r[111:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="Vox_Testing_Multiplexer_Inst/reg_read_addr" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">Vox_Testing_Multiplexer_Inst/reg_read_addr[14:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_read_addr[14:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="sensor_data_valid" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">sensor_data_valid</obj_property>
-      <obj_property name="ObjectShortName">sensor_data_valid</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="MV_UART_Inst/uart_tx_state" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">MV_UART_Inst/uart_tx_state</obj_property>
-      <obj_property name="ObjectShortName">uart_tx_state</obj_property>
+      <obj_property name="ElementShortName">init_data_r[9:0]</obj_property>
+      <obj_property name="ObjectShortName">init_data_r[9:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

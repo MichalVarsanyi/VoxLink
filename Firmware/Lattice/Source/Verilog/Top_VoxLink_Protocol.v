@@ -30,34 +30,48 @@ module Top(
 
     // LEDs
     output      led_io,
-    // output      led_rx,
-    // output      led_tx,
 
     // VoxLink
-    output      vox_clk,
-    output      vox_txd
+    input       vox_in_clk_p,
+    // input       vox_in_clk_n,
+
+    output      vox_out_clk_p,
+    // output      vox_out_clk_n,
+
+    input       vox_in_rxd_p,
+    // input       vox_in_rxd_n,
+
+    output      vox_out_rxd_p
+    // output      vox_out_rxd_n
 );
 
+//--------------------------------------------------------------------------------------------- //       
+//  Wire Declarations
+//--------------------------------------------------------------------------------------------- //
 
     // Clock and Reset
-    wire            sys_clk;        // 150 Mhz
+    wire            sys_clk;        // 100.5 MHz
     wire            sys_clkout;
     wire            sys_rst;
     wire            locked;
     assign          sys_rst = !locked;
 
+    // VoxLink CDC outputs
+    wire            vox_clk_sync;
+    wire            vox_rxd_sync;
+
     // LED
     reg             led_io_r;
-    // reg             led_rx_r;
-    // reg             led_tx_r;
 
-// ---------------------------------------------
-// Clock
-// ---------------------------------------------
+
+//--------------------------------------------------------------------------------------------- //       
+//  Clock
+//--------------------------------------------------------------------------------------------- //
 
     // BUFG rounting of external clock
     wire clk_12mhz_bufg;
 
+    // Routing inside the GBUF clock fabric
     SB_GB clk_in (
         .USER_SIGNAL_TO_GLOBAL_BUFFER(clk_12mhz),
         .GLOBAL_BUFFER_OUTPUT(clk_12mhz_bufg)
@@ -66,7 +80,7 @@ module Top(
     SB_PLL40_CORE #(
         .FEEDBACK_PATH("SIMPLE"),
         .DIVR(0),                   // DIVR = 0
-        .DIVF(66),                  // DIVF = 49
+        .DIVF(59),                  // DIVF = 49
         .DIVQ(3),                   // DIVQ = 2
         .FILTER_RANGE(1)            // FILTER_RANGE = 1
     ) u_pll (
@@ -84,20 +98,61 @@ module Top(
         .GLOBAL_BUFFER_OUTPUT(sys_clk)
     );
 
-// -----------------------------------------------------------------------------
-// 2-stage CDC synchronizer for SCL readback
-// -----------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------- //       
+//  Cross Domain Crossing
+//--------------------------------------------------------------------------------------------- //
 
+    // VoxLink CLK Input
+    wire vox_clk_ff1;
+    wire vox_clk_ff2;
+
+    SB_DFF vox_clk_cdc_stage_1 (
+        .Q(vox_clk_ff1),
+        .C(sys_clk),
+        .D(vox_in_clk_p)
+    );
+
+    SB_DFF vox_clk_cdc_stage_2 (
+        .Q(vox_clk_ff2),
+        .C(sys_clk),
+        .D(vox_clk_ff1)
+    );
+
+    assign vox_clk_sync = vox_clk_ff2;
+
+
+
+    // VoxLink RXD Input
+    wire vox_rxd_ff1;
+    wire vox_rxd_ff2;
+
+    SB_DFF vox_rxd_cdc_stage_1 (
+        .Q(vox_rxd_ff1),
+        .C(sys_clk),
+        .D(vox_in_rxd_p)
+    );
+
+    SB_DFF vox_rxd_cdc_stage_2 (
+        .Q(vox_rxd_ff2),
+        .C(sys_clk),
+        .D(vox_rxd_ff1)
+    );
+
+    assign vox_rxd_sync = vox_rxd_ff2;
+
+
+
+    // Sensor Interrupt
     wire bno_interrupt_ff1;
     wire bno_interrupt_ff2;
 
-    SB_DFF i2c_scl_sync_stage_1 (
+    SB_DFF bno_interrupt_cdc_stage_1 (
         .Q(bno_interrupt_ff1),
         .C(sys_clk),
         .D(bno_interrupt)
     );
 
-    SB_DFF i2c_scl_sync_stage_2 (
+    SB_DFF bno_interrupt_cdc_stage_2 (
         .Q(bno_interrupt_ff2),
         .C(sys_clk),
         .D(bno_interrupt_ff1)
@@ -105,9 +160,43 @@ module Top(
 
     assign bno_interrupt_sync = bno_interrupt_ff2;
 
-// ---------------------------------------------
-// RGB Infrastructure
-// ---------------------------------------------
+
+//--------------------------------------------------------------------------------------------- //
+// VoxLink Multinode Protocol
+//--------------------------------------------------------------------------------------------- //
+
+    wire [9:0]      node_addr_r;
+    wire            fifo_overflow_sticky;
+
+    VoxLink_Multinode_Protocol #(
+        .CLK_FREQ(90_000_000),
+        .VOX_FREQ(400_000)
+    ) VoxLink_Multinode_Protocol_Inst (
+        // General
+        .sys_clk        (sys_clk),
+        .sys_rst        (sys_rst),
+
+        // Data
+        .vox_transmit_packet(packet_data_latched),
+
+        // VoxLink
+        .vox_in_clk_p   (vox_clk_sync),
+        .vox_in_rxd_p   (vox_rxd_sync),
+
+        .vox_out_rxd_p  (vox_out_rxd_p),
+        .vox_out_clk_p  (vox_out_clk_p),
+
+        // Node
+        .node_addr_r(node_addr_r),
+
+        // Diagnostics
+        .fifo_overflow_sticky(fifo_overflow_sticky)
+    );
+
+//--------------------------------------------------------------------------------------------- //       
+//  RGB Infrastructure
+//--------------------------------------------------------------------------------------------- //
+
     SB_RGBA_DRV #(
         .CURRENT_MODE("0b1"),
         .RGB0_CURRENT("0b000001"),
@@ -117,7 +206,7 @@ module Top(
         .CURREN(1'b1),
         .RGBLEDEN(1'b1),
 
-        .RGB0PWM(led_io_r),
+        .RGB0PWM(fifo_overflow_sticky),
         .RGB1PWM(),
         .RGB2PWM(),
 
@@ -126,82 +215,36 @@ module Top(
         .RGB2()
     );
 
-
-// ---------------------------------------------
+//--------------------------------------------------------------------------------------------- // 
 // Blinky LED
-// ---------------------------------------------
+//--------------------------------------------------------------------------------------------- // 
 
-    reg [26:0]  blink_counter;
-
-    always @(posedge sys_clk or posedge sys_rst)
-    begin
-        if(sys_rst)
-        begin
-            led_io_r        <= 1'b1;
-            // led_rx_r        <= 1'b1;
-            // led_tx_r        <= 1'b1; 
-        end
-        else
-        begin
-            if(blink_counter == {27{1'b1}})
-            begin
-                blink_counter   <= {27{1'b0}};
-                led_io_r        <= ~led_io_r;
-                // led_rx_r        <= ~led_rx_r;
-                // led_tx_r        <= ~led_tx_r;
-            end
-            else
-            begin
-                blink_counter   <= blink_counter + 1;
-            end
-        end
-    end
-    
-
-    // reg [11:0]  bno_clk_counter;
-    // reg         bno_clk_r;
+    // reg [26:0]  blink_counter;
 
     // always @(posedge sys_clk or posedge sys_rst)
     // begin
     //     if(sys_rst)
     //     begin
-    //         bno_clk_counter   <= 12'd0;
-    //         bno_clk_r         <= 1'b0;
+    //         led_io_r        <= 1'b1;
     //     end
     //     else
     //     begin
-    //         if(bno_clk_counter == 3000)
+    //         if(blink_counter == {27{1'b1}})
     //         begin
-    //             bno_clk_counter   <= 12'd0;
-    //             bno_clk_r         <= ~bno_clk_r;
+    //             blink_counter   <= {27{1'b0}};
+    //             led_io_r        <= ~led_io_r;
     //         end
     //         else
-    //             bno_clk_counter   <= bno_clk_counter + 1;
-    //     end
-    // end
-
-
-    // always @(posedge sys_clk or posedge sys_rst)
-    // begin
-    //     if(sys_rst)
-    //     begin
-    //         led_io_r        <= 1'b0;
-    //         // vox_clk_p       <= 1'b0;
-    //     end
-    //     else
-    //     begin
-    //         if(bno_interrupt == 1'b0)
     //         begin
-    //             led_io_r        <= 1'b1;
-    //             // vox_clk_p       <= 1'b1;
+    //             blink_counter   <= blink_counter + 1;
     //         end
     //     end
     // end
-    
 
-// -----------------------------------------------------
+
+//--------------------------------------------------------------------------------------------- // 
 // I2C Driver
-// -----------------------------------------------------
+//--------------------------------------------------------------------------------------------- // 
 
     wire [7:0] tx_data;
     wire       trigger_tx;
@@ -217,7 +260,7 @@ module Top(
     wire       driver_finished_tranaction;
 
     VoxLink_I2C_Driver #(
-        .CLK_FREQ(100_500_000),  // System Clock Frequency
+        .CLK_FREQ(90_000_000),  // System Clock Frequency
         .I2C_FREQ(100_000)        // Target I2C Speed
     ) VoxLink_I2C_Driver_inst (
         // General
@@ -243,9 +286,9 @@ module Top(
         .driver_finished_tranaction(driver_finished_tranaction)     // Driver has finished a sequence of transaction commands and is now in the idle state
     );
 
-// -----------------------------------------------------
+//--------------------------------------------------------------------------------------------- // 
 // BNO086 Sensor Driver
-// -----------------------------------------------------
+//--------------------------------------------------------------------------------------------- // 
 
     wire [79:0] sensor_data;
     wire        sensor_data_ready;
@@ -276,51 +319,71 @@ module Top(
 
         .sensor_data(sensor_data),                  // Latched data from the sensor
         .sensor_data_ready(sensor_data_ready)
-);
+    );
 
-// -----------------------------------------------------
+//--------------------------------------------------------------------------------------------- // 
 // VoxLink Packet Builder
-// -----------------------------------------------------
+//--------------------------------------------------------------------------------------------- // 
 
     wire [111:0] packet_data;
     wire         packet_ready;
 
+    reg [111:0] packet_data_latched;
+
+    assign vox_transmit_packet = packet_data_latched;
+
+    always @(posedge sys_clk or posedge sys_rst)
+    begin
+        if (sys_rst)
+        begin
+            packet_data_latched <= 112'd0;
+        end
+        else if (packet_ready && node_addr_r != 10'd0)
+        begin
+            packet_data_latched <= packet_data;
+        end
+    end
+
     VoxLink_Packet_Builder #(
-        .ADDRESS(12'h001),
-        .COMMAND(8'h02),
-        .CLK_FREQ_HZ(100_500_000)
+        .COMMAND(6'h03),
+        .CLK_FREQ_HZ(90_000_000)
     ) VoxLink_Packet_Builder_Inst (
-        .sys_clk(sys_clk),
-        .sys_rst(sys_rst),
-
-        .sensor_data(sensor_data),
-        .sensor_data_ready(sensor_data_ready),
-
-        .packet_data(packet_data),
-        .packet_ready(packet_ready)
-    );
-
-// -----------------------------------------------------
-// VoxLink Protocol Driver
-// -----------------------------------------------------
-
-    VoxLink_VOX_Protocol #(
-        .CLK_FREQ(100_500_000),  // System Clock Frequency
-        .VOX_FREQ(400_000)       // Target VoxLink Speed
-    ) VoxLink_VOX_Protocol_Inst (
         // General
         .sys_clk(sys_clk),
         .sys_rst(sys_rst),
 
-        // Data Input
+        // Sensor Data
+        .sensor_data(sensor_data),
+        .sensor_data_ready(sensor_data_ready),
+
+        // Node Info
+        .address(node_addr_r),
+
+        // Output Packet
         .packet_data(packet_data),
-        .packet_ready(packet_ready),
-
-        // Transmit Output
-        .vox_tx(vox_txd),
-        .vox_clk(vox_clk)
-
+        .packet_ready(packet_ready)
     );
 
+// //--------------------------------------------------------------------------------------------- // 
+// // VoxLink Protocol Driver
+// //--------------------------------------------------------------------------------------------- // 
+
+//     VoxLink_VOX_Protocol #(
+//         .CLK_FREQ(90_000_000),  // System Clock Frequency
+//         .VOX_FREQ(400_000)       // Target VoxLink Speed
+//     ) VoxLink_VOX_Protocol_Inst (
+//         // General
+//         .sys_clk(sys_clk),
+//         .sys_rst(sys_rst),
+
+//         // Data Input
+//         .packet_data(packet_data),
+//         .packet_ready(packet_ready),
+
+//         // Transmit Output
+//         .vox_tx(vox_txd),
+//         .vox_clk(vox_clk)
+
+//     );
 
 endmodule

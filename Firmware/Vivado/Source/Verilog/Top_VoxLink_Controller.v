@@ -36,13 +36,13 @@ module Top
 
     // // P2 Differential Pairs
     // output wire P2_TX_P, P2_TX_N,
-    // input  wire P2_RX_P, P2_RX_N,
-    // input  wire P2_CLK_P, P2_CLK_N,
+    input P2_RX_P, // P2_RX_N,
+    input P2_CLK_P, // P2_CLK_N,
 
     // P3 Differential Pairs
-    input P3_TX_P, P3_TX_N,
-    // input  wire P3_RX_P, P3_RX_N,
-    // input  wire P3_CLK_P, P3_CLK_N,
+    // input  P3_TX_P, P3_TX_N,
+    output  P3_RX_P,  //P3_RX_N,
+    output  P3_CLK_P, // P3_CLK_N,
 
     // // P4 Differential Pairs
     // output wire P4_TX_P, P4_TX_N,
@@ -76,7 +76,7 @@ module Top
 
     // Output LEDs
     // output reg  P1_L1, P1_L2
-//    output reg P2_L1, P2_L2
+    output reg P2_L1, P2_L2,
     output reg P3_L1, P3_L2,
     // output reg P4_L1, P4_L2
     // output reg P5_L1, P5_L2
@@ -198,7 +198,7 @@ module Top
     // Drive the async bus with the raw top-level pins so the CDC has an
     // actual signal to synchronize. {P, N} → cdc[1] = P, cdc[0] = N to
     // match the P3_TX_P_cdc / P3_TX_N_cdc unpack below.
-    assign p3_tx_async = {P3_TX_P, P3_TX_N};
+    assign p3_tx_async = {P2_RX_P, P2_CLK_P};
 
     xpm_cdc_array_single
     #(
@@ -251,6 +251,8 @@ module Top
         if (sys_rst) 
         begin
             led_counter     <= {28{1'b1}};
+            P2_L1        <= 1'b0;
+            P2_L2        <= 1'b1;
             P3_L1        <= 1'b1;
             P3_L2        <= 1'b0;
         end
@@ -259,6 +261,8 @@ module Top
             if (led_counter == {28{1'b1}}) 
             begin
                 led_counter <= {28{1'b0}};
+                P2_L1      <= ~P2_L1;
+                P2_L2      <= ~P2_L2;
                 P3_L1      <= ~P3_L1;
                 P3_L2      <= ~P3_L2;
             end
@@ -288,8 +292,8 @@ module Top
 //--------------------------------------------------------------------------------------------- //
 // Mailbox is a testing register, which can be written to and read from        
         
-    reg [32:0] mailbox;      
-           
+    reg [32:0] mailbox;
+
     always @(posedge sys_clk)
     begin
         if(sys_rst)
@@ -299,11 +303,111 @@ module Top
             if(reg_write_addr == MAILBOX)
                 mailbox     <= reg_write_data;
         end
-    end        
+    end
 
 //--------------------------------------------------------------------------------------------- //       
+//  Initialization Output
+//--------------------------------------------------------------------------------------------- //
+
+    // This is the address which when received will trigger the init packet
+    localparam INIT_ADDR = 15'd2;
+    // This is the current node count
+    (* MARK_DEBUG="true" *) reg [9:0]  init_data_r;
+    // This is the init trigger flag, which will trigger the packet transmision, once the INIT_ADDR is received
+    (* MARK_DEBUG="true" *) reg        init_trigger_r;
+
+    always @(posedge sys_clk)
+    begin
+        if (sys_rst)
+        begin
+            init_data_r    <= 10'd0;
+            init_trigger_r <= 1'b0;
+        end
+        else
+        begin
+            init_trigger_r <= 1'b0;
+            if (reg_write_addr == INIT_ADDR)
+                init_trigger_r <= 1'b1;
+
+            // If we have a new sensor data and the header of the packet is the init packet
+            if (sensor_data_valid && sensor_packet[111:96] == 16'h0001)
+                // Save the current node count into init_data_r
+                init_data_r <= sensor_packet[79:70];
+        end
+    end
+
+//--------------------------------------------------------------------------------------------- //
+//  Data Readout
+//--------------------------------------------------------------------------------------------- //
+
+localparam RUN_ADDR = 15'd3;
+
+// 2 ms at 252 MHz
+localparam integer READOUT_PERIOD_CLKS = 2_000_000;
+
+(* MARK_DEBUG="true" *) reg        readout_active_r;
+(* MARK_DEBUG="true" *) reg        readout_trigger_r;
+(* MARK_DEBUG="true" *) reg [31:0] readout_timer_r;
+
+always @(posedge sys_clk)
+begin
+    if (sys_rst)
+    begin
+        readout_active_r  <= 1'b0;
+        readout_trigger_r <= 1'b0;
+        readout_timer_r   <= 32'd0;
+    end
+    else
+    begin
+        readout_trigger_r <= 1'b0;
+
+        // PC starts/stops runtime mode
+        if (reg_write_addr == RUN_ADDR)
+        begin
+            readout_active_r <= reg_write_data[0];
+            readout_timer_r  <= 32'd0;
+
+            // Optional: fire immediately when enabling run mode
+            if (reg_write_data[0])
+                readout_trigger_r <= 1'b1;
+        end
+        else if (readout_active_r)
+        begin
+            if (readout_timer_r == READOUT_PERIOD_CLKS - 1)
+            begin
+                readout_timer_r   <= 32'd0;
+                readout_trigger_r <= 1'b1;
+            end
+            else
+            begin
+                readout_timer_r <= readout_timer_r + 32'd1;
+            end
+        end
+        else
+        begin
+            readout_timer_r <= 32'd0;
+        end
+    end
+end
+
+//--------------------------------------------------------------------------------------------- //
+//  Node Select Register
+//--------------------------------------------------------------------------------------------- //
+
+    localparam NODE_SELECT_ADDR = 15'd4;
+    reg [6:0] node_select_r;
+
+    always @(posedge sys_clk)
+    begin
+        if (sys_rst)
+            node_select_r <= 7'd1;
+        else if (reg_write_addr == NODE_SELECT_ADDR)
+            node_select_r <= reg_write_data[6:0];
+    end
+
+//--------------------------------------------------------------------------------------------- //
 //  UART
-//--------------------------------------------------------------------------------------------- //  
+//--------------------------------------------------------------------------------------------- //
 
     wire [7:0]  uart_rxd_message;
     wire        uart_rxd_received;
@@ -369,29 +473,39 @@ module Top
 //  VoxLink UART Interface
 //--------------------------------------------------------------------------------------------- //
 
-    // Declared up front so the multiplexer sees the real 112-bit reg, not an
-    // implicit 1-bit wire created by forward reference.
+    wire [111:0] node_packet;
+
+    VoxLink_BRAM_Storage VoxLink_BRAM_Storage_inst (
+        .sys_clk     (sys_clk),
+        .rx_packet   (sensor_packet),
+        .rx_valid    (sensor_data_valid),
+        .node_select (node_select_r),
+        .node_packet (node_packet)
+    );
+
+    // The crc_verified_data_valid_r is used to store the last data with the correct CRC code
+    // If no new correct data will be received as the new readout is requested from the PC
+    // This old crc_verified_data_r will be provided
     reg [111:0] crc_verified_data_r;
     reg         crc_verified_data_valid_r;
 
-        Vox_Testing_Multiplexer #(
-        )
-        Vox_Testing_Multiplexer_Inst (
+    Vox_Testing_Multiplexer #(
+    )
+    Vox_Testing_Multiplexer_Inst (
         // General
         .sys_rst(sys_rst),
         .sys_clk(sys_clk),
 
-
-        .sensor_data(crc_verified_data_r),
-        .sensor_data_valid(crc_verified_data_valid_r),
+        .sensor_data(node_packet),
 
         // Diagnostic
         .mailbox(mailbox),
-        
+        .init_data(init_data_r),
+
         // Multiplexer output
         .reg_mux_out(reg_mux_out),
         .reg_mux_out_transmit(reg_mux_out_transmit),
-        
+
         // Multiplexer selector
         .reg_read_addr(reg_read_addr)
     );
@@ -404,6 +518,8 @@ module Top
     wire [111:0] sensor_packet;
     (* MARK_DEBUG="true" *) wire         sensor_data_valid;
 
+    // This module monitors the incoming CLK and SDA signals
+    // When a new packet is received, it will pulse the sensor_data_valid and update sensor_data and sensor_packet
     Vox_Receiver #(
     )
     Vox_Receiver_Inst (
@@ -425,14 +541,12 @@ module Top
 //  CRC Detection
 //--------------------------------------------------------------------------------------------- //
 
-    // (crc_verified_data_r / crc_verified_data_valid_r are declared above
-    //  the multiplexer instantiation to avoid a forward-reference implicit
-    //  net being created at the port connection.)
-
     // Wires from the CRC module
     wire            crc_data_valid;
     wire [15:0]     crc_value;
-        
+    
+
+    // This module takes the sensor_packet and computes the crc_value
     VoxLink_CRC16_Koopman #(
     )
     VoxLink_CRC16_Koopman_inst (
@@ -445,23 +559,41 @@ module Top
         .crc_valid(crc_data_valid)
     );
 
-        always @(posedge sys_clk)
+    always @(posedge sys_clk)
+    begin
+        if (sys_rst)
         begin
-            if (sys_rst)
-            begin
-                crc_verified_data_r         <= {112{1'b0}};
-                crc_verified_data_valid_r   <= 1'b0;
-            end
-            else
-            begin
-                crc_verified_data_valid_r   <= 1'b0;
-                if (crc_data_valid && crc_value == 16'h0000)
-                begin
-                    crc_verified_data_r         <= sensor_packet;
-                    crc_verified_data_valid_r   <= 1'b1;
-                end
-            end
-
-            
+            crc_verified_data_r         <= {112{1'b0}};
+            crc_verified_data_valid_r   <= 1'b0;
         end
+        else
+        begin
+            crc_verified_data_valid_r   <= 1'b0;
+
+            // When the crc_data_valid indicated the CRC is computed and the crc_vlaue is 0:
+            if (crc_data_valid && crc_value == 16'h0000)
+            begin
+                // Then we can update the CRC verified data register
+                crc_verified_data_r         <= sensor_packet;
+                crc_verified_data_valid_r   <= 1'b1;
+            end
+        end
+    end
+
+//--------------------------------------------------------------------------------------------- //
+//  VoxLink Transmitter
+//--------------------------------------------------------------------------------------------- //
+
+    VoxLink_TXD_Driver #(
+        .CLK_FREQ (252_000_000),
+        .VOX_FREQ (400_000)
+    ) VoxLink_TXD_Driver_inst (
+        .sys_clk         (sys_clk),
+        .sys_rst         (sys_rst),
+        .init_trigger    (init_trigger_r),
+        .readout_trigger (readout_trigger_r),
+        .vox_clk         (P3_CLK_P),
+        .vox_data        (P3_RX_P)
+    );
+
 endmodule

@@ -10,9 +10,9 @@ module Vox_Receiver (
     input  vox_rx,
 
     // Received Sensor Data
-    output reg [63:0]  sensor_data,
-    output reg [111:0] sensor_packet,   // Full packet for CRC verification
-    output reg         sensor_data_valid
+    (* MARK_DEBUG="true" *) output reg [63:0]  sensor_data,
+    (* MARK_DEBUG="true" *) output reg [111:0] sensor_packet,   // Full packet for CRC verification
+    (* MARK_DEBUG="true" *) output reg         sensor_data_valid
 );
 
     // ---------------------------------------------------------
