@@ -1,13 +1,18 @@
 #--  Synopsys, Inc.
 #--  Version L-2016.09L+ice40
 #--  Project file C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLink_Protocol_Implmnt\run_options.txt
-#--  Written on Sat May 02 18:21:49 2026
+#--  Written on Mon May 04 15:47:09 2026
 
 
 #project files
 add_file -verilog "../../Source/Verilog/Top_VoxLink_Protocol.v"
+add_file -verilog "sources/VoxLink_BNO_Driver.v"
+add_file -verilog "sources/VoxLink_CRC16_Koopman.v"
+add_file -verilog "sources/VoxLink_I2C_Driver.v"
 add_file -verilog "sources/VoxLink_Multinode_Protocol.v"
+add_file -verilog "sources/VoxLink_Packet_Builder.v"
 add_file -verilog "sources/VoxLink_Reg_FIFO.v"
+add_file -verilog "sources/VoxLink_Timestamp.v"
 add_file -constraint "../../Source/Constraints/VoxLink_Constraints.sdc"
 
 

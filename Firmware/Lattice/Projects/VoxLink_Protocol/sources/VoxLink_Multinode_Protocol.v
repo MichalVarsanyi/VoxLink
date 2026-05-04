@@ -6,6 +6,9 @@ module VoxLink_Multinode_Protocol #(
     input sys_clk,
     input sys_rst,
 
+    // Data
+    input [111:0]      vox_transmit_packet,
+
     // VoxLink
     input       vox_in_clk_p,
     // input       vox_in_clk_n,
@@ -16,8 +19,14 @@ module VoxLink_Multinode_Protocol #(
     input       vox_in_rxd_p,
     // input       vox_in_rxd_n,
 
-    output      vox_out_rxd_p
+    output      vox_out_rxd_p,
     // output      vox_out_rxd_n
+
+    // Node
+    output reg [9:0]   node_addr_r,
+
+    // Diagnostics
+    output             fifo_overflow_sticky
 );
 
 //--------------------------------------------------------------------------------------------- //
@@ -62,7 +71,7 @@ module VoxLink_Multinode_Protocol #(
         end
         // If there is a new clock edge or a timeout pulse is active:
         // (This stage is resseting the timer)
-        else if (clk_in_rising || timeout_pulse)
+        else if (clk_in_rising || timeout_pulse || resp_tx_active_r)
         begin
             // Reset the timer
             timeout_counter_r <= 16'd0;
@@ -129,7 +138,7 @@ module VoxLink_Multinode_Protocol #(
         // Diagnostic flags
         .fifo_full        (fifo_full),
         .fifo_empty       (fifo_empty),
-        .overflow_sticky  (),
+        .overflow_sticky  (fifo_overflow_sticky),
         .underflow_sticky ()
     );
 
@@ -202,7 +211,8 @@ module VoxLink_Multinode_Protocol #(
     // A flag that turns on for the entire duration of the initialization sequence
     reg         init_mode_active_r;
     // Initialized node address from the mater initialization packet
-    reg [9:0]   node_addr_r;
+    // reg [9:0]   node_addr_r;
+    
     // A flag that latches HIGH once the node address has been received
     reg         node_addr_valid_r;
 
@@ -212,13 +222,13 @@ module VoxLink_Multinode_Protocol #(
     // A flag going HIGH when we are appending our data
     reg         resp_tx_active_r;
 
-    wire [111:0] response_packet_w = {
-        node_addr_r + 10'd1,
-        6'd3,
-        16'h0000,
-        64'hDEAD_BEEF_CAFE_BABE,
-        16'h0000
-    };
+    // wire [111:0] vox_transmit_packet = {
+    //     node_addr_r,
+    //     6'd3,
+    //     16'h0000,
+    //     64'hDEAD_BEEF_CAFE_BABE,
+    //     16'h0000
+    // };
 
     // Magic buffer is hungry whenever it is not full: drives FIFO read continuously until full
     assign fifo_rd_en = !magic_full_r && !fifo_empty;
@@ -314,7 +324,7 @@ module VoxLink_Multinode_Protocol #(
                                 resp_tx_active_r   <= 1'b1;
                                 append_trigger_r   <= 1'b0;
                                 frame_counter_r    <= 3'd1;
-                                transmit_shift_r   <= response_packet_w;
+                                transmit_shift_r   <= vox_transmit_packet;
                                 init_mode_active_r <= 1'b0;
                             end
                             // If we're not appending data
@@ -358,7 +368,7 @@ module VoxLink_Multinode_Protocol #(
                     // If the magic encodes initialization, we set the init_mode_active_r flag HIGH
                     init_mode_active_r <= (magic_register_r == 16'h0001) && (frame_counter_r == 3'd0);
                     // If the magic encodes data readout, we set the append_trigger_r flag HIGH
-                    append_trigger_r   <= node_addr_valid_r && (magic_register_r == {node_addr_r, 6'd3});
+                    append_trigger_r   <= node_addr_valid_r && (magic_register_r == {node_addr_r - 10'd1, 6'd3});
                     // And we load the data from the magic_register_r into the transmit_shift_r
                     transmit_shift_r   <= {magic_register_r, 96'h0};
                 end
@@ -372,7 +382,7 @@ module VoxLink_Multinode_Protocol #(
                     if (frame_counter_r == 3'd2 && init_mode_active_r)
                     begin
                         // That's the address, so we save it, and double it and give it to the next person lol (jk we do +1)
-                        node_addr_r       <= magic_register_r[15:6];
+                        node_addr_r       <= magic_register_r[15:6] + 10'd1;
                         node_addr_valid_r <= 1'b1;
                         transmit_shift_r  <= {{magic_register_r[15:6] + 10'd1, 6'b0}, 96'h0};
                     end

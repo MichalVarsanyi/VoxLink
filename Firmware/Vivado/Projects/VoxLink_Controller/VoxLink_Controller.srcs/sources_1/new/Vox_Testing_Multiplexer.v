@@ -27,7 +27,6 @@ module Vox_Testing_Multiplexer(
         
         // Multiplexer input
         input       [111:0]           sensor_data,
-        input                         sensor_data_valid,
 
         // Diagnostic
         input       [31:0]            mailbox,
@@ -54,21 +53,6 @@ module Vox_Testing_Multiplexer(
     assign  reg_mux_out             = reg_mux_out_r[111:104];
     assign  reg_mux_out_transmit    = reg_mux_out_transmit_r[13];
 
-    reg [111:0] sensor_data_r;
-
-    always @(posedge sys_clk or posedge sys_rst)
-    begin
-        if (sys_rst)
-        begin
-            sensor_data_r     <= {112{1'b0}};
-        end
-        else
-        begin
-            if (sensor_data_valid == 1)
-                sensor_data_r <= sensor_data;
-        end
-    end
-
     always @(posedge sys_clk or posedge sys_rst)
     begin
         if (sys_rst)
@@ -82,7 +66,7 @@ module Vox_Testing_Multiplexer(
                 67:
                 begin
                     // Load the full 14-byte packet and mark all 14 bytes for transmission.
-                    reg_mux_out_r           <= sensor_data_r;
+                    reg_mux_out_r           <= sensor_data;
                     reg_mux_out_transmit_r  <= {14{1'b1}};
                 end
                 1:

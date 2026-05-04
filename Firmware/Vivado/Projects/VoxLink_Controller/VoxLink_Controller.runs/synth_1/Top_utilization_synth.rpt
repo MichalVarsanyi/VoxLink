@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Sun May  3 17:12:46 2026
+| Date         : Mon May  4 12:47:21 2026
 | Host         : LAPTOP-GK6ER3TV running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
 | Design       : Top
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  627 |     0 |          0 |     20800 |  3.01 |
-|   LUT as Logic          |  627 |     0 |          0 |     20800 |  3.01 |
+| Slice LUTs*             |  556 |     0 |          0 |     20800 |  2.67 |
+|   LUT as Logic          |  556 |     0 |          0 |     20800 |  2.67 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         | 1087 |     0 |          0 |     41600 |  2.61 |
-|   Register as Flip Flop | 1087 |     0 |          0 |     41600 |  2.61 |
+| Slice Registers         |  763 |     0 |          0 |     41600 |  1.83 |
+|   Register as Flip Flop |  763 |     0 |          0 |     41600 |  1.83 |
 |   Register as Latch     |    0 |     0 |          0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |      8150 |  0.00 |
@@ -58,9 +58,9 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 36    |          Yes |           - |          Set |
-| 272   |          Yes |           - |        Reset |
-| 2     |          Yes |         Set |            - |
-| 777   |          Yes |       Reset |            - |
+| 160   |          Yes |           - |        Reset |
+| 3     |          Yes |         Set |            - |
+| 564   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,19 +149,19 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       |  777 |        Flop & Latch |
-| LUT3       |  325 |                 LUT |
-| FDCE       |  272 |        Flop & Latch |
-| LUT4       |  153 |                 LUT |
-| LUT6       |  142 |                 LUT |
-| LUT2       |   40 |                 LUT |
+| FDRE       |  564 |        Flop & Latch |
+| LUT3       |  217 |                 LUT |
+| FDCE       |  160 |        Flop & Latch |
+| LUT4       |  146 |                 LUT |
+| LUT6       |  115 |                 LUT |
+| LUT5       |   58 |                 LUT |
 | FDPE       |   36 |        Flop & Latch |
-| LUT5       |   35 |                 LUT |
-| CARRY4     |   10 |          CarryLogic |
+| LUT2       |   29 |                 LUT |
+| CARRY4     |   18 |          CarryLogic |
 | LUT1       |    9 |                 LUT |
 | OBUF       |    7 |                  IO |
 | IBUF       |    4 |                  IO |
-| FDSE       |    2 |        Flop & Latch |
+| FDSE       |    3 |        Flop & Latch |
 | BUFG       |    2 |               Clock |
 | MMCME2_ADV |    1 |               Clock |
 +------------+------+---------------------+
@@ -174,6 +174,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 |     Ref Name     | Used |
 +------------------+------+
 | fifo_generator_0 |    1 |
+| blk_mem_gen_0    |    1 |
 +------------------+------+
 
 

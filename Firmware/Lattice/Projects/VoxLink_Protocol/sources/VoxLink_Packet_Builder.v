@@ -1,6 +1,5 @@
 module VoxLink_Packet_Builder #(
-    parameter ADDRESS     = 12'h001,
-    parameter COMMAND     = 8'h02,
+    parameter COMMAND     = 6'h03,
     parameter CLK_FREQ_HZ = 100_500_000
 )(
     input               sys_clk,
@@ -10,15 +9,18 @@ module VoxLink_Packet_Builder #(
     input [79:0]        sensor_data,
     input               sensor_data_ready,
 
+    // Node Info
+    input [9:0]         address,
+
     // Packet output (to VOX Protocol transmitter)
     output [111:0]      packet_data,
     output              packet_ready
 );
 
     // Packet layout (112 bits, MSB first):
-    // [111:100] Address   (12 bits)
-    // [ 99: 88] Timestamp (12 bits)
-    // [ 87: 80] Command   ( 8 bits)
+    // [111:102] Address   (10 bits)
+    // [101: 96] Command   ( 6 bits)
+    // [ 95: 80] Timestamp (16 bits)
     // [ 79: 16] Data      (64 bits)
     // [ 15:  0] CRC       (16 bits)
 
@@ -26,11 +28,11 @@ module VoxLink_Packet_Builder #(
     // Timestamp
     // ---------------------------------------------------------
 
-    wire [11:0] timestamp;
-    reg         timestamp_q;
+    wire [15:0] timestamp;
+    reg [15:0]  timestamp_q;
 
     VoxLink_Timestamp #(
-        .TIMESTAMP_WIDTH(12),
+        .TIMESTAMP_WIDTH(16),
         .CLK_FREQ_HZ(CLK_FREQ_HZ)
     ) VoxLink_Timestamp_Inst (
         .sys_clk(sys_clk),
@@ -39,11 +41,10 @@ module VoxLink_Packet_Builder #(
         .timestamp(timestamp)
     );
 
-    // We delay timestamp by one clock cycle to reduce negative slack. This signal is not critical
     always @(posedge sys_clk)
     begin
         if (sys_rst)
-            timestamp_q <= 1'b0;
+            timestamp_q <= 16'b0;
         else
             timestamp_q <= timestamp;
     end
@@ -68,7 +69,7 @@ module VoxLink_Packet_Builder #(
             trigger_crc <= 1'b0;
 
             if (sensor_data_ready) begin
-                raw_packet  <= {ADDRESS, timestamp_q, COMMAND, sensor_data[79:16], 16'h0000};
+                raw_packet  <= {address, COMMAND, timestamp_q, sensor_data[79:16], 16'h0000};
                 trigger_crc <= 1'b1;
             end
         end

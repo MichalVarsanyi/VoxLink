@@ -6,7 +6,7 @@
 
 * Build Date:         Dec  9 2020 17:31:51
 
-* File Generated:     May 2 2026 18:22:09
+* File Generated:     May 4 2026 15:47:36
 
 * Purpose:            Detailed IO and package pin info
 
@@ -29,21 +29,21 @@ B1, PIO_RGB, not used, , , , , , , topBank
 B2, PIO, not used, , , , , , , topBank
 B3, VCCIO_0, not used, , , , , , , topBank
 B4, VPP, not used, , , , , , , topBank
-B5, PIO, not used, , , , , , , topBank
+B5, PIO, bno_rstn, Output, , SB_LVCMOS, No Pull Up, , Output Tristatable by Enable, topBank
 B6, PIO_GBIN, vox_in_clk_p, Input, , SB_LVCMOS, No Pull Up, , Simple Input, topBank
-C1, PIO, not used, , , , , , , bottomBank
+C1, PIO, i2c_scl, InOut, , SB_LVCMOS, No Pull Up, , Simple Input Output Tristatable by Enable, bottomBank
 C2, PIO, not used, , , , , , , topBank
 C3, GND, not used, , , , , , , UnknownBank
 C4, GND, not used, , , , , , , UnknownBank
 C5, VSSIO_LED, not used, , , , , , , topBank
 C6, PIO_GBIN, vox_out_clk_p, Output, , SB_LVCMOS, No Pull Up, , Simple Output, topBank
-D1, PIO, not used, , , , , , , bottomBank
+D1, PIO, i2c_sda, InOut, , SB_LVCMOS, No Pull Up, , Simple Input Output Tristatable by Enable, bottomBank
 D2, PIO_GBIN, clk_12mhz, Input, , SB_LVCMOS, No Pull Up, , Simple Input, bottomBank
 D3, VCC, not used, , , , , , , UnknownBank
 D4, AVDD, not used, , , , , , , UnknownBank
 D5, PIO, not used, , , , , , , bottomBank
 D6, PIO, not used, , , , , , , bottomBank
-E1, PIO, not used, , , , , , , bottomBank
+E1, PIO, bno_interrupt, Input, , SB_LVCMOS, No Pull Up, , Simple Input, bottomBank
 E2, PIO, not used, , , , , , , bottomBank
 E3, VCCIO_2, not used, , , , , , , bottomBank
 E4, VDDIO_SPI, not used, , , , , , , bottomBank
@@ -55,4 +55,4 @@ F3, PIO_GBIN, vox_out_rxd_p, Output, , SB_LVCMOS, No Pull Up, , Simple Output, b
 F4, CRESET_B, not used, , , , , , , bottomBank
 F5, SPI_SS_B, not used, , , , , , , bottomBank
 F6, SPI_SO, not used, , , , , , , bottomBank
-Total Number of Used Pins, 6
+Total Number of Used Pins, 10

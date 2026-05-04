@@ -340,38 +340,69 @@ module Top
 //  Data Readout
 //--------------------------------------------------------------------------------------------- //
 
-    // This is the address which when received will trigger the readout packet
-    localparam RUN_ADDR = 15'd3;
-    // The readout_active_r is a register storing whether we want the readout to be running or not 
-    (* MARK_DEBUG="true" *) reg readout_active_r;
-    // The readout_trigger_r is the flag triggering a new readout loop once conditions are met
-    (* MARK_DEBUG="true" *) reg readout_trigger_r;
+localparam RUN_ADDR = 15'd3;
+
+// 2 ms at 252 MHz
+localparam integer READOUT_PERIOD_CLKS = 2_000_000;
+
+(* MARK_DEBUG="true" *) reg        readout_active_r;
+(* MARK_DEBUG="true" *) reg        readout_trigger_r;
+(* MARK_DEBUG="true" *) reg [31:0] readout_timer_r;
+
+always @(posedge sys_clk)
+begin
+    if (sys_rst)
+    begin
+        readout_active_r  <= 1'b0;
+        readout_trigger_r <= 1'b0;
+        readout_timer_r   <= 32'd0;
+    end
+    else
+    begin
+        readout_trigger_r <= 1'b0;
+
+        // PC starts/stops runtime mode
+        if (reg_write_addr == RUN_ADDR)
+        begin
+            readout_active_r <= reg_write_data[0];
+            readout_timer_r  <= 32'd0;
+
+            // Optional: fire immediately when enabling run mode
+            if (reg_write_data[0])
+                readout_trigger_r <= 1'b1;
+        end
+        else if (readout_active_r)
+        begin
+            if (readout_timer_r == READOUT_PERIOD_CLKS - 1)
+            begin
+                readout_timer_r   <= 32'd0;
+                readout_trigger_r <= 1'b1;
+            end
+            else
+            begin
+                readout_timer_r <= readout_timer_r + 32'd1;
+            end
+        end
+        else
+        begin
+            readout_timer_r <= 32'd0;
+        end
+    end
+end
+
+//--------------------------------------------------------------------------------------------- //
+//  Node Select Register
+//--------------------------------------------------------------------------------------------- //
+
+    localparam NODE_SELECT_ADDR = 15'd4;
+    reg [6:0] node_select_r;
 
     always @(posedge sys_clk)
     begin
         if (sys_rst)
-        begin
-            readout_active_r        <= 1'b0;
-            readout_trigger_r       <= 1'b0;
-        end
-        else
-        begin
-            readout_trigger_r       <= 1'b0;
-
-            // When the readout address is received:
-            if (reg_write_addr == RUN_ADDR)
-            begin
-                // We assign the HIGH or LOW to both register at the same time
-                readout_active_r    <= reg_write_data[0];
-                readout_trigger_r   <= reg_write_data[0];
-            end
-            // If we want the readout to be running, we have received a new data, and the header of that data is our readout command:
-            else if (readout_active_r && sensor_data_valid && sensor_packet[111:96] == 16'h0003)
-            begin
-                // We trigger a new readout loop
-                readout_trigger_r   <= 1'b1;
-            end
-        end
+            node_select_r <= 7'd1;
+        else if (reg_write_addr == NODE_SELECT_ADDR)
+            node_select_r <= reg_write_data[6:0];
     end
 
 //--------------------------------------------------------------------------------------------- //
@@ -442,22 +473,30 @@ module Top
 //  VoxLink UART Interface
 //--------------------------------------------------------------------------------------------- //
 
+    wire [111:0] node_packet;
+
+    VoxLink_BRAM_Storage VoxLink_BRAM_Storage_inst (
+        .sys_clk     (sys_clk),
+        .rx_packet   (sensor_packet),
+        .rx_valid    (sensor_data_valid),
+        .node_select (node_select_r),
+        .node_packet (node_packet)
+    );
+
     // The crc_verified_data_valid_r is used to store the last data with the correct CRC code
     // If no new correct data will be received as the new readout is requested from the PC
     // This old crc_verified_data_r will be provided
     reg [111:0] crc_verified_data_r;
     reg         crc_verified_data_valid_r;
 
-        Vox_Testing_Multiplexer #(
-        )
-        Vox_Testing_Multiplexer_Inst (
+    Vox_Testing_Multiplexer #(
+    )
+    Vox_Testing_Multiplexer_Inst (
         // General
         .sys_rst(sys_rst),
         .sys_clk(sys_clk),
 
-
-        .sensor_data(crc_verified_data_r),
-        .sensor_data_valid(crc_verified_data_valid_r),
+        .sensor_data(node_packet),
 
         // Diagnostic
         .mailbox(mailbox),
