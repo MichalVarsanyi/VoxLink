@@ -37,7 +37,9 @@ module Vox_Testing_Multiplexer(
         output                        reg_mux_out_transmit,
         
         // Multiplexer selector
-        (* MARK_DEBUG="true" *) input       [14:0]            reg_read_addr
+        (* MARK_DEBUG="true" *) input       [14:0]            reg_read_addr,
+
+        input                                                  sensor_read_trigger
     );
     
     // `include "MV_API_Reg_Params.vh"
@@ -60,19 +62,18 @@ module Vox_Testing_Multiplexer(
             reg_mux_out_r           <= {112{1'b0}};
             reg_mux_out_transmit_r  <= 14'h0;
         end
+        else if (sensor_read_trigger)
+        begin
+            reg_mux_out_r           <= sensor_data;
+            reg_mux_out_transmit_r  <= {14{1'b1}};
+        end
         else
         begin
             case(reg_read_addr)
-                67:
-                begin
-                    // Load the full 14-byte packet and mark all 14 bytes for transmission.
-                    reg_mux_out_r           <= sensor_data;
-                    reg_mux_out_transmit_r  <= {14{1'b1}};
-                end
                 1:
                 begin
-                    reg_mux_out_r          <= {mailbox[31:0], 80'h0};   // put 4 bytes at the MSB end
-                    reg_mux_out_transmit_r <= 14'b1111_0000_0000_00;    // arm only 4 transmit flags
+                    reg_mux_out_r          <= {mailbox[31:0], 80'h0};
+                    reg_mux_out_transmit_r <= 14'b1111_0000_0000_00;
                 end
                 2:
                 begin

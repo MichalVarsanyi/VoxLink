@@ -391,18 +391,75 @@ begin
 end
 
 //--------------------------------------------------------------------------------------------- //
-//  Node Select Register
+//  Node Select + Burst Readout FSM
 //--------------------------------------------------------------------------------------------- //
 
-    localparam NODE_SELECT_ADDR = 15'd4;
+    localparam BURST_ADDR = 15'd67;
+
+    // FSM States
+    reg [1:0] burst_state_r;
+    localparam BURST_IDLE      = 2'd0;
+    localparam BURST_BRAM_WAIT = 2'd1;
+    localparam BURST_TRANSMIT  = 2'd2;
+
+    // Selects the BRAM node address to read
     reg [6:0] node_select_r;
+    // Wait till all 112 bits (14 bytes) shift into FIFO
+    reg [3:0] burst_wait_r;
+    // Trigger the readout
+    reg       burst_load_trigger_r;
 
     always @(posedge sys_clk)
     begin
-        if (sys_rst)
-            node_select_r <= 7'd1;
-        else if (reg_write_addr == NODE_SELECT_ADDR)
-            node_select_r <= reg_write_data[6:0];
+        if (sys_rst) begin
+            node_select_r        <= 7'd1;
+            burst_state_r        <= BURST_IDLE;
+            burst_wait_r         <= 4'd0;
+            burst_load_trigger_r <= 1'b0;
+        end
+        else
+        begin
+            burst_load_trigger_r <= 1'b0;
+
+            case (burst_state_r)
+                // IDLE: Wait for the readout trigger address to arrive
+                BURST_IDLE:
+                begin
+                    if (reg_write_addr == BURST_ADDR)
+                    begin
+                        node_select_r <= 7'd1;
+                        burst_state_r <= BURST_BRAM_WAIT;
+                    end
+                end
+
+                // Wait one clock cycle for the BRAM to fetch the data
+                BURST_BRAM_WAIT:
+                begin
+                    burst_load_trigger_r <= 1'b1;
+                    burst_wait_r         <= 4'd13;
+                    burst_state_r        <= BURST_TRANSMIT;
+                end
+
+                BURST_TRANSMIT:
+                begin
+                    // Count down till all bytes were shifted into FIFO
+                    if (burst_wait_r == 4'd0)
+                    begin
+                        if (node_select_r < init_data_r[6:0])
+                        begin
+                            node_select_r <= node_select_r + 7'd1;
+                            burst_state_r <= BURST_BRAM_WAIT;
+                        end
+                        else
+                            burst_state_r <= BURST_IDLE;
+                    end
+                    else
+                        burst_wait_r <= burst_wait_r - 4'd1;
+                end
+
+                default: burst_state_r <= BURST_IDLE;
+            endcase
+        end
     end
 
 //--------------------------------------------------------------------------------------------- //
@@ -502,7 +559,9 @@ end
         .reg_mux_out_transmit(reg_mux_out_transmit),
 
         // Multiplexer selector
-        .reg_read_addr(reg_read_addr)
+        .reg_read_addr(reg_read_addr),
+
+        .sensor_read_trigger(burst_load_trigger_r)
     );
 
 //--------------------------------------------------------------------------------------------- //       

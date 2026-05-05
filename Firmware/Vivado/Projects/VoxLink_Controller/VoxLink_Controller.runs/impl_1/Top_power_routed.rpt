@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Tue May  5 17:50:22 2026
+| Date             : Tue May  5 19:21:48 2026
 | Host             : LAPTOP-GK6ER3TV running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -52,14 +52,14 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.011 |        5 |       --- |             --- |
-| Slice Logic    |     0.002 |     1894 |       --- |             --- |
-|   LUT as Logic |     0.002 |      678 |     20800 |            3.26 |
-|   Register     |    <0.001 |     1052 |     41600 |            2.53 |
-|   CARRY4       |    <0.001 |       24 |      8150 |            0.29 |
+| Clocks         |     0.010 |        5 |       --- |             --- |
+| Slice Logic    |     0.002 |     1942 |       --- |             --- |
+|   LUT as Logic |     0.002 |      704 |     20800 |            3.38 |
+|   Register     |    <0.001 |     1061 |     41600 |            2.55 |
+|   CARRY4       |    <0.001 |       25 |      8150 |            0.31 |
 |   Others       |     0.000 |       47 |       --- |             --- |
-| Signals        |     0.002 |     1339 |       --- |             --- |
-| Block RAM      |     0.018 |      2.5 |        50 |            5.00 |
+| Signals        |     0.002 |     1365 |       --- |             --- |
+| Block RAM      |     0.019 |      2.5 |        50 |            5.00 |
 | MMCM           |     0.093 |        1 |         5 |           20.00 |
 | I/O            |    <0.001 |       11 |       210 |            5.24 |
 | Static Power   |     0.072 |          |           |                 |
@@ -145,8 +145,10 @@ Table of Contents
 | Name                           | Power (W) |
 +--------------------------------+-----------+
 | Top                            |     0.126 |
-|   MV_UART_FIFO_Interface_inst  |     0.002 |
-|   MV_UART_Inst                 |     0.002 |
+|   MV_UART_FIFO_Interface_inst  |     0.003 |
+|     UART_FIFO                  |     0.002 |
+|       U0                       |     0.002 |
+|   MV_UART_Inst                 |     0.001 |
 |   VoxLink_BRAM_Storage_inst    |     0.018 |
 |     u_bram                     |     0.018 |
 |       U0                       |     0.018 |

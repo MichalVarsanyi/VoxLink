@@ -7,15 +7,13 @@ from collections import deque
 import sys
 
 # --- Configuration ---
-COM_PORT           = 'COM13'
-BAUD_RATE          = 1000000
-MAX_POINTS         = 200
-INIT_ADDRESS       = 2
-NODE_SELECT_ADDRESS = 4
-POLL_ADDRESS       = 67
-INIT_VALUE         = 0
+COM_PORT     = 'COM13'
+BAUD_RATE    = 1000000
+MAX_POINTS   = 200
+INIT_ADDRESS = 2
+BURST_ADDRESS = 67
+INIT_VALUE   = 0
 
-READ_PACKET  = bytes([0x00, POLL_ADDRESS])
 PACKET_BYTES = 14
 Q14_SCALE    = 16384.0
 
@@ -112,11 +110,13 @@ plt.tight_layout()
 def update_plot(_):
     artists = []
 
+    ser.reset_input_buffer()
+    send_write(ser, BURST_ADDRESS, 0)
+    burst_reply = ser.read(num_nodes * PACKET_BYTES)
+
     for n in range(1, num_nodes + 1):
-        send_write(ser, NODE_SELECT_ADDRESS, n)
-        ser.reset_input_buffer()
-        ser.write(READ_PACKET)
-        reply = ser.read(PACKET_BYTES)
+        offset = (n - 1) * PACKET_BYTES
+        reply = burst_reply[offset : offset + PACKET_BYTES]
 
         if len(reply) == PACKET_BYTES:
             packet_int = int.from_bytes(reply, 'big')
