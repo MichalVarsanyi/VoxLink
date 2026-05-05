@@ -18,6 +18,7 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+// (* MARK_DEBUG="true" *) for ILA debug signals
 
 module Top
 #(
@@ -130,7 +131,17 @@ module Top
     
     wire [14:0]     reg_read_addr;
     wire [14:0]     reg_write_addr;
-    wire [32:0]     reg_write_data;
+    wire [31:0]     reg_write_data;
+
+    wire [63:0]     sensor_data;
+    wire [111:0]    sensor_packet;
+    wire            sensor_data_valid;
+
+    // The crc_verified_data_valid_r is used to store the last data with the correct CRC code
+    // If no new correct data will be received as the new readout is requested from the PC
+    // This old crc_verified_data_r will be provided
+    reg [111:0] crc_verified_data_r;
+    reg         crc_verified_data_valid_r;
 
 //--------------------------------------------------------------------------------------------- //       
 //  Clock
@@ -278,21 +289,22 @@ module Top
 //--------------------------------------------------------------------------------------------- //
 // Check if the system clock is running and increment the timestamp  
 
-    reg [63:0]      timestamp;
-    always @(posedge sys_clk) 
-        if(sys_rst)
-            timestamp   <= {64{1'b0}};
-        else
-        begin
-            timestamp   <= timestamp + 1;
-        end
+    // reg [63:0]      timestamp;
+    // always @(posedge sys_clk) 
+    //     if(sys_rst)
+    //         timestamp   <= {64{1'b0}};
+    //     else
+    //     begin
+    //         timestamp   <= timestamp + 1;
+    //     end
+    // end
         
 //--------------------------------------------------------------------------------------------- //       
 //  Mailbox
 //--------------------------------------------------------------------------------------------- //
 // Mailbox is a testing register, which can be written to and read from        
         
-    reg [32:0] mailbox;
+    reg [31:0] mailbox;
 
     always @(posedge sys_clk)
     begin
@@ -312,9 +324,9 @@ module Top
     // This is the address which when received will trigger the init packet
     localparam INIT_ADDR = 15'd2;
     // This is the current node count
-    (* MARK_DEBUG="true" *) reg [9:0]  init_data_r;
+    reg [9:0]  init_data_r;
     // This is the init trigger flag, which will trigger the packet transmision, once the INIT_ADDR is received
-    (* MARK_DEBUG="true" *) reg        init_trigger_r;
+    reg        init_trigger_r;
 
     always @(posedge sys_clk)
     begin
@@ -345,9 +357,9 @@ localparam RUN_ADDR = 15'd3;
 // 2 ms at 252 MHz
 localparam integer READOUT_PERIOD_CLKS = 2_000_000;
 
-(* MARK_DEBUG="true" *) reg        readout_active_r;
-(* MARK_DEBUG="true" *) reg        readout_trigger_r;
-(* MARK_DEBUG="true" *) reg [31:0] readout_timer_r;
+reg        readout_active_r;
+reg        readout_trigger_r;
+reg [23:0] readout_timer_r;
 
 always @(posedge sys_clk)
 begin
@@ -355,7 +367,7 @@ begin
     begin
         readout_active_r  <= 1'b0;
         readout_trigger_r <= 1'b0;
-        readout_timer_r   <= 32'd0;
+        readout_timer_r   <= 24'd0;
     end
     else
     begin
@@ -363,29 +375,17 @@ begin
 
         // PC starts/stops runtime mode
         if (reg_write_addr == RUN_ADDR)
-        begin
             readout_active_r <= reg_write_data[0];
-            readout_timer_r  <= 32'd0;
+        
 
-            // Optional: fire immediately when enabling run mode
-            if (reg_write_data[0])
-                readout_trigger_r <= 1'b1;
-        end
-        else if (readout_active_r)
+        if (readout_timer_r == READOUT_PERIOD_CLKS)
         begin
-            if (readout_timer_r == READOUT_PERIOD_CLKS - 1)
-            begin
-                readout_timer_r   <= 32'd0;
-                readout_trigger_r <= 1'b1;
-            end
-            else
-            begin
-                readout_timer_r <= readout_timer_r + 32'd1;
-            end
+            readout_timer_r   <= 24'd0;
+            readout_trigger_r <= readout_active_r ? 1'b1 : 1'b0;
         end
         else
         begin
-            readout_timer_r <= 32'd0;
+            readout_timer_r <= readout_timer_r + 24'd1;
         end
     end
 end
@@ -439,7 +439,7 @@ end
 //--------------------------------------------------------------------------------------------- //
 // Interface between controller and UART blocks
 
-    (* MARK_DEBUG="true" *) wire [7:0]      reg_mux_out;
+    wire [7:0]      reg_mux_out;
     wire            reg_mux_out_transmit;
     wire            uart_read_execute;
     
@@ -477,17 +477,12 @@ end
 
     VoxLink_BRAM_Storage VoxLink_BRAM_Storage_inst (
         .sys_clk     (sys_clk),
-        .rx_packet   (sensor_packet),
-        .rx_valid    (sensor_data_valid),
+        .rx_packet   (crc_verified_data_r),
+        .rx_valid    (crc_verified_data_valid_r),
         .node_select (node_select_r),
         .node_packet (node_packet)
     );
 
-    // The crc_verified_data_valid_r is used to store the last data with the correct CRC code
-    // If no new correct data will be received as the new readout is requested from the PC
-    // This old crc_verified_data_r will be provided
-    reg [111:0] crc_verified_data_r;
-    reg         crc_verified_data_valid_r;
 
     Vox_Testing_Multiplexer #(
     )
@@ -513,10 +508,6 @@ end
 //--------------------------------------------------------------------------------------------- //       
 //  Receiving
 //--------------------------------------------------------------------------------------------- //
-
-    (* MARK_DEBUG="true" *) wire [63:0]  sensor_data;
-    wire [111:0] sensor_packet;
-    (* MARK_DEBUG="true" *) wire         sensor_data_valid;
 
     // This module monitors the incoming CLK and SDA signals
     // When a new packet is received, it will pulse the sensor_data_valid and update sensor_data and sensor_packet

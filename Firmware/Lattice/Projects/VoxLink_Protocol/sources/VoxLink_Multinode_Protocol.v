@@ -57,6 +57,9 @@ module VoxLink_Multinode_Protocol #(
     localparam TIMEOUT_CLOCKS = 32;
     localparam TIMEOUT_CYCLES = TIMEOUT_CLOCKS * (CLK_FREQ / VOX_FREQ);
 
+    // A flag going HIGH when we are appending our data
+    reg         resp_tx_active_r;
+
     // Counts sys_clks until timeout
     reg [15:0] timeout_counter_r;
     // Generates the pulse clearing all the registers
@@ -219,8 +222,6 @@ module VoxLink_Multinode_Protocol #(
     //----------------Readout Control----------------//
     // A flag going HIGH when the -1 address is detected relative to our own address (stays high for the entire 7-packet transmission)
     reg         append_trigger_r;
-    // A flag going HIGH when we are appending our data
-    reg         resp_tx_active_r;
 
     // wire [111:0] vox_transmit_packet = {
     //     node_addr_r,

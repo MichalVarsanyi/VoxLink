@@ -10,18 +10,18 @@ module VoxLink_BRAM_Storage (
     output [111:0]  node_packet
 );
 
-    wire [6:0]  bram_addr = rx_valid ? rx_packet[108:102] : node_select;
-    wire [63:0] bram_dout;
+    wire [6:0]      bram_addr = rx_valid ? rx_packet[108:102] : node_select;
+    wire [111:0]    bram_dout;
 
     blk_mem_gen_0 u_bram (
         .clka  (sys_clk),
         .ena   (1'b1),
         .wea   (rx_valid),
         .addra (bram_addr),
-        .dina  (rx_packet[79:16]),
+        .dina  (rx_packet),
         .douta (bram_dout)
     );
 
-    assign node_packet = {3'b000, node_select, 6'd3, 16'h0000, bram_dout, 16'h0000};
+    assign node_packet = bram_dout;
 
 endmodule

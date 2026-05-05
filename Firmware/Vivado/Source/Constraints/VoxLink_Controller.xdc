@@ -300,33 +300,4 @@ create_clock -period 83.333 -name SYSCLK -waveform {0.000 41.666} [get_ports clk
 
 
 
-create_debug_core u_ila_0 ila
-set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
-set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
-set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
-set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_0]
-set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
-set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
-set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
-set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
-set_property port_width 1 [get_debug_ports u_ila_0/clk]
-connect_debug_port u_ila_0/clk [get_nets [list sys_clk]]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
-set_property port_width 64 [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {sensor_data[0]} {sensor_data[1]} {sensor_data[2]} {sensor_data[3]} {sensor_data[4]} {sensor_data[5]} {sensor_data[6]} {sensor_data[7]} {sensor_data[8]} {sensor_data[9]} {sensor_data[10]} {sensor_data[11]} {sensor_data[12]} {sensor_data[13]} {sensor_data[14]} {sensor_data[15]} {sensor_data[16]} {sensor_data[17]} {sensor_data[18]} {sensor_data[19]} {sensor_data[20]} {sensor_data[21]} {sensor_data[22]} {sensor_data[23]} {sensor_data[24]} {sensor_data[25]} {sensor_data[26]} {sensor_data[27]} {sensor_data[28]} {sensor_data[29]} {sensor_data[30]} {sensor_data[31]} {sensor_data[32]} {sensor_data[33]} {sensor_data[34]} {sensor_data[35]} {sensor_data[36]} {sensor_data[37]} {sensor_data[38]} {sensor_data[39]} {sensor_data[40]} {sensor_data[41]} {sensor_data[42]} {sensor_data[43]} {sensor_data[44]} {sensor_data[45]} {sensor_data[46]} {sensor_data[47]} {sensor_data[48]} {sensor_data[49]} {sensor_data[50]} {sensor_data[51]} {sensor_data[52]} {sensor_data[53]} {sensor_data[54]} {sensor_data[55]} {sensor_data[56]} {sensor_data[57]} {sensor_data[58]} {sensor_data[59]} {sensor_data[60]} {sensor_data[61]} {sensor_data[62]} {sensor_data[63]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
-set_property port_width 10 [get_debug_ports u_ila_0/probe1]
-connect_debug_port u_ila_0/probe1 [get_nets [list {init_data_r[0]} {init_data_r[1]} {init_data_r[2]} {init_data_r[3]} {init_data_r[4]} {init_data_r[5]} {init_data_r[6]} {init_data_r[7]} {init_data_r[8]} {init_data_r[9]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
-set_property port_width 1 [get_debug_ports u_ila_0/probe2]
-connect_debug_port u_ila_0/probe2 [get_nets [list init_trigger_r]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
-set_property port_width 1 [get_debug_ports u_ila_0/probe3]
-connect_debug_port u_ila_0/probe3 [get_nets [list sensor_data_valid]]
-set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
-set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
-set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
-connect_debug_port dbg_hub/clk [get_nets sys_clk]
+
