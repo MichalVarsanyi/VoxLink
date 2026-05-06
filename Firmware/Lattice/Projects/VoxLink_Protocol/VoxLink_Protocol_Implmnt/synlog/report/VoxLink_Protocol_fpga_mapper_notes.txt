@@ -3,9 +3,9 @@
 @N: MO111 :"c:\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":28:16:28:23|Tristate driver bno_rstn (in view: work.Top(verilog)) on net bno_rstn (in view: work.Top(verilog)) has its enable tied to GND.
 @N: MT204 |Auto Constrain mode is disabled because clocks are defined in the SDC file
 @N: BN362 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_i2c_driver.v":209:4:209:9|Removing sequential instance target_nack (in view: work.VoxLink_I2C_Driver_Z1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":335:4:335:9|Removing sequential instance packet_data_latched[100] (in view: work.Top(verilog)) because it does not drive other instances.
-@N: MO231 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_multinode_protocol.v":65:4:65:9|Found counter in view:work.VoxLink_Multinode_Protocol_90000000s_400000s_32s_7200s_112s_1936_7(verilog) instance timeout_counter_r[15:0] 
-@N: MF179 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_multinode_protocol.v":371:64:371:111|Found 16 by 16 bit equality operator ('==') un19_append_trigger_r (in view: work.VoxLink_Multinode_Protocol_90000000s_400000s_32s_7200s_112s_1936_7(verilog))
+@N: BN362 :"c:\bachelorproject\voxlink\firmware\lattice\source\verilog\top_voxlink_protocol.v":346:4:346:9|Removing sequential instance packet_data_latched[100] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: MO231 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_multinode_protocol.v":68:4:68:9|Found counter in view:work.VoxLink_Multinode_Protocol_84000000s_21000000s_32s_128s_2s_2047_7(verilog) instance timeout_counter_r[15:0] 
+@N: MF179 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_multinode_protocol.v":372:64:372:111|Found 16 by 16 bit equality operator ('==') un19_append_trigger_r (in view: work.VoxLink_Multinode_Protocol_84000000s_21000000s_32s_128s_2s_2047_7(verilog))
 @N: MO231 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":94:4:94:9|Found counter in view:work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog) instance byte_counter[9:0] 
 @N: MF179 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":148:36:148:65|Found 16 by 16 bit equality operator ('==') match_packet_length_2 (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog))
 @N: MF179 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":149:36:149:65|Found 16 by 16 bit equality operator ('==') match_target_length_2 (in view: work.VoxLink_BNO_Driver_75_0_1_2_3_4_Z2(verilog))
@@ -46,15 +46,15 @@
 @N: BN362 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":110:4:110:9|Removing sequential instance VoxLink_BNO_Driver_Inst.match_target_length (in view: work.Top(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":110:4:110:9|Removing sequential instance VoxLink_BNO_Driver_Inst.match_packet_length (in view: work.Top(verilog)) because it does not drive other instances.
 @N: FX1017 :|SB_GB inserted on the net locked_i.
-@N: FX1017 :|SB_GB inserted on the net N_224.
+@N: FX1017 :|SB_GB inserted on the net VoxLink_Multinode_Protocol_Inst.transmit_shift_r_1_sqmuxa_i.
 @N: FX1017 :|SB_GB inserted on the net packet_data_latched5.
 @N: FX1017 :|SB_GB inserted on the net VoxLink_BNO_Driver_Inst.target_length_0_sqmuxa_0.
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
 @N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
 @N: FX1056 |Writing EDF file: C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\VoxLink_Protocol_Implmnt\VoxLink_Protocol.edf
 @N: MT615 |Found clock clk_12mhz with period 83.33ns 
-@N: MT615 |Found clock Top|sys_clkout_derived_clock with period 11.11ns 
-@N: MT615 |Found clock sys_clk with period 9.95ns 
+@N: MT615 |Found clock Top|sys_clkout_derived_clock with period 11.90ns 
+@N: MT615 |Found clock sys_clk with period 11.91ns 
 @N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
 @N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
 @N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack

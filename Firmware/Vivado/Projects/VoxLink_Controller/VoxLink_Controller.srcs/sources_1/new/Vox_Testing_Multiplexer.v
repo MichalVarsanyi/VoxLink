@@ -37,7 +37,7 @@ module Vox_Testing_Multiplexer(
         output                        reg_mux_out_transmit,
         
         // Multiplexer selector
-        (* MARK_DEBUG="true" *) input       [14:0]            reg_read_addr,
+        input       [14:0]            reg_read_addr,
 
         input                                                  sensor_read_trigger
     );
@@ -49,8 +49,8 @@ module Vox_Testing_Multiplexer(
 //--------------------------------------------------------------------------------------------- //    
 
     // Byte-shift register: 14 bytes (112 bits) serialised MSB-first, one byte per sys_clk.
-    (* MARK_DEBUG="true" *) reg [111:0]         reg_mux_out_r;
-    (* MARK_DEBUG="true" *) reg [13:0]          reg_mux_out_transmit_r;
+    reg [111:0]         reg_mux_out_r;
+    reg [13:0]          reg_mux_out_transmit_r;
 
     assign  reg_mux_out             = reg_mux_out_r[111:104];
     assign  reg_mux_out_transmit    = reg_mux_out_transmit_r[13];

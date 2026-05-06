@@ -144,13 +144,21 @@ set_property IOSTANDARD LVCMOS33 [get_ports clk_12mhz]
 
 set_property PACKAGE_PIN U1 [get_ports P3_RX_P]
 set_property IOSTANDARD LVCMOS33 [get_ports P3_RX_P]
-# set_property PACKAGE_PIN V1 [get_ports P3_RX_N]
-# set_property IOSTANDARD LVCMOS33 [get_ports P3_RX_N]
+set_property SLEW SLOW [get_ports P3_RX_P]
+set_property DRIVE 4 [get_ports P3_RX_P]
+set_property PACKAGE_PIN V1 [get_ports P3_RX_N]
+set_property IOSTANDARD LVCMOS33 [get_ports P3_RX_N]
+set_property SLEW SLOW [get_ports P3_RX_N]
+set_property DRIVE 4 [get_ports P3_RX_N]
 
 set_property PACKAGE_PIN P2 [get_ports P3_CLK_P]
 set_property IOSTANDARD LVCMOS33 [get_ports P3_CLK_P]
-# set_property PACKAGE_PIN R2 [get_ports P3_CLK_N]
-# set_property IOSTANDARD LVCMOS33 [get_ports P3_CLK_N]
+set_property SLEW SLOW [get_ports P3_CLK_P]
+set_property DRIVE 4 [get_ports P3_CLK_P]
+set_property PACKAGE_PIN R2 [get_ports P3_CLK_N]
+set_property IOSTANDARD LVCMOS33 [get_ports P3_CLK_N]
+set_property SLEW SLOW [get_ports P3_CLK_N]
+set_property DRIVE 4 [get_ports P3_CLK_N]
 
 # set_property PACKAGE_PIN U9 [get_ports P5_TX_P]
 # set_property IOSTANDARD LVCMOS33 [get_ports P5_TX_P]
@@ -253,8 +261,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports SERIAL_D1]
 
 set_property PACKAGE_PIN J4 [get_ports P2_RX_P]
 set_property IOSTANDARD LVCMOS33 [get_ports P2_RX_P]
-# set_property PACKAGE_PIN H4 [get_ports P2_RX_N]
-# set_property IOSTANDARD LVCMOS33 [get_ports P2_RX_N]
+set_property PACKAGE_PIN H4 [get_ports P2_RX_N]
+set_property IOSTANDARD LVCMOS33 [get_ports P2_RX_N]
 
 # set_property PACKAGE_PIN J3 [get_ports P2_TX_P]
 # set_property IOSTANDARD LVCMOS33 [get_ports P2_TX_P]
@@ -263,8 +271,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports P2_RX_P]
 
 set_property PACKAGE_PIN K2 [get_ports P2_CLK_P]
 set_property IOSTANDARD LVCMOS33 [get_ports P2_CLK_P]
-# set_property PACKAGE_PIN K1 [get_ports P2_CLK_N]
-# set_property IOSTANDARD LVCMOS33 [get_ports P2_CLK_N]
+set_property PACKAGE_PIN K1 [get_ports P2_CLK_N]
+set_property IOSTANDARD LVCMOS33 [get_ports P2_CLK_N]
 
 # !!! WARNING ALL ETHERNET PINS ARE REFERENCED TO BOARD SILKSCREEN, NOT THE SCHEMATIC NAMING !!!
 # !!! WARNING ALL ETHERNET PINS ARE REFERENCED TO BOARD SILKSCREEN, NOT THE SCHEMATIC NAMING !!!

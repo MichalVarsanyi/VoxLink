@@ -18,7 +18,7 @@ module VoxLink_TXD_Driver #(
     localparam [111:0] READOUT_PACKET = {10'd0, 6'd3, 16'h0000, 64'h0000_0000_0000_0000, 16'h0000};
 
     localparam TX_DIVIDER    = (CLK_FREQ / VOX_FREQ) / 2;
-    localparam TX_RELOAD_VAL = 12'h800 - TX_DIVIDER;
+    localparam TX_RELOAD_VAL = 12'h801 - TX_DIVIDER;
 
     reg [11:0]  tx_sck_ctr;
     reg         tx_sck_en;

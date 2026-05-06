@@ -33,21 +33,32 @@ module Top(
 
     // VoxLink
     input       vox_in_clk_p,
-    // input       vox_in_clk_n,
+    input       vox_in_clk_n,
 
     output      vox_out_clk_p,
-    // output      vox_out_clk_n,
+    output      vox_out_clk_n,
 
     input       vox_in_rxd_p,
-    // input       vox_in_rxd_n,
+    input       vox_in_rxd_n,
 
-    output      vox_out_rxd_p
-    // output      vox_out_rxd_n
+    output      vox_out_rxd_p,
+    output      vox_out_rxd_n
 );
 
 //--------------------------------------------------------------------------------------------- //       
 //  Wire Declarations
 //--------------------------------------------------------------------------------------------- //
+
+    localparam SYSTEM_CLOCK     = 84_000_000;
+    localparam VOX_FREQUENCY    = 21_000_000;
+    localparam I2C_FREQUENCY    = 400_000;
+
+    // Connect the _N to GND to facilitate low impedance return path
+    assign vox_in_clk_n     = 1'b0;
+    assign vox_out_clk_n    = 1'b0;
+    assign vox_in_rxd_n     = 1'b0;
+    assign vox_out_rxd_n    = 1'b0;
+
 
     // Clock and Reset
     wire            sys_clk;        // 100.5 MHz
@@ -79,10 +90,10 @@ module Top(
 
     SB_PLL40_CORE #(
         .FEEDBACK_PATH("SIMPLE"),
-        .DIVR(0),                   // DIVR = 0
-        .DIVF(59),                  // DIVF = 49
-        .DIVQ(3),                   // DIVQ = 2
-        .FILTER_RANGE(1)            // FILTER_RANGE = 1
+        .DIVR(0),
+        .DIVF(55),                  // VCO = 12 * 56 = 672 MHz
+        .DIVQ(3),                   // F_out = 672 / 8 = 84 MHz
+        .FILTER_RANGE(1)
     ) u_pll (
         .REFERENCECLK(clk_12mhz_bufg),
         .PLLOUTCORE(sys_clkout),
@@ -169,8 +180,8 @@ module Top(
     wire            fifo_overflow_sticky;
 
     VoxLink_Multinode_Protocol #(
-        .CLK_FREQ(90_000_000),
-        .VOX_FREQ(400_000)
+        .CLK_FREQ(SYSTEM_CLOCK),
+        .VOX_FREQ(VOX_FREQUENCY)
     ) VoxLink_Multinode_Protocol_Inst (
         // General
         .sys_clk        (sys_clk),
@@ -260,8 +271,8 @@ module Top(
     wire       driver_finished_tranaction;
 
     VoxLink_I2C_Driver #(
-        .CLK_FREQ(90_000_000),  // System Clock Frequency
-        .I2C_FREQ(100_000)        // Target I2C Speed
+        .CLK_FREQ(SYSTEM_CLOCK),  // System Clock Frequency
+        .I2C_FREQ(I2C_FREQUENCY)        // Target I2C Speed
     ) VoxLink_I2C_Driver_inst (
         // General
         .sys_clk        (sys_clk),
@@ -346,7 +357,7 @@ module Top(
 
     VoxLink_Packet_Builder #(
         .COMMAND(6'h03),
-        .CLK_FREQ_HZ(90_000_000)
+        .CLK_FREQ_HZ(SYSTEM_CLOCK)
     ) VoxLink_Packet_Builder_Inst (
         // General
         .sys_clk(sys_clk),
@@ -363,27 +374,4 @@ module Top(
         .packet_data(packet_data),
         .packet_ready(packet_ready)
     );
-
-// //--------------------------------------------------------------------------------------------- // 
-// // VoxLink Protocol Driver
-// //--------------------------------------------------------------------------------------------- // 
-
-//     VoxLink_VOX_Protocol #(
-//         .CLK_FREQ(90_000_000),  // System Clock Frequency
-//         .VOX_FREQ(400_000)       // Target VoxLink Speed
-//     ) VoxLink_VOX_Protocol_Inst (
-//         // General
-//         .sys_clk(sys_clk),
-//         .sys_rst(sys_rst),
-
-//         // Data Input
-//         .packet_data(packet_data),
-//         .packet_ready(packet_ready),
-
-//         // Transmit Output
-//         .vox_tx(vox_txd),
-//         .vox_clk(vox_clk)
-
-//     );
-
 endmodule

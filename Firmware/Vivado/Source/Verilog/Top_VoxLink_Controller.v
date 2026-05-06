@@ -37,13 +37,13 @@ module Top
 
     // // P2 Differential Pairs
     // output wire P2_TX_P, P2_TX_N,
-    input P2_RX_P, // P2_RX_N,
-    input P2_CLK_P, // P2_CLK_N,
+    input  P2_RX_P, P2_CLK_P,
+    output P2_RX_N, P2_CLK_N,
 
     // P3 Differential Pairs
     // input  P3_TX_P, P3_TX_N,
-    output  P3_RX_P,  //P3_RX_N,
-    output  P3_CLK_P, // P3_CLK_N,
+    output  P3_RX_P, P3_CLK_P,
+    output  P3_RX_N, P3_CLK_N,
 
     // // P4 Differential Pairs
     // output wire P4_TX_P, P4_TX_N,
@@ -210,6 +210,11 @@ module Top
     // actual signal to synchronize. {P, N} → cdc[1] = P, cdc[0] = N to
     // match the P3_TX_P_cdc / P3_TX_N_cdc unpack below.
     assign p3_tx_async = {P2_RX_P, P2_CLK_P};
+    // Connect the _N to GND to facilitate low impedance return path
+    assign P2_RX_N  = 1'b0;
+    assign P2_CLK_N = 1'b0;
+    assign P3_RX_N  = 1'b0;
+    assign P3_CLK_N = 1'b0;
 
     xpm_cdc_array_single
     #(
@@ -636,7 +641,7 @@ end
 
     VoxLink_TXD_Driver #(
         .CLK_FREQ (252_000_000),
-        .VOX_FREQ (400_000)
+        .VOX_FREQ (21_000_000)
     ) VoxLink_TXD_Driver_inst (
         .sys_clk         (sys_clk),
         .sys_rst         (sys_rst),

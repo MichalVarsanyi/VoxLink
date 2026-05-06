@@ -152,7 +152,7 @@ module VoxLink_Multinode_Protocol #(
     // Constants for generating SCK pulses
     // The divider is calculated such that only one bit is needed to check if counter value is reached
     localparam DIVIDER    = (CLK_FREQ / VOX_FREQ) / 2;
-    localparam RELOAD_VAL = 12'h800 - DIVIDER[11:0];
+    localparam RELOAD_VAL = 12'h801 - DIVIDER[11:0];
 
     // Counter register
     reg [11:0] vox_sck_counter;
