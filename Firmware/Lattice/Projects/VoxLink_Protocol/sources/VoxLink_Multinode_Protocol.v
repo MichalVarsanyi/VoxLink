@@ -215,9 +215,14 @@ module VoxLink_Multinode_Protocol #(
     reg         init_mode_active_r;
     // Initialized node address from the mater initialization packet
     // reg [9:0]   node_addr_r;
-    
+
     // A flag that latches HIGH once the node address has been received
     reg         node_addr_valid_r;
+
+    // Pre-registered: (frame_counter_r == 3'd2) && init_mode_active_r
+    reg         init_addr_frame_condition_r;
+    // Pre-registered: node_addr_r - 10'd1, used in append_trigger comparison
+    reg [9:0]   node_addr_prev_subtract_r;
 
     //----------------Readout Control----------------//
     // A flag going HIGH when the -1 address is detected relative to our own address (stays high for the entire 7-packet transmission)
@@ -369,7 +374,7 @@ module VoxLink_Multinode_Protocol #(
                     // If the magic encodes initialization, we set the init_mode_active_r flag HIGH
                     init_mode_active_r <= (magic_register_r == 16'h0001) && (frame_counter_r == 3'd0);
                     // If the magic encodes data readout, we set the append_trigger_r flag HIGH
-                    append_trigger_r   <= node_addr_valid_r && (magic_register_r == {node_addr_r - 10'd1, 6'd3});
+                    append_trigger_r   <= node_addr_valid_r && (magic_register_r == {node_addr_prev_subtract_r, 6'd3});
                     // And we load the data from the magic_register_r into the transmit_shift_r
                     transmit_shift_r   <= {magic_register_r, 96'h0};
                 end
@@ -380,7 +385,7 @@ module VoxLink_Multinode_Protocol #(
                     frame_counter_r <= frame_counter_r + 3'd1;
 
                     // If we are in the initialization stage and we are looking at the third frame
-                    if (frame_counter_r == 3'd2 && init_mode_active_r)
+                    if (init_addr_frame_condition_r)
                     begin
                         // That's the address, so we save it, and double it and give it to the next person lol (jk we do +1)
                         node_addr_r       <= magic_register_r[15:6] + 10'd1;
@@ -394,4 +399,19 @@ module VoxLink_Multinode_Protocol #(
             end
         end
     end
+
+    always @(posedge sys_clk or posedge sys_rst)
+    begin
+        if (sys_rst)
+        begin
+            init_addr_frame_condition_r <= 1'b0;
+            node_addr_prev_subtract_r  <= 10'd0;
+        end
+        else
+        begin
+            init_addr_frame_condition_r <= (frame_counter_r == 3'd2) && init_mode_active_r;
+            node_addr_prev_subtract_r  <= node_addr_r - 10'd1;
+        end
+    end
+
 endmodule

@@ -24,7 +24,7 @@ Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys softwa
 @I::"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Reg_FIFO.v" (library work)
 @I::"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Timestamp.v" (library work)
 Verilog syntax check successful!
-File C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Multinode_Protocol.v changed - recompiling
+File C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v changed - recompiling
 Selecting top level module Top
 @N: CG364 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v":578:7:578:11|Synthesizing module SB_GB in library work.
 
@@ -107,18 +107,16 @@ Selecting top level module Top
 
 @N: CG364 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":21:7:21:9|Synthesizing module Top in library work.
 
-@W: CG1273 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":57:11:57:22|An input port (port vox_in_clk_n) is the target of an assignment - please check if this is intentional
-@W: CG1273 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":59:11:59:22|An input port (port vox_in_rxd_n) is the target of an assignment - please check if this is intentional
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":101:20:101:20|Input EXTFEEDBACK on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":102:21:102:21|Input DYNAMICDELAY on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":97:6:97:10|Input SDI on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":97:6:97:10|Input SCLK on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":97:6:97:10|Input LATCHINPUTVALUE on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":221:16:221:16|Input RGB1PWM on instance led_driver is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":222:16:222:16|Input RGB2PWM on instance led_driver is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG360 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":28:16:28:23|Removing wire bno_rstn, as there is no assignment to it.
-@W: CG133 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":75:20:75:27|Object led_io_r is declared but not assigned. Either assign a value or remove the declaration.
-@W: CL157 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":28:16:28:23|*Output bno_rstn has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
+@W: CG1273 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":74:11:74:22|An input port (port vox_in_clk_n) is the target of an assignment - please check if this is intentional
+@W: CG1273 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":76:11:76:22|An input port (port vox_in_rxd_n) is the target of an assignment - please check if this is intentional
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":106:20:106:20|Input EXTFEEDBACK on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":107:21:107:21|Input DYNAMICDELAY on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":102:6:102:10|Input SDI on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":102:6:102:10|Input SCLK on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":102:6:102:10|Input LATCHINPUTVALUE on instance u_pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":238:16:238:16|Input RGB1PWM on instance led_driver is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":239:16:239:16|Input RGB2PWM on instance led_driver is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG133 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":68:20:68:27|Object led_io_r is declared but not assigned. Either assign a value or remove the declaration.
 @N: CL159 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":36:16:36:27|Input vox_in_clk_n is unused.
 @N: CL159 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v":42:16:42:27|Input vox_in_rxd_n is unused.
 @N: CL189 :"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Packet_Builder.v":62:4:62:9|Register bit raw_packet[0] is always 0.
@@ -166,12 +164,12 @@ State machine has 8 reachable states with original encodings of:
    0110
    0111
 
-At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 76MB peak: 84MB)
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 76MB peak: 81MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Wed May 06 20:05:23 2026
+# Thu May 07 15:37:24 2026
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
@@ -184,7 +182,7 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Wed May 06 20:05:23 2026
+# Thu May 07 15:37:24 2026
 
 ###########################################################]
 @END
@@ -194,6 +192,6 @@ At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Wed May 06 20:05:23 2026
+# Thu May 07 15:37:24 2026
 
 ###########################################################]

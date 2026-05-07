@@ -6,7 +6,7 @@
 
 * Build Date:         Dec  9 2020 17:31:51
 
-* File Generated:     May 6 2026 20:05:47
+* File Generated:     May 7 2026 15:37:52
 
 * Purpose:            General info of design implementation
 
@@ -27,8 +27,8 @@ Device Info:
 
 Design statistics:
 ------------------
-    FFs:                  839
-    LUTs:                 1101
+    FFs:                  851
+    LUTs:                 1114
     RAMs:                 0
     IOBs:                 11
     GBs:                  6
@@ -46,12 +46,12 @@ Design statistics:
 
 Logic Resource Utilization:
 ---------------------------
-    Total Logic Cells: 1131/1248
-        Combinational Logic Cells: 292      out of   1248      23.3974%
-        Sequential Logic Cells:    839      out of   1248      67.2276%
+    Total Logic Cells: 1151/1248
+        Combinational Logic Cells: 300      out of   1248      24.0385%
+        Sequential Logic Cells:    851      out of   1248      68.1891%
         Logic Tiles:               154      out of   156       98.7179%
     Registers: 
-        Logic Registers:           839      out of   1248      67.2276%
+        Logic Registers:           851      out of   1248      68.1891%
         IO Registers:              0        out of   240       0
     Block RAMs:                    0        out of   14        0%
     Warm Boots:                    0        out of   1         0%
@@ -91,7 +91,7 @@ Detailed I/O Info:
     Output Pins: 
     Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function                                Signal Name    
     ----------  ---------  -----------  -------  -------  -----------                                -----------    
-    B5          Output     SB_LVCMOS    No       0        Output Tristatable by Enable               bno_rstn       
+    B5          Output     SB_LVCMOS    No       0        Simple Output                              bno_rstn       
     C6          Output     SB_LVCMOS    No       0        Simple Output                              vox_out_clk_p  
     D6          Output     SB_LVCMOS    No       2        Simple Output                              vox_out_clk_n  
     F2          Output     SB_LVCMOS    No       2        Simple Output                              vox_out_rxd_n  
@@ -105,11 +105,11 @@ Detailed I/O Info:
 
 Detailed Global Buffer Info:
 ----------------------------
-    Buffer Number  IO Bank  Driven By  Fanout  Signal Name                                                    
-    -------------  -------  ---------  ------  -----------                                                    
-    3              0                   112     VoxLink_Multinode_Protocol_Inst.transmit_shift_r_1_sqmuxa_i_g  
-    1              0                   97      VoxLink_BNO_Driver_Inst.target_length_0_sqmuxa_0_g             
-    7              2                   839     sys_clk                                                        
-    5              2                   107     packet_data_latched5_g                                         
-    6              2                   1       clk_12mhz_bufg                                                 
-    4              0                   771     locked_i_g                                                     
+    Buffer Number  IO Bank  Driven By  Fanout  Signal Name                                     
+    -------------  -------  ---------  ------  -----------                                     
+    1              0                   97      VoxLink_BNO_Driver_Inst.sensor_data_0_sqmuxa_g  
+    7              2                   851     sys_clk                                         
+    5              2                   107     packet_data_latched5_g                          
+    6              2                   1       clk_12mhz_bufg                                  
+    4              0                   783     bno_rstn_c_i_g                                  
+    3              0                   112     VoxLink_Multinode_Protocol_Inst.N_232_g         

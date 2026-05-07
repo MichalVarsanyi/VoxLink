@@ -53,13 +53,6 @@ module Top(
     localparam VOX_FREQUENCY    = 21_000_000;
     localparam I2C_FREQUENCY    = 400_000;
 
-    // Connect the _N to GND to facilitate low impedance return path
-    assign vox_in_clk_n     = 1'b0;
-    assign vox_out_clk_n    = 1'b0;
-    assign vox_in_rxd_n     = 1'b0;
-    assign vox_out_rxd_n    = 1'b0;
-
-
     // Clock and Reset
     wire            sys_clk;        // 100.5 MHz
     wire            sys_clkout;
@@ -73,6 +66,18 @@ module Top(
 
     // LED
     reg             led_io_r;
+    reg             nack_sticky_r;
+
+
+    //----------------EMI Improvements----------------//
+    // Connect the _N to GND to facilitate low impedance return path
+    assign vox_in_clk_n     = 1'b0;
+    assign vox_out_clk_n    = 1'b0;
+    assign vox_in_rxd_n     = 1'b0;
+    assign vox_out_rxd_n    = 1'b0;
+
+    // Assign the BNO RSTN pin to a deterministic value
+    assign bno_rstn         = ~sys_rst;
 
 
 //--------------------------------------------------------------------------------------------- //       
@@ -204,7 +209,19 @@ module Top(
         .fifo_overflow_sticky(fifo_overflow_sticky)
     );
 
-//--------------------------------------------------------------------------------------------- //       
+//--------------------------------------------------------------------------------------------- //
+//  NACK Sticky Flag
+//--------------------------------------------------------------------------------------------- //
+
+    always @(posedge sys_clk or posedge sys_rst)
+    begin
+        if (sys_rst)
+            nack_sticky_r <= 1'b0;
+        else if (target_nack)
+            nack_sticky_r <= 1'b1;
+    end
+
+//--------------------------------------------------------------------------------------------- //
 //  RGB Infrastructure
 //--------------------------------------------------------------------------------------------- //
 
@@ -217,7 +234,7 @@ module Top(
         .CURREN(1'b1),
         .RGBLEDEN(1'b1),
 
-        .RGB0PWM(fifo_overflow_sticky),
+        .RGB0PWM(nack_sticky_r),
         .RGB1PWM(),
         .RGB2PWM(),
 
