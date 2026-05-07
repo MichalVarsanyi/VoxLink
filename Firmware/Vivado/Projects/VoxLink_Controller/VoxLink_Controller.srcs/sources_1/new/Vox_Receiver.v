@@ -2,8 +2,11 @@
 
 module Vox_Receiver (
     // General
-    input  sys_clk,       // Fast internal clock (e.g., 252 MHz)
+    input  sys_clk,
     input  sys_rst,
+
+    // Resets shift_reg and bit_counter to re-align on every new readout cycle
+    input  packet_rst,
 
     // Physical Sensor Interface
     input  vox_clk,
@@ -11,7 +14,7 @@ module Vox_Receiver (
 
     // Received Sensor Data
     (* MARK_DEBUG="true" *) output reg [63:0]  sensor_data,
-    (* MARK_DEBUG="true" *) output reg [111:0] sensor_packet,   // Full packet for CRC verification
+    (* MARK_DEBUG="true" *) output reg [111:0] sensor_packet,
     (* MARK_DEBUG="true" *) output reg         sensor_data_valid
 );
 
@@ -39,18 +42,27 @@ module Vox_Receiver (
     reg [111:0] shift_reg;
     reg [7:0]   bit_counter;
 
-    always @(posedge sys_clk) begin
-        if (sys_rst) begin
+    always @(posedge sys_clk)
+    begin
+        if (sys_rst)
+        begin
             shift_reg         <= 112'd0;
             bit_counter       <= 8'd0;
             sensor_data       <= 64'd0;
             sensor_packet     <= 112'd0;
             sensor_data_valid <= 1'b0;
-        end else begin
-            // Default state: valid pulse is 1 cycle only
+        end
+        else
+        begin
             sensor_data_valid <= 1'b0;
 
-            if (vox_clk_rising_edge) begin
+            if (packet_rst)
+            begin
+                shift_reg   <= 112'd0;
+                bit_counter <= 8'd0;
+            end
+            else if (vox_clk_rising_edge)
+            begin
                 // Shift the safely synchronized bit into the register
                 shift_reg <= {shift_reg[110:0], vox_rx};
 
@@ -65,7 +77,9 @@ module Vox_Receiver (
                     sensor_data       <= shift_reg[78:15];
                     sensor_data_valid <= 1'b1;
                     bit_counter       <= 8'd0;
-                end else begin
+                end
+                else
+                begin
                     bit_counter <= bit_counter + 8'd1;
                 end
             end

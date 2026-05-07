@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Wed May  6 16:13:19 2026
+| Date         : Thu May  7 17:31:15 2026
 | Host         : LAPTOP-GK6ER3TV running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
 | Design       : Top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    23 |
-|    Minimum number of control sets                        |    23 |
+| Total control sets                                       |    24 |
+|    Minimum number of control sets                        |    24 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    44 |
+| Unused register locations in slices containing registers |    43 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,7 +39,7 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    23 |
+| Total control sets |    24 |
 | >= 0 to < 4        |     2 |
 | >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     4 |
@@ -47,7 +47,7 @@ Table of Contents
 | >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    12 |
+| >= 16              |    13 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              31 |           12 |
-| No           | No                    | Yes                    |             169 |           58 |
-| No           | Yes                   | No                     |             116 |           54 |
+| No           | No                    | No                     |              31 |           13 |
+| No           | No                    | Yes                    |             169 |           52 |
+| No           | Yes                   | No                     |             117 |           42 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              27 |            9 |
-| Yes          | Yes                   | No                     |             717 |          145 |
+| Yes          | No                    | Yes                    |              27 |            8 |
+| Yes          | Yes                   | No                     |             717 |          134 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -74,28 +74,29 @@ Table of Contents
 | Clock Signal |                                                       Enable Signal                                                      |                 Set/Reset Signal                 | Slice Load Count | Bel Load Count | Bels / Slice |
 +--------------+--------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+------------------+----------------+--------------+
 |  sys_clk     |                                                                                                                          | MV_UART_Inst/uart_txd_i_1_n_0                    |                1 |              1 |         1.00 |
-|  sys_clk     | burst_wait_r                                                                                                             | Vox_Testing_Multiplexer_Inst/sys_rst             |                1 |              3 |         3.00 |
+|  sys_clk     | burst_wait_r                                                                                                             | Vox_Testing_Multiplexer_Inst/sys_rst             |                2 |              3 |         1.50 |
 |  sys_clk     | P2_L1_i_1_n_0                                                                                                            | Vox_Testing_Multiplexer_Inst/sys_rst             |                2 |              4 |         2.00 |
-|  sys_clk     | MV_UART_Inst/rx_bit_counter[7]_i_1_n_0                                                                                   | Vox_Testing_Multiplexer_Inst/sys_rst             |                3 |              7 |         2.33 |
-|  sys_clk     | MV_UART_Inst/tx_bit_counter[7]_i_1_n_0                                                                                   | Vox_Testing_Multiplexer_Inst/sys_rst             |                3 |              7 |         2.33 |
 |  sys_clk     | VoxLink_TXD_Driver_inst/tx_bit_cnt[6]_i_1_n_0                                                                            | Vox_Testing_Multiplexer_Inst/sys_rst             |                2 |              7 |         3.50 |
+|  sys_clk     | MV_UART_Inst/rx_bit_counter[7]_i_1_n_0                                                                                   | Vox_Testing_Multiplexer_Inst/sys_rst             |                2 |              7 |         3.50 |
+|  sys_clk     | MV_UART_Inst/tx_bit_counter[7]_i_1_n_0                                                                                   | Vox_Testing_Multiplexer_Inst/sys_rst             |                3 |              7 |         2.33 |
 |  sys_clk     | node_select_r                                                                                                            | Vox_Testing_Multiplexer_Inst/sys_rst             |                2 |              7 |         3.50 |
+|  sys_clk     | MV_UART_Inst/received_message_r0                                                                                         | MV_UART_Inst/received_message_r[7]_i_1_n_0       |                2 |              8 |         4.00 |
 |  sys_clk     | MV_UART_Inst/received_good_reg_n_0                                                                                       | Vox_Testing_Multiplexer_Inst/sys_rst             |                2 |              8 |         4.00 |
-|  sys_clk     | MV_UART_Inst/received_message_r0                                                                                         | MV_UART_Inst/received_message_r[7]_i_1_n_0       |                3 |              8 |         2.67 |
-|  sys_clk     | MV_UART_Inst/transmit_message_r[9]_i_1_n_0                                                                               | Vox_Testing_Multiplexer_Inst/sys_rst             |                3 |              9 |         3.00 |
-|  sys_clk     | init_data_r0                                                                                                             | Vox_Testing_Multiplexer_Inst/sys_rst             |                3 |             10 |         3.33 |
-|  sys_clk     | VoxLink_TXD_Driver_inst/tx_shift_r[111]_i_1_n_0                                                                          | Vox_Testing_Multiplexer_Inst/sys_rst             |                5 |             16 |         3.20 |
-|  sys_clk     |                                                                                                                          | readout_timer_r[0]_i_1_n_0                       |                9 |             21 |         2.33 |
-|  sys_clk     | MV_UART_FIFO_Interface_inst/UART_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0]       | Vox_Testing_Multiplexer_Inst/sys_rst             |                9 |             22 |         2.44 |
-|  sys_clk     | MV_UART_FIFO_Interface_inst/UART_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/wr_en_0[0] | Vox_Testing_Multiplexer_Inst/sys_rst             |                8 |             22 |         2.75 |
+|  sys_clk     | MV_UART_Inst/transmit_message_r[9]_i_1_n_0                                                                               | Vox_Testing_Multiplexer_Inst/sys_rst             |                6 |              9 |         1.50 |
+|  sys_clk     | init_data_r0                                                                                                             | Vox_Testing_Multiplexer_Inst/sys_rst             |                4 |             10 |         2.50 |
+|  sys_clk     | VoxLink_TXD_Driver_inst/tx_shift_r[111]_i_1_n_0                                                                          | Vox_Testing_Multiplexer_Inst/sys_rst             |                4 |             16 |         4.00 |
+|  sys_clk     |                                                                                                                          | readout_timer_r[0]_i_1_n_0                       |                8 |             21 |         2.62 |
+|  sys_clk     | MV_UART_FIFO_Interface_inst/UART_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/wr_en_0[0] | Vox_Testing_Multiplexer_Inst/sys_rst             |                6 |             22 |         3.67 |
+|  sys_clk     | MV_UART_FIFO_Interface_inst/UART_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0]       | Vox_Testing_Multiplexer_Inst/sys_rst             |                6 |             22 |         3.67 |
 |  sys_clk     | VoxLink_CRC16_Koopman_inst/p_0_in_0                                                                                      | VoxLink_CRC16_Koopman_inst/crc_value[15]_i_1_n_0 |                6 |             24 |         4.00 |
-|  sys_clk     |                                                                                                                          |                                                  |               12 |             31 |         2.58 |
-|  sys_clk     | mailbox                                                                                                                  | Vox_Testing_Multiplexer_Inst/sys_rst             |                4 |             32 |         8.00 |
+|  sys_clk     |                                                                                                                          |                                                  |               13 |             31 |         2.38 |
+|  sys_clk     | mailbox                                                                                                                  | Vox_Testing_Multiplexer_Inst/sys_rst             |                5 |             32 |         6.40 |
 |  sys_clk     | MV_UART_Inst/uart_rxd_received                                                                                           | Vox_Testing_Multiplexer_Inst/sys_rst             |                8 |             40 |         5.00 |
 |  sys_clk     | VoxLink_CRC16_Koopman_inst/p_1_in[111]                                                                                   | Vox_Testing_Multiplexer_Inst/sys_rst             |               15 |            111 |         7.40 |
-|  sys_clk     | VoxLink_CRC16_Koopman_inst/E[0]                                                                                          | Vox_Testing_Multiplexer_Inst/sys_rst             |               19 |            112 |         5.89 |
-|  sys_clk     |                                                                                                                          | Vox_Testing_Multiplexer_Inst/sys_rst             |              102 |            263 |         2.58 |
-|  sys_clk     | Vox_Receiver_Inst/vox_clk_rising_edge                                                                                    | Vox_Testing_Multiplexer_Inst/sys_rst             |               56 |            295 |         5.27 |
+|  sys_clk     | VoxLink_CRC16_Koopman_inst/E[0]                                                                                          | Vox_Testing_Multiplexer_Inst/sys_rst             |               17 |            112 |         6.59 |
+|  sys_clk     | Vox_Receiver_Inst/vox_clk_rising_edge                                                                                    | Vox_Receiver_Inst/shift_reg[110]_i_1_n_0         |               22 |            119 |         5.41 |
+|  sys_clk     | Vox_Receiver_Inst/sensor_data[63]_i_1_n_0                                                                                | Vox_Testing_Multiplexer_Inst/sys_rst             |               26 |            176 |         6.77 |
+|  sys_clk     |                                                                                                                          | Vox_Testing_Multiplexer_Inst/sys_rst             |               85 |            264 |         3.11 |
 +--------------+--------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+------------------+----------------+--------------+
 
 

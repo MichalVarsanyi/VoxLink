@@ -3,7 +3,7 @@
 #OS: Windows 8 6.2
 #Hostname: LAPTOP-GK6ER3TV
 
-# Thu May 07 15:37:24 2026
+# Thu May 07 19:39:42 2026
 
 #Implementation: VoxLink_Protocol_Implmnt
 
@@ -34,6 +34,13 @@ Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys softwa
 @I::"C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Timestamp.v" (library work)
 Verilog syntax check successful!
 File C:\BachelorProject\VoxLink\Firmware\Lattice\Source\Verilog\Top_VoxLink_Protocol.v changed - recompiling
+File C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_BNO_Driver.v changed - recompiling
+File C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_CRC16_Koopman.v changed - recompiling
+File C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_I2C_Driver.v changed - recompiling
+File C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Multinode_Protocol.v changed - recompiling
+File C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Packet_Builder.v changed - recompiling
+File C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Reg_FIFO.v changed - recompiling
+File C:\BachelorProject\VoxLink\Firmware\Lattice\Projects\VoxLink_Protocol\sources\VoxLink_Timestamp.v changed - recompiling
 Selecting top level module Top
 @N: CG364 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v":578:7:578:11|Synthesizing module SB_GB in library work.
 
@@ -178,7 +185,7 @@ At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Thu May 07 15:37:24 2026
+# Thu May 07 19:39:42 2026
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
@@ -191,7 +198,7 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Thu May 07 15:37:24 2026
+# Thu May 07 19:39:42 2026
 
 ###########################################################]
 @END
@@ -201,7 +208,7 @@ At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Thu May 07 15:37:24 2026
+# Thu May 07 19:39:42 2026
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
@@ -215,12 +222,12 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Thu May 07 15:37:26 2026
+# Thu May 07 19:39:44 2026
 
 ###########################################################]
 Pre-mapping Report
 
-# Thu May 07 15:37:26 2026
+# Thu May 07 19:39:44 2026
 
 Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -301,12 +308,12 @@ Pre-mapping successful!
 At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 51MB peak: 137MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Thu May 07 15:37:26 2026
+# Thu May 07 19:39:44 2026
 
 ###########################################################]
 Map & Optimize Report
 
-# Thu May 07 15:37:26 2026
+# Thu May 07 19:39:44 2026
 
 Synopsys Lattice Technology Mapper, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -424,7 +431,7 @@ Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00
 Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 144MB peak: 149MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 144MB peak: 149MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 145MB peak: 149MB)
 
 
 Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 145MB peak: 149MB)
@@ -435,7 +442,7 @@ Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CP
 @N: BN362 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":110:4:110:9|Removing sequential instance VoxLink_BNO_Driver_Inst.match_target_length (in view: work.Top(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\bachelorproject\voxlink\firmware\lattice\projects\voxlink_protocol\sources\voxlink_bno_driver.v":110:4:110:9|Removing sequential instance VoxLink_BNO_Driver_Inst.match_packet_length (in view: work.Top(verilog)) because it does not drive other instances.
 
-Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 144MB peak: 149MB)
+Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 144MB peak: 149MB)
 
 
 Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 151MB peak: 154MB)
@@ -498,7 +505,7 @@ Start final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:0
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Thu May 07 15:37:28 2026
+# Timing Report written on Thu May 07 19:39:46 2026
 #
 
 
@@ -1079,6 +1086,6 @@ Mapper successful!
 At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 32MB peak: 154MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Thu May 07 15:37:28 2026
+# Thu May 07 19:39:46 2026
 
 ###########################################################]

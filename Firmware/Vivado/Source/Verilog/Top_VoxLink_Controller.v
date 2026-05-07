@@ -582,6 +582,9 @@ end
         .sys_clk(sys_clk),
         .sys_rst(sys_rst),
 
+        // Watchdog
+        .packet_rst(readout_trigger_r),
+
         // Physical Sensor Interface
         .vox_clk(P3_TX_N_cdc),
         .vox_rx(P3_TX_P_cdc),

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Wed May  6 16:13:36 2026
+| Date         : Thu May  7 17:31:30 2026
 | Host         : LAPTOP-GK6ER3TV running 64-bit major release  (build 9200)
 | Command      : report_drc -file Top_drc_routed.rpt -pb Top_drc_routed.pb -rpx Top_drc_routed.rpx
 | Design       : Top
@@ -46,10 +46,11 @@ Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
-4 net(s) have no routable loads. The problem bus(es) and/or net(s) are MV_UART_FIFO_Interface_inst/UART_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb,
+68 net(s) have no routable loads. The problem bus(es) and/or net(s) are MV_UART_FIFO_Interface_inst/UART_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb,
 MV_UART_FIFO_Interface_inst/UART_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i,
-MV_UART_FIFO_Interface_inst/UART_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i
-MV_UART_FIFO_Interface_inst/uart_rxd_r[39].
+MV_UART_FIFO_Interface_inst/UART_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i,
+MV_UART_FIFO_Interface_inst/uart_rxd_r[39]
+Vox_Receiver_Inst/sensor_data[63:0].
 Related violations: <none>
 
 
