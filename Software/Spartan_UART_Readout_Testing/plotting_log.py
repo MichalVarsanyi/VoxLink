@@ -1,151 +1,244 @@
+#!/usr/bin/env python3
+"""
+Live VoxLink multi-node quaternion readout with numeric CSV packet logging.
+
+CSV row format, with no header row:
+    sample_index, wallclock_s, node, address, command, timestamp, crc,
+    q0_raw, q1_raw, q2_raw, q3_raw, q0, q1, q2, q3,
+    byte_0, byte_1, byte_2, byte_3, byte_4, byte_5, byte_6,
+    byte_7, byte_8, byte_9, byte_10, byte_11, byte_12, byte_13
+"""
+
+from __future__ import annotations
+
+import csv
 import serial
 import struct
-import time
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-from collections import deque
 import sys
+import time
+from collections import deque
+from datetime import datetime
+from pathlib import Path
+
+import matplotlib.animation as animation
+import matplotlib.pyplot as plt
 
 # --- Configuration ---
-COM_PORT = 'COM13'           # Adjust if necessary
-BAUD_RATE = 1000000
-MAX_POINTS = 200            # Number of points visible on the X-axis
-POLL_ADDRESS = 67           # Decimal 67 (0x43)
+COM_PORT      = 'COM13'
+BAUD_RATE     = 1000000
+MAX_POINTS    = 200
+INIT_ADDRESS  = 2
+BURST_ADDRESS = 67
+INIT_VALUE    = 0
 
-# The read request: 1-byte write-flag (0) + 1-byte address
-READ_PACKET = bytes([0x00, POLL_ADDRESS])
-
-# New VoxLink packet format, 112 bits = 14 bytes, transmitted MSB-first:
-#   Address(12) | Timestamp(12) | Command(8) | Data(64) | CRC(16)
 PACKET_BYTES = 14
 Q14_SCALE    = 16384.0
 
 # --- Packet logging ---
-# Every poll response is dumped to a log file. Stop the script (Ctrl-C / close
-# the plot window) when you see a spike on the chart, then inspect the tail of
-# the log around the timestamp the spike occurred.
-PACKET_LOG_PATH = 'spikes.log'
+# Logs are stored in /Software/Data. The directory is created if needed.
+LOG_DIR = Path('C:\\BachelorProject\\VoxLink\\Software\\Data')
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+PACKET_LOG_PATH = LOG_DIR / f'voxlink_packets_{datetime.now().strftime("%Y%m%d_%H%M%S")}.csv'
 
-packet_log = open(PACKET_LOG_PATH, 'w', buffering=1)  # line-buffered
-packet_log.write("# wallclock_s  TS  Addr  Cmd  CRC  q0 q1 q2 q3  raw_hex\n")
 
-T0 = time.monotonic()
+def send_write(ser: serial.Serial, address: int, data: int) -> None:
+    """Send a 32-bit write transaction to the FPGA UART bridge."""
+    addr = address & 0x7FFF
+    data &= 0xFFFFFFFF
+    pkt = bytes([
+        0x80 | ((addr >> 8) & 0x7F),
+        addr & 0xFF,
+        (data >> 24) & 0xFF,
+        (data >> 16) & 0xFF,
+        (data >> 8)  & 0xFF,
+        data         & 0xFF,
+    ])
+    ser.write(pkt)
+
+
+def parse_packet(reply: bytes) -> tuple[int, int, int, int, int, int, int, float, float, float, float]:
+    """
+    Parse one 14-byte VoxLink packet.
+
+    Packet format, 112 bits, MSB-first:
+        address[9:0] | command[5:0] | timestamp[15:0] | data[63:0] | crc[15:0]
+    """
+    packet_int = int.from_bytes(reply, 'big')
+    address    = (packet_int >> 102) & 0x3FF
+    command    = (packet_int >> 96)  & 0x3F
+    timestamp  = (packet_int >> 80)  & 0xFFFF
+    crc        =  packet_int         & 0xFFFF
+
+    q0_raw, q1_raw, q2_raw, q3_raw = struct.unpack('<hhhh', reply[4:12])
+
+    q0 = q0_raw / Q14_SCALE
+    q1 = q1_raw / Q14_SCALE
+    q2 = q2_raw / Q14_SCALE
+    q3 = q3_raw / Q14_SCALE
+
+    return address, command, timestamp, crc, q0_raw, q1_raw, q2_raw, q3_raw, q0, q1, q2, q3
+
 
 # --- Setup Serial Connection ---
 try:
     ser = serial.Serial(COM_PORT, BAUD_RATE, timeout=0.1)
-    print(f"Connected to {COM_PORT}. Plotting full VoxLink packet...")
+    print(f'Connected to {COM_PORT}.')
 except Exception as e:
-    print(f"Failed to connect to {COM_PORT}: {e}")
+    print(f'Failed to connect to {COM_PORT}: {e}')
     sys.exit(1)
 
-# --- Setup Data Buffers ---
-x_data  = deque(range(MAX_POINTS), maxlen=MAX_POINTS)
-q0_data = deque([0.0] * MAX_POINTS, maxlen=MAX_POINTS)
-q1_data = deque([0.0] * MAX_POINTS, maxlen=MAX_POINTS)
-q2_data = deque([0.0] * MAX_POINTS, maxlen=MAX_POINTS)
-q3_data = deque([0.0] * MAX_POINTS, maxlen=MAX_POINTS)
+# --- Initialization ---
+ser.reset_input_buffer()
+send_write(ser, INIT_ADDRESS, (INIT_VALUE & 0x3FF) << 6)
+time.sleep(0.01)
+ser.write(bytes([0x00, INIT_ADDRESS]))
+init_reply = ser.read(2)
+
+if len(init_reply) == 2:
+    num_nodes = ((init_reply[0] << 8) | init_reply[1]) >> 6
+    print(f'Number of initialized nodes: {num_nodes}')
+else:
+    print(f'Init read-back timed out ({len(init_reply)} bytes received), defaulting to 1 node.')
+    num_nodes = 1
+
+if num_nodes == 0:
+    print('No nodes found. Exiting.')
+    ser.close()
+    sys.exit(1)
+
+send_write(ser, 3, 1)
+print('Run mode started.')
+print(f'Packet log path: {PACKET_LOG_PATH}')
+
+# --- Packet log file ---
+packet_log_file = PACKET_LOG_PATH.open('w', newline='', buffering=1)
+packet_log = csv.writer(packet_log_file)
+t0 = time.monotonic()
+sample_index = 0
+
+# --- Per-Node Data Buffers ---
+x_data = deque(range(MAX_POINTS), maxlen=MAX_POINTS)
+node_data = {
+    n: {ch: deque([0.0] * MAX_POINTS, maxlen=MAX_POINTS) for ch in ('q0', 'q1', 'q2', 'q3')}
+    for n in range(1, num_nodes + 1)
+}
 
 # --- Setup Matplotlib Figure ---
-fig, ax = plt.subplots()
-line_q0, = ax.plot(x_data, q0_data, color='red',     label='Quat[0] (X)',        linewidth=1.5)
-line_q1, = ax.plot(x_data, q1_data, color='lime',    label='Quat[1] (Y)',        linewidth=1.5)
-line_q2, = ax.plot(x_data, q2_data, color='cyan',    label='Quat[2] (Z)',  linewidth=1.5)
-line_q3, = ax.plot(x_data, q3_data, color='magenta', label='Quat[3] (Real)', linewidth=1.5)
-
-# Styling the graph
-ax.set_facecolor('#1e1e1e')
+fig, axes = plt.subplots(num_nodes, 1, figsize=(12, 4 * num_nodes), squeeze=False)
 fig.patch.set_facecolor('#1e1e1e')
-ax.tick_params(colors='white')
-ax.set_title('Live VoxLink Quaternion Data (full 64-bit payload)', color='white')
-ax.set_ylabel('Magnitude (Q14 Float)', color='white')
-ax.set_ylim(-1.1, 1.1)
-ax.grid(True, color='#444444', linestyle='--')
-legend = ax.legend(facecolor='#1e1e1e', edgecolor='white', loc='upper right')
-for text in legend.get_texts():
-    text.set_color("white")
 
-# Telemetry overlay (Address, Timestamp, Command, CRC)
-info_text = ax.text(
-    0.02, 0.97, '',
-    transform=ax.transAxes,
-    color='white',
-    fontsize=9,
-    verticalalignment='top',
-    family='monospace',
-    bbox=dict(facecolor='#1e1e1e', edgecolor='#444444')
-)
+node_lines = {}
+node_info = {}
+
+for idx, n in enumerate(range(1, num_nodes + 1)):
+    ax = axes[idx][0]
+    ax.set_facecolor('#1e1e1e')
+    ax.tick_params(colors='white')
+    ax.set_title(f'Node {n}  —  Live Quaternion Data', color='white')
+    ax.set_ylabel('Magnitude (Q14 Float)', color='white')
+    ax.set_ylim(-1.1, 1.1)
+    ax.grid(True, color='#444444', linestyle='--')
+
+    node_lines[n] = {
+        'q0': ax.plot(x_data, node_data[n]['q0'], color='red',     label='Q0 (X)',    linewidth=1.5)[0],
+        'q1': ax.plot(x_data, node_data[n]['q1'], color='lime',    label='Q1 (Y)',    linewidth=1.5)[0],
+        'q2': ax.plot(x_data, node_data[n]['q2'], color='cyan',    label='Q2 (Z)',    linewidth=1.5)[0],
+        'q3': ax.plot(x_data, node_data[n]['q3'], color='magenta', label='Q3 (Real)', linewidth=1.5)[0],
+    }
+
+    legend = ax.legend(facecolor='#1e1e1e', edgecolor='white', loc='upper right')
+    for text in legend.get_texts():
+        text.set_color('white')
+
+    node_info[n] = ax.text(
+        0.02, 0.97, '',
+        transform=ax.transAxes,
+        color='white',
+        fontsize=9,
+        verticalalignment='top',
+        family='monospace',
+        bbox=dict(facecolor='#1e1e1e', edgecolor='#444444'),
+    )
+
+plt.tight_layout()
 
 
-def update_plot(frame):
-    # 1. Ask the FPGA for the packet
-    ser.write(READ_PACKET)
+def update_plot(_):
+    global sample_index
 
-    # 2. Wait for the 14-byte response
-    reply = ser.read(PACKET_BYTES)
+    artists = []
+    sample_index += 1
 
-    if len(reply) == PACKET_BYTES:
-        # 3. The FPGA shifts MSB-first, so the first byte is packet[111:104].
-        #    Unpack the 112-bit integer and slice the fields.
-        packet_int = int.from_bytes(reply, 'big')
-        address   = (packet_int >> 100) & 0xFFF
-        timestamp = (packet_int >> 88)  & 0xFFF
-        command   = (packet_int >> 80)  & 0xFF
-        crc       =  packet_int         & 0xFFFF
+    ser.reset_input_buffer()
+    send_write(ser, BURST_ADDRESS, 0)
+    burst_reply = ser.read(num_nodes * PACKET_BYTES)
+    wallclock_s = time.monotonic() - t0
 
-        # 4. Data field = bytes 4..11 of the packet. Match the old '<hh' byte order
-        #    (per-int16 little-endian, same convention as the sensor's original pack).
-        q0_raw, q1_raw, q2_raw, q3_raw = struct.unpack('<hhhh', reply[4:12])
+    for n in range(1, num_nodes + 1):
+        offset = (n - 1) * PACKET_BYTES
+        reply = burst_reply[offset:offset + PACKET_BYTES]
 
-        q0v = q0_raw / Q14_SCALE
-        q1v = q1_raw / Q14_SCALE
-        q2v = q2_raw / Q14_SCALE
-        q3v = q3_raw / Q14_SCALE
+        if len(reply) == PACKET_BYTES:
+            (
+                address, command, timestamp, crc,
+                q0_raw, q1_raw, q2_raw, q3_raw,
+                q0, q1, q2, q3,
+            ) = parse_packet(reply)
 
-        q0_data.append(q0v)
-        q1_data.append(q1v)
-        q2_data.append(q2v)
-        q3_data.append(q3v)
+            node_data[n]['q0'].append(q0)
+            node_data[n]['q1'].append(q1)
+            node_data[n]['q2'].append(q2)
+            node_data[n]['q3'].append(q3)
 
-        info_text.set_text(
-            f"Addr: 0x{address:03X}   Cmd: 0x{command:02X}\n"
-            f"TS:   {timestamp}\n"
-            f"CRC:  0x{crc:04X}"
-        )
+            node_info[n].set_text(
+                f'Addr: 0x{address:03X}   Cmd: 0x{command:02X}\n'
+                f'TS:   {timestamp}\n'
+                f'CRC:  0x{crc:04X}'
+            )
 
-        # --- Packet logging (every poll, no filtering) ---
-        packet_log.write(
-            f"{time.monotonic()-T0:8.3f}  TS={timestamp:4d}  "
-            f"Addr=0x{address:03X}  Cmd=0x{command:02X}  CRC=0x{crc:04X}  "
-            f"q=({q0v:+.4f},{q1v:+.4f},{q2v:+.4f},{q3v:+.4f})  "
-            f"raw={reply.hex()}\n"
-        )
-    else:
-        # Prevent stutter if a packet is dropped
-        q0_data.append(q0_data[-1])
-        q1_data.append(q1_data[-1])
-        q2_data.append(q2_data[-1])
-        q3_data.append(q3_data[-1])
+            # Numeric CSV only. No text, no header.
+            packet_log.writerow([
+                sample_index,
+                f'{wallclock_s:.6f}',
+                n,
+                address,
+                command,
+                timestamp,
+                crc,
+                q0_raw,
+                q1_raw,
+                q2_raw,
+                q3_raw,
+                f'{q0:.9f}',
+                f'{q1:.9f}',
+                f'{q2:.9f}',
+                f'{q3:.9f}',
+                *reply,
+            ])
+        else:
+            for ch in ('q0', 'q1', 'q2', 'q3'):
+                node_data[n][ch].append(node_data[n][ch][-1])
 
-    line_q0.set_ydata(q0_data)
-    line_q1.set_ydata(q1_data)
-    line_q2.set_ydata(q2_data)
-    line_q3.set_ydata(q3_data)
+        for ch in ('q0', 'q1', 'q2', 'q3'):
+            node_lines[n][ch].set_ydata(node_data[n][ch])
 
-    return line_q0, line_q1, line_q2, line_q3, info_text
+        artists += list(node_lines[n].values()) + [node_info[n]]
+
+    return artists
 
 
 # --- Run the Animation ---
-# Oversample at ~200 Hz so we never miss a fresh sensor frame; the FPGA just
-# returns the most recent CRC-validated packet, so duplicate reads are harmless.
-ani = animation.FuncAnimation(fig, update_plot, interval=10, blit=True)
+ani = animation.FuncAnimation(fig, update_plot, interval=20, blit=True)
 
 try:
     plt.show()
 except KeyboardInterrupt:
-    print("Plotting stopped.")
+    print('Plotting stopped.')
 finally:
-    ser.close()
-    packet_log.close()
-    print("Serial port safely closed.")
-    print(f"Packet log written to {PACKET_LOG_PATH}.")
+    try:
+        send_write(ser, 3, 0)
+    finally:
+        ser.close()
+        packet_log_file.close()
+        print('Serial port safely closed.')
+        print(f'Packet log written to {PACKET_LOG_PATH}.')
