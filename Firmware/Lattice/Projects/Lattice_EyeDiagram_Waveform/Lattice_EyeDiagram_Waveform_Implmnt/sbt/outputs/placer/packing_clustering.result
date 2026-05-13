@@ -1,0 +1,42 @@
+ble_pack LC_PLL_PLL_BUFFER_u_pll_LOCK {PLL_BUFFER_u_pll_LOCK_THRU_LUT4_0}
+clb_pack PLB_PLL_u_pllLOCK {LC_PLL_PLL_BUFFER_u_pll_LOCK}
+ble_pack un2_sck_counter_r_cry_1_c_LC_33 {un2_sck_counter_r_cry_1_c}
+ble_pack sck_counter_r[2]_LC_4 {sck_counter_r[2], un2_sck_counter_r_cry_2_c, sck_counter_r_RNO[2]}
+ble_pack sck_counter_r[3]_LC_5 {sck_counter_r[3], un2_sck_counter_r_cry_3_c, sck_counter_r_RNO[3]}
+ble_pack sck_counter_r[4]_LC_6 {sck_counter_r[4], un2_sck_counter_r_cry_4_c, sck_counter_r_RNO[4]}
+ble_pack sck_counter_r[5]_LC_7 {sck_counter_r[5], un2_sck_counter_r_cry_5_c, sck_counter_r_RNO[5]}
+ble_pack sck_counter_r[6]_LC_8 {sck_counter_r[6], un2_sck_counter_r_cry_6_c, sck_counter_r_RNO[6]}
+ble_pack sck_counter_r[7]_LC_9 {sck_counter_r[7], un2_sck_counter_r_cry_7_c, sck_counter_r_RNO[7]}
+ble_pack sck_counter_r[8]_LC_10 {sck_counter_r[8], un2_sck_counter_r_cry_8_c, sck_counter_r_RNO[8]}
+clb_pack PLB_1 {un2_sck_counter_r_cry_1_c_LC_33, sck_counter_r[2]_LC_4, sck_counter_r[3]_LC_5, sck_counter_r[4]_LC_6, sck_counter_r[5]_LC_7, sck_counter_r[6]_LC_8, sck_counter_r[7]_LC_9, sck_counter_r[8]_LC_10}
+ble_pack sck_counter_r[9]_LC_11 {sck_counter_r[9], un2_sck_counter_r_cry_9_c, sck_counter_r_RNO[9]}
+ble_pack sck_counter_r[10]_LC_2 {sck_counter_r[10], un2_sck_counter_r_cry_10_c, sck_counter_r_RNO[10]}
+ble_pack sck_counter_r[11]_LC_3 {sck_counter_r[11], sck_counter_r_RNO[11]}
+clb_pack PLB_2 {sck_counter_r[9]_LC_11, sck_counter_r[10]_LC_2, sck_counter_r[11]_LC_3}
+ble_pack sck_counter_r[1]_LC_1 {sck_counter_r[1], sck_counter_r_RNO[1]}
+ble_pack sck_counter_r[0]_LC_0 {sck_counter_r[0], sck_counter_r_RNO[0]}
+ble_pack sck_en_r_LC_31 {sck_en_r, sck_en_r_THRU_LUT4_0}
+ble_pack sck_en_r_RNIBLR5_LC_12 {sck_en_r_RNIBLR5}
+ble_pack vox_clk_r_LC_14 {vox_clk_r, vox_clk_r_RNO}
+ble_pack u_pll_RNISDD6_LC_13 {u_pll_RNISDD6}
+ble_pack GB_BUFFER_clk_12mhz_bufg_THRU_LUT4_0_LC_32 {GB_BUFFER_clk_12mhz_bufg_THRU_LUT4_0}
+ble_pack LC_35 {CONSTANT_ONE_LUT4}
+clb_pack PLB_3 {sck_counter_r[1]_LC_1, sck_counter_r[0]_LC_0, sck_en_r_LC_31, sck_en_r_RNIBLR5_LC_12, vox_clk_r_LC_14, u_pll_RNISDD6_LC_13, GB_BUFFER_clk_12mhz_bufg_THRU_LUT4_0_LC_32, LC_35}
+ble_pack pattern_shift_r[0]_LC_15 {pattern_shift_r[0], pattern_shift_r_0_THRU_LUT4_0}
+ble_pack pattern_shift_r[1]_LC_16 {pattern_shift_r[1], pattern_shift_r_1_THRU_LUT4_0}
+ble_pack pattern_shift_r[2]_LC_23 {pattern_shift_r[2], pattern_shift_r_2_THRU_LUT4_0}
+ble_pack pattern_shift_r[3]_LC_24 {pattern_shift_r[3], pattern_shift_r_3_THRU_LUT4_0}
+ble_pack pattern_shift_r[4]_LC_25 {pattern_shift_r[4], pattern_shift_r_4_THRU_LUT4_0}
+ble_pack pattern_shift_r[5]_LC_26 {pattern_shift_r[5], pattern_shift_r_5_THRU_LUT4_0}
+ble_pack pattern_shift_r[6]_LC_27 {pattern_shift_r[6], pattern_shift_r_6_THRU_LUT4_0}
+ble_pack pattern_shift_r[7]_LC_28 {pattern_shift_r[7], pattern_shift_r_7_THRU_LUT4_0}
+clb_pack PLB_4 {pattern_shift_r[0]_LC_15, pattern_shift_r[1]_LC_16, pattern_shift_r[2]_LC_23, pattern_shift_r[3]_LC_24, pattern_shift_r[4]_LC_25, pattern_shift_r[5]_LC_26, pattern_shift_r[6]_LC_27, pattern_shift_r[7]_LC_28}
+ble_pack pattern_shift_r[10]_LC_17 {pattern_shift_r[10], pattern_shift_r_10_THRU_LUT4_0}
+ble_pack pattern_shift_r[11]_LC_18 {pattern_shift_r[11], pattern_shift_r_11_THRU_LUT4_0}
+ble_pack pattern_shift_r[12]_LC_19 {pattern_shift_r[12], pattern_shift_r_12_THRU_LUT4_0}
+ble_pack pattern_shift_r[13]_LC_20 {pattern_shift_r[13], pattern_shift_r_13_THRU_LUT4_0}
+ble_pack pattern_shift_r[14]_LC_21 {pattern_shift_r[14], pattern_shift_r_14_THRU_LUT4_0}
+ble_pack pattern_shift_r[15]_LC_22 {pattern_shift_r[15], pattern_shift_r_15_THRU_LUT4_0}
+ble_pack pattern_shift_r[9]_LC_30 {pattern_shift_r[9], pattern_shift_r_9_THRU_LUT4_0}
+ble_pack pattern_shift_r[8]_LC_29 {pattern_shift_r[8], pattern_shift_r_8_THRU_LUT4_0}
+clb_pack PLB_5 {pattern_shift_r[10]_LC_17, pattern_shift_r[11]_LC_18, pattern_shift_r[12]_LC_19, pattern_shift_r[13]_LC_20, pattern_shift_r[14]_LC_21, pattern_shift_r[15]_LC_22, pattern_shift_r[9]_LC_30, pattern_shift_r[8]_LC_29}

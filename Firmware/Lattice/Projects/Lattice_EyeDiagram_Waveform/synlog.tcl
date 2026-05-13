@@ -1,0 +1,1 @@
+project -load Lattice_EyeDiagram_Waveform_syn.prj
